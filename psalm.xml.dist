@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<psalm
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="https://getpsalm.org/schema/config"
+    xsi:schemaLocation="https://getpsalm.org/schema/config vendor/vimeo/psalm/config.xsd"
+    allowInternalNamedArgumentCalls="false"
+    allowNamedArgumentCalls="false"
+    cacheDirectory=".cache/psalm"
+    disableSuppressAll="true"
+    errorBaseline="psalm-baseline.xml"
+    errorLevel="1"
+    findUnusedCode="true"
+    findUnusedBaselineEntry="true"
+    findUnusedPsalmSuppress="true"
+    findUnusedVariablesAndParams="true"
+    ignoreInternalFunctionFalseReturn="false"
+    ignoreInternalFunctionNullReturn="false"
+    memoizeMethodCallResults="true"
+    strictBinaryOperands="true"
+>
+    <projectFiles>
+        <directory name="src"/>
+        <directory name="tests"/>
+        <ignoreFiles>
+            <directory name=".github"/>
+            <directory name="config"/>
+            <directory name="docs"/>
+            <directory name="fixtures"/>
+            <directory name="vendor"/>
+        </ignoreFiles>
+    </projectFiles>
+    <plugins>
+        <pluginClass class="Ghostwriter\PsalmPlugin\Plugin"/>
+    </plugins>
+</psalm>

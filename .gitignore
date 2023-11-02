@@ -1,0 +1,16 @@
+/.cache/
+/.phpunit.cache/
+/docs/html/
+/vendor/
+/.env
+/.phpcs-cache
+/.phpunit.cache
+/.phpunit.result.cache
+/clover.xml
+/coveralls-upload.json
+/infection.json
+/mkdocs.site.yml
+/phpbench.json
+/phpcs.xml
+/phpunit.xml
+/psalm.xml

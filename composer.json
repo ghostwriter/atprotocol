@@ -1,0 +1,107 @@
+{
+    "name": "ghostwriter/wip",
+    "description": "Here be dragons",
+    "license": "BSD-3-Clause",
+    "type": "library",
+    "keywords": [
+        "ghostwriter",
+        "wip"
+    ],
+    "authors": [
+        {
+            "name": "Nathanael Esayeas",
+            "email": "nathanael.esayeas@protonmail.com",
+            "homepage": "https://github.com/ghostwriter",
+            "role": "Developer"
+        }
+    ],
+    "homepage": "https://github.com/ghostwriter/wip",
+    "support": {
+        "issues": "https://github.com/ghostwriter/wip/issues",
+        "forum": "https://github.com/ghostwriter/wip/discussions",
+        "source": "https://github.com/ghostwriter/wip",
+        "docs": "https://github.com/ghostwriter/wip",
+        "rss": "https://github.com/ghostwriter/wip/releases.atom"
+    },
+    "funding": [
+        {
+            "type": "github",
+            "url": "https://github.com/sponsors/ghostwriter"
+        }
+    ],
+    "require": {
+        "php": ">=8.2",
+        "ghostwriter/collection": "^1.4",
+        "ghostwriter/config": "^0.4",
+        "ghostwriter/container": "^1.6",
+        "ghostwriter/event-dispatcher": "^2.0",
+        "ghostwriter/json": "^1.2",
+        "ghostwriter/option": "^1.5",
+        "ghostwriter/result": "^1.3"
+    },
+    "require-dev": {
+        "ghostwriter/coding-standard": "dev-main",
+        "ghostwriter/psalm-plugin": "^0.2 || ^0.3 || ^1"
+    },
+    "replace": {},
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "autoload": {
+        "psr-4": {
+            "Ghostwriter\\Wip\\": "src"
+        },
+        "files": [
+            "src/constants.php",
+            "src/functions.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Ghostwriter\\Wip\\Tests\\": "tests"
+        }
+    },
+    "bin": [
+        "bin/console",
+        "bin/console.php"
+    ],
+    "config": {
+        "discard-changes": true,
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "prepend-autoloader": true,
+        "sort-packages": true
+    },
+    "scripts": {
+        "bench": "vendor/bin/phpbench --colors=always",
+        "cache:clear": "rm -fr ./.cache",
+        "check": [
+            "@composer validate",
+            "@cs",
+            "@test"
+        ],
+        "cs": [
+            "@phpcs",
+            "@phpcbf"
+        ],
+        "infection": ["@xdebug","vendor/bin/infection --ansi --verbose"],
+        "phpcbf": "vendor/bin/phpcbf --colors --no-cache --standard=PSR12 -s ./src",
+        "phpcs": "vendor/bin/phpcs --colors --no-cache --standard=PSR12 -s ./src",
+        "phpunit": ["@xdebug","vendor/bin/phpunit --do-not-cache-result --colors=always --testdox --stop-on-failure"],
+        "phpunit:migrate": "vendor/bin/phpunit --migrate-configuration",
+        "psalm": [
+            "@psalm:shepherd",
+            "@psalm:security"
+        ],
+        "psalm:baseline": "vendor/bin/psalm --set-baseline=psalm-baseline.xml",
+        "psalm:dry-run": "vendor/bin/psalm --alter --issues=all --dry-run",
+        "psalm:missing-return-types": "vendor/bin/psalm --alter --issues=MissingReturnType",
+        "psalm:security": "vendor/bin/psalm --taint-analysis",
+        "psalm:shepherd": "vendor/bin/psalm --shepherd --stats --no-diff --no-cache",
+        "test": [
+            "@phpunit",
+            "@psalm",
+            "@infection"
+        ],
+        "xdebug": "@putenv XDEBUG_MODE=coverage"
+    }
+}
