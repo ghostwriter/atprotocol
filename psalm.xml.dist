@@ -23,9 +23,7 @@
         <directory name="tests"/>
         <ignoreFiles>
             <directory name=".github"/>
-            <directory name="config"/>
             <directory name="docs"/>
-            <directory name="fixtures"/>
             <directory name="vendor"/>
         </ignoreFiles>
     </projectFiles>
