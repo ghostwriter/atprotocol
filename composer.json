@@ -1,11 +1,16 @@
 {
-    "name": "ghostwriter/wip",
-    "description": "Here be dragons",
+    "name": "ghostwriter/atprotocol",
+    "description": "Bluesky API Client for AT Protocol",
     "license": "BSD-3-Clause",
     "type": "library",
     "keywords": [
         "ghostwriter",
-        "wip"
+        "atprotocol",
+        "atproto",
+        "atp",
+        "bluesky",
+        "bsky",
+        "lexicons"
     ],
     "authors": [
         {
@@ -15,13 +20,13 @@
             "role": "Developer"
         }
     ],
-    "homepage": "https://github.com/ghostwriter/wip",
+    "homepage": "https://github.com/ghostwriter/atprotocol",
     "support": {
-        "issues": "https://github.com/ghostwriter/wip/issues",
-        "forum": "https://github.com/ghostwriter/wip/discussions",
-        "source": "https://github.com/ghostwriter/wip",
-        "docs": "https://github.com/ghostwriter/wip",
-        "rss": "https://github.com/ghostwriter/wip/releases.atom"
+        "issues": "https://github.com/ghostwriter/atprotocol/issues",
+        "forum": "https://github.com/ghostwriter/atprotocol/discussions",
+        "source": "https://github.com/ghostwriter/atprotocol",
+        "docs": "https://github.com/ghostwriter/atprotocol",
+        "rss": "https://github.com/ghostwriter/atprotocol/releases.atom"
     },
     "funding": [
         {
@@ -37,39 +42,37 @@
         "ghostwriter/event-dispatcher": "^2.0",
         "ghostwriter/json": "^1.2",
         "ghostwriter/option": "^1.5",
-        "ghostwriter/result": "^1.3"
+        "ghostwriter/result": "^1.3",
+        "laminas/laminas-diactoros": "^3.3",
+        "php-http/curl-client": "^2.3",
+        "psr/http-client": "^1.0",
+        "psr/http-factory": "^1.0"
     },
     "require-dev": {
         "ghostwriter/coding-standard": "dev-main",
         "ghostwriter/psalm-plugin": "^0.2 || ^0.3 || ^1"
     },
-    "replace": {},
     "minimum-stability": "stable",
     "prefer-stable": true,
     "autoload": {
         "psr-4": {
-            "Ghostwriter\\Wip\\": "src"
-        },
-        "files": [
-            "src/constants.php",
-            "src/functions.php"
-        ]
+            "Ghostwriter\\AtProtocol\\": "src"
+        }
     },
     "autoload-dev": {
         "psr-4": {
-            "Ghostwriter\\Wip\\Tests\\": "tests"
+            "Ghostwriter\\AtProtocol\\Tests\\": "tests"
         }
     },
-    "bin": [
-        "bin/console",
-        "bin/console.php"
-    ],
     "config": {
         "discard-changes": true,
         "optimize-autoloader": true,
         "preferred-install": "dist",
         "prepend-autoloader": true,
-        "sort-packages": true
+        "sort-packages": true,
+        "allow-plugins": {
+            "php-http/discovery": true
+        }
     },
     "scripts": {
         "bench": "vendor/bin/phpbench --colors=always",
