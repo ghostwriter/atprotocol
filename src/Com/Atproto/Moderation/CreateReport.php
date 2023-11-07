@@ -1,0 +1,62 @@
+<?php
+
+declare(strict_types=1);
+
+namespace Ghostwriter\AtProtocol\Com\Atproto\Moderation;
+
+use Psr\Http\Message\RequestFactoryInterface;
+use Psr\Http\Message\RequestInterface;
+use Psr\Http\Message\StreamFactoryInterface;
+use Psr\Http\Message\UriInterface;
+
+/**
+ * Report a repo or a record.
+ *
+ * @see \Ghostwriter\AtProtocol\Tests\Unit\Com\Atproto\Moderation\CreateReportTest
+ */
+final readonly class CreateReport
+{
+    public function __construct(
+        private RequestFactoryInterface $requestFactory,
+        private StreamFactoryInterface $streamFactory,
+    ) {}
+
+    public function __invoke(
+        UriInterface $uri,
+        string $reasonType = null,
+        string $subject = null,
+        ?string $reason = null,
+    ): RequestInterface
+    {
+        $request = $this->requestFactory
+            ->createRequest(
+                'POST',
+                $uri->withPath('xrpc/com.atproto.moderation.createReport')
+            );
+
+        $headers = [
+            'Accept' => 'application/json',
+            'Content-Type' => 'application/json; charset=utf-8',
+        ];
+
+        foreach ($headers as $name => $value) {
+            $request = $request->withHeader($name, $value);
+        }
+
+        $jsonBody = json_encode(array_filter([
+            'reasonType' => $reasonType,
+            'reason' => $reason,
+            'subject' => $subject,
+        ]));
+
+        if (false === $jsonBody){
+            throw new \RuntimeException('Failed to encode JSON');
+        }
+
+        return $request->withBody(
+            $this->streamFactory->createStream(
+                $jsonBody
+            )
+        );
+    }
+}
