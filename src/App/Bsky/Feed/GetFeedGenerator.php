@@ -1,0 +1,47 @@
+<?php
+
+declare(strict_types=1);
+
+namespace Ghostwriter\AtProtocol\App\Bsky\Feed;
+
+use Psr\Http\Message\RequestFactoryInterface;
+use Psr\Http\Message\RequestInterface;
+use Psr\Http\Message\UriInterface;
+
+/**
+ * Get information about a specific feed offered by a feed generator, such as its online status
+ *
+ * @see \Ghostwriter\AtProtocol\Tests\Unit\App\Bsky\Feed\GetFeedGeneratorTest
+ */
+final readonly class GetFeedGenerator
+{
+    public function __construct(
+        private RequestFactoryInterface $requestFactory,
+    ) {}
+
+    public function __invoke(
+        UriInterface $uri,
+        string $feed = null,
+    ): RequestInterface
+    {
+        $request = $this->requestFactory
+            ->createRequest(
+                'GET',
+                $uri->withPath('xrpc/app.bsky.feed.getFeedGenerator')
+                    ->withQuery(http_build_query(array_filter([
+                    'feed' => $feed,
+                ])))
+            );
+
+        $headers = [
+            'Accept' => 'application/json',
+            'Content-Type' => 'application/json; charset=utf-8',
+        ];
+
+        foreach ($headers as $name => $value) {
+            $request = $request->withHeader($name, $value);
+        }
+
+        return $request;
+    }
+}
