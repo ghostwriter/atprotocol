@@ -22,7 +22,7 @@ final readonly class UpdateEmail
     ) {}
 
     public function __invoke(
-        UriInterface $uri,
+        UriInterface $pdsUri,
         string $email = null,
         ?string $token = null,
     ): RequestInterface
@@ -30,7 +30,7 @@ final readonly class UpdateEmail
         $request = $this->requestFactory
             ->createRequest(
                 'POST',
-                $uri->withPath('xrpc/com.atproto.server.updateEmail')
+                $pdsUri->withPath('xrpc/com.atproto.server.updateEmail')
             );
 
         $headers = [
