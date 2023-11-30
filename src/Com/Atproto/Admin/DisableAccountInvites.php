@@ -10,7 +10,7 @@ use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriInterface;
 
 /**
- * Disable an account from receiving new invite codes, but does not invalidate existing codes
+ * Disable an account from receiving new invite codes, but does not invalidate existing codes.
  *
  * @see \Ghostwriter\AtProtocol\Tests\Unit\Com\Atproto\Admin\DisableAccountInvitesTest
  */
@@ -22,7 +22,7 @@ final readonly class DisableAccountInvites
     ) {}
 
     public function __invoke(
-        UriInterface $uri,
+        UriInterface $pdsUri,
         string $account = null,
         ?string $note = null,
     ): RequestInterface
@@ -30,7 +30,7 @@ final readonly class DisableAccountInvites
         $request = $this->requestFactory
             ->createRequest(
                 'POST',
-                $uri->withPath('xrpc/com.atproto.admin.disableAccountInvites')
+                $pdsUri->withPath('xrpc/com.atproto.admin.disableAccountInvites')
             );
 
         $headers = [
