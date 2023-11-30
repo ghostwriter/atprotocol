@@ -10,7 +10,7 @@ use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriInterface;
 
 /**
- * Take a moderation action on a repo.
+ * Take a moderation action on an actor.
  *
  * @see \Ghostwriter\AtProtocol\Tests\Unit\Com\Atproto\Admin\TakeModerationActionTest
  */
@@ -22,7 +22,7 @@ final readonly class TakeModerationAction
     ) {}
 
     public function __invoke(
-        UriInterface $uri,
+        UriInterface $pdsUri,
         string $action = null,
         string $subject = null,
         string $reason = null,
@@ -36,7 +36,7 @@ final readonly class TakeModerationAction
         $request = $this->requestFactory
             ->createRequest(
                 'POST',
-                $uri->withPath('xrpc/com.atproto.admin.takeModerationAction')
+                $pdsUri->withPath('xrpc/com.atproto.admin.takeModerationAction')
             );
 
         $headers = [
