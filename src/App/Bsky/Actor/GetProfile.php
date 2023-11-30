@@ -9,7 +9,7 @@ use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
 /**
- * GetProfile
+ * Get detailed profile view of an actor.
  *
  * @see \Ghostwriter\AtProtocol\Tests\Unit\App\Bsky\Actor\GetProfileTest
  */
@@ -20,14 +20,14 @@ final readonly class GetProfile
     ) {}
 
     public function __invoke(
-        UriInterface $uri,
+        UriInterface $pdsUri,
         string $actor = null,
     ): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $uri->withPath('xrpc/app.bsky.actor.getProfile')
+                $pdsUri->withPath('xrpc/app.bsky.actor.getProfile')
                     ->withQuery(http_build_query(array_filter([
                     'actor' => $actor,
                 ])))
