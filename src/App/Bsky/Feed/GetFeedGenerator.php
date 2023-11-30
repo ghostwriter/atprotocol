@@ -9,7 +9,7 @@ use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
 /**
- * Get information about a specific feed offered by a feed generator, such as its online status
+ * Get information about a feed generator.
  *
  * @see \Ghostwriter\AtProtocol\Tests\Unit\App\Bsky\Feed\GetFeedGeneratorTest
  */
@@ -20,14 +20,14 @@ final readonly class GetFeedGenerator
     ) {}
 
     public function __invoke(
-        UriInterface $uri,
+        UriInterface $pdsUri,
         string $feed = null,
     ): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $uri->withPath('xrpc/app.bsky.feed.getFeedGenerator')
+                $pdsUri->withPath('xrpc/app.bsky.feed.getFeedGenerator')
                     ->withQuery(http_build_query(array_filter([
                     'feed' => $feed,
                 ])))
