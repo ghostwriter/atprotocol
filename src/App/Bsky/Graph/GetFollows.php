@@ -9,7 +9,7 @@ use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
 /**
- * Who is an actor following?
+ * Get a list of who the actor follows.
  *
  * @see \Ghostwriter\AtProtocol\Tests\Unit\App\Bsky\Graph\GetFollowsTest
  */
@@ -20,7 +20,7 @@ final readonly class GetFollows
     ) {}
 
     public function __invoke(
-        UriInterface $uri,
+        UriInterface $pdsUri,
         string $actor = null,
         ?int $limit = null,
         ?string $cursor = null,
@@ -29,7 +29,7 @@ final readonly class GetFollows
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $uri->withPath('xrpc/app.bsky.graph.getFollows')
+                $pdsUri->withPath('xrpc/app.bsky.graph.getFollows')
                     ->withQuery(http_build_query(array_filter([
                     'actor' => $actor,
                     'limit' => $limit,
