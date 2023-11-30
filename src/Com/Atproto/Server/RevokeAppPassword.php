@@ -10,7 +10,7 @@ use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriInterface;
 
 /**
- * Revoke an app-specific password by name.
+ * Revoke an App Password by name.
  *
  * @see \Ghostwriter\AtProtocol\Tests\Unit\Com\Atproto\Server\RevokeAppPasswordTest
  */
@@ -22,14 +22,14 @@ final readonly class RevokeAppPassword
     ) {}
 
     public function __invoke(
-        UriInterface $uri,
+        UriInterface $pdsUri,
         string $name = null,
     ): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
                 'POST',
-                $uri->withPath('xrpc/com.atproto.server.revokeAppPassword')
+                $pdsUri->withPath('xrpc/com.atproto.server.revokeAppPassword')
             );
 
         $headers = [
