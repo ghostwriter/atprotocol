@@ -9,7 +9,7 @@ use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
 /**
- * Gets blocks from a given repo.
+ * Get blocks from a given repo.
  *
  * @see \Ghostwriter\AtProtocol\Tests\Unit\Com\Atproto\Sync\GetBlocksTest
  */
@@ -20,7 +20,7 @@ final readonly class GetBlocks
     ) {}
 
     public function __invoke(
-        UriInterface $uri,
+        UriInterface $pdsUri,
         string $did = null,
         array $cids = null,
     ): RequestInterface
@@ -28,7 +28,7 @@ final readonly class GetBlocks
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $uri->withPath('xrpc/com.atproto.sync.getBlocks')
+                $pdsUri->withPath('xrpc/com.atproto.sync.getBlocks')
                     ->withQuery(http_build_query(array_filter([
                     'did' => $did,
                     'cids' => $cids,
