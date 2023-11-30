@@ -9,7 +9,7 @@ use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
 /**
- * Which lists is the requester's account blocking?
+ * Get lists that the actor is blocking.
  *
  * @see \Ghostwriter\AtProtocol\Tests\Unit\App\Bsky\Graph\GetListBlocksTest
  */
@@ -20,7 +20,7 @@ final readonly class GetListBlocks
     ) {}
 
     public function __invoke(
-        UriInterface $uri,
+        UriInterface $pdsUri,
         ?int $limit = null,
         ?string $cursor = null,
     ): RequestInterface
@@ -28,7 +28,7 @@ final readonly class GetListBlocks
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $uri->withPath('xrpc/app.bsky.graph.getListBlocks')
+                $pdsUri->withPath('xrpc/app.bsky.graph.getListBlocks')
                     ->withQuery(http_build_query(array_filter([
                     'limit' => $limit,
                     'cursor' => $cursor,
