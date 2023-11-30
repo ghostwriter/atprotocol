@@ -10,7 +10,7 @@ use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriInterface;
 
 /**
- * Create an app-specific password.
+ * Create an App Password.
  *
  * @see \Ghostwriter\AtProtocol\Tests\Unit\Com\Atproto\Server\CreateAppPasswordTest
  */
@@ -22,14 +22,14 @@ final readonly class CreateAppPassword
     ) {}
 
     public function __invoke(
-        UriInterface $uri,
+        UriInterface $pdsUri,
         string $name = null,
     ): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
                 'POST',
-                $uri->withPath('xrpc/com.atproto.server.createAppPassword')
+                $pdsUri->withPath('xrpc/com.atproto.server.createAppPassword')
             );
 
         $headers = [
