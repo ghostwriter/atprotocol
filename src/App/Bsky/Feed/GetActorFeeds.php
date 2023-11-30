@@ -9,7 +9,7 @@ use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
 /**
- * Retrieve a list of feeds created by a given actor
+ * Get a list of feeds created by the actor.
  *
  * @see \Ghostwriter\AtProtocol\Tests\Unit\App\Bsky\Feed\GetActorFeedsTest
  */
@@ -20,7 +20,7 @@ final readonly class GetActorFeeds
     ) {}
 
     public function __invoke(
-        UriInterface $uri,
+        UriInterface $pdsUri,
         string $actor = null,
         ?int $limit = null,
         ?string $cursor = null,
@@ -29,7 +29,7 @@ final readonly class GetActorFeeds
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $uri->withPath('xrpc/app.bsky.feed.getActorFeeds')
+                $pdsUri->withPath('xrpc/app.bsky.feed.getActorFeeds')
                     ->withQuery(http_build_query(array_filter([
                     'actor' => $actor,
                     'limit' => $limit,
