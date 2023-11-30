@@ -9,7 +9,7 @@ use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
 /**
- * Fetch a list of lists that belong to an actor
+ * Get a list of lists that belong to an actor.
  *
  * @see \Ghostwriter\AtProtocol\Tests\Unit\App\Bsky\Graph\GetListsTest
  */
@@ -20,7 +20,7 @@ final readonly class GetLists
     ) {}
 
     public function __invoke(
-        UriInterface $uri,
+        UriInterface $pdsUri,
         string $actor = null,
         ?int $limit = null,
         ?string $cursor = null,
@@ -29,7 +29,7 @@ final readonly class GetLists
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $uri->withPath('xrpc/app.bsky.graph.getLists')
+                $pdsUri->withPath('xrpc/app.bsky.graph.getLists')
                     ->withQuery(http_build_query(array_filter([
                     'actor' => $actor,
                     'limit' => $limit,
