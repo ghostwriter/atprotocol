@@ -10,7 +10,7 @@ use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriInterface;
 
 /**
- * Mute an actor by did or handle.
+ * Mute an actor by DID or handle.
  *
  * @see \Ghostwriter\AtProtocol\Tests\Unit\App\Bsky\Graph\MuteActorTest
  */
@@ -22,14 +22,14 @@ final readonly class MuteActor
     ) {}
 
     public function __invoke(
-        UriInterface $uri,
+        UriInterface $pdsUri,
         string $actor = null,
     ): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
                 'POST',
-                $uri->withPath('xrpc/app.bsky.graph.muteActor')
+                $pdsUri->withPath('xrpc/app.bsky.graph.muteActor')
             );
 
         $headers = [
