@@ -9,7 +9,7 @@ use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
 /**
- * Get a list of actors suggested for following. Used in discovery UIs.
+ * Get a list of suggested actors, used for discovery.
  *
  * @see \Ghostwriter\AtProtocol\Tests\Unit\App\Bsky\Actor\GetSuggestionsTest
  */
@@ -20,7 +20,7 @@ final readonly class GetSuggestions
     ) {}
 
     public function __invoke(
-        UriInterface $uri,
+        UriInterface $pdsUri,
         ?int $limit = null,
         ?string $cursor = null,
     ): RequestInterface
@@ -28,7 +28,7 @@ final readonly class GetSuggestions
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $uri->withPath('xrpc/app.bsky.actor.getSuggestions')
+                $pdsUri->withPath('xrpc/app.bsky.actor.getSuggestions')
                     ->withQuery(http_build_query(array_filter([
                     'limit' => $limit,
                     'cursor' => $cursor,
