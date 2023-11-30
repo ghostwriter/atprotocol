@@ -9,7 +9,7 @@ use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
 /**
- * Backend Actors (profile) search, returning only skeleton
+ * Backend Actors (profile) search, returns only skeleton.
  *
  * @see \Ghostwriter\AtProtocol\Tests\Unit\App\Bsky\Unspecced\SearchActorsSkeletonTest
  */
@@ -20,7 +20,7 @@ final readonly class SearchActorsSkeleton
     ) {}
 
     public function __invoke(
-        UriInterface $uri,
+        UriInterface $pdsUri,
         string $q = null,
         ?bool $typeahead = null,
         ?int $limit = null,
@@ -30,7 +30,7 @@ final readonly class SearchActorsSkeleton
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $uri->withPath('xrpc/app.bsky.unspecced.searchActorsSkeleton')
+                $pdsUri->withPath('xrpc/app.bsky.unspecced.searchActorsSkeleton')
                     ->withQuery(http_build_query(array_filter([
                     'q' => $q,
                     'typeahead' => $typeahead,
