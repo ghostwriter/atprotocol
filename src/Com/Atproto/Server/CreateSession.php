@@ -22,7 +22,7 @@ final readonly class CreateSession
     ) {}
 
     public function __invoke(
-        UriInterface $uri,
+        UriInterface $pdsUri,
         string $identifier = null,
         string $password = null,
     ): RequestInterface
@@ -30,7 +30,7 @@ final readonly class CreateSession
         $request = $this->requestFactory
             ->createRequest(
                 'POST',
-                $uri->withPath('xrpc/com.atproto.server.createSession')
+                $pdsUri->withPath('xrpc/com.atproto.server.createSession')
             );
 
         $headers = [
