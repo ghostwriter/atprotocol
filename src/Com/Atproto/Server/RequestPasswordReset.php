@@ -22,14 +22,14 @@ final readonly class RequestPasswordReset
     ) {}
 
     public function __invoke(
-        UriInterface $uri,
+        UriInterface $pdsUri,
         string $email = null,
     ): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
                 'POST',
-                $uri->withPath('xrpc/com.atproto.server.requestPasswordReset')
+                $pdsUri->withPath('xrpc/com.atproto.server.requestPasswordReset')
             );
 
         $headers = [
