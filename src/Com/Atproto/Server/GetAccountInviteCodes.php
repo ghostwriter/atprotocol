@@ -9,7 +9,7 @@ use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
 /**
- * Get all invite codes for a given account
+ * Get all invite codes for a given account.
  *
  * @see \Ghostwriter\AtProtocol\Tests\Unit\Com\Atproto\Server\GetAccountInviteCodesTest
  */
@@ -20,7 +20,7 @@ final readonly class GetAccountInviteCodes
     ) {}
 
     public function __invoke(
-        UriInterface $uri,
+        UriInterface $pdsUri,
         ?bool $includeUsed = null,
         ?bool $createAvailable = null,
     ): RequestInterface
@@ -28,7 +28,7 @@ final readonly class GetAccountInviteCodes
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $uri->withPath('xrpc/com.atproto.server.getAccountInviteCodes')
+                $pdsUri->withPath('xrpc/com.atproto.server.getAccountInviteCodes')
                     ->withQuery(http_build_query(array_filter([
                     'includeUsed' => $includeUsed,
                     'createAvailable' => $createAvailable,
