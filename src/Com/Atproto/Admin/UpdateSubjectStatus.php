@@ -10,7 +10,7 @@ use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriInterface;
 
 /**
- * Update the service-specific admin status of a subject (account, record, or blob)
+ * Update the service-specific admin status of a subject (account, record, or blob).
  *
  * @see \Ghostwriter\AtProtocol\Tests\Unit\Com\Atproto\Admin\UpdateSubjectStatusTest
  */
@@ -22,7 +22,7 @@ final readonly class UpdateSubjectStatus
     ) {}
 
     public function __invoke(
-        UriInterface $uri,
+        UriInterface $pdsUri,
         string $subject = null,
         ?string $takedown = null,
     ): RequestInterface
@@ -30,7 +30,7 @@ final readonly class UpdateSubjectStatus
         $request = $this->requestFactory
             ->createRequest(
                 'POST',
-                $uri->withPath('xrpc/com.atproto.admin.updateSubjectStatus')
+                $pdsUri->withPath('xrpc/com.atproto.admin.updateSubjectStatus')
             );
 
         $headers = [
