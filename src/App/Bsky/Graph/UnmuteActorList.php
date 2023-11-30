@@ -22,14 +22,14 @@ final readonly class UnmuteActorList
     ) {}
 
     public function __invoke(
-        UriInterface $uri,
+        UriInterface $pdsUri,
         string $list = null,
     ): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
                 'POST',
-                $uri->withPath('xrpc/app.bsky.graph.unmuteActorList')
+                $pdsUri->withPath('xrpc/app.bsky.graph.unmuteActorList')
             );
 
         $headers = [
