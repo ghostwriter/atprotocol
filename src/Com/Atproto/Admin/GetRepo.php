@@ -9,7 +9,7 @@ use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
 /**
- * View details about a repository.
+ * Get details about a repository.
  *
  * @see \Ghostwriter\AtProtocol\Tests\Unit\Com\Atproto\Admin\GetRepoTest
  */
@@ -20,14 +20,14 @@ final readonly class GetRepo
     ) {}
 
     public function __invoke(
-        UriInterface $uri,
+        UriInterface $pdsUri,
         string $did = null,
     ): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $uri->withPath('xrpc/com.atproto.admin.getRepo')
+                $pdsUri->withPath('xrpc/com.atproto.admin.getRepo')
                     ->withQuery(http_build_query(array_filter([
                     'did' => $did,
                 ])))
