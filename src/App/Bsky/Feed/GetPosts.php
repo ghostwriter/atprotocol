@@ -9,7 +9,7 @@ use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
 /**
- * A view of an actor's feed.
+ * Get a view of an actor's feed.
  *
  * @see \Ghostwriter\AtProtocol\Tests\Unit\App\Bsky\Feed\GetPostsTest
  */
@@ -20,14 +20,14 @@ final readonly class GetPosts
     ) {}
 
     public function __invoke(
-        UriInterface $uri,
+        UriInterface $pdsUri,
         array $uris = null,
     ): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $uri->withPath('xrpc/app.bsky.feed.getPosts')
+                $pdsUri->withPath('xrpc/app.bsky.feed.getPosts')
                     ->withQuery(http_build_query(array_filter([
                     'uris' => $uris,
                 ])))
