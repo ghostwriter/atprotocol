@@ -10,7 +10,7 @@ use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriInterface;
 
 /**
- * Send email to a user's primary email address
+ * Send email to a user's account email address.
  *
  * @see \Ghostwriter\AtProtocol\Tests\Unit\Com\Atproto\Admin\SendEmailTest
  */
@@ -22,7 +22,7 @@ final readonly class SendEmail
     ) {}
 
     public function __invoke(
-        UriInterface $uri,
+        UriInterface $pdsUri,
         string $recipientDid = null,
         string $content = null,
         ?string $subject = null,
@@ -31,7 +31,7 @@ final readonly class SendEmail
         $request = $this->requestFactory
             ->createRequest(
                 'POST',
-                $uri->withPath('xrpc/com.atproto.admin.sendEmail')
+                $pdsUri->withPath('xrpc/com.atproto.admin.sendEmail')
             );
 
         $headers = [
