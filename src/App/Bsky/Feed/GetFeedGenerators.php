@@ -9,7 +9,7 @@ use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
 /**
- * Get information about a list of feed generators
+ * Get information about a list of feed generators.
  *
  * @see \Ghostwriter\AtProtocol\Tests\Unit\App\Bsky\Feed\GetFeedGeneratorsTest
  */
@@ -20,14 +20,14 @@ final readonly class GetFeedGenerators
     ) {}
 
     public function __invoke(
-        UriInterface $uri,
+        UriInterface $pdsUri,
         array $feeds = null,
     ): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $uri->withPath('xrpc/app.bsky.feed.getFeedGenerators')
+                $pdsUri->withPath('xrpc/app.bsky.feed.getFeedGenerators')
                     ->withQuery(http_build_query(array_filter([
                     'feeds' => $feeds,
                 ])))
