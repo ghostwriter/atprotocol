@@ -22,13 +22,13 @@ final readonly class RefreshSession
     ) {}
 
     public function __invoke(
-        UriInterface $uri,
+        UriInterface $pdsUri,
     ): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
                 'POST',
-                $uri->withPath('xrpc/com.atproto.server.refreshSession')
+                $pdsUri->withPath('xrpc/com.atproto.server.refreshSession')
             );
 
         $headers = [
