@@ -22,7 +22,7 @@ final readonly class ResolveModerationReports
     ) {}
 
     public function __invoke(
-        UriInterface $uri,
+        UriInterface $pdsUri,
         int $actionId = null,
         array $reportIds = null,
         string $createdBy = null,
@@ -31,7 +31,7 @@ final readonly class ResolveModerationReports
         $request = $this->requestFactory
             ->createRequest(
                 'POST',
-                $uri->withPath('xrpc/com.atproto.admin.resolveModerationReports')
+                $pdsUri->withPath('xrpc/com.atproto.admin.resolveModerationReports')
             );
 
         $headers = [
