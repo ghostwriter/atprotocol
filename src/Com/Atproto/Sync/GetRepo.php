@@ -9,7 +9,7 @@ use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
 /**
- * Gets the did's repo, optionally catching up from a specific revision.
+ * Gets the DID's repo, optionally catching up from a specific revision.
  *
  * @see \Ghostwriter\AtProtocol\Tests\Unit\Com\Atproto\Sync\GetRepoTest
  */
@@ -20,7 +20,7 @@ final readonly class GetRepo
     ) {}
 
     public function __invoke(
-        UriInterface $uri,
+        UriInterface $pdsUri,
         string $did = null,
         ?string $since = null,
     ): RequestInterface
@@ -28,7 +28,7 @@ final readonly class GetRepo
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $uri->withPath('xrpc/com.atproto.sync.getRepo')
+                $pdsUri->withPath('xrpc/com.atproto.sync.getRepo')
                     ->withQuery(http_build_query(array_filter([
                     'did' => $did,
                     'since' => $since,
