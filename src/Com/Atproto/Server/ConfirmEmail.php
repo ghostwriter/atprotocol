@@ -22,7 +22,7 @@ final readonly class ConfirmEmail
     ) {}
 
     public function __invoke(
-        UriInterface $uri,
+        UriInterface $pdsUri,
         string $email = null,
         string $token = null,
     ): RequestInterface
@@ -30,7 +30,7 @@ final readonly class ConfirmEmail
         $request = $this->requestFactory
             ->createRequest(
                 'POST',
-                $uri->withPath('xrpc/com.atproto.server.confirmEmail')
+                $pdsUri->withPath('xrpc/com.atproto.server.confirmEmail')
             );
 
         $headers = [
