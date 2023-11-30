@@ -10,7 +10,7 @@ use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriInterface;
 
 /**
- * Re-enable an accounts ability to receive invite codes
+ * Re-enable an account's ability to receive invite codes.
  *
  * @see \Ghostwriter\AtProtocol\Tests\Unit\Com\Atproto\Admin\EnableAccountInvitesTest
  */
@@ -22,7 +22,7 @@ final readonly class EnableAccountInvites
     ) {}
 
     public function __invoke(
-        UriInterface $uri,
+        UriInterface $pdsUri,
         string $account = null,
         ?string $note = null,
     ): RequestInterface
@@ -30,7 +30,7 @@ final readonly class EnableAccountInvites
         $request = $this->requestFactory
             ->createRequest(
                 'POST',
-                $uri->withPath('xrpc/com.atproto.admin.enableAccountInvites')
+                $pdsUri->withPath('xrpc/com.atproto.admin.enableAccountInvites')
             );
 
         $headers = [
