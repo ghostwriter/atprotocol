@@ -9,7 +9,7 @@ use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
 /**
- * GetProfiles
+ * Get detailed profile views of multiple actors.
  *
  * @see \Ghostwriter\AtProtocol\Tests\Unit\App\Bsky\Actor\GetProfilesTest
  */
@@ -20,14 +20,14 @@ final readonly class GetProfiles
     ) {}
 
     public function __invoke(
-        UriInterface $uri,
+        UriInterface $pdsUri,
         array $actors = null,
     ): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $uri->withPath('xrpc/app.bsky.actor.getProfiles')
+                $pdsUri->withPath('xrpc/app.bsky.actor.getProfiles')
                     ->withQuery(http_build_query(array_filter([
                     'actors' => $actors,
                 ])))
