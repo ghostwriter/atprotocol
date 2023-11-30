@@ -20,14 +20,14 @@ final readonly class GetHead
     ) {}
 
     public function __invoke(
-        UriInterface $uri,
+        UriInterface $pdsUri,
         string $did = null,
     ): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $uri->withPath('xrpc/com.atproto.sync.getHead')
+                $pdsUri->withPath('xrpc/com.atproto.sync.getHead')
                     ->withQuery(http_build_query(array_filter([
                     'did' => $did,
                 ])))
