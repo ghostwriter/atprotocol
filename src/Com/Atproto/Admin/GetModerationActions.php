@@ -9,7 +9,7 @@ use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
 /**
- * List moderation actions related to a subject.
+ * Get a list of moderation actions related to a subject.
  *
  * @see \Ghostwriter\AtProtocol\Tests\Unit\Com\Atproto\Admin\GetModerationActionsTest
  */
@@ -20,7 +20,7 @@ final readonly class GetModerationActions
     ) {}
 
     public function __invoke(
-        UriInterface $uri,
+        UriInterface $pdsUri,
         ?string $subject = null,
         ?int $limit = null,
         ?string $cursor = null,
@@ -29,7 +29,7 @@ final readonly class GetModerationActions
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $uri->withPath('xrpc/com.atproto.admin.getModerationActions')
+                $pdsUri->withPath('xrpc/com.atproto.admin.getModerationActions')
                     ->withQuery(http_build_query(array_filter([
                     'subject' => $subject,
                     'limit' => $limit,
