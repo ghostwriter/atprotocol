@@ -9,7 +9,7 @@ use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
 /**
- * Fetch the service-specific the admin status of a subject (account, record, or blob)
+ * Get the service-specific admin status of a subject (account, record, or blob).
  *
  * @see \Ghostwriter\AtProtocol\Tests\Unit\Com\Atproto\Admin\GetSubjectStatusTest
  */
@@ -20,7 +20,7 @@ final readonly class GetSubjectStatus
     ) {}
 
     public function __invoke(
-        UriInterface $uri,
+        UriInterface $pdsUri,
         ?string $did = null,
         ?string $uri = null,
         ?string $blob = null,
@@ -29,7 +29,7 @@ final readonly class GetSubjectStatus
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $uri->withPath('xrpc/com.atproto.admin.getSubjectStatus')
+                $pdsUri->withPath('xrpc/com.atproto.admin.getSubjectStatus')
                     ->withQuery(http_build_query(array_filter([
                     'did' => $did,
                     'uri' => $uri,
