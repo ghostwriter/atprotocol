@@ -22,7 +22,7 @@ final readonly class CreateAccount
     ) {}
 
     public function __invoke(
-        UriInterface $uri,
+        UriInterface $pdsUri,
         string $handle = null,
         ?string $email = null,
         ?string $did = null,
@@ -35,7 +35,7 @@ final readonly class CreateAccount
         $request = $this->requestFactory
             ->createRequest(
                 'POST',
-                $uri->withPath('xrpc/com.atproto.server.createAccount')
+                $pdsUri->withPath('xrpc/com.atproto.server.createAccount')
             );
 
         $headers = [
