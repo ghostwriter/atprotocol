@@ -9,7 +9,7 @@ use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
 /**
- * ListNotifications
+ * Get a list of notifications.
  *
  * @see \Ghostwriter\AtProtocol\Tests\Unit\App\Bsky\Notification\ListNotificationsTest
  */
@@ -20,7 +20,7 @@ final readonly class ListNotifications
     ) {}
 
     public function __invoke(
-        UriInterface $uri,
+        UriInterface $pdsUri,
         ?int $limit = null,
         ?string $cursor = null,
         ?string $seenAt = null,
@@ -29,7 +29,7 @@ final readonly class ListNotifications
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $uri->withPath('xrpc/app.bsky.notification.listNotifications')
+                $pdsUri->withPath('xrpc/app.bsky.notification.listNotifications')
                     ->withQuery(http_build_query(array_filter([
                     'limit' => $limit,
                     'cursor' => $cursor,
