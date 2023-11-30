@@ -10,7 +10,7 @@ use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriInterface;
 
 /**
- * Sets the private preferences attached to the account.
+ * Set the private preferences attached to the account.
  *
  * @see \Ghostwriter\AtProtocol\Tests\Unit\App\Bsky\Actor\PutPreferencesTest
  */
@@ -22,14 +22,14 @@ final readonly class PutPreferences
     ) {}
 
     public function __invoke(
-        UriInterface $uri,
+        UriInterface $pdsUri,
         string $preferences = null,
     ): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
                 'POST',
-                $uri->withPath('xrpc/app.bsky.actor.putPreferences')
+                $pdsUri->withPath('xrpc/app.bsky.actor.putPreferences')
             );
 
         $headers = [
