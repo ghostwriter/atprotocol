@@ -22,14 +22,14 @@ final readonly class RequestCrawl
     ) {}
 
     public function __invoke(
-        UriInterface $uri,
+        UriInterface $pdsUri,
         string $hostname = null,
     ): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
                 'POST',
-                $uri->withPath('xrpc/com.atproto.sync.requestCrawl')
+                $pdsUri->withPath('xrpc/com.atproto.sync.requestCrawl')
             );
 
         $headers = [
