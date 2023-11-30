@@ -9,7 +9,7 @@ use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
 /**
- * A skeleton of a timeline - UNSPECCED & WILL GO AWAY SOON
+ * DEPRECATED: a skeleton of a timeline. Unspecced and will be unavailable soon.
  *
  * @see \Ghostwriter\AtProtocol\Tests\Unit\App\Bsky\Unspecced\GetTimelineSkeletonTest
  */
@@ -20,7 +20,7 @@ final readonly class GetTimelineSkeleton
     ) {}
 
     public function __invoke(
-        UriInterface $uri,
+        UriInterface $pdsUri,
         ?int $limit = null,
         ?string $cursor = null,
     ): RequestInterface
@@ -28,7 +28,7 @@ final readonly class GetTimelineSkeleton
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $uri->withPath('xrpc/app.bsky.unspecced.getTimelineSkeleton')
+                $pdsUri->withPath('xrpc/app.bsky.unspecced.getTimelineSkeleton')
                     ->withQuery(http_build_query(array_filter([
                     'limit' => $limit,
                     'cursor' => $cursor,
