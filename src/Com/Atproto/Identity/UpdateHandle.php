@@ -10,7 +10,7 @@ use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriInterface;
 
 /**
- * Updates the handle of the account
+ * Updates the handle of the account.
  *
  * @see \Ghostwriter\AtProtocol\Tests\Unit\Com\Atproto\Identity\UpdateHandleTest
  */
@@ -22,14 +22,14 @@ final readonly class UpdateHandle
     ) {}
 
     public function __invoke(
-        UriInterface $uri,
+        UriInterface $pdsUri,
         string $handle = null,
     ): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
                 'POST',
-                $uri->withPath('xrpc/com.atproto.identity.updateHandle')
+                $pdsUri->withPath('xrpc/com.atproto.identity.updateHandle')
             );
 
         $headers = [
