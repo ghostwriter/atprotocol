@@ -20,7 +20,7 @@ final readonly class SearchRepos
     ) {}
 
     public function __invoke(
-        UriInterface $uri,
+        UriInterface $pdsUri,
         ?string $q = null,
         ?int $limit = null,
         ?string $cursor = null,
@@ -29,7 +29,7 @@ final readonly class SearchRepos
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $uri->withPath('xrpc/com.atproto.admin.searchRepos')
+                $pdsUri->withPath('xrpc/com.atproto.admin.searchRepos')
                     ->withQuery(http_build_query(array_filter([
                     'q' => $q,
                     'limit' => $limit,
