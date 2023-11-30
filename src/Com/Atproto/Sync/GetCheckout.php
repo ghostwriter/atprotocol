@@ -20,14 +20,14 @@ final readonly class GetCheckout
     ) {}
 
     public function __invoke(
-        UriInterface $uri,
+        UriInterface $pdsUri,
         string $did = null,
     ): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $uri->withPath('xrpc/com.atproto.sync.getCheckout')
+                $pdsUri->withPath('xrpc/com.atproto.sync.getCheckout')
                     ->withQuery(http_build_query(array_filter([
                     'did' => $did,
                 ])))
