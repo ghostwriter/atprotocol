@@ -9,7 +9,7 @@ use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
 /**
- * Find posts matching search criteria
+ * Find posts matching search criteria.
  *
  * @see \Ghostwriter\AtProtocol\Tests\Unit\App\Bsky\Feed\SearchPostsTest
  */
@@ -20,7 +20,7 @@ final readonly class SearchPosts
     ) {}
 
     public function __invoke(
-        UriInterface $uri,
+        UriInterface $pdsUri,
         string $q = null,
         ?int $limit = null,
         ?string $cursor = null,
@@ -29,7 +29,7 @@ final readonly class SearchPosts
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $uri->withPath('xrpc/app.bsky.feed.searchPosts')
+                $pdsUri->withPath('xrpc/app.bsky.feed.searchPosts')
                     ->withQuery(http_build_query(array_filter([
                     'q' => $q,
                     'limit' => $limit,
