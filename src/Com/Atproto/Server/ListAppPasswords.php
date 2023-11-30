@@ -9,7 +9,7 @@ use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
 /**
- * List all app-specific passwords.
+ * List all App Passwords.
  *
  * @see \Ghostwriter\AtProtocol\Tests\Unit\Com\Atproto\Server\ListAppPasswordsTest
  */
@@ -20,13 +20,13 @@ final readonly class ListAppPasswords
     ) {}
 
     public function __invoke(
-        UriInterface $uri,
+        UriInterface $pdsUri,
     ): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $uri->withPath('xrpc/com.atproto.server.listAppPasswords')
+                $pdsUri->withPath('xrpc/com.atproto.server.listAppPasswords')
                     ->withQuery(http_build_query(array_filter([])))
             );
 
