@@ -9,7 +9,7 @@ use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
 /**
- * A skeleton of a feed provided by a feed generator
+ * Get a skeleton of a feed provided by a feed generator.
  *
  * @see \Ghostwriter\AtProtocol\Tests\Unit\App\Bsky\Feed\GetFeedSkeletonTest
  */
@@ -20,7 +20,7 @@ final readonly class GetFeedSkeleton
     ) {}
 
     public function __invoke(
-        UriInterface $uri,
+        UriInterface $pdsUri,
         string $feed = null,
         ?int $limit = null,
         ?string $cursor = null,
@@ -29,7 +29,7 @@ final readonly class GetFeedSkeleton
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $uri->withPath('xrpc/app.bsky.feed.getFeedSkeleton')
+                $pdsUri->withPath('xrpc/app.bsky.feed.getFeedSkeleton')
                     ->withQuery(http_build_query(array_filter([
                     'feed' => $feed,
                     'limit' => $limit,
