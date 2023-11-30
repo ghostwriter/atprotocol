@@ -9,7 +9,7 @@ use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
 /**
- * A view of a recent posts from actors in a list
+ * Get a view of a recent posts from actors in a list.
  *
  * @see \Ghostwriter\AtProtocol\Tests\Unit\App\Bsky\Feed\GetListFeedTest
  */
@@ -20,7 +20,7 @@ final readonly class GetListFeed
     ) {}
 
     public function __invoke(
-        UriInterface $uri,
+        UriInterface $pdsUri,
         string $list = null,
         ?int $limit = null,
         ?string $cursor = null,
@@ -29,7 +29,7 @@ final readonly class GetListFeed
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $uri->withPath('xrpc/app.bsky.feed.getListFeed')
+                $pdsUri->withPath('xrpc/app.bsky.feed.getListFeed')
                     ->withQuery(http_build_query(array_filter([
                     'list' => $list,
                     'limit' => $limit,
