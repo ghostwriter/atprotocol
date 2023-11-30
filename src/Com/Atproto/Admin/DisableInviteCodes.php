@@ -10,7 +10,7 @@ use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriInterface;
 
 /**
- * Disable some set of codes and/or all codes associated with a set of users
+ * Disable some set of codes and/or all codes associated with a set of users.
  *
  * @see \Ghostwriter\AtProtocol\Tests\Unit\Com\Atproto\Admin\DisableInviteCodesTest
  */
@@ -22,7 +22,7 @@ final readonly class DisableInviteCodes
     ) {}
 
     public function __invoke(
-        UriInterface $uri,
+        UriInterface $pdsUri,
         ?array $codes = null,
         ?array $accounts = null,
     ): RequestInterface
@@ -30,7 +30,7 @@ final readonly class DisableInviteCodes
         $request = $this->requestFactory
             ->createRequest(
                 'POST',
-                $uri->withPath('xrpc/com.atproto.admin.disableInviteCodes')
+                $pdsUri->withPath('xrpc/com.atproto.admin.disableInviteCodes')
             );
 
         $headers = [
