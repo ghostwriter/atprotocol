@@ -9,7 +9,7 @@ use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
 /**
- * Gets the current commit CID & revision of the repo.
+ * Get the current commit CID & revision of the repo.
  *
  * @see \Ghostwriter\AtProtocol\Tests\Unit\Com\Atproto\Sync\GetLatestCommitTest
  */
@@ -20,14 +20,14 @@ final readonly class GetLatestCommit
     ) {}
 
     public function __invoke(
-        UriInterface $uri,
+        UriInterface $pdsUri,
         string $did = null,
     ): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $uri->withPath('xrpc/com.atproto.sync.getLatestCommit')
+                $pdsUri->withPath('xrpc/com.atproto.sync.getLatestCommit')
                     ->withQuery(http_build_query(array_filter([
                     'did' => $did,
                 ])))
