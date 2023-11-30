@@ -9,7 +9,7 @@ use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
 /**
- * GetUnreadCount
+ * Get the count of unread notifications.
  *
  * @see \Ghostwriter\AtProtocol\Tests\Unit\App\Bsky\Notification\GetUnreadCountTest
  */
@@ -20,14 +20,14 @@ final readonly class GetUnreadCount
     ) {}
 
     public function __invoke(
-        UriInterface $uri,
+        UriInterface $pdsUri,
         ?string $seenAt = null,
     ): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $uri->withPath('xrpc/app.bsky.notification.getUnreadCount')
+                $pdsUri->withPath('xrpc/app.bsky.notification.getUnreadCount')
                     ->withQuery(http_build_query(array_filter([
                     'seenAt' => $seenAt,
                 ])))
