@@ -10,7 +10,7 @@ use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriInterface;
 
 /**
- * Unmute an actor by did or handle.
+ * Unmute an actor by DID or handle.
  *
  * @see \Ghostwriter\AtProtocol\Tests\Unit\App\Bsky\Graph\UnmuteActorTest
  */
@@ -22,14 +22,14 @@ final readonly class UnmuteActor
     ) {}
 
     public function __invoke(
-        UriInterface $uri,
+        UriInterface $pdsUri,
         string $actor = null,
     ): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
                 'POST',
-                $uri->withPath('xrpc/app.bsky.graph.unmuteActor')
+                $pdsUri->withPath('xrpc/app.bsky.graph.unmuteActor')
             );
 
         $headers = [
