@@ -10,7 +10,7 @@ use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriInterface;
 
 /**
- * Request an email with a code to confirm ownership of email
+ * Request an email with a code to confirm ownership of email.
  *
  * @see \Ghostwriter\AtProtocol\Tests\Unit\Com\Atproto\Server\RequestEmailConfirmationTest
  */
@@ -22,13 +22,13 @@ final readonly class RequestEmailConfirmation
     ) {}
 
     public function __invoke(
-        UriInterface $uri,
+        UriInterface $pdsUri,
     ): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
                 'POST',
-                $uri->withPath('xrpc/com.atproto.server.requestEmailConfirmation')
+                $pdsUri->withPath('xrpc/com.atproto.server.requestEmailConfirmation')
             );
 
         $headers = [
