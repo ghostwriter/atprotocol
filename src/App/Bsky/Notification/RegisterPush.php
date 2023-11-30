@@ -10,7 +10,7 @@ use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriInterface;
 
 /**
- * Register for push notifications with a service
+ * Register for push notifications with a service.
  *
  * @see \Ghostwriter\AtProtocol\Tests\Unit\App\Bsky\Notification\RegisterPushTest
  */
@@ -22,7 +22,7 @@ final readonly class RegisterPush
     ) {}
 
     public function __invoke(
-        UriInterface $uri,
+        UriInterface $pdsUri,
         string $serviceDid = null,
         string $token = null,
         string $platform = null,
@@ -32,7 +32,7 @@ final readonly class RegisterPush
         $request = $this->requestFactory
             ->createRequest(
                 'POST',
-                $uri->withPath('xrpc/app.bsky.notification.registerPush')
+                $pdsUri->withPath('xrpc/app.bsky.notification.registerPush')
             );
 
         $headers = [
