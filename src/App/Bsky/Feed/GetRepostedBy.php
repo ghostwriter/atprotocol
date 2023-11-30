@@ -9,7 +9,7 @@ use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
 /**
- * GetRepostedBy
+ * Get a list of reposts.
  *
  * @see \Ghostwriter\AtProtocol\Tests\Unit\App\Bsky\Feed\GetRepostedByTest
  */
@@ -20,7 +20,7 @@ final readonly class GetRepostedBy
     ) {}
 
     public function __invoke(
-        UriInterface $uri,
+        UriInterface $pdsUri,
         string $uri = null,
         ?string $cid = null,
         ?int $limit = null,
@@ -30,7 +30,7 @@ final readonly class GetRepostedBy
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $uri->withPath('xrpc/app.bsky.feed.getRepostedBy')
+                $pdsUri->withPath('xrpc/app.bsky.feed.getRepostedBy')
                     ->withQuery(http_build_query(array_filter([
                     'uri' => $uri,
                     'cid' => $cid,
