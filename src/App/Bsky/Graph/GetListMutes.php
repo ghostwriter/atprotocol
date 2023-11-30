@@ -9,7 +9,7 @@ use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
 /**
- * Which lists is the requester's account muting?
+ * Get lists that the actor is muting.
  *
  * @see \Ghostwriter\AtProtocol\Tests\Unit\App\Bsky\Graph\GetListMutesTest
  */
@@ -20,7 +20,7 @@ final readonly class GetListMutes
     ) {}
 
     public function __invoke(
-        UriInterface $uri,
+        UriInterface $pdsUri,
         ?int $limit = null,
         ?string $cursor = null,
     ): RequestInterface
@@ -28,7 +28,7 @@ final readonly class GetListMutes
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $uri->withPath('xrpc/app.bsky.graph.getListMutes')
+                $pdsUri->withPath('xrpc/app.bsky.graph.getListMutes')
                     ->withQuery(http_build_query(array_filter([
                     'limit' => $limit,
                     'cursor' => $cursor,
