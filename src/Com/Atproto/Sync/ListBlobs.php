@@ -9,7 +9,7 @@ use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
 /**
- * List blob cids since some revision
+ * List blob CIDs since some revision.
  *
  * @see \Ghostwriter\AtProtocol\Tests\Unit\Com\Atproto\Sync\ListBlobsTest
  */
@@ -20,7 +20,7 @@ final readonly class ListBlobs
     ) {}
 
     public function __invoke(
-        UriInterface $uri,
+        UriInterface $pdsUri,
         string $did = null,
         ?string $since = null,
         ?int $limit = null,
@@ -30,7 +30,7 @@ final readonly class ListBlobs
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $uri->withPath('xrpc/com.atproto.sync.listBlobs')
+                $pdsUri->withPath('xrpc/com.atproto.sync.listBlobs')
                     ->withQuery(http_build_query(array_filter([
                     'did' => $did,
                     'since' => $since,
