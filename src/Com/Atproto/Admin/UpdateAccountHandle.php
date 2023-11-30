@@ -10,7 +10,7 @@ use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriInterface;
 
 /**
- * Administrative action to update an account's handle
+ * Administrative action to update an account's handle.
  *
  * @see \Ghostwriter\AtProtocol\Tests\Unit\Com\Atproto\Admin\UpdateAccountHandleTest
  */
@@ -22,7 +22,7 @@ final readonly class UpdateAccountHandle
     ) {}
 
     public function __invoke(
-        UriInterface $uri,
+        UriInterface $pdsUri,
         string $did = null,
         string $handle = null,
     ): RequestInterface
@@ -30,7 +30,7 @@ final readonly class UpdateAccountHandle
         $request = $this->requestFactory
             ->createRequest(
                 'POST',
-                $uri->withPath('xrpc/com.atproto.admin.updateAccountHandle')
+                $pdsUri->withPath('xrpc/com.atproto.admin.updateAccountHandle')
             );
 
         $headers = [
