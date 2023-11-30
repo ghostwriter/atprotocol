@@ -22,14 +22,14 @@ final readonly class UpdateSeen
     ) {}
 
     public function __invoke(
-        UriInterface $uri,
+        UriInterface $pdsUri,
         string $seenAt = null,
     ): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
                 'POST',
-                $uri->withPath('xrpc/app.bsky.notification.updateSeen')
+                $pdsUri->withPath('xrpc/app.bsky.notification.updateSeen')
             );
 
         $headers = [
