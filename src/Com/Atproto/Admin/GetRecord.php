@@ -9,7 +9,7 @@ use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
 /**
- * View details about a record.
+ * Get details about a record.
  *
  * @see \Ghostwriter\AtProtocol\Tests\Unit\Com\Atproto\Admin\GetRecordTest
  */
@@ -20,7 +20,7 @@ final readonly class GetRecord
     ) {}
 
     public function __invoke(
-        UriInterface $uri,
+        UriInterface $pdsUri,
         string $uri = null,
         ?string $cid = null,
     ): RequestInterface
@@ -28,7 +28,7 @@ final readonly class GetRecord
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $uri->withPath('xrpc/com.atproto.admin.getRecord')
+                $pdsUri->withPath('xrpc/com.atproto.admin.getRecord')
                     ->withQuery(http_build_query(array_filter([
                     'uri' => $uri,
                     'cid' => $cid,
