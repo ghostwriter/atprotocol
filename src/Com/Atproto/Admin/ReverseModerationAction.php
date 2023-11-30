@@ -22,7 +22,7 @@ final readonly class ReverseModerationAction
     ) {}
 
     public function __invoke(
-        UriInterface $uri,
+        UriInterface $pdsUri,
         int $id = null,
         string $reason = null,
         string $createdBy = null,
@@ -31,7 +31,7 @@ final readonly class ReverseModerationAction
         $request = $this->requestFactory
             ->createRequest(
                 'POST',
-                $uri->withPath('xrpc/com.atproto.admin.reverseModerationAction')
+                $pdsUri->withPath('xrpc/com.atproto.admin.reverseModerationAction')
             );
 
         $headers = [
