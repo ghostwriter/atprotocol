@@ -22,14 +22,14 @@ final readonly class ReserveSigningKey
     ) {}
 
     public function __invoke(
-        UriInterface $uri,
+        UriInterface $pdsUri,
         ?string $did = null,
     ): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
                 'POST',
-                $uri->withPath('xrpc/com.atproto.server.reserveSigningKey')
+                $pdsUri->withPath('xrpc/com.atproto.server.reserveSigningKey')
             );
 
         $headers = [
