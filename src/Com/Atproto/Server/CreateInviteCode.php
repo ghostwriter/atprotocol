@@ -22,7 +22,7 @@ final readonly class CreateInviteCode
     ) {}
 
     public function __invoke(
-        UriInterface $uri,
+        UriInterface $pdsUri,
         int $useCount = null,
         ?string $forAccount = null,
     ): RequestInterface
@@ -30,7 +30,7 @@ final readonly class CreateInviteCode
         $request = $this->requestFactory
             ->createRequest(
                 'POST',
-                $uri->withPath('xrpc/com.atproto.server.createInviteCode')
+                $pdsUri->withPath('xrpc/com.atproto.server.createInviteCode')
             );
 
         $headers = [
