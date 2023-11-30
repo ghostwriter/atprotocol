@@ -9,7 +9,7 @@ use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
 /**
- * DEPRECATED: will be removed soon, please find a feed generator alternative
+ * DEPRECATED: will be removed soon. Use a feed generator alternative.
  *
  * @see \Ghostwriter\AtProtocol\Tests\Unit\App\Bsky\Unspecced\GetPopularTest
  */
@@ -20,7 +20,7 @@ final readonly class GetPopular
     ) {}
 
     public function __invoke(
-        UriInterface $uri,
+        UriInterface $pdsUri,
         ?bool $includeNsfw = null,
         ?int $limit = null,
         ?string $cursor = null,
@@ -29,7 +29,7 @@ final readonly class GetPopular
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $uri->withPath('xrpc/app.bsky.unspecced.getPopular')
+                $pdsUri->withPath('xrpc/app.bsky.unspecced.getPopular')
                     ->withQuery(http_build_query(array_filter([
                     'includeNsfw' => $includeNsfw,
                     'limit' => $limit,
