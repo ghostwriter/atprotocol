@@ -10,7 +10,7 @@ use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriInterface;
 
 /**
- * Delete a user account with a token and password.
+ * Delete an actor's account with a token and password.
  *
  * @see \Ghostwriter\AtProtocol\Tests\Unit\Com\Atproto\Server\DeleteAccountTest
  */
@@ -22,7 +22,7 @@ final readonly class DeleteAccount
     ) {}
 
     public function __invoke(
-        UriInterface $uri,
+        UriInterface $pdsUri,
         string $did = null,
         string $password = null,
         string $token = null,
@@ -31,7 +31,7 @@ final readonly class DeleteAccount
         $request = $this->requestFactory
             ->createRequest(
                 'POST',
-                $uri->withPath('xrpc/com.atproto.server.deleteAccount')
+                $pdsUri->withPath('xrpc/com.atproto.server.deleteAccount')
             );
 
         $headers = [
