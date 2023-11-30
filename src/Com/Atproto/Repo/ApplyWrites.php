@@ -22,7 +22,7 @@ final readonly class ApplyWrites
     ) {}
 
     public function __invoke(
-        UriInterface $uri,
+        UriInterface $pdsUri,
         string $repo = null,
         array $writes = null,
         ?bool $validate = null,
@@ -32,7 +32,7 @@ final readonly class ApplyWrites
         $request = $this->requestFactory
             ->createRequest(
                 'POST',
-                $uri->withPath('xrpc/com.atproto.repo.applyWrites')
+                $pdsUri->withPath('xrpc/com.atproto.repo.applyWrites')
             );
 
         $headers = [
