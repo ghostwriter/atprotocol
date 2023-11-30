@@ -20,13 +20,13 @@ final readonly class GetPreferences
     ) {}
 
     public function __invoke(
-        UriInterface $uri,
+        UriInterface $pdsUri,
     ): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $uri->withPath('xrpc/app.bsky.actor.getPreferences')
+                $pdsUri->withPath('xrpc/app.bsky.actor.getPreferences')
                     ->withQuery(http_build_query(array_filter([])))
             );
 
