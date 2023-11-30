@@ -10,7 +10,7 @@ use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriInterface;
 
 /**
- * Notify a crawling service of a recent update. Often when a long break between updates causes the connection with the crawling service to break.
+ * Notify a crawling service of a recent update; often when a long break between updates causes the connection with the crawling service to break.
  *
  * @see \Ghostwriter\AtProtocol\Tests\Unit\Com\Atproto\Sync\NotifyOfUpdateTest
  */
@@ -22,14 +22,14 @@ final readonly class NotifyOfUpdate
     ) {}
 
     public function __invoke(
-        UriInterface $uri,
+        UriInterface $pdsUri,
         string $hostname = null,
     ): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
                 'POST',
-                $uri->withPath('xrpc/com.atproto.sync.notifyOfUpdate')
+                $pdsUri->withPath('xrpc/com.atproto.sync.notifyOfUpdate')
             );
 
         $headers = [
