@@ -10,7 +10,7 @@ use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriInterface;
 
 /**
- * Create an invite code.
+ * Create invite codes.
  *
  * @see \Ghostwriter\AtProtocol\Tests\Unit\Com\Atproto\Server\CreateInviteCodesTest
  */
@@ -22,7 +22,7 @@ final readonly class CreateInviteCodes
     ) {}
 
     public function __invoke(
-        UriInterface $uri,
+        UriInterface $pdsUri,
         int $codeCount = null,
         int $useCount = null,
         ?array $forAccounts = null,
@@ -31,7 +31,7 @@ final readonly class CreateInviteCodes
         $request = $this->requestFactory
             ->createRequest(
                 'POST',
-                $uri->withPath('xrpc/com.atproto.server.createInviteCodes')
+                $pdsUri->withPath('xrpc/com.atproto.server.createInviteCodes')
             );
 
         $headers = [
