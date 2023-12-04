@@ -1,14 +1,13 @@
+# .github/workflows/compliance.yml
 name: Compliance
 
 on:
   pull_request:
-    branches:
-      - "**"
   push:
     branches:
       - "main"
-      - "[0-9]+.[0-9]+.x"
-      - "v[0-9]+"
+      - "[0-9]+.[0-9]+.x" # 1.2.x
+      - "v[0-9]+" # v1
   schedule:
     - cron: "0 * * * *" # Runs hourly
   workflow_dispatch: # Manually Trigger workflow
@@ -18,4 +17,5 @@ jobs:
     uses: ghostwriter/compliance/.github/workflows/automation.yml@v1
     secrets:
       CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
-      STRYKER_DASHBOARD_API_KEY: ${{ secrets.STRYKER_DASHBOARD_API_KEY }}
+      GPG_PRIVATE_KEY: ${{ secrets.GPG_PRIVATE_KEY }}
+      INFECTION_DASHBOARD_API_KEY: ${{ secrets.INFECTION_DASHBOARD_API_KEY }}
