@@ -25,6 +25,7 @@ final readonly class SendEmail
         UriInterface $pdsUri,
         string $recipientDid = null,
         string $content = null,
+        string $senderDid = null,
         ?string $subject = null,
     ): RequestInterface
     {
@@ -47,6 +48,7 @@ final readonly class SendEmail
             'recipientDid' => $recipientDid,
             'content' => $content,
             'subject' => $subject,
+            'senderDid' => $senderDid,
         ]));
 
         if (false === $jsonBody){
