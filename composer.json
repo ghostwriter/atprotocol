@@ -105,6 +105,7 @@
             "@psalm",
             "@infection"
         ],
+        "submodule": "git submodule update --recursive --remote",
         "xdebug": "@putenv XDEBUG_MODE=coverage"
     }
 }
