@@ -27,6 +27,7 @@ final readonly class SendEmail
         string $content = null,
         string $senderDid = null,
         ?string $subject = null,
+        ?string $comment = null,
     ): RequestInterface
     {
         $request = $this->requestFactory
@@ -49,6 +50,7 @@ final readonly class SendEmail
             'content' => $content,
             'subject' => $subject,
             'senderDid' => $senderDid,
+            'comment' => $comment,
         ]));
 
         if (false === $jsonBody){
