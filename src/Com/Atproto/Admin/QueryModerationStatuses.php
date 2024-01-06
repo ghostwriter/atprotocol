@@ -34,6 +34,7 @@ final readonly class QueryModerationStatuses
         ?string $sortField = null,
         ?string $sortDirection = null,
         ?bool $takendown = null,
+        ?bool $appealed = null,
         ?int $limit = null,
         ?string $cursor = null,
     ): RequestInterface
@@ -56,6 +57,7 @@ final readonly class QueryModerationStatuses
                     'sortField' => $sortField,
                     'sortDirection' => $sortDirection,
                     'takendown' => $takendown,
+                    'appealed' => $appealed,
                     'limit' => $limit,
                     'cursor' => $cursor,
                 ])))
