@@ -9,9 +9,7 @@
 [![Latest Version on Packagist](https://badgen.net/packagist/v/ghostwriter/atprotocol)](https://packagist.org/packages/ghostwriter/atprotocol)
 [![Downloads](https://badgen.net/packagist/dt/ghostwriter/atprotocol?color=blue)](https://packagist.org/packages/ghostwriter/atprotocol)
 
-work in progress
-
-> **Warning**
+> [!WARNING]
 >
 > This project is not finished yet, work in progress.
 
