@@ -12,6 +12,17 @@ on:
     - cron: "0 * * * *" # Runs hourly
   workflow_dispatch: # Manually Trigger workflow
 
+# https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#permissions
+permissions:
+  actions: write #  permits an action to cancel a workflow run.
+  checks: write # permits an action to create a check run.
+  contents: write # allows the action to create a release.
+  discussions: write # permits an action to close or delete a discussion.
+  issues: write # permits an action to add a comment to an issue
+  packages: write # permits an action to upload and publish packages on GitHub Packages.
+  pages: write # permits an action to request a GitHub Pages build.
+  pull-requests: write # permits an action to add a label to a pull request.
+
 jobs:
   automation:
     uses: ghostwriter/compliance/.github/workflows/automation.yml@v1
