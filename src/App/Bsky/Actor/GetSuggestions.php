@@ -9,7 +9,7 @@ use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
 /**
- * Get a list of suggested actors, used for discovery.
+ * Get a list of suggested actors. Expected use is discovery of accounts to follow during new account onboarding.
  *
  * @see \Ghostwriter\AtProtocol\Tests\Unit\App\Bsky\Actor\GetSuggestionsTest
  */
