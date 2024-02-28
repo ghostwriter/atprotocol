@@ -11,7 +11,7 @@ use Psr\Http\Message\UriInterface;
 /**
  * Get all invite codes for the current account. Requires auth.
  *
- * @see \Ghostwriter\AtProtocol\Tests\Unit\Com\Atproto\Server\GetAccountInviteCodesTest
+ * @see \Ghostwriter\AtProtocolTests\Unit\Com\Atproto\Server\GetAccountInviteCodesTest
  */
 final readonly class GetAccountInviteCodes
 {
