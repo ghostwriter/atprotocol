@@ -11,7 +11,7 @@ use Psr\Http\Message\UriInterface;
 /**
  * Enumerates all the DID, rev, and commit CID for all repos hosted by this service. Does not require auth; implemented by PDS and Relay.
  *
- * @see \Ghostwriter\AtProtocol\Tests\Unit\Com\Atproto\Sync\ListReposTest
+ * @see \Ghostwriter\AtProtocolTests\Unit\Com\Atproto\Sync\ListReposTest
  */
 final readonly class ListRepos
 {
