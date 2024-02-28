@@ -12,7 +12,7 @@ use Psr\Http\Message\UriInterface;
 /**
  * Re-enable an account's ability to receive invite codes.
  *
- * @see \Ghostwriter\AtProtocol\Tests\Unit\Com\Atproto\Admin\EnableAccountInvitesTest
+ * @see \Ghostwriter\AtProtocolTests\Unit\Com\Atproto\Admin\EnableAccountInvitesTest
  */
 final readonly class EnableAccountInvites
 {
