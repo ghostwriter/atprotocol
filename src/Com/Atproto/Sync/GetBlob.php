@@ -9,7 +9,7 @@ use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
 /**
- * Get a blob associated with a given repo.
+ * Get a blob associated with a given account. Returns the full blob as originally uploaded. Does not require auth; implemented by PDS.
  *
  * @see \Ghostwriter\AtProtocol\Tests\Unit\Com\Atproto\Sync\GetBlobTest
  */
