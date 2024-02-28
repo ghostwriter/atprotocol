@@ -9,7 +9,7 @@ use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
 /**
- * Get a list of suggested feeds for the viewer.
+ * Get a list of suggested feeds (feed generators) for the requesting account.
  *
  * @see \Ghostwriter\AtProtocol\Tests\Unit\App\Bsky\Feed\GetSuggestedFeedsTest
  */
