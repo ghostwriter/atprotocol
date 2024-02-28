@@ -12,7 +12,7 @@ use Psr\Http\Message\UriInterface;
 /**
  * Create invite codes.
  *
- * @see \Ghostwriter\AtProtocol\Tests\Unit\Com\Atproto\Server\CreateInviteCodesTest
+ * @see \Ghostwriter\AtProtocolTests\Unit\Com\Atproto\Server\CreateInviteCodesTest
  */
 final readonly class CreateInviteCodes
 {
