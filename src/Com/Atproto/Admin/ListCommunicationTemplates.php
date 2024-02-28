@@ -11,7 +11,7 @@ use Psr\Http\Message\UriInterface;
 /**
  * Get list of all communication templates.
  *
- * @see \Ghostwriter\AtProtocol\Tests\Unit\Com\Atproto\Admin\ListCommunicationTemplatesTest
+ * @see \Ghostwriter\AtProtocolTests\Unit\Com\Atproto\Admin\ListCommunicationTemplatesTest
  */
 final readonly class ListCommunicationTemplates
 {
