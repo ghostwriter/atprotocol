@@ -12,7 +12,7 @@ use Psr\Http\Message\UriInterface;
 /**
  * Submit a moderation report regarding an atproto account or record. Implemented by moderation services (with PDS proxying), and requires auth.
  *
- * @see \Ghostwriter\AtProtocol\Tests\Unit\Com\Atproto\Moderation\CreateReportTest
+ * @see \Ghostwriter\AtProtocolTests\Unit\Com\Atproto\Moderation\CreateReportTest
  */
 final readonly class CreateReport
 {
