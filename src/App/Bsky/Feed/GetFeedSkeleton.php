@@ -9,7 +9,7 @@ use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
 /**
- * Get a skeleton of a feed provided by a feed generator.
+ * Get a skeleton of a feed provided by a feed generator. Auth is optional, depending on provider requirements, and provides the DID of the requester. Implemented by Feed Generator Service.
  *
  * @see \Ghostwriter\AtProtocol\Tests\Unit\App\Bsky\Feed\GetFeedSkeletonTest
  */
