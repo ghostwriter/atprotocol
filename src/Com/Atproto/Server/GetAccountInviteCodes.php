@@ -9,7 +9,7 @@ use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
 /**
- * Get all invite codes for a given account.
+ * Get all invite codes for the current account. Requires auth.
  *
  * @see \Ghostwriter\AtProtocol\Tests\Unit\Com\Atproto\Server\GetAccountInviteCodesTest
  */
