@@ -11,7 +11,7 @@ use Psr\Http\Message\UriInterface;
 /**
  * Get details about a record.
  *
- * @see \Ghostwriter\AtProtocol\Tests\Unit\Com\Atproto\Admin\GetRecordTest
+ * @see \Ghostwriter\AtProtocolTests\Unit\Com\Atproto\Admin\GetRecordTest
  */
 final readonly class GetRecord
 {
