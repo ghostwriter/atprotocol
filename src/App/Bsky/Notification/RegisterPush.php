@@ -12,7 +12,7 @@ use Psr\Http\Message\UriInterface;
 /**
  * Register to receive push notifications, via a specified service, for the requesting account. Requires auth.
  *
- * @see \Ghostwriter\AtProtocol\Tests\Unit\App\Bsky\Notification\RegisterPushTest
+ * @see \Ghostwriter\AtProtocolTests\Unit\App\Bsky\Notification\RegisterPushTest
  */
 final readonly class RegisterPush
 {
