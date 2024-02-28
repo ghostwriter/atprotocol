@@ -10,7 +10,7 @@ use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriInterface;
 
 /**
- * Delete an actor's account with a token and password.
+ * Delete an actor's account with a token and password. Can only be called after requesting a deletion token. Requires auth.
  *
  * @see \Ghostwriter\AtProtocol\Tests\Unit\Com\Atproto\Server\DeleteAccountTest
  */
