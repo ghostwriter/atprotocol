@@ -9,7 +9,7 @@ use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
 /**
- * Enumerates public relationships between one account, and a list of other accounts
+ * Enumerates public relationships between one account, and a list of other accounts. Does not require auth.
  *
  * @see \Ghostwriter\AtProtocol\Tests\Unit\App\Bsky\Graph\GetRelationshipsTest
  */
