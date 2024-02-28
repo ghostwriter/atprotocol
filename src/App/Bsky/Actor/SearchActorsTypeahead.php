@@ -9,7 +9,7 @@ use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
 /**
- * Find actor suggestions for a prefix search term.
+ * Find actor suggestions for a prefix search term. Expected use is for auto-completion during text field entry. Does not require auth.
  *
  * @see \Ghostwriter\AtProtocol\Tests\Unit\App\Bsky\Actor\SearchActorsTypeaheadTest
  */
