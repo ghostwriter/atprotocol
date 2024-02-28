@@ -12,7 +12,7 @@ use Psr\Http\Message\UriInterface;
 /**
  * Confirm an email using a token from com.atproto.server.requestEmailConfirmation.
  *
- * @see \Ghostwriter\AtProtocol\Tests\Unit\Com\Atproto\Server\ConfirmEmailTest
+ * @see \Ghostwriter\AtProtocolTests\Unit\Com\Atproto\Server\ConfirmEmailTest
  */
 final readonly class ConfirmEmail
 {
