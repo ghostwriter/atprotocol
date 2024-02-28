@@ -11,7 +11,7 @@ use Psr\Http\Message\UriInterface;
 /**
  * Get a view of the requesting account's home timeline. This is expected to be some form of reverse-chronological feed.
  *
- * @see \Ghostwriter\AtProtocol\Tests\Unit\App\Bsky\Feed\GetTimelineTest
+ * @see \Ghostwriter\AtProtocolTests\Unit\App\Bsky\Feed\GetTimelineTest
  */
 final readonly class GetTimeline
 {
