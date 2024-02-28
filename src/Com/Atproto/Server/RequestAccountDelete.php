@@ -12,7 +12,7 @@ use Psr\Http\Message\UriInterface;
 /**
  * Initiate a user account deletion via email.
  *
- * @see \Ghostwriter\AtProtocol\Tests\Unit\Com\Atproto\Server\RequestAccountDeleteTest
+ * @see \Ghostwriter\AtProtocolTests\Unit\Com\Atproto\Server\RequestAccountDeleteTest
  */
 final readonly class RequestAccountDelete
 {
