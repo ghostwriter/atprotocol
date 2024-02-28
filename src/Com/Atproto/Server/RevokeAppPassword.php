@@ -12,7 +12,7 @@ use Psr\Http\Message\UriInterface;
 /**
  * Revoke an App Password by name.
  *
- * @see \Ghostwriter\AtProtocol\Tests\Unit\Com\Atproto\Server\RevokeAppPasswordTest
+ * @see \Ghostwriter\AtProtocolTests\Unit\Com\Atproto\Server\RevokeAppPasswordTest
  */
 final readonly class RevokeAppPassword
 {
