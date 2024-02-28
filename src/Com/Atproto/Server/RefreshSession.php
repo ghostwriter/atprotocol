@@ -12,7 +12,7 @@ use Psr\Http\Message\UriInterface;
 /**
  * Refresh an authentication session. Requires auth using the 'refreshJwt' (not the 'accessJwt').
  *
- * @see \Ghostwriter\AtProtocol\Tests\Unit\Com\Atproto\Server\RefreshSessionTest
+ * @see \Ghostwriter\AtProtocolTests\Unit\Com\Atproto\Server\RefreshSessionTest
  */
 final readonly class RefreshSession
 {
