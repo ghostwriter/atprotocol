@@ -12,7 +12,7 @@ use Psr\Http\Message\UriInterface;
 /**
  * Create an authentication session.
  *
- * @see \Ghostwriter\AtProtocol\Tests\Unit\Com\Atproto\Server\CreateSessionTest
+ * @see \Ghostwriter\AtProtocolTests\Unit\Com\Atproto\Server\CreateSessionTest
  */
 final readonly class CreateSession
 {
