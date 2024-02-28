@@ -11,7 +11,7 @@ use Psr\Http\Message\UriInterface;
 /**
  * DEPRECATED - please use com.atproto.sync.getLatestCommit instead
  *
- * @see \Ghostwriter\AtProtocol\Tests\Unit\Com\Atproto\Sync\GetHeadTest
+ * @see \Ghostwriter\AtProtocolTests\Unit\Com\Atproto\Sync\GetHeadTest
  */
 final readonly class GetHead
 {
