@@ -11,7 +11,7 @@ use Psr\Http\Message\UriInterface;
 /**
  * Gets a 'view' (with additional context) of a specified list.
  *
- * @see \Ghostwriter\AtProtocol\Tests\Unit\App\Bsky\Graph\GetListTest
+ * @see \Ghostwriter\AtProtocolTests\Unit\App\Bsky\Graph\GetListTest
  */
 final readonly class GetList
 {
