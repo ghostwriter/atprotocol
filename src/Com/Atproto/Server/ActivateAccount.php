@@ -12,7 +12,7 @@ use Psr\Http\Message\UriInterface;
 /**
  * Activates a currently deactivated account. Used to finalize account migration after the account's repo is imported and identity is setup.
  *
- * @see \Ghostwriter\AtProtocol\Tests\Unit\Com\Atproto\Server\ActivateAccountTest
+ * @see \Ghostwriter\AtProtocolTests\Unit\Com\Atproto\Server\ActivateAccountTest
  */
 final readonly class ActivateAccount
 {
