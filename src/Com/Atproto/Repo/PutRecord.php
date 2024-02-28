@@ -10,7 +10,7 @@ use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriInterface;
 
 /**
- * Write a record, creating or updating it as needed.
+ * Write a repository record, creating or updating it as needed. Requires auth, implemented by PDS.
  *
  * @see \Ghostwriter\AtProtocol\Tests\Unit\Com\Atproto\Repo\PutRecordTest
  */
