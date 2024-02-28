@@ -11,7 +11,7 @@ use Psr\Http\Message\UriInterface;
 /**
  * Returns the status of an account, especially as pertaining to import or recovery. Can be called many times over the course of an account migration. Requires auth and can only be called pertaining to oneself.
  *
- * @see \Ghostwriter\AtProtocol\Tests\Unit\Com\Atproto\Server\CheckAccountStatusTest
+ * @see \Ghostwriter\AtProtocolTests\Unit\Com\Atproto\Server\CheckAccountStatusTest
  */
 final readonly class CheckAccountStatus
 {
