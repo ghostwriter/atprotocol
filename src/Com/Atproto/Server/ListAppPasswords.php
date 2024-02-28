@@ -11,7 +11,7 @@ use Psr\Http\Message\UriInterface;
 /**
  * List all App Passwords.
  *
- * @see \Ghostwriter\AtProtocol\Tests\Unit\Com\Atproto\Server\ListAppPasswordsTest
+ * @see \Ghostwriter\AtProtocolTests\Unit\Com\Atproto\Server\ListAppPasswordsTest
  */
 final readonly class ListAppPasswords
 {
