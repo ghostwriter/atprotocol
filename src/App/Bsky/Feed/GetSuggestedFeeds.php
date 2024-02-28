@@ -11,7 +11,7 @@ use Psr\Http\Message\UriInterface;
 /**
  * Get a list of suggested feeds (feed generators) for the requesting account.
  *
- * @see \Ghostwriter\AtProtocol\Tests\Unit\App\Bsky\Feed\GetSuggestedFeedsTest
+ * @see \Ghostwriter\AtProtocolTests\Unit\App\Bsky\Feed\GetSuggestedFeedsTest
  */
 final readonly class GetSuggestedFeeds
 {
