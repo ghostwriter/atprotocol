@@ -11,7 +11,7 @@ use Psr\Http\Message\UriInterface;
 /**
  * Download a repository export as CAR file. Optionally only a 'diff' since a previous revision. Does not require auth; implemented by PDS.
  *
- * @see \Ghostwriter\AtProtocol\Tests\Unit\Com\Atproto\Sync\GetRepoTest
+ * @see \Ghostwriter\AtProtocolTests\Unit\Com\Atproto\Sync\GetRepoTest
  */
 final readonly class GetRepo
 {
