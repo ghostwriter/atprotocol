@@ -12,7 +12,7 @@ use Psr\Http\Message\UriInterface;
 /**
  * Creates a mute relationship for the specified account. Mutes are private in Bluesky. Requires auth.
  *
- * @see \Ghostwriter\AtProtocol\Tests\Unit\App\Bsky\Graph\MuteActorTest
+ * @see \Ghostwriter\AtProtocolTests\Unit\App\Bsky\Graph\MuteActorTest
  */
 final readonly class MuteActor
 {
