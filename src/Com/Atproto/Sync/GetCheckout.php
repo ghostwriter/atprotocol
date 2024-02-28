@@ -11,7 +11,7 @@ use Psr\Http\Message\UriInterface;
 /**
  * DEPRECATED - please use com.atproto.sync.getRepo instead
  *
- * @see \Ghostwriter\AtProtocol\Tests\Unit\Com\Atproto\Sync\GetCheckoutTest
+ * @see \Ghostwriter\AtProtocolTests\Unit\Com\Atproto\Sync\GetCheckoutTest
  */
 final readonly class GetCheckout
 {
