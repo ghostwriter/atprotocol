@@ -11,7 +11,7 @@ use Psr\Http\Message\UriInterface;
 /**
  * Enumerates the lists created by a specified account (actor).
  *
- * @see \Ghostwriter\AtProtocol\Tests\Unit\App\Bsky\Graph\GetListsTest
+ * @see \Ghostwriter\AtProtocolTests\Unit\App\Bsky\Graph\GetListsTest
  */
 final readonly class GetLists
 {
