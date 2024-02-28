@@ -9,7 +9,7 @@ use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
 /**
- * List a range of records in a collection.
+ * List a range of records in a repository, matching a specific collection. Does not require auth.
  *
  * @see \Ghostwriter\AtProtocol\Tests\Unit\Com\Atproto\Repo\ListRecordsTest
  */
