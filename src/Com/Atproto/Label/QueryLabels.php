@@ -11,7 +11,7 @@ use Psr\Http\Message\UriInterface;
 /**
  * Find labels relevant to the provided AT-URI patterns. Public endpoint for moderation services, though may return different or additional results with auth.
  *
- * @see \Ghostwriter\AtProtocol\Tests\Unit\Com\Atproto\Label\QueryLabelsTest
+ * @see \Ghostwriter\AtProtocolTests\Unit\Com\Atproto\Label\QueryLabelsTest
  */
 final readonly class QueryLabels
 {
