@@ -10,7 +10,7 @@ use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriInterface;
 
 /**
- * Mute an actor by DID or handle.
+ * Creates a mute relationship for the specified account. Mutes are private in Bluesky. Requires auth.
  *
  * @see \Ghostwriter\AtProtocol\Tests\Unit\App\Bsky\Graph\MuteActorTest
  */
