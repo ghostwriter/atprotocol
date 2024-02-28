@@ -12,7 +12,7 @@ use Psr\Http\Message\UriInterface;
 /**
  * Delete a communication template.
  *
- * @see \Ghostwriter\AtProtocol\Tests\Unit\Com\Atproto\Admin\DeleteCommunicationTemplateTest
+ * @see \Ghostwriter\AtProtocolTests\Unit\Com\Atproto\Admin\DeleteCommunicationTemplateTest
  */
 final readonly class DeleteCommunicationTemplate
 {
