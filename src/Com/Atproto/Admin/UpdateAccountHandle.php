@@ -12,7 +12,7 @@ use Psr\Http\Message\UriInterface;
 /**
  * Administrative action to update an account's handle.
  *
- * @see \Ghostwriter\AtProtocol\Tests\Unit\Com\Atproto\Admin\UpdateAccountHandleTest
+ * @see \Ghostwriter\AtProtocolTests\Unit\Com\Atproto\Admin\UpdateAccountHandleTest
  */
 final readonly class UpdateAccountHandle
 {
