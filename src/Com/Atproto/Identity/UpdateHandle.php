@@ -10,7 +10,7 @@ use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriInterface;
 
 /**
- * Updates the handle of the account.
+ * Updates the current account's handle. Verifies handle validity, and updates did:plc document if necessary. Implemented by PDS, and requires auth.
  *
  * @see \Ghostwriter\AtProtocol\Tests\Unit\Com\Atproto\Identity\UpdateHandleTest
  */
