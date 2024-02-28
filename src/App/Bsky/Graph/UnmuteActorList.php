@@ -12,7 +12,7 @@ use Psr\Http\Message\UriInterface;
 /**
  * Unmutes the specified list of accounts. Requires auth.
  *
- * @see \Ghostwriter\AtProtocol\Tests\Unit\App\Bsky\Graph\UnmuteActorListTest
+ * @see \Ghostwriter\AtProtocolTests\Unit\App\Bsky\Graph\UnmuteActorListTest
  */
 final readonly class UnmuteActorList
 {
