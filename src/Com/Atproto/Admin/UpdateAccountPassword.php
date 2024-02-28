@@ -12,7 +12,7 @@ use Psr\Http\Message\UriInterface;
 /**
  * Update the password for a user account as an administrator.
  *
- * @see \Ghostwriter\AtProtocol\Tests\Unit\Com\Atproto\Admin\UpdateAccountPasswordTest
+ * @see \Ghostwriter\AtProtocolTests\Unit\Com\Atproto\Admin\UpdateAccountPasswordTest
  */
 final readonly class UpdateAccountPassword
 {
