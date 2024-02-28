@@ -12,7 +12,7 @@ use Psr\Http\Message\UriInterface;
 /**
  * Request a verification code to be sent to the supplied phone number
  *
- * @see \Ghostwriter\AtProtocol\Tests\Unit\Com\Atproto\Temp\RequestPhoneVerificationTest
+ * @see \Ghostwriter\AtProtocolTests\Unit\Com\Atproto\Temp\RequestPhoneVerificationTest
  */
 final readonly class RequestPhoneVerification
 {
