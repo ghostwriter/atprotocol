@@ -12,7 +12,7 @@ use Psr\Http\Message\UriInterface;
 /**
  * Disable some set of codes and/or all codes associated with a set of users.
  *
- * @see \Ghostwriter\AtProtocol\Tests\Unit\Com\Atproto\Admin\DisableInviteCodesTest
+ * @see \Ghostwriter\AtProtocolTests\Unit\Com\Atproto\Admin\DisableInviteCodesTest
  */
 final readonly class DisableInviteCodes
 {
