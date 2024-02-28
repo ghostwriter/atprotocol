@@ -11,7 +11,7 @@ use Psr\Http\Message\UriInterface;
 /**
  * An unspecced view of globally popular feed generators.
  *
- * @see \Ghostwriter\AtProtocol\Tests\Unit\App\Bsky\Unspecced\GetPopularFeedGeneratorsTest
+ * @see \Ghostwriter\AtProtocolTests\Unit\App\Bsky\Unspecced\GetPopularFeedGeneratorsTest
  */
 final readonly class GetPopularFeedGenerators
 {
