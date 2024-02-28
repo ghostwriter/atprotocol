@@ -11,7 +11,7 @@ use Psr\Http\Message\UriInterface;
 /**
  * Count the number of unread notifications for the requesting account. Requires auth.
  *
- * @see \Ghostwriter\AtProtocol\Tests\Unit\App\Bsky\Notification\GetUnreadCountTest
+ * @see \Ghostwriter\AtProtocolTests\Unit\App\Bsky\Notification\GetUnreadCountTest
  */
 final readonly class GetUnreadCount
 {
