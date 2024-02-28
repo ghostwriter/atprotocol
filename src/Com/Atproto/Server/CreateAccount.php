@@ -10,7 +10,7 @@ use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriInterface;
 
 /**
- * Create an account.
+ * Create an account. Implemented by PDS.
  *
  * @see \Ghostwriter\AtProtocol\Tests\Unit\Com\Atproto\Server\CreateAccountTest
  */
