@@ -11,7 +11,7 @@ use Psr\Http\Message\UriInterface;
 /**
  * Enumerates which accounts the requesting account is currently blocking. Requires auth.
  *
- * @see \Ghostwriter\AtProtocol\Tests\Unit\App\Bsky\Graph\GetBlocksTest
+ * @see \Ghostwriter\AtProtocolTests\Unit\App\Bsky\Graph\GetBlocksTest
  */
 final readonly class GetBlocks
 {
