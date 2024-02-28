@@ -9,7 +9,7 @@ use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
 /**
- * Get the current commit CID & revision of the repo.
+ * Get the current commit CID & revision of the specified repo. Does not require auth.
  *
  * @see \Ghostwriter\AtProtocol\Tests\Unit\Com\Atproto\Sync\GetLatestCommitTest
  */
