@@ -11,7 +11,7 @@ use Psr\Http\Message\UriInterface;
 /**
  * Get a list of reposts for a given post.
  *
- * @see \Ghostwriter\AtProtocol\Tests\Unit\App\Bsky\Feed\GetRepostedByTest
+ * @see \Ghostwriter\AtProtocolTests\Unit\App\Bsky\Feed\GetRepostedByTest
  */
 final readonly class GetRepostedBy
 {
