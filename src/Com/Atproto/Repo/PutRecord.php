@@ -12,7 +12,7 @@ use Psr\Http\Message\UriInterface;
 /**
  * Write a repository record, creating or updating it as needed. Requires auth, implemented by PDS.
  *
- * @see \Ghostwriter\AtProtocol\Tests\Unit\Com\Atproto\Repo\PutRecordTest
+ * @see \Ghostwriter\AtProtocolTests\Unit\Com\Atproto\Repo\PutRecordTest
  */
 final readonly class PutRecord
 {
