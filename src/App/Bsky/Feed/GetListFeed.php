@@ -11,7 +11,7 @@ use Psr\Http\Message\UriInterface;
 /**
  * Get a feed of recent posts from a list (posts and reposts from any actors on the list). Does not require auth.
  *
- * @see \Ghostwriter\AtProtocol\Tests\Unit\App\Bsky\Feed\GetListFeedTest
+ * @see \Ghostwriter\AtProtocolTests\Unit\App\Bsky\Feed\GetListFeedTest
  */
 final readonly class GetListFeed
 {
