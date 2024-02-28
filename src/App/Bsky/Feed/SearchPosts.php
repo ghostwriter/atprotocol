@@ -11,7 +11,7 @@ use Psr\Http\Message\UriInterface;
 /**
  * Find posts matching search criteria, returning views of those posts.
  *
- * @see \Ghostwriter\AtProtocol\Tests\Unit\App\Bsky\Feed\SearchPostsTest
+ * @see \Ghostwriter\AtProtocolTests\Unit\App\Bsky\Feed\SearchPostsTest
  */
 final readonly class SearchPosts
 {
