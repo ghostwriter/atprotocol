@@ -12,7 +12,7 @@ use Psr\Http\Message\UriInterface;
 /**
  * Disable an account from receiving new invite codes, but does not invalidate existing codes.
  *
- * @see \Ghostwriter\AtProtocol\Tests\Unit\Com\Atproto\Admin\DisableAccountInvitesTest
+ * @see \Ghostwriter\AtProtocolTests\Unit\Com\Atproto\Admin\DisableAccountInvitesTest
  */
 final readonly class DisableAccountInvites
 {
