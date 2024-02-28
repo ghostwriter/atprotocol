@@ -11,7 +11,7 @@ use Psr\Http\Message\UriInterface;
 /**
  * Check accounts location in signup queue.
  *
- * @see \Ghostwriter\AtProtocol\Tests\Unit\Com\Atproto\Temp\CheckSignupQueueTest
+ * @see \Ghostwriter\AtProtocolTests\Unit\Com\Atproto\Temp\CheckSignupQueueTest
  */
 final readonly class CheckSignupQueue
 {
