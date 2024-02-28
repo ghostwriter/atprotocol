@@ -9,7 +9,7 @@ use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
 /**
- * Get a list of feeds created by the actor.
+ * Get a list of feeds (feed generator records) created by the actor (in the actor's repo).
  *
  * @see \Ghostwriter\AtProtocol\Tests\Unit\App\Bsky\Feed\GetActorFeedsTest
  */
