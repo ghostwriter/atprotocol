@@ -9,7 +9,7 @@ use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
 /**
- * Get lists that the actor is blocking.
+ * Get mod lists that the requesting account (actor) is blocking. Requires auth.
  *
  * @see \Ghostwriter\AtProtocol\Tests\Unit\App\Bsky\Graph\GetListBlocksTest
  */
