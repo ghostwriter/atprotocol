@@ -12,7 +12,7 @@ use Psr\Http\Message\UriInterface;
 /**
  * Send email to a user's account email address.
  *
- * @see \Ghostwriter\AtProtocol\Tests\Unit\Com\Atproto\Admin\SendEmailTest
+ * @see \Ghostwriter\AtProtocolTests\Unit\Com\Atproto\Admin\SendEmailTest
  */
 final readonly class SendEmail
 {
