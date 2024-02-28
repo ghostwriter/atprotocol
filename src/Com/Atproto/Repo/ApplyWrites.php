@@ -12,7 +12,7 @@ use Psr\Http\Message\UriInterface;
 /**
  * Apply a batch transaction of repository creates, updates, and deletes. Requires auth, implemented by PDS.
  *
- * @see \Ghostwriter\AtProtocol\Tests\Unit\Com\Atproto\Repo\ApplyWritesTest
+ * @see \Ghostwriter\AtProtocolTests\Unit\Com\Atproto\Repo\ApplyWritesTest
  */
 final readonly class ApplyWrites
 {
