@@ -12,7 +12,7 @@ use Psr\Http\Message\UriInterface;
 /**
  * Create an App Password.
  *
- * @see \Ghostwriter\AtProtocol\Tests\Unit\Com\Atproto\Server\CreateAppPasswordTest
+ * @see \Ghostwriter\AtProtocolTests\Unit\Com\Atproto\Server\CreateAppPasswordTest
  */
 final readonly class CreateAppPassword
 {
