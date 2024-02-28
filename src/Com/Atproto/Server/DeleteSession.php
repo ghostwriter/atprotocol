@@ -10,7 +10,7 @@ use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriInterface;
 
 /**
- * Delete the current session.
+ * Delete the current session. Requires auth.
  *
  * @see \Ghostwriter\AtProtocol\Tests\Unit\Com\Atproto\Server\DeleteSessionTest
  */
