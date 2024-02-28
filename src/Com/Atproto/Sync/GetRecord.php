@@ -9,7 +9,7 @@ use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
 /**
- * Get blocks needed for existence or non-existence of record.
+ * Get data blocks needed to prove the existence or non-existence of record in the current version of repo. Does not require auth.
  *
  * @see \Ghostwriter\AtProtocol\Tests\Unit\Com\Atproto\Sync\GetRecordTest
  */
