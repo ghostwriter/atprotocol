@@ -11,7 +11,7 @@ use Psr\Http\Message\UriInterface;
 /**
  * Get a list of suggested actors. Expected use is discovery of accounts to follow during new account onboarding.
  *
- * @see \Ghostwriter\AtProtocol\Tests\Unit\App\Bsky\Actor\GetSuggestionsTest
+ * @see \Ghostwriter\AtProtocolTests\Unit\App\Bsky\Actor\GetSuggestionsTest
  */
 final readonly class GetSuggestions
 {
