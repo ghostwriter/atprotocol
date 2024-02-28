@@ -11,7 +11,7 @@ use Psr\Http\Message\UriInterface;
 /**
  * Find actors (profiles) matching search criteria. Does not require auth.
  *
- * @see \Ghostwriter\AtProtocol\Tests\Unit\App\Bsky\Actor\SearchActorsTest
+ * @see \Ghostwriter\AtProtocolTests\Unit\App\Bsky\Actor\SearchActorsTest
  */
 final readonly class SearchActors
 {
