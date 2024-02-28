@@ -11,7 +11,7 @@ use Psr\Http\Message\UriInterface;
 /**
  * Get a hydrated feed from an actor's selected feed generator. Implemented by App View.
  *
- * @see \Ghostwriter\AtProtocol\Tests\Unit\App\Bsky\Feed\GetFeedTest
+ * @see \Ghostwriter\AtProtocolTests\Unit\App\Bsky\Feed\GetFeedTest
  */
 final readonly class GetFeed
 {
