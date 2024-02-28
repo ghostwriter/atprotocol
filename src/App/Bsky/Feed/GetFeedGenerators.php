@@ -11,7 +11,7 @@ use Psr\Http\Message\UriInterface;
 /**
  * Get information about a list of feed generators.
  *
- * @see \Ghostwriter\AtProtocol\Tests\Unit\App\Bsky\Feed\GetFeedGeneratorsTest
+ * @see \Ghostwriter\AtProtocolTests\Unit\App\Bsky\Feed\GetFeedGeneratorsTest
  */
 final readonly class GetFeedGenerators
 {
