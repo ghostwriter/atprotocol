@@ -9,7 +9,7 @@ use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
 /**
- * Get a list of lists that belong to an actor.
+ * Enumerates the lists created by a specified account (actor).
  *
  * @see \Ghostwriter\AtProtocol\Tests\Unit\App\Bsky\Graph\GetListsTest
  */
