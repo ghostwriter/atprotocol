@@ -12,7 +12,7 @@ use Psr\Http\Message\UriInterface;
 /**
  * Delete a repository record, or ensure it doesn't exist. Requires auth, implemented by PDS.
  *
- * @see \Ghostwriter\AtProtocol\Tests\Unit\Com\Atproto\Repo\DeleteRecordTest
+ * @see \Ghostwriter\AtProtocolTests\Unit\Com\Atproto\Repo\DeleteRecordTest
  */
 final readonly class DeleteRecord
 {
