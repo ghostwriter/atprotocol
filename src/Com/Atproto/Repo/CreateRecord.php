@@ -10,7 +10,7 @@ use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriInterface;
 
 /**
- * Create a new record.
+ * Create a single new repository record. Requires auth, implemented by PDS.
  *
  * @see \Ghostwriter\AtProtocol\Tests\Unit\Com\Atproto\Repo\CreateRecordTest
  */
