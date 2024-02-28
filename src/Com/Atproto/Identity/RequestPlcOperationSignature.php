@@ -12,7 +12,7 @@ use Psr\Http\Message\UriInterface;
 /**
  * Request an email with a code to in order to request a signed PLC operation. Requires Auth.
  *
- * @see \Ghostwriter\AtProtocol\Tests\Unit\Com\Atproto\Identity\RequestPlcOperationSignatureTest
+ * @see \Ghostwriter\AtProtocolTests\Unit\Com\Atproto\Identity\RequestPlcOperationSignatureTest
  */
 final readonly class RequestPlcOperationSignature
 {
