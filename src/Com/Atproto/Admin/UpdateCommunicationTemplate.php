@@ -12,7 +12,7 @@ use Psr\Http\Message\UriInterface;
 /**
  * Administrative action to update an existing communication template. Allows passing partial fields to patch specific fields only.
  *
- * @see \Ghostwriter\AtProtocol\Tests\Unit\Com\Atproto\Admin\UpdateCommunicationTemplateTest
+ * @see \Ghostwriter\AtProtocolTests\Unit\Com\Atproto\Admin\UpdateCommunicationTemplateTest
  */
 final readonly class UpdateCommunicationTemplate
 {
