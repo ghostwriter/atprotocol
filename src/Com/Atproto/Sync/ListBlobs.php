@@ -9,7 +9,7 @@ use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
 /**
- * List blob CIDs since some revision.
+ * List blob CIDso for an account, since some repo revision. Does not require auth; implemented by PDS.
  *
  * @see \Ghostwriter\AtProtocol\Tests\Unit\Com\Atproto\Sync\ListBlobsTest
  */
