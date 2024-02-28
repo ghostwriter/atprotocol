@@ -11,7 +11,7 @@ use Psr\Http\Message\UriInterface;
 /**
  * Get details about a moderation event.
  *
- * @see \Ghostwriter\AtProtocol\Tests\Unit\Com\Atproto\Admin\GetModerationEventTest
+ * @see \Ghostwriter\AtProtocolTests\Unit\Com\Atproto\Admin\GetModerationEventTest
  */
 final readonly class GetModerationEvent
 {
