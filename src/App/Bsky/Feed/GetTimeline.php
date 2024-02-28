@@ -9,7 +9,7 @@ use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
 /**
- * Get a view of the actor's home timeline.
+ * Get a view of the requesting account's home timeline. This is expected to be some form of reverse-chronological feed.
  *
  * @see \Ghostwriter\AtProtocol\Tests\Unit\App\Bsky\Feed\GetTimelineTest
  */
