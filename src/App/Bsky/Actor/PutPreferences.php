@@ -12,7 +12,7 @@ use Psr\Http\Message\UriInterface;
 /**
  * Set the private preferences attached to the account.
  *
- * @see \Ghostwriter\AtProtocol\Tests\Unit\App\Bsky\Actor\PutPreferencesTest
+ * @see \Ghostwriter\AtProtocolTests\Unit\App\Bsky\Actor\PutPreferencesTest
  */
 final readonly class PutPreferences
 {
