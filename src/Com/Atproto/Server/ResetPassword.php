@@ -12,7 +12,7 @@ use Psr\Http\Message\UriInterface;
 /**
  * Reset a user account password using a token.
  *
- * @see \Ghostwriter\AtProtocol\Tests\Unit\Com\Atproto\Server\ResetPasswordTest
+ * @see \Ghostwriter\AtProtocolTests\Unit\Com\Atproto\Server\ResetPasswordTest
  */
 final readonly class ResetPassword
 {
