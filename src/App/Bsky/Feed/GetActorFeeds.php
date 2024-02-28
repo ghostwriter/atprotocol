@@ -11,7 +11,7 @@ use Psr\Http\Message\UriInterface;
 /**
  * Get a list of feeds (feed generator records) created by the actor (in the actor's repo).
  *
- * @see \Ghostwriter\AtProtocol\Tests\Unit\App\Bsky\Feed\GetActorFeedsTest
+ * @see \Ghostwriter\AtProtocolTests\Unit\App\Bsky\Feed\GetActorFeedsTest
  */
 final readonly class GetActorFeeds
 {
