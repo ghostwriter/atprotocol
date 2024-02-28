@@ -12,7 +12,7 @@ use Psr\Http\Message\UriInterface;
 /**
  * Update the service-specific admin status of a subject (account, record, or blob).
  *
- * @see \Ghostwriter\AtProtocol\Tests\Unit\Com\Atproto\Admin\UpdateSubjectStatusTest
+ * @see \Ghostwriter\AtProtocolTests\Unit\Com\Atproto\Admin\UpdateSubjectStatusTest
  */
 final readonly class UpdateSubjectStatus
 {
