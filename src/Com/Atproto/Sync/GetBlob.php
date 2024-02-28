@@ -11,7 +11,7 @@ use Psr\Http\Message\UriInterface;
 /**
  * Get a blob associated with a given account. Returns the full blob as originally uploaded. Does not require auth; implemented by PDS.
  *
- * @see \Ghostwriter\AtProtocol\Tests\Unit\Com\Atproto\Sync\GetBlobTest
+ * @see \Ghostwriter\AtProtocolTests\Unit\Com\Atproto\Sync\GetBlobTest
  */
 final readonly class GetBlob
 {
