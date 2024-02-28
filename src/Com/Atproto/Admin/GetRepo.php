@@ -11,7 +11,7 @@ use Psr\Http\Message\UriInterface;
 /**
  * Get details about a repository.
  *
- * @see \Ghostwriter\AtProtocol\Tests\Unit\Com\Atproto\Admin\GetRepoTest
+ * @see \Ghostwriter\AtProtocolTests\Unit\Com\Atproto\Admin\GetRepoTest
  */
 final readonly class GetRepo
 {
