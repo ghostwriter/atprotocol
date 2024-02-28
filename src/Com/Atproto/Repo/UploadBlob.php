@@ -10,7 +10,7 @@ use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriInterface;
 
 /**
- * Upload a new blob to be added to repo in a later request.
+ * Upload a new blob, to be referenced from a repository record. The blob will be deleted if it is not referenced within a time window (eg, minutes). Blob restrictions (mimetype, size, etc) are enforced when the reference is created. Requires auth, implemented by PDS.
  *
  * @see \Ghostwriter\AtProtocol\Tests\Unit\Com\Atproto\Repo\UploadBlobTest
  */
