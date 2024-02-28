@@ -11,7 +11,7 @@ use Psr\Http\Message\UriInterface;
 /**
  * Backend Actors (profile) search, returns only skeleton.
  *
- * @see \Ghostwriter\AtProtocol\Tests\Unit\App\Bsky\Unspecced\SearchActorsSkeletonTest
+ * @see \Ghostwriter\AtProtocolTests\Unit\App\Bsky\Unspecced\SearchActorsSkeletonTest
  */
 final readonly class SearchActorsSkeleton
 {
