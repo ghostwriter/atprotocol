@@ -11,7 +11,7 @@ use Psr\Http\Message\UriInterface;
 /**
  * Find repositories based on a search term.
  *
- * @see \Ghostwriter\AtProtocol\Tests\Unit\Com\Atproto\Admin\SearchReposTest
+ * @see \Ghostwriter\AtProtocolTests\Unit\Com\Atproto\Admin\SearchReposTest
  */
 final readonly class SearchRepos
 {
