@@ -11,7 +11,7 @@ use Psr\Http\Message\UriInterface;
 /**
  * Get details about some accounts.
  *
- * @see \Ghostwriter\AtProtocol\Tests\Unit\Com\Atproto\Admin\GetAccountInfosTest
+ * @see \Ghostwriter\AtProtocolTests\Unit\Com\Atproto\Admin\GetAccountInfosTest
  */
 final readonly class GetAccountInfos
 {
