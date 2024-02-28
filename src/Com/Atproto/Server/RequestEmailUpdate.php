@@ -12,7 +12,7 @@ use Psr\Http\Message\UriInterface;
 /**
  * Request a token in order to update email.
  *
- * @see \Ghostwriter\AtProtocol\Tests\Unit\Com\Atproto\Server\RequestEmailUpdateTest
+ * @see \Ghostwriter\AtProtocolTests\Unit\Com\Atproto\Server\RequestEmailUpdateTest
  */
 final readonly class RequestEmailUpdate
 {
