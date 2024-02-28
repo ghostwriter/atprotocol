@@ -29,7 +29,6 @@ trait HttpTrait
             new RequestFactory,
             new StreamFactory,
             new Client,
-            new CreateSession,
         );
     }
 
@@ -38,7 +37,6 @@ trait HttpTrait
         private readonly RequestFactoryInterface $requestFactory,
         private readonly StreamFactoryInterface $streamFactory,
         private readonly ClientInterface $httpClient,
-        private readonly CreateSession $createSession,
     ) {
     }
 
