@@ -9,7 +9,7 @@ use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
 /**
- * Get information about a feed generator.
+ * Get information about a feed generator. Implemented by AppView.
  *
  * @see \Ghostwriter\AtProtocol\Tests\Unit\App\Bsky\Feed\GetFeedGeneratorTest
  */
