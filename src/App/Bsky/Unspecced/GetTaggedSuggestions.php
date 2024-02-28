@@ -11,7 +11,7 @@ use Psr\Http\Message\UriInterface;
 /**
  * Get a list of suggestions (feeds and users) tagged with categories
  *
- * @see \Ghostwriter\AtProtocol\Tests\Unit\App\Bsky\Unspecced\GetTaggedSuggestionsTest
+ * @see \Ghostwriter\AtProtocolTests\Unit\App\Bsky\Unspecced\GetTaggedSuggestionsTest
  */
 final readonly class GetTaggedSuggestions
 {
