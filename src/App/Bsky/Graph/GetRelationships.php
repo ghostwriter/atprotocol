@@ -11,7 +11,7 @@ use Psr\Http\Message\UriInterface;
 /**
  * Enumerates public relationships between one account, and a list of other accounts. Does not require auth.
  *
- * @see \Ghostwriter\AtProtocol\Tests\Unit\App\Bsky\Graph\GetRelationshipsTest
+ * @see \Ghostwriter\AtProtocolTests\Unit\App\Bsky\Graph\GetRelationshipsTest
  */
 final readonly class GetRelationships
 {
