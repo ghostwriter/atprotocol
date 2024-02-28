@@ -9,7 +9,7 @@ use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
 /**
- * Get a view of an actor's feed.
+ * Get a view of an actor's 'author feed' (post and reposts by the author). Does not require auth.
  *
  * @see \Ghostwriter\AtProtocol\Tests\Unit\App\Bsky\Feed\GetAuthorFeedTest
  */
