@@ -36,6 +36,8 @@ final readonly class QueryModerationStatuses
         ?bool $takendown = null,
         ?bool $appealed = null,
         ?int $limit = null,
+        ?array $tags = null,
+        ?array $excludeTags = null,
         ?string $cursor = null,
     ): RequestInterface
     {
@@ -59,6 +61,8 @@ final readonly class QueryModerationStatuses
                     'takendown' => $takendown,
                     'appealed' => $appealed,
                     'limit' => $limit,
+                    'tags' => $tags,
+                    'excludeTags' => $excludeTags,
                     'cursor' => $cursor,
                 ])))
             );
