@@ -11,7 +11,7 @@ use Psr\Http\Message\UriInterface;
 /**
  * Get information about an account and repository, including the list of collections. Does not require auth.
  *
- * @see \Ghostwriter\AtProtocol\Tests\Unit\Com\Atproto\Repo\DescribeRepoTest
+ * @see \Ghostwriter\AtProtocolTests\Unit\Com\Atproto\Repo\DescribeRepoTest
  */
 final readonly class DescribeRepo
 {
