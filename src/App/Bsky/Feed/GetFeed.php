@@ -9,7 +9,7 @@ use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
 /**
- * Get a hydrated feed from an actor's selected feed generator.
+ * Get a hydrated feed from an actor's selected feed generator. Implemented by App View.
  *
  * @see \Ghostwriter\AtProtocol\Tests\Unit\App\Bsky\Feed\GetFeedTest
  */
