@@ -10,7 +10,7 @@ use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriInterface;
 
 /**
- * Delete a record, or ensure it doesn't exist.
+ * Delete a repository record, or ensure it doesn't exist. Requires auth, implemented by PDS.
  *
  * @see \Ghostwriter\AtProtocol\Tests\Unit\Com\Atproto\Repo\DeleteRecordTest
  */
