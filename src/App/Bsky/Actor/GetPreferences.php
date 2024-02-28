@@ -11,7 +11,7 @@ use Psr\Http\Message\UriInterface;
 /**
  * Get private preferences attached to the current account. Expected use is synchronization between multiple devices, and import/export during account migration. Requires auth.
  *
- * @see \Ghostwriter\AtProtocol\Tests\Unit\App\Bsky\Actor\GetPreferencesTest
+ * @see \Ghostwriter\AtProtocolTests\Unit\App\Bsky\Actor\GetPreferencesTest
  */
 final readonly class GetPreferences
 {
