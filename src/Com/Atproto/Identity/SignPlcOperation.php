@@ -12,7 +12,7 @@ use Psr\Http\Message\UriInterface;
 /**
  * Signs a PLC operation to update some value(s) in the requesting DID's document.
  *
- * @see \Ghostwriter\AtProtocol\Tests\Unit\Com\Atproto\Identity\SignPlcOperationTest
+ * @see \Ghostwriter\AtProtocolTests\Unit\Com\Atproto\Identity\SignPlcOperationTest
  */
 final readonly class SignPlcOperation
 {
