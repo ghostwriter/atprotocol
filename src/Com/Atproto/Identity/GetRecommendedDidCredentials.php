@@ -11,7 +11,7 @@ use Psr\Http\Message\UriInterface;
 /**
  * Describe the credentials that should be included in the DID doc of an account that is migrating to this service.
  *
- * @see \Ghostwriter\AtProtocol\Tests\Unit\Com\Atproto\Identity\GetRecommendedDidCredentialsTest
+ * @see \Ghostwriter\AtProtocolTests\Unit\Com\Atproto\Identity\GetRecommendedDidCredentialsTest
  */
 final readonly class GetRecommendedDidCredentials
 {
