@@ -9,7 +9,7 @@ use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
 /**
- * Fetch all labels from a labeler created after a certain date.
+ * DEPRECATED: use queryLabels or subscribeLabels instead -- Fetch all labels from a labeler created after a certain date.
  *
  * @see \Ghostwriter\AtProtocol\Tests\Unit\Com\Atproto\Temp\FetchLabelsTest
  */
