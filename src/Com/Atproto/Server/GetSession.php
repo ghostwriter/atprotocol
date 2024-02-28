@@ -11,7 +11,7 @@ use Psr\Http\Message\UriInterface;
 /**
  * Get information about the current auth session. Requires auth.
  *
- * @see \Ghostwriter\AtProtocol\Tests\Unit\Com\Atproto\Server\GetSessionTest
+ * @see \Ghostwriter\AtProtocolTests\Unit\Com\Atproto\Server\GetSessionTest
  */
 final readonly class GetSession
 {
