@@ -11,7 +11,7 @@ use Psr\Http\Message\UriInterface;
 /**
  * Get detailed profile views of multiple actors.
  *
- * @see \Ghostwriter\AtProtocol\Tests\Unit\App\Bsky\Actor\GetProfilesTest
+ * @see \Ghostwriter\AtProtocolTests\Unit\App\Bsky\Actor\GetProfilesTest
  */
 final readonly class GetProfiles
 {
