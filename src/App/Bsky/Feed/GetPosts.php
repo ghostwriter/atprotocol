@@ -11,7 +11,7 @@ use Psr\Http\Message\UriInterface;
 /**
  * Gets post views for a specified list of posts (by AT-URI). This is sometimes referred to as 'hydrating' a 'feed skeleton'.
  *
- * @see \Ghostwriter\AtProtocol\Tests\Unit\App\Bsky\Feed\GetPostsTest
+ * @see \Ghostwriter\AtProtocolTests\Unit\App\Bsky\Feed\GetPostsTest
  */
 final readonly class GetPosts
 {
