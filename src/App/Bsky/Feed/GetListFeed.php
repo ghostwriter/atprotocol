@@ -9,7 +9,7 @@ use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
 /**
- * Get a view of a recent posts from actors in a list.
+ * Get a feed of recent posts from a list (posts and reposts from any actors on the list). Does not require auth.
  *
  * @see \Ghostwriter\AtProtocol\Tests\Unit\App\Bsky\Feed\GetListFeedTest
  */
