@@ -9,7 +9,7 @@ use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
 /**
- * Provides the DID of a repo.
+ * Resolves a handle (domain name) to a DID.
  *
  * @see \Ghostwriter\AtProtocol\Tests\Unit\Com\Atproto\Identity\ResolveHandleTest
  */
