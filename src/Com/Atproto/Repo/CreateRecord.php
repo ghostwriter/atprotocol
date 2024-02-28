@@ -12,7 +12,7 @@ use Psr\Http\Message\UriInterface;
 /**
  * Create a single new repository record. Requires auth, implemented by PDS.
  *
- * @see \Ghostwriter\AtProtocol\Tests\Unit\Com\Atproto\Repo\CreateRecordTest
+ * @see \Ghostwriter\AtProtocolTests\Unit\Com\Atproto\Repo\CreateRecordTest
  */
 final readonly class CreateRecord
 {
