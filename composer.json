@@ -35,22 +35,23 @@
         }
     ],
     "require": {
-        "php": ">=8.2",
-        "ghostwriter/collection": "^1.4",
-        "ghostwriter/config": "^0.4",
-        "ghostwriter/container": "^1.6",
-        "ghostwriter/event-dispatcher": "^2.0",
-        "ghostwriter/json": "^1.2",
-        "ghostwriter/option": "^1.5",
-        "ghostwriter/result": "^1.3",
-        "laminas/laminas-diactoros": "^3.3",
-        "php-http/curl-client": "^2.3",
-        "psr/http-client": "^1.0",
-        "psr/http-factory": "^1.0"
+        "php": ">=8.3",
+        "ghostwriter/collection": ">=2",
+        "ghostwriter/config": ">=0.4.1",
+        "ghostwriter/container": ">=3.0.2",
+        "ghostwriter/event-dispatcher": ">=4",
+        "ghostwriter/json": ">=3",
+        "ghostwriter/option": ">=1.5.1",
+        "ghostwriter/psalm-plugin": ">=0.2",
+        "ghostwriter/result": ">=1.3",
+        "laminas/laminas-diactoros": ">=3.3.1",
+        "php-http/curl-client": ">=2.3.1",
+        "psr/http-client": ">=1.0.3",
+        "psr/http-factory": ">=1.0.2"
     },
     "require-dev": {
         "ghostwriter/coding-standard": "dev-main",
-        "ghostwriter/psalm-plugin": "^0.2 || ^0.3 || ^1"
+        "ghostwriter/psalm-plugin": ">=0.2"
     },
     "minimum-stability": "stable",
     "prefer-stable": true,
@@ -61,7 +62,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Ghostwriter\\AtProtocol\\Tests\\": "tests"
+            "Ghostwriter\\AtProtocolTests\\": "tests"
         }
     },
     "config": {
