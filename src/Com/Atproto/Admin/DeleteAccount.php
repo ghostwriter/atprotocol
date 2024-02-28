@@ -12,7 +12,7 @@ use Psr\Http\Message\UriInterface;
 /**
  * Delete a user account as an administrator.
  *
- * @see \Ghostwriter\AtProtocol\Tests\Unit\Com\Atproto\Admin\DeleteAccountTest
+ * @see \Ghostwriter\AtProtocolTests\Unit\Com\Atproto\Admin\DeleteAccountTest
  */
 final readonly class DeleteAccount
 {
