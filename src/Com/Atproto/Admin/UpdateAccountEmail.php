@@ -12,7 +12,7 @@ use Psr\Http\Message\UriInterface;
 /**
  * Administrative action to update an account's email.
  *
- * @see \Ghostwriter\AtProtocol\Tests\Unit\Com\Atproto\Admin\UpdateAccountEmailTest
+ * @see \Ghostwriter\AtProtocolTests\Unit\Com\Atproto\Admin\UpdateAccountEmailTest
  */
 final readonly class UpdateAccountEmail
 {
