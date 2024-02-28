@@ -11,7 +11,7 @@ use Psr\Http\Message\UriInterface;
 /**
  * Get data blocks needed to prove the existence or non-existence of record in the current version of repo. Does not require auth.
  *
- * @see \Ghostwriter\AtProtocol\Tests\Unit\Com\Atproto\Sync\GetRecordTest
+ * @see \Ghostwriter\AtProtocolTests\Unit\Com\Atproto\Sync\GetRecordTest
  */
 final readonly class GetRecord
 {
