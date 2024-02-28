@@ -9,7 +9,7 @@ use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
 /**
- * Get suggested follows related to a given actor.
+ * Enumerates follows similar to a given account (actor). Expected use is to recommend additional accounts immediately after following one account.
  *
  * @see \Ghostwriter\AtProtocol\Tests\Unit\App\Bsky\Graph\GetSuggestedFollowsByActorTest
  */
