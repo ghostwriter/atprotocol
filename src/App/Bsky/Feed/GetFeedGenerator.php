@@ -11,7 +11,7 @@ use Psr\Http\Message\UriInterface;
 /**
  * Get information about a feed generator. Implemented by AppView.
  *
- * @see \Ghostwriter\AtProtocol\Tests\Unit\App\Bsky\Feed\GetFeedGeneratorTest
+ * @see \Ghostwriter\AtProtocolTests\Unit\App\Bsky\Feed\GetFeedGeneratorTest
  */
 final readonly class GetFeedGenerator
 {
