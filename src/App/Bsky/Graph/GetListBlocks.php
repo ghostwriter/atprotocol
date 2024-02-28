@@ -11,7 +11,7 @@ use Psr\Http\Message\UriInterface;
 /**
  * Get mod lists that the requesting account (actor) is blocking. Requires auth.
  *
- * @see \Ghostwriter\AtProtocol\Tests\Unit\App\Bsky\Graph\GetListBlocksTest
+ * @see \Ghostwriter\AtProtocolTests\Unit\App\Bsky\Graph\GetListBlocksTest
  */
 final readonly class GetListBlocks
 {
