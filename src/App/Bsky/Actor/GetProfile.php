@@ -9,7 +9,7 @@ use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
 /**
- * Get detailed profile view of an actor.
+ * Get detailed profile view of an actor. Does not require auth, but contains relevant metadata with auth.
  *
  * @see \Ghostwriter\AtProtocol\Tests\Unit\App\Bsky\Actor\GetProfileTest
  */
