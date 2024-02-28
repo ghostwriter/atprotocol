@@ -10,7 +10,7 @@ use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriInterface;
 
 /**
- * Apply a batch transaction of creates, updates, and deletes.
+ * Apply a batch transaction of repository creates, updates, and deletes. Requires auth, implemented by PDS.
  *
  * @see \Ghostwriter\AtProtocol\Tests\Unit\Com\Atproto\Repo\ApplyWritesTest
  */
