@@ -12,7 +12,7 @@ use Psr\Http\Message\UriInterface;
 /**
  * Unmutes the specified account. Requires auth.
  *
- * @see \Ghostwriter\AtProtocol\Tests\Unit\App\Bsky\Graph\UnmuteActorTest
+ * @see \Ghostwriter\AtProtocolTests\Unit\App\Bsky\Graph\UnmuteActorTest
  */
 final readonly class UnmuteActor
 {
