@@ -11,7 +11,7 @@ use Psr\Http\Message\UriInterface;
 /**
  * Returns a list of missing blobs for the requesting account. Intended to be used in the account migration flow.
  *
- * @see \Ghostwriter\AtProtocol\Tests\Unit\Com\Atproto\Repo\ListMissingBlobsTest
+ * @see \Ghostwriter\AtProtocolTests\Unit\Com\Atproto\Repo\ListMissingBlobsTest
  */
 final readonly class ListMissingBlobs
 {
