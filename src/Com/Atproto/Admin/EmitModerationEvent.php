@@ -12,7 +12,7 @@ use Psr\Http\Message\UriInterface;
 /**
  * Take a moderation action on an actor.
  *
- * @see \Ghostwriter\AtProtocol\Tests\Unit\Com\Atproto\Admin\EmitModerationEventTest
+ * @see \Ghostwriter\AtProtocolTests\Unit\Com\Atproto\Admin\EmitModerationEventTest
  */
 final readonly class EmitModerationEvent
 {
