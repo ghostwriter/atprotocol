@@ -12,7 +12,7 @@ use Psr\Http\Message\UriInterface;
 /**
  * Create an account. Implemented by PDS.
  *
- * @see \Ghostwriter\AtProtocol\Tests\Unit\Com\Atproto\Server\CreateAccountTest
+ * @see \Ghostwriter\AtProtocolTests\Unit\Com\Atproto\Server\CreateAccountTest
  */
 final readonly class CreateAccount
 {
