@@ -11,7 +11,7 @@ use Psr\Http\Message\UriInterface;
 /**
  * List moderation events related to a subject.
  *
- * @see \Ghostwriter\AtProtocol\Tests\Unit\Com\Atproto\Admin\QueryModerationEventsTest
+ * @see \Ghostwriter\AtProtocolTests\Unit\Com\Atproto\Admin\QueryModerationEventsTest
  */
 final readonly class QueryModerationEvents
 {
