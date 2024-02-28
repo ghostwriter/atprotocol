@@ -11,7 +11,7 @@ use Psr\Http\Message\UriInterface;
 /**
  * Get a view of an actor's 'author feed' (post and reposts by the author). Does not require auth.
  *
- * @see \Ghostwriter\AtProtocol\Tests\Unit\App\Bsky\Feed\GetAuthorFeedTest
+ * @see \Ghostwriter\AtProtocolTests\Unit\App\Bsky\Feed\GetAuthorFeedTest
  */
 final readonly class GetAuthorFeed
 {
