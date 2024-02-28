@@ -9,7 +9,7 @@ use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
 /**
- * Get a document describing the service's accounts configuration.
+ * Describes the server's account creation requirements and capabilities. Implemented by PDS.
  *
  * @see \Ghostwriter\AtProtocol\Tests\Unit\Com\Atproto\Server\DescribeServerTest
  */
