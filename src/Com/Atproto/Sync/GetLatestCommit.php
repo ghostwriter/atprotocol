@@ -11,7 +11,7 @@ use Psr\Http\Message\UriInterface;
 /**
  * Get the current commit CID & revision of the specified repo. Does not require auth.
  *
- * @see \Ghostwriter\AtProtocol\Tests\Unit\Com\Atproto\Sync\GetLatestCommitTest
+ * @see \Ghostwriter\AtProtocolTests\Unit\Com\Atproto\Sync\GetLatestCommitTest
  */
 final readonly class GetLatestCommit
 {
