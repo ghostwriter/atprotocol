@@ -9,7 +9,7 @@ use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
 /**
- * Get a list of notifications.
+ * Enumerate notifications for the requesting account. Requires auth.
  *
  * @see \Ghostwriter\AtProtocol\Tests\Unit\App\Bsky\Notification\ListNotificationsTest
  */
