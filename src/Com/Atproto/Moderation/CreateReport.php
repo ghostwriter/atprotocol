@@ -10,7 +10,7 @@ use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriInterface;
 
 /**
- * Report a repo or a record.
+ * Submit a moderation report regarding an atproto account or record. Implemented by moderation services (with PDS proxying), and requires auth.
  *
  * @see \Ghostwriter\AtProtocol\Tests\Unit\Com\Atproto\Moderation\CreateReportTest
  */
