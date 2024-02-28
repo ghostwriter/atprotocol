@@ -12,7 +12,7 @@ use Psr\Http\Message\UriInterface;
 /**
  * Notify server that the requesting account has seen notifications. Requires auth.
  *
- * @see \Ghostwriter\AtProtocol\Tests\Unit\App\Bsky\Notification\UpdateSeenTest
+ * @see \Ghostwriter\AtProtocolTests\Unit\App\Bsky\Notification\UpdateSeenTest
  */
 final readonly class UpdateSeen
 {
