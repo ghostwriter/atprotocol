@@ -11,7 +11,7 @@ use Psr\Http\Message\UriInterface;
 /**
  * Backend Posts search, returns only skeleton
  *
- * @see \Ghostwriter\AtProtocol\Tests\Unit\App\Bsky\Unspecced\SearchPostsSkeletonTest
+ * @see \Ghostwriter\AtProtocolTests\Unit\App\Bsky\Unspecced\SearchPostsSkeletonTest
  */
 final readonly class SearchPostsSkeleton
 {
