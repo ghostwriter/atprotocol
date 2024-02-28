@@ -1,2 +1,791 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<files psalm-version="5.14.1@b9d355e0829c397b9b3b47d0c0ed042a8a70284d"/>
+<files psalm-version="5.22.2@d768d914152dbbf3486c36398802f74e80cfde48">
+  <file src="src/App/Bsky/Actor/GetPreferences.php">
+    <UnusedClass>
+      <code><![CDATA[GetPreferences]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/App/Bsky/Actor/GetProfile.php">
+    <UnusedClass>
+      <code><![CDATA[GetProfile]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/App/Bsky/Actor/GetProfiles.php">
+    <UnusedClass>
+      <code><![CDATA[GetProfiles]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/App/Bsky/Actor/GetSuggestions.php">
+    <UnusedClass>
+      <code><![CDATA[GetSuggestions]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/App/Bsky/Actor/PutPreferences.php">
+    <UnusedClass>
+      <code><![CDATA[PutPreferences]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/App/Bsky/Actor/SearchActors.php">
+    <UnusedClass>
+      <code><![CDATA[SearchActors]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/App/Bsky/Actor/SearchActorsTypeahead.php">
+    <UnusedClass>
+      <code><![CDATA[SearchActorsTypeahead]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/App/Bsky/Feed/DescribeFeedGenerator.php">
+    <UnusedClass>
+      <code><![CDATA[DescribeFeedGenerator]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/App/Bsky/Feed/GetActorFeeds.php">
+    <UnusedClass>
+      <code><![CDATA[GetActorFeeds]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/App/Bsky/Feed/GetActorLikes.php">
+    <UnusedClass>
+      <code><![CDATA[GetActorLikes]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/App/Bsky/Feed/GetAuthorFeed.php">
+    <UnusedClass>
+      <code><![CDATA[GetAuthorFeed]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/App/Bsky/Feed/GetFeed.php">
+    <UnusedClass>
+      <code><![CDATA[GetFeed]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/App/Bsky/Feed/GetFeedGenerator.php">
+    <UnusedClass>
+      <code><![CDATA[GetFeedGenerator]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/App/Bsky/Feed/GetFeedGenerators.php">
+    <UnusedClass>
+      <code><![CDATA[GetFeedGenerators]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/App/Bsky/Feed/GetFeedSkeleton.php">
+    <UnusedClass>
+      <code><![CDATA[GetFeedSkeleton]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/App/Bsky/Feed/GetLikes.php">
+    <UnusedClass>
+      <code><![CDATA[GetLikes]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/App/Bsky/Feed/GetListFeed.php">
+    <UnusedClass>
+      <code><![CDATA[GetListFeed]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/App/Bsky/Feed/GetPostThread.php">
+    <UnusedClass>
+      <code><![CDATA[GetPostThread]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/App/Bsky/Feed/GetPosts.php">
+    <UnusedClass>
+      <code><![CDATA[GetPosts]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/App/Bsky/Feed/GetRepostedBy.php">
+    <UnusedClass>
+      <code><![CDATA[GetRepostedBy]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/App/Bsky/Feed/GetSuggestedFeeds.php">
+    <UnusedClass>
+      <code><![CDATA[GetSuggestedFeeds]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/App/Bsky/Feed/GetTimeline.php">
+    <UnusedClass>
+      <code><![CDATA[GetTimeline]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/App/Bsky/Feed/SearchPosts.php">
+    <UnusedClass>
+      <code><![CDATA[SearchPosts]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/App/Bsky/Graph/GetBlocks.php">
+    <UnusedClass>
+      <code><![CDATA[GetBlocks]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/App/Bsky/Graph/GetFollowers.php">
+    <UnusedClass>
+      <code><![CDATA[GetFollowers]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/App/Bsky/Graph/GetFollows.php">
+    <UnusedClass>
+      <code><![CDATA[GetFollows]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/App/Bsky/Graph/GetList.php">
+    <UnusedClass>
+      <code><![CDATA[GetList]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/App/Bsky/Graph/GetListBlocks.php">
+    <UnusedClass>
+      <code><![CDATA[GetListBlocks]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/App/Bsky/Graph/GetListMutes.php">
+    <UnusedClass>
+      <code><![CDATA[GetListMutes]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/App/Bsky/Graph/GetLists.php">
+    <UnusedClass>
+      <code><![CDATA[GetLists]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/App/Bsky/Graph/GetMutes.php">
+    <UnusedClass>
+      <code><![CDATA[GetMutes]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/App/Bsky/Graph/GetRelationships.php">
+    <UnusedClass>
+      <code><![CDATA[GetRelationships]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/App/Bsky/Graph/GetSuggestedFollowsByActor.php">
+    <UnusedClass>
+      <code><![CDATA[GetSuggestedFollowsByActor]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/App/Bsky/Graph/MuteActor.php">
+    <UnusedClass>
+      <code><![CDATA[MuteActor]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/App/Bsky/Graph/MuteActorList.php">
+    <UnusedClass>
+      <code><![CDATA[MuteActorList]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/App/Bsky/Graph/UnmuteActor.php">
+    <UnusedClass>
+      <code><![CDATA[UnmuteActor]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/App/Bsky/Graph/UnmuteActorList.php">
+    <UnusedClass>
+      <code><![CDATA[UnmuteActorList]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/App/Bsky/Notification/GetUnreadCount.php">
+    <UnusedClass>
+      <code><![CDATA[GetUnreadCount]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/App/Bsky/Notification/ListNotifications.php">
+    <UnusedClass>
+      <code><![CDATA[ListNotifications]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/App/Bsky/Notification/RegisterPush.php">
+    <UnusedClass>
+      <code><![CDATA[RegisterPush]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/App/Bsky/Notification/UpdateSeen.php">
+    <UnusedClass>
+      <code><![CDATA[UpdateSeen]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/App/Bsky/Unspecced/GetPopular.php">
+    <UnusedClass>
+      <code><![CDATA[GetPopular]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/App/Bsky/Unspecced/GetPopularFeedGenerators.php">
+    <UnusedClass>
+      <code><![CDATA[GetPopularFeedGenerators]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/App/Bsky/Unspecced/GetTaggedSuggestions.php">
+    <UnusedClass>
+      <code><![CDATA[GetTaggedSuggestions]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/App/Bsky/Unspecced/GetTimelineSkeleton.php">
+    <UnusedClass>
+      <code><![CDATA[GetTimelineSkeleton]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/App/Bsky/Unspecced/SearchActorsSkeleton.php">
+    <UnusedClass>
+      <code><![CDATA[SearchActorsSkeleton]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/App/Bsky/Unspecced/SearchPostsSkeleton.php">
+    <UnusedClass>
+      <code><![CDATA[SearchPostsSkeleton]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/AtProtocol.php">
+    <InvalidArgument>
+      <code><![CDATA[json_encode([
+                'content' => $content,
+                'attachments' => $attachments,
+            ]) ?: '']]></code>
+    </InvalidArgument>
+    <MixedArgument>
+      <code><![CDATA[$this->personalDataServer->personalDataServer()]]></code>
+      <code><![CDATA[($this->createSession)($username, $password)]]></code>
+    </MixedArgument>
+    <MixedFunctionCall>
+      <code><![CDATA[($this->createSession)($username, $password)]]></code>
+    </MixedFunctionCall>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[atProtocol]]></code>
+      <code><![CDATA[createSession]]></code>
+      <code><![CDATA[new]]></code>
+      <code><![CDATA[personalDataServer]]></code>
+      <code><![CDATA[resumeSession]]></code>
+      <code><![CDATA[toString]]></code>
+      <code><![CDATA[updateStatus]]></code>
+    </PossiblyUnusedMethod>
+    <RiskyTruthyFalsyComparison>
+      <code><![CDATA[json_encode([
+                'content' => $content,
+                'attachments' => $attachments,
+            ])]]></code>
+    </RiskyTruthyFalsyComparison>
+    <UndefinedMethod>
+      <code><![CDATA[personalDataServer]]></code>
+    </UndefinedMethod>
+    <UndefinedThisPropertyFetch>
+      <code><![CDATA[$this->createSession]]></code>
+    </UndefinedThisPropertyFetch>
+  </file>
+  <file src="src/Com/Atproto/Admin/CreateCommunicationTemplate.php">
+    <UnusedClass>
+      <code><![CDATA[CreateCommunicationTemplate]]></code>
+    </UnusedClass>
+    <UnusedParam>
+      <code><![CDATA[$name]]></code>
+    </UnusedParam>
+  </file>
+  <file src="src/Com/Atproto/Admin/DeleteAccount.php">
+    <UnusedClass>
+      <code><![CDATA[DeleteAccount]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/Com/Atproto/Admin/DeleteCommunicationTemplate.php">
+    <UnusedClass>
+      <code><![CDATA[DeleteCommunicationTemplate]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/Com/Atproto/Admin/DisableAccountInvites.php">
+    <UnusedClass>
+      <code><![CDATA[DisableAccountInvites]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/Com/Atproto/Admin/DisableInviteCodes.php">
+    <UnusedClass>
+      <code><![CDATA[DisableInviteCodes]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/Com/Atproto/Admin/EmitModerationEvent.php">
+    <UnusedClass>
+      <code><![CDATA[EmitModerationEvent]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/Com/Atproto/Admin/EnableAccountInvites.php">
+    <UnusedClass>
+      <code><![CDATA[EnableAccountInvites]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/Com/Atproto/Admin/GetAccountInfo.php">
+    <UnusedClass>
+      <code><![CDATA[GetAccountInfo]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/Com/Atproto/Admin/GetAccountInfos.php">
+    <UnusedClass>
+      <code><![CDATA[GetAccountInfos]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/Com/Atproto/Admin/GetInviteCodes.php">
+    <UnusedClass>
+      <code><![CDATA[GetInviteCodes]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/Com/Atproto/Admin/GetModerationAction.php">
+    <UnusedClass>
+      <code><![CDATA[GetModerationAction]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/Com/Atproto/Admin/GetModerationActions.php">
+    <UnusedClass>
+      <code><![CDATA[GetModerationActions]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/Com/Atproto/Admin/GetModerationEvent.php">
+    <UnusedClass>
+      <code><![CDATA[GetModerationEvent]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/Com/Atproto/Admin/GetModerationReport.php">
+    <UnusedClass>
+      <code><![CDATA[GetModerationReport]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/Com/Atproto/Admin/GetModerationReports.php">
+    <UnusedClass>
+      <code><![CDATA[GetModerationReports]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/Com/Atproto/Admin/GetRecord.php">
+    <UnusedClass>
+      <code><![CDATA[GetRecord]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/Com/Atproto/Admin/GetRepo.php">
+    <UnusedClass>
+      <code><![CDATA[GetRepo]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/Com/Atproto/Admin/GetSubjectStatus.php">
+    <UnusedClass>
+      <code><![CDATA[GetSubjectStatus]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/Com/Atproto/Admin/ListCommunicationTemplates.php">
+    <UnusedClass>
+      <code><![CDATA[ListCommunicationTemplates]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/Com/Atproto/Admin/QueryModerationEvents.php">
+    <UnusedClass>
+      <code><![CDATA[QueryModerationEvents]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/Com/Atproto/Admin/QueryModerationStatuses.php">
+    <UnusedClass>
+      <code><![CDATA[QueryModerationStatuses]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/Com/Atproto/Admin/ResolveModerationReports.php">
+    <UnusedClass>
+      <code><![CDATA[ResolveModerationReports]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/Com/Atproto/Admin/ReverseModerationAction.php">
+    <UnusedClass>
+      <code><![CDATA[ReverseModerationAction]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/Com/Atproto/Admin/SearchRepos.php">
+    <UnusedClass>
+      <code><![CDATA[SearchRepos]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/Com/Atproto/Admin/SendEmail.php">
+    <UnusedClass>
+      <code><![CDATA[SendEmail]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/Com/Atproto/Admin/TakeModerationAction.php">
+    <UnusedClass>
+      <code><![CDATA[TakeModerationAction]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/Com/Atproto/Admin/UpdateAccountEmail.php">
+    <UnusedClass>
+      <code><![CDATA[UpdateAccountEmail]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/Com/Atproto/Admin/UpdateAccountHandle.php">
+    <UnusedClass>
+      <code><![CDATA[UpdateAccountHandle]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/Com/Atproto/Admin/UpdateAccountPassword.php">
+    <UnusedClass>
+      <code><![CDATA[UpdateAccountPassword]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/Com/Atproto/Admin/UpdateCommunicationTemplate.php">
+    <UnusedClass>
+      <code><![CDATA[UpdateCommunicationTemplate]]></code>
+    </UnusedClass>
+    <UnusedParam>
+      <code><![CDATA[$name]]></code>
+    </UnusedParam>
+  </file>
+  <file src="src/Com/Atproto/Admin/UpdateSubjectStatus.php">
+    <UnusedClass>
+      <code><![CDATA[UpdateSubjectStatus]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/Com/Atproto/Identity/GetRecommendedDidCredentials.php">
+    <UnusedClass>
+      <code><![CDATA[GetRecommendedDidCredentials]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/Com/Atproto/Identity/RequestPlcOperationSignature.php">
+    <UnusedClass>
+      <code><![CDATA[RequestPlcOperationSignature]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/Com/Atproto/Identity/ResolveHandle.php">
+    <UnusedClass>
+      <code><![CDATA[ResolveHandle]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/Com/Atproto/Identity/SignPlcOperation.php">
+    <UnusedClass>
+      <code><![CDATA[SignPlcOperation]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/Com/Atproto/Identity/SubmitPlcOperation.php">
+    <UnusedClass>
+      <code><![CDATA[SubmitPlcOperation]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/Com/Atproto/Identity/UpdateHandle.php">
+    <UnusedClass>
+      <code><![CDATA[UpdateHandle]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/Com/Atproto/Label/QueryLabels.php">
+    <UnusedClass>
+      <code><![CDATA[QueryLabels]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/Com/Atproto/Moderation/CreateReport.php">
+    <UnusedClass>
+      <code><![CDATA[CreateReport]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/Com/Atproto/Repo/ApplyWrites.php">
+    <UnusedClass>
+      <code><![CDATA[ApplyWrites]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/Com/Atproto/Repo/CreateRecord.php">
+    <UnusedClass>
+      <code><![CDATA[CreateRecord]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/Com/Atproto/Repo/DeleteRecord.php">
+    <UnusedClass>
+      <code><![CDATA[DeleteRecord]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/Com/Atproto/Repo/DescribeRepo.php">
+    <UnusedClass>
+      <code><![CDATA[DescribeRepo]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/Com/Atproto/Repo/GetRecord.php">
+    <UnusedClass>
+      <code><![CDATA[GetRecord]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/Com/Atproto/Repo/ImportRepo.php">
+    <UnusedClass>
+      <code><![CDATA[ImportRepo]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/Com/Atproto/Repo/ListMissingBlobs.php">
+    <UnusedClass>
+      <code><![CDATA[ListMissingBlobs]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/Com/Atproto/Repo/ListRecords.php">
+    <UnusedClass>
+      <code><![CDATA[ListRecords]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/Com/Atproto/Repo/PutRecord.php">
+    <UnusedClass>
+      <code><![CDATA[PutRecord]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/Com/Atproto/Repo/UploadBlob.php">
+    <UnusedClass>
+      <code><![CDATA[UploadBlob]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/Com/Atproto/Server/ActivateAccount.php">
+    <UnusedClass>
+      <code><![CDATA[ActivateAccount]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/Com/Atproto/Server/CheckAccountStatus.php">
+    <UnusedClass>
+      <code><![CDATA[CheckAccountStatus]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/Com/Atproto/Server/ConfirmEmail.php">
+    <UnusedClass>
+      <code><![CDATA[ConfirmEmail]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/Com/Atproto/Server/CreateAccount.php">
+    <UnusedClass>
+      <code><![CDATA[CreateAccount]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/Com/Atproto/Server/CreateAppPassword.php">
+    <UnusedClass>
+      <code><![CDATA[CreateAppPassword]]></code>
+    </UnusedClass>
+    <UnusedParam>
+      <code><![CDATA[$name]]></code>
+    </UnusedParam>
+  </file>
+  <file src="src/Com/Atproto/Server/CreateInviteCode.php">
+    <UnusedClass>
+      <code><![CDATA[CreateInviteCode]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/Com/Atproto/Server/CreateInviteCodes.php">
+    <UnusedClass>
+      <code><![CDATA[CreateInviteCodes]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/Com/Atproto/Server/CreateSession.php">
+    <UnusedClass>
+      <code><![CDATA[CreateSession]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/Com/Atproto/Server/DeactivateAccount.php">
+    <UnusedClass>
+      <code><![CDATA[DeactivateAccount]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/Com/Atproto/Server/DeleteAccount.php">
+    <UnusedClass>
+      <code><![CDATA[DeleteAccount]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/Com/Atproto/Server/DeleteSession.php">
+    <UnusedClass>
+      <code><![CDATA[DeleteSession]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/Com/Atproto/Server/DescribeServer.php">
+    <UnusedClass>
+      <code><![CDATA[DescribeServer]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/Com/Atproto/Server/GetAccountInviteCodes.php">
+    <UnusedClass>
+      <code><![CDATA[GetAccountInviteCodes]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/Com/Atproto/Server/GetServiceAuth.php">
+    <UnusedClass>
+      <code><![CDATA[GetServiceAuth]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/Com/Atproto/Server/GetSession.php">
+    <UnusedClass>
+      <code><![CDATA[GetSession]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/Com/Atproto/Server/ListAppPasswords.php">
+    <UnusedClass>
+      <code><![CDATA[ListAppPasswords]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/Com/Atproto/Server/RefreshSession.php">
+    <UnusedClass>
+      <code><![CDATA[RefreshSession]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/Com/Atproto/Server/RequestAccountDelete.php">
+    <UnusedClass>
+      <code><![CDATA[RequestAccountDelete]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/Com/Atproto/Server/RequestEmailConfirmation.php">
+    <UnusedClass>
+      <code><![CDATA[RequestEmailConfirmation]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/Com/Atproto/Server/RequestEmailUpdate.php">
+    <UnusedClass>
+      <code><![CDATA[RequestEmailUpdate]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/Com/Atproto/Server/RequestPasswordReset.php">
+    <UnusedClass>
+      <code><![CDATA[RequestPasswordReset]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/Com/Atproto/Server/ReserveSigningKey.php">
+    <UnusedClass>
+      <code><![CDATA[ReserveSigningKey]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/Com/Atproto/Server/ResetPassword.php">
+    <UnusedClass>
+      <code><![CDATA[ResetPassword]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/Com/Atproto/Server/RevokeAppPassword.php">
+    <UnusedClass>
+      <code><![CDATA[RevokeAppPassword]]></code>
+    </UnusedClass>
+    <UnusedParam>
+      <code><![CDATA[$name]]></code>
+    </UnusedParam>
+  </file>
+  <file src="src/Com/Atproto/Server/UpdateEmail.php">
+    <UnusedClass>
+      <code><![CDATA[UpdateEmail]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/Com/Atproto/Sync/GetBlob.php">
+    <UnusedClass>
+      <code><![CDATA[GetBlob]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/Com/Atproto/Sync/GetBlocks.php">
+    <UnusedClass>
+      <code><![CDATA[GetBlocks]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/Com/Atproto/Sync/GetCheckout.php">
+    <UnusedClass>
+      <code><![CDATA[GetCheckout]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/Com/Atproto/Sync/GetHead.php">
+    <UnusedClass>
+      <code><![CDATA[GetHead]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/Com/Atproto/Sync/GetLatestCommit.php">
+    <UnusedClass>
+      <code><![CDATA[GetLatestCommit]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/Com/Atproto/Sync/GetRecord.php">
+    <UnusedClass>
+      <code><![CDATA[GetRecord]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/Com/Atproto/Sync/GetRepo.php">
+    <UnusedClass>
+      <code><![CDATA[GetRepo]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/Com/Atproto/Sync/ListBlobs.php">
+    <UnusedClass>
+      <code><![CDATA[ListBlobs]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/Com/Atproto/Sync/ListRepos.php">
+    <UnusedClass>
+      <code><![CDATA[ListRepos]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/Com/Atproto/Sync/NotifyOfUpdate.php">
+    <UnusedClass>
+      <code><![CDATA[NotifyOfUpdate]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/Com/Atproto/Sync/RequestCrawl.php">
+    <UnusedClass>
+      <code><![CDATA[RequestCrawl]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/Com/Atproto/Temp/CheckSignupQueue.php">
+    <UnusedClass>
+      <code><![CDATA[CheckSignupQueue]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/Com/Atproto/Temp/FetchLabels.php">
+    <UnusedClass>
+      <code><![CDATA[FetchLabels]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/Com/Atproto/Temp/ImportRepo.php">
+    <UnusedClass>
+      <code><![CDATA[ImportRepo]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/Com/Atproto/Temp/PushBlob.php">
+    <UnusedClass>
+      <code><![CDATA[PushBlob]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/Com/Atproto/Temp/RequestPhoneVerification.php">
+    <UnusedClass>
+      <code><![CDATA[RequestPhoneVerification]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/Com/Atproto/Temp/TransferAccount.php">
+    <UnusedClass>
+      <code><![CDATA[TransferAccount]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/Middleware/AuthenticateMiddleware.php">
+    <UnusedClass>
+      <code><![CDATA[AuthenticateMiddleware]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/Trait/HttpTrait.php">
+    <MixedArgumentTypeCoercion>
+      <code><![CDATA[$value]]></code>
+    </MixedArgumentTypeCoercion>
+    <PossiblyNullArgument>
+      <code><![CDATA[InstalledVersions::getPrettyVersion('ghostwriter/atprotocol')]]></code>
+    </PossiblyNullArgument>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[delete]]></code>
+      <code><![CDATA[get]]></code>
+      <code><![CDATA[patch]]></code>
+      <code><![CDATA[put]]></code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src/Value/Did.php">
+    <PossiblyUnusedMethod>
+      <code><![CDATA[jsonSerialize]]></code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src/Value/Email.php">
+    <UnusedClass>
+      <code><![CDATA[Email]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/Value/InviteCode.php">
+    <UnusedClass>
+      <code><![CDATA[InviteCode]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/Value/Password.php">
+    <UnusedClass>
+      <code><![CDATA[Password]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/Value/Repository.php">
+    <MixedArgument>
+      <code><![CDATA[$this->did]]></code>
+    </MixedArgument>
+    <UndefinedThisPropertyFetch>
+      <code><![CDATA[$this->did]]></code>
+    </UndefinedThisPropertyFetch>
+    <UnusedClass>
+      <code><![CDATA[Repository]]></code>
+    </UnusedClass>
+  </file>
+</files>
