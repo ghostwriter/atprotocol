@@ -12,7 +12,7 @@ use Psr\Http\Message\UriInterface;
 /**
  * Import a repo in the form of a CAR file. Requires Content-Length HTTP header to be set.
  *
- * @see \Ghostwriter\AtProtocol\Tests\Unit\Com\Atproto\Repo\ImportRepoTest
+ * @see \Ghostwriter\AtProtocolTests\Unit\Com\Atproto\Repo\ImportRepoTest
  */
 final readonly class ImportRepo
 {
