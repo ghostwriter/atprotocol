@@ -11,7 +11,7 @@ use Psr\Http\Message\UriInterface;
 /**
  * Enumerates follows similar to a given account (actor). Expected use is to recommend additional accounts immediately after following one account.
  *
- * @see \Ghostwriter\AtProtocol\Tests\Unit\App\Bsky\Graph\GetSuggestedFollowsByActorTest
+ * @see \Ghostwriter\AtProtocolTests\Unit\App\Bsky\Graph\GetSuggestedFollowsByActorTest
  */
 final readonly class GetSuggestedFollowsByActor
 {
