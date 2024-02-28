@@ -9,7 +9,7 @@ use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
 /**
- * Get information about a feed generator, including policies and offered feed URIs.
+ * Get information about a feed generator, including policies and offered feed URIs. Does not require auth; implemented by Feed Generator services (not App View).
  *
  * @see \Ghostwriter\AtProtocol\Tests\Unit\App\Bsky\Feed\DescribeFeedGeneratorTest
  */
