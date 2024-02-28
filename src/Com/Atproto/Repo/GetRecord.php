@@ -11,7 +11,7 @@ use Psr\Http\Message\UriInterface;
 /**
  * Get a single record from a repository. Does not require auth.
  *
- * @see \Ghostwriter\AtProtocol\Tests\Unit\Com\Atproto\Repo\GetRecordTest
+ * @see \Ghostwriter\AtProtocolTests\Unit\Com\Atproto\Repo\GetRecordTest
  */
 final readonly class GetRecord
 {
