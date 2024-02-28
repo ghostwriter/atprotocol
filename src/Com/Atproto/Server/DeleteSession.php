@@ -12,7 +12,7 @@ use Psr\Http\Message\UriInterface;
 /**
  * Delete the current session. Requires auth.
  *
- * @see \Ghostwriter\AtProtocol\Tests\Unit\Com\Atproto\Server\DeleteSessionTest
+ * @see \Ghostwriter\AtProtocolTests\Unit\Com\Atproto\Server\DeleteSessionTest
  */
 final readonly class DeleteSession
 {
