@@ -11,7 +11,7 @@ use Psr\Http\Message\UriInterface;
 /**
  * DEPRECATED: use queryLabels or subscribeLabels instead -- Fetch all labels from a labeler created after a certain date.
  *
- * @see \Ghostwriter\AtProtocol\Tests\Unit\Com\Atproto\Temp\FetchLabelsTest
+ * @see \Ghostwriter\AtProtocolTests\Unit\Com\Atproto\Temp\FetchLabelsTest
  */
 final readonly class FetchLabels
 {
