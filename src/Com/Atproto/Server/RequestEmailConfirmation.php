@@ -12,7 +12,7 @@ use Psr\Http\Message\UriInterface;
 /**
  * Request an email with a code to confirm ownership of email.
  *
- * @see \Ghostwriter\AtProtocol\Tests\Unit\Com\Atproto\Server\RequestEmailConfirmationTest
+ * @see \Ghostwriter\AtProtocolTests\Unit\Com\Atproto\Server\RequestEmailConfirmationTest
  */
 final readonly class RequestEmailConfirmation
 {
