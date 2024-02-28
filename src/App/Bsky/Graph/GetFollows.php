@@ -11,7 +11,7 @@ use Psr\Http\Message\UriInterface;
 /**
  * Enumerates accounts which a specified account (actor) follows.
  *
- * @see \Ghostwriter\AtProtocol\Tests\Unit\App\Bsky\Graph\GetFollowsTest
+ * @see \Ghostwriter\AtProtocolTests\Unit\App\Bsky\Graph\GetFollowsTest
  */
 final readonly class GetFollows
 {
