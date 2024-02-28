@@ -11,7 +11,7 @@ use Psr\Http\Message\UriInterface;
 /**
  * Describes the server's account creation requirements and capabilities. Implemented by PDS.
  *
- * @see \Ghostwriter\AtProtocol\Tests\Unit\Com\Atproto\Server\DescribeServerTest
+ * @see \Ghostwriter\AtProtocolTests\Unit\Com\Atproto\Server\DescribeServerTest
  */
 final readonly class DescribeServer
 {
