@@ -12,7 +12,7 @@ use Psr\Http\Message\UriInterface;
 /**
  * Administrative action to create a new, re-usable communication (email for now) template.
  *
- * @see \Ghostwriter\AtProtocol\Tests\Unit\Com\Atproto\Admin\CreateCommunicationTemplateTest
+ * @see \Ghostwriter\AtProtocolTests\Unit\Com\Atproto\Admin\CreateCommunicationTemplateTest
  */
 final readonly class CreateCommunicationTemplate
 {
