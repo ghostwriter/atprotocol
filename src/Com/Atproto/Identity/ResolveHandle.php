@@ -11,7 +11,7 @@ use Psr\Http\Message\UriInterface;
 /**
  * Resolves a handle (domain name) to a DID.
  *
- * @see \Ghostwriter\AtProtocol\Tests\Unit\Com\Atproto\Identity\ResolveHandleTest
+ * @see \Ghostwriter\AtProtocolTests\Unit\Com\Atproto\Identity\ResolveHandleTest
  */
 final readonly class ResolveHandle
 {
