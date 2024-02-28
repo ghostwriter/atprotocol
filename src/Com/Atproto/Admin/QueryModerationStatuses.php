@@ -11,7 +11,7 @@ use Psr\Http\Message\UriInterface;
 /**
  * View moderation statuses of subjects (record or repo).
  *
- * @see \Ghostwriter\AtProtocol\Tests\Unit\Com\Atproto\Admin\QueryModerationStatusesTest
+ * @see \Ghostwriter\AtProtocolTests\Unit\Com\Atproto\Admin\QueryModerationStatusesTest
  */
 final readonly class QueryModerationStatuses
 {
