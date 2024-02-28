@@ -11,7 +11,7 @@ use Psr\Http\Message\UriInterface;
 /**
  * Get a signed token on behalf of the requesting DID for the requested service.
  *
- * @see \Ghostwriter\AtProtocol\Tests\Unit\Com\Atproto\Server\GetServiceAuthTest
+ * @see \Ghostwriter\AtProtocolTests\Unit\Com\Atproto\Server\GetServiceAuthTest
  */
 final readonly class GetServiceAuth
 {
