@@ -9,7 +9,7 @@ use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
 /**
- * Get a list of who the actor mutes.
+ * Enumerates accounts that the requesting account (actor) currently has muted. Requires auth.
  *
  * @see \Ghostwriter\AtProtocol\Tests\Unit\App\Bsky\Graph\GetMutesTest
  */
