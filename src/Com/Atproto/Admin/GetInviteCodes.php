@@ -11,7 +11,7 @@ use Psr\Http\Message\UriInterface;
 /**
  * Get an admin view of invite codes.
  *
- * @see \Ghostwriter\AtProtocol\Tests\Unit\Com\Atproto\Admin\GetInviteCodesTest
+ * @see \Ghostwriter\AtProtocolTests\Unit\Com\Atproto\Admin\GetInviteCodesTest
  */
 final readonly class GetInviteCodes
 {
