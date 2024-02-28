@@ -11,7 +11,7 @@ use Psr\Http\Message\UriInterface;
 /**
  * Get the service-specific admin status of a subject (account, record, or blob).
  *
- * @see \Ghostwriter\AtProtocol\Tests\Unit\Com\Atproto\Admin\GetSubjectStatusTest
+ * @see \Ghostwriter\AtProtocolTests\Unit\Com\Atproto\Admin\GetSubjectStatusTest
  */
 final readonly class GetSubjectStatus
 {
