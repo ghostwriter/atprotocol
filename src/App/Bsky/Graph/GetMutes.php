@@ -11,7 +11,7 @@ use Psr\Http\Message\UriInterface;
 /**
  * Enumerates accounts that the requesting account (actor) currently has muted. Requires auth.
  *
- * @see \Ghostwriter\AtProtocol\Tests\Unit\App\Bsky\Graph\GetMutesTest
+ * @see \Ghostwriter\AtProtocolTests\Unit\App\Bsky\Graph\GetMutesTest
  */
 final readonly class GetMutes
 {
