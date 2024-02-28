@@ -11,7 +11,7 @@ use Psr\Http\Message\UriInterface;
 /**
  * Enumerates mod lists that the requesting account (actor) currently has muted. Requires auth.
  *
- * @see \Ghostwriter\AtProtocol\Tests\Unit\App\Bsky\Graph\GetListMutesTest
+ * @see \Ghostwriter\AtProtocolTests\Unit\App\Bsky\Graph\GetListMutesTest
  */
 final readonly class GetListMutes
 {
