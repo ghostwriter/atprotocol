@@ -11,7 +11,7 @@ use Psr\Http\Message\UriInterface;
 /**
  * Enumerate notifications for the requesting account. Requires auth.
  *
- * @see \Ghostwriter\AtProtocol\Tests\Unit\App\Bsky\Notification\ListNotificationsTest
+ * @see \Ghostwriter\AtProtocolTests\Unit\App\Bsky\Notification\ListNotificationsTest
  */
 final readonly class ListNotifications
 {
