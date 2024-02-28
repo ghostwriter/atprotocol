@@ -12,7 +12,7 @@ use Psr\Http\Message\UriInterface;
 /**
  * Initiate a user account password reset via email.
  *
- * @see \Ghostwriter\AtProtocol\Tests\Unit\Com\Atproto\Server\RequestPasswordResetTest
+ * @see \Ghostwriter\AtProtocolTests\Unit\Com\Atproto\Server\RequestPasswordResetTest
  */
 final readonly class RequestPasswordReset
 {
