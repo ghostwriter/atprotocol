@@ -24,7 +24,6 @@ final readonly class GetRecord
         string $did = null,
         string $collection = null,
         string $rkey = null,
-        ?string $commit = null,
     ): RequestInterface
     {
         $request = $this->requestFactory
@@ -35,7 +34,6 @@ final readonly class GetRecord
                     'did' => $did,
                     'collection' => $collection,
                     'rkey' => $rkey,
-                    'commit' => $commit,
                 ])))
             );
 
