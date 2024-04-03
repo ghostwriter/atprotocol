@@ -36,22 +36,22 @@
     ],
     "require": {
         "php": ">=8.3",
-        "ghostwriter/collection": ">=2",
-        "ghostwriter/config": ">=0.4.1",
-        "ghostwriter/container": ">=3.0.2",
-        "ghostwriter/event-dispatcher": ">=4",
-        "ghostwriter/json": ">=3",
-        "ghostwriter/option": ">=1.5.1",
-        "ghostwriter/psalm-plugin": ">=0.2",
-        "ghostwriter/result": ">=1.3",
-        "laminas/laminas-diactoros": ">=3.3.1",
-        "php-http/curl-client": ">=2.3.1",
-        "psr/http-client": ">=1.0.3",
-        "psr/http-factory": ">=1.0.2"
+        "ghostwriter/collection": "^2.0.0",
+        "ghostwriter/config": "^0.4.1",
+        "ghostwriter/container": "^3.0.2",
+        "ghostwriter/event-dispatcher": "^4.0.0",
+        "ghostwriter/json": "^3.0.0",
+        "ghostwriter/option": "^1.5.1",
+        "ghostwriter/psalm-plugin": "^0.2.0",
+        "ghostwriter/result": "^1.3.0",
+        "laminas/laminas-diactoros": "^3.3.1",
+        "php-http/curl-client": "^2.3.2",
+        "psr/http-client": "^1.0.3",
+        "psr/http-factory": "^1.0.2"
     },
     "require-dev": {
         "ghostwriter/coding-standard": "dev-main",
-        "ghostwriter/psalm-plugin": ">=0.2"
+        "ghostwriter/psalm-plugin": "^0.2.0"
     },
     "minimum-stability": "stable",
     "prefer-stable": true,
@@ -72,10 +72,14 @@
         "prepend-autoloader": true,
         "sort-packages": true,
         "allow-plugins": {
-            "php-http/discovery": true
+            "php-http/discovery": true,
+            "ghostwriter/coding-\n  standard": true,
+            "ghostwriter/coding-standard": true
         }
     },
+    "$schema": "https://composerjs.org/schema.json",
     "scripts": {
+
         "bench": "vendor/bin/phpbench --colors=always",
         "cache:clear": "rm -fr ./.cache",
         "check": [
@@ -106,7 +110,7 @@
             "@psalm",
             "@infection"
         ],
-        "submodule": "git submodule update --recursive --remote",
+        "submodule": "git submodule update --depth=1 --init --recursive --recommend-shallow --remote",
         "xdebug": "@putenv XDEBUG_MODE=coverage"
     }
 }
