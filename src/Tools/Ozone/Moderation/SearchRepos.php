@@ -8,6 +8,9 @@ use Psr\Http\Message\RequestFactoryInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
+use function array_filter;
+use function http_build_query;
+
 /**
  * Find repositories based on a search term.
  *
@@ -24,17 +27,16 @@ final readonly class SearchRepos
         ?string $q = null,
         ?int $limit = null,
         ?string $cursor = null,
-    ): RequestInterface
-    {
+    ): RequestInterface {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
                 $pdsUri->withPath('xrpc/tools.ozone.moderation.searchRepos')
                     ->withQuery(http_build_query(array_filter([
-                    'q' => $q,
-                    'limit' => $limit,
-                    'cursor' => $cursor,
-                ])))
+                        'q' => $q,
+                        'limit' => $limit,
+                        'cursor' => $cursor,
+                    ])))
             );
 
         $headers = [
