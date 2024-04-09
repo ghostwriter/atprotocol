@@ -8,6 +8,10 @@ use Psr\Http\Message\RequestFactoryInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriInterface;
+use RuntimeException;
+
+use function array_filter;
+use function json_encode;
 
 /**
  * Refresh an authentication session. Requires auth using the 'refreshJwt' (not the 'accessJwt').
@@ -21,15 +25,10 @@ final readonly class RefreshSession
         private StreamFactoryInterface $streamFactory,
     ) {}
 
-    public function __invoke(
-        UriInterface $pdsUri,
-    ): RequestInterface
+    public function __invoke(UriInterface $pdsUri): RequestInterface
     {
         $request = $this->requestFactory
-            ->createRequest(
-                'POST',
-                $pdsUri->withPath('xrpc/com.atproto.server.refreshSession')
-            );
+            ->createRequest('POST', $pdsUri->withPath('xrpc/com.atproto.server.refreshSession'));
 
         $headers = [
             'Accept' => 'application/json',
@@ -40,18 +39,12 @@ final readonly class RefreshSession
             $request = $request->withHeader($name, $value);
         }
 
-        $jsonBody = json_encode(array_filter([
-            
-        ]));
+        $jsonBody = json_encode(array_filter([]));
 
-        if (false === $jsonBody){
-            throw new \RuntimeException('Failed to encode JSON');
+        if ($jsonBody === false) {
+            throw new RuntimeException('Failed to encode JSON');
         }
 
-        return $request->withBody(
-            $this->streamFactory->createStream(
-                $jsonBody
-            )
-        );
+        return $request->withBody($this->streamFactory->createStream($jsonBody));
     }
 }
