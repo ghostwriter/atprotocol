@@ -8,6 +8,9 @@ use Psr\Http\Message\RequestFactoryInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
+use function array_filter;
+use function http_build_query;
+
 /**
  * DEPRECATED: will be removed soon. Use a feed generator alternative.
  *
@@ -24,17 +27,16 @@ final readonly class GetPopular
         ?bool $includeNsfw = null,
         ?int $limit = null,
         ?string $cursor = null,
-    ): RequestInterface
-    {
+    ): RequestInterface {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
                 $pdsUri->withPath('xrpc/app.bsky.unspecced.getPopular')
                     ->withQuery(http_build_query(array_filter([
-                    'includeNsfw' => $includeNsfw,
-                    'limit' => $limit,
-                    'cursor' => $cursor,
-                ])))
+                        'includeNsfw' => $includeNsfw,
+                        'limit' => $limit,
+                        'cursor' => $cursor,
+                    ])))
             );
 
         $headers = [
