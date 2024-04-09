@@ -9,6 +9,11 @@ use Ghostwriter\AtProtocol\Value\Did;
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\TestCase;
+use InvalidArgumentException;
+
+use function json_encode;
+
+use const JSON_THROW_ON_ERROR;
 
 #[CoversClass(Did::class)]
 final class DidTest extends TestCase
@@ -52,27 +57,24 @@ final class DidTest extends TestCase
     }
 
     #[DataProvider('validDidDataProvider')]
-    public function testValidDid(
-        string $did
-    ): void {
+    public function testValidDid(string $did): void
+    {
         $sut = new Did($did);
 
-        self::assertSame(
-            $did,
-            (string) $sut
-        );
+        self::assertSame($did, (string) $sut);
 
         self::assertSame(
-            json_encode(['did' => $did], JSON_THROW_ON_ERROR),
+            json_encode([
+                'did' => $did,
+            ], JSON_THROW_ON_ERROR),
             json_encode($sut, JSON_THROW_ON_ERROR)
         );
     }
 
     #[DataProvider('invalidDidDataProvider')]
-    public function testInvalidDid(
-        string $did
-    ): void {
-        $this->expectException(\InvalidArgumentException::class);
+    public function testInvalidDid(string $did): void
+    {
+        $this->expectException(InvalidArgumentException::class);
 
         new Did($did);
     }
