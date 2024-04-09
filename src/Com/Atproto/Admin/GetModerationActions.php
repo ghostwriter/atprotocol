@@ -8,6 +8,9 @@ use Psr\Http\Message\RequestFactoryInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
+use function array_filter;
+use function http_build_query;
+
 /**
  * Get a list of moderation actions related to a subject.
  *
@@ -24,17 +27,16 @@ final readonly class GetModerationActions
         ?string $subject = null,
         ?int $limit = null,
         ?string $cursor = null,
-    ): RequestInterface
-    {
+    ): RequestInterface {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
                 $pdsUri->withPath('xrpc/com.atproto.admin.getModerationActions')
                     ->withQuery(http_build_query(array_filter([
-                    'subject' => $subject,
-                    'limit' => $limit,
-                    'cursor' => $cursor,
-                ])))
+                        'subject' => $subject,
+                        'limit' => $limit,
+                        'cursor' => $cursor,
+                    ])))
             );
 
         $headers = [
