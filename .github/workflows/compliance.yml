@@ -1,32 +1,56 @@
-# .github/workflows/compliance.yml
 name: Compliance
 
 on:
   pull_request:
   push:
     branches:
+      # Default branch
       - "main"
-      - "[0-9]+.[0-9]+.x" # 1.2.x
-      - "v[0-9]+" # v1
+      # Release branches
+      ## 1.2.x - eg. Semantic Versioning
+      - "[0-9]+.[0-9]+.x"
+      ## v1 - eg. GitHub Actions Versioning
+      - "v[0-9]+"
+  # Scheduled workflow
   schedule:
-    - cron: "0 * * * *" # Runs hourly
-  workflow_dispatch: # Manually Trigger workflow
+    # Runs hourly
+    - cron: "0 * * * *"
+  # Manually Trigger workflow
+  workflow_dispatch:
 
 # https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#permissions
+# values: read, write, none
 permissions:
-  actions: write #  permits an action to cancel a workflow run.
-  checks: write # permits an action to create a check run.
-  contents: write # allows the action to create a release.
-  discussions: write # permits an action to close or delete a discussion.
-  issues: write # permits an action to add a comment to an issue
-  packages: write # permits an action to upload and publish packages on GitHub Packages.
-  pages: write # permits an action to request a GitHub Pages build.
-  pull-requests: write # permits an action to add a label to a pull request.
+  # actions: Work with GitHub Actions. For example, actions: write permits an action to cancel a workflow run.
+  actions: write
+  # checks: Work with check runs and check suites. For example, checks: write permits an action to create a check run.
+  checks: write
+  # contents: Work with the contents of the repository. For example, contents: read permits an action to list the commits, and contents:write allows the action to create a release.
+  contents: write
+  # deployments: Work with deployments. For example, deployments: write permits an action to create a new deployment.
+  deployments: write
+  # discussions: Work with GitHub Discussions. For example, discussions: write permits an action to close or delete a discussion.
+  discussions: write
+  # id-token: Fetch an OpenID Connect (OIDC) token. This requires id-token: write.
+  id-token: none
+  # issues: Work with issues. For example, issues: write permits an action to add a comment to an issue.
+  issues: write
+  # packages: Work with GitHub Packages. For example, packages: write permits an action to upload and publish packages on GitHub Packages.
+  packages: write
+  # pages: Work with GitHub Pages. For example, pages: write permits an action to request a GitHub Pages build.
+  pages: write
+  # pull-requests: Work with pull requests. For example, pull-requests: write permits an action to add a label to a pull request.
+  pull-requests: write
+  # repository-projects: Work with GitHub projects (classic). For example, repository-projects: write permits an action to add a column to a project (classic).
+  repository-projects: write
+  # security-events: Work with GitHub code scanning and Dependabot alerts. For example, security-events: read permits an action to list the Dependabot alerts for the repository, and security-events: write allows an action to update the status of a code scanning alert.
+  security-events: write
+  # statuses: Work with commit statuses. For example, statuses:read permits an action to list the commit statuses for a given reference.
+  statuses: write
 
 jobs:
   automation:
     uses: ghostwriter/compliance/.github/workflows/automation.yml@v1
     secrets:
-      CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
       GPG_PRIVATE_KEY: ${{ secrets.GPG_PRIVATE_KEY }}
       INFECTION_DASHBOARD_API_KEY: ${{ secrets.INFECTION_DASHBOARD_API_KEY }}
