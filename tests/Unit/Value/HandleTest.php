@@ -9,6 +9,7 @@ use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\TestCase;
 use Ghostwriter\AtProtocol\Value\Handle;
+use InvalidArgumentException;
 
 #[CoversClass(Handle::class)]
 final class HandleTest extends TestCase
@@ -30,6 +31,7 @@ final class HandleTest extends TestCase
             yield $handle => [$handle];
         }
     }
+
     public static function validHandleDataProvider(): Generator
     {
         // Test data copied from https://atproto.com/specs/handle
@@ -62,7 +64,7 @@ final class HandleTest extends TestCase
             'cn.8',
             'www.masełkowski.pl.com',
             'org',
-            'name.org.'
+            'name.org.',
         ];
 
         foreach ($handles as $handle) {
@@ -71,29 +73,21 @@ final class HandleTest extends TestCase
     }
 
     #[DataProvider('validSyntaxHandleDataProvider')]
-    public function testValidSyntaxHandle(
-        string $handle
-    ): void {
-        self::assertSame(
-            $handle,
-            (string) new Handle($handle)
-        );
+    public function testValidSyntaxHandle(string $handle): void
+    {
+        self::assertSame($handle, (string) new Handle($handle));
     }
+
     #[DataProvider('validHandleDataProvider')]
-    public function testValidHandle(
-        string $handle
-    ): void {
-        self::assertSame(
-            $handle,
-            (string) new Handle($handle)
-        );
+    public function testValidHandle(string $handle): void
+    {
+        self::assertSame($handle, (string) new Handle($handle));
     }
 
     #[DataProvider('invalidHandleDataProvider')]
-    public function testInvalidHandle(
-        string $handle
-    ): void {
-        $this->expectException(\InvalidArgumentException::class);
+    public function testInvalidHandle(string $handle): void
+    {
+        $this->expectException(InvalidArgumentException::class);
 
         new Handle($handle);
     }
