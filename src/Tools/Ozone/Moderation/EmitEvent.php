@@ -8,6 +8,10 @@ use Psr\Http\Message\RequestFactoryInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriInterface;
+use RuntimeException;
+
+use function array_filter;
+use function json_encode;
 
 /**
  * Take a moderation action on an actor.
@@ -27,13 +31,9 @@ final readonly class EmitEvent
         string $subject = null,
         string $createdBy = null,
         ?array $subjectBlobCids = null,
-    ): RequestInterface
-    {
+    ): RequestInterface {
         $request = $this->requestFactory
-            ->createRequest(
-                'POST',
-                $pdsUri->withPath('xrpc/tools.ozone.moderation.emitEvent')
-            );
+            ->createRequest('POST', $pdsUri->withPath('xrpc/tools.ozone.moderation.emitEvent'));
 
         $headers = [
             'Accept' => 'application/json',
@@ -51,14 +51,10 @@ final readonly class EmitEvent
             'createdBy' => $createdBy,
         ]));
 
-        if (false === $jsonBody){
-            throw new \RuntimeException('Failed to encode JSON');
+        if ($jsonBody === false) {
+            throw new RuntimeException('Failed to encode JSON');
         }
 
-        return $request->withBody(
-            $this->streamFactory->createStream(
-                $jsonBody
-            )
-        );
+        return $request->withBody($this->streamFactory->createStream($jsonBody));
     }
 }
