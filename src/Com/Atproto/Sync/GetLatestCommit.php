@@ -8,6 +8,9 @@ use Psr\Http\Message\RequestFactoryInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
+use function array_filter;
+use function http_build_query;
+
 /**
  * Get the current commit CID & revision of the specified repo. Does not require auth.
  *
@@ -19,18 +22,15 @@ final readonly class GetLatestCommit
         private RequestFactoryInterface $requestFactory,
     ) {}
 
-    public function __invoke(
-        UriInterface $pdsUri,
-        string $did = null,
-    ): RequestInterface
+    public function __invoke(UriInterface $pdsUri, string $did = null): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
                 $pdsUri->withPath('xrpc/com.atproto.sync.getLatestCommit')
                     ->withQuery(http_build_query(array_filter([
-                    'did' => $did,
-                ])))
+                        'did' => $did,
+                    ])))
             );
 
         $headers = [
