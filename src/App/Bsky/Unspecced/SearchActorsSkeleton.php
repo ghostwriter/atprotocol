@@ -8,6 +8,9 @@ use Psr\Http\Message\RequestFactoryInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
+use function array_filter;
+use function http_build_query;
+
 /**
  * Backend Actors (profile) search, returns only skeleton.
  *
@@ -25,18 +28,17 @@ final readonly class SearchActorsSkeleton
         ?bool $typeahead = null,
         ?int $limit = null,
         ?string $cursor = null,
-    ): RequestInterface
-    {
+    ): RequestInterface {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
                 $pdsUri->withPath('xrpc/app.bsky.unspecced.searchActorsSkeleton')
                     ->withQuery(http_build_query(array_filter([
-                    'q' => $q,
-                    'typeahead' => $typeahead,
-                    'limit' => $limit,
-                    'cursor' => $cursor,
-                ])))
+                        'q' => $q,
+                        'typeahead' => $typeahead,
+                        'limit' => $limit,
+                        'cursor' => $cursor,
+                    ])))
             );
 
         $headers = [
