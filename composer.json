@@ -66,51 +66,56 @@
         }
     },
     "config": {
+        "allow-plugins": {
+            "ghostwriter/coding-\n  standard": true,
+            "ghostwriter/coding-standard": true,
+            "php-http/discovery": true
+        },
+        "classmap-authoritative": false,
         "discard-changes": true,
         "optimize-autoloader": true,
         "preferred-install": "dist",
         "prepend-autoloader": true,
+        "process-timeout": 5000,
         "sort-packages": true,
-        "allow-plugins": {
-            "php-http/discovery": true,
-            "ghostwriter/coding-\n  standard": true,
-            "ghostwriter/coding-standard": true
-        }
+        "use-parent-dir": false
     },
-    "$schema": "https://composerjs.org/schema.json",
     "scripts": {
-
-        "bench": "vendor/bin/phpbench --colors=always",
-        "cache:clear": "rm -fr ./.cache",
+        "cache:clear": "rm -rf ./.cache/*",
         "check": [
             "@composer validate",
-            "@cs",
+            "@ecs",
             "@test"
         ],
-        "cs": [
-            "@phpcs",
-            "@phpcbf"
+        "composer-normalize": "vendor/ghostwriter/coding-standard/tools/composer-normalize --no-cache --diff --no-check-lock --no-scripts --no-plugins",
+        "composer-require-checker": "vendor/ghostwriter/coding-standard/tools/composer-require-checker check",
+        "composer-unused": "vendor/ghostwriter/coding-standard/tools/composer-unused",
+        "dev": [
+            "@cache:clear",
+            "@composer-normalize",
+            "@psalm:baseline",
+            "@check",
+            "@psalm:security",
+            "@psalm:dry-run"
         ],
-        "infection": ["@xdebug","vendor/bin/infection --ansi --verbose"],
-        "phpcbf": "vendor/bin/phpcbf --colors --no-cache --standard=PSR12 -s ./src",
-        "phpcs": "vendor/bin/phpcs --colors --no-cache --standard=PSR12 -s ./src",
-        "phpunit": ["@xdebug","vendor/bin/phpunit --do-not-cache-result --colors=always --testdox --stop-on-failure"],
-        "phpunit:migrate": "vendor/bin/phpunit --migrate-configuration",
-        "psalm": [
-            "@psalm:shepherd",
-            "@psalm:security"
-        ],
-        "psalm:baseline": "vendor/bin/psalm --set-baseline=psalm-baseline.xml",
-        "psalm:dry-run": "vendor/bin/psalm --alter --issues=all --dry-run",
-        "psalm:missing-return-types": "vendor/bin/psalm --alter --issues=MissingReturnType",
-        "psalm:security": "vendor/bin/psalm --taint-analysis",
-        "psalm:shepherd": "vendor/bin/psalm --shepherd --stats --no-diff --no-cache",
+        "ecs": "vendor/bin/ecs check --clear-cache --fix --no-interaction",
+        "infection": "vendor/ghostwriter/coding-standard/tools/infection --ansi --verbose --threads=max --min-msi=0 --min-covered-msi=0",
+        "phpunit": "vendor/ghostwriter/coding-standard/tools/phpunit --do-not-cache-result --colors=always",
+        "phpunit:migrate": "@phpunit --migrate-configuration",
+        "psalm": "vendor/ghostwriter/coding-standard/tools/psalm --no-cache",
+        "psalm:alter": "@psalm --no-diff --shepherd --stats --alter --allow-backwards-incompatible-changes=false",
+        "psalm:baseline": "@psalm --no-diff --set-baseline=psalm-baseline.xml",
+        "psalm:dry-run": "@psalm:alter --issues=all --dry-run",
+        "psalm:fix": "@psalm:alter --issues=MissingReturnType",
+        "psalm:security": "@psalm --no-diff --taint-analysis",
+        "psalm:shepherd": "@psalm --no-diff --shepherd --stats",
+        "rector": "vendor/bin/rector process --no-ansi --no-interaction --clear-cache",
+        "submodule": "git submodule update --depth=1 --init --recursive --recommend-shallow --remote",
         "test": [
             "@phpunit",
-            "@psalm",
+            "@psalm:shepherd",
             "@infection"
-        ],
-        "submodule": "git submodule update --depth=1 --init --recursive --recommend-shallow --remote",
-        "xdebug": "@putenv XDEBUG_MODE=coverage"
-    }
+        ]
+    },
+    "$schema": "https://composerjs.org/schema.json"
 }
