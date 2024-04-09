@@ -8,6 +8,10 @@ use Psr\Http\Message\RequestFactoryInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriInterface;
+use RuntimeException;
+
+use function array_filter;
+use function json_encode;
 
 /**
  * Create an App Password.
@@ -21,16 +25,10 @@ final readonly class CreateAppPassword
         private StreamFactoryInterface $streamFactory,
     ) {}
 
-    public function __invoke(
-        UriInterface $pdsUri,
-        string $name = null,
-    ): RequestInterface
+    public function __invoke(UriInterface $pdsUri, string $name = null): RequestInterface
     {
         $request = $this->requestFactory
-            ->createRequest(
-                'POST',
-                $pdsUri->withPath('xrpc/com.atproto.server.createAppPassword')
-            );
+            ->createRequest('POST', $pdsUri->withPath('xrpc/com.atproto.server.createAppPassword'));
 
         $headers = [
             'Accept' => 'application/json',
@@ -45,14 +43,10 @@ final readonly class CreateAppPassword
             'name' => $name,
         ]));
 
-        if (false === $jsonBody){
-            throw new \RuntimeException('Failed to encode JSON');
+        if ($jsonBody === false) {
+            throw new RuntimeException('Failed to encode JSON');
         }
 
-        return $request->withBody(
-            $this->streamFactory->createStream(
-                $jsonBody
-            )
-        );
+        return $request->withBody($this->streamFactory->createStream($jsonBody));
     }
 }
