@@ -8,6 +8,10 @@ use Psr\Http\Message\RequestFactoryInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriInterface;
+use RuntimeException;
+
+use function array_filter;
+use function json_encode;
 
 /**
  * Initiate a user account deletion via email.
@@ -21,15 +25,10 @@ final readonly class RequestAccountDelete
         private StreamFactoryInterface $streamFactory,
     ) {}
 
-    public function __invoke(
-        UriInterface $pdsUri,
-    ): RequestInterface
+    public function __invoke(UriInterface $pdsUri): RequestInterface
     {
         $request = $this->requestFactory
-            ->createRequest(
-                'POST',
-                $pdsUri->withPath('xrpc/com.atproto.server.requestAccountDelete')
-            );
+            ->createRequest('POST', $pdsUri->withPath('xrpc/com.atproto.server.requestAccountDelete'));
 
         $headers = [
             'Accept' => 'application/json',
@@ -40,18 +39,12 @@ final readonly class RequestAccountDelete
             $request = $request->withHeader($name, $value);
         }
 
-        $jsonBody = json_encode(array_filter([
-            
-        ]));
+        $jsonBody = json_encode(array_filter([]));
 
-        if (false === $jsonBody){
-            throw new \RuntimeException('Failed to encode JSON');
+        if ($jsonBody === false) {
+            throw new RuntimeException('Failed to encode JSON');
         }
 
-        return $request->withBody(
-            $this->streamFactory->createStream(
-                $jsonBody
-            )
-        );
+        return $request->withBody($this->streamFactory->createStream($jsonBody));
     }
 }
