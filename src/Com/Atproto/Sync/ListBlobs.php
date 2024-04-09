@@ -8,6 +8,9 @@ use Psr\Http\Message\RequestFactoryInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
+use function array_filter;
+use function http_build_query;
+
 /**
  * List blob CIDso for an account, since some repo revision. Does not require auth; implemented by PDS.
  *
@@ -25,18 +28,17 @@ final readonly class ListBlobs
         ?string $since = null,
         ?int $limit = null,
         ?string $cursor = null,
-    ): RequestInterface
-    {
+    ): RequestInterface {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
                 $pdsUri->withPath('xrpc/com.atproto.sync.listBlobs')
                     ->withQuery(http_build_query(array_filter([
-                    'did' => $did,
-                    'since' => $since,
-                    'limit' => $limit,
-                    'cursor' => $cursor,
-                ])))
+                        'did' => $did,
+                        'since' => $since,
+                        'limit' => $limit,
+                        'cursor' => $cursor,
+                    ])))
             );
 
         $headers = [
