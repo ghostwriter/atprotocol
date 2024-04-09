@@ -8,6 +8,9 @@ use Psr\Http\Message\RequestFactoryInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
+use function array_filter;
+use function http_build_query;
+
 /**
  * Get a view of an actor's 'author feed' (post and reposts by the author). Does not require auth.
  *
@@ -25,18 +28,17 @@ final readonly class GetAuthorFeed
         ?int $limit = null,
         ?string $cursor = null,
         ?string $filter = null,
-    ): RequestInterface
-    {
+    ): RequestInterface {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
                 $pdsUri->withPath('xrpc/app.bsky.feed.getAuthorFeed')
                     ->withQuery(http_build_query(array_filter([
-                    'actor' => $actor,
-                    'limit' => $limit,
-                    'cursor' => $cursor,
-                    'filter' => $filter,
-                ])))
+                        'actor' => $actor,
+                        'limit' => $limit,
+                        'cursor' => $cursor,
+                        'filter' => $filter,
+                    ])))
             );
 
         $headers = [
