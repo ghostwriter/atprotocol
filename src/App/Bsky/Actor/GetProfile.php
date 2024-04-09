@@ -8,6 +8,9 @@ use Psr\Http\Message\RequestFactoryInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
+use function array_filter;
+use function http_build_query;
+
 /**
  * Get detailed profile view of an actor. Does not require auth, but contains relevant metadata with auth.
  *
@@ -19,18 +22,15 @@ final readonly class GetProfile
         private RequestFactoryInterface $requestFactory,
     ) {}
 
-    public function __invoke(
-        UriInterface $pdsUri,
-        string $actor = null,
-    ): RequestInterface
+    public function __invoke(UriInterface $pdsUri, string $actor = null): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
                 $pdsUri->withPath('xrpc/app.bsky.actor.getProfile')
                     ->withQuery(http_build_query(array_filter([
-                    'actor' => $actor,
-                ])))
+                        'actor' => $actor,
+                    ])))
             );
 
         $headers = [
