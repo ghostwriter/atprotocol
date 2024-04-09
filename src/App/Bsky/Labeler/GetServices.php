@@ -8,6 +8,9 @@ use Psr\Http\Message\RequestFactoryInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
+use function array_filter;
+use function http_build_query;
+
 /**
  * Get information about a list of labeler services.
  *
@@ -19,20 +22,16 @@ final readonly class GetServices
         private RequestFactoryInterface $requestFactory,
     ) {}
 
-    public function __invoke(
-        UriInterface $pdsUri,
-        array $dids = null,
-        ?bool $detailed = null,
-    ): RequestInterface
+    public function __invoke(UriInterface $pdsUri, array $dids = null, ?bool $detailed = null): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
                 $pdsUri->withPath('xrpc/app.bsky.labeler.getServices')
                     ->withQuery(http_build_query(array_filter([
-                    'dids' => $dids,
-                    'detailed' => $detailed,
-                ])))
+                        'dids' => $dids,
+                        'detailed' => $detailed,
+                    ])))
             );
 
         $headers = [
