@@ -8,6 +8,9 @@ use Psr\Http\Message\RequestFactoryInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
+use function array_filter;
+use function http_build_query;
+
 /**
  * Get posts in a thread. Does not require auth, but additional metadata and filtering will be applied for authed requests.
  *
@@ -24,17 +27,16 @@ final readonly class GetPostThread
         string $uri = null,
         ?int $depth = null,
         ?int $parentHeight = null,
-    ): RequestInterface
-    {
+    ): RequestInterface {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
                 $pdsUri->withPath('xrpc/app.bsky.feed.getPostThread')
                     ->withQuery(http_build_query(array_filter([
-                    'uri' => $uri,
-                    'depth' => $depth,
-                    'parentHeight' => $parentHeight,
-                ])))
+                        'uri' => $uri,
+                        'depth' => $depth,
+                        'parentHeight' => $parentHeight,
+                    ])))
             );
 
         $headers = [
