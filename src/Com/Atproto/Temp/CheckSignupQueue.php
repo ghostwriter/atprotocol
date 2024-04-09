@@ -8,6 +8,9 @@ use Psr\Http\Message\RequestFactoryInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
+use function array_filter;
+use function http_build_query;
+
 /**
  * Check accounts location in signup queue.
  *
@@ -19,9 +22,7 @@ final readonly class CheckSignupQueue
         private RequestFactoryInterface $requestFactory,
     ) {}
 
-    public function __invoke(
-        UriInterface $pdsUri,
-    ): RequestInterface
+    public function __invoke(UriInterface $pdsUri): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
