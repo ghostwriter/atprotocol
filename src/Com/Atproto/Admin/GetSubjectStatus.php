@@ -8,6 +8,9 @@ use Psr\Http\Message\RequestFactoryInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
+use function array_filter;
+use function http_build_query;
+
 /**
  * Get the service-specific admin status of a subject (account, record, or blob).
  *
@@ -24,17 +27,16 @@ final readonly class GetSubjectStatus
         ?string $did = null,
         ?string $uri = null,
         ?string $blob = null,
-    ): RequestInterface
-    {
+    ): RequestInterface {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
                 $pdsUri->withPath('xrpc/com.atproto.admin.getSubjectStatus')
                     ->withQuery(http_build_query(array_filter([
-                    'did' => $did,
-                    'uri' => $uri,
-                    'blob' => $blob,
-                ])))
+                        'did' => $did,
+                        'uri' => $uri,
+                        'blob' => $blob,
+                    ])))
             );
 
         $headers = [
