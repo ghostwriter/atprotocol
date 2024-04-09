@@ -8,8 +8,11 @@ use Psr\Http\Message\RequestFactoryInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
+use function array_filter;
+use function http_build_query;
+
 /**
- * Backend Posts search, returns only skeleton
+ * Backend Posts search, returns only skeleton.
  *
  * @see \Ghostwriter\AtProtocolTests\Unit\App\Bsky\Unspecced\SearchPostsSkeletonTest
  */
@@ -24,17 +27,16 @@ final readonly class SearchPostsSkeleton
         string $q = null,
         ?int $limit = null,
         ?string $cursor = null,
-    ): RequestInterface
-    {
+    ): RequestInterface {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
                 $pdsUri->withPath('xrpc/app.bsky.unspecced.searchPostsSkeleton')
                     ->withQuery(http_build_query(array_filter([
-                    'q' => $q,
-                    'limit' => $limit,
-                    'cursor' => $cursor,
-                ])))
+                        'q' => $q,
+                        'limit' => $limit,
+                        'cursor' => $cursor,
+                    ])))
             );
 
         $headers = [
