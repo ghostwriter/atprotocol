@@ -8,6 +8,9 @@ use Psr\Http\Message\RequestFactoryInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
+use function array_filter;
+use function http_build_query;
+
 /**
  * Count the number of unread notifications for the requesting account. Requires auth.
  *
@@ -19,18 +22,15 @@ final readonly class GetUnreadCount
         private RequestFactoryInterface $requestFactory,
     ) {}
 
-    public function __invoke(
-        UriInterface $pdsUri,
-        ?string $seenAt = null,
-    ): RequestInterface
+    public function __invoke(UriInterface $pdsUri, ?string $seenAt = null): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
                 $pdsUri->withPath('xrpc/app.bsky.notification.getUnreadCount')
                     ->withQuery(http_build_query(array_filter([
-                    'seenAt' => $seenAt,
-                ])))
+                        'seenAt' => $seenAt,
+                    ])))
             );
 
         $headers = [
