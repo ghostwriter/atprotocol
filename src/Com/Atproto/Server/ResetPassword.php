@@ -8,6 +8,10 @@ use Psr\Http\Message\RequestFactoryInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriInterface;
+use RuntimeException;
+
+use function array_filter;
+use function json_encode;
 
 /**
  * Reset a user account password using a token.
@@ -25,13 +29,9 @@ final readonly class ResetPassword
         UriInterface $pdsUri,
         string $token = null,
         string $password = null,
-    ): RequestInterface
-    {
+    ): RequestInterface {
         $request = $this->requestFactory
-            ->createRequest(
-                'POST',
-                $pdsUri->withPath('xrpc/com.atproto.server.resetPassword')
-            );
+            ->createRequest('POST', $pdsUri->withPath('xrpc/com.atproto.server.resetPassword'));
 
         $headers = [
             'Accept' => 'application/json',
@@ -47,14 +47,10 @@ final readonly class ResetPassword
             'password' => $password,
         ]));
 
-        if (false === $jsonBody){
-            throw new \RuntimeException('Failed to encode JSON');
+        if ($jsonBody === false) {
+            throw new RuntimeException('Failed to encode JSON');
         }
 
-        return $request->withBody(
-            $this->streamFactory->createStream(
-                $jsonBody
-            )
-        );
+        return $request->withBody($this->streamFactory->createStream($jsonBody));
     }
 }
