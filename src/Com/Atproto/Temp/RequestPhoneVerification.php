@@ -8,9 +8,13 @@ use Psr\Http\Message\RequestFactoryInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriInterface;
+use RuntimeException;
+
+use function array_filter;
+use function json_encode;
 
 /**
- * Request a verification code to be sent to the supplied phone number
+ * Request a verification code to be sent to the supplied phone number.
  *
  * @see \Ghostwriter\AtProtocolTests\Unit\Com\Atproto\Temp\RequestPhoneVerificationTest
  */
@@ -21,16 +25,10 @@ final readonly class RequestPhoneVerification
         private StreamFactoryInterface $streamFactory,
     ) {}
 
-    public function __invoke(
-        UriInterface $pdsUri,
-        string $phoneNumber = null,
-    ): RequestInterface
+    public function __invoke(UriInterface $pdsUri, string $phoneNumber = null): RequestInterface
     {
         $request = $this->requestFactory
-            ->createRequest(
-                'POST',
-                $pdsUri->withPath('xrpc/com.atproto.temp.requestPhoneVerification')
-            );
+            ->createRequest('POST', $pdsUri->withPath('xrpc/com.atproto.temp.requestPhoneVerification'));
 
         $headers = [
             'Accept' => 'application/json',
@@ -45,14 +43,10 @@ final readonly class RequestPhoneVerification
             'phoneNumber' => $phoneNumber,
         ]));
 
-        if (false === $jsonBody){
-            throw new \RuntimeException('Failed to encode JSON');
+        if ($jsonBody === false) {
+            throw new RuntimeException('Failed to encode JSON');
         }
 
-        return $request->withBody(
-            $this->streamFactory->createStream(
-                $jsonBody
-            )
-        );
+        return $request->withBody($this->streamFactory->createStream($jsonBody));
     }
 }
