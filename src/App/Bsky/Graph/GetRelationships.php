@@ -8,6 +8,9 @@ use Psr\Http\Message\RequestFactoryInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
+use function array_filter;
+use function http_build_query;
+
 /**
  * Enumerates public relationships between one account, and a list of other accounts. Does not require auth.
  *
@@ -23,16 +26,15 @@ final readonly class GetRelationships
         UriInterface $pdsUri,
         string $actor = null,
         ?array $others = null,
-    ): RequestInterface
-    {
+    ): RequestInterface {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
                 $pdsUri->withPath('xrpc/app.bsky.graph.getRelationships')
                     ->withQuery(http_build_query(array_filter([
-                    'actor' => $actor,
-                    'others' => $others,
-                ])))
+                        'actor' => $actor,
+                        'others' => $others,
+                    ])))
             );
 
         $headers = [
