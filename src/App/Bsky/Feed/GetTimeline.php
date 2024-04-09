@@ -8,6 +8,9 @@ use Psr\Http\Message\RequestFactoryInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
+use function array_filter;
+use function http_build_query;
+
 /**
  * Get a view of the requesting account's home timeline. This is expected to be some form of reverse-chronological feed.
  *
@@ -24,17 +27,16 @@ final readonly class GetTimeline
         ?string $algorithm = null,
         ?int $limit = null,
         ?string $cursor = null,
-    ): RequestInterface
-    {
+    ): RequestInterface {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
                 $pdsUri->withPath('xrpc/app.bsky.feed.getTimeline')
                     ->withQuery(http_build_query(array_filter([
-                    'algorithm' => $algorithm,
-                    'limit' => $limit,
-                    'cursor' => $cursor,
-                ])))
+                        'algorithm' => $algorithm,
+                        'limit' => $limit,
+                        'cursor' => $cursor,
+                    ])))
             );
 
         $headers = [
