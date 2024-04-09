@@ -8,6 +8,10 @@ use Psr\Http\Message\RequestFactoryInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriInterface;
+use RuntimeException;
+
+use function array_filter;
+use function json_encode;
 
 /**
  * Update the service-specific admin status of a subject (account, record, or blob).
@@ -25,13 +29,9 @@ final readonly class UpdateSubjectStatus
         UriInterface $pdsUri,
         string $subject = null,
         ?string $takedown = null,
-    ): RequestInterface
-    {
+    ): RequestInterface {
         $request = $this->requestFactory
-            ->createRequest(
-                'POST',
-                $pdsUri->withPath('xrpc/com.atproto.admin.updateSubjectStatus')
-            );
+            ->createRequest('POST', $pdsUri->withPath('xrpc/com.atproto.admin.updateSubjectStatus'));
 
         $headers = [
             'Accept' => 'application/json',
@@ -47,14 +47,10 @@ final readonly class UpdateSubjectStatus
             'takedown' => $takedown,
         ]));
 
-        if (false === $jsonBody){
-            throw new \RuntimeException('Failed to encode JSON');
+        if ($jsonBody === false) {
+            throw new RuntimeException('Failed to encode JSON');
         }
 
-        return $request->withBody(
-            $this->streamFactory->createStream(
-                $jsonBody
-            )
-        );
+        return $request->withBody($this->streamFactory->createStream($jsonBody));
     }
 }
