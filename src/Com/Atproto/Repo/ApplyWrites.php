@@ -8,6 +8,10 @@ use Psr\Http\Message\RequestFactoryInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriInterface;
+use RuntimeException;
+
+use function array_filter;
+use function json_encode;
 
 /**
  * Apply a batch transaction of repository creates, updates, and deletes. Requires auth, implemented by PDS.
@@ -27,13 +31,9 @@ final readonly class ApplyWrites
         array $writes = null,
         ?bool $validate = null,
         ?string $swapCommit = null,
-    ): RequestInterface
-    {
+    ): RequestInterface {
         $request = $this->requestFactory
-            ->createRequest(
-                'POST',
-                $pdsUri->withPath('xrpc/com.atproto.repo.applyWrites')
-            );
+            ->createRequest('POST', $pdsUri->withPath('xrpc/com.atproto.repo.applyWrites'));
 
         $headers = [
             'Accept' => 'application/json',
@@ -51,14 +51,10 @@ final readonly class ApplyWrites
             'swapCommit' => $swapCommit,
         ]));
 
-        if (false === $jsonBody){
-            throw new \RuntimeException('Failed to encode JSON');
+        if ($jsonBody === false) {
+            throw new RuntimeException('Failed to encode JSON');
         }
 
-        return $request->withBody(
-            $this->streamFactory->createStream(
-                $jsonBody
-            )
-        );
+        return $request->withBody($this->streamFactory->createStream($jsonBody));
     }
 }
