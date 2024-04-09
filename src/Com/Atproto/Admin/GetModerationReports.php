@@ -8,6 +8,9 @@ use Psr\Http\Message\RequestFactoryInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
+use function array_filter;
+use function http_build_query;
+
 /**
  * Get moderation reports related to a subject.
  *
@@ -30,23 +33,22 @@ final readonly class GetModerationReports
         ?int $limit = null,
         ?string $cursor = null,
         ?bool $reverse = null,
-    ): RequestInterface
-    {
+    ): RequestInterface {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
                 $pdsUri->withPath('xrpc/com.atproto.admin.getModerationReports')
                     ->withQuery(http_build_query(array_filter([
-                    'subject' => $subject,
-                    'ignoreSubjects' => $ignoreSubjects,
-                    'actionedBy' => $actionedBy,
-                    'reporters' => $reporters,
-                    'resolved' => $resolved,
-                    'actionType' => $actionType,
-                    'limit' => $limit,
-                    'cursor' => $cursor,
-                    'reverse' => $reverse,
-                ])))
+                        'subject' => $subject,
+                        'ignoreSubjects' => $ignoreSubjects,
+                        'actionedBy' => $actionedBy,
+                        'reporters' => $reporters,
+                        'resolved' => $resolved,
+                        'actionType' => $actionType,
+                        'limit' => $limit,
+                        'cursor' => $cursor,
+                        'reverse' => $reverse,
+                    ])))
             );
 
         $headers = [
