@@ -8,6 +8,9 @@ use Psr\Http\Message\RequestFactoryInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
+use function array_filter;
+use function http_build_query;
+
 /**
  * Get a hydrated feed from an actor's selected feed generator. Implemented by App View.
  *
@@ -24,17 +27,16 @@ final readonly class GetFeed
         string $feed = null,
         ?int $limit = null,
         ?string $cursor = null,
-    ): RequestInterface
-    {
+    ): RequestInterface {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
                 $pdsUri->withPath('xrpc/app.bsky.feed.getFeed')
                     ->withQuery(http_build_query(array_filter([
-                    'feed' => $feed,
-                    'limit' => $limit,
-                    'cursor' => $cursor,
-                ])))
+                        'feed' => $feed,
+                        'limit' => $limit,
+                        'cursor' => $cursor,
+                    ])))
             );
 
         $headers = [
