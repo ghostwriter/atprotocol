@@ -8,6 +8,9 @@ use Psr\Http\Message\RequestFactoryInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
+use function array_filter;
+use function http_build_query;
+
 /**
  * Find actors (profiles) matching search criteria. Does not require auth.
  *
@@ -24,17 +27,16 @@ final readonly class SearchActors
         ?string $q = null,
         ?int $limit = null,
         ?string $cursor = null,
-    ): RequestInterface
-    {
+    ): RequestInterface {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
                 $pdsUri->withPath('xrpc/app.bsky.actor.searchActors')
                     ->withQuery(http_build_query(array_filter([
-                    'q' => $q,
-                    'limit' => $limit,
-                    'cursor' => $cursor,
-                ])))
+                        'q' => $q,
+                        'limit' => $limit,
+                        'cursor' => $cursor,
+                    ])))
             );
 
         $headers = [
