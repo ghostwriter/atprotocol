@@ -8,6 +8,10 @@ use Psr\Http\Message\RequestFactoryInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriInterface;
+use RuntimeException;
+
+use function array_filter;
+use function json_encode;
 
 /**
  * Resolve moderation reports by an action.
@@ -26,13 +30,9 @@ final readonly class ResolveModerationReports
         int $actionId = null,
         array $reportIds = null,
         string $createdBy = null,
-    ): RequestInterface
-    {
+    ): RequestInterface {
         $request = $this->requestFactory
-            ->createRequest(
-                'POST',
-                $pdsUri->withPath('xrpc/com.atproto.admin.resolveModerationReports')
-            );
+            ->createRequest('POST', $pdsUri->withPath('xrpc/com.atproto.admin.resolveModerationReports'));
 
         $headers = [
             'Accept' => 'application/json',
@@ -49,14 +49,10 @@ final readonly class ResolveModerationReports
             'createdBy' => $createdBy,
         ]));
 
-        if (false === $jsonBody){
-            throw new \RuntimeException('Failed to encode JSON');
+        if ($jsonBody === false) {
+            throw new RuntimeException('Failed to encode JSON');
         }
 
-        return $request->withBody(
-            $this->streamFactory->createStream(
-                $jsonBody
-            )
-        );
+        return $request->withBody($this->streamFactory->createStream($jsonBody));
     }
 }
