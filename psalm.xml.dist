@@ -1,30 +1,46 @@
 <?xml version="1.0"?>
-<psalm
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<psalm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns="https://getpsalm.org/schema/config"
-    xsi:schemaLocation="https://getpsalm.org/schema/config vendor/vimeo/psalm/config.xsd"
-    allowInternalNamedArgumentCalls="false"
-    allowNamedArgumentCalls="false"
+    xsi:schemaLocation="https://getpsalm.org/schema/config https://getpsalm.org/schema/config"
+    autoloader="vendor/autoload.php"
     cacheDirectory=".cache/psalm"
+    checkForThrowsDocblock="true"
+    checkForThrowsInGlobalScope="true"
     disableSuppressAll="true"
+    ensureArrayIntOffsetsExist="true"
+    ensureArrayStringOffsetsExist="true"
+    ensureOverrideAttribute="true"
     errorBaseline="psalm-baseline.xml"
     errorLevel="1"
-    findUnusedCode="true"
     findUnusedBaselineEntry="true"
+    findUnusedCode="true"
     findUnusedPsalmSuppress="true"
     findUnusedVariablesAndParams="true"
-    ignoreInternalFunctionFalseReturn="false"
-    ignoreInternalFunctionNullReturn="false"
+    hideAllErrorsExceptPassedFiles="false"
+    limitMethodComplexity="true"
     memoizeMethodCallResults="true"
+    restrictReturnTypes="true"
+    sealAllMethods="true"
+    sealAllProperties="true"
     strictBinaryOperands="true"
+    useDocblockPropertyTypes="true"
+    usePhpDocMethodsWithoutMagicCall="true"
+    usePhpDocPropertiesWithoutMagicCall="true"
 >
     <projectFiles>
         <directory name="src"/>
         <directory name="tests"/>
         <ignoreFiles>
             <directory name=".github"/>
-            <directory name="docs"/>
             <directory name="vendor"/>
+        </ignoreFiles>
+        <ignoreFiles allowMissingFiles="true">
+            <directory name=".cache"/>
+            <directory name="bin"/>
+            <directory name="docs"/>
+            <directory name="fixtures"/>
+            <directory name="tests/Fixture"/>
+            <directory name="tests/fixtures"/>
         </ignoreFiles>
     </projectFiles>
     <plugins>
