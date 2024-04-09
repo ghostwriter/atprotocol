@@ -8,6 +8,9 @@ use Psr\Http\Message\RequestFactoryInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
+use function array_filter;
+use function http_build_query;
+
 /**
  * Get a list of suggested actors. Expected use is discovery of accounts to follow during new account onboarding.
  *
@@ -19,20 +22,16 @@ final readonly class GetSuggestions
         private RequestFactoryInterface $requestFactory,
     ) {}
 
-    public function __invoke(
-        UriInterface $pdsUri,
-        ?int $limit = null,
-        ?string $cursor = null,
-    ): RequestInterface
+    public function __invoke(UriInterface $pdsUri, ?int $limit = null, ?string $cursor = null): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
                 $pdsUri->withPath('xrpc/app.bsky.actor.getSuggestions')
                     ->withQuery(http_build_query(array_filter([
-                    'limit' => $limit,
-                    'cursor' => $cursor,
-                ])))
+                        'limit' => $limit,
+                        'cursor' => $cursor,
+                    ])))
             );
 
         $headers = [
