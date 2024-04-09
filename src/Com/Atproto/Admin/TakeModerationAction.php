@@ -8,6 +8,10 @@ use Psr\Http\Message\RequestFactoryInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriInterface;
+use RuntimeException;
+
+use function array_filter;
+use function json_encode;
 
 /**
  * Take a moderation action on an actor.
@@ -31,13 +35,9 @@ final readonly class TakeModerationAction
         ?array $createLabelVals = null,
         ?array $negateLabelVals = null,
         ?int $durationInHours = null,
-    ): RequestInterface
-    {
+    ): RequestInterface {
         $request = $this->requestFactory
-            ->createRequest(
-                'POST',
-                $pdsUri->withPath('xrpc/com.atproto.admin.takeModerationAction')
-            );
+            ->createRequest('POST', $pdsUri->withPath('xrpc/com.atproto.admin.takeModerationAction'));
 
         $headers = [
             'Accept' => 'application/json',
@@ -59,14 +59,10 @@ final readonly class TakeModerationAction
             'createdBy' => $createdBy,
         ]));
 
-        if (false === $jsonBody){
-            throw new \RuntimeException('Failed to encode JSON');
+        if ($jsonBody === false) {
+            throw new RuntimeException('Failed to encode JSON');
         }
 
-        return $request->withBody(
-            $this->streamFactory->createStream(
-                $jsonBody
-            )
-        );
+        return $request->withBody($this->streamFactory->createStream($jsonBody));
     }
 }
