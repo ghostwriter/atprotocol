@@ -8,6 +8,9 @@ use Psr\Http\Message\RequestFactoryInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
+use function array_filter;
+use function http_build_query;
+
 /**
  * View moderation statuses of subjects (record or repo).
  *
@@ -39,32 +42,31 @@ final readonly class QueryModerationStatuses
         ?array $tags = null,
         ?array $excludeTags = null,
         ?string $cursor = null,
-    ): RequestInterface
-    {
+    ): RequestInterface {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
                 $pdsUri->withPath('xrpc/com.atproto.admin.queryModerationStatuses')
                     ->withQuery(http_build_query(array_filter([
-                    'subject' => $subject,
-                    'comment' => $comment,
-                    'reportedAfter' => $reportedAfter,
-                    'reportedBefore' => $reportedBefore,
-                    'reviewedAfter' => $reviewedAfter,
-                    'reviewedBefore' => $reviewedBefore,
-                    'includeMuted' => $includeMuted,
-                    'reviewState' => $reviewState,
-                    'ignoreSubjects' => $ignoreSubjects,
-                    'lastReviewedBy' => $lastReviewedBy,
-                    'sortField' => $sortField,
-                    'sortDirection' => $sortDirection,
-                    'takendown' => $takendown,
-                    'appealed' => $appealed,
-                    'limit' => $limit,
-                    'tags' => $tags,
-                    'excludeTags' => $excludeTags,
-                    'cursor' => $cursor,
-                ])))
+                        'subject' => $subject,
+                        'comment' => $comment,
+                        'reportedAfter' => $reportedAfter,
+                        'reportedBefore' => $reportedBefore,
+                        'reviewedAfter' => $reviewedAfter,
+                        'reviewedBefore' => $reviewedBefore,
+                        'includeMuted' => $includeMuted,
+                        'reviewState' => $reviewState,
+                        'ignoreSubjects' => $ignoreSubjects,
+                        'lastReviewedBy' => $lastReviewedBy,
+                        'sortField' => $sortField,
+                        'sortDirection' => $sortDirection,
+                        'takendown' => $takendown,
+                        'appealed' => $appealed,
+                        'limit' => $limit,
+                        'tags' => $tags,
+                        'excludeTags' => $excludeTags,
+                        'cursor' => $cursor,
+                    ])))
             );
 
         $headers = [
