@@ -8,6 +8,10 @@ use Psr\Http\Message\RequestFactoryInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriInterface;
+use RuntimeException;
+
+use function array_filter;
+use function json_encode;
 
 /**
  * Request an email with a code to confirm ownership of email.
@@ -21,15 +25,10 @@ final readonly class RequestEmailConfirmation
         private StreamFactoryInterface $streamFactory,
     ) {}
 
-    public function __invoke(
-        UriInterface $pdsUri,
-    ): RequestInterface
+    public function __invoke(UriInterface $pdsUri): RequestInterface
     {
         $request = $this->requestFactory
-            ->createRequest(
-                'POST',
-                $pdsUri->withPath('xrpc/com.atproto.server.requestEmailConfirmation')
-            );
+            ->createRequest('POST', $pdsUri->withPath('xrpc/com.atproto.server.requestEmailConfirmation'));
 
         $headers = [
             'Accept' => 'application/json',
@@ -40,18 +39,12 @@ final readonly class RequestEmailConfirmation
             $request = $request->withHeader($name, $value);
         }
 
-        $jsonBody = json_encode(array_filter([
-            
-        ]));
+        $jsonBody = json_encode(array_filter([]));
 
-        if (false === $jsonBody){
-            throw new \RuntimeException('Failed to encode JSON');
+        if ($jsonBody === false) {
+            throw new RuntimeException('Failed to encode JSON');
         }
 
-        return $request->withBody(
-            $this->streamFactory->createStream(
-                $jsonBody
-            )
-        );
+        return $request->withBody($this->streamFactory->createStream($jsonBody));
     }
 }
