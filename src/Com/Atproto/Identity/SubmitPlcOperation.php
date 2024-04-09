@@ -8,9 +8,13 @@ use Psr\Http\Message\RequestFactoryInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriInterface;
+use RuntimeException;
+
+use function array_filter;
+use function json_encode;
 
 /**
- * Validates a PLC operation to ensure that it doesn't violate a service's constraints or get the identity into a bad state, then submits it to the PLC registry
+ * Validates a PLC operation to ensure that it doesn't violate a service's constraints or get the identity into a bad state, then submits it to the PLC registry.
  *
  * @see \Ghostwriter\AtProtocolTests\Unit\Com\Atproto\Identity\SubmitPlcOperationTest
  */
@@ -21,16 +25,10 @@ final readonly class SubmitPlcOperation
         private StreamFactoryInterface $streamFactory,
     ) {}
 
-    public function __invoke(
-        UriInterface $pdsUri,
-        string $operation = null,
-    ): RequestInterface
+    public function __invoke(UriInterface $pdsUri, string $operation = null): RequestInterface
     {
         $request = $this->requestFactory
-            ->createRequest(
-                'POST',
-                $pdsUri->withPath('xrpc/com.atproto.identity.submitPlcOperation')
-            );
+            ->createRequest('POST', $pdsUri->withPath('xrpc/com.atproto.identity.submitPlcOperation'));
 
         $headers = [
             'Accept' => 'application/json',
@@ -45,14 +43,10 @@ final readonly class SubmitPlcOperation
             'operation' => $operation,
         ]));
 
-        if (false === $jsonBody){
-            throw new \RuntimeException('Failed to encode JSON');
+        if ($jsonBody === false) {
+            throw new RuntimeException('Failed to encode JSON');
         }
 
-        return $request->withBody(
-            $this->streamFactory->createStream(
-                $jsonBody
-            )
-        );
+        return $request->withBody($this->streamFactory->createStream($jsonBody));
     }
 }
