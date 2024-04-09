@@ -8,6 +8,9 @@ use Psr\Http\Message\RequestFactoryInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
+use function array_filter;
+use function http_build_query;
+
 /**
  * Get data blocks from a given repo, by CID. For example, intermediate MST nodes, or records. Does not require auth; implemented by PDS.
  *
@@ -19,20 +22,16 @@ final readonly class GetBlocks
         private RequestFactoryInterface $requestFactory,
     ) {}
 
-    public function __invoke(
-        UriInterface $pdsUri,
-        string $did = null,
-        array $cids = null,
-    ): RequestInterface
+    public function __invoke(UriInterface $pdsUri, string $did = null, array $cids = null): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
                 $pdsUri->withPath('xrpc/com.atproto.sync.getBlocks')
                     ->withQuery(http_build_query(array_filter([
-                    'did' => $did,
-                    'cids' => $cids,
-                ])))
+                        'did' => $did,
+                        'cids' => $cids,
+                    ])))
             );
 
         $headers = [
