@@ -1460,12 +1460,12 @@
       <code><![CDATA[withPath]]></code>
       <code><![CDATA[withQuery]]></code>
     </MissingThrowsDocblock>
-    <MixedArgument>
-      <code><![CDATA[InstalledVersions::getPrettyVersion('ghostwriter/atprotocol')]]></code>
-    </MixedArgument>
     <MixedArgumentTypeCoercion>
       <code><![CDATA[$value]]></code>
     </MixedArgumentTypeCoercion>
+    <PossiblyNullArgument>
+      <code><![CDATA[InstalledVersions::getPrettyVersion('ghostwriter/atprotocol')]]></code>
+    </PossiblyNullArgument>
     <PossiblyUnusedMethod>
       <code><![CDATA[delete]]></code>
       <code><![CDATA[get]]></code>
