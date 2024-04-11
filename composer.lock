@@ -193,24 +193,24 @@
         },
         {
             "name": "ghostwriter/container",
-            "version": "3.0.2",
+            "version": "3.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ghostwriter/container.git",
-                "reference": "f0aaf48118aec90dd5bae69a55c17bbb17ddae06"
+                "reference": "0e64f73571acef7ff2ad0678c52e148036407144"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ghostwriter/container/zipball/f0aaf48118aec90dd5bae69a55c17bbb17ddae06",
-                "reference": "f0aaf48118aec90dd5bae69a55c17bbb17ddae06",
+                "url": "https://api.github.com/repos/ghostwriter/container/zipball/0e64f73571acef7ff2ad0678c52e148036407144",
+                "reference": "0e64f73571acef7ff2ad0678c52e148036407144",
                 "shasum": ""
             },
             "require": {
-                "php": "^8.3"
+                "php": ">=8.3"
             },
             "require-dev": {
                 "ghostwriter/coding-standard": "dev-main",
-                "ghostwriter/psalm-plugin": "^0 || ^0.3 || ^1.0"
+                "ghostwriter/psalm-plugin": "^0.2 || ^1.0"
             },
             "type": "library",
             "autoload": {
@@ -238,7 +238,7 @@
             ],
             "support": {
                 "issues": "https://github.com/ghostwriter/container/issues",
-                "source": "https://github.com/ghostwriter/container/tree/3.0.2"
+                "source": "https://github.com/ghostwriter/container/tree/3.0.3"
             },
             "funding": [
                 {
@@ -246,7 +246,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-02-19T03:38:42+00:00"
+            "time": "2024-04-10T15:11:03+00:00"
         },
         {
             "name": "ghostwriter/event-dispatcher",
