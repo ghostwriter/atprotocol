@@ -38,7 +38,7 @@
         "php": ">=8.3",
         "ghostwriter/collection": "^2.0.0",
         "ghostwriter/config": "^0.4.1",
-        "ghostwriter/container": "^3.0.2",
+        "ghostwriter/container": "^3.0.3",
         "ghostwriter/event-dispatcher": "^4.0.0",
         "ghostwriter/json": "^3.0.0",
         "ghostwriter/option": "^1.5.1",
@@ -50,7 +50,7 @@
     },
     "require-dev": {
         "ghostwriter/coding-standard": "dev-main",
-        "ghostwriter/psalm-plugin": "^0.2.0"
+        "ghostwriter/psalm-plugin": "^0.2 || ^1.0"
     },
     "minimum-stability": "stable",
     "prefer-stable": true,
@@ -61,12 +61,12 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Ghostwriter\\AtProtocolTests\\": "tests"
+            "Ghostwriter\\AtProtocolTests\\": "tests",
+            "Tests\\": "tests"
         }
     },
     "config": {
         "allow-plugins": {
-            "ghostwriter/coding-\n  standard": true,
             "ghostwriter/coding-standard": true,
             "php-http/discovery": true
         },
@@ -101,7 +101,7 @@
         "infection": "vendor/ghostwriter/coding-standard/tools/infection --ansi --verbose --threads=max --min-msi=0 --min-covered-msi=0",
         "phpunit": "vendor/ghostwriter/coding-standard/tools/phpunit --do-not-cache-result --colors=always",
         "phpunit:migrate": "@phpunit --migrate-configuration",
-        "psalm": "vendor/ghostwriter/coding-standard/tools/psalm --no-cache",
+        "psalm": "vendor/ghostwriter/coding-standard/tools/psalm --no-cache --show-info=true",
         "psalm:alter": "@psalm --no-diff --shepherd --stats --alter --allow-backwards-incompatible-changes=false",
         "psalm:baseline": "@psalm --no-diff --set-baseline=psalm-baseline.xml",
         "psalm:dry-run": "@psalm:alter --issues=all --dry-run",
