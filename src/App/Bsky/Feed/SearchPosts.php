@@ -25,6 +25,15 @@ final readonly class SearchPosts
     public function __invoke(
         UriInterface $pdsUri,
         string $q = null,
+        ?string $sort = null,
+        ?string $since = null,
+        ?string $until = null,
+        ?string $mentions = null,
+        ?string $author = null,
+        ?string $lang = null,
+        ?string $domain = null,
+        ?string $url = null,
+        ?array $tag = null,
         ?int $limit = null,
         ?string $cursor = null,
     ): RequestInterface {
@@ -34,6 +43,15 @@ final readonly class SearchPosts
                 $pdsUri->withPath('xrpc/app.bsky.feed.searchPosts')
                     ->withQuery(http_build_query(array_filter([
                         'q' => $q,
+                        'sort' => $sort,
+                        'since' => $since,
+                        'until' => $until,
+                        'mentions' => $mentions,
+                        'author' => $author,
+                        'lang' => $lang,
+                        'domain' => $domain,
+                        'url' => $url,
+                        'tag' => $tag,
                         'limit' => $limit,
                         'cursor' => $cursor,
                     ])))
