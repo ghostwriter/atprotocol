@@ -25,6 +25,7 @@ final readonly class SearchActorsSkeleton
     public function __invoke(
         UriInterface $pdsUri,
         string $q = null,
+        ?string $viewer = null,
         ?bool $typeahead = null,
         ?int $limit = null,
         ?string $cursor = null,
@@ -35,6 +36,7 @@ final readonly class SearchActorsSkeleton
                 $pdsUri->withPath('xrpc/app.bsky.unspecced.searchActorsSkeleton')
                     ->withQuery(http_build_query(array_filter([
                         'q' => $q,
+                        'viewer' => $viewer,
                         'typeahead' => $typeahead,
                         'limit' => $limit,
                         'cursor' => $cursor,
