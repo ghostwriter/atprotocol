@@ -46,7 +46,7 @@
         "laminas/laminas-diactoros": "^3.3.1",
         "php-http/curl-client": "^2.3.2",
         "psr/http-client": "^1.0.3",
-        "psr/http-factory": "^1.0.2"
+        "psr/http-factory": "^1.1.0"
     },
     "require-dev": {
         "ghostwriter/coding-standard": "dev-main",
@@ -80,36 +80,39 @@
         "use-parent-dir": false
     },
     "scripts": {
+        "bin_ecs": "ecs check --clear-cache --no-interaction",
+        "bin_infection": "infection --ansi --verbose --threads=max --min-msi=0 --min-covered-msi=0",
+        "bin_phive": "phive",
+        "bin_phpunit": "phpunit --do-not-cache-result --colors=always",
+        "bin_psalm": "psalm --no-cache",
+        "bin_rector": "rector process --no-ansi --no-interaction --clear-cache",
         "cache:clear": "rm -rf ./.cache/*",
         "check": [
             "@composer validate",
             "@ecs",
             "@test"
         ],
-        "composer-normalize": "vendor/ghostwriter/coding-standard/tools/composer-normalize --no-cache --diff --no-check-lock --no-scripts --no-plugins",
-        "composer-require-checker": "vendor/ghostwriter/coding-standard/tools/composer-require-checker check",
-        "composer-unused": "vendor/ghostwriter/coding-standard/tools/composer-unused",
         "dev": [
             "@cache:clear",
-            "@composer-normalize",
-            "@psalm:baseline",
             "@check",
+            "@psalm:update",
             "@psalm:security",
             "@psalm:dry-run"
         ],
-        "ecs": "vendor/bin/ecs check --clear-cache --fix --no-interaction",
-        "infection": "vendor/ghostwriter/coding-standard/tools/infection --ansi --verbose --threads=max --min-msi=0 --min-covered-msi=0",
-        "phpunit": "vendor/ghostwriter/coding-standard/tools/phpunit --do-not-cache-result --colors=always",
-        "phpunit:migrate": "@phpunit --migrate-configuration",
-        "psalm": "vendor/ghostwriter/coding-standard/tools/psalm --no-cache --show-info=true",
-        "psalm:alter": "@psalm --no-diff --shepherd --stats --alter --allow-backwards-incompatible-changes=false",
+        "ecs": "@bin_ecs check --fix",
+        "git:submodule:update": "git submodule update --depth=1 --init --recursive --recommend-shallow --remote",
+        "infection": "@bin_infection",
+        "phpunit": "@bin_phpunit",
+        "phpunit:migrate": "@bin_phpunit --migrate-configuration",
+        "psalm": "@bin_psalm --show-info=true",
+        "psalm:alter": "@bin_psalm --alter --allow-backwards-incompatible-changes=false --safe-types",
         "psalm:baseline": "@psalm --no-diff --set-baseline=psalm-baseline.xml",
         "psalm:dry-run": "@psalm:alter --issues=all --dry-run",
-        "psalm:fix": "@psalm:alter --issues=MissingReturnType",
+        "psalm:fix": "@psalm:alter --issues=UnnecessaryVarAnnotation,MissingPureAnnotation,MissingImmutableAnnotation",
         "psalm:security": "@psalm --no-diff --taint-analysis",
         "psalm:shepherd": "@psalm --no-diff --shepherd --stats",
-        "rector": "vendor/bin/rector process --no-ansi --no-interaction --clear-cache",
-        "submodule": "git submodule update --depth=1 --init --recursive --recommend-shallow --remote",
+        "psalm:update": "@psalm --no-diff --update-baseline=psalm-baseline.xml",
+        "rector": "@bin_rector",
         "test": [
             "@phpunit",
             "@psalm:shepherd",
