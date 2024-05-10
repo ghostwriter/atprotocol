@@ -29,6 +29,7 @@ final readonly class CreateSession
         UriInterface $pdsUri,
         string $identifier = null,
         string $password = null,
+        ?string $authFactorToken = null,
     ): RequestInterface {
         $request = $this->requestFactory
             ->createRequest('POST', $pdsUri->withPath('xrpc/com.atproto.server.createSession'));
@@ -45,6 +46,7 @@ final readonly class CreateSession
         $jsonBody = json_encode(array_filter([
             'identifier' => $identifier,
             'password' => $password,
+            'authFactorToken' => $authFactorToken,
         ]));
 
         if ($jsonBody === false) {
