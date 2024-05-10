@@ -28,6 +28,7 @@ final readonly class UpdateEmail
     public function __invoke(
         UriInterface $pdsUri,
         string $email = null,
+        ?bool $emailAuthFactor = null,
         ?string $token = null,
     ): RequestInterface {
         $request = $this->requestFactory
@@ -44,6 +45,7 @@ final readonly class UpdateEmail
 
         $jsonBody = json_encode(array_filter([
             'email' => $email,
+            'emailAuthFactor' => $emailAuthFactor,
             'token' => $token,
         ]));
 
