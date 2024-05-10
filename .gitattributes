@@ -1,19 +1,22 @@
 # Auto detect text files and perform LF normalization
 * text=auto
-*.md text diff=markdown
-*.sh text eol=lf
-*.png binary
 *.jpg binary
-/.github/ export-ignore
-/fixtures/ export-ignore
-/tests/ export-ignore
+*.md text diff=markdown
+*.php diff=php
+*.png binary
+*.sh text eol=lf
+*.txt text
 /.editorconfig export-ignore
 /.gitattributes export-ignore
+/.github export-ignore
 /.gitignore export-ignore
+/docs export-ignore
 /ecs.php export-ignore
 /infection.json5.dist export-ignore
-/phpbench.json.dist export-ignore
+/phive.xml export-ignore
 /phpunit.xml.dist export-ignore
 /psalm-baseline.xml export-ignore
 /psalm.xml.dist export-ignore
 /rector.php export-ignore
+/tests export-ignore
+/tools export-ignore
