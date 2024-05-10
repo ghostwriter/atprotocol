@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<files psalm-version="5.23.1@8471a896ccea3526b26d082f4461eeea467f10a4">
+<files psalm-version="5.24.0@462c80e31c34e58cc4f750c656be3927e80e550e">
   <file src="src/App/Bsky/Actor/GetPreferences.php">
     <MissingThrowsDocblock>
       <code><![CDATA[withPath]]></code>
@@ -208,6 +208,16 @@
       <code><![CDATA[SearchPosts]]></code>
     </UnusedClass>
   </file>
+  <file src="src/App/Bsky/Feed/SendInteractions.php">
+    <MissingThrowsDocblock>
+      <code><![CDATA[throw new RuntimeException('Failed to encode JSON');]]></code>
+      <code><![CDATA[withBody]]></code>
+      <code><![CDATA[withPath]]></code>
+    </MissingThrowsDocblock>
+    <UnusedClass>
+      <code><![CDATA[SendInteractions]]></code>
+    </UnusedClass>
+  </file>
   <file src="src/App/Bsky/Graph/GetBlocks.php">
     <MissingThrowsDocblock>
       <code><![CDATA[withPath]]></code>
@@ -403,6 +413,15 @@
       <code><![CDATA[GetPopularFeedGenerators]]></code>
     </UnusedClass>
   </file>
+  <file src="src/App/Bsky/Unspecced/GetSuggestionsSkeleton.php">
+    <MissingThrowsDocblock>
+      <code><![CDATA[withPath]]></code>
+      <code><![CDATA[withQuery]]></code>
+    </MissingThrowsDocblock>
+    <UnusedClass>
+      <code><![CDATA[GetSuggestionsSkeleton]]></code>
+    </UnusedClass>
+  </file>
   <file src="src/App/Bsky/Unspecced/GetTaggedSuggestions.php">
     <MissingThrowsDocblock>
       <code><![CDATA[withPath]]></code>
@@ -440,18 +459,41 @@
     </UnusedClass>
   </file>
   <file src="src/AtProtocol.php">
+    <InvalidArgument>
+      <code><![CDATA[json_encode([
+                'content' => $content,
+                'attachments' => $attachments,
+            ]) ?: '']]></code>
+    </InvalidArgument>
     <MissingThrowsDocblock>
+      <code><![CDATA[createUri]]></code>
       <code><![CDATA[sendRequest]]></code>
     </MissingThrowsDocblock>
     <MixedArgument>
+      <code><![CDATA[$this->personalDataServer->personalDataServer()]]></code>
       <code><![CDATA[($this->createSession)($username, $password)]]></code>
     </MixedArgument>
     <MixedFunctionCall>
       <code><![CDATA[($this->createSession)($username, $password)]]></code>
     </MixedFunctionCall>
     <PossiblyUnusedMethod>
+      <code><![CDATA[atProtocol]]></code>
       <code><![CDATA[createSession]]></code>
+      <code><![CDATA[new]]></code>
+      <code><![CDATA[personalDataServer]]></code>
+      <code><![CDATA[resumeSession]]></code>
+      <code><![CDATA[toString]]></code>
+      <code><![CDATA[updateStatus]]></code>
     </PossiblyUnusedMethod>
+    <RiskyTruthyFalsyComparison>
+      <code><![CDATA[json_encode([
+                'content' => $content,
+                'attachments' => $attachments,
+            ])]]></code>
+    </RiskyTruthyFalsyComparison>
+    <UndefinedMethod>
+      <code><![CDATA[personalDataServer]]></code>
+    </UndefinedMethod>
     <UndefinedThisPropertyFetch>
       <code><![CDATA[$this->createSession]]></code>
     </UndefinedThisPropertyFetch>
@@ -1008,9 +1050,9 @@
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
-    <PossiblyUnusedMethod>
-      <code><![CDATA[__construct]]></code>
-    </PossiblyUnusedMethod>
+    <UnusedClass>
+      <code><![CDATA[CreateSession]]></code>
+    </UnusedClass>
   </file>
   <file src="src/Com/Atproto/Server/DeactivateAccount.php">
     <MissingThrowsDocblock>
@@ -1339,6 +1381,15 @@
       <code><![CDATA[TransferAccount]]></code>
     </UnusedClass>
   </file>
+  <file src="src/Middleware/AuthenticateMiddleware.php">
+    <MissingThrowsDocblock>
+      <code><![CDATA[withHeader]]></code>
+      <code><![CDATA[withHeader]]></code>
+    </MissingThrowsDocblock>
+    <UnusedClass>
+      <code><![CDATA[AuthenticateMiddleware]]></code>
+    </UnusedClass>
+  </file>
   <file src="src/Tools/Ozone/Communication/CreateTemplate.php">
     <MissingThrowsDocblock>
       <code><![CDATA[throw new RuntimeException('Failed to encode JSON');]]></code>
@@ -1470,8 +1521,6 @@
       <code><![CDATA[delete]]></code>
       <code><![CDATA[get]]></code>
       <code><![CDATA[patch]]></code>
-      <code><![CDATA[path]]></code>
-      <code><![CDATA[post]]></code>
       <code><![CDATA[put]]></code>
     </PossiblyUnusedMethod>
   </file>
@@ -1483,9 +1532,6 @@
     <MissingThrowsDocblock>
       <code><![CDATA[throw new InvalidArgumentException('Invalid DID: ' . $this->did);]]></code>
     </MissingThrowsDocblock>
-    <PossiblyUnusedMethod>
-      <code><![CDATA[jsonSerialize]]></code>
-    </PossiblyUnusedMethod>
   </file>
   <file src="src/Value/Email.php">
     <MissingOverrideAttribute>
@@ -1506,6 +1552,17 @@
       <code><![CDATA[throw new InvalidArgumentException('Invalid handle: ' . $this->handle);]]></code>
     </MissingThrowsDocblock>
   </file>
+  <file src="src/Value/InviteCode.php">
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function __toString(): string]]></code>
+    </MissingOverrideAttribute>
+    <MissingThrowsDocblock>
+      <code><![CDATA[throw new InvalidArgumentException('Invalid InviteCode: ' . $this->invitecode);]]></code>
+    </MissingThrowsDocblock>
+    <UnusedClass>
+      <code><![CDATA[InviteCode]]></code>
+    </UnusedClass>
+  </file>
   <file src="src/Value/Password.php">
     <MissingOverrideAttribute>
       <code><![CDATA[public function __toString(): string]]></code>
@@ -1515,6 +1572,23 @@
     </MissingThrowsDocblock>
     <UnusedClass>
       <code><![CDATA[Password]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/Value/Repository.php">
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function __toString(): string]]></code>
+    </MissingOverrideAttribute>
+    <MissingThrowsDocblock>
+      <code><![CDATA[throw new InvalidArgumentException('Invalid Repository: ' . $this->repository);]]></code>
+    </MissingThrowsDocblock>
+    <MixedArgument>
+      <code><![CDATA[$this->did]]></code>
+    </MixedArgument>
+    <UndefinedThisPropertyFetch>
+      <code><![CDATA[$this->did]]></code>
+    </UndefinedThisPropertyFetch>
+    <UnusedClass>
+      <code><![CDATA[Repository]]></code>
     </UnusedClass>
   </file>
 </files>
