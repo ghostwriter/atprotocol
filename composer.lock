@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f1bbd3af7ac8602c81c33b27c67889a9",
+    "content-hash": "d3bcfdf8f238f18981abb93e4330f44e",
     "packages": [
         {
             "name": "clue/stream-filter",
@@ -250,25 +250,24 @@
         },
         {
             "name": "ghostwriter/event-dispatcher",
-            "version": "4.0.0",
+            "version": "5.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ghostwriter/event-dispatcher.git",
-                "reference": "251ae66d2129f8a60781473a484229919eea9d95"
+                "reference": "873fd9015a34a50c87c300137a40996715d232d5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ghostwriter/event-dispatcher/zipball/251ae66d2129f8a60781473a484229919eea9d95",
-                "reference": "251ae66d2129f8a60781473a484229919eea9d95",
+                "url": "https://api.github.com/repos/ghostwriter/event-dispatcher/zipball/873fd9015a34a50c87c300137a40996715d232d5",
+                "reference": "873fd9015a34a50c87c300137a40996715d232d5",
                 "shasum": ""
             },
             "require": {
-                "ghostwriter/container": "^3.0.1",
-                "php": "^8.3"
+                "ghostwriter/container": "^3.0.3",
+                "php": ">=8.3"
             },
             "require-dev": {
-                "ghostwriter/coding-standard": "dev-main",
-                "ghostwriter/psalm-plugin": "^0 || ^0.2 || ^1.0"
+                "ghostwriter/coding-standard": "dev-main"
             },
             "type": "library",
             "autoload": {
@@ -306,7 +305,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-02-06T20:57:58+00:00"
+            "time": "2024-05-22T00:56:19+00:00"
         },
         {
             "name": "ghostwriter/json",
