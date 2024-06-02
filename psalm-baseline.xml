@@ -498,6 +498,168 @@
       <code><![CDATA[$this->createSession]]></code>
     </UndefinedThisPropertyFetch>
   </file>
+  <file src="src/Chat/Bsky/Actor/DeleteAccount.php">
+    <MissingThrowsDocblock>
+      <code><![CDATA[throw new RuntimeException('Failed to encode JSON');]]></code>
+      <code><![CDATA[withBody]]></code>
+      <code><![CDATA[withPath]]></code>
+    </MissingThrowsDocblock>
+    <UnusedClass>
+      <code><![CDATA[DeleteAccount]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/Chat/Bsky/Actor/ExportAccountData.php">
+    <MissingThrowsDocblock>
+      <code><![CDATA[withPath]]></code>
+      <code><![CDATA[withQuery]]></code>
+    </MissingThrowsDocblock>
+    <UnusedClass>
+      <code><![CDATA[ExportAccountData]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/Chat/Bsky/Convo/DeleteMessageForSelf.php">
+    <MissingThrowsDocblock>
+      <code><![CDATA[throw new RuntimeException('Failed to encode JSON');]]></code>
+      <code><![CDATA[withBody]]></code>
+      <code><![CDATA[withPath]]></code>
+    </MissingThrowsDocblock>
+    <UnusedClass>
+      <code><![CDATA[DeleteMessageForSelf]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/Chat/Bsky/Convo/GetConvo.php">
+    <MissingThrowsDocblock>
+      <code><![CDATA[withPath]]></code>
+      <code><![CDATA[withQuery]]></code>
+    </MissingThrowsDocblock>
+    <UnusedClass>
+      <code><![CDATA[GetConvo]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/Chat/Bsky/Convo/GetConvoForMembers.php">
+    <MissingThrowsDocblock>
+      <code><![CDATA[withPath]]></code>
+      <code><![CDATA[withQuery]]></code>
+    </MissingThrowsDocblock>
+    <UnusedClass>
+      <code><![CDATA[GetConvoForMembers]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/Chat/Bsky/Convo/GetLog.php">
+    <MissingThrowsDocblock>
+      <code><![CDATA[withPath]]></code>
+      <code><![CDATA[withQuery]]></code>
+    </MissingThrowsDocblock>
+    <UnusedClass>
+      <code><![CDATA[GetLog]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/Chat/Bsky/Convo/GetMessages.php">
+    <MissingThrowsDocblock>
+      <code><![CDATA[withPath]]></code>
+      <code><![CDATA[withQuery]]></code>
+    </MissingThrowsDocblock>
+    <UnusedClass>
+      <code><![CDATA[GetMessages]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/Chat/Bsky/Convo/LeaveConvo.php">
+    <MissingThrowsDocblock>
+      <code><![CDATA[throw new RuntimeException('Failed to encode JSON');]]></code>
+      <code><![CDATA[withBody]]></code>
+      <code><![CDATA[withPath]]></code>
+    </MissingThrowsDocblock>
+    <UnusedClass>
+      <code><![CDATA[LeaveConvo]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/Chat/Bsky/Convo/ListConvos.php">
+    <MissingThrowsDocblock>
+      <code><![CDATA[withPath]]></code>
+      <code><![CDATA[withQuery]]></code>
+    </MissingThrowsDocblock>
+    <UnusedClass>
+      <code><![CDATA[ListConvos]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/Chat/Bsky/Convo/MuteConvo.php">
+    <MissingThrowsDocblock>
+      <code><![CDATA[throw new RuntimeException('Failed to encode JSON');]]></code>
+      <code><![CDATA[withBody]]></code>
+      <code><![CDATA[withPath]]></code>
+    </MissingThrowsDocblock>
+    <UnusedClass>
+      <code><![CDATA[MuteConvo]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/Chat/Bsky/Convo/SendMessage.php">
+    <MissingThrowsDocblock>
+      <code><![CDATA[throw new RuntimeException('Failed to encode JSON');]]></code>
+      <code><![CDATA[withBody]]></code>
+      <code><![CDATA[withPath]]></code>
+    </MissingThrowsDocblock>
+    <UnusedClass>
+      <code><![CDATA[SendMessage]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/Chat/Bsky/Convo/SendMessageBatch.php">
+    <MissingThrowsDocblock>
+      <code><![CDATA[throw new RuntimeException('Failed to encode JSON');]]></code>
+      <code><![CDATA[withBody]]></code>
+      <code><![CDATA[withPath]]></code>
+    </MissingThrowsDocblock>
+    <UnusedClass>
+      <code><![CDATA[SendMessageBatch]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/Chat/Bsky/Convo/UnmuteConvo.php">
+    <MissingThrowsDocblock>
+      <code><![CDATA[throw new RuntimeException('Failed to encode JSON');]]></code>
+      <code><![CDATA[withBody]]></code>
+      <code><![CDATA[withPath]]></code>
+    </MissingThrowsDocblock>
+    <UnusedClass>
+      <code><![CDATA[UnmuteConvo]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/Chat/Bsky/Convo/UpdateRead.php">
+    <MissingThrowsDocblock>
+      <code><![CDATA[throw new RuntimeException('Failed to encode JSON');]]></code>
+      <code><![CDATA[withBody]]></code>
+      <code><![CDATA[withPath]]></code>
+    </MissingThrowsDocblock>
+    <UnusedClass>
+      <code><![CDATA[UpdateRead]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/Chat/Bsky/Moderation/GetActorMetadata.php">
+    <MissingThrowsDocblock>
+      <code><![CDATA[withPath]]></code>
+      <code><![CDATA[withQuery]]></code>
+    </MissingThrowsDocblock>
+    <UnusedClass>
+      <code><![CDATA[GetActorMetadata]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/Chat/Bsky/Moderation/GetMessageContext.php">
+    <MissingThrowsDocblock>
+      <code><![CDATA[withPath]]></code>
+      <code><![CDATA[withQuery]]></code>
+    </MissingThrowsDocblock>
+    <UnusedClass>
+      <code><![CDATA[GetMessageContext]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/Chat/Bsky/Moderation/UpdateActorAccess.php">
+    <MissingThrowsDocblock>
+      <code><![CDATA[throw new RuntimeException('Failed to encode JSON');]]></code>
+      <code><![CDATA[withBody]]></code>
+      <code><![CDATA[withPath]]></code>
+    </MissingThrowsDocblock>
+    <UnusedClass>
+      <code><![CDATA[UpdateActorAccess]]></code>
+    </UnusedClass>
+  </file>
   <file src="src/Com/Atproto/Admin/CreateCommunicationTemplate.php">
     <MissingThrowsDocblock>
       <code><![CDATA[throw new RuntimeException('Failed to encode JSON');]]></code>
@@ -1283,6 +1445,15 @@
     </MissingThrowsDocblock>
     <UnusedClass>
       <code><![CDATA[GetRepo]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/Com/Atproto/Sync/GetRepoStatus.php">
+    <MissingThrowsDocblock>
+      <code><![CDATA[withPath]]></code>
+      <code><![CDATA[withQuery]]></code>
+    </MissingThrowsDocblock>
+    <UnusedClass>
+      <code><![CDATA[GetRepoStatus]]></code>
     </UnusedClass>
   </file>
   <file src="src/Com/Atproto/Sync/ListBlobs.php">
