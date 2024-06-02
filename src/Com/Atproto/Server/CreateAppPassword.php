@@ -25,8 +25,11 @@ final readonly class CreateAppPassword
         private StreamFactoryInterface $streamFactory,
     ) {}
 
-    public function __invoke(UriInterface $pdsUri, string $name = null): RequestInterface
-    {
+    public function __invoke(
+        UriInterface $pdsUri,
+        string $name = null,
+        ?bool $privileged = null,
+    ): RequestInterface {
         $request = $this->requestFactory
             ->createRequest('POST', $pdsUri->withPath('xrpc/com.atproto.server.createAppPassword'));
 
@@ -41,6 +44,7 @@ final readonly class CreateAppPassword
 
         $jsonBody = json_encode(array_filter([
             'name' => $name,
+            'privileged' => $privileged,
         ]));
 
         if ($jsonBody === false) {
