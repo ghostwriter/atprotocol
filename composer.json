@@ -99,7 +99,7 @@
             "@psalm:security",
             "@psalm:dry-run"
         ],
-        "ecs": "@bin_ecs check --fix",
+        "ecs": "@bin_ecs --fix",
         "git:submodule:update": "git submodule update --depth=1 --init --recursive --recommend-shallow --remote",
         "infection": "@bin_infection",
         "phpunit": "@bin_phpunit",
