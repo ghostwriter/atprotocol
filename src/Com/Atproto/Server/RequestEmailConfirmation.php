@@ -16,14 +16,15 @@ use function json_encode;
 /**
  * Request an email with a code to confirm ownership of email.
  *
- * @see \Ghostwriter\AtProtocolTests\Unit\Com\Atproto\Server\RequestEmailConfirmationTest
+ * @see \Tests\Unit\Com\Atproto\Server\RequestEmailConfirmationTest
  */
 final readonly class RequestEmailConfirmation
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
         private StreamFactoryInterface $streamFactory,
-    ) {}
+    ) {
+    }
 
     public function __invoke(UriInterface $pdsUri): RequestInterface
     {
