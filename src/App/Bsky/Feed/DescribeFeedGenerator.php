@@ -14,13 +14,14 @@ use function http_build_query;
 /**
  * Get information about a feed generator, including policies and offered feed URIs. Does not require auth; implemented by Feed Generator services (not App View).
  *
- * @see \Ghostwriter\AtProtocolTests\Unit\App\Bsky\Feed\DescribeFeedGeneratorTest
+ * @see \Tests\Unit\App\Bsky\Feed\DescribeFeedGeneratorTest
  */
 final readonly class DescribeFeedGenerator
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
-    ) {}
+    ) {
+    }
 
     public function __invoke(UriInterface $pdsUri): RequestInterface
     {
