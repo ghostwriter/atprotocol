@@ -14,13 +14,14 @@ use function http_build_query;
 /**
  * Get the hosting status for a repository, on this server. Expected to be implemented by PDS and Relay.
  *
- * @see \Ghostwriter\AtProtocolTests\Unit\Com\Atproto\Sync\GetRepoStatusTest
+ * @see \Tests\Unit\Com\Atproto\Sync\GetRepoStatusTest
  */
 final readonly class GetRepoStatus
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
-    ) {}
+    ) {
+    }
 
     public function __invoke(UriInterface $pdsUri, string $did = null): RequestInterface
     {
