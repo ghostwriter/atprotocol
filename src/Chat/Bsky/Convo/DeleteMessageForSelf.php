@@ -16,14 +16,15 @@ use function json_encode;
 /**
  * DeleteMessageForSelf.
  *
- * @see \Ghostwriter\AtProtocolTests\Unit\Chat\Bsky\Convo\DeleteMessageForSelfTest
+ * @see \Tests\Unit\Chat\Bsky\Convo\DeleteMessageForSelfTest
  */
 final readonly class DeleteMessageForSelf
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
         private StreamFactoryInterface $streamFactory,
-    ) {}
+    ) {
+    }
 
     public function __invoke(
         UriInterface $pdsUri,
