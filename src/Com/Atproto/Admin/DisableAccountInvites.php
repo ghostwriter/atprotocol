@@ -16,14 +16,15 @@ use function json_encode;
 /**
  * Disable an account from receiving new invite codes, but does not invalidate existing codes.
  *
- * @see \Ghostwriter\AtProtocolTests\Unit\Com\Atproto\Admin\DisableAccountInvitesTest
+ * @see \Tests\Unit\Com\Atproto\Admin\DisableAccountInvitesTest
  */
 final readonly class DisableAccountInvites
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
         private StreamFactoryInterface $streamFactory,
-    ) {}
+    ) {
+    }
 
     public function __invoke(
         UriInterface $pdsUri,
