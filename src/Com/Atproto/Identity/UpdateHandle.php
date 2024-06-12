@@ -16,14 +16,15 @@ use function json_encode;
 /**
  * Updates the current account's handle. Verifies handle validity, and updates did:plc document if necessary. Implemented by PDS, and requires auth.
  *
- * @see \Ghostwriter\AtProtocolTests\Unit\Com\Atproto\Identity\UpdateHandleTest
+ * @see \Tests\Unit\Com\Atproto\Identity\UpdateHandleTest
  */
 final readonly class UpdateHandle
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
         private StreamFactoryInterface $streamFactory,
-    ) {}
+    ) {
+    }
 
     public function __invoke(UriInterface $pdsUri, string $handle = null): RequestInterface
     {
