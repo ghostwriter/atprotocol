@@ -14,13 +14,14 @@ use function http_build_query;
 /**
  * List moderation events related to a subject.
  *
- * @see \Ghostwriter\AtProtocolTests\Unit\Tools\Ozone\Moderation\QueryEventsTest
+ * @see \Tests\Unit\Tools\Ozone\Moderation\QueryEventsTest
  */
 final readonly class QueryEvents
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
-    ) {}
+    ) {
+    }
 
     public function __invoke(
         UriInterface $pdsUri,
