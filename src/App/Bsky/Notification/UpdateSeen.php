@@ -16,14 +16,15 @@ use function json_encode;
 /**
  * Notify server that the requesting account has seen notifications. Requires auth.
  *
- * @see \Ghostwriter\AtProtocolTests\Unit\App\Bsky\Notification\UpdateSeenTest
+ * @see \Tests\Unit\App\Bsky\Notification\UpdateSeenTest
  */
 final readonly class UpdateSeen
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
         private StreamFactoryInterface $streamFactory,
-    ) {}
+    ) {
+    }
 
     public function __invoke(UriInterface $pdsUri, string $seenAt = null): RequestInterface
     {
