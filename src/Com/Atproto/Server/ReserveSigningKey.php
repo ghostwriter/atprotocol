@@ -16,14 +16,15 @@ use function json_encode;
 /**
  * Reserve a repo signing key, for use with account creation. Necessary so that a DID PLC update operation can be constructed during an account migraiton. Public and does not require auth; implemented by PDS. NOTE: this endpoint may change when full account migration is implemented.
  *
- * @see \Ghostwriter\AtProtocolTests\Unit\Com\Atproto\Server\ReserveSigningKeyTest
+ * @see \Tests\Unit\Com\Atproto\Server\ReserveSigningKeyTest
  */
 final readonly class ReserveSigningKey
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
         private StreamFactoryInterface $streamFactory,
-    ) {}
+    ) {
+    }
 
     public function __invoke(UriInterface $pdsUri, ?string $did = null): RequestInterface
     {
