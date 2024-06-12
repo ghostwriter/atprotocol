@@ -14,13 +14,14 @@ use function http_build_query;
 /**
  * Get a list of suggested actors. Expected use is discovery of accounts to follow during new account onboarding.
  *
- * @see \Ghostwriter\AtProtocolTests\Unit\App\Bsky\Actor\GetSuggestionsTest
+ * @see \Tests\Unit\App\Bsky\Actor\GetSuggestionsTest
  */
 final readonly class GetSuggestions
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
-    ) {}
+    ) {
+    }
 
     public function __invoke(UriInterface $pdsUri, ?int $limit = null, ?string $cursor = null): RequestInterface
     {
