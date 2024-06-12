@@ -16,14 +16,15 @@ use function json_encode;
 /**
  * Refresh an authentication session. Requires auth using the 'refreshJwt' (not the 'accessJwt').
  *
- * @see \Ghostwriter\AtProtocolTests\Unit\Com\Atproto\Server\RefreshSessionTest
+ * @see \Tests\Unit\Com\Atproto\Server\RefreshSessionTest
  */
 final readonly class RefreshSession
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
         private StreamFactoryInterface $streamFactory,
-    ) {}
+    ) {
+    }
 
     public function __invoke(UriInterface $pdsUri): RequestInterface
     {
