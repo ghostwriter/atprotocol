@@ -14,13 +14,14 @@ use function http_build_query;
 /**
  * Count the number of unread notifications for the requesting account. Requires auth.
  *
- * @see \Ghostwriter\AtProtocolTests\Unit\App\Bsky\Notification\GetUnreadCountTest
+ * @see \Tests\Unit\App\Bsky\Notification\GetUnreadCountTest
  */
 final readonly class GetUnreadCount
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
-    ) {}
+    ) {
+    }
 
     public function __invoke(UriInterface $pdsUri, ?string $seenAt = null): RequestInterface
     {
