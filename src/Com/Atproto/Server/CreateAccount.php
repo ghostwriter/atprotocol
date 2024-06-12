@@ -16,14 +16,15 @@ use function json_encode;
 /**
  * Create an account. Implemented by PDS.
  *
- * @see \Ghostwriter\AtProtocolTests\Unit\Com\Atproto\Server\CreateAccountTest
+ * @see \Tests\Unit\Com\Atproto\Server\CreateAccountTest
  */
 final readonly class CreateAccount
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
         private StreamFactoryInterface $streamFactory,
-    ) {}
+    ) {
+    }
 
     public function __invoke(
         UriInterface $pdsUri,
