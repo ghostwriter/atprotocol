@@ -14,13 +14,14 @@ use function http_build_query;
 /**
  * Enumerates which accounts the requesting account is currently blocking. Requires auth.
  *
- * @see \Ghostwriter\AtProtocolTests\Unit\App\Bsky\Graph\GetBlocksTest
+ * @see \Tests\Unit\App\Bsky\Graph\GetBlocksTest
  */
 final readonly class GetBlocks
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
-    ) {}
+    ) {
+    }
 
     public function __invoke(UriInterface $pdsUri, ?int $limit = null, ?string $cursor = null): RequestInterface
     {
