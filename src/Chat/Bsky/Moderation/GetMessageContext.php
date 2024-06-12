@@ -14,13 +14,14 @@ use function http_build_query;
 /**
  * GetMessageContext.
  *
- * @see \Ghostwriter\AtProtocolTests\Unit\Chat\Bsky\Moderation\GetMessageContextTest
+ * @see \Tests\Unit\Chat\Bsky\Moderation\GetMessageContextTest
  */
 final readonly class GetMessageContext
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
-    ) {}
+    ) {
+    }
 
     public function __invoke(
         UriInterface $pdsUri,
