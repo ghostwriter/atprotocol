@@ -14,13 +14,14 @@ use function http_build_query;
 /**
  * DEPRECATED - please use com.atproto.sync.getLatestCommit instead.
  *
- * @see \Ghostwriter\AtProtocolTests\Unit\Com\Atproto\Sync\GetHeadTest
+ * @see \Tests\Unit\Com\Atproto\Sync\GetHeadTest
  */
 final readonly class GetHead
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
-    ) {}
+    ) {
+    }
 
     public function __invoke(UriInterface $pdsUri, string $did = null): RequestInterface
     {
