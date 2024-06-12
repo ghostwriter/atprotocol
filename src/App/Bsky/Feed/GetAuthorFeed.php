@@ -14,13 +14,14 @@ use function http_build_query;
 /**
  * Get a view of an actor's 'author feed' (post and reposts by the author). Does not require auth.
  *
- * @see \Ghostwriter\AtProtocolTests\Unit\App\Bsky\Feed\GetAuthorFeedTest
+ * @see \Tests\Unit\App\Bsky\Feed\GetAuthorFeedTest
  */
 final readonly class GetAuthorFeed
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
-    ) {}
+    ) {
+    }
 
     public function __invoke(
         UriInterface $pdsUri,
