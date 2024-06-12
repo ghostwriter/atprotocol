@@ -14,13 +14,14 @@ use function http_build_query;
 /**
  * Get information about an account and repository, including the list of collections. Does not require auth.
  *
- * @see \Ghostwriter\AtProtocolTests\Unit\Com\Atproto\Repo\DescribeRepoTest
+ * @see \Tests\Unit\Com\Atproto\Repo\DescribeRepoTest
  */
 final readonly class DescribeRepo
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
-    ) {}
+    ) {
+    }
 
     public function __invoke(UriInterface $pdsUri, string $repo = null): RequestInterface
     {
