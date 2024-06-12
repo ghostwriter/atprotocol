@@ -14,13 +14,14 @@ use function http_build_query;
 /**
  * List all App Passwords.
  *
- * @see \Ghostwriter\AtProtocolTests\Unit\Com\Atproto\Server\ListAppPasswordsTest
+ * @see \Tests\Unit\Com\Atproto\Server\ListAppPasswordsTest
  */
 final readonly class ListAppPasswords
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
-    ) {}
+    ) {
+    }
 
     public function __invoke(UriInterface $pdsUri): RequestInterface
     {
