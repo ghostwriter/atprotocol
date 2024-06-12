@@ -16,14 +16,15 @@ use function json_encode;
 /**
  * Register to receive push notifications, via a specified service, for the requesting account. Requires auth.
  *
- * @see \Ghostwriter\AtProtocolTests\Unit\App\Bsky\Notification\RegisterPushTest
+ * @see \Tests\Unit\App\Bsky\Notification\RegisterPushTest
  */
 final readonly class RegisterPush
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
         private StreamFactoryInterface $streamFactory,
-    ) {}
+    ) {
+    }
 
     public function __invoke(
         UriInterface $pdsUri,
