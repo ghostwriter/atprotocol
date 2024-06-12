@@ -14,13 +14,14 @@ use function http_build_query;
 /**
  * Get a list of reposts for a given post.
  *
- * @see \Ghostwriter\AtProtocolTests\Unit\App\Bsky\Feed\GetRepostedByTest
+ * @see \Tests\Unit\App\Bsky\Feed\GetRepostedByTest
  */
 final readonly class GetRepostedBy
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
-    ) {}
+    ) {
+    }
 
     public function __invoke(
         UriInterface $pdsUri,
