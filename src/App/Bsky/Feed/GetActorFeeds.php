@@ -14,13 +14,14 @@ use function http_build_query;
 /**
  * Get a list of feeds (feed generator records) created by the actor (in the actor's repo).
  *
- * @see \Ghostwriter\AtProtocolTests\Unit\App\Bsky\Feed\GetActorFeedsTest
+ * @see \Tests\Unit\App\Bsky\Feed\GetActorFeedsTest
  */
 final readonly class GetActorFeeds
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
-    ) {}
+    ) {
+    }
 
     public function __invoke(
         UriInterface $pdsUri,
