@@ -16,14 +16,15 @@ use function json_encode;
 /**
  * Notify a crawling service of a recent update, and that crawling should resume. Intended use is after a gap between repo stream events caused the crawling service to disconnect. Does not require auth; implemented by Relay.
  *
- * @see \Ghostwriter\AtProtocolTests\Unit\Com\Atproto\Sync\NotifyOfUpdateTest
+ * @see \Tests\Unit\Com\Atproto\Sync\NotifyOfUpdateTest
  */
 final readonly class NotifyOfUpdate
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
         private StreamFactoryInterface $streamFactory,
-    ) {}
+    ) {
+    }
 
     public function __invoke(UriInterface $pdsUri, string $hostname = null): RequestInterface
     {
