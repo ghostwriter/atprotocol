@@ -16,14 +16,15 @@ use function json_encode;
 /**
  * Revoke an App Password by name.
  *
- * @see \Ghostwriter\AtProtocolTests\Unit\Com\Atproto\Server\RevokeAppPasswordTest
+ * @see \Tests\Unit\Com\Atproto\Server\RevokeAppPasswordTest
  */
 final readonly class RevokeAppPassword
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
         private StreamFactoryInterface $streamFactory,
-    ) {}
+    ) {
+    }
 
     public function __invoke(UriInterface $pdsUri, string $name = null): RequestInterface
     {
