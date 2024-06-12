@@ -14,13 +14,14 @@ use function http_build_query;
 /**
  * Get posts in a thread. Does not require auth, but additional metadata and filtering will be applied for authed requests.
  *
- * @see \Ghostwriter\AtProtocolTests\Unit\App\Bsky\Feed\GetPostThreadTest
+ * @see \Tests\Unit\App\Bsky\Feed\GetPostThreadTest
  */
 final readonly class GetPostThread
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
-    ) {}
+    ) {
+    }
 
     public function __invoke(
         UriInterface $pdsUri,
