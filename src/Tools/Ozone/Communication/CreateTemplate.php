@@ -16,14 +16,15 @@ use function json_encode;
 /**
  * Administrative action to create a new, re-usable communication (email for now) template.
  *
- * @see \Ghostwriter\AtProtocolTests\Unit\Tools\Ozone\Communication\CreateTemplateTest
+ * @see \Tests\Unit\Tools\Ozone\Communication\CreateTemplateTest
  */
 final readonly class CreateTemplate
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
         private StreamFactoryInterface $streamFactory,
-    ) {}
+    ) {
+    }
 
     public function __invoke(
         UriInterface $pdsUri,
