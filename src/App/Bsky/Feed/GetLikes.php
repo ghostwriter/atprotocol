@@ -14,13 +14,14 @@ use function http_build_query;
 /**
  * Get like records which reference a subject (by AT-URI and CID).
  *
- * @see \Ghostwriter\AtProtocolTests\Unit\App\Bsky\Feed\GetLikesTest
+ * @see \Tests\Unit\App\Bsky\Feed\GetLikesTest
  */
 final readonly class GetLikes
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
-    ) {}
+    ) {
+    }
 
     public function __invoke(
         UriInterface $pdsUri,
