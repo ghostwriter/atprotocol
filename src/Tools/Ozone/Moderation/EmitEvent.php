@@ -16,14 +16,15 @@ use function json_encode;
 /**
  * Take a moderation action on an actor.
  *
- * @see \Ghostwriter\AtProtocolTests\Unit\Tools\Ozone\Moderation\EmitEventTest
+ * @see \Tests\Unit\Tools\Ozone\Moderation\EmitEventTest
  */
 final readonly class EmitEvent
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
         private StreamFactoryInterface $streamFactory,
-    ) {}
+    ) {
+    }
 
     public function __invoke(
         UriInterface $pdsUri,
