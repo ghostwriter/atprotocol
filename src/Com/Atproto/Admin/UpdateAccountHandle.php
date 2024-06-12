@@ -16,14 +16,15 @@ use function json_encode;
 /**
  * Administrative action to update an account's handle.
  *
- * @see \Ghostwriter\AtProtocolTests\Unit\Com\Atproto\Admin\UpdateAccountHandleTest
+ * @see \Tests\Unit\Com\Atproto\Admin\UpdateAccountHandleTest
  */
 final readonly class UpdateAccountHandle
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
         private StreamFactoryInterface $streamFactory,
-    ) {}
+    ) {
+    }
 
     public function __invoke(UriInterface $pdsUri, string $did = null, string $handle = null): RequestInterface
     {
