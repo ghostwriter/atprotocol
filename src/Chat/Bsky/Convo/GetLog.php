@@ -14,13 +14,14 @@ use function http_build_query;
 /**
  * GetLog.
  *
- * @see \Ghostwriter\AtProtocolTests\Unit\Chat\Bsky\Convo\GetLogTest
+ * @see \Tests\Unit\Chat\Bsky\Convo\GetLogTest
  */
 final readonly class GetLog
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
-    ) {}
+    ) {
+    }
 
     public function __invoke(UriInterface $pdsUri, ?string $cursor = null): RequestInterface
     {
