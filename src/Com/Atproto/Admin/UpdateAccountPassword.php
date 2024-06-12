@@ -16,14 +16,15 @@ use function json_encode;
 /**
  * Update the password for a user account as an administrator.
  *
- * @see \Ghostwriter\AtProtocolTests\Unit\Com\Atproto\Admin\UpdateAccountPasswordTest
+ * @see \Tests\Unit\Com\Atproto\Admin\UpdateAccountPasswordTest
  */
 final readonly class UpdateAccountPassword
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
         private StreamFactoryInterface $streamFactory,
-    ) {}
+    ) {
+    }
 
     public function __invoke(
         UriInterface $pdsUri,
