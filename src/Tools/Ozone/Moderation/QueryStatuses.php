@@ -14,13 +14,14 @@ use function http_build_query;
 /**
  * View moderation statuses of subjects (record or repo).
  *
- * @see \Ghostwriter\AtProtocolTests\Unit\Tools\Ozone\Moderation\QueryStatusesTest
+ * @see \Tests\Unit\Tools\Ozone\Moderation\QueryStatusesTest
  */
 final readonly class QueryStatuses
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
-    ) {}
+    ) {
+    }
 
     public function __invoke(
         UriInterface $pdsUri,
