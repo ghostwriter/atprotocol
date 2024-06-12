@@ -14,13 +14,14 @@ use function http_build_query;
 /**
  * Get detailed profile views of multiple actors.
  *
- * @see \Ghostwriter\AtProtocolTests\Unit\App\Bsky\Actor\GetProfilesTest
+ * @see \Tests\Unit\App\Bsky\Actor\GetProfilesTest
  */
 final readonly class GetProfiles
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
-    ) {}
+    ) {
+    }
 
     public function __invoke(UriInterface $pdsUri, array $actors = null): RequestInterface
     {
