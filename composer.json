@@ -61,7 +61,6 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Ghostwriter\\AtProtocolTests\\": "tests",
             "Tests\\": "tests"
         }
     },
