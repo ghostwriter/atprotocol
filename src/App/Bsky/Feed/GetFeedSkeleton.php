@@ -14,13 +14,14 @@ use function http_build_query;
 /**
  * Get a skeleton of a feed provided by a feed generator. Auth is optional, depending on provider requirements, and provides the DID of the requester. Implemented by Feed Generator Service.
  *
- * @see \Ghostwriter\AtProtocolTests\Unit\App\Bsky\Feed\GetFeedSkeletonTest
+ * @see \Tests\Unit\App\Bsky\Feed\GetFeedSkeletonTest
  */
 final readonly class GetFeedSkeleton
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
-    ) {}
+    ) {
+    }
 
     public function __invoke(
         UriInterface $pdsUri,
