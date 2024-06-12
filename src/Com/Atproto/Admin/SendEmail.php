@@ -16,14 +16,15 @@ use function json_encode;
 /**
  * Send email to a user's account email address.
  *
- * @see \Ghostwriter\AtProtocolTests\Unit\Com\Atproto\Admin\SendEmailTest
+ * @see \Tests\Unit\Com\Atproto\Admin\SendEmailTest
  */
 final readonly class SendEmail
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
         private StreamFactoryInterface $streamFactory,
-    ) {}
+    ) {
+    }
 
     public function __invoke(
         UriInterface $pdsUri,
