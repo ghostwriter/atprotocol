@@ -14,13 +14,14 @@ use function http_build_query;
 /**
  * Find posts matching search criteria, returning views of those posts.
  *
- * @see \Ghostwriter\AtProtocolTests\Unit\App\Bsky\Feed\SearchPostsTest
+ * @see \Tests\Unit\App\Bsky\Feed\SearchPostsTest
  */
 final readonly class SearchPosts
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
-    ) {}
+    ) {
+    }
 
     public function __invoke(
         UriInterface $pdsUri,
