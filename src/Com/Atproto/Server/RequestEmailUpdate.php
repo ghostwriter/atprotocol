@@ -16,14 +16,15 @@ use function json_encode;
 /**
  * Request a token in order to update email.
  *
- * @see \Ghostwriter\AtProtocolTests\Unit\Com\Atproto\Server\RequestEmailUpdateTest
+ * @see \Tests\Unit\Com\Atproto\Server\RequestEmailUpdateTest
  */
 final readonly class RequestEmailUpdate
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
         private StreamFactoryInterface $streamFactory,
-    ) {}
+    ) {
+    }
 
     public function __invoke(UriInterface $pdsUri): RequestInterface
     {
