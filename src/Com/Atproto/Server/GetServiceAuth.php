@@ -14,13 +14,14 @@ use function http_build_query;
 /**
  * Get a signed token on behalf of the requesting DID for the requested service.
  *
- * @see \Ghostwriter\AtProtocolTests\Unit\Com\Atproto\Server\GetServiceAuthTest
+ * @see \Tests\Unit\Com\Atproto\Server\GetServiceAuthTest
  */
 final readonly class GetServiceAuth
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
-    ) {}
+    ) {
+    }
 
     public function __invoke(UriInterface $pdsUri, string $aud = null): RequestInterface
     {
