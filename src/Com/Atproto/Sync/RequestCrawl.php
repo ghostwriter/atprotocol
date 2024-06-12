@@ -16,14 +16,15 @@ use function json_encode;
 /**
  * Request a service to persistently crawl hosted repos. Expected use is new PDS instances declaring their existence to Relays. Does not require auth.
  *
- * @see \Ghostwriter\AtProtocolTests\Unit\Com\Atproto\Sync\RequestCrawlTest
+ * @see \Tests\Unit\Com\Atproto\Sync\RequestCrawlTest
  */
 final readonly class RequestCrawl
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
         private StreamFactoryInterface $streamFactory,
-    ) {}
+    ) {
+    }
 
     public function __invoke(UriInterface $pdsUri, string $hostname = null): RequestInterface
     {
