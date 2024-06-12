@@ -16,14 +16,15 @@ use function json_encode;
 /**
  * Upload a new blob, to be referenced from a repository record. The blob will be deleted if it is not referenced within a time window (eg, minutes). Blob restrictions (mimetype, size, etc) are enforced when the reference is created. Requires auth, implemented by PDS.
  *
- * @see \Ghostwriter\AtProtocolTests\Unit\Com\Atproto\Repo\UploadBlobTest
+ * @see \Tests\Unit\Com\Atproto\Repo\UploadBlobTest
  */
 final readonly class UploadBlob
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
         private StreamFactoryInterface $streamFactory,
-    ) {}
+    ) {
+    }
 
     public function __invoke(UriInterface $pdsUri): RequestInterface
     {
