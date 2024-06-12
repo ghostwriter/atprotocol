@@ -14,13 +14,14 @@ use function http_build_query;
 /**
  * DEPRECATED: use queryLabels or subscribeLabels instead -- Fetch all labels from a labeler created after a certain date.
  *
- * @see \Ghostwriter\AtProtocolTests\Unit\Com\Atproto\Temp\FetchLabelsTest
+ * @see \Tests\Unit\Com\Atproto\Temp\FetchLabelsTest
  */
 final readonly class FetchLabels
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
-    ) {}
+    ) {
+    }
 
     public function __invoke(UriInterface $pdsUri, ?int $since = null, ?int $limit = null): RequestInterface
     {
