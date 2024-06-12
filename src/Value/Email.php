@@ -4,12 +4,12 @@ declare(strict_types=1);
 
 namespace Ghostwriter\AtProtocol\Value;
 
-use Stringable;
 use InvalidArgumentException;
-
-use function filter_var;
+use Stringable;
 
 use const FILTER_VALIDATE_EMAIL;
+
+use function filter_var;
 
 final readonly class Email implements Stringable
 {
