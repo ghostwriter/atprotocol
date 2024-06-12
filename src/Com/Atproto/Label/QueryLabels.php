@@ -14,13 +14,14 @@ use function http_build_query;
 /**
  * Find labels relevant to the provided AT-URI patterns. Public endpoint for moderation services, though may return different or additional results with auth.
  *
- * @see \Ghostwriter\AtProtocolTests\Unit\Com\Atproto\Label\QueryLabelsTest
+ * @see \Tests\Unit\Com\Atproto\Label\QueryLabelsTest
  */
 final readonly class QueryLabels
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
-    ) {}
+    ) {
+    }
 
     public function __invoke(
         UriInterface $pdsUri,
