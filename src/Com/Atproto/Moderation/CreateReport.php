@@ -16,14 +16,15 @@ use function json_encode;
 /**
  * Submit a moderation report regarding an atproto account or record. Implemented by moderation services (with PDS proxying), and requires auth.
  *
- * @see \Ghostwriter\AtProtocolTests\Unit\Com\Atproto\Moderation\CreateReportTest
+ * @see \Tests\Unit\Com\Atproto\Moderation\CreateReportTest
  */
 final readonly class CreateReport
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
         private StreamFactoryInterface $streamFactory,
-    ) {}
+    ) {
+    }
 
     public function __invoke(
         UriInterface $pdsUri,
