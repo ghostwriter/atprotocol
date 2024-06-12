@@ -14,13 +14,14 @@ use function http_build_query;
 /**
  * ExportAccountData.
  *
- * @see \Ghostwriter\AtProtocolTests\Unit\Chat\Bsky\Actor\ExportAccountDataTest
+ * @see \Tests\Unit\Chat\Bsky\Actor\ExportAccountDataTest
  */
 final readonly class ExportAccountData
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
-    ) {}
+    ) {
+    }
 
     public function __invoke(UriInterface $pdsUri): RequestInterface
     {
