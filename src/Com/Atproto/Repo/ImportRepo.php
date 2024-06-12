@@ -16,14 +16,15 @@ use function json_encode;
 /**
  * Import a repo in the form of a CAR file. Requires Content-Length HTTP header to be set.
  *
- * @see \Ghostwriter\AtProtocolTests\Unit\Com\Atproto\Repo\ImportRepoTest
+ * @see \Tests\Unit\Com\Atproto\Repo\ImportRepoTest
  */
 final readonly class ImportRepo
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
         private StreamFactoryInterface $streamFactory,
-    ) {}
+    ) {
+    }
 
     public function __invoke(UriInterface $pdsUri): RequestInterface
     {
