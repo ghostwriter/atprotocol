@@ -14,13 +14,14 @@ use function http_build_query;
 /**
  * Enumerates public relationships between one account, and a list of other accounts. Does not require auth.
  *
- * @see \Ghostwriter\AtProtocolTests\Unit\App\Bsky\Graph\GetRelationshipsTest
+ * @see \Tests\Unit\App\Bsky\Graph\GetRelationshipsTest
  */
 final readonly class GetRelationships
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
-    ) {}
+    ) {
+    }
 
     public function __invoke(
         UriInterface $pdsUri,
