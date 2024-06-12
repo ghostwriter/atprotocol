@@ -14,13 +14,14 @@ use function http_build_query;
 /**
  * Enumerates accounts which follow a specified account (actor).
  *
- * @see \Ghostwriter\AtProtocolTests\Unit\App\Bsky\Graph\GetFollowersTest
+ * @see \Tests\Unit\App\Bsky\Graph\GetFollowersTest
  */
 final readonly class GetFollowers
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
-    ) {}
+    ) {
+    }
 
     public function __invoke(
         UriInterface $pdsUri,
