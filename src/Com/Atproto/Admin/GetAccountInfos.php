@@ -14,13 +14,14 @@ use function http_build_query;
 /**
  * Get details about some accounts.
  *
- * @see \Ghostwriter\AtProtocolTests\Unit\Com\Atproto\Admin\GetAccountInfosTest
+ * @see \Tests\Unit\Com\Atproto\Admin\GetAccountInfosTest
  */
 final readonly class GetAccountInfos
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
-    ) {}
+    ) {
+    }
 
     public function __invoke(UriInterface $pdsUri, array $dids = null): RequestInterface
     {
