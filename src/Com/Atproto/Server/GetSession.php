@@ -14,13 +14,14 @@ use function http_build_query;
 /**
  * Get information about the current auth session. Requires auth.
  *
- * @see \Ghostwriter\AtProtocolTests\Unit\Com\Atproto\Server\GetSessionTest
+ * @see \Tests\Unit\Com\Atproto\Server\GetSessionTest
  */
 final readonly class GetSession
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
-    ) {}
+    ) {
+    }
 
     public function __invoke(UriInterface $pdsUri): RequestInterface
     {
