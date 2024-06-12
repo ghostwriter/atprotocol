@@ -16,14 +16,15 @@ use function json_encode;
 /**
  * Set the private preferences attached to the account.
  *
- * @see \Ghostwriter\AtProtocolTests\Unit\App\Bsky\Actor\PutPreferencesTest
+ * @see \Tests\Unit\App\Bsky\Actor\PutPreferencesTest
  */
 final readonly class PutPreferences
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
         private StreamFactoryInterface $streamFactory,
-    ) {}
+    ) {
+    }
 
     public function __invoke(UriInterface $pdsUri, string $preferences = null): RequestInterface
     {
