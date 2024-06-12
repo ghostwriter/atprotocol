@@ -14,13 +14,14 @@ use function http_build_query;
 /**
  * Get a feed of recent posts from a list (posts and reposts from any actors on the list). Does not require auth.
  *
- * @see \Ghostwriter\AtProtocolTests\Unit\App\Bsky\Feed\GetListFeedTest
+ * @see \Tests\Unit\App\Bsky\Feed\GetListFeedTest
  */
 final readonly class GetListFeed
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
-    ) {}
+    ) {
+    }
 
     public function __invoke(
         UriInterface $pdsUri,
