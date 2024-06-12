@@ -16,14 +16,15 @@ use function json_encode;
 /**
  * Delete a repository record, or ensure it doesn't exist. Requires auth, implemented by PDS.
  *
- * @see \Ghostwriter\AtProtocolTests\Unit\Com\Atproto\Repo\DeleteRecordTest
+ * @see \Tests\Unit\Com\Atproto\Repo\DeleteRecordTest
  */
 final readonly class DeleteRecord
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
         private StreamFactoryInterface $streamFactory,
-    ) {}
+    ) {
+    }
 
     public function __invoke(
         UriInterface $pdsUri,
