@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Ghostwriter\AtProtocol\Value;
 
 use InvalidArgumentException;
+use Override;
 use Stringable;
 
 use const FILTER_VALIDATE_EMAIL;
@@ -21,6 +22,7 @@ final readonly class Email implements Stringable
         }
     }
 
+    #[Override]
     public function __toString(): string
     {
         return $this->email;
