@@ -16,14 +16,15 @@ use function json_encode;
 /**
  * Unmutes the specified list of accounts. Requires auth.
  *
- * @see \Ghostwriter\AtProtocolTests\Unit\App\Bsky\Graph\UnmuteActorListTest
+ * @see \Tests\Unit\App\Bsky\Graph\UnmuteActorListTest
  */
 final readonly class UnmuteActorList
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
         private StreamFactoryInterface $streamFactory,
-    ) {}
+    ) {
+    }
 
     public function __invoke(UriInterface $pdsUri, string $list = null): RequestInterface
     {
