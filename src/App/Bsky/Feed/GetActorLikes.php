@@ -14,13 +14,14 @@ use function http_build_query;
 /**
  * Get a list of posts liked by an actor. Does not require auth.
  *
- * @see \Ghostwriter\AtProtocolTests\Unit\App\Bsky\Feed\GetActorLikesTest
+ * @see \Tests\Unit\App\Bsky\Feed\GetActorLikesTest
  */
 final readonly class GetActorLikes
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
-    ) {}
+    ) {
+    }
 
     public function __invoke(
         UriInterface $pdsUri,
