@@ -16,14 +16,15 @@ use function json_encode;
 /**
  * Initiate a user account deletion via email.
  *
- * @see \Ghostwriter\AtProtocolTests\Unit\Com\Atproto\Server\RequestAccountDeleteTest
+ * @see \Tests\Unit\Com\Atproto\Server\RequestAccountDeleteTest
  */
 final readonly class RequestAccountDelete
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
         private StreamFactoryInterface $streamFactory,
-    ) {}
+    ) {
+    }
 
     public function __invoke(UriInterface $pdsUri): RequestInterface
     {
