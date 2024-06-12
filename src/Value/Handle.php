@@ -4,8 +4,9 @@ declare(strict_types=1);
 
 namespace Ghostwriter\AtProtocol\Value;
 
-use Stringable;
 use InvalidArgumentException;
+use Override;
+use Stringable;
 
 use function preg_match;
 
@@ -24,6 +25,7 @@ final readonly class Handle implements Stringable
         }
     }
 
+    #[Override]
     public function __toString(): string
     {
         return $this->handle;
