@@ -14,13 +14,14 @@ use function http_build_query;
 /**
  * Enumerates the lists created by a specified account (actor).
  *
- * @see \Ghostwriter\AtProtocolTests\Unit\App\Bsky\Graph\GetListsTest
+ * @see \Tests\Unit\App\Bsky\Graph\GetListsTest
  */
 final readonly class GetLists
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
-    ) {}
+    ) {
+    }
 
     public function __invoke(
         UriInterface $pdsUri,
