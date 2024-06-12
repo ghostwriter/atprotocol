@@ -16,14 +16,15 @@ use function json_encode;
 /**
  * Create an App Password.
  *
- * @see \Ghostwriter\AtProtocolTests\Unit\Com\Atproto\Server\CreateAppPasswordTest
+ * @see \Tests\Unit\Com\Atproto\Server\CreateAppPasswordTest
  */
 final readonly class CreateAppPassword
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
         private StreamFactoryInterface $streamFactory,
-    ) {}
+    ) {
+    }
 
     public function __invoke(
         UriInterface $pdsUri,
