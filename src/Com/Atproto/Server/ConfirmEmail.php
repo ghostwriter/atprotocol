@@ -16,14 +16,15 @@ use function json_encode;
 /**
  * Confirm an email using a token from com.atproto.server.requestEmailConfirmation.
  *
- * @see \Ghostwriter\AtProtocolTests\Unit\Com\Atproto\Server\ConfirmEmailTest
+ * @see \Tests\Unit\Com\Atproto\Server\ConfirmEmailTest
  */
 final readonly class ConfirmEmail
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
         private StreamFactoryInterface $streamFactory,
-    ) {}
+    ) {
+    }
 
     public function __invoke(UriInterface $pdsUri, string $email = null, string $token = null): RequestInterface
     {
