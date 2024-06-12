@@ -16,14 +16,15 @@ use function json_encode;
 /**
  * Initiate a user account password reset via email.
  *
- * @see \Ghostwriter\AtProtocolTests\Unit\Com\Atproto\Server\RequestPasswordResetTest
+ * @see \Tests\Unit\Com\Atproto\Server\RequestPasswordResetTest
  */
 final readonly class RequestPasswordReset
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
         private StreamFactoryInterface $streamFactory,
-    ) {}
+    ) {
+    }
 
     public function __invoke(UriInterface $pdsUri, string $email = null): RequestInterface
     {
