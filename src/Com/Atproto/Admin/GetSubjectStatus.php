@@ -14,13 +14,14 @@ use function http_build_query;
 /**
  * Get the service-specific admin status of a subject (account, record, or blob).
  *
- * @see \Ghostwriter\AtProtocolTests\Unit\Com\Atproto\Admin\GetSubjectStatusTest
+ * @see \Tests\Unit\Com\Atproto\Admin\GetSubjectStatusTest
  */
 final readonly class GetSubjectStatus
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
-    ) {}
+    ) {
+    }
 
     public function __invoke(
         UriInterface $pdsUri,
