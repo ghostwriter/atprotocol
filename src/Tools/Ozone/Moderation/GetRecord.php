@@ -14,13 +14,14 @@ use function http_build_query;
 /**
  * Get details about a record.
  *
- * @see \Ghostwriter\AtProtocolTests\Unit\Tools\Ozone\Moderation\GetRecordTest
+ * @see \Tests\Unit\Tools\Ozone\Moderation\GetRecordTest
  */
 final readonly class GetRecord
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
-    ) {}
+    ) {
+    }
 
     public function __invoke(UriInterface $pdsUri, string $uri = null, ?string $cid = null): RequestInterface
     {
