@@ -16,14 +16,15 @@ use function json_encode;
 /**
  * Validates a PLC operation to ensure that it doesn't violate a service's constraints or get the identity into a bad state, then submits it to the PLC registry.
  *
- * @see \Ghostwriter\AtProtocolTests\Unit\Com\Atproto\Identity\SubmitPlcOperationTest
+ * @see \Tests\Unit\Com\Atproto\Identity\SubmitPlcOperationTest
  */
 final readonly class SubmitPlcOperation
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
         private StreamFactoryInterface $streamFactory,
-    ) {}
+    ) {
+    }
 
     public function __invoke(UriInterface $pdsUri, string $operation = null): RequestInterface
     {
