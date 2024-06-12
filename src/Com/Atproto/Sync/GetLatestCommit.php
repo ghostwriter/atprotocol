@@ -14,13 +14,14 @@ use function http_build_query;
 /**
  * Get the current commit CID & revision of the specified repo. Does not require auth.
  *
- * @see \Ghostwriter\AtProtocolTests\Unit\Com\Atproto\Sync\GetLatestCommitTest
+ * @see \Tests\Unit\Com\Atproto\Sync\GetLatestCommitTest
  */
 final readonly class GetLatestCommit
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
-    ) {}
+    ) {
+    }
 
     public function __invoke(UriInterface $pdsUri, string $did = null): RequestInterface
     {
