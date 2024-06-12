@@ -16,14 +16,15 @@ use function json_encode;
 /**
  * Administrative action to update an existing communication template. Allows passing partial fields to patch specific fields only.
  *
- * @see \Ghostwriter\AtProtocolTests\Unit\Tools\Ozone\Communication\UpdateTemplateTest
+ * @see \Tests\Unit\Tools\Ozone\Communication\UpdateTemplateTest
  */
 final readonly class UpdateTemplate
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
         private StreamFactoryInterface $streamFactory,
-    ) {}
+    ) {
+    }
 
     public function __invoke(
         UriInterface $pdsUri,
