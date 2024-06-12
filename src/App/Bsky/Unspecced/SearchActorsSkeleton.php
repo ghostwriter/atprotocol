@@ -14,13 +14,14 @@ use function http_build_query;
 /**
  * Backend Actors (profile) search, returns only skeleton.
  *
- * @see \Ghostwriter\AtProtocolTests\Unit\App\Bsky\Unspecced\SearchActorsSkeletonTest
+ * @see \Tests\Unit\App\Bsky\Unspecced\SearchActorsSkeletonTest
  */
 final readonly class SearchActorsSkeleton
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
-    ) {}
+    ) {
+    }
 
     public function __invoke(
         UriInterface $pdsUri,
