@@ -14,13 +14,14 @@ use function http_build_query;
 /**
  * Gets post views for a specified list of posts (by AT-URI). This is sometimes referred to as 'hydrating' a 'feed skeleton'.
  *
- * @see \Ghostwriter\AtProtocolTests\Unit\App\Bsky\Feed\GetPostsTest
+ * @see \Tests\Unit\App\Bsky\Feed\GetPostsTest
  */
 final readonly class GetPosts
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
-    ) {}
+    ) {
+    }
 
     public function __invoke(UriInterface $pdsUri, array $uris = null): RequestInterface
     {
