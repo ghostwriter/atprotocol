@@ -16,14 +16,15 @@ use function json_encode;
 /**
  * Activates a currently deactivated account. Used to finalize account migration after the account's repo is imported and identity is setup.
  *
- * @see \Ghostwriter\AtProtocolTests\Unit\Com\Atproto\Server\ActivateAccountTest
+ * @see \Tests\Unit\Com\Atproto\Server\ActivateAccountTest
  */
 final readonly class ActivateAccount
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
         private StreamFactoryInterface $streamFactory,
-    ) {}
+    ) {
+    }
 
     public function __invoke(UriInterface $pdsUri): RequestInterface
     {
