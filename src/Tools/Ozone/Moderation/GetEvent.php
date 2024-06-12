@@ -14,13 +14,14 @@ use function http_build_query;
 /**
  * Get details about a moderation event.
  *
- * @see \Ghostwriter\AtProtocolTests\Unit\Tools\Ozone\Moderation\GetEventTest
+ * @see \Tests\Unit\Tools\Ozone\Moderation\GetEventTest
  */
 final readonly class GetEvent
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
-    ) {}
+    ) {
+    }
 
     public function __invoke(UriInterface $pdsUri, int $id = null): RequestInterface
     {
