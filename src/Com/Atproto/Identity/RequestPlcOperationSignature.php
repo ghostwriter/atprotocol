@@ -16,14 +16,15 @@ use function json_encode;
 /**
  * Request an email with a code to in order to request a signed PLC operation. Requires Auth.
  *
- * @see \Ghostwriter\AtProtocolTests\Unit\Com\Atproto\Identity\RequestPlcOperationSignatureTest
+ * @see \Tests\Unit\Com\Atproto\Identity\RequestPlcOperationSignatureTest
  */
 final readonly class RequestPlcOperationSignature
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
         private StreamFactoryInterface $streamFactory,
-    ) {}
+    ) {
+    }
 
     public function __invoke(UriInterface $pdsUri): RequestInterface
     {
