@@ -16,14 +16,15 @@ use function json_encode;
 /**
  * Reset a user account password using a token.
  *
- * @see \Ghostwriter\AtProtocolTests\Unit\Com\Atproto\Server\ResetPasswordTest
+ * @see \Tests\Unit\Com\Atproto\Server\ResetPasswordTest
  */
 final readonly class ResetPassword
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
         private StreamFactoryInterface $streamFactory,
-    ) {}
+    ) {
+    }
 
     public function __invoke(
         UriInterface $pdsUri,
