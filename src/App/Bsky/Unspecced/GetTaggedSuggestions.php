@@ -14,13 +14,14 @@ use function http_build_query;
 /**
  * Get a list of suggestions (feeds and users) tagged with categories.
  *
- * @see \Ghostwriter\AtProtocolTests\Unit\App\Bsky\Unspecced\GetTaggedSuggestionsTest
+ * @see \Tests\Unit\App\Bsky\Unspecced\GetTaggedSuggestionsTest
  */
 final readonly class GetTaggedSuggestions
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
-    ) {}
+    ) {
+    }
 
     public function __invoke(UriInterface $pdsUri): RequestInterface
     {
