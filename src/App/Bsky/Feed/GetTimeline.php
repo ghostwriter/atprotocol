@@ -14,13 +14,14 @@ use function http_build_query;
 /**
  * Get a view of the requesting account's home timeline. This is expected to be some form of reverse-chronological feed.
  *
- * @see \Ghostwriter\AtProtocolTests\Unit\App\Bsky\Feed\GetTimelineTest
+ * @see \Tests\Unit\App\Bsky\Feed\GetTimelineTest
  */
 final readonly class GetTimeline
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
-    ) {}
+    ) {
+    }
 
     public function __invoke(
         UriInterface $pdsUri,
