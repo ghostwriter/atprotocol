@@ -14,13 +14,14 @@ use function http_build_query;
 /**
  * Find actor suggestions for a prefix search term. Expected use is for auto-completion during text field entry. Does not require auth.
  *
- * @see \Ghostwriter\AtProtocolTests\Unit\App\Bsky\Actor\SearchActorsTypeaheadTest
+ * @see \Tests\Unit\App\Bsky\Actor\SearchActorsTypeaheadTest
  */
 final readonly class SearchActorsTypeahead
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
-    ) {}
+    ) {
+    }
 
     public function __invoke(UriInterface $pdsUri, ?string $q = null, ?int $limit = null): RequestInterface
     {
