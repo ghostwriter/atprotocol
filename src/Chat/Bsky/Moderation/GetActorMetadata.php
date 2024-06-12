@@ -14,13 +14,14 @@ use function http_build_query;
 /**
  * GetActorMetadata.
  *
- * @see \Ghostwriter\AtProtocolTests\Unit\Chat\Bsky\Moderation\GetActorMetadataTest
+ * @see \Tests\Unit\Chat\Bsky\Moderation\GetActorMetadataTest
  */
 final readonly class GetActorMetadata
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
-    ) {}
+    ) {
+    }
 
     public function __invoke(UriInterface $pdsUri, string $actor = null): RequestInterface
     {
