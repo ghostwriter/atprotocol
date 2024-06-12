@@ -16,14 +16,15 @@ use function json_encode;
 /**
  * Request a verification code to be sent to the supplied phone number.
  *
- * @see \Ghostwriter\AtProtocolTests\Unit\Com\Atproto\Temp\RequestPhoneVerificationTest
+ * @see \Tests\Unit\Com\Atproto\Temp\RequestPhoneVerificationTest
  */
 final readonly class RequestPhoneVerification
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
         private StreamFactoryInterface $streamFactory,
-    ) {}
+    ) {
+    }
 
     public function __invoke(UriInterface $pdsUri, string $phoneNumber = null): RequestInterface
     {
