@@ -14,13 +14,14 @@ use function http_build_query;
 /**
  * Download a repository export as CAR file. Optionally only a 'diff' since a previous revision. Does not require auth; implemented by PDS.
  *
- * @see \Ghostwriter\AtProtocolTests\Unit\Com\Atproto\Sync\GetRepoTest
+ * @see \Tests\Unit\Com\Atproto\Sync\GetRepoTest
  */
 final readonly class GetRepo
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
-    ) {}
+    ) {
+    }
 
     public function __invoke(UriInterface $pdsUri, string $did = null, ?string $since = null): RequestInterface
     {
