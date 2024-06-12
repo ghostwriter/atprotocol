@@ -16,19 +16,21 @@ use function json_encode;
 /**
  * Update the service-specific admin status of a subject (account, record, or blob).
  *
- * @see \Ghostwriter\AtProtocolTests\Unit\Com\Atproto\Admin\UpdateSubjectStatusTest
+ * @see \Tests\Unit\Com\Atproto\Admin\UpdateSubjectStatusTest
  */
 final readonly class UpdateSubjectStatus
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
         private StreamFactoryInterface $streamFactory,
-    ) {}
+    ) {
+    }
 
     public function __invoke(
         UriInterface $pdsUri,
         string $subject = null,
         ?string $takedown = null,
+        ?string $deactivated = null,
     ): RequestInterface {
         $request = $this->requestFactory
             ->createRequest('POST', $pdsUri->withPath('xrpc/com.atproto.admin.updateSubjectStatus'));
@@ -45,6 +47,7 @@ final readonly class UpdateSubjectStatus
         $jsonBody = json_encode(array_filter([
             'subject' => $subject,
             'takedown' => $takedown,
+            'deactivated' => $deactivated,
         ]));
 
         if ($jsonBody === false) {
