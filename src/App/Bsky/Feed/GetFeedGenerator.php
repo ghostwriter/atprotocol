@@ -14,13 +14,14 @@ use function http_build_query;
 /**
  * Get information about a feed generator. Implemented by AppView.
  *
- * @see \Ghostwriter\AtProtocolTests\Unit\App\Bsky\Feed\GetFeedGeneratorTest
+ * @see \Tests\Unit\App\Bsky\Feed\GetFeedGeneratorTest
  */
 final readonly class GetFeedGenerator
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
-    ) {}
+    ) {
+    }
 
     public function __invoke(UriInterface $pdsUri, string $feed = null): RequestInterface
     {
