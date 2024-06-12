@@ -14,13 +14,14 @@ use function http_build_query;
 /**
  * Get a single record from a repository. Does not require auth.
  *
- * @see \Ghostwriter\AtProtocolTests\Unit\Com\Atproto\Repo\GetRecordTest
+ * @see \Tests\Unit\Com\Atproto\Repo\GetRecordTest
  */
 final readonly class GetRecord
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
-    ) {}
+    ) {
+    }
 
     public function __invoke(
         UriInterface $pdsUri,
