@@ -14,13 +14,14 @@ use function http_build_query;
 /**
  * Get data blocks from a given repo, by CID. For example, intermediate MST nodes, or records. Does not require auth; implemented by PDS.
  *
- * @see \Ghostwriter\AtProtocolTests\Unit\Com\Atproto\Sync\GetBlocksTest
+ * @see \Tests\Unit\Com\Atproto\Sync\GetBlocksTest
  */
 final readonly class GetBlocks
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
-    ) {}
+    ) {
+    }
 
     public function __invoke(UriInterface $pdsUri, string $did = null, array $cids = null): RequestInterface
     {
