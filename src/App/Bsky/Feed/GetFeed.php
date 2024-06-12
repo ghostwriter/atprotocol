@@ -14,13 +14,14 @@ use function http_build_query;
 /**
  * Get a hydrated feed from an actor's selected feed generator. Implemented by App View.
  *
- * @see \Ghostwriter\AtProtocolTests\Unit\App\Bsky\Feed\GetFeedTest
+ * @see \Tests\Unit\App\Bsky\Feed\GetFeedTest
  */
 final readonly class GetFeed
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
-    ) {}
+    ) {
+    }
 
     public function __invoke(
         UriInterface $pdsUri,
