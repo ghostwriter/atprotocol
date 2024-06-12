@@ -14,13 +14,14 @@ use function http_build_query;
 /**
  * List a range of records in a repository, matching a specific collection. Does not require auth.
  *
- * @see \Ghostwriter\AtProtocolTests\Unit\Com\Atproto\Repo\ListRecordsTest
+ * @see \Tests\Unit\Com\Atproto\Repo\ListRecordsTest
  */
 final readonly class ListRecords
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
-    ) {}
+    ) {
+    }
 
     public function __invoke(
         UriInterface $pdsUri,
