@@ -14,13 +14,14 @@ use function http_build_query;
 /**
  * Describes the server's account creation requirements and capabilities. Implemented by PDS.
  *
- * @see \Ghostwriter\AtProtocolTests\Unit\Com\Atproto\Server\DescribeServerTest
+ * @see \Tests\Unit\Com\Atproto\Server\DescribeServerTest
  */
 final readonly class DescribeServer
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
-    ) {}
+    ) {
+    }
 
     public function __invoke(UriInterface $pdsUri): RequestInterface
     {
