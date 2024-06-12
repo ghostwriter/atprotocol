@@ -16,14 +16,15 @@ use function json_encode;
 /**
  * Delete a user account as an administrator.
  *
- * @see \Ghostwriter\AtProtocolTests\Unit\Com\Atproto\Admin\DeleteAccountTest
+ * @see \Tests\Unit\Com\Atproto\Admin\DeleteAccountTest
  */
 final readonly class DeleteAccount
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
         private StreamFactoryInterface $streamFactory,
-    ) {}
+    ) {
+    }
 
     public function __invoke(UriInterface $pdsUri, string $did = null): RequestInterface
     {
