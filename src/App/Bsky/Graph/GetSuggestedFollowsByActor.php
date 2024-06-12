@@ -14,13 +14,14 @@ use function http_build_query;
 /**
  * Enumerates follows similar to a given account (actor). Expected use is to recommend additional accounts immediately after following one account.
  *
- * @see \Ghostwriter\AtProtocolTests\Unit\App\Bsky\Graph\GetSuggestedFollowsByActorTest
+ * @see \Tests\Unit\App\Bsky\Graph\GetSuggestedFollowsByActorTest
  */
 final readonly class GetSuggestedFollowsByActor
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
-    ) {}
+    ) {
+    }
 
     public function __invoke(UriInterface $pdsUri, string $actor = null): RequestInterface
     {
