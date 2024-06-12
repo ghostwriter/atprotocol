@@ -16,14 +16,15 @@ use function json_encode;
 /**
  * Create an invite code.
  *
- * @see \Ghostwriter\AtProtocolTests\Unit\Com\Atproto\Server\CreateInviteCodeTest
+ * @see \Tests\Unit\Com\Atproto\Server\CreateInviteCodeTest
  */
 final readonly class CreateInviteCode
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
         private StreamFactoryInterface $streamFactory,
-    ) {}
+    ) {
+    }
 
     public function __invoke(
         UriInterface $pdsUri,
