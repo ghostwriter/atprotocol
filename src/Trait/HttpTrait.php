@@ -17,41 +17,47 @@ use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\StreamInterface;
 use Psr\Http\Message\UriInterface;
 
+use const PHP_OS_FAMILY;
+use const PHP_VERSION;
+
 use function array_merge;
 use function http_build_query;
 use function is_array;
 use function is_string;
 use function sprintf;
 
-use const PHP_OS_FAMILY;
-use const PHP_VERSION;
-
 trait HttpTrait
 {
-    public static function new(string $uri): self
-    {
-        return new self(new Uri($uri), new RequestFactory(), new StreamFactory(), new Client());
-    }
-
     public function __construct(
         private readonly UriInterface $uri,
         private readonly RequestFactoryInterface $requestFactory,
         private readonly StreamFactoryInterface $streamFactory,
         private readonly ClientInterface $httpClient,
-    ) {}
+    ) {
+    }
 
-    public static function defaultHeaders(): array
+    /**
+     * @param array<string,string|string[]> $headers
+     */
+    public function delete(UriInterface $uri, StreamInterface $body, array $headers = []): ResponseInterface
     {
-        return [
-            'Accept' => 'application/json',
-            'Content-Type' => 'application/json; charset=utf-8',
-            'User-Agent' => sprintf(
-                'Ghostwriter/Atprotocol (%s; PHP %s; OS %s)',
-                InstalledVersions::getPrettyVersion('ghostwriter/atprotocol'),
-                PHP_VERSION,
-                PHP_OS_FAMILY,
-            ),
-        ];
+        return $this->httpClient->sendRequest($this->request('DELETE', $uri, $body, $headers));
+    }
+
+    /**
+     * @param array<string,string|string[]> $headers
+     */
+    public function get(UriInterface $uri, StreamInterface $body, array $headers = []): ResponseInterface
+    {
+        return $this->httpClient->sendRequest($this->request('GET', $uri, $body, $headers));
+    }
+
+    /**
+     * @param array<string,string|string[]> $headers
+     */
+    public function patch(UriInterface $uri, StreamInterface $body, array $headers = []): ResponseInterface
+    {
+        return $this->httpClient->sendRequest($this->request('PATCH', $uri, $body, $headers));
     }
 
     /**
@@ -66,6 +72,22 @@ trait HttpTrait
         }
 
         return $uri->withQuery(http_build_query($query));
+    }
+
+    /**
+     * @param array<string,string|string[]> $headers
+     */
+    public function post(UriInterface $uri, StreamInterface $body, array $headers = []): ResponseInterface
+    {
+        return $this->httpClient->sendRequest($this->request('POST', $uri, $body, $headers));
+    }
+
+    /**
+     * @param array<string,string|string[]> $headers
+     */
+    public function put(UriInterface $uri, StreamInterface $body, array $headers = []): ResponseInterface
+    {
+        return $this->httpClient->sendRequest($this->request('PUT', $uri, $body, $headers));
     }
 
     /**
@@ -102,43 +124,22 @@ trait HttpTrait
         return $request->withBody($body);
     }
 
-    /**
-     * @param array<string,string|string[]> $headers
-     */
-    public function delete(UriInterface $uri, StreamInterface $body, array $headers = []): ResponseInterface
+    public static function defaultHeaders(): array
     {
-        return $this->httpClient->sendRequest($this->request('DELETE', $uri, $body, $headers));
+        return [
+            'Accept' => 'application/json',
+            'Content-Type' => 'application/json; charset=utf-8',
+            'User-Agent' => sprintf(
+                'Ghostwriter/Atprotocol (%s; PHP %s; OS %s)',
+                InstalledVersions::getPrettyVersion('ghostwriter/atprotocol'),
+                PHP_VERSION,
+                PHP_OS_FAMILY,
+            ),
+        ];
     }
 
-    /**
-     * @param array<string,string|string[]> $headers
-     */
-    public function patch(UriInterface $uri, StreamInterface $body, array $headers = []): ResponseInterface
+    public static function new(string $uri): self
     {
-        return $this->httpClient->sendRequest($this->request('PATCH', $uri, $body, $headers));
-    }
-
-    /**
-     * @param array<string,string|string[]> $headers
-     */
-    public function put(UriInterface $uri, StreamInterface $body, array $headers = []): ResponseInterface
-    {
-        return $this->httpClient->sendRequest($this->request('PUT', $uri, $body, $headers));
-    }
-
-    /**
-     * @param array<string,string|string[]> $headers
-     */
-    public function post(UriInterface $uri, StreamInterface $body, array $headers = []): ResponseInterface
-    {
-        return $this->httpClient->sendRequest($this->request('POST', $uri, $body, $headers));
-    }
-
-    /**
-     * @param array<string,string|string[]> $headers
-     */
-    public function get(UriInterface $uri, StreamInterface $body, array $headers = []): ResponseInterface
-    {
-        return $this->httpClient->sendRequest($this->request('GET', $uri, $body, $headers));
+        return new self(new Uri($uri), new RequestFactory(), new StreamFactory(), new Client());
     }
 }
