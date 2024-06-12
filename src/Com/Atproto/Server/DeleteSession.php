@@ -16,14 +16,15 @@ use function json_encode;
 /**
  * Delete the current session. Requires auth.
  *
- * @see \Ghostwriter\AtProtocolTests\Unit\Com\Atproto\Server\DeleteSessionTest
+ * @see \Tests\Unit\Com\Atproto\Server\DeleteSessionTest
  */
 final readonly class DeleteSession
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
         private StreamFactoryInterface $streamFactory,
-    ) {}
+    ) {
+    }
 
     public function __invoke(UriInterface $pdsUri): RequestInterface
     {
