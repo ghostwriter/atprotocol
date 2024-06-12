@@ -14,13 +14,14 @@ use function http_build_query;
 /**
  * Get an admin view of invite codes.
  *
- * @see \Ghostwriter\AtProtocolTests\Unit\Com\Atproto\Admin\GetInviteCodesTest
+ * @see \Tests\Unit\Com\Atproto\Admin\GetInviteCodesTest
  */
 final readonly class GetInviteCodes
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
-    ) {}
+    ) {
+    }
 
     public function __invoke(
         UriInterface $pdsUri,
