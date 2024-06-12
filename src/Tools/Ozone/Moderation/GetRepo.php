@@ -14,13 +14,14 @@ use function http_build_query;
 /**
  * Get details about a repository.
  *
- * @see \Ghostwriter\AtProtocolTests\Unit\Tools\Ozone\Moderation\GetRepoTest
+ * @see \Tests\Unit\Tools\Ozone\Moderation\GetRepoTest
  */
 final readonly class GetRepo
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
-    ) {}
+    ) {
+    }
 
     public function __invoke(UriInterface $pdsUri, string $did = null): RequestInterface
     {
