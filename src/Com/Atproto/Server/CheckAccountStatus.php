@@ -14,13 +14,14 @@ use function http_build_query;
 /**
  * Returns the status of an account, especially as pertaining to import or recovery. Can be called many times over the course of an account migration. Requires auth and can only be called pertaining to oneself.
  *
- * @see \Ghostwriter\AtProtocolTests\Unit\Com\Atproto\Server\CheckAccountStatusTest
+ * @see \Tests\Unit\Com\Atproto\Server\CheckAccountStatusTest
  */
 final readonly class CheckAccountStatus
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
-    ) {}
+    ) {
+    }
 
     public function __invoke(UriInterface $pdsUri): RequestInterface
     {
