@@ -16,14 +16,15 @@ use function json_encode;
 /**
  * Signs a PLC operation to update some value(s) in the requesting DID's document.
  *
- * @see \Ghostwriter\AtProtocolTests\Unit\Com\Atproto\Identity\SignPlcOperationTest
+ * @see \Tests\Unit\Com\Atproto\Identity\SignPlcOperationTest
  */
 final readonly class SignPlcOperation
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
         private StreamFactoryInterface $streamFactory,
-    ) {}
+    ) {
+    }
 
     public function __invoke(
         UriInterface $pdsUri,
