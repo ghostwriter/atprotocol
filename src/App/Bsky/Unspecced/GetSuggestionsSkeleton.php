@@ -14,13 +14,14 @@ use function http_build_query;
 /**
  * Get a skeleton of suggested actors. Intended to be called and then hydrated through app.bsky.actor.getSuggestions.
  *
- * @see \Ghostwriter\AtProtocolTests\Unit\App\Bsky\Unspecced\GetSuggestionsSkeletonTest
+ * @see \Tests\Unit\App\Bsky\Unspecced\GetSuggestionsSkeletonTest
  */
 final readonly class GetSuggestionsSkeleton
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
-    ) {}
+    ) {
+    }
 
     public function __invoke(
         UriInterface $pdsUri,
