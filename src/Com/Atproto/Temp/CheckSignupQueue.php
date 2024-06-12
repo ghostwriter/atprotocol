@@ -14,13 +14,14 @@ use function http_build_query;
 /**
  * Check accounts location in signup queue.
  *
- * @see \Ghostwriter\AtProtocolTests\Unit\Com\Atproto\Temp\CheckSignupQueueTest
+ * @see \Tests\Unit\Com\Atproto\Temp\CheckSignupQueueTest
  */
 final readonly class CheckSignupQueue
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
-    ) {}
+    ) {
+    }
 
     public function __invoke(UriInterface $pdsUri): RequestInterface
     {
