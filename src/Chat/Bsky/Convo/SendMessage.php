@@ -16,14 +16,15 @@ use function json_encode;
 /**
  * SendMessage.
  *
- * @see \Ghostwriter\AtProtocolTests\Unit\Chat\Bsky\Convo\SendMessageTest
+ * @see \Tests\Unit\Chat\Bsky\Convo\SendMessageTest
  */
 final readonly class SendMessage
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
         private StreamFactoryInterface $streamFactory,
-    ) {}
+    ) {
+    }
 
     public function __invoke(
         UriInterface $pdsUri,
