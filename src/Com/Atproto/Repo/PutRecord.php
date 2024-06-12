@@ -16,14 +16,15 @@ use function json_encode;
 /**
  * Write a repository record, creating or updating it as needed. Requires auth, implemented by PDS.
  *
- * @see \Ghostwriter\AtProtocolTests\Unit\Com\Atproto\Repo\PutRecordTest
+ * @see \Tests\Unit\Com\Atproto\Repo\PutRecordTest
  */
 final readonly class PutRecord
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
         private StreamFactoryInterface $streamFactory,
-    ) {}
+    ) {
+    }
 
     public function __invoke(
         UriInterface $pdsUri,
