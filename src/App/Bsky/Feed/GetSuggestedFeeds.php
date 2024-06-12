@@ -14,13 +14,14 @@ use function http_build_query;
 /**
  * Get a list of suggested feeds (feed generators) for the requesting account.
  *
- * @see \Ghostwriter\AtProtocolTests\Unit\App\Bsky\Feed\GetSuggestedFeedsTest
+ * @see \Tests\Unit\App\Bsky\Feed\GetSuggestedFeedsTest
  */
 final readonly class GetSuggestedFeeds
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
-    ) {}
+    ) {
+    }
 
     public function __invoke(UriInterface $pdsUri, ?int $limit = null, ?string $cursor = null): RequestInterface
     {
