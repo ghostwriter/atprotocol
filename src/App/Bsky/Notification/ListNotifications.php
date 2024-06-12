@@ -14,13 +14,14 @@ use function http_build_query;
 /**
  * Enumerate notifications for the requesting account. Requires auth.
  *
- * @see \Ghostwriter\AtProtocolTests\Unit\App\Bsky\Notification\ListNotificationsTest
+ * @see \Tests\Unit\App\Bsky\Notification\ListNotificationsTest
  */
 final readonly class ListNotifications
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
-    ) {}
+    ) {
+    }
 
     public function __invoke(
         UriInterface $pdsUri,
