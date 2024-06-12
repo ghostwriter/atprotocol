@@ -16,14 +16,15 @@ use function json_encode;
 /**
  * Apply a batch transaction of repository creates, updates, and deletes. Requires auth, implemented by PDS.
  *
- * @see \Ghostwriter\AtProtocolTests\Unit\Com\Atproto\Repo\ApplyWritesTest
+ * @see \Tests\Unit\Com\Atproto\Repo\ApplyWritesTest
  */
 final readonly class ApplyWrites
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
         private StreamFactoryInterface $streamFactory,
-    ) {}
+    ) {
+    }
 
     public function __invoke(
         UriInterface $pdsUri,
