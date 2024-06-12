@@ -14,13 +14,14 @@ use function http_build_query;
 /**
  * DEPRECATED - please use com.atproto.sync.getRepo instead.
  *
- * @see \Ghostwriter\AtProtocolTests\Unit\Com\Atproto\Sync\GetCheckoutTest
+ * @see \Tests\Unit\Com\Atproto\Sync\GetCheckoutTest
  */
 final readonly class GetCheckout
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
-    ) {}
+    ) {
+    }
 
     public function __invoke(UriInterface $pdsUri, string $did = null): RequestInterface
     {
