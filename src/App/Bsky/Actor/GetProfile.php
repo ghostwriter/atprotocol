@@ -14,13 +14,14 @@ use function http_build_query;
 /**
  * Get detailed profile view of an actor. Does not require auth, but contains relevant metadata with auth.
  *
- * @see \Ghostwriter\AtProtocolTests\Unit\App\Bsky\Actor\GetProfileTest
+ * @see \Tests\Unit\App\Bsky\Actor\GetProfileTest
  */
 final readonly class GetProfile
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
-    ) {}
+    ) {
+    }
 
     public function __invoke(UriInterface $pdsUri, string $actor = null): RequestInterface
     {
