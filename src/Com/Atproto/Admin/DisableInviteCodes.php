@@ -16,14 +16,15 @@ use function json_encode;
 /**
  * Disable some set of codes and/or all codes associated with a set of users.
  *
- * @see \Ghostwriter\AtProtocolTests\Unit\Com\Atproto\Admin\DisableInviteCodesTest
+ * @see \Tests\Unit\Com\Atproto\Admin\DisableInviteCodesTest
  */
 final readonly class DisableInviteCodes
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
         private StreamFactoryInterface $streamFactory,
-    ) {}
+    ) {
+    }
 
     public function __invoke(
         UriInterface $pdsUri,
