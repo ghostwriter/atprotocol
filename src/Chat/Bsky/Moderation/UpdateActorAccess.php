@@ -16,14 +16,15 @@ use function json_encode;
 /**
  * UpdateActorAccess.
  *
- * @see \Ghostwriter\AtProtocolTests\Unit\Chat\Bsky\Moderation\UpdateActorAccessTest
+ * @see \Tests\Unit\Chat\Bsky\Moderation\UpdateActorAccessTest
  */
 final readonly class UpdateActorAccess
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
         private StreamFactoryInterface $streamFactory,
-    ) {}
+    ) {
+    }
 
     public function __invoke(
         UriInterface $pdsUri,
