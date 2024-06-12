@@ -16,14 +16,15 @@ use function json_encode;
 /**
  * Delete a communication template.
  *
- * @see \Ghostwriter\AtProtocolTests\Unit\Tools\Ozone\Communication\DeleteTemplateTest
+ * @see \Tests\Unit\Tools\Ozone\Communication\DeleteTemplateTest
  */
 final readonly class DeleteTemplate
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
         private StreamFactoryInterface $streamFactory,
-    ) {}
+    ) {
+    }
 
     public function __invoke(UriInterface $pdsUri, string $id = null): RequestInterface
     {
