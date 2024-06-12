@@ -14,13 +14,14 @@ use function http_build_query;
 /**
  * Find repositories based on a search term.
  *
- * @see \Ghostwriter\AtProtocolTests\Unit\Tools\Ozone\Moderation\SearchReposTest
+ * @see \Tests\Unit\Tools\Ozone\Moderation\SearchReposTest
  */
 final readonly class SearchRepos
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
-    ) {}
+    ) {
+    }
 
     public function __invoke(
         UriInterface $pdsUri,
