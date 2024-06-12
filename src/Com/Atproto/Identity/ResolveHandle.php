@@ -14,13 +14,14 @@ use function http_build_query;
 /**
  * Resolves a handle (domain name) to a DID.
  *
- * @see \Ghostwriter\AtProtocolTests\Unit\Com\Atproto\Identity\ResolveHandleTest
+ * @see \Tests\Unit\Com\Atproto\Identity\ResolveHandleTest
  */
 final readonly class ResolveHandle
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
-    ) {}
+    ) {
+    }
 
     public function __invoke(UriInterface $pdsUri, string $handle = null): RequestInterface
     {
