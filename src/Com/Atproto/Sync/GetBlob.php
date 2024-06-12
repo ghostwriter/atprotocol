@@ -14,13 +14,14 @@ use function http_build_query;
 /**
  * Get a blob associated with a given account. Returns the full blob as originally uploaded. Does not require auth; implemented by PDS.
  *
- * @see \Ghostwriter\AtProtocolTests\Unit\Com\Atproto\Sync\GetBlobTest
+ * @see \Tests\Unit\Com\Atproto\Sync\GetBlobTest
  */
 final readonly class GetBlob
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
-    ) {}
+    ) {
+    }
 
     public function __invoke(UriInterface $pdsUri, string $did = null, string $cid = null): RequestInterface
     {
