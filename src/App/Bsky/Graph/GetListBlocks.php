@@ -14,13 +14,14 @@ use function http_build_query;
 /**
  * Get mod lists that the requesting account (actor) is blocking. Requires auth.
  *
- * @see \Ghostwriter\AtProtocolTests\Unit\App\Bsky\Graph\GetListBlocksTest
+ * @see \Tests\Unit\App\Bsky\Graph\GetListBlocksTest
  */
 final readonly class GetListBlocks
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
-    ) {}
+    ) {
+    }
 
     public function __invoke(UriInterface $pdsUri, ?int $limit = null, ?string $cursor = null): RequestInterface
     {
