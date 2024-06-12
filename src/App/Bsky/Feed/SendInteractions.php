@@ -16,14 +16,15 @@ use function json_encode;
 /**
  * Send information about interactions with feed items back to the feed generator that served them.
  *
- * @see \Ghostwriter\AtProtocolTests\Unit\App\Bsky\Feed\SendInteractionsTest
+ * @see \Tests\Unit\App\Bsky\Feed\SendInteractionsTest
  */
 final readonly class SendInteractions
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
         private StreamFactoryInterface $streamFactory,
-    ) {}
+    ) {
+    }
 
     public function __invoke(UriInterface $pdsUri, array $interactions = null): RequestInterface
     {
