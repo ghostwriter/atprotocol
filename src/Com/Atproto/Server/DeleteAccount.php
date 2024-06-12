@@ -16,14 +16,15 @@ use function json_encode;
 /**
  * Delete an actor's account with a token and password. Can only be called after requesting a deletion token. Requires auth.
  *
- * @see \Ghostwriter\AtProtocolTests\Unit\Com\Atproto\Server\DeleteAccountTest
+ * @see \Tests\Unit\Com\Atproto\Server\DeleteAccountTest
  */
 final readonly class DeleteAccount
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
         private StreamFactoryInterface $streamFactory,
-    ) {}
+    ) {
+    }
 
     public function __invoke(
         UriInterface $pdsUri,
