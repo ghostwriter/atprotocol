@@ -14,13 +14,14 @@ use function http_build_query;
 /**
  * An unspecced view of globally popular feed generators.
  *
- * @see \Ghostwriter\AtProtocolTests\Unit\App\Bsky\Unspecced\GetPopularFeedGeneratorsTest
+ * @see \Tests\Unit\App\Bsky\Unspecced\GetPopularFeedGeneratorsTest
  */
 final readonly class GetPopularFeedGenerators
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
-    ) {}
+    ) {
+    }
 
     public function __invoke(
         UriInterface $pdsUri,
