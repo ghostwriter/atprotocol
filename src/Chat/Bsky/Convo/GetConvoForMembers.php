@@ -14,13 +14,14 @@ use function http_build_query;
 /**
  * GetConvoForMembers.
  *
- * @see \Ghostwriter\AtProtocolTests\Unit\Chat\Bsky\Convo\GetConvoForMembersTest
+ * @see \Tests\Unit\Chat\Bsky\Convo\GetConvoForMembersTest
  */
 final readonly class GetConvoForMembers
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
-    ) {}
+    ) {
+    }
 
     public function __invoke(UriInterface $pdsUri, array $members = null): RequestInterface
     {
