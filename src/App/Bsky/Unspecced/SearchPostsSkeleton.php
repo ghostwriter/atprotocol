@@ -14,13 +14,14 @@ use function http_build_query;
 /**
  * Backend Posts search, returns only skeleton.
  *
- * @see \Ghostwriter\AtProtocolTests\Unit\App\Bsky\Unspecced\SearchPostsSkeletonTest
+ * @see \Tests\Unit\App\Bsky\Unspecced\SearchPostsSkeletonTest
  */
 final readonly class SearchPostsSkeleton
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
-    ) {}
+    ) {
+    }
 
     public function __invoke(
         UriInterface $pdsUri,
