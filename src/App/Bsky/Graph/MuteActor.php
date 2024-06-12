@@ -16,14 +16,15 @@ use function json_encode;
 /**
  * Creates a mute relationship for the specified account. Mutes are private in Bluesky. Requires auth.
  *
- * @see \Ghostwriter\AtProtocolTests\Unit\App\Bsky\Graph\MuteActorTest
+ * @see \Tests\Unit\App\Bsky\Graph\MuteActorTest
  */
 final readonly class MuteActor
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
         private StreamFactoryInterface $streamFactory,
-    ) {}
+    ) {
+    }
 
     public function __invoke(UriInterface $pdsUri, string $actor = null): RequestInterface
     {
