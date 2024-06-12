@@ -16,14 +16,15 @@ use function json_encode;
 /**
  * Re-enable an account's ability to receive invite codes.
  *
- * @see \Ghostwriter\AtProtocolTests\Unit\Com\Atproto\Admin\EnableAccountInvitesTest
+ * @see \Tests\Unit\Com\Atproto\Admin\EnableAccountInvitesTest
  */
 final readonly class EnableAccountInvites
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
         private StreamFactoryInterface $streamFactory,
-    ) {}
+    ) {
+    }
 
     public function __invoke(
         UriInterface $pdsUri,
