@@ -14,13 +14,14 @@ use function http_build_query;
 /**
  * Returns a list of missing blobs for the requesting account. Intended to be used in the account migration flow.
  *
- * @see \Ghostwriter\AtProtocolTests\Unit\Com\Atproto\Repo\ListMissingBlobsTest
+ * @see \Tests\Unit\Com\Atproto\Repo\ListMissingBlobsTest
  */
 final readonly class ListMissingBlobs
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
-    ) {}
+    ) {
+    }
 
     public function __invoke(UriInterface $pdsUri, ?int $limit = null, ?string $cursor = null): RequestInterface
     {
