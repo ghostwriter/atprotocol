@@ -14,13 +14,14 @@ use function http_build_query;
 /**
  * Enumerates mod lists that the requesting account (actor) currently has muted. Requires auth.
  *
- * @see \Ghostwriter\AtProtocolTests\Unit\App\Bsky\Graph\GetListMutesTest
+ * @see \Tests\Unit\App\Bsky\Graph\GetListMutesTest
  */
 final readonly class GetListMutes
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
-    ) {}
+    ) {
+    }
 
     public function __invoke(UriInterface $pdsUri, ?int $limit = null, ?string $cursor = null): RequestInterface
     {
