@@ -16,14 +16,15 @@ use function json_encode;
 /**
  * UnmuteConvo.
  *
- * @see \Ghostwriter\AtProtocolTests\Unit\Chat\Bsky\Convo\UnmuteConvoTest
+ * @see \Tests\Unit\Chat\Bsky\Convo\UnmuteConvoTest
  */
 final readonly class UnmuteConvo
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
         private StreamFactoryInterface $streamFactory,
-    ) {}
+    ) {
+    }
 
     public function __invoke(UriInterface $pdsUri, string $convoId = null): RequestInterface
     {
