@@ -14,13 +14,14 @@ use function http_build_query;
 /**
  * Get all invite codes for the current account. Requires auth.
  *
- * @see \Ghostwriter\AtProtocolTests\Unit\Com\Atproto\Server\GetAccountInviteCodesTest
+ * @see \Tests\Unit\Com\Atproto\Server\GetAccountInviteCodesTest
  */
 final readonly class GetAccountInviteCodes
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
-    ) {}
+    ) {
+    }
 
     public function __invoke(
         UriInterface $pdsUri,
