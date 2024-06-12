@@ -14,13 +14,14 @@ use function http_build_query;
 /**
  * Find actors (profiles) matching search criteria. Does not require auth.
  *
- * @see \Ghostwriter\AtProtocolTests\Unit\App\Bsky\Actor\SearchActorsTest
+ * @see \Tests\Unit\App\Bsky\Actor\SearchActorsTest
  */
 final readonly class SearchActors
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
-    ) {}
+    ) {
+    }
 
     public function __invoke(
         UriInterface $pdsUri,
