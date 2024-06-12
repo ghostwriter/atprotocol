@@ -245,6 +245,15 @@
       <code><![CDATA[GetFollows]]></code>
     </UnusedClass>
   </file>
+  <file src="src/App/Bsky/Graph/GetKnownFollowers.php">
+    <MissingThrowsDocblock>
+      <code><![CDATA[withPath]]></code>
+      <code><![CDATA[withQuery]]></code>
+    </MissingThrowsDocblock>
+    <UnusedClass>
+      <code><![CDATA[GetKnownFollowers]]></code>
+    </UnusedClass>
+  </file>
   <file src="src/App/Bsky/Graph/GetList.php">
     <MissingThrowsDocblock>
       <code><![CDATA[withPath]]></code>
@@ -395,15 +404,6 @@
       <code><![CDATA[UpdateSeen]]></code>
     </UnusedClass>
   </file>
-  <file src="src/App/Bsky/Unspecced/GetPopular.php">
-    <MissingThrowsDocblock>
-      <code><![CDATA[withPath]]></code>
-      <code><![CDATA[withQuery]]></code>
-    </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[GetPopular]]></code>
-    </UnusedClass>
-  </file>
   <file src="src/App/Bsky/Unspecced/GetPopularFeedGenerators.php">
     <MissingThrowsDocblock>
       <code><![CDATA[withPath]]></code>
@@ -429,15 +429,6 @@
     </MissingThrowsDocblock>
     <UnusedClass>
       <code><![CDATA[GetTaggedSuggestions]]></code>
-    </UnusedClass>
-  </file>
-  <file src="src/App/Bsky/Unspecced/GetTimelineSkeleton.php">
-    <MissingThrowsDocblock>
-      <code><![CDATA[withPath]]></code>
-      <code><![CDATA[withQuery]]></code>
-    </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[GetTimelineSkeleton]]></code>
     </UnusedClass>
   </file>
   <file src="src/App/Bsky/Unspecced/SearchActorsSkeleton.php">
@@ -660,19 +651,6 @@
       <code><![CDATA[UpdateActorAccess]]></code>
     </UnusedClass>
   </file>
-  <file src="src/Com/Atproto/Admin/CreateCommunicationTemplate.php">
-    <MissingThrowsDocblock>
-      <code><![CDATA[throw new RuntimeException('Failed to encode JSON');]]></code>
-      <code><![CDATA[withBody]]></code>
-      <code><![CDATA[withPath]]></code>
-    </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[CreateCommunicationTemplate]]></code>
-    </UnusedClass>
-    <UnusedParam>
-      <code><![CDATA[$name]]></code>
-    </UnusedParam>
-  </file>
   <file src="src/Com/Atproto/Admin/DeleteAccount.php">
     <MissingThrowsDocblock>
       <code><![CDATA[throw new RuntimeException('Failed to encode JSON');]]></code>
@@ -681,16 +659,6 @@
     </MissingThrowsDocblock>
     <UnusedClass>
       <code><![CDATA[DeleteAccount]]></code>
-    </UnusedClass>
-  </file>
-  <file src="src/Com/Atproto/Admin/DeleteCommunicationTemplate.php">
-    <MissingThrowsDocblock>
-      <code><![CDATA[throw new RuntimeException('Failed to encode JSON');]]></code>
-      <code><![CDATA[withBody]]></code>
-      <code><![CDATA[withPath]]></code>
-    </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[DeleteCommunicationTemplate]]></code>
     </UnusedClass>
   </file>
   <file src="src/Com/Atproto/Admin/DisableAccountInvites.php">
@@ -711,16 +679,6 @@
     </MissingThrowsDocblock>
     <UnusedClass>
       <code><![CDATA[DisableInviteCodes]]></code>
-    </UnusedClass>
-  </file>
-  <file src="src/Com/Atproto/Admin/EmitModerationEvent.php">
-    <MissingThrowsDocblock>
-      <code><![CDATA[throw new RuntimeException('Failed to encode JSON');]]></code>
-      <code><![CDATA[withBody]]></code>
-      <code><![CDATA[withPath]]></code>
-    </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[EmitModerationEvent]]></code>
     </UnusedClass>
   </file>
   <file src="src/Com/Atproto/Admin/EnableAccountInvites.php">
@@ -760,69 +718,6 @@
       <code><![CDATA[GetInviteCodes]]></code>
     </UnusedClass>
   </file>
-  <file src="src/Com/Atproto/Admin/GetModerationAction.php">
-    <MissingThrowsDocblock>
-      <code><![CDATA[withPath]]></code>
-      <code><![CDATA[withQuery]]></code>
-    </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[GetModerationAction]]></code>
-    </UnusedClass>
-  </file>
-  <file src="src/Com/Atproto/Admin/GetModerationActions.php">
-    <MissingThrowsDocblock>
-      <code><![CDATA[withPath]]></code>
-      <code><![CDATA[withQuery]]></code>
-    </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[GetModerationActions]]></code>
-    </UnusedClass>
-  </file>
-  <file src="src/Com/Atproto/Admin/GetModerationEvent.php">
-    <MissingThrowsDocblock>
-      <code><![CDATA[withPath]]></code>
-      <code><![CDATA[withQuery]]></code>
-    </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[GetModerationEvent]]></code>
-    </UnusedClass>
-  </file>
-  <file src="src/Com/Atproto/Admin/GetModerationReport.php">
-    <MissingThrowsDocblock>
-      <code><![CDATA[withPath]]></code>
-      <code><![CDATA[withQuery]]></code>
-    </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[GetModerationReport]]></code>
-    </UnusedClass>
-  </file>
-  <file src="src/Com/Atproto/Admin/GetModerationReports.php">
-    <MissingThrowsDocblock>
-      <code><![CDATA[withPath]]></code>
-      <code><![CDATA[withQuery]]></code>
-    </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[GetModerationReports]]></code>
-    </UnusedClass>
-  </file>
-  <file src="src/Com/Atproto/Admin/GetRecord.php">
-    <MissingThrowsDocblock>
-      <code><![CDATA[withPath]]></code>
-      <code><![CDATA[withQuery]]></code>
-    </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[GetRecord]]></code>
-    </UnusedClass>
-  </file>
-  <file src="src/Com/Atproto/Admin/GetRepo.php">
-    <MissingThrowsDocblock>
-      <code><![CDATA[withPath]]></code>
-      <code><![CDATA[withQuery]]></code>
-    </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[GetRepo]]></code>
-    </UnusedClass>
-  </file>
   <file src="src/Com/Atproto/Admin/GetSubjectStatus.php">
     <MissingThrowsDocblock>
       <code><![CDATA[withPath]]></code>
@@ -832,60 +727,13 @@
       <code><![CDATA[GetSubjectStatus]]></code>
     </UnusedClass>
   </file>
-  <file src="src/Com/Atproto/Admin/ListCommunicationTemplates.php">
+  <file src="src/Com/Atproto/Admin/SearchAccounts.php">
     <MissingThrowsDocblock>
       <code><![CDATA[withPath]]></code>
       <code><![CDATA[withQuery]]></code>
     </MissingThrowsDocblock>
     <UnusedClass>
-      <code><![CDATA[ListCommunicationTemplates]]></code>
-    </UnusedClass>
-  </file>
-  <file src="src/Com/Atproto/Admin/QueryModerationEvents.php">
-    <MissingThrowsDocblock>
-      <code><![CDATA[withPath]]></code>
-      <code><![CDATA[withQuery]]></code>
-    </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[QueryModerationEvents]]></code>
-    </UnusedClass>
-  </file>
-  <file src="src/Com/Atproto/Admin/QueryModerationStatuses.php">
-    <MissingThrowsDocblock>
-      <code><![CDATA[withPath]]></code>
-      <code><![CDATA[withQuery]]></code>
-    </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[QueryModerationStatuses]]></code>
-    </UnusedClass>
-  </file>
-  <file src="src/Com/Atproto/Admin/ResolveModerationReports.php">
-    <MissingThrowsDocblock>
-      <code><![CDATA[throw new RuntimeException('Failed to encode JSON');]]></code>
-      <code><![CDATA[withBody]]></code>
-      <code><![CDATA[withPath]]></code>
-    </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[ResolveModerationReports]]></code>
-    </UnusedClass>
-  </file>
-  <file src="src/Com/Atproto/Admin/ReverseModerationAction.php">
-    <MissingThrowsDocblock>
-      <code><![CDATA[throw new RuntimeException('Failed to encode JSON');]]></code>
-      <code><![CDATA[withBody]]></code>
-      <code><![CDATA[withPath]]></code>
-    </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[ReverseModerationAction]]></code>
-    </UnusedClass>
-  </file>
-  <file src="src/Com/Atproto/Admin/SearchRepos.php">
-    <MissingThrowsDocblock>
-      <code><![CDATA[withPath]]></code>
-      <code><![CDATA[withQuery]]></code>
-    </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[SearchRepos]]></code>
+      <code><![CDATA[SearchAccounts]]></code>
     </UnusedClass>
   </file>
   <file src="src/Com/Atproto/Admin/SendEmail.php">
@@ -896,16 +744,6 @@
     </MissingThrowsDocblock>
     <UnusedClass>
       <code><![CDATA[SendEmail]]></code>
-    </UnusedClass>
-  </file>
-  <file src="src/Com/Atproto/Admin/TakeModerationAction.php">
-    <MissingThrowsDocblock>
-      <code><![CDATA[throw new RuntimeException('Failed to encode JSON');]]></code>
-      <code><![CDATA[withBody]]></code>
-      <code><![CDATA[withPath]]></code>
-    </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[TakeModerationAction]]></code>
     </UnusedClass>
   </file>
   <file src="src/Com/Atproto/Admin/UpdateAccountEmail.php">
@@ -937,19 +775,6 @@
     <UnusedClass>
       <code><![CDATA[UpdateAccountPassword]]></code>
     </UnusedClass>
-  </file>
-  <file src="src/Com/Atproto/Admin/UpdateCommunicationTemplate.php">
-    <MissingThrowsDocblock>
-      <code><![CDATA[throw new RuntimeException('Failed to encode JSON');]]></code>
-      <code><![CDATA[withBody]]></code>
-      <code><![CDATA[withPath]]></code>
-    </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[UpdateCommunicationTemplate]]></code>
-    </UnusedClass>
-    <UnusedParam>
-      <code><![CDATA[$name]]></code>
-    </UnusedParam>
   </file>
   <file src="src/Com/Atproto/Admin/UpdateSubjectStatus.php">
     <MissingThrowsDocblock>
@@ -1512,26 +1337,6 @@
       <code><![CDATA[FetchLabels]]></code>
     </UnusedClass>
   </file>
-  <file src="src/Com/Atproto/Temp/ImportRepo.php">
-    <MissingThrowsDocblock>
-      <code><![CDATA[throw new RuntimeException('Failed to encode JSON');]]></code>
-      <code><![CDATA[withBody]]></code>
-      <code><![CDATA[withPath]]></code>
-    </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[ImportRepo]]></code>
-    </UnusedClass>
-  </file>
-  <file src="src/Com/Atproto/Temp/PushBlob.php">
-    <MissingThrowsDocblock>
-      <code><![CDATA[throw new RuntimeException('Failed to encode JSON');]]></code>
-      <code><![CDATA[withBody]]></code>
-      <code><![CDATA[withPath]]></code>
-    </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[PushBlob]]></code>
-    </UnusedClass>
-  </file>
   <file src="src/Com/Atproto/Temp/RequestPhoneVerification.php">
     <MissingThrowsDocblock>
       <code><![CDATA[throw new RuntimeException('Failed to encode JSON');]]></code>
@@ -1540,16 +1345,6 @@
     </MissingThrowsDocblock>
     <UnusedClass>
       <code><![CDATA[RequestPhoneVerification]]></code>
-    </UnusedClass>
-  </file>
-  <file src="src/Com/Atproto/Temp/TransferAccount.php">
-    <MissingThrowsDocblock>
-      <code><![CDATA[throw new RuntimeException('Failed to encode JSON');]]></code>
-      <code><![CDATA[withBody]]></code>
-      <code><![CDATA[withPath]]></code>
-    </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[TransferAccount]]></code>
     </UnusedClass>
   </file>
   <file src="src/Middleware/AuthenticateMiddleware.php">
@@ -1668,6 +1463,15 @@
     </MissingThrowsDocblock>
     <UnusedClass>
       <code><![CDATA[SearchRepos]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/Tools/Ozone/Server/GetConfig.php">
+    <MissingThrowsDocblock>
+      <code><![CDATA[withPath]]></code>
+      <code><![CDATA[withQuery]]></code>
+    </MissingThrowsDocblock>
+    <UnusedClass>
+      <code><![CDATA[GetConfig]]></code>
     </UnusedClass>
   </file>
   <file src="src/Trait/HttpTrait.php">
