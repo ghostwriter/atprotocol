@@ -14,13 +14,14 @@ use function http_build_query;
 /**
  * List blob CIDso for an account, since some repo revision. Does not require auth; implemented by PDS.
  *
- * @see \Ghostwriter\AtProtocolTests\Unit\Com\Atproto\Sync\ListBlobsTest
+ * @see \Tests\Unit\Com\Atproto\Sync\ListBlobsTest
  */
 final readonly class ListBlobs
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
-    ) {}
+    ) {
+    }
 
     public function __invoke(
         UriInterface $pdsUri,
