@@ -16,14 +16,15 @@ use function json_encode;
 /**
  * Deactivates a currently active account. Stops serving of repo, and future writes to repo until reactivated. Used to finalize account migration with the old host after the account has been activated on the new host.
  *
- * @see \Ghostwriter\AtProtocolTests\Unit\Com\Atproto\Server\DeactivateAccountTest
+ * @see \Tests\Unit\Com\Atproto\Server\DeactivateAccountTest
  */
 final readonly class DeactivateAccount
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
         private StreamFactoryInterface $streamFactory,
-    ) {}
+    ) {
+    }
 
     public function __invoke(UriInterface $pdsUri, ?string $deleteAfter = null): RequestInterface
     {
