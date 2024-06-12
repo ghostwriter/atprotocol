@@ -16,14 +16,15 @@ use function json_encode;
 /**
  * Create an authentication session.
  *
- * @see \Ghostwriter\AtProtocolTests\Unit\Com\Atproto\Server\CreateSessionTest
+ * @see \Tests\Unit\Com\Atproto\Server\CreateSessionTest
  */
 final readonly class CreateSession
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
         private StreamFactoryInterface $streamFactory,
-    ) {}
+    ) {
+    }
 
     public function __invoke(
         UriInterface $pdsUri,
