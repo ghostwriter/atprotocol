@@ -14,13 +14,14 @@ use function http_build_query;
 /**
  * Get information about a list of labeler services.
  *
- * @see \Ghostwriter\AtProtocolTests\Unit\App\Bsky\Labeler\GetServicesTest
+ * @see \Tests\Unit\App\Bsky\Labeler\GetServicesTest
  */
 final readonly class GetServices
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
-    ) {}
+    ) {
+    }
 
     public function __invoke(UriInterface $pdsUri, array $dids = null, ?bool $detailed = null): RequestInterface
     {
