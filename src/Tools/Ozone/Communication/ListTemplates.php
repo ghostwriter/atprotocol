@@ -14,13 +14,14 @@ use function http_build_query;
 /**
  * Get list of all communication templates.
  *
- * @see \Ghostwriter\AtProtocolTests\Unit\Tools\Ozone\Communication\ListTemplatesTest
+ * @see \Tests\Unit\Tools\Ozone\Communication\ListTemplatesTest
  */
 final readonly class ListTemplates
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
-    ) {}
+    ) {
+    }
 
     public function __invoke(UriInterface $pdsUri): RequestInterface
     {
