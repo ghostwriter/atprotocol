@@ -14,13 +14,14 @@ use function http_build_query;
 /**
  * Gets a 'view' (with additional context) of a specified list.
  *
- * @see \Ghostwriter\AtProtocolTests\Unit\App\Bsky\Graph\GetListTest
+ * @see \Tests\Unit\App\Bsky\Graph\GetListTest
  */
 final readonly class GetList
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
-    ) {}
+    ) {
+    }
 
     public function __invoke(
         UriInterface $pdsUri,
