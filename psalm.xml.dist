@@ -65,6 +65,11 @@
                 <directory name="tests"/>
             </errorLevel>
         </PropertyNotSetInConstructor>
+        <RedundantConditionGivenDocblockType>
+            <errorLevel type="suppress">
+                <directory name="tests"/>
+            </errorLevel>
+        </RedundantConditionGivenDocblockType>
         <UnusedClass>
             <errorLevel type="suppress">
                 <directory name="tests"/>
