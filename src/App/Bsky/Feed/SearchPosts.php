@@ -25,7 +25,7 @@ final readonly class SearchPosts
 
     public function __invoke(
         UriInterface $pdsUri,
-        string $q = null,
+        ?string $q = null,
         ?string $sort = null,
         ?string $since = null,
         ?string $until = null,
