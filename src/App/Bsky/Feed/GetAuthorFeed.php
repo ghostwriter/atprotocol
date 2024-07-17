@@ -25,7 +25,7 @@ final readonly class GetAuthorFeed
 
     public function __invoke(
         UriInterface $pdsUri,
-        string $actor = null,
+        ?string $actor = null,
         ?int $limit = null,
         ?string $cursor = null,
         ?string $filter = null,
