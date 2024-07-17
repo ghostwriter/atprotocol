@@ -28,9 +28,9 @@ final readonly class CreateRecord
 
     public function __invoke(
         UriInterface $pdsUri,
-        string $repo = null,
-        string $collection = null,
-        string $record = null,
+        ?string $repo = null,
+        ?string $collection = null,
+        ?string $record = null,
         ?string $rkey = null,
         ?bool $validate = null,
         ?string $swapCommit = null,
