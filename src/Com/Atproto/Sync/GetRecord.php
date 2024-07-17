@@ -25,9 +25,9 @@ final readonly class GetRecord
 
     public function __invoke(
         UriInterface $pdsUri,
-        string $did = null,
-        string $collection = null,
-        string $rkey = null,
+        ?string $did = null,
+        ?string $collection = null,
+        ?string $rkey = null,
     ): RequestInterface {
         $request = $this->requestFactory
             ->createRequest(
