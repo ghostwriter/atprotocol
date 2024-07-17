@@ -28,10 +28,10 @@ final readonly class PutRecord
 
     public function __invoke(
         UriInterface $pdsUri,
-        string $repo = null,
-        string $collection = null,
-        string $rkey = null,
-        string $record = null,
+        ?string $repo = null,
+        ?string $collection = null,
+        ?string $rkey = null,
+        ?string $record = null,
         ?bool $validate = null,
         ?string $swapRecord = null,
         ?string $swapCommit = null,
