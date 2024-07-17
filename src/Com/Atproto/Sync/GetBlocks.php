@@ -23,7 +23,7 @@ final readonly class GetBlocks
     ) {
     }
 
-    public function __invoke(UriInterface $pdsUri, string $did = null, array $cids = null): RequestInterface
+    public function __invoke(UriInterface $pdsUri, ?string $did = null, ?array $cids = null): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
