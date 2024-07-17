@@ -23,7 +23,7 @@ final readonly class GetServices
     ) {
     }
 
-    public function __invoke(UriInterface $pdsUri, array $dids = null, ?bool $detailed = null): RequestInterface
+    public function __invoke(UriInterface $pdsUri, ?array $dids = null, ?bool $detailed = null): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
