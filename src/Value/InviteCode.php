@@ -15,7 +15,10 @@ final readonly class InviteCode implements Stringable
     public function __construct(
         private readonly string $invitecode,
     ) {
-        if (! preg_match('#^invitecode:[a-z]+:[a-zA-Z0-9._:%-]*[a-zA-Z0-9._-]$#', $this->invitecode)) {
+        if (preg_match('#^invitecode:[a-z]+:[a-zA-Z0-9._:%-]*[a-zA-Z0-9._-]$#', $this->invitecode) === 0 || preg_match(
+            '#^invitecode:[a-z]+:[a-zA-Z0-9._:%-]*[a-zA-Z0-9._-]$#',
+            $this->invitecode
+        ) === false) {
             throw new InvalidArgumentException('Invalid InviteCode: ' . $this->invitecode);
         }
     }
