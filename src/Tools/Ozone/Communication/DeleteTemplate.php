@@ -26,7 +26,7 @@ final readonly class DeleteTemplate
     ) {
     }
 
-    public function __invoke(UriInterface $pdsUri, string $id = null): RequestInterface
+    public function __invoke(UriInterface $pdsUri, ?string $id = null): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest('POST', $pdsUri->withPath('xrpc/tools.ozone.communication.deleteTemplate'));
