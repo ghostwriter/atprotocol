@@ -28,10 +28,10 @@ final readonly class RegisterPush
 
     public function __invoke(
         UriInterface $pdsUri,
-        string $serviceDid = null,
-        string $token = null,
-        string $platform = null,
-        string $appId = null,
+        ?string $serviceDid = null,
+        ?string $token = null,
+        ?string $platform = null,
+        ?string $appId = null,
     ): RequestInterface {
         $request = $this->requestFactory
             ->createRequest('POST', $pdsUri->withPath('xrpc/app.bsky.notification.registerPush'));
