@@ -28,7 +28,7 @@ final readonly class UpdateSubjectStatus
 
     public function __invoke(
         UriInterface $pdsUri,
-        string $subject = null,
+        ?string $subject = null,
         ?string $takedown = null,
         ?string $deactivated = null,
     ): RequestInterface {
