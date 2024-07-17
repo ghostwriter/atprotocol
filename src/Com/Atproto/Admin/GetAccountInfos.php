@@ -23,7 +23,7 @@ final readonly class GetAccountInfos
     ) {
     }
 
-    public function __invoke(UriInterface $pdsUri, array $dids = null): RequestInterface
+    public function __invoke(UriInterface $pdsUri, ?array $dids = null): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
