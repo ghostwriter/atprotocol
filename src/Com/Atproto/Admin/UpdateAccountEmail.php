@@ -28,8 +28,8 @@ final readonly class UpdateAccountEmail
 
     public function __invoke(
         UriInterface $pdsUri,
-        string $account = null,
-        string $email = null,
+        ?string $account = null,
+        ?string $email = null,
     ): RequestInterface {
         $request = $this->requestFactory
             ->createRequest('POST', $pdsUri->withPath('xrpc/com.atproto.admin.updateAccountEmail'));
