@@ -23,7 +23,7 @@ final readonly class GetFeedGenerator
     ) {
     }
 
-    public function __invoke(UriInterface $pdsUri, string $feed = null): RequestInterface
+    public function __invoke(UriInterface $pdsUri, ?string $feed = null): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
