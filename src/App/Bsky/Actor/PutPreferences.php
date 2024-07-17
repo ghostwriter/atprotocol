@@ -26,7 +26,7 @@ final readonly class PutPreferences
     ) {
     }
 
-    public function __invoke(UriInterface $pdsUri, string $preferences = null): RequestInterface
+    public function __invoke(UriInterface $pdsUri, ?string $preferences = null): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest('POST', $pdsUri->withPath('xrpc/app.bsky.actor.putPreferences'));
