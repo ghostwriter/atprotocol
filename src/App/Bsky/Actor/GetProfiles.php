@@ -23,7 +23,7 @@ final readonly class GetProfiles
     ) {
     }
 
-    public function __invoke(UriInterface $pdsUri, array $actors = null): RequestInterface
+    public function __invoke(UriInterface $pdsUri, ?array $actors = null): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
