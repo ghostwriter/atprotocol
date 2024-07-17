@@ -28,7 +28,7 @@ final readonly class EnableAccountInvites
 
     public function __invoke(
         UriInterface $pdsUri,
-        string $account = null,
+        ?string $account = null,
         ?string $note = null,
     ): RequestInterface {
         $request = $this->requestFactory
