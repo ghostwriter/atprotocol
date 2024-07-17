@@ -23,7 +23,7 @@ final readonly class GetConvoForMembers
     ) {
     }
 
-    public function __invoke(UriInterface $pdsUri, array $members = null): RequestInterface
+    public function __invoke(UriInterface $pdsUri, ?array $members = null): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
