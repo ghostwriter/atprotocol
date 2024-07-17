@@ -26,7 +26,7 @@ final readonly class UpdateHandle
     ) {
     }
 
-    public function __invoke(UriInterface $pdsUri, string $handle = null): RequestInterface
+    public function __invoke(UriInterface $pdsUri, ?string $handle = null): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest('POST', $pdsUri->withPath('xrpc/com.atproto.identity.updateHandle'));
