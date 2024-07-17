@@ -23,7 +23,7 @@ final readonly class GetEvent
     ) {
     }
 
-    public function __invoke(UriInterface $pdsUri, int $id = null): RequestInterface
+    public function __invoke(UriInterface $pdsUri, ?int $id = null): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
