@@ -25,8 +25,8 @@ final readonly class ListRecords
 
     public function __invoke(
         UriInterface $pdsUri,
-        string $repo = null,
-        string $collection = null,
+        ?string $repo = null,
+        ?string $collection = null,
         ?int $limit = null,
         ?string $cursor = null,
         ?bool $reverse = null,
