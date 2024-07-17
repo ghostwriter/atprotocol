@@ -23,7 +23,7 @@ final readonly class GetRepo
     ) {
     }
 
-    public function __invoke(UriInterface $pdsUri, string $did = null, ?string $since = null): RequestInterface
+    public function __invoke(UriInterface $pdsUri, ?string $did = null, ?string $since = null): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
