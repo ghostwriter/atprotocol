@@ -28,9 +28,9 @@ final readonly class DeleteRecord
 
     public function __invoke(
         UriInterface $pdsUri,
-        string $repo = null,
-        string $collection = null,
-        string $rkey = null,
+        ?string $repo = null,
+        ?string $collection = null,
+        ?string $rkey = null,
         ?string $swapRecord = null,
         ?string $swapCommit = null,
     ): RequestInterface {
