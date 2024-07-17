@@ -26,7 +26,7 @@ final readonly class MuteConvo
     ) {
     }
 
-    public function __invoke(UriInterface $pdsUri, string $convoId = null): RequestInterface
+    public function __invoke(UriInterface $pdsUri, ?string $convoId = null): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest('POST', $pdsUri->withPath('xrpc/chat.bsky.convo.muteConvo'));
