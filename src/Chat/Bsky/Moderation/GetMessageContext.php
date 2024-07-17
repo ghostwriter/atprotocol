@@ -25,7 +25,7 @@ final readonly class GetMessageContext
 
     public function __invoke(
         UriInterface $pdsUri,
-        string $messageId = null,
+        ?string $messageId = null,
         ?string $convoId = null,
         ?int $before = null,
         ?int $after = null,
