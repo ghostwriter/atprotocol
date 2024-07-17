@@ -28,9 +28,9 @@ final readonly class SendEmail
 
     public function __invoke(
         UriInterface $pdsUri,
-        string $recipientDid = null,
-        string $content = null,
-        string $senderDid = null,
+        ?string $recipientDid = null,
+        ?string $content = null,
+        ?string $senderDid = null,
         ?string $subject = null,
         ?string $comment = null,
     ): RequestInterface {
