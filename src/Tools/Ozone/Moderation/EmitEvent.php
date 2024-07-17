@@ -28,9 +28,9 @@ final readonly class EmitEvent
 
     public function __invoke(
         UriInterface $pdsUri,
-        string $event = null,
-        string $subject = null,
-        string $createdBy = null,
+        ?string $event = null,
+        ?string $subject = null,
+        ?string $createdBy = null,
         ?array $subjectBlobCids = null,
     ): RequestInterface {
         $request = $this->requestFactory
