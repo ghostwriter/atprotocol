@@ -28,8 +28,8 @@ final readonly class ApplyWrites
 
     public function __invoke(
         UriInterface $pdsUri,
-        string $repo = null,
-        array $writes = null,
+        ?string $repo = null,
+        ?array $writes = null,
         ?bool $validate = null,
         ?string $swapCommit = null,
     ): RequestInterface {
