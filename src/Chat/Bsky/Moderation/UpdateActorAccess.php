@@ -28,8 +28,8 @@ final readonly class UpdateActorAccess
 
     public function __invoke(
         UriInterface $pdsUri,
-        string $actor = null,
-        bool $allowAccess = null,
+        ?string $actor = null,
+        ?bool $allowAccess = null,
         ?string $ref = null,
     ): RequestInterface {
         $request = $this->requestFactory
