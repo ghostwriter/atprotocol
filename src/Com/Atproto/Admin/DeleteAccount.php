@@ -26,7 +26,7 @@ final readonly class DeleteAccount
     ) {
     }
 
-    public function __invoke(UriInterface $pdsUri, string $did = null): RequestInterface
+    public function __invoke(UriInterface $pdsUri, ?string $did = null): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest('POST', $pdsUri->withPath('xrpc/com.atproto.admin.deleteAccount'));
