@@ -26,7 +26,7 @@ final readonly class RequestPhoneVerification
     ) {
     }
 
-    public function __invoke(UriInterface $pdsUri, string $phoneNumber = null): RequestInterface
+    public function __invoke(UriInterface $pdsUri, ?string $phoneNumber = null): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest('POST', $pdsUri->withPath('xrpc/com.atproto.temp.requestPhoneVerification'));
