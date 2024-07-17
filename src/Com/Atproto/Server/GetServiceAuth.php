@@ -23,7 +23,7 @@ final readonly class GetServiceAuth
     ) {
     }
 
-    public function __invoke(UriInterface $pdsUri, string $aud = null): RequestInterface
+    public function __invoke(UriInterface $pdsUri, ?string $aud = null): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
