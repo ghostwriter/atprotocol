@@ -25,7 +25,7 @@ final readonly class GetMessages
 
     public function __invoke(
         UriInterface $pdsUri,
-        string $convoId = null,
+        ?string $convoId = null,
         ?int $limit = null,
         ?string $cursor = null,
     ): RequestInterface {
