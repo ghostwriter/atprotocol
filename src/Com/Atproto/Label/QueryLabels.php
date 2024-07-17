@@ -25,7 +25,7 @@ final readonly class QueryLabels
 
     public function __invoke(
         UriInterface $pdsUri,
-        array $uriPatterns = null,
+        ?array $uriPatterns = null,
         ?array $sources = null,
         ?int $limit = null,
         ?string $cursor = null,
