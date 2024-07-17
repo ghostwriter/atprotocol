@@ -26,7 +26,7 @@ final readonly class UpdateSeen
     ) {
     }
 
-    public function __invoke(UriInterface $pdsUri, string $seenAt = null): RequestInterface
+    public function __invoke(UriInterface $pdsUri, ?string $seenAt = null): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest('POST', $pdsUri->withPath('xrpc/app.bsky.notification.updateSeen'));
