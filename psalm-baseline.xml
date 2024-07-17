@@ -456,6 +456,9 @@
                 'attachments' => $attachments,
             ]) ?: '']]></code>
     </InvalidArgument>
+    <MissingPropertyType>
+      <code><![CDATA[$createSession]]></code>
+    </MissingPropertyType>
     <MissingThrowsDocblock>
       <code><![CDATA[sendRequest]]></code>
     </MissingThrowsDocblock>
@@ -475,9 +478,6 @@
                 'attachments' => $attachments,
             ])]]></code>
     </RiskyTruthyFalsyComparison>
-    <UndefinedThisPropertyFetch>
-      <code><![CDATA[$this->createSession]]></code>
-    </UndefinedThisPropertyFetch>
   </file>
   <file src="src/Chat/Bsky/Actor/DeleteAccount.php">
     <MissingThrowsDocblock>
