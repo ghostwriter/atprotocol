@@ -25,7 +25,7 @@ final readonly class GetPostThread
 
     public function __invoke(
         UriInterface $pdsUri,
-        string $uri = null,
+        ?string $uri = null,
         ?int $depth = null,
         ?int $parentHeight = null,
     ): RequestInterface {
