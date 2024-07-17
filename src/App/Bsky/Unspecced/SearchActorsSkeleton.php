@@ -25,7 +25,7 @@ final readonly class SearchActorsSkeleton
 
     public function __invoke(
         UriInterface $pdsUri,
-        string $q = null,
+        ?string $q = null,
         ?string $viewer = null,
         ?bool $typeahead = null,
         ?int $limit = null,
