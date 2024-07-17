@@ -15,6 +15,8 @@ final class AtProtocol
 {
     use HttpTrait;
 
+    public $createSession;
+
     public function createSession(string $username, string $password): ResponseInterface
     {
         // replace this block of code with a separate class
