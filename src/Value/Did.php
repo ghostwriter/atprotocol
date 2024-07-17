@@ -19,7 +19,10 @@ final readonly class Did implements JsonSerializable, Stringable
         // should we split the value into parts and validate each part?
         // and store the parts in the object
         if (
-            ! preg_match('#^did:[a-z]+:[a-zA-Z0-9._:%-]*[a-zA-Z0-9._-]$#', $this->did)
+            preg_match('#^did:[a-z]+:[a-zA-Z0-9._:%-]*[a-zA-Z0-9._-]$#', $this->did) === 0 || preg_match(
+                '#^did:[a-z]+:[a-zA-Z0-9._:%-]*[a-zA-Z0-9._-]$#',
+                $this->did
+            ) === false
         ) {
             // Todo: create custom exception
             throw new InvalidArgumentException('Invalid DID: ' . $this->did);
