@@ -28,8 +28,8 @@ final readonly class CreateReport
 
     public function __invoke(
         UriInterface $pdsUri,
-        string $reasonType = null,
-        string $subject = null,
+        ?string $reasonType = null,
+        ?string $subject = null,
         ?string $reason = null,
     ): RequestInterface {
         $request = $this->requestFactory
