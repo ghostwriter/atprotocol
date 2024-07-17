@@ -23,7 +23,7 @@ final readonly class ResolveHandle
     ) {
     }
 
-    public function __invoke(UriInterface $pdsUri, string $handle = null): RequestInterface
+    public function __invoke(UriInterface $pdsUri, ?string $handle = null): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
