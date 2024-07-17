@@ -25,7 +25,7 @@ final readonly class GetListFeed
 
     public function __invoke(
         UriInterface $pdsUri,
-        string $list = null,
+        ?string $list = null,
         ?int $limit = null,
         ?string $cursor = null,
     ): RequestInterface {
