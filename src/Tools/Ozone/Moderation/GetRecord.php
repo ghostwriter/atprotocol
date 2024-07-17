@@ -23,7 +23,7 @@ final readonly class GetRecord
     ) {
     }
 
-    public function __invoke(UriInterface $pdsUri, string $uri = null, ?string $cid = null): RequestInterface
+    public function __invoke(UriInterface $pdsUri, ?string $uri = null, ?string $cid = null): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
