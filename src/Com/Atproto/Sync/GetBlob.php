@@ -23,7 +23,7 @@ final readonly class GetBlob
     ) {
     }
 
-    public function __invoke(UriInterface $pdsUri, string $did = null, string $cid = null): RequestInterface
+    public function __invoke(UriInterface $pdsUri, ?string $did = null, ?string $cid = null): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
