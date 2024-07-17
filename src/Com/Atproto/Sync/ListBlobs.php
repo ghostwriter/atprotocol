@@ -25,7 +25,7 @@ final readonly class ListBlobs
 
     public function __invoke(
         UriInterface $pdsUri,
-        string $did = null,
+        ?string $did = null,
         ?string $since = null,
         ?int $limit = null,
         ?string $cursor = null,
