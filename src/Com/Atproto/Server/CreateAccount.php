@@ -28,7 +28,7 @@ final readonly class CreateAccount
 
     public function __invoke(
         UriInterface $pdsUri,
-        string $handle = null,
+        ?string $handle = null,
         ?string $email = null,
         ?string $did = null,
         ?string $inviteCode = null,
