@@ -23,7 +23,7 @@ final readonly class GetPosts
     ) {
     }
 
-    public function __invoke(UriInterface $pdsUri, array $uris = null): RequestInterface
+    public function __invoke(UriInterface $pdsUri, ?array $uris = null): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
