@@ -26,7 +26,7 @@ final readonly class UnmuteActorList
     ) {
     }
 
-    public function __invoke(UriInterface $pdsUri, string $list = null): RequestInterface
+    public function __invoke(UriInterface $pdsUri, ?string $list = null): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest('POST', $pdsUri->withPath('xrpc/app.bsky.graph.unmuteActorList'));
