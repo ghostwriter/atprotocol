@@ -26,7 +26,7 @@ final readonly class NotifyOfUpdate
     ) {
     }
 
-    public function __invoke(UriInterface $pdsUri, string $hostname = null): RequestInterface
+    public function __invoke(UriInterface $pdsUri, ?string $hostname = null): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest('POST', $pdsUri->withPath('xrpc/com.atproto.sync.notifyOfUpdate'));
