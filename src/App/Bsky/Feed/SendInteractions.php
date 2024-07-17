@@ -26,7 +26,7 @@ final readonly class SendInteractions
     ) {
     }
 
-    public function __invoke(UriInterface $pdsUri, array $interactions = null): RequestInterface
+    public function __invoke(UriInterface $pdsUri, ?array $interactions = null): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest('POST', $pdsUri->withPath('xrpc/app.bsky.feed.sendInteractions'));
