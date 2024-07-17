@@ -28,7 +28,7 @@ final readonly class CreateInviteCode
 
     public function __invoke(
         UriInterface $pdsUri,
-        int $useCount = null,
+        ?int $useCount = null,
         ?string $forAccount = null,
     ): RequestInterface {
         $request = $this->requestFactory
