@@ -28,8 +28,8 @@ final readonly class CreateSession
 
     public function __invoke(
         UriInterface $pdsUri,
-        string $identifier = null,
-        string $password = null,
+        ?string $identifier = null,
+        ?string $password = null,
         ?string $authFactorToken = null,
     ): RequestInterface {
         $request = $this->requestFactory
