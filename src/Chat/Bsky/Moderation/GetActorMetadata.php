@@ -23,7 +23,7 @@ final readonly class GetActorMetadata
     ) {
     }
 
-    public function __invoke(UriInterface $pdsUri, string $actor = null): RequestInterface
+    public function __invoke(UriInterface $pdsUri, ?string $actor = null): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
