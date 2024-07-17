@@ -39,25 +39,25 @@ trait HttpTrait
     /**
      * @param array<string,string|string[]> $headers
      */
-    public function delete(UriInterface $uri, StreamInterface $body, array $headers = []): ResponseInterface
+    public function delete(UriInterface $uri, StreamInterface $stream, array $headers = []): ResponseInterface
     {
-        return $this->httpClient->sendRequest($this->request('DELETE', $uri, $body, $headers));
+        return $this->httpClient->sendRequest($this->request('DELETE', $uri, $stream, $headers));
     }
 
     /**
      * @param array<string,string|string[]> $headers
      */
-    public function get(UriInterface $uri, StreamInterface $body, array $headers = []): ResponseInterface
+    public function get(UriInterface $uri, StreamInterface $stream, array $headers = []): ResponseInterface
     {
-        return $this->httpClient->sendRequest($this->request('GET', $uri, $body, $headers));
+        return $this->httpClient->sendRequest($this->request('GET', $uri, $stream, $headers));
     }
 
     /**
      * @param array<string,string|string[]> $headers
      */
-    public function patch(UriInterface $uri, StreamInterface $body, array $headers = []): ResponseInterface
+    public function patch(UriInterface $uri, StreamInterface $stream, array $headers = []): ResponseInterface
     {
-        return $this->httpClient->sendRequest($this->request('PATCH', $uri, $body, $headers));
+        return $this->httpClient->sendRequest($this->request('PATCH', $uri, $stream, $headers));
     }
 
     /**
@@ -77,17 +77,17 @@ trait HttpTrait
     /**
      * @param array<string,string|string[]> $headers
      */
-    public function post(UriInterface $uri, StreamInterface $body, array $headers = []): ResponseInterface
+    public function post(UriInterface $uri, StreamInterface $stream, array $headers = []): ResponseInterface
     {
-        return $this->httpClient->sendRequest($this->request('POST', $uri, $body, $headers));
+        return $this->httpClient->sendRequest($this->request('POST', $uri, $stream, $headers));
     }
 
     /**
      * @param array<string,string|string[]> $headers
      */
-    public function put(UriInterface $uri, StreamInterface $body, array $headers = []): ResponseInterface
+    public function put(UriInterface $uri, StreamInterface $stream, array $headers = []): ResponseInterface
     {
-        return $this->httpClient->sendRequest($this->request('PUT', $uri, $body, $headers));
+        return $this->httpClient->sendRequest($this->request('PUT', $uri, $stream, $headers));
     }
 
     /**
@@ -96,7 +96,7 @@ trait HttpTrait
     public function request(
         string $method,
         UriInterface $uri,
-        StreamInterface $body,
+        StreamInterface $stream,
         array $headers = [],
     ): RequestInterface {
         // default headers can be overridden
@@ -121,7 +121,7 @@ trait HttpTrait
             $request = $request->withHeader($name, $value);
         }
 
-        return $request->withBody($body);
+        return $request->withBody($stream);
     }
 
     public static function defaultHeaders(): array
