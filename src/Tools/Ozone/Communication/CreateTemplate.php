@@ -28,9 +28,9 @@ final readonly class CreateTemplate
 
     public function __invoke(
         UriInterface $pdsUri,
-        string $name = null,
-        string $contentMarkdown = null,
-        string $subject = null,
+        ?string $name = null,
+        ?string $contentMarkdown = null,
+        ?string $subject = null,
         ?string $createdBy = null,
     ): RequestInterface {
         $request = $this->requestFactory
