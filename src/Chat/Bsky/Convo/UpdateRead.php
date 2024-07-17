@@ -28,7 +28,7 @@ final readonly class UpdateRead
 
     public function __invoke(
         UriInterface $pdsUri,
-        string $convoId = null,
+        ?string $convoId = null,
         ?string $messageId = null,
     ): RequestInterface {
         $request = $this->requestFactory
