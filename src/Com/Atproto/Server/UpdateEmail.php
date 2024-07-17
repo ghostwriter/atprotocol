@@ -28,7 +28,7 @@ final readonly class UpdateEmail
 
     public function __invoke(
         UriInterface $pdsUri,
-        string $email = null,
+        ?string $email = null,
         ?bool $emailAuthFactor = null,
         ?string $token = null,
     ): RequestInterface {
