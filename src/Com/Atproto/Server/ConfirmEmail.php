@@ -26,7 +26,7 @@ final readonly class ConfirmEmail
     ) {
     }
 
-    public function __invoke(UriInterface $pdsUri, string $email = null, string $token = null): RequestInterface
+    public function __invoke(UriInterface $pdsUri, ?string $email = null, ?string $token = null): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest('POST', $pdsUri->withPath('xrpc/com.atproto.server.confirmEmail'));
