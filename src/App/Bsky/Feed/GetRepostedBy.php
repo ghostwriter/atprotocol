@@ -25,7 +25,7 @@ final readonly class GetRepostedBy
 
     public function __invoke(
         UriInterface $pdsUri,
-        string $uri = null,
+        ?string $uri = null,
         ?string $cid = null,
         ?int $limit = null,
         ?string $cursor = null,
