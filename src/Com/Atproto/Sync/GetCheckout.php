@@ -23,7 +23,7 @@ final readonly class GetCheckout
     ) {
     }
 
-    public function __invoke(UriInterface $pdsUri, string $did = null): RequestInterface
+    public function __invoke(UriInterface $pdsUri, ?string $did = null): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
