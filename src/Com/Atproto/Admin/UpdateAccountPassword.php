@@ -28,8 +28,8 @@ final readonly class UpdateAccountPassword
 
     public function __invoke(
         UriInterface $pdsUri,
-        string $did = null,
-        string $password = null,
+        ?string $did = null,
+        ?string $password = null,
     ): RequestInterface {
         $request = $this->requestFactory
             ->createRequest('POST', $pdsUri->withPath('xrpc/com.atproto.admin.updateAccountPassword'));
