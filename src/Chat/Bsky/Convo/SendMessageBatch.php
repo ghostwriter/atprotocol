@@ -26,7 +26,7 @@ final readonly class SendMessageBatch
     ) {
     }
 
-    public function __invoke(UriInterface $pdsUri, array $items = null): RequestInterface
+    public function __invoke(UriInterface $pdsUri, ?array $items = null): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest('POST', $pdsUri->withPath('xrpc/chat.bsky.convo.sendMessageBatch'));
