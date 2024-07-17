@@ -26,7 +26,7 @@ final readonly class RevokeAppPassword
     ) {
     }
 
-    public function __invoke(UriInterface $pdsUri, string $name = null): RequestInterface
+    public function __invoke(UriInterface $pdsUri, ?string $name = null): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest('POST', $pdsUri->withPath('xrpc/com.atproto.server.revokeAppPassword'));
