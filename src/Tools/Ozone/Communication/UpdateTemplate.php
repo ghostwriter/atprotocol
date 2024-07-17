@@ -28,7 +28,7 @@ final readonly class UpdateTemplate
 
     public function __invoke(
         UriInterface $pdsUri,
-        string $id = null,
+        ?string $id = null,
         ?string $name = null,
         ?string $contentMarkdown = null,
         ?string $subject = null,
