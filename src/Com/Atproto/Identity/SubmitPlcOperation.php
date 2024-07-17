@@ -26,7 +26,7 @@ final readonly class SubmitPlcOperation
     ) {
     }
 
-    public function __invoke(UriInterface $pdsUri, string $operation = null): RequestInterface
+    public function __invoke(UriInterface $pdsUri, ?string $operation = null): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest('POST', $pdsUri->withPath('xrpc/com.atproto.identity.submitPlcOperation'));
