@@ -25,7 +25,7 @@ final readonly class GetRelationships
 
     public function __invoke(
         UriInterface $pdsUri,
-        string $actor = null,
+        ?string $actor = null,
         ?array $others = null,
     ): RequestInterface {
         $request = $this->requestFactory
