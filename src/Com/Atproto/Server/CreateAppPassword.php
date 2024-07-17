@@ -28,7 +28,7 @@ final readonly class CreateAppPassword
 
     public function __invoke(
         UriInterface $pdsUri,
-        string $name = null,
+        ?string $name = null,
         ?bool $privileged = null,
     ): RequestInterface {
         $request = $this->requestFactory
