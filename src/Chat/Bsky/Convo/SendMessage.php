@@ -28,8 +28,8 @@ final readonly class SendMessage
 
     public function __invoke(
         UriInterface $pdsUri,
-        string $convoId = null,
-        string $message = null,
+        ?string $convoId = null,
+        ?string $message = null,
     ): RequestInterface {
         $request = $this->requestFactory
             ->createRequest('POST', $pdsUri->withPath('xrpc/chat.bsky.convo.sendMessage'));
