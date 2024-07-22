@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "874fd493208270ab9e9cd1dde5954b27",
+    "content-hash": "5fe78617699571e2eff29bf8208dbd63",
     "packages": [
         {
             "name": "clue/stream-filter",
@@ -558,16 +558,16 @@
         },
         {
             "name": "ghostwriter/uuid",
-            "version": "1.0.0",
+            "version": "1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ghostwriter/uuid.git",
-                "reference": "ee0a6421e7349acaf23e89b5322254bdbf106a32"
+                "reference": "bece9c34ccf981fc65150cde0087cd5af57c6603"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ghostwriter/uuid/zipball/ee0a6421e7349acaf23e89b5322254bdbf106a32",
-                "reference": "ee0a6421e7349acaf23e89b5322254bdbf106a32",
+                "url": "https://api.github.com/repos/ghostwriter/uuid/zipball/bece9c34ccf981fc65150cde0087cd5af57c6603",
+                "reference": "bece9c34ccf981fc65150cde0087cd5af57c6603",
                 "shasum": ""
             },
             "require": {
@@ -615,7 +615,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-07-21T05:45:53+00:00"
+            "time": "2024-07-21T21:08:22+00:00"
         },
         {
             "name": "laminas/laminas-diactoros",
