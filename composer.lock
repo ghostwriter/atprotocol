@@ -1654,30 +1654,38 @@
         },
         {
             "name": "composer/pcre",
-            "version": "3.1.4",
+            "version": "3.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/pcre.git",
-                "reference": "04229f163664973f68f38f6f73d917799168ef24"
+                "reference": "ea4ab6f9580a4fd221e0418f2c357cdd39102a90"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/pcre/zipball/04229f163664973f68f38f6f73d917799168ef24",
-                "reference": "04229f163664973f68f38f6f73d917799168ef24",
+                "url": "https://api.github.com/repos/composer/pcre/zipball/ea4ab6f9580a4fd221e0418f2c357cdd39102a90",
+                "reference": "ea4ab6f9580a4fd221e0418f2c357cdd39102a90",
                 "shasum": ""
             },
             "require": {
                 "php": "^7.4 || ^8.0"
             },
+            "conflict": {
+                "phpstan/phpstan": "<1.11.8"
+            },
             "require-dev": {
-                "phpstan/phpstan": "^1.3",
+                "phpstan/phpstan": "^1.11.8",
                 "phpstan/phpstan-strict-rules": "^1.1",
-                "symfony/phpunit-bridge": "^5"
+                "phpunit/phpunit": "^8 || ^9"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
                     "dev-main": "3.x-dev"
+                },
+                "phpstan": {
+                    "includes": [
+                        "extension.neon"
+                    ]
                 }
             },
             "autoload": {
@@ -1705,7 +1713,7 @@
             ],
             "support": {
                 "issues": "https://github.com/composer/pcre/issues",
-                "source": "https://github.com/composer/pcre/tree/3.1.4"
+                "source": "https://github.com/composer/pcre/tree/3.2.0"
             },
             "funding": [
                 {
@@ -1721,7 +1729,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-05-27T13:40:54+00:00"
+            "time": "2024-07-25T09:36:02+00:00"
         },
         {
             "name": "composer/semver",
@@ -1956,12 +1964,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ghostwriter/coding-standard.git",
-                "reference": "35fb09c303c8a890cf12849ce525ec569e3c52dd"
+                "reference": "8e445ce33e3c644378509c480e6a72c0b1d66404"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ghostwriter/coding-standard/zipball/35fb09c303c8a890cf12849ce525ec569e3c52dd",
-                "reference": "35fb09c303c8a890cf12849ce525ec569e3c52dd",
+                "url": "https://api.github.com/repos/ghostwriter/coding-standard/zipball/8e445ce33e3c644378509c480e6a72c0b1d66404",
+                "reference": "8e445ce33e3c644378509c480e6a72c0b1d66404",
                 "shasum": ""
             },
             "require": {
@@ -1970,7 +1978,7 @@
                 "composer/composer": "^2.7.7",
                 "mockery/mockery": "^1.6.12",
                 "php": "^8.2",
-                "phpunit/phpunit": "^11.2.7"
+                "phpunit/phpunit": "^11.2.8"
             },
             "conflict": {
                 "vimeo/psalm": "<4.30"
@@ -2027,7 +2035,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-07-21T07:39:26+00:00"
+            "time": "2024-07-25T13:48:17+00:00"
         },
         {
             "name": "hamcrest/hamcrest-php",
