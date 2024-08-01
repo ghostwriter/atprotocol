@@ -118,6 +118,7 @@
         "psalm:shepherd": "@psalm --no-diff --shepherd --stats",
         "psalm:update": "@psalm --no-diff --update-baseline=psalm-baseline.xml",
         "rector": "@bin_rector",
+        "rector:dry-run": "@rector --dry-run",
         "test": [
             "@phpunit",
             "@psalm:shepherd",
