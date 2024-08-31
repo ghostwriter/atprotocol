@@ -14,7 +14,7 @@ use function http_build_query;
 /**
  * Get mod lists that the requesting account (actor) is blocking. Requires auth.
  *
- * @see \Tests\Unit\App\Bsky\Graph\GetListBlocksTest
+ * @see GetListBlocksTest
  */
 final readonly class GetListBlocks
 {
@@ -23,12 +23,12 @@ final readonly class GetListBlocks
     ) {
     }
 
-    public function __invoke(UriInterface $pdsUri, ?int $limit = null, ?string $cursor = null): RequestInterface
+    public function __invoke(UriInterface $uri, ?int $limit = null, ?string $cursor = null): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $pdsUri->withPath('xrpc/app.bsky.graph.getListBlocks')
+                $uri->withPath('xrpc/app.bsky.graph.getListBlocks')
                     ->withQuery(http_build_query(array_filter([
                         'limit' => $limit,
                         'cursor' => $cursor,
