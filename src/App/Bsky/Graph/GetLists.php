@@ -14,7 +14,7 @@ use function http_build_query;
 /**
  * Enumerates the lists created by a specified account (actor).
  *
- * @see \Tests\Unit\App\Bsky\Graph\GetListsTest
+ * @see GetListsTest
  */
 final readonly class GetLists
 {
@@ -24,7 +24,7 @@ final readonly class GetLists
     }
 
     public function __invoke(
-        UriInterface $pdsUri,
+        UriInterface $uri,
         ?string $actor = null,
         ?int $limit = null,
         ?string $cursor = null,
@@ -32,7 +32,7 @@ final readonly class GetLists
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $pdsUri->withPath('xrpc/app.bsky.graph.getLists')
+                $uri->withPath('xrpc/app.bsky.graph.getLists')
                     ->withQuery(http_build_query(array_filter([
                         'actor' => $actor,
                         'limit' => $limit,
