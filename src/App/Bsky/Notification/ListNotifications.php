@@ -14,7 +14,7 @@ use function http_build_query;
 /**
  * Enumerate notifications for the requesting account. Requires auth.
  *
- * @see \Tests\Unit\App\Bsky\Notification\ListNotificationsTest
+ * @see ListNotificationsTest
  */
 final readonly class ListNotifications
 {
@@ -24,17 +24,19 @@ final readonly class ListNotifications
     }
 
     public function __invoke(
-        UriInterface $pdsUri,
+        UriInterface $uri,
         ?int $limit = null,
+        ?bool $priority = null,
         ?string $cursor = null,
         ?string $seenAt = null,
     ): RequestInterface {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $pdsUri->withPath('xrpc/app.bsky.notification.listNotifications')
+                $uri->withPath('xrpc/app.bsky.notification.listNotifications')
                     ->withQuery(http_build_query(array_filter([
                         'limit' => $limit,
+                        'priority' => $priority,
                         'cursor' => $cursor,
                         'seenAt' => $seenAt,
                     ])))

@@ -14,7 +14,7 @@ use function http_build_query;
 /**
  * Count the number of unread notifications for the requesting account. Requires auth.
  *
- * @see \Tests\Unit\App\Bsky\Notification\GetUnreadCountTest
+ * @see GetUnreadCountTest
  */
 final readonly class GetUnreadCount
 {
@@ -23,13 +23,14 @@ final readonly class GetUnreadCount
     ) {
     }
 
-    public function __invoke(UriInterface $pdsUri, ?string $seenAt = null): RequestInterface
+    public function __invoke(UriInterface $uri, ?bool $priority = null, ?string $seenAt = null): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $pdsUri->withPath('xrpc/app.bsky.notification.getUnreadCount')
+                $uri->withPath('xrpc/app.bsky.notification.getUnreadCount')
                     ->withQuery(http_build_query(array_filter([
+                        'priority' => $priority,
                         'seenAt' => $seenAt,
                     ])))
             );

@@ -12,9 +12,8 @@ use function array_filter;
 use function http_build_query;
 
 /**
- * GetLog.
  *
- * @see \Tests\Unit\Chat\Bsky\Convo\GetLogTest
+ * @see GetLogTest
  */
 final readonly class GetLog
 {
@@ -23,12 +22,12 @@ final readonly class GetLog
     ) {
     }
 
-    public function __invoke(UriInterface $pdsUri, ?string $cursor = null): RequestInterface
+    public function __invoke(UriInterface $uri, ?string $cursor = null): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $pdsUri->withPath('xrpc/chat.bsky.convo.getLog')
+                $uri->withPath('xrpc/chat.bsky.convo.getLog')
                     ->withQuery(http_build_query(array_filter([
                         'cursor' => $cursor,
                     ])))

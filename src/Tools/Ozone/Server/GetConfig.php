@@ -14,7 +14,7 @@ use function http_build_query;
 /**
  * Get details about ozone's server configuration.
  *
- * @see \Tests\Unit\Tools\Ozone\Server\GetConfigTest
+ * @see GetConfigTest
  */
 final readonly class GetConfig
 {
@@ -23,12 +23,12 @@ final readonly class GetConfig
     ) {
     }
 
-    public function __invoke(UriInterface $pdsUri): RequestInterface
+    public function __invoke(UriInterface $uri): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $pdsUri->withPath('xrpc/tools.ozone.server.getConfig')
+                $uri->withPath('xrpc/tools.ozone.server.getConfig')
                     ->withQuery(http_build_query(array_filter([])))
             );
 

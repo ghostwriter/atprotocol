@@ -16,7 +16,7 @@ use function json_encode;
 /**
  * Delete a user account as an administrator.
  *
- * @see \Tests\Unit\Com\Atproto\Admin\DeleteAccountTest
+ * @see DeleteAccountTest
  */
 final readonly class DeleteAccount
 {
@@ -26,10 +26,10 @@ final readonly class DeleteAccount
     ) {
     }
 
-    public function __invoke(UriInterface $pdsUri, ?string $did = null): RequestInterface
+    public function __invoke(UriInterface $uri, ?string $did = null): RequestInterface
     {
         $request = $this->requestFactory
-            ->createRequest('POST', $pdsUri->withPath('xrpc/com.atproto.admin.deleteAccount'));
+            ->createRequest('POST', $uri->withPath('xrpc/com.atproto.admin.deleteAccount'));
 
         $headers = [
             'Accept' => 'application/json',

@@ -14,7 +14,7 @@ use function http_build_query;
 /**
  * Get all invite codes for the current account. Requires auth.
  *
- * @see \Tests\Unit\Com\Atproto\Server\GetAccountInviteCodesTest
+ * @see GetAccountInviteCodesTest
  */
 final readonly class GetAccountInviteCodes
 {
@@ -24,14 +24,14 @@ final readonly class GetAccountInviteCodes
     }
 
     public function __invoke(
-        UriInterface $pdsUri,
+        UriInterface $uri,
         ?bool $includeUsed = null,
         ?bool $createAvailable = null,
     ): RequestInterface {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $pdsUri->withPath('xrpc/com.atproto.server.getAccountInviteCodes')
+                $uri->withPath('xrpc/com.atproto.server.getAccountInviteCodes')
                     ->withQuery(http_build_query(array_filter([
                         'includeUsed' => $includeUsed,
                         'createAvailable' => $createAvailable,

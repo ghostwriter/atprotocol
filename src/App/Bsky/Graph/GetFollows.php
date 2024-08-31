@@ -14,7 +14,7 @@ use function http_build_query;
 /**
  * Enumerates accounts which a specified account (actor) follows.
  *
- * @see \Tests\Unit\App\Bsky\Graph\GetFollowsTest
+ * @see GetFollowsTest
  */
 final readonly class GetFollows
 {
@@ -24,7 +24,7 @@ final readonly class GetFollows
     }
 
     public function __invoke(
-        UriInterface $pdsUri,
+        UriInterface $uri,
         ?string $actor = null,
         ?int $limit = null,
         ?string $cursor = null,
@@ -32,7 +32,7 @@ final readonly class GetFollows
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $pdsUri->withPath('xrpc/app.bsky.graph.getFollows')
+                $uri->withPath('xrpc/app.bsky.graph.getFollows')
                     ->withQuery(http_build_query(array_filter([
                         'actor' => $actor,
                         'limit' => $limit,

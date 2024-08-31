@@ -14,7 +14,7 @@ use function http_build_query;
 /**
  * View moderation statuses of subjects (record or repo).
  *
- * @see \Tests\Unit\Tools\Ozone\Moderation\QueryStatusesTest
+ * @see QueryStatusesTest
  */
 final readonly class QueryStatuses
 {
@@ -24,7 +24,7 @@ final readonly class QueryStatuses
     }
 
     public function __invoke(
-        UriInterface $pdsUri,
+        UriInterface $uri,
         ?string $subject = null,
         ?string $comment = null,
         ?string $reportedAfter = null,
@@ -48,7 +48,7 @@ final readonly class QueryStatuses
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $pdsUri->withPath('xrpc/tools.ozone.moderation.queryStatuses')
+                $uri->withPath('xrpc/tools.ozone.moderation.queryStatuses')
                     ->withQuery(http_build_query(array_filter([
                         'subject' => $subject,
                         'comment' => $comment,

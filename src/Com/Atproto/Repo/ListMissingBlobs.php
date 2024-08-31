@@ -14,7 +14,7 @@ use function http_build_query;
 /**
  * Returns a list of missing blobs for the requesting account. Intended to be used in the account migration flow.
  *
- * @see \Tests\Unit\Com\Atproto\Repo\ListMissingBlobsTest
+ * @see ListMissingBlobsTest
  */
 final readonly class ListMissingBlobs
 {
@@ -23,12 +23,12 @@ final readonly class ListMissingBlobs
     ) {
     }
 
-    public function __invoke(UriInterface $pdsUri, ?int $limit = null, ?string $cursor = null): RequestInterface
+    public function __invoke(UriInterface $uri, ?int $limit = null, ?string $cursor = null): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $pdsUri->withPath('xrpc/com.atproto.repo.listMissingBlobs')
+                $uri->withPath('xrpc/com.atproto.repo.listMissingBlobs')
                     ->withQuery(http_build_query(array_filter([
                         'limit' => $limit,
                         'cursor' => $cursor,

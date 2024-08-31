@@ -14,7 +14,7 @@ use function http_build_query;
 /**
  * Get a signed token on behalf of the requesting DID for the requested service.
  *
- * @see \Tests\Unit\Com\Atproto\Server\GetServiceAuthTest
+ * @see GetServiceAuthTest
  */
 final readonly class GetServiceAuth
 {
@@ -23,12 +23,12 @@ final readonly class GetServiceAuth
     ) {
     }
 
-    public function __invoke(UriInterface $pdsUri, ?string $aud = null): RequestInterface
+    public function __invoke(UriInterface $uri, ?string $aud = null): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $pdsUri->withPath('xrpc/com.atproto.server.getServiceAuth')
+                $uri->withPath('xrpc/com.atproto.server.getServiceAuth')
                     ->withQuery(http_build_query(array_filter([
                         'aud' => $aud,
                     ])))

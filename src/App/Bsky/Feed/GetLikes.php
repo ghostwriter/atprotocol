@@ -14,7 +14,7 @@ use function http_build_query;
 /**
  * Get like records which reference a subject (by AT-URI and CID).
  *
- * @see \Tests\Unit\App\Bsky\Feed\GetLikesTest
+ * @see GetLikesTest
  */
 final readonly class GetLikes
 {
@@ -24,7 +24,7 @@ final readonly class GetLikes
     }
 
     public function __invoke(
-        UriInterface $pdsUri,
+        UriInterface $uri,
         ?string $uri = null,
         ?string $cid = null,
         ?int $limit = null,
@@ -33,7 +33,7 @@ final readonly class GetLikes
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $pdsUri->withPath('xrpc/app.bsky.feed.getLikes')
+                $uri->withPath('xrpc/app.bsky.feed.getLikes')
                     ->withQuery(http_build_query(array_filter([
                         'uri' => $uri,
                         'cid' => $cid,

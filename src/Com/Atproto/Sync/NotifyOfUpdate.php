@@ -16,7 +16,7 @@ use function json_encode;
 /**
  * Notify a crawling service of a recent update, and that crawling should resume. Intended use is after a gap between repo stream events caused the crawling service to disconnect. Does not require auth; implemented by Relay.
  *
- * @see \Tests\Unit\Com\Atproto\Sync\NotifyOfUpdateTest
+ * @see NotifyOfUpdateTest
  */
 final readonly class NotifyOfUpdate
 {
@@ -26,10 +26,10 @@ final readonly class NotifyOfUpdate
     ) {
     }
 
-    public function __invoke(UriInterface $pdsUri, ?string $hostname = null): RequestInterface
+    public function __invoke(UriInterface $uri, ?string $hostname = null): RequestInterface
     {
         $request = $this->requestFactory
-            ->createRequest('POST', $pdsUri->withPath('xrpc/com.atproto.sync.notifyOfUpdate'));
+            ->createRequest('POST', $uri->withPath('xrpc/com.atproto.sync.notifyOfUpdate'));
 
         $headers = [
             'Accept' => 'application/json',

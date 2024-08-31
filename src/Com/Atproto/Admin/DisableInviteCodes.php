@@ -16,7 +16,7 @@ use function json_encode;
 /**
  * Disable some set of codes and/or all codes associated with a set of users.
  *
- * @see \Tests\Unit\Com\Atproto\Admin\DisableInviteCodesTest
+ * @see DisableInviteCodesTest
  */
 final readonly class DisableInviteCodes
 {
@@ -26,13 +26,10 @@ final readonly class DisableInviteCodes
     ) {
     }
 
-    public function __invoke(
-        UriInterface $pdsUri,
-        ?array $codes = null,
-        ?array $accounts = null,
-    ): RequestInterface {
+    public function __invoke(UriInterface $uri, ?array $codes = null, ?array $accounts = null): RequestInterface
+    {
         $request = $this->requestFactory
-            ->createRequest('POST', $pdsUri->withPath('xrpc/com.atproto.admin.disableInviteCodes'));
+            ->createRequest('POST', $uri->withPath('xrpc/com.atproto.admin.disableInviteCodes'));
 
         $headers = [
             'Accept' => 'application/json',

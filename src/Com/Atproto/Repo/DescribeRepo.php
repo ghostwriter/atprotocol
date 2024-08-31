@@ -14,7 +14,7 @@ use function http_build_query;
 /**
  * Get information about an account and repository, including the list of collections. Does not require auth.
  *
- * @see \Tests\Unit\Com\Atproto\Repo\DescribeRepoTest
+ * @see DescribeRepoTest
  */
 final readonly class DescribeRepo
 {
@@ -23,12 +23,12 @@ final readonly class DescribeRepo
     ) {
     }
 
-    public function __invoke(UriInterface $pdsUri, ?string $repo = null): RequestInterface
+    public function __invoke(UriInterface $uri, ?string $repo = null): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $pdsUri->withPath('xrpc/com.atproto.repo.describeRepo')
+                $uri->withPath('xrpc/com.atproto.repo.describeRepo')
                     ->withQuery(http_build_query(array_filter([
                         'repo' => $repo,
                     ])))

@@ -14,7 +14,7 @@ use function http_build_query;
 /**
  * Get details about some accounts.
  *
- * @see \Tests\Unit\Com\Atproto\Admin\GetAccountInfosTest
+ * @see GetAccountInfosTest
  */
 final readonly class GetAccountInfos
 {
@@ -23,12 +23,12 @@ final readonly class GetAccountInfos
     ) {
     }
 
-    public function __invoke(UriInterface $pdsUri, ?array $dids = null): RequestInterface
+    public function __invoke(UriInterface $uri, ?array $dids = null): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $pdsUri->withPath('xrpc/com.atproto.admin.getAccountInfos')
+                $uri->withPath('xrpc/com.atproto.admin.getAccountInfos')
                     ->withQuery(http_build_query(array_filter([
                         'dids' => $dids,
                     ])))

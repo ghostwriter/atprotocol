@@ -16,7 +16,7 @@ use function json_encode;
 /**
  * Delete an actor's account with a token and password. Can only be called after requesting a deletion token. Requires auth.
  *
- * @see \Tests\Unit\Com\Atproto\Server\DeleteAccountTest
+ * @see DeleteAccountTest
  */
 final readonly class DeleteAccount
 {
@@ -27,13 +27,13 @@ final readonly class DeleteAccount
     }
 
     public function __invoke(
-        UriInterface $pdsUri,
+        UriInterface $uri,
         ?string $did = null,
         ?string $password = null,
         ?string $token = null,
     ): RequestInterface {
         $request = $this->requestFactory
-            ->createRequest('POST', $pdsUri->withPath('xrpc/com.atproto.server.deleteAccount'));
+            ->createRequest('POST', $uri->withPath('xrpc/com.atproto.server.deleteAccount'));
 
         $headers = [
             'Accept' => 'application/json',

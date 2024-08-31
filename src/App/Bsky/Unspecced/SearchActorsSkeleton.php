@@ -14,7 +14,7 @@ use function http_build_query;
 /**
  * Backend Actors (profile) search, returns only skeleton.
  *
- * @see \Tests\Unit\App\Bsky\Unspecced\SearchActorsSkeletonTest
+ * @see SearchActorsSkeletonTest
  */
 final readonly class SearchActorsSkeleton
 {
@@ -24,7 +24,7 @@ final readonly class SearchActorsSkeleton
     }
 
     public function __invoke(
-        UriInterface $pdsUri,
+        UriInterface $uri,
         ?string $q = null,
         ?string $viewer = null,
         ?bool $typeahead = null,
@@ -34,7 +34,7 @@ final readonly class SearchActorsSkeleton
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $pdsUri->withPath('xrpc/app.bsky.unspecced.searchActorsSkeleton')
+                $uri->withPath('xrpc/app.bsky.unspecced.searchActorsSkeleton')
                     ->withQuery(http_build_query(array_filter([
                         'q' => $q,
                         'viewer' => $viewer,

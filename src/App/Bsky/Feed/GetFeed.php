@@ -14,7 +14,7 @@ use function http_build_query;
 /**
  * Get a hydrated feed from an actor's selected feed generator. Implemented by App View.
  *
- * @see \Tests\Unit\App\Bsky\Feed\GetFeedTest
+ * @see GetFeedTest
  */
 final readonly class GetFeed
 {
@@ -24,7 +24,7 @@ final readonly class GetFeed
     }
 
     public function __invoke(
-        UriInterface $pdsUri,
+        UriInterface $uri,
         ?string $feed = null,
         ?int $limit = null,
         ?string $cursor = null,
@@ -32,7 +32,7 @@ final readonly class GetFeed
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $pdsUri->withPath('xrpc/app.bsky.feed.getFeed')
+                $uri->withPath('xrpc/app.bsky.feed.getFeed')
                     ->withQuery(http_build_query(array_filter([
                         'feed' => $feed,
                         'limit' => $limit,
