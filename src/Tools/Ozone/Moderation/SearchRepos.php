@@ -14,7 +14,7 @@ use function http_build_query;
 /**
  * Find repositories based on a search term.
  *
- * @see \Tests\Unit\Tools\Ozone\Moderation\SearchReposTest
+ * @see SearchReposTest
  */
 final readonly class SearchRepos
 {
@@ -24,7 +24,7 @@ final readonly class SearchRepos
     }
 
     public function __invoke(
-        UriInterface $pdsUri,
+        UriInterface $uri,
         ?string $q = null,
         ?int $limit = null,
         ?string $cursor = null,
@@ -32,7 +32,7 @@ final readonly class SearchRepos
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $pdsUri->withPath('xrpc/tools.ozone.moderation.searchRepos')
+                $uri->withPath('xrpc/tools.ozone.moderation.searchRepos')
                     ->withQuery(http_build_query(array_filter([
                         'q' => $q,
                         'limit' => $limit,
