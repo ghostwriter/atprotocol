@@ -14,7 +14,7 @@ use function http_build_query;
 /**
  * Enumerates accounts that the requesting account (actor) currently has muted. Requires auth.
  *
- * @see \Tests\Unit\App\Bsky\Graph\GetMutesTest
+ * @see GetMutesTest
  */
 final readonly class GetMutes
 {
@@ -23,12 +23,12 @@ final readonly class GetMutes
     ) {
     }
 
-    public function __invoke(UriInterface $pdsUri, ?int $limit = null, ?string $cursor = null): RequestInterface
+    public function __invoke(UriInterface $uri, ?int $limit = null, ?string $cursor = null): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $pdsUri->withPath('xrpc/app.bsky.graph.getMutes')
+                $uri->withPath('xrpc/app.bsky.graph.getMutes')
                     ->withQuery(http_build_query(array_filter([
                         'limit' => $limit,
                         'cursor' => $cursor,
