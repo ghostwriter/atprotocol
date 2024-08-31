@@ -16,7 +16,7 @@ use function json_encode;
 /**
  * Create an authentication session.
  *
- * @see \Tests\Unit\Com\Atproto\Server\CreateSessionTest
+ * @see CreateSessionTest
  */
 final readonly class CreateSession
 {
@@ -27,13 +27,13 @@ final readonly class CreateSession
     }
 
     public function __invoke(
-        UriInterface $pdsUri,
+        UriInterface $uri,
         ?string $identifier = null,
         ?string $password = null,
         ?string $authFactorToken = null,
     ): RequestInterface {
         $request = $this->requestFactory
-            ->createRequest('POST', $pdsUri->withPath('xrpc/com.atproto.server.createSession'));
+            ->createRequest('POST', $uri->withPath('xrpc/com.atproto.server.createSession'));
 
         $headers = [
             'Accept' => 'application/json',
