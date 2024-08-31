@@ -16,7 +16,7 @@ use function json_encode;
 /**
  * Initiate a user account deletion via email.
  *
- * @see \Tests\Unit\Com\Atproto\Server\RequestAccountDeleteTest
+ * @see RequestAccountDeleteTest
  */
 final readonly class RequestAccountDelete
 {
@@ -26,10 +26,10 @@ final readonly class RequestAccountDelete
     ) {
     }
 
-    public function __invoke(UriInterface $pdsUri): RequestInterface
+    public function __invoke(UriInterface $uri): RequestInterface
     {
         $request = $this->requestFactory
-            ->createRequest('POST', $pdsUri->withPath('xrpc/com.atproto.server.requestAccountDelete'));
+            ->createRequest('POST', $uri->withPath('xrpc/com.atproto.server.requestAccountDelete'));
 
         $headers = [
             'Accept' => 'application/json',
