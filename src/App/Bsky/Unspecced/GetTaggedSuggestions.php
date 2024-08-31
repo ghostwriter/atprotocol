@@ -14,7 +14,7 @@ use function http_build_query;
 /**
  * Get a list of suggestions (feeds and users) tagged with categories.
  *
- * @see \Tests\Unit\App\Bsky\Unspecced\GetTaggedSuggestionsTest
+ * @see GetTaggedSuggestionsTest
  */
 final readonly class GetTaggedSuggestions
 {
@@ -23,12 +23,12 @@ final readonly class GetTaggedSuggestions
     ) {
     }
 
-    public function __invoke(UriInterface $pdsUri): RequestInterface
+    public function __invoke(UriInterface $uri): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $pdsUri->withPath('xrpc/app.bsky.unspecced.getTaggedSuggestions')
+                $uri->withPath('xrpc/app.bsky.unspecced.getTaggedSuggestions')
                     ->withQuery(http_build_query(array_filter([])))
             );
 
