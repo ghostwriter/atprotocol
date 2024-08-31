@@ -16,7 +16,7 @@ use function json_encode;
 /**
  * Submit a moderation report regarding an atproto account or record. Implemented by moderation services (with PDS proxying), and requires auth.
  *
- * @see \Tests\Unit\Com\Atproto\Moderation\CreateReportTest
+ * @see CreateReportTest
  */
 final readonly class CreateReport
 {
@@ -27,13 +27,13 @@ final readonly class CreateReport
     }
 
     public function __invoke(
-        UriInterface $pdsUri,
+        UriInterface $uri,
         ?string $reasonType = null,
         ?string $subject = null,
         ?string $reason = null,
     ): RequestInterface {
         $request = $this->requestFactory
-            ->createRequest('POST', $pdsUri->withPath('xrpc/com.atproto.moderation.createReport'));
+            ->createRequest('POST', $uri->withPath('xrpc/com.atproto.moderation.createReport'));
 
         $headers = [
             'Accept' => 'application/json',

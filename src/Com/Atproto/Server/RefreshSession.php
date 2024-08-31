@@ -16,7 +16,7 @@ use function json_encode;
 /**
  * Refresh an authentication session. Requires auth using the 'refreshJwt' (not the 'accessJwt').
  *
- * @see \Tests\Unit\Com\Atproto\Server\RefreshSessionTest
+ * @see RefreshSessionTest
  */
 final readonly class RefreshSession
 {
@@ -26,10 +26,10 @@ final readonly class RefreshSession
     ) {
     }
 
-    public function __invoke(UriInterface $pdsUri): RequestInterface
+    public function __invoke(UriInterface $uri): RequestInterface
     {
         $request = $this->requestFactory
-            ->createRequest('POST', $pdsUri->withPath('xrpc/com.atproto.server.refreshSession'));
+            ->createRequest('POST', $uri->withPath('xrpc/com.atproto.server.refreshSession'));
 
         $headers = [
             'Accept' => 'application/json',

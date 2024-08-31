@@ -16,7 +16,7 @@ use function json_encode;
 /**
  * Request an email with a code to confirm ownership of email.
  *
- * @see \Tests\Unit\Com\Atproto\Server\RequestEmailConfirmationTest
+ * @see RequestEmailConfirmationTest
  */
 final readonly class RequestEmailConfirmation
 {
@@ -26,10 +26,10 @@ final readonly class RequestEmailConfirmation
     ) {
     }
 
-    public function __invoke(UriInterface $pdsUri): RequestInterface
+    public function __invoke(UriInterface $uri): RequestInterface
     {
         $request = $this->requestFactory
-            ->createRequest('POST', $pdsUri->withPath('xrpc/com.atproto.server.requestEmailConfirmation'));
+            ->createRequest('POST', $uri->withPath('xrpc/com.atproto.server.requestEmailConfirmation'));
 
         $headers = [
             'Accept' => 'application/json',

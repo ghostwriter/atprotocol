@@ -14,7 +14,7 @@ use function http_build_query;
 /**
  * Get details about a moderation event.
  *
- * @see \Tests\Unit\Tools\Ozone\Moderation\GetEventTest
+ * @see GetEventTest
  */
 final readonly class GetEvent
 {
@@ -23,12 +23,12 @@ final readonly class GetEvent
     ) {
     }
 
-    public function __invoke(UriInterface $pdsUri, ?int $id = null): RequestInterface
+    public function __invoke(UriInterface $uri, ?int $id = null): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $pdsUri->withPath('xrpc/tools.ozone.moderation.getEvent')
+                $uri->withPath('xrpc/tools.ozone.moderation.getEvent')
                     ->withQuery(http_build_query(array_filter([
                         'id' => $id,
                     ])))

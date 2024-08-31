@@ -14,7 +14,7 @@ use function http_build_query;
 /**
  * List moderation events related to a subject.
  *
- * @see \Tests\Unit\Tools\Ozone\Moderation\QueryEventsTest
+ * @see QueryEventsTest
  */
 final readonly class QueryEvents
 {
@@ -24,7 +24,7 @@ final readonly class QueryEvents
     }
 
     public function __invoke(
-        UriInterface $pdsUri,
+        UriInterface $uri,
         ?array $types = null,
         ?string $createdBy = null,
         ?string $sortDirection = null,
@@ -45,7 +45,7 @@ final readonly class QueryEvents
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $pdsUri->withPath('xrpc/tools.ozone.moderation.queryEvents')
+                $uri->withPath('xrpc/tools.ozone.moderation.queryEvents')
                     ->withQuery(http_build_query(array_filter([
                         'types' => $types,
                         'createdBy' => $createdBy,

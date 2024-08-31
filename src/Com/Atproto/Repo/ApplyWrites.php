@@ -16,7 +16,7 @@ use function json_encode;
 /**
  * Apply a batch transaction of repository creates, updates, and deletes. Requires auth, implemented by PDS.
  *
- * @see \Tests\Unit\Com\Atproto\Repo\ApplyWritesTest
+ * @see ApplyWritesTest
  */
 final readonly class ApplyWrites
 {
@@ -27,14 +27,14 @@ final readonly class ApplyWrites
     }
 
     public function __invoke(
-        UriInterface $pdsUri,
+        UriInterface $uri,
         ?string $repo = null,
         ?array $writes = null,
         ?bool $validate = null,
         ?string $swapCommit = null,
     ): RequestInterface {
         $request = $this->requestFactory
-            ->createRequest('POST', $pdsUri->withPath('xrpc/com.atproto.repo.applyWrites'));
+            ->createRequest('POST', $uri->withPath('xrpc/com.atproto.repo.applyWrites'));
 
         $headers = [
             'Accept' => 'application/json',

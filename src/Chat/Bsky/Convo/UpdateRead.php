@@ -14,9 +14,8 @@ use function array_filter;
 use function json_encode;
 
 /**
- * UpdateRead.
  *
- * @see \Tests\Unit\Chat\Bsky\Convo\UpdateReadTest
+ * @see UpdateReadTest
  */
 final readonly class UpdateRead
 {
@@ -27,12 +26,12 @@ final readonly class UpdateRead
     }
 
     public function __invoke(
-        UriInterface $pdsUri,
+        UriInterface $uri,
         ?string $convoId = null,
         ?string $messageId = null,
     ): RequestInterface {
         $request = $this->requestFactory
-            ->createRequest('POST', $pdsUri->withPath('xrpc/chat.bsky.convo.updateRead'));
+            ->createRequest('POST', $uri->withPath('xrpc/chat.bsky.convo.updateRead'));
 
         $headers = [
             'Accept' => 'application/json',

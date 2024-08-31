@@ -16,7 +16,7 @@ use function json_encode;
 /**
  * Update an account's email.
  *
- * @see \Tests\Unit\Com\Atproto\Server\UpdateEmailTest
+ * @see UpdateEmailTest
  */
 final readonly class UpdateEmail
 {
@@ -27,13 +27,13 @@ final readonly class UpdateEmail
     }
 
     public function __invoke(
-        UriInterface $pdsUri,
+        UriInterface $uri,
         ?string $email = null,
         ?bool $emailAuthFactor = null,
         ?string $token = null,
     ): RequestInterface {
         $request = $this->requestFactory
-            ->createRequest('POST', $pdsUri->withPath('xrpc/com.atproto.server.updateEmail'));
+            ->createRequest('POST', $uri->withPath('xrpc/com.atproto.server.updateEmail'));
 
         $headers = [
             'Accept' => 'application/json',

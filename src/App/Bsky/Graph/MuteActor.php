@@ -16,7 +16,7 @@ use function json_encode;
 /**
  * Creates a mute relationship for the specified account. Mutes are private in Bluesky. Requires auth.
  *
- * @see \Tests\Unit\App\Bsky\Graph\MuteActorTest
+ * @see MuteActorTest
  */
 final readonly class MuteActor
 {
@@ -26,10 +26,10 @@ final readonly class MuteActor
     ) {
     }
 
-    public function __invoke(UriInterface $pdsUri, ?string $actor = null): RequestInterface
+    public function __invoke(UriInterface $uri, ?string $actor = null): RequestInterface
     {
         $request = $this->requestFactory
-            ->createRequest('POST', $pdsUri->withPath('xrpc/app.bsky.graph.muteActor'));
+            ->createRequest('POST', $uri->withPath('xrpc/app.bsky.graph.muteActor'));
 
         $headers = [
             'Accept' => 'application/json',

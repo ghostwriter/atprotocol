@@ -16,7 +16,7 @@ use function json_encode;
 /**
  * Update the service-specific admin status of a subject (account, record, or blob).
  *
- * @see \Tests\Unit\Com\Atproto\Admin\UpdateSubjectStatusTest
+ * @see UpdateSubjectStatusTest
  */
 final readonly class UpdateSubjectStatus
 {
@@ -27,13 +27,13 @@ final readonly class UpdateSubjectStatus
     }
 
     public function __invoke(
-        UriInterface $pdsUri,
+        UriInterface $uri,
         ?string $subject = null,
         ?string $takedown = null,
         ?string $deactivated = null,
     ): RequestInterface {
         $request = $this->requestFactory
-            ->createRequest('POST', $pdsUri->withPath('xrpc/com.atproto.admin.updateSubjectStatus'));
+            ->createRequest('POST', $uri->withPath('xrpc/com.atproto.admin.updateSubjectStatus'));
 
         $headers = [
             'Accept' => 'application/json',

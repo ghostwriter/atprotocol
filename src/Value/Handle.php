@@ -13,7 +13,7 @@ use function preg_match;
 final readonly class Handle implements Stringable
 {
     public function __construct(
-        private readonly string $handle,
+        private string $handle,
     ) {
         if (
             preg_match(

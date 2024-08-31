@@ -14,7 +14,7 @@ use function http_build_query;
 /**
  * Get a list of suggested feeds (feed generators) for the requesting account.
  *
- * @see \Tests\Unit\App\Bsky\Feed\GetSuggestedFeedsTest
+ * @see GetSuggestedFeedsTest
  */
 final readonly class GetSuggestedFeeds
 {
@@ -23,12 +23,12 @@ final readonly class GetSuggestedFeeds
     ) {
     }
 
-    public function __invoke(UriInterface $pdsUri, ?int $limit = null, ?string $cursor = null): RequestInterface
+    public function __invoke(UriInterface $uri, ?int $limit = null, ?string $cursor = null): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $pdsUri->withPath('xrpc/app.bsky.feed.getSuggestedFeeds')
+                $uri->withPath('xrpc/app.bsky.feed.getSuggestedFeeds')
                     ->withQuery(http_build_query(array_filter([
                         'limit' => $limit,
                         'cursor' => $cursor,

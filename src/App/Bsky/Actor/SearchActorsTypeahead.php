@@ -14,7 +14,7 @@ use function http_build_query;
 /**
  * Find actor suggestions for a prefix search term. Expected use is for auto-completion during text field entry. Does not require auth.
  *
- * @see \Tests\Unit\App\Bsky\Actor\SearchActorsTypeaheadTest
+ * @see SearchActorsTypeaheadTest
  */
 final readonly class SearchActorsTypeahead
 {
@@ -23,12 +23,12 @@ final readonly class SearchActorsTypeahead
     ) {
     }
 
-    public function __invoke(UriInterface $pdsUri, ?string $q = null, ?int $limit = null): RequestInterface
+    public function __invoke(UriInterface $uri, ?string $q = null, ?int $limit = null): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $pdsUri->withPath('xrpc/app.bsky.actor.searchActorsTypeahead')
+                $uri->withPath('xrpc/app.bsky.actor.searchActorsTypeahead')
                     ->withQuery(http_build_query(array_filter([
                         'q' => $q,
                         'limit' => $limit,

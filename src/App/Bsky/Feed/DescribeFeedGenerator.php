@@ -14,7 +14,7 @@ use function http_build_query;
 /**
  * Get information about a feed generator, including policies and offered feed URIs. Does not require auth; implemented by Feed Generator services (not App View).
  *
- * @see \Tests\Unit\App\Bsky\Feed\DescribeFeedGeneratorTest
+ * @see DescribeFeedGeneratorTest
  */
 final readonly class DescribeFeedGenerator
 {
@@ -23,12 +23,12 @@ final readonly class DescribeFeedGenerator
     ) {
     }
 
-    public function __invoke(UriInterface $pdsUri): RequestInterface
+    public function __invoke(UriInterface $uri): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $pdsUri->withPath('xrpc/app.bsky.feed.describeFeedGenerator')
+                $uri->withPath('xrpc/app.bsky.feed.describeFeedGenerator')
                     ->withQuery(http_build_query(array_filter([])))
             );
 

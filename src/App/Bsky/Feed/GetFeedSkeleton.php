@@ -14,7 +14,7 @@ use function http_build_query;
 /**
  * Get a skeleton of a feed provided by a feed generator. Auth is optional, depending on provider requirements, and provides the DID of the requester. Implemented by Feed Generator Service.
  *
- * @see \Tests\Unit\App\Bsky\Feed\GetFeedSkeletonTest
+ * @see GetFeedSkeletonTest
  */
 final readonly class GetFeedSkeleton
 {
@@ -24,7 +24,7 @@ final readonly class GetFeedSkeleton
     }
 
     public function __invoke(
-        UriInterface $pdsUri,
+        UriInterface $uri,
         ?string $feed = null,
         ?int $limit = null,
         ?string $cursor = null,
@@ -32,7 +32,7 @@ final readonly class GetFeedSkeleton
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $pdsUri->withPath('xrpc/app.bsky.feed.getFeedSkeleton')
+                $uri->withPath('xrpc/app.bsky.feed.getFeedSkeleton')
                     ->withQuery(http_build_query(array_filter([
                         'feed' => $feed,
                         'limit' => $limit,

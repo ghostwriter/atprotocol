@@ -16,7 +16,7 @@ use function json_encode;
 /**
  * Deactivates a currently active account. Stops serving of repo, and future writes to repo until reactivated. Used to finalize account migration with the old host after the account has been activated on the new host.
  *
- * @see \Tests\Unit\Com\Atproto\Server\DeactivateAccountTest
+ * @see DeactivateAccountTest
  */
 final readonly class DeactivateAccount
 {
@@ -26,10 +26,10 @@ final readonly class DeactivateAccount
     ) {
     }
 
-    public function __invoke(UriInterface $pdsUri, ?string $deleteAfter = null): RequestInterface
+    public function __invoke(UriInterface $uri, ?string $deleteAfter = null): RequestInterface
     {
         $request = $this->requestFactory
-            ->createRequest('POST', $pdsUri->withPath('xrpc/com.atproto.server.deactivateAccount'));
+            ->createRequest('POST', $uri->withPath('xrpc/com.atproto.server.deactivateAccount'));
 
         $headers = [
             'Accept' => 'application/json',

@@ -16,7 +16,7 @@ use function json_encode;
 /**
  * Create a single new repository record. Requires auth, implemented by PDS.
  *
- * @see \Tests\Unit\Com\Atproto\Repo\CreateRecordTest
+ * @see CreateRecordTest
  */
 final readonly class CreateRecord
 {
@@ -27,7 +27,7 @@ final readonly class CreateRecord
     }
 
     public function __invoke(
-        UriInterface $pdsUri,
+        UriInterface $uri,
         ?string $repo = null,
         ?string $collection = null,
         ?string $record = null,
@@ -36,7 +36,7 @@ final readonly class CreateRecord
         ?string $swapCommit = null,
     ): RequestInterface {
         $request = $this->requestFactory
-            ->createRequest('POST', $pdsUri->withPath('xrpc/com.atproto.repo.createRecord'));
+            ->createRequest('POST', $uri->withPath('xrpc/com.atproto.repo.createRecord'));
 
         $headers = [
             'Accept' => 'application/json',

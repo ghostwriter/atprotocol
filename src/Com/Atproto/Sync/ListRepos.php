@@ -14,7 +14,7 @@ use function http_build_query;
 /**
  * Enumerates all the DID, rev, and commit CID for all repos hosted by this service. Does not require auth; implemented by PDS and Relay.
  *
- * @see \Tests\Unit\Com\Atproto\Sync\ListReposTest
+ * @see ListReposTest
  */
 final readonly class ListRepos
 {
@@ -23,12 +23,12 @@ final readonly class ListRepos
     ) {
     }
 
-    public function __invoke(UriInterface $pdsUri, ?int $limit = null, ?string $cursor = null): RequestInterface
+    public function __invoke(UriInterface $uri, ?int $limit = null, ?string $cursor = null): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $pdsUri->withPath('xrpc/com.atproto.sync.listRepos')
+                $uri->withPath('xrpc/com.atproto.sync.listRepos')
                     ->withQuery(http_build_query(array_filter([
                         'limit' => $limit,
                         'cursor' => $cursor,

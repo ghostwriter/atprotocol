@@ -16,7 +16,7 @@ use function json_encode;
 /**
  * Send email to a user's account email address.
  *
- * @see \Tests\Unit\Com\Atproto\Admin\SendEmailTest
+ * @see SendEmailTest
  */
 final readonly class SendEmail
 {
@@ -27,7 +27,7 @@ final readonly class SendEmail
     }
 
     public function __invoke(
-        UriInterface $pdsUri,
+        UriInterface $uri,
         ?string $recipientDid = null,
         ?string $content = null,
         ?string $senderDid = null,
@@ -35,7 +35,7 @@ final readonly class SendEmail
         ?string $comment = null,
     ): RequestInterface {
         $request = $this->requestFactory
-            ->createRequest('POST', $pdsUri->withPath('xrpc/com.atproto.admin.sendEmail'));
+            ->createRequest('POST', $uri->withPath('xrpc/com.atproto.admin.sendEmail'));
 
         $headers = [
             'Accept' => 'application/json',
