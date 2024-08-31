@@ -14,7 +14,7 @@ use function http_build_query;
 /**
  * Get an admin view of invite codes.
  *
- * @see \Tests\Unit\Com\Atproto\Admin\GetInviteCodesTest
+ * @see GetInviteCodesTest
  */
 final readonly class GetInviteCodes
 {
@@ -24,7 +24,7 @@ final readonly class GetInviteCodes
     }
 
     public function __invoke(
-        UriInterface $pdsUri,
+        UriInterface $uri,
         ?string $sort = null,
         ?int $limit = null,
         ?string $cursor = null,
@@ -32,7 +32,7 @@ final readonly class GetInviteCodes
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $pdsUri->withPath('xrpc/com.atproto.admin.getInviteCodes')
+                $uri->withPath('xrpc/com.atproto.admin.getInviteCodes')
                     ->withQuery(http_build_query(array_filter([
                         'sort' => $sort,
                         'limit' => $limit,
