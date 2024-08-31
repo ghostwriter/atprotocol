@@ -16,7 +16,7 @@ use function json_encode;
 /**
  * Administrative action to update an existing communication template. Allows passing partial fields to patch specific fields only.
  *
- * @see \Tests\Unit\Tools\Ozone\Communication\UpdateTemplateTest
+ * @see UpdateTemplateTest
  */
 final readonly class UpdateTemplate
 {
@@ -27,7 +27,7 @@ final readonly class UpdateTemplate
     }
 
     public function __invoke(
-        UriInterface $pdsUri,
+        UriInterface $uri,
         ?string $id = null,
         ?string $name = null,
         ?string $contentMarkdown = null,
@@ -36,7 +36,7 @@ final readonly class UpdateTemplate
         ?bool $disabled = null,
     ): RequestInterface {
         $request = $this->requestFactory
-            ->createRequest('POST', $pdsUri->withPath('xrpc/tools.ozone.communication.updateTemplate'));
+            ->createRequest('POST', $uri->withPath('xrpc/tools.ozone.communication.updateTemplate'));
 
         $headers = [
             'Accept' => 'application/json',
