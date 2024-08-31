@@ -12,9 +12,8 @@ use function array_filter;
 use function http_build_query;
 
 /**
- * ExportAccountData.
  *
- * @see \Tests\Unit\Chat\Bsky\Actor\ExportAccountDataTest
+ * @see ExportAccountDataTest
  */
 final readonly class ExportAccountData
 {
@@ -23,18 +22,18 @@ final readonly class ExportAccountData
     ) {
     }
 
-    public function __invoke(UriInterface $pdsUri): RequestInterface
+    public function __invoke(UriInterface $uri): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $pdsUri->withPath('xrpc/chat.bsky.actor.exportAccountData')
+                $uri->withPath('xrpc/chat.bsky.actor.exportAccountData')
                     ->withQuery(http_build_query(array_filter([])))
             );
 
         $headers = [
             'Accept' => 'application/json',
-            'Content-Type' => 'application/jsonl; charset=utf-8',
+            'Content-Type' => 'application/json; charset=utf-8',
         ];
 
         foreach ($headers as $name => $value) {
