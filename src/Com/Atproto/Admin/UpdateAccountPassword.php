@@ -16,7 +16,7 @@ use function json_encode;
 /**
  * Update the password for a user account as an administrator.
  *
- * @see \Tests\Unit\Com\Atproto\Admin\UpdateAccountPasswordTest
+ * @see UpdateAccountPasswordTest
  */
 final readonly class UpdateAccountPassword
 {
@@ -26,13 +26,10 @@ final readonly class UpdateAccountPassword
     ) {
     }
 
-    public function __invoke(
-        UriInterface $pdsUri,
-        ?string $did = null,
-        ?string $password = null,
-    ): RequestInterface {
+    public function __invoke(UriInterface $uri, ?string $did = null, ?string $password = null): RequestInterface
+    {
         $request = $this->requestFactory
-            ->createRequest('POST', $pdsUri->withPath('xrpc/com.atproto.admin.updateAccountPassword'));
+            ->createRequest('POST', $uri->withPath('xrpc/com.atproto.admin.updateAccountPassword'));
 
         $headers = [
             'Accept' => 'application/json',
