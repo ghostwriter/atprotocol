@@ -12,9 +12,8 @@ use function array_filter;
 use function http_build_query;
 
 /**
- * GetMessages.
  *
- * @see \Tests\Unit\Chat\Bsky\Convo\GetMessagesTest
+ * @see GetMessagesTest
  */
 final readonly class GetMessages
 {
@@ -24,7 +23,7 @@ final readonly class GetMessages
     }
 
     public function __invoke(
-        UriInterface $pdsUri,
+        UriInterface $uri,
         ?string $convoId = null,
         ?int $limit = null,
         ?string $cursor = null,
@@ -32,7 +31,7 @@ final readonly class GetMessages
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $pdsUri->withPath('xrpc/chat.bsky.convo.getMessages')
+                $uri->withPath('xrpc/chat.bsky.convo.getMessages')
                     ->withQuery(http_build_query(array_filter([
                         'convoId' => $convoId,
                         'limit' => $limit,

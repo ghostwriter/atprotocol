@@ -14,7 +14,7 @@ use function http_build_query;
 /**
  * Get a view of the requesting account's home timeline. This is expected to be some form of reverse-chronological feed.
  *
- * @see \Tests\Unit\App\Bsky\Feed\GetTimelineTest
+ * @see GetTimelineTest
  */
 final readonly class GetTimeline
 {
@@ -24,7 +24,7 @@ final readonly class GetTimeline
     }
 
     public function __invoke(
-        UriInterface $pdsUri,
+        UriInterface $uri,
         ?string $algorithm = null,
         ?int $limit = null,
         ?string $cursor = null,
@@ -32,7 +32,7 @@ final readonly class GetTimeline
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $pdsUri->withPath('xrpc/app.bsky.feed.getTimeline')
+                $uri->withPath('xrpc/app.bsky.feed.getTimeline')
                     ->withQuery(http_build_query(array_filter([
                         'algorithm' => $algorithm,
                         'limit' => $limit,

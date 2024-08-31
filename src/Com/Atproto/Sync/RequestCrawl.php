@@ -16,7 +16,7 @@ use function json_encode;
 /**
  * Request a service to persistently crawl hosted repos. Expected use is new PDS instances declaring their existence to Relays. Does not require auth.
  *
- * @see \Tests\Unit\Com\Atproto\Sync\RequestCrawlTest
+ * @see RequestCrawlTest
  */
 final readonly class RequestCrawl
 {
@@ -26,10 +26,10 @@ final readonly class RequestCrawl
     ) {
     }
 
-    public function __invoke(UriInterface $pdsUri, ?string $hostname = null): RequestInterface
+    public function __invoke(UriInterface $uri, ?string $hostname = null): RequestInterface
     {
         $request = $this->requestFactory
-            ->createRequest('POST', $pdsUri->withPath('xrpc/com.atproto.sync.requestCrawl'));
+            ->createRequest('POST', $uri->withPath('xrpc/com.atproto.sync.requestCrawl'));
 
         $headers = [
             'Accept' => 'application/json',

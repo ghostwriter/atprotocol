@@ -15,7 +15,7 @@ use function filter_var;
 final readonly class Email implements Stringable
 {
     public function __construct(
-        private readonly string $email,
+        private string $email,
     ) {
         if (! filter_var($this->email, FILTER_VALIDATE_EMAIL)) {
             throw new InvalidArgumentException('Invalid Email: ' . $this->email);

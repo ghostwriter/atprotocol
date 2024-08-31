@@ -16,7 +16,7 @@ use function json_encode;
 /**
  * Write a repository record, creating or updating it as needed. Requires auth, implemented by PDS.
  *
- * @see \Tests\Unit\Com\Atproto\Repo\PutRecordTest
+ * @see PutRecordTest
  */
 final readonly class PutRecord
 {
@@ -27,7 +27,7 @@ final readonly class PutRecord
     }
 
     public function __invoke(
-        UriInterface $pdsUri,
+        UriInterface $uri,
         ?string $repo = null,
         ?string $collection = null,
         ?string $rkey = null,
@@ -37,7 +37,7 @@ final readonly class PutRecord
         ?string $swapCommit = null,
     ): RequestInterface {
         $request = $this->requestFactory
-            ->createRequest('POST', $pdsUri->withPath('xrpc/com.atproto.repo.putRecord'));
+            ->createRequest('POST', $uri->withPath('xrpc/com.atproto.repo.putRecord'));
 
         $headers = [
             'Accept' => 'application/json',

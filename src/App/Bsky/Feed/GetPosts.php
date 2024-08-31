@@ -14,7 +14,7 @@ use function http_build_query;
 /**
  * Gets post views for a specified list of posts (by AT-URI). This is sometimes referred to as 'hydrating' a 'feed skeleton'.
  *
- * @see \Tests\Unit\App\Bsky\Feed\GetPostsTest
+ * @see GetPostsTest
  */
 final readonly class GetPosts
 {
@@ -23,12 +23,12 @@ final readonly class GetPosts
     ) {
     }
 
-    public function __invoke(UriInterface $pdsUri, ?array $uris = null): RequestInterface
+    public function __invoke(UriInterface $uri, ?array $uris = null): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $pdsUri->withPath('xrpc/app.bsky.feed.getPosts')
+                $uri->withPath('xrpc/app.bsky.feed.getPosts')
                     ->withQuery(http_build_query(array_filter([
                         'uris' => $uris,
                     ])))

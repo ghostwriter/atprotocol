@@ -14,7 +14,7 @@ use function http_build_query;
 /**
  * Get information about a list of feed generators.
  *
- * @see \Tests\Unit\App\Bsky\Feed\GetFeedGeneratorsTest
+ * @see GetFeedGeneratorsTest
  */
 final readonly class GetFeedGenerators
 {
@@ -23,12 +23,12 @@ final readonly class GetFeedGenerators
     ) {
     }
 
-    public function __invoke(UriInterface $pdsUri, ?array $feeds = null): RequestInterface
+    public function __invoke(UriInterface $uri, ?array $feeds = null): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $pdsUri->withPath('xrpc/app.bsky.feed.getFeedGenerators')
+                $uri->withPath('xrpc/app.bsky.feed.getFeedGenerators')
                     ->withQuery(http_build_query(array_filter([
                         'feeds' => $feeds,
                     ])))

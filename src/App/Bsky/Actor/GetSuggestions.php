@@ -14,7 +14,7 @@ use function http_build_query;
 /**
  * Get a list of suggested actors. Expected use is discovery of accounts to follow during new account onboarding.
  *
- * @see \Tests\Unit\App\Bsky\Actor\GetSuggestionsTest
+ * @see GetSuggestionsTest
  */
 final readonly class GetSuggestions
 {
@@ -23,12 +23,12 @@ final readonly class GetSuggestions
     ) {
     }
 
-    public function __invoke(UriInterface $pdsUri, ?int $limit = null, ?string $cursor = null): RequestInterface
+    public function __invoke(UriInterface $uri, ?int $limit = null, ?string $cursor = null): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $pdsUri->withPath('xrpc/app.bsky.actor.getSuggestions')
+                $uri->withPath('xrpc/app.bsky.actor.getSuggestions')
                     ->withQuery(http_build_query(array_filter([
                         'limit' => $limit,
                         'cursor' => $cursor,

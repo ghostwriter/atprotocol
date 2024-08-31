@@ -16,7 +16,7 @@ use function json_encode;
 /**
  * Delete a repository record, or ensure it doesn't exist. Requires auth, implemented by PDS.
  *
- * @see \Tests\Unit\Com\Atproto\Repo\DeleteRecordTest
+ * @see DeleteRecordTest
  */
 final readonly class DeleteRecord
 {
@@ -27,7 +27,7 @@ final readonly class DeleteRecord
     }
 
     public function __invoke(
-        UriInterface $pdsUri,
+        UriInterface $uri,
         ?string $repo = null,
         ?string $collection = null,
         ?string $rkey = null,
@@ -35,7 +35,7 @@ final readonly class DeleteRecord
         ?string $swapCommit = null,
     ): RequestInterface {
         $request = $this->requestFactory
-            ->createRequest('POST', $pdsUri->withPath('xrpc/com.atproto.repo.deleteRecord'));
+            ->createRequest('POST', $uri->withPath('xrpc/com.atproto.repo.deleteRecord'));
 
         $headers = [
             'Accept' => 'application/json',

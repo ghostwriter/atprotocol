@@ -14,7 +14,7 @@ use function http_build_query;
 /**
  * Get a skeleton of suggested actors. Intended to be called and then hydrated through app.bsky.actor.getSuggestions.
  *
- * @see \Tests\Unit\App\Bsky\Unspecced\GetSuggestionsSkeletonTest
+ * @see GetSuggestionsSkeletonTest
  */
 final readonly class GetSuggestionsSkeleton
 {
@@ -24,19 +24,21 @@ final readonly class GetSuggestionsSkeleton
     }
 
     public function __invoke(
-        UriInterface $pdsUri,
+        UriInterface $uri,
         ?string $viewer = null,
         ?int $limit = null,
         ?string $cursor = null,
+        ?string $relativeToDid = null,
     ): RequestInterface {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $pdsUri->withPath('xrpc/app.bsky.unspecced.getSuggestionsSkeleton')
+                $uri->withPath('xrpc/app.bsky.unspecced.getSuggestionsSkeleton')
                     ->withQuery(http_build_query(array_filter([
                         'viewer' => $viewer,
                         'limit' => $limit,
                         'cursor' => $cursor,
+                        'relativeToDid' => $relativeToDid,
                     ])))
             );
 

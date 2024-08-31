@@ -16,7 +16,7 @@ use function json_encode;
 /**
  * Create an account. Implemented by PDS.
  *
- * @see \Tests\Unit\Com\Atproto\Server\CreateAccountTest
+ * @see CreateAccountTest
  */
 final readonly class CreateAccount
 {
@@ -27,7 +27,7 @@ final readonly class CreateAccount
     }
 
     public function __invoke(
-        UriInterface $pdsUri,
+        UriInterface $uri,
         ?string $handle = null,
         ?string $email = null,
         ?string $did = null,
@@ -39,7 +39,7 @@ final readonly class CreateAccount
         ?string $plcOp = null,
     ): RequestInterface {
         $request = $this->requestFactory
-            ->createRequest('POST', $pdsUri->withPath('xrpc/com.atproto.server.createAccount'));
+            ->createRequest('POST', $uri->withPath('xrpc/com.atproto.server.createAccount'));
 
         $headers = [
             'Accept' => 'application/json',

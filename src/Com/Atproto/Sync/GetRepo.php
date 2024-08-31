@@ -14,7 +14,7 @@ use function http_build_query;
 /**
  * Download a repository export as CAR file. Optionally only a 'diff' since a previous revision. Does not require auth; implemented by PDS.
  *
- * @see \Tests\Unit\Com\Atproto\Sync\GetRepoTest
+ * @see GetRepoTest
  */
 final readonly class GetRepo
 {
@@ -23,12 +23,12 @@ final readonly class GetRepo
     ) {
     }
 
-    public function __invoke(UriInterface $pdsUri, ?string $did = null, ?string $since = null): RequestInterface
+    public function __invoke(UriInterface $uri, ?string $did = null, ?string $since = null): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $pdsUri->withPath('xrpc/com.atproto.sync.getRepo')
+                $uri->withPath('xrpc/com.atproto.sync.getRepo')
                     ->withQuery(http_build_query(array_filter([
                         'did' => $did,
                         'since' => $since,
@@ -37,7 +37,7 @@ final readonly class GetRepo
 
         $headers = [
             'Accept' => 'application/json',
-            'Content-Type' => 'application/vnd.ipld.car; charset=utf-8',
+            'Content-Type' => 'application/json; charset=utf-8',
         ];
 
         foreach ($headers as $name => $value) {

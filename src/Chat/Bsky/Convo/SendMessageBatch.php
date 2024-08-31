@@ -14,9 +14,8 @@ use function array_filter;
 use function json_encode;
 
 /**
- * SendMessageBatch.
  *
- * @see \Tests\Unit\Chat\Bsky\Convo\SendMessageBatchTest
+ * @see SendMessageBatchTest
  */
 final readonly class SendMessageBatch
 {
@@ -26,10 +25,10 @@ final readonly class SendMessageBatch
     ) {
     }
 
-    public function __invoke(UriInterface $pdsUri, ?array $items = null): RequestInterface
+    public function __invoke(UriInterface $uri, ?array $items = null): RequestInterface
     {
         $request = $this->requestFactory
-            ->createRequest('POST', $pdsUri->withPath('xrpc/chat.bsky.convo.sendMessageBatch'));
+            ->createRequest('POST', $uri->withPath('xrpc/chat.bsky.convo.sendMessageBatch'));
 
         $headers = [
             'Accept' => 'application/json',

@@ -16,7 +16,7 @@ use function json_encode;
 /**
  * Activates a currently deactivated account. Used to finalize account migration after the account's repo is imported and identity is setup.
  *
- * @see \Tests\Unit\Com\Atproto\Server\ActivateAccountTest
+ * @see ActivateAccountTest
  */
 final readonly class ActivateAccount
 {
@@ -26,10 +26,10 @@ final readonly class ActivateAccount
     ) {
     }
 
-    public function __invoke(UriInterface $pdsUri): RequestInterface
+    public function __invoke(UriInterface $uri): RequestInterface
     {
         $request = $this->requestFactory
-            ->createRequest('POST', $pdsUri->withPath('xrpc/com.atproto.server.activateAccount'));
+            ->createRequest('POST', $uri->withPath('xrpc/com.atproto.server.activateAccount'));
 
         $headers = [
             'Accept' => 'application/json',

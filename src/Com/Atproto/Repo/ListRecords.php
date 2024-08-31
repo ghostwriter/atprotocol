@@ -14,7 +14,7 @@ use function http_build_query;
 /**
  * List a range of records in a repository, matching a specific collection. Does not require auth.
  *
- * @see \Tests\Unit\Com\Atproto\Repo\ListRecordsTest
+ * @see ListRecordsTest
  */
 final readonly class ListRecords
 {
@@ -24,7 +24,7 @@ final readonly class ListRecords
     }
 
     public function __invoke(
-        UriInterface $pdsUri,
+        UriInterface $uri,
         ?string $repo = null,
         ?string $collection = null,
         ?int $limit = null,
@@ -34,7 +34,7 @@ final readonly class ListRecords
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $pdsUri->withPath('xrpc/com.atproto.repo.listRecords')
+                $uri->withPath('xrpc/com.atproto.repo.listRecords')
                     ->withQuery(http_build_query(array_filter([
                         'repo' => $repo,
                         'collection' => $collection,

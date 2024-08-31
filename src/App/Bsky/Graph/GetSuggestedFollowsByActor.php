@@ -14,7 +14,7 @@ use function http_build_query;
 /**
  * Enumerates follows similar to a given account (actor). Expected use is to recommend additional accounts immediately after following one account.
  *
- * @see \Tests\Unit\App\Bsky\Graph\GetSuggestedFollowsByActorTest
+ * @see GetSuggestedFollowsByActorTest
  */
 final readonly class GetSuggestedFollowsByActor
 {
@@ -23,12 +23,12 @@ final readonly class GetSuggestedFollowsByActor
     ) {
     }
 
-    public function __invoke(UriInterface $pdsUri, ?string $actor = null): RequestInterface
+    public function __invoke(UriInterface $uri, ?string $actor = null): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $pdsUri->withPath('xrpc/app.bsky.graph.getSuggestedFollowsByActor')
+                $uri->withPath('xrpc/app.bsky.graph.getSuggestedFollowsByActor')
                     ->withQuery(http_build_query(array_filter([
                         'actor' => $actor,
                     ])))

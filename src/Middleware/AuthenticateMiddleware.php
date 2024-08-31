@@ -9,8 +9,8 @@ use Psr\Http\Message\RequestInterface;
 final readonly class AuthenticateMiddleware
 {
     public function __construct(
-        private readonly string $username,
-        private readonly string $password,
+        private string $username,
+        private string $password,
     ) {
     }
 

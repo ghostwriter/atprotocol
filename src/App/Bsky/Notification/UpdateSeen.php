@@ -16,7 +16,7 @@ use function json_encode;
 /**
  * Notify server that the requesting account has seen notifications. Requires auth.
  *
- * @see \Tests\Unit\App\Bsky\Notification\UpdateSeenTest
+ * @see UpdateSeenTest
  */
 final readonly class UpdateSeen
 {
@@ -26,10 +26,10 @@ final readonly class UpdateSeen
     ) {
     }
 
-    public function __invoke(UriInterface $pdsUri, ?string $seenAt = null): RequestInterface
+    public function __invoke(UriInterface $uri, ?string $seenAt = null): RequestInterface
     {
         $request = $this->requestFactory
-            ->createRequest('POST', $pdsUri->withPath('xrpc/app.bsky.notification.updateSeen'));
+            ->createRequest('POST', $uri->withPath('xrpc/app.bsky.notification.updateSeen'));
 
         $headers = [
             'Accept' => 'application/json',

@@ -14,7 +14,7 @@ use function http_build_query;
 /**
  * Get information about a list of labeler services.
  *
- * @see \Tests\Unit\App\Bsky\Labeler\GetServicesTest
+ * @see GetServicesTest
  */
 final readonly class GetServices
 {
@@ -23,12 +23,12 @@ final readonly class GetServices
     ) {
     }
 
-    public function __invoke(UriInterface $pdsUri, ?array $dids = null, ?bool $detailed = null): RequestInterface
+    public function __invoke(UriInterface $uri, ?array $dids = null, ?bool $detailed = null): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $pdsUri->withPath('xrpc/app.bsky.labeler.getServices')
+                $uri->withPath('xrpc/app.bsky.labeler.getServices')
                     ->withQuery(http_build_query(array_filter([
                         'dids' => $dids,
                         'detailed' => $detailed,

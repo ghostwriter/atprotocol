@@ -14,7 +14,7 @@ use function http_build_query;
 /**
  * Enumerates which accounts the requesting account is currently blocking. Requires auth.
  *
- * @see \Tests\Unit\App\Bsky\Graph\GetBlocksTest
+ * @see GetBlocksTest
  */
 final readonly class GetBlocks
 {
@@ -23,12 +23,12 @@ final readonly class GetBlocks
     ) {
     }
 
-    public function __invoke(UriInterface $pdsUri, ?int $limit = null, ?string $cursor = null): RequestInterface
+    public function __invoke(UriInterface $uri, ?int $limit = null, ?string $cursor = null): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $pdsUri->withPath('xrpc/app.bsky.graph.getBlocks')
+                $uri->withPath('xrpc/app.bsky.graph.getBlocks')
                     ->withQuery(http_build_query(array_filter([
                         'limit' => $limit,
                         'cursor' => $cursor,

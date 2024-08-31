@@ -14,9 +14,8 @@ use function array_filter;
 use function json_encode;
 
 /**
- * UnmuteConvo.
  *
- * @see \Tests\Unit\Chat\Bsky\Convo\UnmuteConvoTest
+ * @see UnmuteConvoTest
  */
 final readonly class UnmuteConvo
 {
@@ -26,10 +25,10 @@ final readonly class UnmuteConvo
     ) {
     }
 
-    public function __invoke(UriInterface $pdsUri, ?string $convoId = null): RequestInterface
+    public function __invoke(UriInterface $uri, ?string $convoId = null): RequestInterface
     {
         $request = $this->requestFactory
-            ->createRequest('POST', $pdsUri->withPath('xrpc/chat.bsky.convo.unmuteConvo'));
+            ->createRequest('POST', $uri->withPath('xrpc/chat.bsky.convo.unmuteConvo'));
 
         $headers = [
             'Accept' => 'application/json',

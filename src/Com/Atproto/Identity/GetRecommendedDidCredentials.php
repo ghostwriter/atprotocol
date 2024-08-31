@@ -14,7 +14,7 @@ use function http_build_query;
 /**
  * Describe the credentials that should be included in the DID doc of an account that is migrating to this service.
  *
- * @see \Tests\Unit\Com\Atproto\Identity\GetRecommendedDidCredentialsTest
+ * @see GetRecommendedDidCredentialsTest
  */
 final readonly class GetRecommendedDidCredentials
 {
@@ -23,12 +23,12 @@ final readonly class GetRecommendedDidCredentials
     ) {
     }
 
-    public function __invoke(UriInterface $pdsUri): RequestInterface
+    public function __invoke(UriInterface $uri): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $pdsUri->withPath('xrpc/com.atproto.identity.getRecommendedDidCredentials')
+                $uri->withPath('xrpc/com.atproto.identity.getRecommendedDidCredentials')
                     ->withQuery(http_build_query(array_filter([])))
             );
 
