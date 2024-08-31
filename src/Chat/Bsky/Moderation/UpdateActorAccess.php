@@ -14,9 +14,8 @@ use function array_filter;
 use function json_encode;
 
 /**
- * UpdateActorAccess.
  *
- * @see \Tests\Unit\Chat\Bsky\Moderation\UpdateActorAccessTest
+ * @see UpdateActorAccessTest
  */
 final readonly class UpdateActorAccess
 {
@@ -27,13 +26,13 @@ final readonly class UpdateActorAccess
     }
 
     public function __invoke(
-        UriInterface $pdsUri,
+        UriInterface $uri,
         ?string $actor = null,
         ?bool $allowAccess = null,
         ?string $ref = null,
     ): RequestInterface {
         $request = $this->requestFactory
-            ->createRequest('POST', $pdsUri->withPath('xrpc/chat.bsky.moderation.updateActorAccess'));
+            ->createRequest('POST', $uri->withPath('xrpc/chat.bsky.moderation.updateActorAccess'));
 
         $headers = [
             'Accept' => 'application/json',
