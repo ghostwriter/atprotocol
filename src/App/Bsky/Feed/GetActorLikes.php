@@ -14,7 +14,7 @@ use function http_build_query;
 /**
  * Get a list of posts liked by an actor. Does not require auth.
  *
- * @see \Tests\Unit\App\Bsky\Feed\GetActorLikesTest
+ * @see GetActorLikesTest
  */
 final readonly class GetActorLikes
 {
@@ -24,7 +24,7 @@ final readonly class GetActorLikes
     }
 
     public function __invoke(
-        UriInterface $pdsUri,
+        UriInterface $uri,
         ?string $actor = null,
         ?int $limit = null,
         ?string $cursor = null,
@@ -32,7 +32,7 @@ final readonly class GetActorLikes
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $pdsUri->withPath('xrpc/app.bsky.feed.getActorLikes')
+                $uri->withPath('xrpc/app.bsky.feed.getActorLikes')
                     ->withQuery(http_build_query(array_filter([
                         'actor' => $actor,
                         'limit' => $limit,

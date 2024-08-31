@@ -12,9 +12,9 @@ use function array_filter;
 use function http_build_query;
 
 /**
- * List blob CIDso for an account, since some repo revision. Does not require auth; implemented by PDS.
+ * List blob CIDs for an account, since some repo revision. Does not require auth; implemented by PDS.
  *
- * @see \Tests\Unit\Com\Atproto\Sync\ListBlobsTest
+ * @see ListBlobsTest
  */
 final readonly class ListBlobs
 {
@@ -24,7 +24,7 @@ final readonly class ListBlobs
     }
 
     public function __invoke(
-        UriInterface $pdsUri,
+        UriInterface $uri,
         ?string $did = null,
         ?string $since = null,
         ?int $limit = null,
@@ -33,7 +33,7 @@ final readonly class ListBlobs
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $pdsUri->withPath('xrpc/com.atproto.sync.listBlobs')
+                $uri->withPath('xrpc/com.atproto.sync.listBlobs')
                     ->withQuery(http_build_query(array_filter([
                         'did' => $did,
                         'since' => $since,

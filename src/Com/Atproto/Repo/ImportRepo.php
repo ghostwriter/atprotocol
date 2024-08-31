@@ -16,7 +16,7 @@ use function json_encode;
 /**
  * Import a repo in the form of a CAR file. Requires Content-Length HTTP header to be set.
  *
- * @see \Tests\Unit\Com\Atproto\Repo\ImportRepoTest
+ * @see ImportRepoTest
  */
 final readonly class ImportRepo
 {
@@ -26,13 +26,13 @@ final readonly class ImportRepo
     ) {
     }
 
-    public function __invoke(UriInterface $pdsUri): RequestInterface
+    public function __invoke(UriInterface $uri): RequestInterface
     {
         $request = $this->requestFactory
-            ->createRequest('POST', $pdsUri->withPath('xrpc/com.atproto.repo.importRepo'));
+            ->createRequest('POST', $uri->withPath('xrpc/com.atproto.repo.importRepo'));
 
         $headers = [
-            'Accept' => 'application/vnd.ipld.car',
+            'Accept' => 'application/json',
             'Content-Type' => 'application/json; charset=utf-8',
         ];
 

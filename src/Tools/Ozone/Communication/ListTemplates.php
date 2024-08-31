@@ -14,7 +14,7 @@ use function http_build_query;
 /**
  * Get list of all communication templates.
  *
- * @see \Tests\Unit\Tools\Ozone\Communication\ListTemplatesTest
+ * @see ListTemplatesTest
  */
 final readonly class ListTemplates
 {
@@ -23,12 +23,12 @@ final readonly class ListTemplates
     ) {
     }
 
-    public function __invoke(UriInterface $pdsUri): RequestInterface
+    public function __invoke(UriInterface $uri): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $pdsUri->withPath('xrpc/tools.ozone.communication.listTemplates')
+                $uri->withPath('xrpc/tools.ozone.communication.listTemplates')
                     ->withQuery(http_build_query(array_filter([])))
             );
 

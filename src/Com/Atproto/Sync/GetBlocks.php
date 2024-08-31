@@ -14,7 +14,7 @@ use function http_build_query;
 /**
  * Get data blocks from a given repo, by CID. For example, intermediate MST nodes, or records. Does not require auth; implemented by PDS.
  *
- * @see \Tests\Unit\Com\Atproto\Sync\GetBlocksTest
+ * @see GetBlocksTest
  */
 final readonly class GetBlocks
 {
@@ -23,12 +23,12 @@ final readonly class GetBlocks
     ) {
     }
 
-    public function __invoke(UriInterface $pdsUri, ?string $did = null, ?array $cids = null): RequestInterface
+    public function __invoke(UriInterface $uri, ?string $did = null, ?array $cids = null): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $pdsUri->withPath('xrpc/com.atproto.sync.getBlocks')
+                $uri->withPath('xrpc/com.atproto.sync.getBlocks')
                     ->withQuery(http_build_query(array_filter([
                         'did' => $did,
                         'cids' => $cids,
@@ -37,7 +37,7 @@ final readonly class GetBlocks
 
         $headers = [
             'Accept' => 'application/json',
-            'Content-Type' => 'application/vnd.ipld.car; charset=utf-8',
+            'Content-Type' => 'application/json; charset=utf-8',
         ];
 
         foreach ($headers as $name => $value) {

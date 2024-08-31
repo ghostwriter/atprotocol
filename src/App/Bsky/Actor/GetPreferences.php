@@ -14,7 +14,7 @@ use function http_build_query;
 /**
  * Get private preferences attached to the current account. Expected use is synchronization between multiple devices, and import/export during account migration. Requires auth.
  *
- * @see \Tests\Unit\App\Bsky\Actor\GetPreferencesTest
+ * @see GetPreferencesTest
  */
 final readonly class GetPreferences
 {
@@ -23,12 +23,12 @@ final readonly class GetPreferences
     ) {
     }
 
-    public function __invoke(UriInterface $pdsUri): RequestInterface
+    public function __invoke(UriInterface $uri): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $pdsUri->withPath('xrpc/app.bsky.actor.getPreferences')
+                $uri->withPath('xrpc/app.bsky.actor.getPreferences')
                     ->withQuery(http_build_query(array_filter([])))
             );
 

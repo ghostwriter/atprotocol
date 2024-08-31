@@ -14,7 +14,7 @@ use function http_build_query;
 /**
  * Describes the server's account creation requirements and capabilities. Implemented by PDS.
  *
- * @see \Tests\Unit\Com\Atproto\Server\DescribeServerTest
+ * @see DescribeServerTest
  */
 final readonly class DescribeServer
 {
@@ -23,12 +23,12 @@ final readonly class DescribeServer
     ) {
     }
 
-    public function __invoke(UriInterface $pdsUri): RequestInterface
+    public function __invoke(UriInterface $uri): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $pdsUri->withPath('xrpc/com.atproto.server.describeServer')
+                $uri->withPath('xrpc/com.atproto.server.describeServer')
                     ->withQuery(http_build_query(array_filter([])))
             );
 

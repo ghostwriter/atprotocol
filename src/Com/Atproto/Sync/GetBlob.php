@@ -14,7 +14,7 @@ use function http_build_query;
 /**
  * Get a blob associated with a given account. Returns the full blob as originally uploaded. Does not require auth; implemented by PDS.
  *
- * @see \Tests\Unit\Com\Atproto\Sync\GetBlobTest
+ * @see GetBlobTest
  */
 final readonly class GetBlob
 {
@@ -23,12 +23,12 @@ final readonly class GetBlob
     ) {
     }
 
-    public function __invoke(UriInterface $pdsUri, ?string $did = null, ?string $cid = null): RequestInterface
+    public function __invoke(UriInterface $uri, ?string $did = null, ?string $cid = null): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $pdsUri->withPath('xrpc/com.atproto.sync.getBlob')
+                $uri->withPath('xrpc/com.atproto.sync.getBlob')
                     ->withQuery(http_build_query(array_filter([
                         'did' => $did,
                         'cid' => $cid,
@@ -37,7 +37,7 @@ final readonly class GetBlob
 
         $headers = [
             'Accept' => 'application/json',
-            'Content-Type' => '*/*; charset=utf-8',
+            'Content-Type' => 'application/json; charset=utf-8',
         ];
 
         foreach ($headers as $name => $value) {

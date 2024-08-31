@@ -14,7 +14,7 @@ use function http_build_query;
 /**
  * Get a feed of recent posts from a list (posts and reposts from any actors on the list). Does not require auth.
  *
- * @see \Tests\Unit\App\Bsky\Feed\GetListFeedTest
+ * @see GetListFeedTest
  */
 final readonly class GetListFeed
 {
@@ -24,7 +24,7 @@ final readonly class GetListFeed
     }
 
     public function __invoke(
-        UriInterface $pdsUri,
+        UriInterface $uri,
         ?string $list = null,
         ?int $limit = null,
         ?string $cursor = null,
@@ -32,7 +32,7 @@ final readonly class GetListFeed
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $pdsUri->withPath('xrpc/app.bsky.feed.getListFeed')
+                $uri->withPath('xrpc/app.bsky.feed.getListFeed')
                     ->withQuery(http_build_query(array_filter([
                         'list' => $list,
                         'limit' => $limit,

@@ -14,7 +14,7 @@ use function http_build_query;
 /**
  * Get information about the current auth session. Requires auth.
  *
- * @see \Tests\Unit\Com\Atproto\Server\GetSessionTest
+ * @see GetSessionTest
  */
 final readonly class GetSession
 {
@@ -23,12 +23,12 @@ final readonly class GetSession
     ) {
     }
 
-    public function __invoke(UriInterface $pdsUri): RequestInterface
+    public function __invoke(UriInterface $uri): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $pdsUri->withPath('xrpc/com.atproto.server.getSession')
+                $uri->withPath('xrpc/com.atproto.server.getSession')
                     ->withQuery(http_build_query(array_filter([])))
             );
 

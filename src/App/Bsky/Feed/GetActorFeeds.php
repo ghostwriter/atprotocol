@@ -14,7 +14,7 @@ use function http_build_query;
 /**
  * Get a list of feeds (feed generator records) created by the actor (in the actor's repo).
  *
- * @see \Tests\Unit\App\Bsky\Feed\GetActorFeedsTest
+ * @see GetActorFeedsTest
  */
 final readonly class GetActorFeeds
 {
@@ -24,7 +24,7 @@ final readonly class GetActorFeeds
     }
 
     public function __invoke(
-        UriInterface $pdsUri,
+        UriInterface $uri,
         ?string $actor = null,
         ?int $limit = null,
         ?string $cursor = null,
@@ -32,7 +32,7 @@ final readonly class GetActorFeeds
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $pdsUri->withPath('xrpc/app.bsky.feed.getActorFeeds')
+                $uri->withPath('xrpc/app.bsky.feed.getActorFeeds')
                     ->withQuery(http_build_query(array_filter([
                         'actor' => $actor,
                         'limit' => $limit,

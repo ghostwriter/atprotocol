@@ -16,7 +16,7 @@ use function json_encode;
 /**
  * Send information about interactions with feed items back to the feed generator that served them.
  *
- * @see \Tests\Unit\App\Bsky\Feed\SendInteractionsTest
+ * @see SendInteractionsTest
  */
 final readonly class SendInteractions
 {
@@ -26,10 +26,10 @@ final readonly class SendInteractions
     ) {
     }
 
-    public function __invoke(UriInterface $pdsUri, ?array $interactions = null): RequestInterface
+    public function __invoke(UriInterface $uri, ?array $interactions = null): RequestInterface
     {
         $request = $this->requestFactory
-            ->createRequest('POST', $pdsUri->withPath('xrpc/app.bsky.feed.sendInteractions'));
+            ->createRequest('POST', $uri->withPath('xrpc/app.bsky.feed.sendInteractions'));
 
         $headers = [
             'Accept' => 'application/json',

@@ -16,7 +16,7 @@ use function json_encode;
 /**
  * Signs a PLC operation to update some value(s) in the requesting DID's document.
  *
- * @see \Tests\Unit\Com\Atproto\Identity\SignPlcOperationTest
+ * @see SignPlcOperationTest
  */
 final readonly class SignPlcOperation
 {
@@ -27,7 +27,7 @@ final readonly class SignPlcOperation
     }
 
     public function __invoke(
-        UriInterface $pdsUri,
+        UriInterface $uri,
         ?string $token = null,
         ?array $rotationKeys = null,
         ?array $alsoKnownAs = null,
@@ -35,7 +35,7 @@ final readonly class SignPlcOperation
         ?string $services = null,
     ): RequestInterface {
         $request = $this->requestFactory
-            ->createRequest('POST', $pdsUri->withPath('xrpc/com.atproto.identity.signPlcOperation'));
+            ->createRequest('POST', $uri->withPath('xrpc/com.atproto.identity.signPlcOperation'));
 
         $headers = [
             'Accept' => 'application/json',

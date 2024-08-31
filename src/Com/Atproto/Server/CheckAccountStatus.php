@@ -14,7 +14,7 @@ use function http_build_query;
 /**
  * Returns the status of an account, especially as pertaining to import or recovery. Can be called many times over the course of an account migration. Requires auth and can only be called pertaining to oneself.
  *
- * @see \Tests\Unit\Com\Atproto\Server\CheckAccountStatusTest
+ * @see CheckAccountStatusTest
  */
 final readonly class CheckAccountStatus
 {
@@ -23,12 +23,12 @@ final readonly class CheckAccountStatus
     ) {
     }
 
-    public function __invoke(UriInterface $pdsUri): RequestInterface
+    public function __invoke(UriInterface $uri): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $pdsUri->withPath('xrpc/com.atproto.server.checkAccountStatus')
+                $uri->withPath('xrpc/com.atproto.server.checkAccountStatus')
                     ->withQuery(http_build_query(array_filter([])))
             );
 

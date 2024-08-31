@@ -14,7 +14,7 @@ use function http_build_query;
 /**
  * Get the service-specific admin status of a subject (account, record, or blob).
  *
- * @see \Tests\Unit\Com\Atproto\Admin\GetSubjectStatusTest
+ * @see GetSubjectStatusTest
  */
 final readonly class GetSubjectStatus
 {
@@ -24,7 +24,7 @@ final readonly class GetSubjectStatus
     }
 
     public function __invoke(
-        UriInterface $pdsUri,
+        UriInterface $uri,
         ?string $did = null,
         ?string $uri = null,
         ?string $blob = null,
@@ -32,7 +32,7 @@ final readonly class GetSubjectStatus
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $pdsUri->withPath('xrpc/com.atproto.admin.getSubjectStatus')
+                $uri->withPath('xrpc/com.atproto.admin.getSubjectStatus')
                     ->withQuery(http_build_query(array_filter([
                         'did' => $did,
                         'uri' => $uri,

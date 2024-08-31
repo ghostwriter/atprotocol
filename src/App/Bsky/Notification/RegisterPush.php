@@ -16,7 +16,7 @@ use function json_encode;
 /**
  * Register to receive push notifications, via a specified service, for the requesting account. Requires auth.
  *
- * @see \Tests\Unit\App\Bsky\Notification\RegisterPushTest
+ * @see RegisterPushTest
  */
 final readonly class RegisterPush
 {
@@ -27,14 +27,14 @@ final readonly class RegisterPush
     }
 
     public function __invoke(
-        UriInterface $pdsUri,
+        UriInterface $uri,
         ?string $serviceDid = null,
         ?string $token = null,
         ?string $platform = null,
         ?string $appId = null,
     ): RequestInterface {
         $request = $this->requestFactory
-            ->createRequest('POST', $pdsUri->withPath('xrpc/app.bsky.notification.registerPush'));
+            ->createRequest('POST', $uri->withPath('xrpc/app.bsky.notification.registerPush'));
 
         $headers = [
             'Accept' => 'application/json',

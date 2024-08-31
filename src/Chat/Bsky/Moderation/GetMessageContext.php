@@ -12,9 +12,8 @@ use function array_filter;
 use function http_build_query;
 
 /**
- * GetMessageContext.
  *
- * @see \Tests\Unit\Chat\Bsky\Moderation\GetMessageContextTest
+ * @see GetMessageContextTest
  */
 final readonly class GetMessageContext
 {
@@ -24,7 +23,7 @@ final readonly class GetMessageContext
     }
 
     public function __invoke(
-        UriInterface $pdsUri,
+        UriInterface $uri,
         ?string $messageId = null,
         ?string $convoId = null,
         ?int $before = null,
@@ -33,7 +32,7 @@ final readonly class GetMessageContext
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $pdsUri->withPath('xrpc/chat.bsky.moderation.getMessageContext')
+                $uri->withPath('xrpc/chat.bsky.moderation.getMessageContext')
                     ->withQuery(http_build_query(array_filter([
                         'convoId' => $convoId,
                         'messageId' => $messageId,

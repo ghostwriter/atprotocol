@@ -14,7 +14,7 @@ use function http_build_query;
 /**
  * An unspecced view of globally popular feed generators.
  *
- * @see \Tests\Unit\App\Bsky\Unspecced\GetPopularFeedGeneratorsTest
+ * @see GetPopularFeedGeneratorsTest
  */
 final readonly class GetPopularFeedGenerators
 {
@@ -24,7 +24,7 @@ final readonly class GetPopularFeedGenerators
     }
 
     public function __invoke(
-        UriInterface $pdsUri,
+        UriInterface $uri,
         ?int $limit = null,
         ?string $cursor = null,
         ?string $query = null,
@@ -32,7 +32,7 @@ final readonly class GetPopularFeedGenerators
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $pdsUri->withPath('xrpc/app.bsky.unspecced.getPopularFeedGenerators')
+                $uri->withPath('xrpc/app.bsky.unspecced.getPopularFeedGenerators')
                     ->withQuery(http_build_query(array_filter([
                         'limit' => $limit,
                         'cursor' => $cursor,

@@ -16,7 +16,7 @@ use function json_encode;
 /**
  * Validates a PLC operation to ensure that it doesn't violate a service's constraints or get the identity into a bad state, then submits it to the PLC registry.
  *
- * @see \Tests\Unit\Com\Atproto\Identity\SubmitPlcOperationTest
+ * @see SubmitPlcOperationTest
  */
 final readonly class SubmitPlcOperation
 {
@@ -26,10 +26,10 @@ final readonly class SubmitPlcOperation
     ) {
     }
 
-    public function __invoke(UriInterface $pdsUri, ?string $operation = null): RequestInterface
+    public function __invoke(UriInterface $uri, ?string $operation = null): RequestInterface
     {
         $request = $this->requestFactory
-            ->createRequest('POST', $pdsUri->withPath('xrpc/com.atproto.identity.submitPlcOperation'));
+            ->createRequest('POST', $uri->withPath('xrpc/com.atproto.identity.submitPlcOperation'));
 
         $headers = [
             'Accept' => 'application/json',
