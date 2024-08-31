@@ -16,7 +16,7 @@ use function json_encode;
 /**
  * Unmutes the specified account. Requires auth.
  *
- * @see \Tests\Unit\App\Bsky\Graph\UnmuteActorTest
+ * @see UnmuteActorTest
  */
 final readonly class UnmuteActor
 {
@@ -26,10 +26,10 @@ final readonly class UnmuteActor
     ) {
     }
 
-    public function __invoke(UriInterface $pdsUri, ?string $actor = null): RequestInterface
+    public function __invoke(UriInterface $uri, ?string $actor = null): RequestInterface
     {
         $request = $this->requestFactory
-            ->createRequest('POST', $pdsUri->withPath('xrpc/app.bsky.graph.unmuteActor'));
+            ->createRequest('POST', $uri->withPath('xrpc/app.bsky.graph.unmuteActor'));
 
         $headers = [
             'Accept' => 'application/json',
