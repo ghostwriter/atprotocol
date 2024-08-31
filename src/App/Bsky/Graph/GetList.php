@@ -14,7 +14,7 @@ use function http_build_query;
 /**
  * Gets a 'view' (with additional context) of a specified list.
  *
- * @see \Tests\Unit\App\Bsky\Graph\GetListTest
+ * @see GetListTest
  */
 final readonly class GetList
 {
@@ -24,7 +24,7 @@ final readonly class GetList
     }
 
     public function __invoke(
-        UriInterface $pdsUri,
+        UriInterface $uri,
         ?string $list = null,
         ?int $limit = null,
         ?string $cursor = null,
@@ -32,7 +32,7 @@ final readonly class GetList
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $pdsUri->withPath('xrpc/app.bsky.graph.getList')
+                $uri->withPath('xrpc/app.bsky.graph.getList')
                     ->withQuery(http_build_query(array_filter([
                         'list' => $list,
                         'limit' => $limit,
