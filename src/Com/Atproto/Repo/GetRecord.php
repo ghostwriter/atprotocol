@@ -14,7 +14,7 @@ use function http_build_query;
 /**
  * Get a single record from a repository. Does not require auth.
  *
- * @see \Tests\Unit\Com\Atproto\Repo\GetRecordTest
+ * @see GetRecordTest
  */
 final readonly class GetRecord
 {
@@ -24,7 +24,7 @@ final readonly class GetRecord
     }
 
     public function __invoke(
-        UriInterface $pdsUri,
+        UriInterface $uri,
         ?string $repo = null,
         ?string $collection = null,
         ?string $rkey = null,
@@ -33,7 +33,7 @@ final readonly class GetRecord
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $pdsUri->withPath('xrpc/com.atproto.repo.getRecord')
+                $uri->withPath('xrpc/com.atproto.repo.getRecord')
                     ->withQuery(http_build_query(array_filter([
                         'repo' => $repo,
                         'collection' => $collection,
