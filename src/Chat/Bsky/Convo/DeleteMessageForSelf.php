@@ -14,9 +14,8 @@ use function array_filter;
 use function json_encode;
 
 /**
- * DeleteMessageForSelf.
  *
- * @see \Tests\Unit\Chat\Bsky\Convo\DeleteMessageForSelfTest
+ * @see DeleteMessageForSelfTest
  */
 final readonly class DeleteMessageForSelf
 {
@@ -27,12 +26,12 @@ final readonly class DeleteMessageForSelf
     }
 
     public function __invoke(
-        UriInterface $pdsUri,
+        UriInterface $uri,
         ?string $convoId = null,
         ?string $messageId = null,
     ): RequestInterface {
         $request = $this->requestFactory
-            ->createRequest('POST', $pdsUri->withPath('xrpc/chat.bsky.convo.deleteMessageForSelf'));
+            ->createRequest('POST', $uri->withPath('xrpc/chat.bsky.convo.deleteMessageForSelf'));
 
         $headers = [
             'Accept' => 'application/json',
