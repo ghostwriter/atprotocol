@@ -12,9 +12,8 @@ use function array_filter;
 use function http_build_query;
 
 /**
- * GetActorMetadata.
  *
- * @see \Tests\Unit\Chat\Bsky\Moderation\GetActorMetadataTest
+ * @see GetActorMetadataTest
  */
 final readonly class GetActorMetadata
 {
@@ -23,12 +22,12 @@ final readonly class GetActorMetadata
     ) {
     }
 
-    public function __invoke(UriInterface $pdsUri, ?string $actor = null): RequestInterface
+    public function __invoke(UriInterface $uri, ?string $actor = null): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $pdsUri->withPath('xrpc/chat.bsky.moderation.getActorMetadata')
+                $uri->withPath('xrpc/chat.bsky.moderation.getActorMetadata')
                     ->withQuery(http_build_query(array_filter([
                         'actor' => $actor,
                     ])))
