@@ -14,7 +14,7 @@ use function http_build_query;
 /**
  * Get a list of reposts for a given post.
  *
- * @see \Tests\Unit\App\Bsky\Feed\GetRepostedByTest
+ * @see GetRepostedByTest
  */
 final readonly class GetRepostedBy
 {
@@ -24,7 +24,7 @@ final readonly class GetRepostedBy
     }
 
     public function __invoke(
-        UriInterface $pdsUri,
+        UriInterface $uri,
         ?string $uri = null,
         ?string $cid = null,
         ?int $limit = null,
@@ -33,7 +33,7 @@ final readonly class GetRepostedBy
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $pdsUri->withPath('xrpc/app.bsky.feed.getRepostedBy')
+                $uri->withPath('xrpc/app.bsky.feed.getRepostedBy')
                     ->withQuery(http_build_query(array_filter([
                         'uri' => $uri,
                         'cid' => $cid,

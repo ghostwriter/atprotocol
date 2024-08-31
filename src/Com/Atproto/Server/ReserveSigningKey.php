@@ -16,7 +16,7 @@ use function json_encode;
 /**
  * Reserve a repo signing key, for use with account creation. Necessary so that a DID PLC update operation can be constructed during an account migraiton. Public and does not require auth; implemented by PDS. NOTE: this endpoint may change when full account migration is implemented.
  *
- * @see \Tests\Unit\Com\Atproto\Server\ReserveSigningKeyTest
+ * @see ReserveSigningKeyTest
  */
 final readonly class ReserveSigningKey
 {
@@ -26,10 +26,10 @@ final readonly class ReserveSigningKey
     ) {
     }
 
-    public function __invoke(UriInterface $pdsUri, ?string $did = null): RequestInterface
+    public function __invoke(UriInterface $uri, ?string $did = null): RequestInterface
     {
         $request = $this->requestFactory
-            ->createRequest('POST', $pdsUri->withPath('xrpc/com.atproto.server.reserveSigningKey'));
+            ->createRequest('POST', $uri->withPath('xrpc/com.atproto.server.reserveSigningKey'));
 
         $headers = [
             'Accept' => 'application/json',

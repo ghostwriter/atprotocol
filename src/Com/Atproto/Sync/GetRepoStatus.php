@@ -14,7 +14,7 @@ use function http_build_query;
 /**
  * Get the hosting status for a repository, on this server. Expected to be implemented by PDS and Relay.
  *
- * @see \Tests\Unit\Com\Atproto\Sync\GetRepoStatusTest
+ * @see GetRepoStatusTest
  */
 final readonly class GetRepoStatus
 {
@@ -23,12 +23,12 @@ final readonly class GetRepoStatus
     ) {
     }
 
-    public function __invoke(UriInterface $pdsUri, ?string $did = null): RequestInterface
+    public function __invoke(UriInterface $uri, ?string $did = null): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $pdsUri->withPath('xrpc/com.atproto.sync.getRepoStatus')
+                $uri->withPath('xrpc/com.atproto.sync.getRepoStatus')
                     ->withQuery(http_build_query(array_filter([
                         'did' => $did,
                     ])))

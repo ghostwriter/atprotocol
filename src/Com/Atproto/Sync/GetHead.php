@@ -14,7 +14,7 @@ use function http_build_query;
 /**
  * DEPRECATED - please use com.atproto.sync.getLatestCommit instead.
  *
- * @see \Tests\Unit\Com\Atproto\Sync\GetHeadTest
+ * @see GetHeadTest
  */
 final readonly class GetHead
 {
@@ -23,12 +23,12 @@ final readonly class GetHead
     ) {
     }
 
-    public function __invoke(UriInterface $pdsUri, ?string $did = null): RequestInterface
+    public function __invoke(UriInterface $uri, ?string $did = null): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $pdsUri->withPath('xrpc/com.atproto.sync.getHead')
+                $uri->withPath('xrpc/com.atproto.sync.getHead')
                     ->withQuery(http_build_query(array_filter([
                         'did' => $did,
                     ])))

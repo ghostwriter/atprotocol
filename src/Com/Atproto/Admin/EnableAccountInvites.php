@@ -16,7 +16,7 @@ use function json_encode;
 /**
  * Re-enable an account's ability to receive invite codes.
  *
- * @see \Tests\Unit\Com\Atproto\Admin\EnableAccountInvitesTest
+ * @see EnableAccountInvitesTest
  */
 final readonly class EnableAccountInvites
 {
@@ -26,13 +26,10 @@ final readonly class EnableAccountInvites
     ) {
     }
 
-    public function __invoke(
-        UriInterface $pdsUri,
-        ?string $account = null,
-        ?string $note = null,
-    ): RequestInterface {
+    public function __invoke(UriInterface $uri, ?string $account = null, ?string $note = null): RequestInterface
+    {
         $request = $this->requestFactory
-            ->createRequest('POST', $pdsUri->withPath('xrpc/com.atproto.admin.enableAccountInvites'));
+            ->createRequest('POST', $uri->withPath('xrpc/com.atproto.admin.enableAccountInvites'));
 
         $headers = [
             'Accept' => 'application/json',

@@ -16,7 +16,7 @@ use function json_encode;
 /**
  * Delete a communication template.
  *
- * @see \Tests\Unit\Tools\Ozone\Communication\DeleteTemplateTest
+ * @see DeleteTemplateTest
  */
 final readonly class DeleteTemplate
 {
@@ -26,10 +26,10 @@ final readonly class DeleteTemplate
     ) {
     }
 
-    public function __invoke(UriInterface $pdsUri, ?string $id = null): RequestInterface
+    public function __invoke(UriInterface $uri, ?string $id = null): RequestInterface
     {
         $request = $this->requestFactory
-            ->createRequest('POST', $pdsUri->withPath('xrpc/tools.ozone.communication.deleteTemplate'));
+            ->createRequest('POST', $uri->withPath('xrpc/tools.ozone.communication.deleteTemplate'));
 
         $headers = [
             'Accept' => 'application/json',

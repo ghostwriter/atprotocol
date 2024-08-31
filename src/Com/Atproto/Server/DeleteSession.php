@@ -16,7 +16,7 @@ use function json_encode;
 /**
  * Delete the current session. Requires auth.
  *
- * @see \Tests\Unit\Com\Atproto\Server\DeleteSessionTest
+ * @see DeleteSessionTest
  */
 final readonly class DeleteSession
 {
@@ -26,10 +26,10 @@ final readonly class DeleteSession
     ) {
     }
 
-    public function __invoke(UriInterface $pdsUri): RequestInterface
+    public function __invoke(UriInterface $uri): RequestInterface
     {
         $request = $this->requestFactory
-            ->createRequest('POST', $pdsUri->withPath('xrpc/com.atproto.server.deleteSession'));
+            ->createRequest('POST', $uri->withPath('xrpc/com.atproto.server.deleteSession'));
 
         $headers = [
             'Accept' => 'application/json',

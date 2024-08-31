@@ -16,7 +16,7 @@ use function json_encode;
 /**
  * Updates the current account's handle. Verifies handle validity, and updates did:plc document if necessary. Implemented by PDS, and requires auth.
  *
- * @see \Tests\Unit\Com\Atproto\Identity\UpdateHandleTest
+ * @see UpdateHandleTest
  */
 final readonly class UpdateHandle
 {
@@ -26,10 +26,10 @@ final readonly class UpdateHandle
     ) {
     }
 
-    public function __invoke(UriInterface $pdsUri, ?string $handle = null): RequestInterface
+    public function __invoke(UriInterface $uri, ?string $handle = null): RequestInterface
     {
         $request = $this->requestFactory
-            ->createRequest('POST', $pdsUri->withPath('xrpc/com.atproto.identity.updateHandle'));
+            ->createRequest('POST', $uri->withPath('xrpc/com.atproto.identity.updateHandle'));
 
         $headers = [
             'Accept' => 'application/json',

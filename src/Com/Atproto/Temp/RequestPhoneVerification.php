@@ -16,7 +16,7 @@ use function json_encode;
 /**
  * Request a verification code to be sent to the supplied phone number.
  *
- * @see \Tests\Unit\Com\Atproto\Temp\RequestPhoneVerificationTest
+ * @see RequestPhoneVerificationTest
  */
 final readonly class RequestPhoneVerification
 {
@@ -26,10 +26,10 @@ final readonly class RequestPhoneVerification
     ) {
     }
 
-    public function __invoke(UriInterface $pdsUri, ?string $phoneNumber = null): RequestInterface
+    public function __invoke(UriInterface $uri, ?string $phoneNumber = null): RequestInterface
     {
         $request = $this->requestFactory
-            ->createRequest('POST', $pdsUri->withPath('xrpc/com.atproto.temp.requestPhoneVerification'));
+            ->createRequest('POST', $uri->withPath('xrpc/com.atproto.temp.requestPhoneVerification'));
 
         $headers = [
             'Accept' => 'application/json',

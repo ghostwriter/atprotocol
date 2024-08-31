@@ -16,7 +16,7 @@ use function json_encode;
 /**
  * Request an email with a code to in order to request a signed PLC operation. Requires Auth.
  *
- * @see \Tests\Unit\Com\Atproto\Identity\RequestPlcOperationSignatureTest
+ * @see RequestPlcOperationSignatureTest
  */
 final readonly class RequestPlcOperationSignature
 {
@@ -26,10 +26,10 @@ final readonly class RequestPlcOperationSignature
     ) {
     }
 
-    public function __invoke(UriInterface $pdsUri): RequestInterface
+    public function __invoke(UriInterface $uri): RequestInterface
     {
         $request = $this->requestFactory
-            ->createRequest('POST', $pdsUri->withPath('xrpc/com.atproto.identity.requestPlcOperationSignature'));
+            ->createRequest('POST', $uri->withPath('xrpc/com.atproto.identity.requestPlcOperationSignature'));
 
         $headers = [
             'Accept' => 'application/json',

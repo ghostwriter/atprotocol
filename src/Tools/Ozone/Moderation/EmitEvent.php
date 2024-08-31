@@ -16,7 +16,7 @@ use function json_encode;
 /**
  * Take a moderation action on an actor.
  *
- * @see \Tests\Unit\Tools\Ozone\Moderation\EmitEventTest
+ * @see EmitEventTest
  */
 final readonly class EmitEvent
 {
@@ -27,14 +27,14 @@ final readonly class EmitEvent
     }
 
     public function __invoke(
-        UriInterface $pdsUri,
+        UriInterface $uri,
         ?string $event = null,
         ?string $subject = null,
         ?string $createdBy = null,
         ?array $subjectBlobCids = null,
     ): RequestInterface {
         $request = $this->requestFactory
-            ->createRequest('POST', $pdsUri->withPath('xrpc/tools.ozone.moderation.emitEvent'));
+            ->createRequest('POST', $uri->withPath('xrpc/tools.ozone.moderation.emitEvent'));
 
         $headers = [
             'Accept' => 'application/json',

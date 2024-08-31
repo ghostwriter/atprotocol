@@ -14,7 +14,7 @@ use function http_build_query;
 /**
  * Backend Posts search, returns only skeleton.
  *
- * @see \Tests\Unit\App\Bsky\Unspecced\SearchPostsSkeletonTest
+ * @see SearchPostsSkeletonTest
  */
 final readonly class SearchPostsSkeleton
 {
@@ -24,7 +24,7 @@ final readonly class SearchPostsSkeleton
     }
 
     public function __invoke(
-        UriInterface $pdsUri,
+        UriInterface $uri,
         ?string $q = null,
         ?string $sort = null,
         ?string $since = null,
@@ -42,7 +42,7 @@ final readonly class SearchPostsSkeleton
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $pdsUri->withPath('xrpc/app.bsky.unspecced.searchPostsSkeleton')
+                $uri->withPath('xrpc/app.bsky.unspecced.searchPostsSkeleton')
                     ->withQuery(http_build_query(array_filter([
                         'q' => $q,
                         'sort' => $sort,

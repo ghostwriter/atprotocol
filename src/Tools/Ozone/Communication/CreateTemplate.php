@@ -16,7 +16,7 @@ use function json_encode;
 /**
  * Administrative action to create a new, re-usable communication (email for now) template.
  *
- * @see \Tests\Unit\Tools\Ozone\Communication\CreateTemplateTest
+ * @see CreateTemplateTest
  */
 final readonly class CreateTemplate
 {
@@ -27,14 +27,14 @@ final readonly class CreateTemplate
     }
 
     public function __invoke(
-        UriInterface $pdsUri,
+        UriInterface $uri,
         ?string $name = null,
         ?string $contentMarkdown = null,
         ?string $subject = null,
         ?string $createdBy = null,
     ): RequestInterface {
         $request = $this->requestFactory
-            ->createRequest('POST', $pdsUri->withPath('xrpc/tools.ozone.communication.createTemplate'));
+            ->createRequest('POST', $uri->withPath('xrpc/tools.ozone.communication.createTemplate'));
 
         $headers = [
             'Accept' => 'application/json',

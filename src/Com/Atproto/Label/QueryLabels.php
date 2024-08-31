@@ -14,7 +14,7 @@ use function http_build_query;
 /**
  * Find labels relevant to the provided AT-URI patterns. Public endpoint for moderation services, though may return different or additional results with auth.
  *
- * @see \Tests\Unit\Com\Atproto\Label\QueryLabelsTest
+ * @see QueryLabelsTest
  */
 final readonly class QueryLabels
 {
@@ -24,7 +24,7 @@ final readonly class QueryLabels
     }
 
     public function __invoke(
-        UriInterface $pdsUri,
+        UriInterface $uri,
         ?array $uriPatterns = null,
         ?array $sources = null,
         ?int $limit = null,
@@ -33,7 +33,7 @@ final readonly class QueryLabels
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $pdsUri->withPath('xrpc/com.atproto.label.queryLabels')
+                $uri->withPath('xrpc/com.atproto.label.queryLabels')
                     ->withQuery(http_build_query(array_filter([
                         'uriPatterns' => $uriPatterns,
                         'sources' => $sources,

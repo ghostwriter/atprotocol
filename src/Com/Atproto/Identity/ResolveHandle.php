@@ -14,7 +14,7 @@ use function http_build_query;
 /**
  * Resolves a handle (domain name) to a DID.
  *
- * @see \Tests\Unit\Com\Atproto\Identity\ResolveHandleTest
+ * @see ResolveHandleTest
  */
 final readonly class ResolveHandle
 {
@@ -23,12 +23,12 @@ final readonly class ResolveHandle
     ) {
     }
 
-    public function __invoke(UriInterface $pdsUri, ?string $handle = null): RequestInterface
+    public function __invoke(UriInterface $uri, ?string $handle = null): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $pdsUri->withPath('xrpc/com.atproto.identity.resolveHandle')
+                $uri->withPath('xrpc/com.atproto.identity.resolveHandle')
                     ->withQuery(http_build_query(array_filter([
                         'handle' => $handle,
                     ])))

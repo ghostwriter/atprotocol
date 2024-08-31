@@ -14,7 +14,7 @@ use function http_build_query;
 /**
  * Enumerates accounts which follow a specified account (actor) and are followed by the viewer.
  *
- * @see \Tests\Unit\App\Bsky\Graph\GetKnownFollowersTest
+ * @see GetKnownFollowersTest
  */
 final readonly class GetKnownFollowers
 {
@@ -24,7 +24,7 @@ final readonly class GetKnownFollowers
     }
 
     public function __invoke(
-        UriInterface $pdsUri,
+        UriInterface $uri,
         ?string $actor = null,
         ?int $limit = null,
         ?string $cursor = null,
@@ -32,7 +32,7 @@ final readonly class GetKnownFollowers
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $pdsUri->withPath('xrpc/app.bsky.graph.getKnownFollowers')
+                $uri->withPath('xrpc/app.bsky.graph.getKnownFollowers')
                     ->withQuery(http_build_query(array_filter([
                         'actor' => $actor,
                         'limit' => $limit,

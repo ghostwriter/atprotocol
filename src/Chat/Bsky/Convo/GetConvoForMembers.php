@@ -12,9 +12,8 @@ use function array_filter;
 use function http_build_query;
 
 /**
- * GetConvoForMembers.
  *
- * @see \Tests\Unit\Chat\Bsky\Convo\GetConvoForMembersTest
+ * @see GetConvoForMembersTest
  */
 final readonly class GetConvoForMembers
 {
@@ -23,12 +22,12 @@ final readonly class GetConvoForMembers
     ) {
     }
 
-    public function __invoke(UriInterface $pdsUri, ?array $members = null): RequestInterface
+    public function __invoke(UriInterface $uri, ?array $members = null): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $pdsUri->withPath('xrpc/chat.bsky.convo.getConvoForMembers')
+                $uri->withPath('xrpc/chat.bsky.convo.getConvoForMembers')
                     ->withQuery(http_build_query(array_filter([
                         'members' => $members,
                     ])))

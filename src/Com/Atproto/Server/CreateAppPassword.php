@@ -16,7 +16,7 @@ use function json_encode;
 /**
  * Create an App Password.
  *
- * @see \Tests\Unit\Com\Atproto\Server\CreateAppPasswordTest
+ * @see CreateAppPasswordTest
  */
 final readonly class CreateAppPassword
 {
@@ -26,13 +26,10 @@ final readonly class CreateAppPassword
     ) {
     }
 
-    public function __invoke(
-        UriInterface $pdsUri,
-        ?string $name = null,
-        ?bool $privileged = null,
-    ): RequestInterface {
+    public function __invoke(UriInterface $uri, ?string $name = null, ?bool $privileged = null): RequestInterface
+    {
         $request = $this->requestFactory
-            ->createRequest('POST', $pdsUri->withPath('xrpc/com.atproto.server.createAppPassword'));
+            ->createRequest('POST', $uri->withPath('xrpc/com.atproto.server.createAppPassword'));
 
         $headers = [
             'Accept' => 'application/json',
