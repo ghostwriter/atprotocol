@@ -14,7 +14,7 @@ use function http_build_query;
 /**
  * Get posts in a thread. Does not require auth, but additional metadata and filtering will be applied for authed requests.
  *
- * @see \Tests\Unit\App\Bsky\Feed\GetPostThreadTest
+ * @see GetPostThreadTest
  */
 final readonly class GetPostThread
 {
@@ -24,7 +24,7 @@ final readonly class GetPostThread
     }
 
     public function __invoke(
-        UriInterface $pdsUri,
+        UriInterface $uri,
         ?string $uri = null,
         ?int $depth = null,
         ?int $parentHeight = null,
@@ -32,7 +32,7 @@ final readonly class GetPostThread
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $pdsUri->withPath('xrpc/app.bsky.feed.getPostThread')
+                $uri->withPath('xrpc/app.bsky.feed.getPostThread')
                     ->withQuery(http_build_query(array_filter([
                         'uri' => $uri,
                         'depth' => $depth,
