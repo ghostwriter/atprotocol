@@ -12,9 +12,8 @@ use function array_filter;
 use function http_build_query;
 
 /**
- * ListConvos.
  *
- * @see \Tests\Unit\Chat\Bsky\Convo\ListConvosTest
+ * @see ListConvosTest
  */
 final readonly class ListConvos
 {
@@ -23,12 +22,12 @@ final readonly class ListConvos
     ) {
     }
 
-    public function __invoke(UriInterface $pdsUri, ?int $limit = null, ?string $cursor = null): RequestInterface
+    public function __invoke(UriInterface $uri, ?int $limit = null, ?string $cursor = null): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $pdsUri->withPath('xrpc/chat.bsky.convo.listConvos')
+                $uri->withPath('xrpc/chat.bsky.convo.listConvos')
                     ->withQuery(http_build_query(array_filter([
                         'limit' => $limit,
                         'cursor' => $cursor,
