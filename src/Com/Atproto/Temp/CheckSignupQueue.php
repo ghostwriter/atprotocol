@@ -14,7 +14,7 @@ use function http_build_query;
 /**
  * Check accounts location in signup queue.
  *
- * @see \Tests\Unit\Com\Atproto\Temp\CheckSignupQueueTest
+ * @see CheckSignupQueueTest
  */
 final readonly class CheckSignupQueue
 {
@@ -23,12 +23,12 @@ final readonly class CheckSignupQueue
     ) {
     }
 
-    public function __invoke(UriInterface $pdsUri): RequestInterface
+    public function __invoke(UriInterface $uri): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $pdsUri->withPath('xrpc/com.atproto.temp.checkSignupQueue')
+                $uri->withPath('xrpc/com.atproto.temp.checkSignupQueue')
                     ->withQuery(http_build_query(array_filter([])))
             );
 
