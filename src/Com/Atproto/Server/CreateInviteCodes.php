@@ -16,7 +16,7 @@ use function json_encode;
 /**
  * Create invite codes.
  *
- * @see \Tests\Unit\Com\Atproto\Server\CreateInviteCodesTest
+ * @see CreateInviteCodesTest
  */
 final readonly class CreateInviteCodes
 {
@@ -27,13 +27,13 @@ final readonly class CreateInviteCodes
     }
 
     public function __invoke(
-        UriInterface $pdsUri,
+        UriInterface $uri,
         ?int $codeCount = null,
         ?int $useCount = null,
         ?array $forAccounts = null,
     ): RequestInterface {
         $request = $this->requestFactory
-            ->createRequest('POST', $pdsUri->withPath('xrpc/com.atproto.server.createInviteCodes'));
+            ->createRequest('POST', $uri->withPath('xrpc/com.atproto.server.createInviteCodes'));
 
         $headers = [
             'Accept' => 'application/json',
