@@ -16,7 +16,7 @@ use function json_encode;
 /**
  * Upload a new blob, to be referenced from a repository record. The blob will be deleted if it is not referenced within a time window (eg, minutes). Blob restrictions (mimetype, size, etc) are enforced when the reference is created. Requires auth, implemented by PDS.
  *
- * @see \Tests\Unit\Com\Atproto\Repo\UploadBlobTest
+ * @see UploadBlobTest
  */
 final readonly class UploadBlob
 {
@@ -26,13 +26,13 @@ final readonly class UploadBlob
     ) {
     }
 
-    public function __invoke(UriInterface $pdsUri): RequestInterface
+    public function __invoke(UriInterface $uri): RequestInterface
     {
         $request = $this->requestFactory
-            ->createRequest('POST', $pdsUri->withPath('xrpc/com.atproto.repo.uploadBlob'));
+            ->createRequest('POST', $uri->withPath('xrpc/com.atproto.repo.uploadBlob'));
 
         $headers = [
-            'Accept' => '*/*',
+            'Accept' => 'application/json',
             'Content-Type' => 'application/json; charset=utf-8',
         ];
 
