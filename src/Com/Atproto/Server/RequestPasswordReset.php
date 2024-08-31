@@ -16,7 +16,7 @@ use function json_encode;
 /**
  * Initiate a user account password reset via email.
  *
- * @see \Tests\Unit\Com\Atproto\Server\RequestPasswordResetTest
+ * @see RequestPasswordResetTest
  */
 final readonly class RequestPasswordReset
 {
@@ -26,10 +26,10 @@ final readonly class RequestPasswordReset
     ) {
     }
 
-    public function __invoke(UriInterface $pdsUri, ?string $email = null): RequestInterface
+    public function __invoke(UriInterface $uri, ?string $email = null): RequestInterface
     {
         $request = $this->requestFactory
-            ->createRequest('POST', $pdsUri->withPath('xrpc/com.atproto.server.requestPasswordReset'));
+            ->createRequest('POST', $uri->withPath('xrpc/com.atproto.server.requestPasswordReset'));
 
         $headers = [
             'Accept' => 'application/json',
