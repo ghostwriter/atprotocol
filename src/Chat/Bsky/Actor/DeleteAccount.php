@@ -14,9 +14,8 @@ use function array_filter;
 use function json_encode;
 
 /**
- * DeleteAccount.
  *
- * @see \Tests\Unit\Chat\Bsky\Actor\DeleteAccountTest
+ * @see DeleteAccountTest
  */
 final readonly class DeleteAccount
 {
@@ -26,10 +25,10 @@ final readonly class DeleteAccount
     ) {
     }
 
-    public function __invoke(UriInterface $pdsUri): RequestInterface
+    public function __invoke(UriInterface $uri): RequestInterface
     {
         $request = $this->requestFactory
-            ->createRequest('POST', $pdsUri->withPath('xrpc/chat.bsky.actor.deleteAccount'));
+            ->createRequest('POST', $uri->withPath('xrpc/chat.bsky.actor.deleteAccount'));
 
         $headers = [
             'Accept' => 'application/json',
