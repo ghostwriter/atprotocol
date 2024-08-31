@@ -14,7 +14,7 @@ use function http_build_query;
 /**
  * Get list of accounts that matches your search query.
  *
- * @see \Tests\Unit\Com\Atproto\Admin\SearchAccountsTest
+ * @see SearchAccountsTest
  */
 final readonly class SearchAccounts
 {
@@ -24,7 +24,7 @@ final readonly class SearchAccounts
     }
 
     public function __invoke(
-        UriInterface $pdsUri,
+        UriInterface $uri,
         ?string $email = null,
         ?string $cursor = null,
         ?int $limit = null,
@@ -32,7 +32,7 @@ final readonly class SearchAccounts
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $pdsUri->withPath('xrpc/com.atproto.admin.searchAccounts')
+                $uri->withPath('xrpc/com.atproto.admin.searchAccounts')
                     ->withQuery(http_build_query(array_filter([
                         'email' => $email,
                         'cursor' => $cursor,
