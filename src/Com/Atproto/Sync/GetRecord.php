@@ -14,7 +14,7 @@ use function http_build_query;
 /**
  * Get data blocks needed to prove the existence or non-existence of record in the current version of repo. Does not require auth.
  *
- * @see \Tests\Unit\Com\Atproto\Sync\GetRecordTest
+ * @see GetRecordTest
  */
 final readonly class GetRecord
 {
@@ -24,7 +24,7 @@ final readonly class GetRecord
     }
 
     public function __invoke(
-        UriInterface $pdsUri,
+        UriInterface $uri,
         ?string $did = null,
         ?string $collection = null,
         ?string $rkey = null,
@@ -32,7 +32,7 @@ final readonly class GetRecord
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $pdsUri->withPath('xrpc/com.atproto.sync.getRecord')
+                $uri->withPath('xrpc/com.atproto.sync.getRecord')
                     ->withQuery(http_build_query(array_filter([
                         'did' => $did,
                         'collection' => $collection,
@@ -42,7 +42,7 @@ final readonly class GetRecord
 
         $headers = [
             'Accept' => 'application/json',
-            'Content-Type' => 'application/vnd.ipld.car; charset=utf-8',
+            'Content-Type' => 'application/json; charset=utf-8',
         ];
 
         foreach ($headers as $name => $value) {
