@@ -16,7 +16,7 @@ use function json_encode;
 /**
  * Confirm an email using a token from com.atproto.server.requestEmailConfirmation.
  *
- * @see \Tests\Unit\Com\Atproto\Server\ConfirmEmailTest
+ * @see ConfirmEmailTest
  */
 final readonly class ConfirmEmail
 {
@@ -26,10 +26,10 @@ final readonly class ConfirmEmail
     ) {
     }
 
-    public function __invoke(UriInterface $pdsUri, ?string $email = null, ?string $token = null): RequestInterface
+    public function __invoke(UriInterface $uri, ?string $email = null, ?string $token = null): RequestInterface
     {
         $request = $this->requestFactory
-            ->createRequest('POST', $pdsUri->withPath('xrpc/com.atproto.server.confirmEmail'));
+            ->createRequest('POST', $uri->withPath('xrpc/com.atproto.server.confirmEmail'));
 
         $headers = [
             'Accept' => 'application/json',
