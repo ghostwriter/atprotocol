@@ -14,7 +14,7 @@ use function http_build_query;
 /**
  * Get detailed profile view of an actor. Does not require auth, but contains relevant metadata with auth.
  *
- * @see \Tests\Unit\App\Bsky\Actor\GetProfileTest
+ * @see GetProfileTest
  */
 final readonly class GetProfile
 {
@@ -23,12 +23,12 @@ final readonly class GetProfile
     ) {
     }
 
-    public function __invoke(UriInterface $pdsUri, ?string $actor = null): RequestInterface
+    public function __invoke(UriInterface $uri, ?string $actor = null): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $pdsUri->withPath('xrpc/app.bsky.actor.getProfile')
+                $uri->withPath('xrpc/app.bsky.actor.getProfile')
                     ->withQuery(http_build_query(array_filter([
                         'actor' => $actor,
                     ])))
