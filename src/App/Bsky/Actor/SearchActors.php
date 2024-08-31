@@ -14,7 +14,7 @@ use function http_build_query;
 /**
  * Find actors (profiles) matching search criteria. Does not require auth.
  *
- * @see \Tests\Unit\App\Bsky\Actor\SearchActorsTest
+ * @see SearchActorsTest
  */
 final readonly class SearchActors
 {
@@ -24,7 +24,7 @@ final readonly class SearchActors
     }
 
     public function __invoke(
-        UriInterface $pdsUri,
+        UriInterface $uri,
         ?string $q = null,
         ?int $limit = null,
         ?string $cursor = null,
@@ -32,7 +32,7 @@ final readonly class SearchActors
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $pdsUri->withPath('xrpc/app.bsky.actor.searchActors')
+                $uri->withPath('xrpc/app.bsky.actor.searchActors')
                     ->withQuery(http_build_query(array_filter([
                         'q' => $q,
                         'limit' => $limit,
