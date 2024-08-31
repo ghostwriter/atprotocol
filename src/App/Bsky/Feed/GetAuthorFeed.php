@@ -14,7 +14,7 @@ use function http_build_query;
 /**
  * Get a view of an actor's 'author feed' (post and reposts by the author). Does not require auth.
  *
- * @see \Tests\Unit\App\Bsky\Feed\GetAuthorFeedTest
+ * @see GetAuthorFeedTest
  */
 final readonly class GetAuthorFeed
 {
@@ -24,7 +24,7 @@ final readonly class GetAuthorFeed
     }
 
     public function __invoke(
-        UriInterface $pdsUri,
+        UriInterface $uri,
         ?string $actor = null,
         ?int $limit = null,
         ?string $cursor = null,
@@ -33,7 +33,7 @@ final readonly class GetAuthorFeed
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $pdsUri->withPath('xrpc/app.bsky.feed.getAuthorFeed')
+                $uri->withPath('xrpc/app.bsky.feed.getAuthorFeed')
                     ->withQuery(http_build_query(array_filter([
                         'actor' => $actor,
                         'limit' => $limit,
