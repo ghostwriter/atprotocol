@@ -14,7 +14,7 @@ use function http_build_query;
 /**
  * List all App Passwords.
  *
- * @see \Tests\Unit\Com\Atproto\Server\ListAppPasswordsTest
+ * @see ListAppPasswordsTest
  */
 final readonly class ListAppPasswords
 {
@@ -23,12 +23,12 @@ final readonly class ListAppPasswords
     ) {
     }
 
-    public function __invoke(UriInterface $pdsUri): RequestInterface
+    public function __invoke(UriInterface $uri): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $pdsUri->withPath('xrpc/com.atproto.server.listAppPasswords')
+                $uri->withPath('xrpc/com.atproto.server.listAppPasswords')
                     ->withQuery(http_build_query(array_filter([])))
             );
 
