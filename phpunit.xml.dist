@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/11.2/phpunit.xsd"
+    xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/11.3/phpunit.xsd"
     beStrictAboutChangesToGlobalState="true"
     beStrictAboutCoverageMetadata="true"
     beStrictAboutOutputDuringTests="true"
@@ -14,7 +14,7 @@
     displayDetailsOnTestsThatTriggerErrors="true"
     displayDetailsOnTestsThatTriggerNotices="true"
     displayDetailsOnTestsThatTriggerWarnings="true"
-    executionOrder="depends,defects"
+    executionOrder="depends,random"
     failOnDeprecation="true"
     failOnEmptyTestSuite="true"
     failOnIncomplete="true"
@@ -32,6 +32,9 @@
             <text outputFile=".cache/phpunit/coverage.txt" />
         </report>
     </coverage>
+    <logging>
+        <junit outputFile=".cache/phpunit/junit.xml"/>
+    </logging>
     <source ignoreIndirectDeprecations="true" restrictNotices="true" restrictWarnings="true">
         <include>
             <directory>src</directory>
