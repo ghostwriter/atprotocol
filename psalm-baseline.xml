@@ -137,6 +137,9 @@
     </UnusedClass>
   </file>
   <file src="src/App/Bsky/Feed/GetLikes.php">
+    <DuplicateParam>
+      <code><![CDATA[?string $uri = null]]></code>
+    </DuplicateParam>
     <MissingThrowsDocblock>
       <code><![CDATA[withPath]]></code>
       <code><![CDATA[withQuery]]></code>
@@ -155,6 +158,9 @@
     </UnusedClass>
   </file>
   <file src="src/App/Bsky/Feed/GetPostThread.php">
+    <DuplicateParam>
+      <code><![CDATA[?string $uri = null]]></code>
+    </DuplicateParam>
     <MissingThrowsDocblock>
       <code><![CDATA[withPath]]></code>
       <code><![CDATA[withQuery]]></code>
@@ -172,7 +178,22 @@
       <code><![CDATA[GetPosts]]></code>
     </UnusedClass>
   </file>
+  <file src="src/App/Bsky/Feed/GetQuotes.php">
+    <DuplicateParam>
+      <code><![CDATA[?string $uri = null]]></code>
+    </DuplicateParam>
+    <MissingThrowsDocblock>
+      <code><![CDATA[withPath]]></code>
+      <code><![CDATA[withQuery]]></code>
+    </MissingThrowsDocblock>
+    <UnusedClass>
+      <code><![CDATA[GetQuotes]]></code>
+    </UnusedClass>
+  </file>
   <file src="src/App/Bsky/Feed/GetRepostedBy.php">
+    <DuplicateParam>
+      <code><![CDATA[?string $uri = null]]></code>
+    </DuplicateParam>
     <MissingThrowsDocblock>
       <code><![CDATA[withPath]]></code>
       <code><![CDATA[withQuery]]></code>
@@ -216,6 +237,15 @@
     </MissingThrowsDocblock>
     <UnusedClass>
       <code><![CDATA[SendInteractions]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/App/Bsky/Graph/GetActorStarterPacks.php">
+    <MissingThrowsDocblock>
+      <code><![CDATA[withPath]]></code>
+      <code><![CDATA[withQuery]]></code>
+    </MissingThrowsDocblock>
+    <UnusedClass>
+      <code><![CDATA[GetActorStarterPacks]]></code>
     </UnusedClass>
   </file>
   <file src="src/App/Bsky/Graph/GetBlocks.php">
@@ -308,6 +338,24 @@
       <code><![CDATA[GetRelationships]]></code>
     </UnusedClass>
   </file>
+  <file src="src/App/Bsky/Graph/GetStarterPack.php">
+    <MissingThrowsDocblock>
+      <code><![CDATA[withPath]]></code>
+      <code><![CDATA[withQuery]]></code>
+    </MissingThrowsDocblock>
+    <UnusedClass>
+      <code><![CDATA[GetStarterPack]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/App/Bsky/Graph/GetStarterPacks.php">
+    <MissingThrowsDocblock>
+      <code><![CDATA[withPath]]></code>
+      <code><![CDATA[withQuery]]></code>
+    </MissingThrowsDocblock>
+    <UnusedClass>
+      <code><![CDATA[GetStarterPacks]]></code>
+    </UnusedClass>
+  </file>
   <file src="src/App/Bsky/Graph/GetSuggestedFollowsByActor.php">
     <MissingThrowsDocblock>
       <code><![CDATA[withPath]]></code>
@@ -337,6 +385,16 @@
       <code><![CDATA[MuteActorList]]></code>
     </UnusedClass>
   </file>
+  <file src="src/App/Bsky/Graph/MuteThread.php">
+    <MissingThrowsDocblock>
+      <code><![CDATA[throw new RuntimeException('Failed to encode JSON');]]></code>
+      <code><![CDATA[withBody]]></code>
+      <code><![CDATA[withPath]]></code>
+    </MissingThrowsDocblock>
+    <UnusedClass>
+      <code><![CDATA[MuteThread]]></code>
+    </UnusedClass>
+  </file>
   <file src="src/App/Bsky/Graph/UnmuteActor.php">
     <MissingThrowsDocblock>
       <code><![CDATA[throw new RuntimeException('Failed to encode JSON');]]></code>
@@ -355,6 +413,16 @@
     </MissingThrowsDocblock>
     <UnusedClass>
       <code><![CDATA[UnmuteActorList]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/App/Bsky/Graph/UnmuteThread.php">
+    <MissingThrowsDocblock>
+      <code><![CDATA[throw new RuntimeException('Failed to encode JSON');]]></code>
+      <code><![CDATA[withBody]]></code>
+      <code><![CDATA[withPath]]></code>
+    </MissingThrowsDocblock>
+    <UnusedClass>
+      <code><![CDATA[UnmuteThread]]></code>
     </UnusedClass>
   </file>
   <file src="src/App/Bsky/Labeler/GetServices.php">
@@ -382,6 +450,16 @@
     </MissingThrowsDocblock>
     <UnusedClass>
       <code><![CDATA[ListNotifications]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/App/Bsky/Notification/PutPreferences.php">
+    <MissingThrowsDocblock>
+      <code><![CDATA[throw new RuntimeException('Failed to encode JSON');]]></code>
+      <code><![CDATA[withBody]]></code>
+      <code><![CDATA[withPath]]></code>
+    </MissingThrowsDocblock>
+    <UnusedClass>
+      <code><![CDATA[PutPreferences]]></code>
     </UnusedClass>
   </file>
   <file src="src/App/Bsky/Notification/RegisterPush.php">
@@ -447,6 +525,38 @@
     </MissingThrowsDocblock>
     <UnusedClass>
       <code><![CDATA[SearchPostsSkeleton]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/App/Bsky/Video/GetJobStatus.php">
+    <MissingThrowsDocblock>
+      <code><![CDATA[withPath]]></code>
+      <code><![CDATA[withQuery]]></code>
+    </MissingThrowsDocblock>
+    <UnusedClass>
+      <code><![CDATA[GetJobStatus]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/App/Bsky/Video/GetUploadLimits.php">
+    <MissingThrowsDocblock>
+      <code><![CDATA[withPath]]></code>
+      <code><![CDATA[withQuery]]></code>
+    </MissingThrowsDocblock>
+    <UnusedClass>
+      <code><![CDATA[GetUploadLimits]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/App/Bsky/Video/UploadVideo.php">
+    <MissingThrowsDocblock>
+      <code><![CDATA[throw new RuntimeException('Failed to encode JSON');]]></code>
+      <code><![CDATA[withBody]]></code>
+      <code><![CDATA[withPath]]></code>
+    </MissingThrowsDocblock>
+    <UndefinedConstant>
+      <code><![CDATA[APPLICATION]]></code>
+      <code><![CDATA[JSON]]></code>
+    </UndefinedConstant>
+    <UnusedClass>
+      <code><![CDATA[UploadVideo]]></code>
     </UnusedClass>
   </file>
   <file src="src/AtProtocol.php">
@@ -709,6 +819,9 @@
     </UnusedClass>
   </file>
   <file src="src/Com/Atproto/Admin/GetSubjectStatus.php">
+    <DuplicateParam>
+      <code><![CDATA[?string $uri = null]]></code>
+    </DuplicateParam>
     <MissingThrowsDocblock>
       <code><![CDATA[withPath]]></code>
       <code><![CDATA[withQuery]]></code>
@@ -1337,6 +1450,15 @@
       <code><![CDATA[RequestPhoneVerification]]></code>
     </UnusedClass>
   </file>
+  <file src="src/Handler/AuthenticateHandler.php">
+    <MissingThrowsDocblock>
+      <code><![CDATA[withHeader]]></code>
+      <code><![CDATA[withHeader]]></code>
+    </MissingThrowsDocblock>
+    <UnusedClass>
+      <code><![CDATA[AuthenticateHandler]]></code>
+    </UnusedClass>
+  </file>
   <file src="src/Middleware/AuthenticateMiddleware.php">
     <MissingThrowsDocblock>
       <code><![CDATA[withHeader]]></code>
@@ -1411,6 +1533,9 @@
     </UnusedClass>
   </file>
   <file src="src/Tools/Ozone/Moderation/GetRecord.php">
+    <DuplicateParam>
+      <code><![CDATA[?string $uri = null]]></code>
+    </DuplicateParam>
     <MissingThrowsDocblock>
       <code><![CDATA[withPath]]></code>
       <code><![CDATA[withQuery]]></code>
@@ -1462,6 +1587,45 @@
     </MissingThrowsDocblock>
     <UnusedClass>
       <code><![CDATA[GetConfig]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/Tools/Ozone/Team/AddMember.php">
+    <MissingThrowsDocblock>
+      <code><![CDATA[throw new RuntimeException('Failed to encode JSON');]]></code>
+      <code><![CDATA[withBody]]></code>
+      <code><![CDATA[withPath]]></code>
+    </MissingThrowsDocblock>
+    <UnusedClass>
+      <code><![CDATA[AddMember]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/Tools/Ozone/Team/DeleteMember.php">
+    <MissingThrowsDocblock>
+      <code><![CDATA[throw new RuntimeException('Failed to encode JSON');]]></code>
+      <code><![CDATA[withBody]]></code>
+      <code><![CDATA[withPath]]></code>
+    </MissingThrowsDocblock>
+    <UnusedClass>
+      <code><![CDATA[DeleteMember]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/Tools/Ozone/Team/ListMembers.php">
+    <MissingThrowsDocblock>
+      <code><![CDATA[withPath]]></code>
+      <code><![CDATA[withQuery]]></code>
+    </MissingThrowsDocblock>
+    <UnusedClass>
+      <code><![CDATA[ListMembers]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/Tools/Ozone/Team/UpdateMember.php">
+    <MissingThrowsDocblock>
+      <code><![CDATA[throw new RuntimeException('Failed to encode JSON');]]></code>
+      <code><![CDATA[withBody]]></code>
+      <code><![CDATA[withPath]]></code>
+    </MissingThrowsDocblock>
+    <UnusedClass>
+      <code><![CDATA[UpdateMember]]></code>
     </UnusedClass>
   </file>
   <file src="src/Trait/HttpTrait.php">
