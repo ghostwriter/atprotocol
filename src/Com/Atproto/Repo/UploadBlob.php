@@ -32,7 +32,7 @@ final readonly class UploadBlob
             ->createRequest('POST', $uri->withPath('xrpc/com.atproto.repo.uploadBlob'));
 
         $headers = [
-            'Accept' => 'application/json',
+            'Accept' => '*/*',
             'Content-Type' => 'application/json; charset=utf-8',
         ];
 
