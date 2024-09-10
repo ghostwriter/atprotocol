@@ -31,6 +31,7 @@ final readonly class CreateTemplate
         ?string $name = null,
         ?string $contentMarkdown = null,
         ?string $subject = null,
+        ?string $lang = null,
         ?string $createdBy = null,
     ): RequestInterface {
         $request = $this->requestFactory
@@ -49,6 +50,7 @@ final readonly class CreateTemplate
             'name' => $name,
             'contentMarkdown' => $contentMarkdown,
             'subject' => $subject,
+            'lang' => $lang,
             'createdBy' => $createdBy,
         ]));
 
