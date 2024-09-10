@@ -32,7 +32,7 @@ final readonly class UploadVideo
             ->createRequest('POST', $uri->withPath('xrpc/app.bsky.video.uploadVideo'));
 
         $headers = [
-            'Accept' => '',
+            'Accept' => 'video/mp4',
             'Content-Type' => 'application/json; charset=utf-8',
         ];
 
@@ -40,7 +40,7 @@ final readonly class UploadVideo
             $request = $request->withHeader($name, $value);
         }
 
-        $jsonBody = json_encode(array_filter([APPLICATION/JSON]));
+        $jsonBody = json_encode(array_filter([]));
 
         if ($jsonBody === false) {
             throw new RuntimeException('Failed to encode JSON');
