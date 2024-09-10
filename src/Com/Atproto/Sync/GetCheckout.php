@@ -36,7 +36,7 @@ final readonly class GetCheckout
 
         $headers = [
             'Accept' => 'application/json',
-            'Content-Type' => 'application/json; charset=utf-8',
+            'Content-Type' => 'application/vnd.ipld.car; charset=utf-8',
         ];
 
         foreach ($headers as $name => $value) {
