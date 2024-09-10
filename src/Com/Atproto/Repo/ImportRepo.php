@@ -32,7 +32,7 @@ final readonly class ImportRepo
             ->createRequest('POST', $uri->withPath('xrpc/com.atproto.repo.importRepo'));
 
         $headers = [
-            'Accept' => 'application/json',
+            'Accept' => 'application/vnd.ipld.car',
             'Content-Type' => 'application/json; charset=utf-8',
         ];
 
