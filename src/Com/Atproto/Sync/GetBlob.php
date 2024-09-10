@@ -37,7 +37,7 @@ final readonly class GetBlob
 
         $headers = [
             'Accept' => 'application/json',
-            'Content-Type' => 'application/json; charset=utf-8',
+            'Content-Type' => '*/*; charset=utf-8',
         ];
 
         foreach ($headers as $name => $value) {
