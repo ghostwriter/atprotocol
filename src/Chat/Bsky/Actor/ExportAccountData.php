@@ -33,7 +33,7 @@ final readonly class ExportAccountData
 
         $headers = [
             'Accept' => 'application/json',
-            'Content-Type' => 'application/json; charset=utf-8',
+            'Content-Type' => 'application/jsonl; charset=utf-8',
         ];
 
         foreach ($headers as $name => $value) {
