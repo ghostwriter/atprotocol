@@ -12,7 +12,7 @@ use function array_filter;
 use function http_build_query;
 
 /**
- * Get a list of posts liked by an actor. Does not require auth.
+ * Get a list of posts liked by an actor. Requires auth, actor must be the requesting account.
  *
  * @see GetActorLikesTest
  */
