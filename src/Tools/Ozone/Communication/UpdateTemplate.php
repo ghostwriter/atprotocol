@@ -30,6 +30,7 @@ final readonly class UpdateTemplate
         UriInterface $uri,
         ?string $id = null,
         ?string $name = null,
+        ?string $lang = null,
         ?string $contentMarkdown = null,
         ?string $subject = null,
         ?string $updatedBy = null,
@@ -50,6 +51,7 @@ final readonly class UpdateTemplate
         $jsonBody = json_encode(array_filter([
             'id' => $id,
             'name' => $name,
+            'lang' => $lang,
             'contentMarkdown' => $contentMarkdown,
             'subject' => $subject,
             'updatedBy' => $updatedBy,
