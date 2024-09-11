@@ -10,9 +10,6 @@ use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriInterface;
 use RuntimeException;
 
-use function array_filter;
-use function json_encode;
-
 /**
  * Upload a new blob, to be referenced from a repository record. The blob will be deleted if it is not referenced within a time window (eg, minutes). Blob restrictions (mimetype, size, etc) are enforced when the reference is created. Requires auth, implemented by PDS.
  *
@@ -40,7 +37,7 @@ final readonly class UploadBlob
             $request = $request->withHeader($name, $value);
         }
 
-        $jsonBody = json_encode(array_filter([]));
+        $jsonBody = \json_encode(\array_filter([]));
 
         if ($jsonBody === false) {
             throw new RuntimeException('Failed to encode JSON');
