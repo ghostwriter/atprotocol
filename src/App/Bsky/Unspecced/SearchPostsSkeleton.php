@@ -8,9 +8,6 @@ use Psr\Http\Message\RequestFactoryInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
-use function array_filter;
-use function http_build_query;
-
 /**
  * Backend Posts search, returns only skeleton.
  *
@@ -43,7 +40,7 @@ final readonly class SearchPostsSkeleton
             ->createRequest(
                 'GET',
                 $uri->withPath('xrpc/app.bsky.unspecced.searchPostsSkeleton')
-                    ->withQuery(http_build_query(array_filter([
+                    ->withQuery(\http_build_query(\array_filter([
                         'q' => $q,
                         'sort' => $sort,
                         'since' => $since,
