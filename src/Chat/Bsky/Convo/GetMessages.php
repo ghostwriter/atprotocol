@@ -8,9 +8,6 @@ use Psr\Http\Message\RequestFactoryInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
-use function array_filter;
-use function http_build_query;
-
 /**
  *
  * @see GetMessagesTest
@@ -32,7 +29,7 @@ final readonly class GetMessages
             ->createRequest(
                 'GET',
                 $uri->withPath('xrpc/chat.bsky.convo.getMessages')
-                    ->withQuery(http_build_query(array_filter([
+                    ->withQuery(\http_build_query(\array_filter([
                         'convoId' => $convoId,
                         'limit' => $limit,
                         'cursor' => $cursor,
