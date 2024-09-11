@@ -10,9 +10,6 @@ use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriInterface;
 use RuntimeException;
 
-use function array_filter;
-use function json_encode;
-
 /**
  * Request a verification code to be sent to the supplied phone number.
  *
@@ -40,7 +37,7 @@ final readonly class RequestPhoneVerification
             $request = $request->withHeader($name, $value);
         }
 
-        $jsonBody = json_encode(array_filter([
+        $jsonBody = \json_encode(\array_filter([
             'phoneNumber' => $phoneNumber,
         ]));
 
