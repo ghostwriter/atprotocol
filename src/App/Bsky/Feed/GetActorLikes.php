@@ -8,9 +8,6 @@ use Psr\Http\Message\RequestFactoryInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
-use function array_filter;
-use function http_build_query;
-
 /**
  * Get a list of posts liked by an actor. Requires auth, actor must be the requesting account.
  *
@@ -33,7 +30,7 @@ final readonly class GetActorLikes
             ->createRequest(
                 'GET',
                 $uri->withPath('xrpc/app.bsky.feed.getActorLikes')
-                    ->withQuery(http_build_query(array_filter([
+                    ->withQuery(\http_build_query(\array_filter([
                         'actor' => $actor,
                         'limit' => $limit,
                         'cursor' => $cursor,
