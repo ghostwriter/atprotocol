@@ -8,9 +8,6 @@ use Psr\Http\Message\RequestFactoryInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
-use function array_filter;
-use function http_build_query;
-
 /**
  * List moderation events related to a subject.
  *
@@ -46,7 +43,7 @@ final readonly class QueryEvents
             ->createRequest(
                 'GET',
                 $uri->withPath('xrpc/tools.ozone.moderation.queryEvents')
-                    ->withQuery(http_build_query(array_filter([
+                    ->withQuery(\http_build_query(\array_filter([
                         'types' => $types,
                         'createdBy' => $createdBy,
                         'sortDirection' => $sortDirection,
