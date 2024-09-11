@@ -8,9 +8,6 @@ use Psr\Http\Message\RequestFactoryInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
-use function array_filter;
-use function http_build_query;
-
 /**
  * Get a skeleton of a feed provided by a feed generator. Auth is optional, depending on provider requirements, and provides the DID of the requester. Implemented by Feed Generator Service.
  *
@@ -33,7 +30,7 @@ final readonly class GetFeedSkeleton
             ->createRequest(
                 'GET',
                 $uri->withPath('xrpc/app.bsky.feed.getFeedSkeleton')
-                    ->withQuery(http_build_query(array_filter([
+                    ->withQuery(\http_build_query(\array_filter([
                         'feed' => $feed,
                         'limit' => $limit,
                         'cursor' => $cursor,
