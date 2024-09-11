@@ -8,9 +8,6 @@ use Psr\Http\Message\RequestFactoryInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
-use function array_filter;
-use function http_build_query;
-
 /**
  * Describes the server's account creation requirements and capabilities. Implemented by PDS.
  *
@@ -29,7 +26,7 @@ final readonly class DescribeServer
             ->createRequest(
                 'GET',
                 $uri->withPath('xrpc/com.atproto.server.describeServer')
-                    ->withQuery(http_build_query(array_filter([])))
+                    ->withQuery(\http_build_query(\array_filter([])))
             );
 
         $headers = [
