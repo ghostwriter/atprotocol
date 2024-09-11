@@ -8,9 +8,6 @@ use Psr\Http\Message\RequestFactoryInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
-use function array_filter;
-use function http_build_query;
-
 /**
  * Enumerates accounts which a specified account (actor) follows.
  *
@@ -33,7 +30,7 @@ final readonly class GetFollows
             ->createRequest(
                 'GET',
                 $uri->withPath('xrpc/app.bsky.graph.getFollows')
-                    ->withQuery(http_build_query(array_filter([
+                    ->withQuery(\http_build_query(\array_filter([
                         'actor' => $actor,
                         'limit' => $limit,
                         'cursor' => $cursor,
