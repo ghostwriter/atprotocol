@@ -8,9 +8,6 @@ use Psr\Http\Message\RequestFactoryInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
-use function array_filter;
-use function http_build_query;
-
 /**
  *
  * @see GetLogTest
@@ -28,7 +25,7 @@ final readonly class GetLog
             ->createRequest(
                 'GET',
                 $uri->withPath('xrpc/chat.bsky.convo.getLog')
-                    ->withQuery(http_build_query(array_filter([
+                    ->withQuery(\http_build_query(\array_filter([
                         'cursor' => $cursor,
                     ])))
             );
