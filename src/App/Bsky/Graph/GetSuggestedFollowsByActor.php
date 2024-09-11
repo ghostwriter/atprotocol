@@ -8,9 +8,6 @@ use Psr\Http\Message\RequestFactoryInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
-use function array_filter;
-use function http_build_query;
-
 /**
  * Enumerates follows similar to a given account (actor). Expected use is to recommend additional accounts immediately after following one account.
  *
@@ -29,7 +26,7 @@ final readonly class GetSuggestedFollowsByActor
             ->createRequest(
                 'GET',
                 $uri->withPath('xrpc/app.bsky.graph.getSuggestedFollowsByActor')
-                    ->withQuery(http_build_query(array_filter([
+                    ->withQuery(\http_build_query(\array_filter([
                         'actor' => $actor,
                     ])))
             );
