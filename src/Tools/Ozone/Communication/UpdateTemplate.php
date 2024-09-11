@@ -10,9 +10,6 @@ use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriInterface;
 use RuntimeException;
 
-use function array_filter;
-use function json_encode;
-
 /**
  * Administrative action to update an existing communication template. Allows passing partial fields to patch specific fields only.
  *
@@ -48,7 +45,7 @@ final readonly class UpdateTemplate
             $request = $request->withHeader($name, $value);
         }
 
-        $jsonBody = json_encode(array_filter([
+        $jsonBody = \json_encode(\array_filter([
             'id' => $id,
             'name' => $name,
             'lang' => $lang,
