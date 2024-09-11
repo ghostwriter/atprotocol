@@ -8,9 +8,6 @@ use Psr\Http\Message\RequestFactoryInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
-use function array_filter;
-use function http_build_query;
-
 /**
  * Get a single record from a repository. Does not require auth.
  *
@@ -34,7 +31,7 @@ final readonly class GetRecord
             ->createRequest(
                 'GET',
                 $uri->withPath('xrpc/com.atproto.repo.getRecord')
-                    ->withQuery(http_build_query(array_filter([
+                    ->withQuery(\http_build_query(\array_filter([
                         'repo' => $repo,
                         'collection' => $collection,
                         'rkey' => $rkey,
