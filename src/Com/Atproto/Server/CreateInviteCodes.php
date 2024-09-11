@@ -10,9 +10,6 @@ use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriInterface;
 use RuntimeException;
 
-use function array_filter;
-use function json_encode;
-
 /**
  * Create invite codes.
  *
@@ -44,7 +41,7 @@ final readonly class CreateInviteCodes
             $request = $request->withHeader($name, $value);
         }
 
-        $jsonBody = json_encode(array_filter([
+        $jsonBody = \json_encode(\array_filter([
             'codeCount' => $codeCount,
             'useCount' => $useCount,
             'forAccounts' => $forAccounts,
