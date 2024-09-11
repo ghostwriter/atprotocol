@@ -8,9 +8,6 @@ use Psr\Http\Message\RequestFactoryInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
-use function array_filter;
-use function http_build_query;
-
 /**
  * Get private preferences attached to the current account. Expected use is synchronization between multiple devices, and import/export during account migration. Requires auth.
  *
@@ -29,7 +26,7 @@ final readonly class GetPreferences
             ->createRequest(
                 'GET',
                 $uri->withPath('xrpc/app.bsky.actor.getPreferences')
-                    ->withQuery(http_build_query(array_filter([])))
+                    ->withQuery(\http_build_query(\array_filter([])))
             );
 
         $headers = [
