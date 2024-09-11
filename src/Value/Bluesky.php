@@ -8,8 +8,6 @@ use Ghostwriter\AtProtocol\AtProtocol;
 use InvalidArgumentException;
 use Psr\Http\Message\UriInterface;
 
-use function is_string;
-
 final readonly class Bluesky
 {
     public function __construct(
@@ -36,7 +34,7 @@ final readonly class Bluesky
     {
         return new self(
             match (true) {
-                is_string($personalDataServer) => PersonalDataServer::new($personalDataServer),
+                \is_string($personalDataServer) => PersonalDataServer::new($personalDataServer),
                 $personalDataServer instanceof UriInterface => PersonalDataServer::new(
                     $personalDataServer->__toString()
                 ),
