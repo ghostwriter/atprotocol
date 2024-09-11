@@ -10,9 +10,6 @@ use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriInterface;
 use RuntimeException;
 
-use function array_filter;
-use function json_encode;
-
 /**
  * Signs a PLC operation to update some value(s) in the requesting DID's document.
  *
@@ -46,7 +43,7 @@ final readonly class SignPlcOperation
             $request = $request->withHeader($name, $value);
         }
 
-        $jsonBody = json_encode(array_filter([
+        $jsonBody = \json_encode(\array_filter([
             'token' => $token,
             'rotationKeys' => $rotationKeys,
             'alsoKnownAs' => $alsoKnownAs,
