@@ -8,9 +8,6 @@ use Psr\Http\Message\RequestFactoryInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
-use function array_filter;
-use function http_build_query;
-
 /**
  * Get a blob associated with a given account. Returns the full blob as originally uploaded. Does not require auth; implemented by PDS.
  *
@@ -29,7 +26,7 @@ final readonly class GetBlob
             ->createRequest(
                 'GET',
                 $uri->withPath('xrpc/com.atproto.sync.getBlob')
-                    ->withQuery(http_build_query(array_filter([
+                    ->withQuery(\http_build_query(\array_filter([
                         'did' => $did,
                         'cid' => $cid,
                     ])))
