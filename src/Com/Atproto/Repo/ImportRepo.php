@@ -10,9 +10,6 @@ use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriInterface;
 use RuntimeException;
 
-use function array_filter;
-use function json_encode;
-
 /**
  * Import a repo in the form of a CAR file. Requires Content-Length HTTP header to be set.
  *
@@ -40,7 +37,7 @@ final readonly class ImportRepo
             $request = $request->withHeader($name, $value);
         }
 
-        $jsonBody = json_encode(array_filter([]));
+        $jsonBody = \json_encode(\array_filter([]));
 
         if ($jsonBody === false) {
             throw new RuntimeException('Failed to encode JSON');
