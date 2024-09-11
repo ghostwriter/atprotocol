@@ -1,40 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<files psalm-version="5.25.0@01a8eb06b9e9cc6cfb6a320bf9fb14331919d505">
+<files psalm-version="5.26.1@d747f6500b38ac4f7dfc5edbcae6e4b637d7add0">
   <file src="src/App/Bsky/Actor/GetPreferences.php">
     <MissingThrowsDocblock>
       <code><![CDATA[withPath]]></code>
       <code><![CDATA[withQuery]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[GetPreferences]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/App/Bsky/Actor/GetProfile.php">
     <MissingThrowsDocblock>
       <code><![CDATA[withPath]]></code>
       <code><![CDATA[withQuery]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[GetProfile]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/App/Bsky/Actor/GetProfiles.php">
     <MissingThrowsDocblock>
       <code><![CDATA[withPath]]></code>
       <code><![CDATA[withQuery]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[GetProfiles]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/App/Bsky/Actor/GetSuggestions.php">
     <MissingThrowsDocblock>
       <code><![CDATA[withPath]]></code>
       <code><![CDATA[withQuery]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[GetSuggestions]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/App/Bsky/Actor/PutPreferences.php">
     <MissingThrowsDocblock>
@@ -42,99 +42,99 @@
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[PutPreferences]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/App/Bsky/Actor/SearchActors.php">
     <MissingThrowsDocblock>
       <code><![CDATA[withPath]]></code>
       <code><![CDATA[withQuery]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[SearchActors]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/App/Bsky/Actor/SearchActorsTypeahead.php">
     <MissingThrowsDocblock>
       <code><![CDATA[withPath]]></code>
       <code><![CDATA[withQuery]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[SearchActorsTypeahead]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/App/Bsky/Feed/DescribeFeedGenerator.php">
     <MissingThrowsDocblock>
       <code><![CDATA[withPath]]></code>
       <code><![CDATA[withQuery]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[DescribeFeedGenerator]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/App/Bsky/Feed/GetActorFeeds.php">
     <MissingThrowsDocblock>
       <code><![CDATA[withPath]]></code>
       <code><![CDATA[withQuery]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[GetActorFeeds]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/App/Bsky/Feed/GetActorLikes.php">
     <MissingThrowsDocblock>
       <code><![CDATA[withPath]]></code>
       <code><![CDATA[withQuery]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[GetActorLikes]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/App/Bsky/Feed/GetAuthorFeed.php">
     <MissingThrowsDocblock>
       <code><![CDATA[withPath]]></code>
       <code><![CDATA[withQuery]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[GetAuthorFeed]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/App/Bsky/Feed/GetFeed.php">
     <MissingThrowsDocblock>
       <code><![CDATA[withPath]]></code>
       <code><![CDATA[withQuery]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[GetFeed]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/App/Bsky/Feed/GetFeedGenerator.php">
     <MissingThrowsDocblock>
       <code><![CDATA[withPath]]></code>
       <code><![CDATA[withQuery]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[GetFeedGenerator]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/App/Bsky/Feed/GetFeedGenerators.php">
     <MissingThrowsDocblock>
       <code><![CDATA[withPath]]></code>
       <code><![CDATA[withQuery]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[GetFeedGenerators]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/App/Bsky/Feed/GetFeedSkeleton.php">
     <MissingThrowsDocblock>
       <code><![CDATA[withPath]]></code>
       <code><![CDATA[withQuery]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[GetFeedSkeleton]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/App/Bsky/Feed/GetLikes.php">
     <DuplicateParam>
@@ -144,18 +144,18 @@
       <code><![CDATA[withPath]]></code>
       <code><![CDATA[withQuery]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[GetLikes]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/App/Bsky/Feed/GetListFeed.php">
     <MissingThrowsDocblock>
       <code><![CDATA[withPath]]></code>
       <code><![CDATA[withQuery]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[GetListFeed]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/App/Bsky/Feed/GetPostThread.php">
     <DuplicateParam>
@@ -165,18 +165,18 @@
       <code><![CDATA[withPath]]></code>
       <code><![CDATA[withQuery]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[GetPostThread]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/App/Bsky/Feed/GetPosts.php">
     <MissingThrowsDocblock>
       <code><![CDATA[withPath]]></code>
       <code><![CDATA[withQuery]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[GetPosts]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/App/Bsky/Feed/GetQuotes.php">
     <DuplicateParam>
@@ -186,9 +186,9 @@
       <code><![CDATA[withPath]]></code>
       <code><![CDATA[withQuery]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[GetQuotes]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/App/Bsky/Feed/GetRepostedBy.php">
     <DuplicateParam>
@@ -198,36 +198,36 @@
       <code><![CDATA[withPath]]></code>
       <code><![CDATA[withQuery]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[GetRepostedBy]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/App/Bsky/Feed/GetSuggestedFeeds.php">
     <MissingThrowsDocblock>
       <code><![CDATA[withPath]]></code>
       <code><![CDATA[withQuery]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[GetSuggestedFeeds]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/App/Bsky/Feed/GetTimeline.php">
     <MissingThrowsDocblock>
       <code><![CDATA[withPath]]></code>
       <code><![CDATA[withQuery]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[GetTimeline]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/App/Bsky/Feed/SearchPosts.php">
     <MissingThrowsDocblock>
       <code><![CDATA[withPath]]></code>
       <code><![CDATA[withQuery]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[SearchPosts]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/App/Bsky/Feed/SendInteractions.php">
     <MissingThrowsDocblock>
@@ -235,135 +235,135 @@
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[SendInteractions]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/App/Bsky/Graph/GetActorStarterPacks.php">
     <MissingThrowsDocblock>
       <code><![CDATA[withPath]]></code>
       <code><![CDATA[withQuery]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[GetActorStarterPacks]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/App/Bsky/Graph/GetBlocks.php">
     <MissingThrowsDocblock>
       <code><![CDATA[withPath]]></code>
       <code><![CDATA[withQuery]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[GetBlocks]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/App/Bsky/Graph/GetFollowers.php">
     <MissingThrowsDocblock>
       <code><![CDATA[withPath]]></code>
       <code><![CDATA[withQuery]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[GetFollowers]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/App/Bsky/Graph/GetFollows.php">
     <MissingThrowsDocblock>
       <code><![CDATA[withPath]]></code>
       <code><![CDATA[withQuery]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[GetFollows]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/App/Bsky/Graph/GetKnownFollowers.php">
     <MissingThrowsDocblock>
       <code><![CDATA[withPath]]></code>
       <code><![CDATA[withQuery]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[GetKnownFollowers]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/App/Bsky/Graph/GetList.php">
     <MissingThrowsDocblock>
       <code><![CDATA[withPath]]></code>
       <code><![CDATA[withQuery]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[GetList]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/App/Bsky/Graph/GetListBlocks.php">
     <MissingThrowsDocblock>
       <code><![CDATA[withPath]]></code>
       <code><![CDATA[withQuery]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[GetListBlocks]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/App/Bsky/Graph/GetListMutes.php">
     <MissingThrowsDocblock>
       <code><![CDATA[withPath]]></code>
       <code><![CDATA[withQuery]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[GetListMutes]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/App/Bsky/Graph/GetLists.php">
     <MissingThrowsDocblock>
       <code><![CDATA[withPath]]></code>
       <code><![CDATA[withQuery]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[GetLists]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/App/Bsky/Graph/GetMutes.php">
     <MissingThrowsDocblock>
       <code><![CDATA[withPath]]></code>
       <code><![CDATA[withQuery]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[GetMutes]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/App/Bsky/Graph/GetRelationships.php">
     <MissingThrowsDocblock>
       <code><![CDATA[withPath]]></code>
       <code><![CDATA[withQuery]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[GetRelationships]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/App/Bsky/Graph/GetStarterPack.php">
     <MissingThrowsDocblock>
       <code><![CDATA[withPath]]></code>
       <code><![CDATA[withQuery]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[GetStarterPack]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/App/Bsky/Graph/GetStarterPacks.php">
     <MissingThrowsDocblock>
       <code><![CDATA[withPath]]></code>
       <code><![CDATA[withQuery]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[GetStarterPacks]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/App/Bsky/Graph/GetSuggestedFollowsByActor.php">
     <MissingThrowsDocblock>
       <code><![CDATA[withPath]]></code>
       <code><![CDATA[withQuery]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[GetSuggestedFollowsByActor]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/App/Bsky/Graph/MuteActor.php">
     <MissingThrowsDocblock>
@@ -371,9 +371,9 @@
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[MuteActor]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/App/Bsky/Graph/MuteActorList.php">
     <MissingThrowsDocblock>
@@ -381,9 +381,9 @@
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[MuteActorList]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/App/Bsky/Graph/MuteThread.php">
     <MissingThrowsDocblock>
@@ -391,9 +391,9 @@
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[MuteThread]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/App/Bsky/Graph/UnmuteActor.php">
     <MissingThrowsDocblock>
@@ -401,9 +401,9 @@
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[UnmuteActor]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/App/Bsky/Graph/UnmuteActorList.php">
     <MissingThrowsDocblock>
@@ -411,9 +411,9 @@
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[UnmuteActorList]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/App/Bsky/Graph/UnmuteThread.php">
     <MissingThrowsDocblock>
@@ -421,36 +421,36 @@
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[UnmuteThread]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/App/Bsky/Labeler/GetServices.php">
     <MissingThrowsDocblock>
       <code><![CDATA[withPath]]></code>
       <code><![CDATA[withQuery]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[GetServices]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/App/Bsky/Notification/GetUnreadCount.php">
     <MissingThrowsDocblock>
       <code><![CDATA[withPath]]></code>
       <code><![CDATA[withQuery]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[GetUnreadCount]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/App/Bsky/Notification/ListNotifications.php">
     <MissingThrowsDocblock>
       <code><![CDATA[withPath]]></code>
       <code><![CDATA[withQuery]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[ListNotifications]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/App/Bsky/Notification/PutPreferences.php">
     <MissingThrowsDocblock>
@@ -458,9 +458,9 @@
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[PutPreferences]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/App/Bsky/Notification/RegisterPush.php">
     <MissingThrowsDocblock>
@@ -468,9 +468,9 @@
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[RegisterPush]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/App/Bsky/Notification/UpdateSeen.php">
     <MissingThrowsDocblock>
@@ -478,72 +478,72 @@
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[UpdateSeen]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/App/Bsky/Unspecced/GetPopularFeedGenerators.php">
     <MissingThrowsDocblock>
       <code><![CDATA[withPath]]></code>
       <code><![CDATA[withQuery]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[GetPopularFeedGenerators]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/App/Bsky/Unspecced/GetSuggestionsSkeleton.php">
     <MissingThrowsDocblock>
       <code><![CDATA[withPath]]></code>
       <code><![CDATA[withQuery]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[GetSuggestionsSkeleton]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/App/Bsky/Unspecced/GetTaggedSuggestions.php">
     <MissingThrowsDocblock>
       <code><![CDATA[withPath]]></code>
       <code><![CDATA[withQuery]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[GetTaggedSuggestions]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/App/Bsky/Unspecced/SearchActorsSkeleton.php">
     <MissingThrowsDocblock>
       <code><![CDATA[withPath]]></code>
       <code><![CDATA[withQuery]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[SearchActorsSkeleton]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/App/Bsky/Unspecced/SearchPostsSkeleton.php">
     <MissingThrowsDocblock>
       <code><![CDATA[withPath]]></code>
       <code><![CDATA[withQuery]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[SearchPostsSkeleton]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/App/Bsky/Video/GetJobStatus.php">
     <MissingThrowsDocblock>
       <code><![CDATA[withPath]]></code>
       <code><![CDATA[withQuery]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[GetJobStatus]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/App/Bsky/Video/GetUploadLimits.php">
     <MissingThrowsDocblock>
       <code><![CDATA[withPath]]></code>
       <code><![CDATA[withQuery]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[GetUploadLimits]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/App/Bsky/Video/UploadVideo.php">
     <MissingThrowsDocblock>
@@ -551,17 +551,13 @@
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
-    <UndefinedConstant>
-      <code><![CDATA[APPLICATION]]></code>
-      <code><![CDATA[JSON]]></code>
-    </UndefinedConstant>
-    <UnusedClass>
-      <code><![CDATA[UploadVideo]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/AtProtocol.php">
     <InvalidArgument>
-      <code><![CDATA[json_encode([
+      <code><![CDATA[\json_encode([
                 'content' => $content,
                 'attachments' => $attachments,
             ]) ?: '']]></code>
@@ -583,7 +579,7 @@
       <code><![CDATA[updateStatus]]></code>
     </PossiblyUnusedMethod>
     <RiskyTruthyFalsyComparison>
-      <code><![CDATA[json_encode([
+      <code><![CDATA[\json_encode([
                 'content' => $content,
                 'attachments' => $attachments,
             ])]]></code>
@@ -595,18 +591,18 @@
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[DeleteAccount]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/Chat/Bsky/Actor/ExportAccountData.php">
     <MissingThrowsDocblock>
       <code><![CDATA[withPath]]></code>
       <code><![CDATA[withQuery]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[ExportAccountData]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/Chat/Bsky/Convo/DeleteMessageForSelf.php">
     <MissingThrowsDocblock>
@@ -614,45 +610,45 @@
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[DeleteMessageForSelf]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/Chat/Bsky/Convo/GetConvo.php">
     <MissingThrowsDocblock>
       <code><![CDATA[withPath]]></code>
       <code><![CDATA[withQuery]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[GetConvo]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/Chat/Bsky/Convo/GetConvoForMembers.php">
     <MissingThrowsDocblock>
       <code><![CDATA[withPath]]></code>
       <code><![CDATA[withQuery]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[GetConvoForMembers]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/Chat/Bsky/Convo/GetLog.php">
     <MissingThrowsDocblock>
       <code><![CDATA[withPath]]></code>
       <code><![CDATA[withQuery]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[GetLog]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/Chat/Bsky/Convo/GetMessages.php">
     <MissingThrowsDocblock>
       <code><![CDATA[withPath]]></code>
       <code><![CDATA[withQuery]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[GetMessages]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/Chat/Bsky/Convo/LeaveConvo.php">
     <MissingThrowsDocblock>
@@ -660,18 +656,18 @@
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[LeaveConvo]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/Chat/Bsky/Convo/ListConvos.php">
     <MissingThrowsDocblock>
       <code><![CDATA[withPath]]></code>
       <code><![CDATA[withQuery]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[ListConvos]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/Chat/Bsky/Convo/MuteConvo.php">
     <MissingThrowsDocblock>
@@ -679,9 +675,9 @@
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[MuteConvo]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/Chat/Bsky/Convo/SendMessage.php">
     <MissingThrowsDocblock>
@@ -689,9 +685,9 @@
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[SendMessage]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/Chat/Bsky/Convo/SendMessageBatch.php">
     <MissingThrowsDocblock>
@@ -699,9 +695,9 @@
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[SendMessageBatch]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/Chat/Bsky/Convo/UnmuteConvo.php">
     <MissingThrowsDocblock>
@@ -709,9 +705,9 @@
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[UnmuteConvo]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/Chat/Bsky/Convo/UpdateRead.php">
     <MissingThrowsDocblock>
@@ -719,27 +715,27 @@
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[UpdateRead]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/Chat/Bsky/Moderation/GetActorMetadata.php">
     <MissingThrowsDocblock>
       <code><![CDATA[withPath]]></code>
       <code><![CDATA[withQuery]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[GetActorMetadata]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/Chat/Bsky/Moderation/GetMessageContext.php">
     <MissingThrowsDocblock>
       <code><![CDATA[withPath]]></code>
       <code><![CDATA[withQuery]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[GetMessageContext]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/Chat/Bsky/Moderation/UpdateActorAccess.php">
     <MissingThrowsDocblock>
@@ -747,9 +743,9 @@
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[UpdateActorAccess]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/Com/Atproto/Admin/DeleteAccount.php">
     <MissingThrowsDocblock>
@@ -757,9 +753,9 @@
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[DeleteAccount]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/Com/Atproto/Admin/DisableAccountInvites.php">
     <MissingThrowsDocblock>
@@ -767,9 +763,9 @@
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[DisableAccountInvites]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/Com/Atproto/Admin/DisableInviteCodes.php">
     <MissingThrowsDocblock>
@@ -777,9 +773,9 @@
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[DisableInviteCodes]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/Com/Atproto/Admin/EnableAccountInvites.php">
     <MissingThrowsDocblock>
@@ -787,36 +783,36 @@
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[EnableAccountInvites]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/Com/Atproto/Admin/GetAccountInfo.php">
     <MissingThrowsDocblock>
       <code><![CDATA[withPath]]></code>
       <code><![CDATA[withQuery]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[GetAccountInfo]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/Com/Atproto/Admin/GetAccountInfos.php">
     <MissingThrowsDocblock>
       <code><![CDATA[withPath]]></code>
       <code><![CDATA[withQuery]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[GetAccountInfos]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/Com/Atproto/Admin/GetInviteCodes.php">
     <MissingThrowsDocblock>
       <code><![CDATA[withPath]]></code>
       <code><![CDATA[withQuery]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[GetInviteCodes]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/Com/Atproto/Admin/GetSubjectStatus.php">
     <DuplicateParam>
@@ -826,18 +822,18 @@
       <code><![CDATA[withPath]]></code>
       <code><![CDATA[withQuery]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[GetSubjectStatus]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/Com/Atproto/Admin/SearchAccounts.php">
     <MissingThrowsDocblock>
       <code><![CDATA[withPath]]></code>
       <code><![CDATA[withQuery]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[SearchAccounts]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/Com/Atproto/Admin/SendEmail.php">
     <MissingThrowsDocblock>
@@ -845,9 +841,9 @@
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[SendEmail]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/Com/Atproto/Admin/UpdateAccountEmail.php">
     <MissingThrowsDocblock>
@@ -855,9 +851,9 @@
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[UpdateAccountEmail]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/Com/Atproto/Admin/UpdateAccountHandle.php">
     <MissingThrowsDocblock>
@@ -865,9 +861,9 @@
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[UpdateAccountHandle]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/Com/Atproto/Admin/UpdateAccountPassword.php">
     <MissingThrowsDocblock>
@@ -875,9 +871,9 @@
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[UpdateAccountPassword]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/Com/Atproto/Admin/UpdateSubjectStatus.php">
     <MissingThrowsDocblock>
@@ -885,18 +881,18 @@
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[UpdateSubjectStatus]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/Com/Atproto/Identity/GetRecommendedDidCredentials.php">
     <MissingThrowsDocblock>
       <code><![CDATA[withPath]]></code>
       <code><![CDATA[withQuery]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[GetRecommendedDidCredentials]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/Com/Atproto/Identity/RequestPlcOperationSignature.php">
     <MissingThrowsDocblock>
@@ -904,18 +900,18 @@
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[RequestPlcOperationSignature]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/Com/Atproto/Identity/ResolveHandle.php">
     <MissingThrowsDocblock>
       <code><![CDATA[withPath]]></code>
       <code><![CDATA[withQuery]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[ResolveHandle]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/Com/Atproto/Identity/SignPlcOperation.php">
     <MissingThrowsDocblock>
@@ -923,9 +919,9 @@
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[SignPlcOperation]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/Com/Atproto/Identity/SubmitPlcOperation.php">
     <MissingThrowsDocblock>
@@ -933,9 +929,9 @@
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[SubmitPlcOperation]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/Com/Atproto/Identity/UpdateHandle.php">
     <MissingThrowsDocblock>
@@ -943,18 +939,18 @@
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[UpdateHandle]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/Com/Atproto/Label/QueryLabels.php">
     <MissingThrowsDocblock>
       <code><![CDATA[withPath]]></code>
       <code><![CDATA[withQuery]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[QueryLabels]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/Com/Atproto/Moderation/CreateReport.php">
     <MissingThrowsDocblock>
@@ -962,9 +958,9 @@
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[CreateReport]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/Com/Atproto/Repo/ApplyWrites.php">
     <MissingThrowsDocblock>
@@ -972,9 +968,9 @@
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[ApplyWrites]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/Com/Atproto/Repo/CreateRecord.php">
     <MissingThrowsDocblock>
@@ -982,9 +978,9 @@
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[CreateRecord]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/Com/Atproto/Repo/DeleteRecord.php">
     <MissingThrowsDocblock>
@@ -992,27 +988,27 @@
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[DeleteRecord]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/Com/Atproto/Repo/DescribeRepo.php">
     <MissingThrowsDocblock>
       <code><![CDATA[withPath]]></code>
       <code><![CDATA[withQuery]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[DescribeRepo]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/Com/Atproto/Repo/GetRecord.php">
     <MissingThrowsDocblock>
       <code><![CDATA[withPath]]></code>
       <code><![CDATA[withQuery]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[GetRecord]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/Com/Atproto/Repo/ImportRepo.php">
     <MissingThrowsDocblock>
@@ -1020,27 +1016,27 @@
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[ImportRepo]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/Com/Atproto/Repo/ListMissingBlobs.php">
     <MissingThrowsDocblock>
       <code><![CDATA[withPath]]></code>
       <code><![CDATA[withQuery]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[ListMissingBlobs]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/Com/Atproto/Repo/ListRecords.php">
     <MissingThrowsDocblock>
       <code><![CDATA[withPath]]></code>
       <code><![CDATA[withQuery]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[ListRecords]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/Com/Atproto/Repo/PutRecord.php">
     <MissingThrowsDocblock>
@@ -1048,9 +1044,9 @@
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[PutRecord]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/Com/Atproto/Repo/UploadBlob.php">
     <MissingThrowsDocblock>
@@ -1058,9 +1054,9 @@
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[UploadBlob]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/Com/Atproto/Server/ActivateAccount.php">
     <MissingThrowsDocblock>
@@ -1068,18 +1064,18 @@
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[ActivateAccount]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/Com/Atproto/Server/CheckAccountStatus.php">
     <MissingThrowsDocblock>
       <code><![CDATA[withPath]]></code>
       <code><![CDATA[withQuery]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[CheckAccountStatus]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/Com/Atproto/Server/ConfirmEmail.php">
     <MissingThrowsDocblock>
@@ -1087,9 +1083,9 @@
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[ConfirmEmail]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/Com/Atproto/Server/CreateAccount.php">
     <MissingThrowsDocblock>
@@ -1097,9 +1093,9 @@
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[CreateAccount]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/Com/Atproto/Server/CreateAppPassword.php">
     <MissingThrowsDocblock>
@@ -1107,9 +1103,9 @@
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[CreateAppPassword]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
     <UnusedParam>
       <code><![CDATA[$name]]></code>
     </UnusedParam>
@@ -1120,9 +1116,9 @@
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[CreateInviteCode]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/Com/Atproto/Server/CreateInviteCodes.php">
     <MissingThrowsDocblock>
@@ -1130,9 +1126,9 @@
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[CreateInviteCodes]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/Com/Atproto/Server/CreateSession.php">
     <MissingThrowsDocblock>
@@ -1140,9 +1136,9 @@
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[CreateSession]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/Com/Atproto/Server/DeactivateAccount.php">
     <MissingThrowsDocblock>
@@ -1150,9 +1146,9 @@
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[DeactivateAccount]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/Com/Atproto/Server/DeleteAccount.php">
     <MissingThrowsDocblock>
@@ -1160,9 +1156,9 @@
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[DeleteAccount]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/Com/Atproto/Server/DeleteSession.php">
     <MissingThrowsDocblock>
@@ -1170,54 +1166,54 @@
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[DeleteSession]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/Com/Atproto/Server/DescribeServer.php">
     <MissingThrowsDocblock>
       <code><![CDATA[withPath]]></code>
       <code><![CDATA[withQuery]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[DescribeServer]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/Com/Atproto/Server/GetAccountInviteCodes.php">
     <MissingThrowsDocblock>
       <code><![CDATA[withPath]]></code>
       <code><![CDATA[withQuery]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[GetAccountInviteCodes]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/Com/Atproto/Server/GetServiceAuth.php">
     <MissingThrowsDocblock>
       <code><![CDATA[withPath]]></code>
       <code><![CDATA[withQuery]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[GetServiceAuth]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/Com/Atproto/Server/GetSession.php">
     <MissingThrowsDocblock>
       <code><![CDATA[withPath]]></code>
       <code><![CDATA[withQuery]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[GetSession]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/Com/Atproto/Server/ListAppPasswords.php">
     <MissingThrowsDocblock>
       <code><![CDATA[withPath]]></code>
       <code><![CDATA[withQuery]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[ListAppPasswords]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/Com/Atproto/Server/RefreshSession.php">
     <MissingThrowsDocblock>
@@ -1225,9 +1221,9 @@
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[RefreshSession]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/Com/Atproto/Server/RequestAccountDelete.php">
     <MissingThrowsDocblock>
@@ -1235,9 +1231,9 @@
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[RequestAccountDelete]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/Com/Atproto/Server/RequestEmailConfirmation.php">
     <MissingThrowsDocblock>
@@ -1245,9 +1241,9 @@
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[RequestEmailConfirmation]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/Com/Atproto/Server/RequestEmailUpdate.php">
     <MissingThrowsDocblock>
@@ -1255,9 +1251,9 @@
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[RequestEmailUpdate]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/Com/Atproto/Server/RequestPasswordReset.php">
     <MissingThrowsDocblock>
@@ -1265,9 +1261,9 @@
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[RequestPasswordReset]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/Com/Atproto/Server/ReserveSigningKey.php">
     <MissingThrowsDocblock>
@@ -1275,9 +1271,9 @@
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[ReserveSigningKey]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/Com/Atproto/Server/ResetPassword.php">
     <MissingThrowsDocblock>
@@ -1285,9 +1281,9 @@
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[ResetPassword]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/Com/Atproto/Server/RevokeAppPassword.php">
     <MissingThrowsDocblock>
@@ -1295,9 +1291,9 @@
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[RevokeAppPassword]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
     <UnusedParam>
       <code><![CDATA[$name]]></code>
     </UnusedParam>
@@ -1308,99 +1304,99 @@
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[UpdateEmail]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/Com/Atproto/Sync/GetBlob.php">
     <MissingThrowsDocblock>
       <code><![CDATA[withPath]]></code>
       <code><![CDATA[withQuery]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[GetBlob]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/Com/Atproto/Sync/GetBlocks.php">
     <MissingThrowsDocblock>
       <code><![CDATA[withPath]]></code>
       <code><![CDATA[withQuery]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[GetBlocks]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/Com/Atproto/Sync/GetCheckout.php">
     <MissingThrowsDocblock>
       <code><![CDATA[withPath]]></code>
       <code><![CDATA[withQuery]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[GetCheckout]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/Com/Atproto/Sync/GetHead.php">
     <MissingThrowsDocblock>
       <code><![CDATA[withPath]]></code>
       <code><![CDATA[withQuery]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[GetHead]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/Com/Atproto/Sync/GetLatestCommit.php">
     <MissingThrowsDocblock>
       <code><![CDATA[withPath]]></code>
       <code><![CDATA[withQuery]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[GetLatestCommit]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/Com/Atproto/Sync/GetRecord.php">
     <MissingThrowsDocblock>
       <code><![CDATA[withPath]]></code>
       <code><![CDATA[withQuery]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[GetRecord]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/Com/Atproto/Sync/GetRepo.php">
     <MissingThrowsDocblock>
       <code><![CDATA[withPath]]></code>
       <code><![CDATA[withQuery]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[GetRepo]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/Com/Atproto/Sync/GetRepoStatus.php">
     <MissingThrowsDocblock>
       <code><![CDATA[withPath]]></code>
       <code><![CDATA[withQuery]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[GetRepoStatus]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/Com/Atproto/Sync/ListBlobs.php">
     <MissingThrowsDocblock>
       <code><![CDATA[withPath]]></code>
       <code><![CDATA[withQuery]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[ListBlobs]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/Com/Atproto/Sync/ListRepos.php">
     <MissingThrowsDocblock>
       <code><![CDATA[withPath]]></code>
       <code><![CDATA[withQuery]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[ListRepos]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/Com/Atproto/Sync/NotifyOfUpdate.php">
     <MissingThrowsDocblock>
@@ -1408,9 +1404,9 @@
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[NotifyOfUpdate]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/Com/Atproto/Sync/RequestCrawl.php">
     <MissingThrowsDocblock>
@@ -1418,27 +1414,27 @@
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[RequestCrawl]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/Com/Atproto/Temp/CheckSignupQueue.php">
     <MissingThrowsDocblock>
       <code><![CDATA[withPath]]></code>
       <code><![CDATA[withQuery]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[CheckSignupQueue]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/Com/Atproto/Temp/FetchLabels.php">
     <MissingThrowsDocblock>
       <code><![CDATA[withPath]]></code>
       <code><![CDATA[withQuery]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[FetchLabels]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/Com/Atproto/Temp/RequestPhoneVerification.php">
     <MissingThrowsDocblock>
@@ -1446,27 +1442,35 @@
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[RequestPhoneVerification]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/Handler/AuthenticateHandler.php">
     <MissingThrowsDocblock>
       <code><![CDATA[withHeader]]></code>
       <code><![CDATA[withHeader]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[AuthenticateHandler]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
+    <UnusedProperty>
+      <code><![CDATA[$password]]></code>
+      <code><![CDATA[$username]]></code>
+    </UnusedProperty>
   </file>
   <file src="src/Middleware/AuthenticateMiddleware.php">
     <MissingThrowsDocblock>
       <code><![CDATA[withHeader]]></code>
       <code><![CDATA[withHeader]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[AuthenticateMiddleware]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
+    <UnusedProperty>
+      <code><![CDATA[$password]]></code>
+      <code><![CDATA[$username]]></code>
+    </UnusedProperty>
   </file>
   <file src="src/Tools/Ozone/Communication/CreateTemplate.php">
     <MissingThrowsDocblock>
@@ -1474,9 +1478,9 @@
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[CreateTemplate]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
     <UnusedParam>
       <code><![CDATA[$name]]></code>
     </UnusedParam>
@@ -1487,18 +1491,18 @@
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[DeleteTemplate]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/Tools/Ozone/Communication/ListTemplates.php">
     <MissingThrowsDocblock>
       <code><![CDATA[withPath]]></code>
       <code><![CDATA[withQuery]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[ListTemplates]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/Tools/Ozone/Communication/UpdateTemplate.php">
     <MissingThrowsDocblock>
@@ -1506,9 +1510,9 @@
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[UpdateTemplate]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
     <UnusedParam>
       <code><![CDATA[$name]]></code>
     </UnusedParam>
@@ -1519,18 +1523,18 @@
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[EmitEvent]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/Tools/Ozone/Moderation/GetEvent.php">
     <MissingThrowsDocblock>
       <code><![CDATA[withPath]]></code>
       <code><![CDATA[withQuery]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[GetEvent]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/Tools/Ozone/Moderation/GetRecord.php">
     <DuplicateParam>
@@ -1540,54 +1544,54 @@
       <code><![CDATA[withPath]]></code>
       <code><![CDATA[withQuery]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[GetRecord]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/Tools/Ozone/Moderation/GetRepo.php">
     <MissingThrowsDocblock>
       <code><![CDATA[withPath]]></code>
       <code><![CDATA[withQuery]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[GetRepo]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/Tools/Ozone/Moderation/QueryEvents.php">
     <MissingThrowsDocblock>
       <code><![CDATA[withPath]]></code>
       <code><![CDATA[withQuery]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[QueryEvents]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/Tools/Ozone/Moderation/QueryStatuses.php">
     <MissingThrowsDocblock>
       <code><![CDATA[withPath]]></code>
       <code><![CDATA[withQuery]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[QueryStatuses]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/Tools/Ozone/Moderation/SearchRepos.php">
     <MissingThrowsDocblock>
       <code><![CDATA[withPath]]></code>
       <code><![CDATA[withQuery]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[SearchRepos]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/Tools/Ozone/Server/GetConfig.php">
     <MissingThrowsDocblock>
       <code><![CDATA[withPath]]></code>
       <code><![CDATA[withQuery]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[GetConfig]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/Tools/Ozone/Team/AddMember.php">
     <MissingThrowsDocblock>
@@ -1595,9 +1599,9 @@
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[AddMember]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/Tools/Ozone/Team/DeleteMember.php">
     <MissingThrowsDocblock>
@@ -1605,18 +1609,18 @@
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[DeleteMember]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/Tools/Ozone/Team/ListMembers.php">
     <MissingThrowsDocblock>
       <code><![CDATA[withPath]]></code>
       <code><![CDATA[withQuery]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[ListMembers]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/Tools/Ozone/Team/UpdateMember.php">
     <MissingThrowsDocblock>
@@ -1624,9 +1628,9 @@
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[UpdateMember]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/Trait/HttpTrait.php">
     <MissingThrowsDocblock>
@@ -1676,9 +1680,9 @@
     <MissingThrowsDocblock>
       <code><![CDATA[throw new InvalidArgumentException('Invalid Email: ' . $this->email);]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[Email]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/Value/Handle.php">
     <MissingThrowsDocblock>
@@ -1689,17 +1693,17 @@
     <MissingThrowsDocblock>
       <code><![CDATA[throw new InvalidArgumentException('Invalid InviteCode: ' . $this->invitecode);]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[InviteCode]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/Value/Password.php">
     <MissingThrowsDocblock>
       <code><![CDATA[throw new InvalidArgumentException('Invalid Password length: ' . $this->password);]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[Password]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/Value/PersonalDataServer.php">
     <MissingThrowsDocblock>
