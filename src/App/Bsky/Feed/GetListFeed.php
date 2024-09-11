@@ -8,9 +8,6 @@ use Psr\Http\Message\RequestFactoryInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
-use function array_filter;
-use function http_build_query;
-
 /**
  * Get a feed of recent posts from a list (posts and reposts from any actors on the list). Does not require auth.
  *
@@ -33,7 +30,7 @@ final readonly class GetListFeed
             ->createRequest(
                 'GET',
                 $uri->withPath('xrpc/app.bsky.feed.getListFeed')
-                    ->withQuery(http_build_query(array_filter([
+                    ->withQuery(\http_build_query(\array_filter([
                         'list' => $list,
                         'limit' => $limit,
                         'cursor' => $cursor,
