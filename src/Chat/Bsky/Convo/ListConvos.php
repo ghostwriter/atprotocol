@@ -8,9 +8,6 @@ use Psr\Http\Message\RequestFactoryInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
-use function array_filter;
-use function http_build_query;
-
 /**
  *
  * @see ListConvosTest
@@ -28,7 +25,7 @@ final readonly class ListConvos
             ->createRequest(
                 'GET',
                 $uri->withPath('xrpc/chat.bsky.convo.listConvos')
-                    ->withQuery(http_build_query(array_filter([
+                    ->withQuery(\http_build_query(\array_filter([
                         'limit' => $limit,
                         'cursor' => $cursor,
                     ])))
