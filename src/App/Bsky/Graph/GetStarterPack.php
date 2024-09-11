@@ -8,9 +8,6 @@ use Psr\Http\Message\RequestFactoryInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
-use function array_filter;
-use function http_build_query;
-
 /**
  * Gets a view of a starter pack.
  *
@@ -29,7 +26,7 @@ final readonly class GetStarterPack
             ->createRequest(
                 'GET',
                 $uri->withPath('xrpc/app.bsky.graph.getStarterPack')
-                    ->withQuery(http_build_query(array_filter([
+                    ->withQuery(\http_build_query(\array_filter([
                         'starterPack' => $starterPack,
                     ])))
             );
