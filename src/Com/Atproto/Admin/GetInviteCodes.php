@@ -8,9 +8,6 @@ use Psr\Http\Message\RequestFactoryInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
-use function array_filter;
-use function http_build_query;
-
 /**
  * Get an admin view of invite codes.
  *
@@ -33,7 +30,7 @@ final readonly class GetInviteCodes
             ->createRequest(
                 'GET',
                 $uri->withPath('xrpc/com.atproto.admin.getInviteCodes')
-                    ->withQuery(http_build_query(array_filter([
+                    ->withQuery(\http_build_query(\array_filter([
                         'sort' => $sort,
                         'limit' => $limit,
                         'cursor' => $cursor,
