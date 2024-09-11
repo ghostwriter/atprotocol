@@ -10,9 +10,6 @@ use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriInterface;
 use RuntimeException;
 
-use function array_filter;
-use function json_encode;
-
 /**
  * Update a member in the ozone service. Requires admin role.
  *
@@ -44,7 +41,7 @@ final readonly class UpdateMember
             $request = $request->withHeader($name, $value);
         }
 
-        $jsonBody = json_encode(array_filter([
+        $jsonBody = \json_encode(\array_filter([
             'did' => $did,
             'disabled' => $disabled,
             'role' => $role,
