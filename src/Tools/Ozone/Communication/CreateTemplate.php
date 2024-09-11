@@ -10,9 +10,6 @@ use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriInterface;
 use RuntimeException;
 
-use function array_filter;
-use function json_encode;
-
 /**
  * Administrative action to create a new, re-usable communication (email for now) template.
  *
@@ -46,7 +43,7 @@ final readonly class CreateTemplate
             $request = $request->withHeader($name, $value);
         }
 
-        $jsonBody = json_encode(array_filter([
+        $jsonBody = \json_encode(\array_filter([
             'name' => $name,
             'contentMarkdown' => $contentMarkdown,
             'subject' => $subject,
