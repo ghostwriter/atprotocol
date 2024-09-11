@@ -8,9 +8,6 @@ use Psr\Http\Message\RequestFactoryInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
-use function array_filter;
-use function http_build_query;
-
 /**
  * DEPRECATED - please use com.atproto.sync.getLatestCommit instead.
  *
@@ -29,7 +26,7 @@ final readonly class GetHead
             ->createRequest(
                 'GET',
                 $uri->withPath('xrpc/com.atproto.sync.getHead')
-                    ->withQuery(http_build_query(array_filter([
+                    ->withQuery(\http_build_query(\array_filter([
                         'did' => $did,
                     ])))
             );
