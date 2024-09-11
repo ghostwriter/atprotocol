@@ -10,9 +10,6 @@ use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriInterface;
 use RuntimeException;
 
-use function array_filter;
-use function json_encode;
-
 /**
  * Create a single new repository record. Requires auth, implemented by PDS.
  *
@@ -47,7 +44,7 @@ final readonly class CreateRecord
             $request = $request->withHeader($name, $value);
         }
 
-        $jsonBody = json_encode(array_filter([
+        $jsonBody = \json_encode(\array_filter([
             'repo' => $repo,
             'collection' => $collection,
             'rkey' => $rkey,
