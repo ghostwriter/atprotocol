@@ -8,9 +8,6 @@ use Psr\Http\Message\RequestFactoryInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
-use function array_filter;
-use function http_build_query;
-
 /**
  * Find actor suggestions for a prefix search term. Expected use is for auto-completion during text field entry. Does not require auth.
  *
@@ -29,7 +26,7 @@ final readonly class SearchActorsTypeahead
             ->createRequest(
                 'GET',
                 $uri->withPath('xrpc/app.bsky.actor.searchActorsTypeahead')
-                    ->withQuery(http_build_query(array_filter([
+                    ->withQuery(\http_build_query(\array_filter([
                         'q' => $q,
                         'limit' => $limit,
                     ])))
