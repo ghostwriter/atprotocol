@@ -8,9 +8,6 @@ use Psr\Http\Message\RequestFactoryInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
-use function array_filter;
-use function http_build_query;
-
 /**
  * Get details about a repository.
  *
@@ -29,7 +26,7 @@ final readonly class GetRepo
             ->createRequest(
                 'GET',
                 $uri->withPath('xrpc/tools.ozone.moderation.getRepo')
-                    ->withQuery(http_build_query(array_filter([
+                    ->withQuery(\http_build_query(\array_filter([
                         'did' => $did,
                     ])))
             );
