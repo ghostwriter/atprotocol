@@ -8,9 +8,6 @@ use Psr\Http\Message\RequestFactoryInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
-use function array_filter;
-use function http_build_query;
-
 /**
  * Find posts matching search criteria, returning views of those posts.
  *
@@ -42,7 +39,7 @@ final readonly class SearchPosts
             ->createRequest(
                 'GET',
                 $uri->withPath('xrpc/app.bsky.feed.searchPosts')
-                    ->withQuery(http_build_query(array_filter([
+                    ->withQuery(\http_build_query(\array_filter([
                         'q' => $q,
                         'sort' => $sort,
                         'since' => $since,
