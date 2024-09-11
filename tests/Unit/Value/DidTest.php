@@ -13,8 +13,6 @@ use PHPUnit\Framework\TestCase;
 
 use const JSON_THROW_ON_ERROR;
 
-use function json_encode;
-
 #[CoversClass(Did::class)]
 final class DidTest extends TestCase
 {
@@ -33,9 +31,9 @@ final class DidTest extends TestCase
 
         self::assertSame($did, (string) $sut);
 
-        self::assertSame(json_encode([
+        self::assertSame(\json_encode([
             'did' => $did,
-        ], JSON_THROW_ON_ERROR), json_encode($sut, JSON_THROW_ON_ERROR));
+        ], JSON_THROW_ON_ERROR), \json_encode($sut, JSON_THROW_ON_ERROR));
     }
 
     public static function invalidDidDataProvider(): Generator
