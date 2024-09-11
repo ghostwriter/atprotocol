@@ -10,9 +10,6 @@ use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriInterface;
 use RuntimeException;
 
-use function array_filter;
-use function json_encode;
-
 /**
  * Notify server that the requesting account has seen notifications. Requires auth.
  *
@@ -40,7 +37,7 @@ final readonly class UpdateSeen
             $request = $request->withHeader($name, $value);
         }
 
-        $jsonBody = json_encode(array_filter([
+        $jsonBody = \json_encode(\array_filter([
             'seenAt' => $seenAt,
         ]));
 
