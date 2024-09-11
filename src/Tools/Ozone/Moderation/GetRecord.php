@@ -8,9 +8,6 @@ use Psr\Http\Message\RequestFactoryInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
-use function array_filter;
-use function http_build_query;
-
 /**
  * Get details about a record.
  *
@@ -29,7 +26,7 @@ final readonly class GetRecord
             ->createRequest(
                 'GET',
                 $uri->withPath('xrpc/tools.ozone.moderation.getRecord')
-                    ->withQuery(http_build_query(array_filter([
+                    ->withQuery(\http_build_query(\array_filter([
                         'uri' => $uri,
                         'cid' => $cid,
                     ])))
