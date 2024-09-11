@@ -10,9 +10,6 @@ use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriInterface;
 use RuntimeException;
 
-use function array_filter;
-use function json_encode;
-
 /**
  * Send email to a user's account email address.
  *
@@ -46,7 +43,7 @@ final readonly class SendEmail
             $request = $request->withHeader($name, $value);
         }
 
-        $jsonBody = json_encode(array_filter([
+        $jsonBody = \json_encode(\array_filter([
             'recipientDid' => $recipientDid,
             'content' => $content,
             'subject' => $subject,
