@@ -8,9 +8,6 @@ use Psr\Http\Message\RequestFactoryInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
-use function array_filter;
-use function http_build_query;
-
 /**
  * Get list of accounts that matches your search query.
  *
@@ -33,7 +30,7 @@ final readonly class SearchAccounts
             ->createRequest(
                 'GET',
                 $uri->withPath('xrpc/com.atproto.admin.searchAccounts')
-                    ->withQuery(http_build_query(array_filter([
+                    ->withQuery(\http_build_query(\array_filter([
                         'email' => $email,
                         'cursor' => $cursor,
                         'limit' => $limit,
