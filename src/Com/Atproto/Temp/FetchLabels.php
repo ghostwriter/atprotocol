@@ -8,9 +8,6 @@ use Psr\Http\Message\RequestFactoryInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
-use function array_filter;
-use function http_build_query;
-
 /**
  * DEPRECATED: use queryLabels or subscribeLabels instead -- Fetch all labels from a labeler created after a certain date.
  *
@@ -29,7 +26,7 @@ final readonly class FetchLabels
             ->createRequest(
                 'GET',
                 $uri->withPath('xrpc/com.atproto.temp.fetchLabels')
-                    ->withQuery(http_build_query(array_filter([
+                    ->withQuery(\http_build_query(\array_filter([
                         'since' => $since,
                         'limit' => $limit,
                     ])))
