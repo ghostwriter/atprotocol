@@ -10,9 +10,6 @@ use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriInterface;
 use RuntimeException;
 
-use function array_filter;
-use function json_encode;
-
 /**
  * Reserve a repo signing key, for use with account creation. Necessary so that a DID PLC update operation can be constructed during an account migraiton. Public and does not require auth; implemented by PDS. NOTE: this endpoint may change when full account migration is implemented.
  *
@@ -40,7 +37,7 @@ final readonly class ReserveSigningKey
             $request = $request->withHeader($name, $value);
         }
 
-        $jsonBody = json_encode(array_filter([
+        $jsonBody = \json_encode(\array_filter([
             'did' => $did,
         ]));
 
