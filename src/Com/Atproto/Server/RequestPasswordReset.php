@@ -10,9 +10,6 @@ use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriInterface;
 use RuntimeException;
 
-use function array_filter;
-use function json_encode;
-
 /**
  * Initiate a user account password reset via email.
  *
@@ -40,7 +37,7 @@ final readonly class RequestPasswordReset
             $request = $request->withHeader($name, $value);
         }
 
-        $jsonBody = json_encode(array_filter([
+        $jsonBody = \json_encode(\array_filter([
             'email' => $email,
         ]));
 
