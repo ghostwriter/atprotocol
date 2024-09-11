@@ -20,12 +20,6 @@ use Psr\Http\Message\UriInterface;
 use const PHP_OS_FAMILY;
 use const PHP_VERSION;
 
-use function array_merge;
-use function http_build_query;
-use function is_array;
-use function is_string;
-use function sprintf;
-
 trait HttpTrait
 {
     public function __construct(
@@ -71,7 +65,7 @@ trait HttpTrait
             return $uri;
         }
 
-        return $uri->withQuery(http_build_query($query));
+        return $uri->withQuery(\http_build_query($query));
     }
 
     /**
@@ -102,18 +96,18 @@ trait HttpTrait
         // default headers can be overridden
         // by what is passed in.
 
-        $headers = array_merge(self::defaultHeaders(), $headers);
+        $headers = \array_merge(self::defaultHeaders(), $headers);
 
         $request = $this->requestFactory
             ->createRequest($method, $uri);
 
         foreach ($headers as $name => $value) {
-            if (! is_string($name)) {
+            if (! \is_string($name)) {
                 // TODO: skip or throw?
                 continue;
             }
 
-            if (! is_string($value) && ! is_array($value)) {
+            if (! \is_string($value) && ! \is_array($value)) {
                 // TODO: skip or throw?
                 continue;
             }
@@ -129,7 +123,7 @@ trait HttpTrait
         return [
             'Accept' => 'application/json',
             'Content-Type' => 'application/json; charset=utf-8',
-            'User-Agent' => sprintf(
+            'User-Agent' => \sprintf(
                 'Ghostwriter/Atprotocol (%s; PHP %s; OS %s)',
                 InstalledVersions::getPrettyVersion('ghostwriter/atprotocol'),
                 PHP_VERSION,
