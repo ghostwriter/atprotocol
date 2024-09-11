@@ -8,9 +8,6 @@ use Psr\Http\Message\RequestFactoryInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
-use function array_filter;
-use function http_build_query;
-
 /**
  * An unspecced view of globally popular feed generators.
  *
@@ -33,7 +30,7 @@ final readonly class GetPopularFeedGenerators
             ->createRequest(
                 'GET',
                 $uri->withPath('xrpc/app.bsky.unspecced.getPopularFeedGenerators')
-                    ->withQuery(http_build_query(array_filter([
+                    ->withQuery(\http_build_query(\array_filter([
                         'limit' => $limit,
                         'cursor' => $cursor,
                         'query' => $query,
