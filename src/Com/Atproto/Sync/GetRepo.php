@@ -8,9 +8,6 @@ use Psr\Http\Message\RequestFactoryInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
-use function array_filter;
-use function http_build_query;
-
 /**
  * Download a repository export as CAR file. Optionally only a 'diff' since a previous revision. Does not require auth; implemented by PDS.
  *
@@ -29,7 +26,7 @@ final readonly class GetRepo
             ->createRequest(
                 'GET',
                 $uri->withPath('xrpc/com.atproto.sync.getRepo')
-                    ->withQuery(http_build_query(array_filter([
+                    ->withQuery(\http_build_query(\array_filter([
                         'did' => $did,
                         'since' => $since,
                     ])))
