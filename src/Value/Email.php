@@ -10,14 +10,12 @@ use Stringable;
 
 use const FILTER_VALIDATE_EMAIL;
 
-use function filter_var;
-
 final readonly class Email implements Stringable
 {
     public function __construct(
         private string $email,
     ) {
-        if (! filter_var($this->email, FILTER_VALIDATE_EMAIL)) {
+        if (! \filter_var($this->email, FILTER_VALIDATE_EMAIL)) {
             throw new InvalidArgumentException('Invalid Email: ' . $this->email);
         }
     }
