@@ -8,9 +8,6 @@ use Psr\Http\Message\RequestFactoryInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
-use function array_filter;
-use function http_build_query;
-
 /**
  * Enumerates accounts that the requesting account (actor) currently has muted. Requires auth.
  *
@@ -29,7 +26,7 @@ final readonly class GetMutes
             ->createRequest(
                 'GET',
                 $uri->withPath('xrpc/app.bsky.graph.getMutes')
-                    ->withQuery(http_build_query(array_filter([
+                    ->withQuery(\http_build_query(\array_filter([
                         'limit' => $limit,
                         'cursor' => $cursor,
                     ])))
