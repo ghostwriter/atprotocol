@@ -8,8 +8,6 @@ use Ghostwriter\AtProtocol\Trait\HttpTrait;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\UploadedFileInterface;
 
-use function json_encode;
-
 /** @see AtProtocolTest */
 final class AtProtocol
 {
@@ -30,7 +28,7 @@ final class AtProtocol
     {
         return $this->post(
             $this->path('xrpc/com.atproto.server.updateStatus'),
-            json_encode([
+            \json_encode([
                 'content' => $content,
                 'attachments' => $attachments,
             ]) ?: '',
