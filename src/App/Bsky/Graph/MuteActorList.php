@@ -10,9 +10,6 @@ use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriInterface;
 use RuntimeException;
 
-use function array_filter;
-use function json_encode;
-
 /**
  * Creates a mute relationship for the specified list of accounts. Mutes are private in Bluesky. Requires auth.
  *
@@ -40,7 +37,7 @@ final readonly class MuteActorList
             $request = $request->withHeader($name, $value);
         }
 
-        $jsonBody = json_encode(array_filter([
+        $jsonBody = \json_encode(\array_filter([
             'list' => $list,
         ]));
 
