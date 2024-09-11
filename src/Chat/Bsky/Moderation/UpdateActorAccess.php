@@ -10,9 +10,6 @@ use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriInterface;
 use RuntimeException;
 
-use function array_filter;
-use function json_encode;
-
 /**
  *
  * @see UpdateActorAccessTest
@@ -43,7 +40,7 @@ final readonly class UpdateActorAccess
             $request = $request->withHeader($name, $value);
         }
 
-        $jsonBody = json_encode(array_filter([
+        $jsonBody = \json_encode(\array_filter([
             'actor' => $actor,
             'allowAccess' => $allowAccess,
             'ref' => $ref,
