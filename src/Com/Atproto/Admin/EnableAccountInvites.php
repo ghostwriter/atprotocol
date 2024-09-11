@@ -10,9 +10,6 @@ use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriInterface;
 use RuntimeException;
 
-use function array_filter;
-use function json_encode;
-
 /**
  * Re-enable an account's ability to receive invite codes.
  *
@@ -40,7 +37,7 @@ final readonly class EnableAccountInvites
             $request = $request->withHeader($name, $value);
         }
 
-        $jsonBody = json_encode(array_filter([
+        $jsonBody = \json_encode(\array_filter([
             'account' => $account,
             'note' => $note,
         ]));
