@@ -10,9 +10,6 @@ use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriInterface;
 use RuntimeException;
 
-use function array_filter;
-use function json_encode;
-
 /**
  * Request a service to persistently crawl hosted repos. Expected use is new PDS instances declaring their existence to Relays. Does not require auth.
  *
@@ -40,7 +37,7 @@ final readonly class RequestCrawl
             $request = $request->withHeader($name, $value);
         }
 
-        $jsonBody = json_encode(array_filter([
+        $jsonBody = \json_encode(\array_filter([
             'hostname' => $hostname,
         ]));
 
