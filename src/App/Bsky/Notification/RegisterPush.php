@@ -10,9 +10,6 @@ use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriInterface;
 use RuntimeException;
 
-use function array_filter;
-use function json_encode;
-
 /**
  * Register to receive push notifications, via a specified service, for the requesting account. Requires auth.
  *
@@ -45,7 +42,7 @@ final readonly class RegisterPush
             $request = $request->withHeader($name, $value);
         }
 
-        $jsonBody = json_encode(array_filter([
+        $jsonBody = \json_encode(\array_filter([
             'serviceDid' => $serviceDid,
             'token' => $token,
             'platform' => $platform,
