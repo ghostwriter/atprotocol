@@ -10,9 +10,6 @@ use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriInterface;
 use RuntimeException;
 
-use function array_filter;
-use function json_encode;
-
 /**
  * Disable some set of codes and/or all codes associated with a set of users.
  *
@@ -40,7 +37,7 @@ final readonly class DisableInviteCodes
             $request = $request->withHeader($name, $value);
         }
 
-        $jsonBody = json_encode(array_filter([
+        $jsonBody = \json_encode(\array_filter([
             'codes' => $codes,
             'accounts' => $accounts,
         ]));
