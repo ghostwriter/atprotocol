@@ -8,9 +8,6 @@ use Psr\Http\Message\RequestFactoryInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
-use function array_filter;
-use function http_build_query;
-
 /**
  * Returns a list of missing blobs for the requesting account. Intended to be used in the account migration flow.
  *
@@ -29,7 +26,7 @@ final readonly class ListMissingBlobs
             ->createRequest(
                 'GET',
                 $uri->withPath('xrpc/com.atproto.repo.listMissingBlobs')
-                    ->withQuery(http_build_query(array_filter([
+                    ->withQuery(\http_build_query(\array_filter([
                         'limit' => $limit,
                         'cursor' => $cursor,
                     ])))
