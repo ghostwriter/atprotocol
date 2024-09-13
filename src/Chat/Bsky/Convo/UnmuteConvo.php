@@ -22,10 +22,10 @@ final readonly class UnmuteConvo
     ) {
     }
 
-    public function __invoke(UriInterface $uri, ?string $convoId = null): RequestInterface
+    public function __invoke(UriInterface $pdsUri, ?string $convoId = null): RequestInterface
     {
         $request = $this->requestFactory
-            ->createRequest('POST', $uri->withPath('xrpc/chat.bsky.convo.unmuteConvo'));
+            ->createRequest('POST', $pdsUri->withPath('xrpc/chat.bsky.convo.unmuteConvo'));
 
         $headers = [
             'Accept' => 'application/json',
