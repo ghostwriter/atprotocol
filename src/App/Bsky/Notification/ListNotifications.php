@@ -21,7 +21,7 @@ final readonly class ListNotifications
     }
 
     public function __invoke(
-        UriInterface $uri,
+        UriInterface $pdsUri,
         ?int $limit = null,
         ?bool $priority = null,
         ?string $cursor = null,
@@ -30,7 +30,7 @@ final readonly class ListNotifications
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $uri->withPath('xrpc/app.bsky.notification.listNotifications')
+                $pdsUri->withPath('xrpc/app.bsky.notification.listNotifications')
                     ->withQuery(\http_build_query(\array_filter([
                         'limit' => $limit,
                         'priority' => $priority,
