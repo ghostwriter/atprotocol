@@ -23,10 +23,10 @@ final readonly class UploadVideo
     ) {
     }
 
-    public function __invoke(UriInterface $uri): RequestInterface
+    public function __invoke(UriInterface $pdsUri): RequestInterface
     {
         $request = $this->requestFactory
-            ->createRequest('POST', $uri->withPath('xrpc/app.bsky.video.uploadVideo'));
+            ->createRequest('POST', $pdsUri->withPath('xrpc/app.bsky.video.uploadVideo'));
 
         $headers = [
             'Accept' => 'video/mp4',
