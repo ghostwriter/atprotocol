@@ -20,12 +20,12 @@ final readonly class GetRecommendedDidCredentials
     ) {
     }
 
-    public function __invoke(UriInterface $uri): RequestInterface
+    public function __invoke(UriInterface $pdsUri): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $uri->withPath('xrpc/com.atproto.identity.getRecommendedDidCredentials')
+                $pdsUri->withPath('xrpc/com.atproto.identity.getRecommendedDidCredentials')
                     ->withQuery(\http_build_query(\array_filter([])))
             );
 
