@@ -21,7 +21,7 @@ final readonly class GetRecord
     }
 
     public function __invoke(
-        UriInterface $uri,
+        UriInterface $pdsUri,
         ?string $did = null,
         ?string $collection = null,
         ?string $rkey = null,
@@ -29,7 +29,7 @@ final readonly class GetRecord
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $uri->withPath('xrpc/com.atproto.sync.getRecord')
+                $pdsUri->withPath('xrpc/com.atproto.sync.getRecord')
                     ->withQuery(\http_build_query(\array_filter([
                         'did' => $did,
                         'collection' => $collection,
