@@ -23,12 +23,12 @@ final readonly class SendMessage
     }
 
     public function __invoke(
-        UriInterface $uri,
+        UriInterface $pdsUri,
         ?string $convoId = null,
         ?string $message = null,
     ): RequestInterface {
         $request = $this->requestFactory
-            ->createRequest('POST', $uri->withPath('xrpc/chat.bsky.convo.sendMessage'));
+            ->createRequest('POST', $pdsUri->withPath('xrpc/chat.bsky.convo.sendMessage'));
 
         $headers = [
             'Accept' => 'application/json',
