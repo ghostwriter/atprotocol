@@ -23,10 +23,10 @@ final readonly class DeactivateAccount
     ) {
     }
 
-    public function __invoke(UriInterface $uri, ?string $deleteAfter = null): RequestInterface
+    public function __invoke(UriInterface $pdsUri, ?string $deleteAfter = null): RequestInterface
     {
         $request = $this->requestFactory
-            ->createRequest('POST', $uri->withPath('xrpc/com.atproto.server.deactivateAccount'));
+            ->createRequest('POST', $pdsUri->withPath('xrpc/com.atproto.server.deactivateAccount'));
 
         $headers = [
             'Accept' => 'application/json',
