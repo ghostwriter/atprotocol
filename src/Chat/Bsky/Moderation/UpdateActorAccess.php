@@ -23,13 +23,13 @@ final readonly class UpdateActorAccess
     }
 
     public function __invoke(
-        UriInterface $uri,
+        UriInterface $pdsUri,
         ?string $actor = null,
         ?bool $allowAccess = null,
         ?string $ref = null,
     ): RequestInterface {
         $request = $this->requestFactory
-            ->createRequest('POST', $uri->withPath('xrpc/chat.bsky.moderation.updateActorAccess'));
+            ->createRequest('POST', $pdsUri->withPath('xrpc/chat.bsky.moderation.updateActorAccess'));
 
         $headers = [
             'Accept' => 'application/json',
