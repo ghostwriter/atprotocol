@@ -20,7 +20,7 @@ final readonly class GetMessages
     }
 
     public function __invoke(
-        UriInterface $uri,
+        UriInterface $pdsUri,
         ?string $convoId = null,
         ?int $limit = null,
         ?string $cursor = null,
@@ -28,7 +28,7 @@ final readonly class GetMessages
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $uri->withPath('xrpc/chat.bsky.convo.getMessages')
+                $pdsUri->withPath('xrpc/chat.bsky.convo.getMessages')
                     ->withQuery(\http_build_query(\array_filter([
                         'convoId' => $convoId,
                         'limit' => $limit,
