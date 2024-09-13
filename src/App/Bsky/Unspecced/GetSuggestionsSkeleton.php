@@ -21,7 +21,7 @@ final readonly class GetSuggestionsSkeleton
     }
 
     public function __invoke(
-        UriInterface $uri,
+        UriInterface $pdsUri,
         ?string $viewer = null,
         ?int $limit = null,
         ?string $cursor = null,
@@ -30,7 +30,7 @@ final readonly class GetSuggestionsSkeleton
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $uri->withPath('xrpc/app.bsky.unspecced.getSuggestionsSkeleton')
+                $pdsUri->withPath('xrpc/app.bsky.unspecced.getSuggestionsSkeleton')
                     ->withQuery(\http_build_query(\array_filter([
                         'viewer' => $viewer,
                         'limit' => $limit,
