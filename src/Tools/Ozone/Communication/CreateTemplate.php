@@ -24,7 +24,7 @@ final readonly class CreateTemplate
     }
 
     public function __invoke(
-        UriInterface $uri,
+        UriInterface $pdsUri,
         ?string $name = null,
         ?string $contentMarkdown = null,
         ?string $subject = null,
@@ -32,7 +32,7 @@ final readonly class CreateTemplate
         ?string $createdBy = null,
     ): RequestInterface {
         $request = $this->requestFactory
-            ->createRequest('POST', $uri->withPath('xrpc/tools.ozone.communication.createTemplate'));
+            ->createRequest('POST', $pdsUri->withPath('xrpc/tools.ozone.communication.createTemplate'));
 
         $headers = [
             'Accept' => 'application/json',
