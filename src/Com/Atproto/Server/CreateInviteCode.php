@@ -24,12 +24,12 @@ final readonly class CreateInviteCode
     }
 
     public function __invoke(
-        UriInterface $uri,
+        UriInterface $pdsUri,
         ?int $useCount = null,
         ?string $forAccount = null,
     ): RequestInterface {
         $request = $this->requestFactory
-            ->createRequest('POST', $uri->withPath('xrpc/com.atproto.server.createInviteCode'));
+            ->createRequest('POST', $pdsUri->withPath('xrpc/com.atproto.server.createInviteCode'));
 
         $headers = [
             'Accept' => 'application/json',
