@@ -24,13 +24,13 @@ final readonly class UpdateSubjectStatus
     }
 
     public function __invoke(
-        UriInterface $uri,
+        UriInterface $pdsUri,
         ?string $subject = null,
         ?string $takedown = null,
         ?string $deactivated = null,
     ): RequestInterface {
         $request = $this->requestFactory
-            ->createRequest('POST', $uri->withPath('xrpc/com.atproto.admin.updateSubjectStatus'));
+            ->createRequest('POST', $pdsUri->withPath('xrpc/com.atproto.admin.updateSubjectStatus'));
 
         $headers = [
             'Accept' => 'application/json',
