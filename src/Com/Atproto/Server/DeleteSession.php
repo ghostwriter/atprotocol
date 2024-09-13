@@ -23,10 +23,10 @@ final readonly class DeleteSession
     ) {
     }
 
-    public function __invoke(UriInterface $uri): RequestInterface
+    public function __invoke(UriInterface $pdsUri): RequestInterface
     {
         $request = $this->requestFactory
-            ->createRequest('POST', $uri->withPath('xrpc/com.atproto.server.deleteSession'));
+            ->createRequest('POST', $pdsUri->withPath('xrpc/com.atproto.server.deleteSession'));
 
         $headers = [
             'Accept' => 'application/json',
