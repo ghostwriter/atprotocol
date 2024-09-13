@@ -22,10 +22,10 @@ final readonly class DeleteAccount
     ) {
     }
 
-    public function __invoke(UriInterface $uri): RequestInterface
+    public function __invoke(UriInterface $pdsUri): RequestInterface
     {
         $request = $this->requestFactory
-            ->createRequest('POST', $uri->withPath('xrpc/chat.bsky.actor.deleteAccount'));
+            ->createRequest('POST', $pdsUri->withPath('xrpc/chat.bsky.actor.deleteAccount'));
 
         $headers = [
             'Accept' => 'application/json',
