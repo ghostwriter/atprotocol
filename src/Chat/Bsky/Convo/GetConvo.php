@@ -19,12 +19,12 @@ final readonly class GetConvo
     ) {
     }
 
-    public function __invoke(UriInterface $uri, ?string $convoId = null): RequestInterface
+    public function __invoke(UriInterface $pdsUri, ?string $convoId = null): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $uri->withPath('xrpc/chat.bsky.convo.getConvo')
+                $pdsUri->withPath('xrpc/chat.bsky.convo.getConvo')
                     ->withQuery(\http_build_query(\array_filter([
                         'convoId' => $convoId,
                     ])))
