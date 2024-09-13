@@ -20,12 +20,12 @@ final readonly class ListMembers
     ) {
     }
 
-    public function __invoke(UriInterface $uri, ?int $limit = null, ?string $cursor = null): RequestInterface
+    public function __invoke(UriInterface $pdsUri, ?int $limit = null, ?string $cursor = null): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $uri->withPath('xrpc/tools.ozone.team.listMembers')
+                $pdsUri->withPath('xrpc/tools.ozone.team.listMembers')
                     ->withQuery(\http_build_query(\array_filter([
                         'limit' => $limit,
                         'cursor' => $cursor,
