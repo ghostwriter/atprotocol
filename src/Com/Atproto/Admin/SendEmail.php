@@ -24,7 +24,7 @@ final readonly class SendEmail
     }
 
     public function __invoke(
-        UriInterface $uri,
+        UriInterface $pdsUri,
         ?string $recipientDid = null,
         ?string $content = null,
         ?string $senderDid = null,
@@ -32,7 +32,7 @@ final readonly class SendEmail
         ?string $comment = null,
     ): RequestInterface {
         $request = $this->requestFactory
-            ->createRequest('POST', $uri->withPath('xrpc/com.atproto.admin.sendEmail'));
+            ->createRequest('POST', $pdsUri->withPath('xrpc/com.atproto.admin.sendEmail'));
 
         $headers = [
             'Accept' => 'application/json',
