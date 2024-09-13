@@ -24,7 +24,7 @@ final readonly class CreateRecord
     }
 
     public function __invoke(
-        UriInterface $uri,
+        UriInterface $pdsUri,
         ?string $repo = null,
         ?string $collection = null,
         ?string $record = null,
@@ -33,7 +33,7 @@ final readonly class CreateRecord
         ?string $swapCommit = null,
     ): RequestInterface {
         $request = $this->requestFactory
-            ->createRequest('POST', $uri->withPath('xrpc/com.atproto.repo.createRecord'));
+            ->createRequest('POST', $pdsUri->withPath('xrpc/com.atproto.repo.createRecord'));
 
         $headers = [
             'Accept' => 'application/json',
