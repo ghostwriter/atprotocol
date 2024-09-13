@@ -24,14 +24,14 @@ final readonly class RegisterPush
     }
 
     public function __invoke(
-        UriInterface $uri,
+        UriInterface $pdsUri,
         ?string $serviceDid = null,
         ?string $token = null,
         ?string $platform = null,
         ?string $appId = null,
     ): RequestInterface {
         $request = $this->requestFactory
-            ->createRequest('POST', $uri->withPath('xrpc/app.bsky.notification.registerPush'));
+            ->createRequest('POST', $pdsUri->withPath('xrpc/app.bsky.notification.registerPush'));
 
         $headers = [
             'Accept' => 'application/json',
