@@ -20,12 +20,12 @@ final readonly class GetUploadLimits
     ) {
     }
 
-    public function __invoke(UriInterface $uri): RequestInterface
+    public function __invoke(UriInterface $pdsUri): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $uri->withPath('xrpc/app.bsky.video.getUploadLimits')
+                $pdsUri->withPath('xrpc/app.bsky.video.getUploadLimits')
                     ->withQuery(\http_build_query(\array_filter([])))
             );
 
