@@ -24,13 +24,13 @@ final readonly class CreateReport
     }
 
     public function __invoke(
-        UriInterface $uri,
+        UriInterface $pdsUri,
         ?string $reasonType = null,
         ?string $subject = null,
         ?string $reason = null,
     ): RequestInterface {
         $request = $this->requestFactory
-            ->createRequest('POST', $uri->withPath('xrpc/com.atproto.moderation.createReport'));
+            ->createRequest('POST', $pdsUri->withPath('xrpc/com.atproto.moderation.createReport'));
 
         $headers = [
             'Accept' => 'application/json',
