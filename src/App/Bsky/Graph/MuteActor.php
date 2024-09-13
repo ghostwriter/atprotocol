@@ -23,10 +23,10 @@ final readonly class MuteActor
     ) {
     }
 
-    public function __invoke(UriInterface $uri, ?string $actor = null): RequestInterface
+    public function __invoke(UriInterface $pdsUri, ?string $actor = null): RequestInterface
     {
         $request = $this->requestFactory
-            ->createRequest('POST', $uri->withPath('xrpc/app.bsky.graph.muteActor'));
+            ->createRequest('POST', $pdsUri->withPath('xrpc/app.bsky.graph.muteActor'));
 
         $headers = [
             'Accept' => 'application/json',
