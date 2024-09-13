@@ -23,10 +23,10 @@ final readonly class NotifyOfUpdate
     ) {
     }
 
-    public function __invoke(UriInterface $uri, ?string $hostname = null): RequestInterface
+    public function __invoke(UriInterface $pdsUri, ?string $hostname = null): RequestInterface
     {
         $request = $this->requestFactory
-            ->createRequest('POST', $uri->withPath('xrpc/com.atproto.sync.notifyOfUpdate'));
+            ->createRequest('POST', $pdsUri->withPath('xrpc/com.atproto.sync.notifyOfUpdate'));
 
         $headers = [
             'Accept' => 'application/json',
