@@ -23,10 +23,10 @@ final readonly class RefreshSession
     ) {
     }
 
-    public function __invoke(UriInterface $uri): RequestInterface
+    public function __invoke(UriInterface $pdsUri): RequestInterface
     {
         $request = $this->requestFactory
-            ->createRequest('POST', $uri->withPath('xrpc/com.atproto.server.refreshSession'));
+            ->createRequest('POST', $pdsUri->withPath('xrpc/com.atproto.server.refreshSession'));
 
         $headers = [
             'Accept' => 'application/json',
