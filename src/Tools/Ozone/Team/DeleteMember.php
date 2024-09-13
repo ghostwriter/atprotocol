@@ -23,10 +23,10 @@ final readonly class DeleteMember
     ) {
     }
 
-    public function __invoke(UriInterface $uri, ?string $did = null): RequestInterface
+    public function __invoke(UriInterface $pdsUri, ?string $did = null): RequestInterface
     {
         $request = $this->requestFactory
-            ->createRequest('POST', $uri->withPath('xrpc/tools.ozone.team.deleteMember'));
+            ->createRequest('POST', $pdsUri->withPath('xrpc/tools.ozone.team.deleteMember'));
 
         $headers = [
             'Accept' => 'application/json',
