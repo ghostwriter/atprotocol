@@ -20,7 +20,7 @@ final readonly class GetMessageContext
     }
 
     public function __invoke(
-        UriInterface $uri,
+        UriInterface $pdsUri,
         ?string $messageId = null,
         ?string $convoId = null,
         ?int $before = null,
@@ -29,7 +29,7 @@ final readonly class GetMessageContext
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $uri->withPath('xrpc/chat.bsky.moderation.getMessageContext')
+                $pdsUri->withPath('xrpc/chat.bsky.moderation.getMessageContext')
                     ->withQuery(\http_build_query(\array_filter([
                         'convoId' => $convoId,
                         'messageId' => $messageId,
