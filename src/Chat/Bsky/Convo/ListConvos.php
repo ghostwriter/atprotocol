@@ -19,12 +19,12 @@ final readonly class ListConvos
     ) {
     }
 
-    public function __invoke(UriInterface $uri, ?int $limit = null, ?string $cursor = null): RequestInterface
+    public function __invoke(UriInterface $pdsUri, ?int $limit = null, ?string $cursor = null): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $uri->withPath('xrpc/chat.bsky.convo.listConvos')
+                $pdsUri->withPath('xrpc/chat.bsky.convo.listConvos')
                     ->withQuery(\http_build_query(\array_filter([
                         'limit' => $limit,
                         'cursor' => $cursor,
