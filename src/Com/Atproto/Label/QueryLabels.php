@@ -21,7 +21,7 @@ final readonly class QueryLabels
     }
 
     public function __invoke(
-        UriInterface $uri,
+        UriInterface $pdsUri,
         ?array $uriPatterns = null,
         ?array $sources = null,
         ?int $limit = null,
@@ -30,7 +30,7 @@ final readonly class QueryLabels
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $uri->withPath('xrpc/com.atproto.label.queryLabels')
+                $pdsUri->withPath('xrpc/com.atproto.label.queryLabels')
                     ->withQuery(\http_build_query(\array_filter([
                         'uriPatterns' => $uriPatterns,
                         'sources' => $sources,
