@@ -24,14 +24,14 @@ final readonly class ApplyWrites
     }
 
     public function __invoke(
-        UriInterface $uri,
+        UriInterface $pdsUri,
         ?string $repo = null,
         ?array $writes = null,
         ?bool $validate = null,
         ?string $swapCommit = null,
     ): RequestInterface {
         $request = $this->requestFactory
-            ->createRequest('POST', $uri->withPath('xrpc/com.atproto.repo.applyWrites'));
+            ->createRequest('POST', $pdsUri->withPath('xrpc/com.atproto.repo.applyWrites'));
 
         $headers = [
             'Accept' => 'application/json',
