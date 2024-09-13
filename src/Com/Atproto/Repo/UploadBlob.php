@@ -23,10 +23,10 @@ final readonly class UploadBlob
     ) {
     }
 
-    public function __invoke(UriInterface $uri): RequestInterface
+    public function __invoke(UriInterface $pdsUri): RequestInterface
     {
         $request = $this->requestFactory
-            ->createRequest('POST', $uri->withPath('xrpc/com.atproto.repo.uploadBlob'));
+            ->createRequest('POST', $pdsUri->withPath('xrpc/com.atproto.repo.uploadBlob'));
 
         $headers = [
             'Accept' => '*/*',
