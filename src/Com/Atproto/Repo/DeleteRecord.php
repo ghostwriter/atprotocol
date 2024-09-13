@@ -24,7 +24,7 @@ final readonly class DeleteRecord
     }
 
     public function __invoke(
-        UriInterface $uri,
+        UriInterface $pdsUri,
         ?string $repo = null,
         ?string $collection = null,
         ?string $rkey = null,
@@ -32,7 +32,7 @@ final readonly class DeleteRecord
         ?string $swapCommit = null,
     ): RequestInterface {
         $request = $this->requestFactory
-            ->createRequest('POST', $uri->withPath('xrpc/com.atproto.repo.deleteRecord'));
+            ->createRequest('POST', $pdsUri->withPath('xrpc/com.atproto.repo.deleteRecord'));
 
         $headers = [
             'Accept' => 'application/json',
