@@ -23,10 +23,13 @@ final readonly class DisableInviteCodes
     ) {
     }
 
-    public function __invoke(UriInterface $uri, ?array $codes = null, ?array $accounts = null): RequestInterface
-    {
+    public function __invoke(
+        UriInterface $pdsUri,
+        ?array $codes = null,
+        ?array $accounts = null,
+    ): RequestInterface {
         $request = $this->requestFactory
-            ->createRequest('POST', $uri->withPath('xrpc/com.atproto.admin.disableInviteCodes'));
+            ->createRequest('POST', $pdsUri->withPath('xrpc/com.atproto.admin.disableInviteCodes'));
 
         $headers = [
             'Accept' => 'application/json',
