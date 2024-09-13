@@ -20,12 +20,12 @@ final readonly class GetListMutes
     ) {
     }
 
-    public function __invoke(UriInterface $uri, ?int $limit = null, ?string $cursor = null): RequestInterface
+    public function __invoke(UriInterface $pdsUri, ?int $limit = null, ?string $cursor = null): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $uri->withPath('xrpc/app.bsky.graph.getListMutes')
+                $pdsUri->withPath('xrpc/app.bsky.graph.getListMutes')
                     ->withQuery(\http_build_query(\array_filter([
                         'limit' => $limit,
                         'cursor' => $cursor,
