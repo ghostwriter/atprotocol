@@ -21,7 +21,7 @@ final readonly class SearchPostsSkeleton
     }
 
     public function __invoke(
-        UriInterface $uri,
+        UriInterface $pdsUri,
         ?string $q = null,
         ?string $sort = null,
         ?string $since = null,
@@ -39,7 +39,7 @@ final readonly class SearchPostsSkeleton
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $uri->withPath('xrpc/app.bsky.unspecced.searchPostsSkeleton')
+                $pdsUri->withPath('xrpc/app.bsky.unspecced.searchPostsSkeleton')
                     ->withQuery(\http_build_query(\array_filter([
                         'q' => $q,
                         'sort' => $sort,
