@@ -20,12 +20,12 @@ final readonly class GetRepo
     ) {
     }
 
-    public function __invoke(UriInterface $uri, ?string $did = null, ?string $since = null): RequestInterface
+    public function __invoke(UriInterface $pdsUri, ?string $did = null, ?string $since = null): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $uri->withPath('xrpc/com.atproto.sync.getRepo')
+                $pdsUri->withPath('xrpc/com.atproto.sync.getRepo')
                     ->withQuery(\http_build_query(\array_filter([
                         'did' => $did,
                         'since' => $since,
