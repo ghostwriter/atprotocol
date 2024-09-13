@@ -21,7 +21,7 @@ final readonly class GetTimeline
     }
 
     public function __invoke(
-        UriInterface $uri,
+        UriInterface $pdsUri,
         ?string $algorithm = null,
         ?int $limit = null,
         ?string $cursor = null,
@@ -29,7 +29,7 @@ final readonly class GetTimeline
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $uri->withPath('xrpc/app.bsky.feed.getTimeline')
+                $pdsUri->withPath('xrpc/app.bsky.feed.getTimeline')
                     ->withQuery(\http_build_query(\array_filter([
                         'algorithm' => $algorithm,
                         'limit' => $limit,
