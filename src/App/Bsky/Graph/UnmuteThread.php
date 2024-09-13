@@ -23,10 +23,10 @@ final readonly class UnmuteThread
     ) {
     }
 
-    public function __invoke(UriInterface $uri, ?string $root = null): RequestInterface
+    public function __invoke(UriInterface $pdsUri, ?string $root = null): RequestInterface
     {
         $request = $this->requestFactory
-            ->createRequest('POST', $uri->withPath('xrpc/app.bsky.graph.unmuteThread'));
+            ->createRequest('POST', $pdsUri->withPath('xrpc/app.bsky.graph.unmuteThread'));
 
         $headers = [
             'Accept' => 'application/json',
