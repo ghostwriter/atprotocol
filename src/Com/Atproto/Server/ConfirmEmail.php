@@ -23,10 +23,10 @@ final readonly class ConfirmEmail
     ) {
     }
 
-    public function __invoke(UriInterface $uri, ?string $email = null, ?string $token = null): RequestInterface
+    public function __invoke(UriInterface $pdsUri, ?string $email = null, ?string $token = null): RequestInterface
     {
         $request = $this->requestFactory
-            ->createRequest('POST', $uri->withPath('xrpc/com.atproto.server.confirmEmail'));
+            ->createRequest('POST', $pdsUri->withPath('xrpc/com.atproto.server.confirmEmail'));
 
         $headers = [
             'Accept' => 'application/json',
