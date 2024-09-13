@@ -21,7 +21,7 @@ final readonly class GetInviteCodes
     }
 
     public function __invoke(
-        UriInterface $uri,
+        UriInterface $pdsUri,
         ?string $sort = null,
         ?int $limit = null,
         ?string $cursor = null,
@@ -29,7 +29,7 @@ final readonly class GetInviteCodes
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $uri->withPath('xrpc/com.atproto.admin.getInviteCodes')
+                $pdsUri->withPath('xrpc/com.atproto.admin.getInviteCodes')
                     ->withQuery(\http_build_query(\array_filter([
                         'sort' => $sort,
                         'limit' => $limit,
