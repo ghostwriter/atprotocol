@@ -21,7 +21,7 @@ final readonly class GetPopularFeedGenerators
     }
 
     public function __invoke(
-        UriInterface $uri,
+        UriInterface $pdsUri,
         ?int $limit = null,
         ?string $cursor = null,
         ?string $query = null,
@@ -29,7 +29,7 @@ final readonly class GetPopularFeedGenerators
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $uri->withPath('xrpc/app.bsky.unspecced.getPopularFeedGenerators')
+                $pdsUri->withPath('xrpc/app.bsky.unspecced.getPopularFeedGenerators')
                     ->withQuery(\http_build_query(\array_filter([
                         'limit' => $limit,
                         'cursor' => $cursor,
