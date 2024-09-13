@@ -23,10 +23,10 @@ final readonly class AddMember
     ) {
     }
 
-    public function __invoke(UriInterface $uri, ?string $did = null, ?string $role = null): RequestInterface
+    public function __invoke(UriInterface $pdsUri, ?string $did = null, ?string $role = null): RequestInterface
     {
         $request = $this->requestFactory
-            ->createRequest('POST', $uri->withPath('xrpc/tools.ozone.team.addMember'));
+            ->createRequest('POST', $pdsUri->withPath('xrpc/tools.ozone.team.addMember'));
 
         $headers = [
             'Accept' => 'application/json',
