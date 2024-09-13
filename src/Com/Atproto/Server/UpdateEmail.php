@@ -24,13 +24,13 @@ final readonly class UpdateEmail
     }
 
     public function __invoke(
-        UriInterface $uri,
+        UriInterface $pdsUri,
         ?string $email = null,
         ?bool $emailAuthFactor = null,
         ?string $token = null,
     ): RequestInterface {
         $request = $this->requestFactory
-            ->createRequest('POST', $uri->withPath('xrpc/com.atproto.server.updateEmail'));
+            ->createRequest('POST', $pdsUri->withPath('xrpc/com.atproto.server.updateEmail'));
 
         $headers = [
             'Accept' => 'application/json',
