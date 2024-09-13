@@ -21,7 +21,7 @@ final readonly class GetAuthorFeed
     }
 
     public function __invoke(
-        UriInterface $uri,
+        UriInterface $pdsUri,
         ?string $actor = null,
         ?int $limit = null,
         ?string $cursor = null,
@@ -30,7 +30,7 @@ final readonly class GetAuthorFeed
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $uri->withPath('xrpc/app.bsky.feed.getAuthorFeed')
+                $pdsUri->withPath('xrpc/app.bsky.feed.getAuthorFeed')
                     ->withQuery(\http_build_query(\array_filter([
                         'actor' => $actor,
                         'limit' => $limit,
