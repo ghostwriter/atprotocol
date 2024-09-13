@@ -23,10 +23,10 @@ final readonly class UpdateHandle
     ) {
     }
 
-    public function __invoke(UriInterface $uri, ?string $handle = null): RequestInterface
+    public function __invoke(UriInterface $pdsUri, ?string $handle = null): RequestInterface
     {
         $request = $this->requestFactory
-            ->createRequest('POST', $uri->withPath('xrpc/com.atproto.identity.updateHandle'));
+            ->createRequest('POST', $pdsUri->withPath('xrpc/com.atproto.identity.updateHandle'));
 
         $headers = [
             'Accept' => 'application/json',
