@@ -24,7 +24,7 @@ final readonly class UpdateTemplate
     }
 
     public function __invoke(
-        UriInterface $uri,
+        UriInterface $pdsUri,
         ?string $id = null,
         ?string $name = null,
         ?string $lang = null,
@@ -34,7 +34,7 @@ final readonly class UpdateTemplate
         ?bool $disabled = null,
     ): RequestInterface {
         $request = $this->requestFactory
-            ->createRequest('POST', $uri->withPath('xrpc/tools.ozone.communication.updateTemplate'));
+            ->createRequest('POST', $pdsUri->withPath('xrpc/tools.ozone.communication.updateTemplate'));
 
         $headers = [
             'Accept' => 'application/json',
