@@ -21,7 +21,8 @@ final readonly class QueryStatuses
     }
 
     public function __invoke(
-        UriInterface $uri,
+        UriInterface $pdsUri,
+        ?bool $includeAllUserRecords = null,
         ?string $subject = null,
         ?string $comment = null,
         ?string $reportedAfter = null,
@@ -45,8 +46,9 @@ final readonly class QueryStatuses
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $uri->withPath('xrpc/tools.ozone.moderation.queryStatuses')
+                $pdsUri->withPath('xrpc/tools.ozone.moderation.queryStatuses')
                     ->withQuery(\http_build_query(\array_filter([
+                        'includeAllUserRecords' => $includeAllUserRecords,
                         'subject' => $subject,
                         'comment' => $comment,
                         'reportedAfter' => $reportedAfter,
