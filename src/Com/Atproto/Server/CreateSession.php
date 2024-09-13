@@ -24,13 +24,13 @@ final readonly class CreateSession
     }
 
     public function __invoke(
-        UriInterface $uri,
+        UriInterface $pdsUri,
         ?string $identifier = null,
         ?string $password = null,
         ?string $authFactorToken = null,
     ): RequestInterface {
         $request = $this->requestFactory
-            ->createRequest('POST', $uri->withPath('xrpc/com.atproto.server.createSession'));
+            ->createRequest('POST', $pdsUri->withPath('xrpc/com.atproto.server.createSession'));
 
         $headers = [
             'Accept' => 'application/json',
