@@ -24,7 +24,7 @@ final readonly class SignPlcOperation
     }
 
     public function __invoke(
-        UriInterface $uri,
+        UriInterface $pdsUri,
         ?string $token = null,
         ?array $rotationKeys = null,
         ?array $alsoKnownAs = null,
@@ -32,7 +32,7 @@ final readonly class SignPlcOperation
         ?string $services = null,
     ): RequestInterface {
         $request = $this->requestFactory
-            ->createRequest('POST', $uri->withPath('xrpc/com.atproto.identity.signPlcOperation'));
+            ->createRequest('POST', $pdsUri->withPath('xrpc/com.atproto.identity.signPlcOperation'));
 
         $headers = [
             'Accept' => 'application/json',
