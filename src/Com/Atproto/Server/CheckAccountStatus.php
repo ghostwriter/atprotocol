@@ -20,12 +20,12 @@ final readonly class CheckAccountStatus
     ) {
     }
 
-    public function __invoke(UriInterface $uri): RequestInterface
+    public function __invoke(UriInterface $pdsUri): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $uri->withPath('xrpc/com.atproto.server.checkAccountStatus')
+                $pdsUri->withPath('xrpc/com.atproto.server.checkAccountStatus')
                     ->withQuery(\http_build_query(\array_filter([])))
             );
 
