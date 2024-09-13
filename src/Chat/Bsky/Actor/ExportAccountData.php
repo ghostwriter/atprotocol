@@ -19,12 +19,12 @@ final readonly class ExportAccountData
     ) {
     }
 
-    public function __invoke(UriInterface $uri): RequestInterface
+    public function __invoke(UriInterface $pdsUri): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $uri->withPath('xrpc/chat.bsky.actor.exportAccountData')
+                $pdsUri->withPath('xrpc/chat.bsky.actor.exportAccountData')
                     ->withQuery(\http_build_query(\array_filter([])))
             );
 
