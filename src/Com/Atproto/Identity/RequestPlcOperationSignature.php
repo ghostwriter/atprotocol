@@ -23,10 +23,10 @@ final readonly class RequestPlcOperationSignature
     ) {
     }
 
-    public function __invoke(UriInterface $uri): RequestInterface
+    public function __invoke(UriInterface $pdsUri): RequestInterface
     {
         $request = $this->requestFactory
-            ->createRequest('POST', $uri->withPath('xrpc/com.atproto.identity.requestPlcOperationSignature'));
+            ->createRequest('POST', $pdsUri->withPath('xrpc/com.atproto.identity.requestPlcOperationSignature'));
 
         $headers = [
             'Accept' => 'application/json',
