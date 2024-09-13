@@ -21,7 +21,7 @@ final readonly class GetLikes
     }
 
     public function __invoke(
-        UriInterface $uri,
+        UriInterface $pdsUri,
         ?string $uri = null,
         ?string $cid = null,
         ?int $limit = null,
@@ -30,7 +30,7 @@ final readonly class GetLikes
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $uri->withPath('xrpc/app.bsky.feed.getLikes')
+                $pdsUri->withPath('xrpc/app.bsky.feed.getLikes')
                     ->withQuery(\http_build_query(\array_filter([
                         'uri' => $uri,
                         'cid' => $cid,
