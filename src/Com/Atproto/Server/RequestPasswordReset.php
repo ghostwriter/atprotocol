@@ -23,10 +23,10 @@ final readonly class RequestPasswordReset
     ) {
     }
 
-    public function __invoke(UriInterface $uri, ?string $email = null): RequestInterface
+    public function __invoke(UriInterface $pdsUri, ?string $email = null): RequestInterface
     {
         $request = $this->requestFactory
-            ->createRequest('POST', $uri->withPath('xrpc/com.atproto.server.requestPasswordReset'));
+            ->createRequest('POST', $pdsUri->withPath('xrpc/com.atproto.server.requestPasswordReset'));
 
         $headers = [
             'Accept' => 'application/json',
