@@ -21,7 +21,7 @@ final readonly class QueryEvents
     }
 
     public function __invoke(
-        UriInterface $uri,
+        UriInterface $pdsUri,
         ?array $types = null,
         ?string $createdBy = null,
         ?string $sortDirection = null,
@@ -42,7 +42,7 @@ final readonly class QueryEvents
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $uri->withPath('xrpc/tools.ozone.moderation.queryEvents')
+                $pdsUri->withPath('xrpc/tools.ozone.moderation.queryEvents')
                     ->withQuery(\http_build_query(\array_filter([
                         'types' => $types,
                         'createdBy' => $createdBy,
