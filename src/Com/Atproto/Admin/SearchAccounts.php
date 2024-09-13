@@ -21,7 +21,7 @@ final readonly class SearchAccounts
     }
 
     public function __invoke(
-        UriInterface $uri,
+        UriInterface $pdsUri,
         ?string $email = null,
         ?string $cursor = null,
         ?int $limit = null,
@@ -29,7 +29,7 @@ final readonly class SearchAccounts
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $uri->withPath('xrpc/com.atproto.admin.searchAccounts')
+                $pdsUri->withPath('xrpc/com.atproto.admin.searchAccounts')
                     ->withQuery(\http_build_query(\array_filter([
                         'email' => $email,
                         'cursor' => $cursor,
