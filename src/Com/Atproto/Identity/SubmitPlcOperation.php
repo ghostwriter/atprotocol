@@ -23,10 +23,10 @@ final readonly class SubmitPlcOperation
     ) {
     }
 
-    public function __invoke(UriInterface $uri, ?string $operation = null): RequestInterface
+    public function __invoke(UriInterface $pdsUri, ?string $operation = null): RequestInterface
     {
         $request = $this->requestFactory
-            ->createRequest('POST', $uri->withPath('xrpc/com.atproto.identity.submitPlcOperation'));
+            ->createRequest('POST', $pdsUri->withPath('xrpc/com.atproto.identity.submitPlcOperation'));
 
         $headers = [
             'Accept' => 'application/json',
