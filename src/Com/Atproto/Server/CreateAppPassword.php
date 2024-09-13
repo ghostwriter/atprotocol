@@ -23,10 +23,13 @@ final readonly class CreateAppPassword
     ) {
     }
 
-    public function __invoke(UriInterface $uri, ?string $name = null, ?bool $privileged = null): RequestInterface
-    {
+    public function __invoke(
+        UriInterface $pdsUri,
+        ?string $name = null,
+        ?bool $privileged = null,
+    ): RequestInterface {
         $request = $this->requestFactory
-            ->createRequest('POST', $uri->withPath('xrpc/com.atproto.server.createAppPassword'));
+            ->createRequest('POST', $pdsUri->withPath('xrpc/com.atproto.server.createAppPassword'));
 
         $headers = [
             'Accept' => 'application/json',
