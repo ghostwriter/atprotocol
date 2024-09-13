@@ -24,13 +24,13 @@ final readonly class UpdateMember
     }
 
     public function __invoke(
-        UriInterface $uri,
+        UriInterface $pdsUri,
         ?string $did = null,
         ?bool $disabled = null,
         ?string $role = null,
     ): RequestInterface {
         $request = $this->requestFactory
-            ->createRequest('POST', $uri->withPath('xrpc/tools.ozone.team.updateMember'));
+            ->createRequest('POST', $pdsUri->withPath('xrpc/tools.ozone.team.updateMember'));
 
         $headers = [
             'Accept' => 'application/json',
