@@ -24,14 +24,14 @@ final readonly class EmitEvent
     }
 
     public function __invoke(
-        UriInterface $uri,
+        UriInterface $pdsUri,
         ?string $event = null,
         ?string $subject = null,
         ?string $createdBy = null,
         ?array $subjectBlobCids = null,
     ): RequestInterface {
         $request = $this->requestFactory
-            ->createRequest('POST', $uri->withPath('xrpc/tools.ozone.moderation.emitEvent'));
+            ->createRequest('POST', $pdsUri->withPath('xrpc/tools.ozone.moderation.emitEvent'));
 
         $headers = [
             'Accept' => 'application/json',
