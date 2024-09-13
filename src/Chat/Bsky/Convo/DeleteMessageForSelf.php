@@ -23,12 +23,12 @@ final readonly class DeleteMessageForSelf
     }
 
     public function __invoke(
-        UriInterface $uri,
+        UriInterface $pdsUri,
         ?string $convoId = null,
         ?string $messageId = null,
     ): RequestInterface {
         $request = $this->requestFactory
-            ->createRequest('POST', $uri->withPath('xrpc/chat.bsky.convo.deleteMessageForSelf'));
+            ->createRequest('POST', $pdsUri->withPath('xrpc/chat.bsky.convo.deleteMessageForSelf'));
 
         $headers = [
             'Accept' => 'application/json',
