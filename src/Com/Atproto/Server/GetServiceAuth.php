@@ -21,7 +21,7 @@ final readonly class GetServiceAuth
     }
 
     public function __invoke(
-        UriInterface $uri,
+        UriInterface $pdsUri,
         ?string $aud = null,
         ?int $exp = null,
         ?string $lxm = null,
@@ -29,7 +29,7 @@ final readonly class GetServiceAuth
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $uri->withPath('xrpc/com.atproto.server.getServiceAuth')
+                $pdsUri->withPath('xrpc/com.atproto.server.getServiceAuth')
                     ->withQuery(\http_build_query(\array_filter([
                         'aud' => $aud,
                         'exp' => $exp,
