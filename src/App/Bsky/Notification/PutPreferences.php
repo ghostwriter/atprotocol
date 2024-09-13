@@ -23,10 +23,10 @@ final readonly class PutPreferences
     ) {
     }
 
-    public function __invoke(UriInterface $uri, ?bool $priority = null): RequestInterface
+    public function __invoke(UriInterface $pdsUri, ?bool $priority = null): RequestInterface
     {
         $request = $this->requestFactory
-            ->createRequest('POST', $uri->withPath('xrpc/app.bsky.notification.putPreferences'));
+            ->createRequest('POST', $pdsUri->withPath('xrpc/app.bsky.notification.putPreferences'));
 
         $headers = [
             'Accept' => 'application/json',
