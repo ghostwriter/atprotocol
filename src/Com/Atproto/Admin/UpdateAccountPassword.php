@@ -23,10 +23,13 @@ final readonly class UpdateAccountPassword
     ) {
     }
 
-    public function __invoke(UriInterface $uri, ?string $did = null, ?string $password = null): RequestInterface
-    {
+    public function __invoke(
+        UriInterface $pdsUri,
+        ?string $did = null,
+        ?string $password = null,
+    ): RequestInterface {
         $request = $this->requestFactory
-            ->createRequest('POST', $uri->withPath('xrpc/com.atproto.admin.updateAccountPassword'));
+            ->createRequest('POST', $pdsUri->withPath('xrpc/com.atproto.admin.updateAccountPassword'));
 
         $headers = [
             'Accept' => 'application/json',
