@@ -20,12 +20,12 @@ final readonly class GetEvent
     ) {
     }
 
-    public function __invoke(UriInterface $uri, ?int $id = null): RequestInterface
+    public function __invoke(UriInterface $pdsUri, ?int $id = null): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $uri->withPath('xrpc/tools.ozone.moderation.getEvent')
+                $pdsUri->withPath('xrpc/tools.ozone.moderation.getEvent')
                     ->withQuery(\http_build_query(\array_filter([
                         'id' => $id,
                     ])))
