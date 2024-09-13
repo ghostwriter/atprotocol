@@ -20,12 +20,12 @@ final readonly class GetRepo
     ) {
     }
 
-    public function __invoke(UriInterface $uri, ?string $did = null): RequestInterface
+    public function __invoke(UriInterface $pdsUri, ?string $did = null): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $uri->withPath('xrpc/tools.ozone.moderation.getRepo')
+                $pdsUri->withPath('xrpc/tools.ozone.moderation.getRepo')
                     ->withQuery(\http_build_query(\array_filter([
                         'did' => $did,
                     ])))
