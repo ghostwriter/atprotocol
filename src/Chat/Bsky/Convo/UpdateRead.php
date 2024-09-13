@@ -23,12 +23,12 @@ final readonly class UpdateRead
     }
 
     public function __invoke(
-        UriInterface $uri,
+        UriInterface $pdsUri,
         ?string $convoId = null,
         ?string $messageId = null,
     ): RequestInterface {
         $request = $this->requestFactory
-            ->createRequest('POST', $uri->withPath('xrpc/chat.bsky.convo.updateRead'));
+            ->createRequest('POST', $pdsUri->withPath('xrpc/chat.bsky.convo.updateRead'));
 
         $headers = [
             'Accept' => 'application/json',
