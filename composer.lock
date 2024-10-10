@@ -193,16 +193,16 @@
         },
         {
             "name": "ghostwriter/container",
-            "version": "4.0.2",
+            "version": "4.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ghostwriter/container.git",
-                "reference": "5779b4aecde687c4f44d953d3762ccb776f0ed44"
+                "reference": "a36501ae47e77441504b04500e303d118509f162"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ghostwriter/container/zipball/5779b4aecde687c4f44d953d3762ccb776f0ed44",
-                "reference": "5779b4aecde687c4f44d953d3762ccb776f0ed44",
+                "url": "https://api.github.com/repos/ghostwriter/container/zipball/a36501ae47e77441504b04500e303d118509f162",
+                "reference": "a36501ae47e77441504b04500e303d118509f162",
                 "shasum": ""
             },
             "require": {
@@ -249,7 +249,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-07-13T14:57:49+00:00"
+            "time": "2024-10-09T18:15:29+00:00"
         },
         {
             "name": "ghostwriter/event-dispatcher",
