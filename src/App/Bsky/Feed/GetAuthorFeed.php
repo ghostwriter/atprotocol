@@ -26,6 +26,7 @@ final readonly class GetAuthorFeed
         ?int $limit = null,
         ?string $cursor = null,
         ?string $filter = null,
+        ?bool $includePins = null,
     ): RequestInterface {
         $request = $this->requestFactory
             ->createRequest(
@@ -36,6 +37,7 @@ final readonly class GetAuthorFeed
                         'limit' => $limit,
                         'cursor' => $cursor,
                         'filter' => $filter,
+                        'includePins' => $includePins,
                     ])))
             );
 
