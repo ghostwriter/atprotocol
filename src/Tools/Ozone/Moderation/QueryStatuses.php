@@ -42,6 +42,8 @@ final readonly class QueryStatuses
         ?array $tags = null,
         ?array $excludeTags = null,
         ?string $cursor = null,
+        ?array $collections = null,
+        ?string $subjectType = null,
     ): RequestInterface {
         $request = $this->requestFactory
             ->createRequest(
@@ -68,6 +70,8 @@ final readonly class QueryStatuses
                         'tags' => $tags,
                         'excludeTags' => $excludeTags,
                         'cursor' => $cursor,
+                        'collections' => $collections,
+                        'subjectType' => $subjectType,
                     ])))
             );
 
