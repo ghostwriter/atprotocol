@@ -9,6 +9,7 @@ use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
 /**
+ * GetMessageContext
  *
  * @see GetMessageContextTest
  */
@@ -25,17 +26,18 @@ final readonly class GetMessageContext
         ?string $convoId = null,
         ?int $before = null,
         ?int $after = null,
-    ): RequestInterface {
+    ): RequestInterface
+    {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
                 $pdsUri->withPath('xrpc/chat.bsky.moderation.getMessageContext')
                     ->withQuery(\http_build_query(\array_filter([
-                        'convoId' => $convoId,
-                        'messageId' => $messageId,
-                        'before' => $before,
-                        'after' => $after,
-                    ])))
+                    'convoId' => $convoId,
+                    'messageId' => $messageId,
+                    'before' => $before,
+                    'after' => $after,
+                ])))
             );
 
         $headers = [
