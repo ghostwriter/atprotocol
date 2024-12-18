@@ -8,6 +8,9 @@ use Psr\Http\Message\RequestFactoryInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
+use function array_filter;
+use function http_build_query;
+
 /**
  * Find all correlated threat signatures between 2 or more accounts.
  *
@@ -17,21 +20,17 @@ final readonly class FindCorrelation
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
-    ) {
-    }
+    ) {}
 
-    public function __invoke(
-        UriInterface $pdsUri,
-        ?array $dids = null,
-    ): RequestInterface
+    public function __invoke(UriInterface $pdsUri, ?array $dids = null): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
                 $pdsUri->withPath('xrpc/tools.ozone.signature.findCorrelation')
-                    ->withQuery(\http_build_query(\array_filter([
-                    'dids' => $dids,
-                ])))
+                    ->withQuery(http_build_query(array_filter([
+                        'dids' => $dids,
+                    ])))
             );
 
         $headers = [
