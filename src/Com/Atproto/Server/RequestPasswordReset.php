@@ -8,7 +8,8 @@ use Psr\Http\Message\RequestFactoryInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriInterface;
-use RuntimeException;
+
+use const JSON_THROW_ON_ERROR;
 
 /**
  * Initiate a user account password reset via email.
@@ -23,10 +24,16 @@ final readonly class RequestPasswordReset
     ) {
     }
 
-    public function __invoke(UriInterface $pdsUri, ?string $email = null): RequestInterface
+    public function __invoke(
+        UriInterface $pdsUri,
+        ?string $email = null,
+    ): RequestInterface
     {
         $request = $this->requestFactory
-            ->createRequest('POST', $pdsUri->withPath('xrpc/com.atproto.server.requestPasswordReset'));
+            ->createRequest(
+                'POST',
+                $pdsUri->withPath('xrpc/com.atproto.server.requestPasswordReset')
+            );
 
         $headers = [
             'Accept' => 'application/json',
@@ -39,12 +46,12 @@ final readonly class RequestPasswordReset
 
         $jsonBody = \json_encode(\array_filter([
             'email' => $email,
-        ]));
+        ]), JSON_THROW_ON_ERROR);
 
-        if ($jsonBody === false) {
-            throw new RuntimeException('Failed to encode JSON');
-        }
-
-        return $request->withBody($this->streamFactory->createStream($jsonBody));
+        return $request->withBody(
+            $this->streamFactory->createStream(
+                $jsonBody
+            )
+        );
     }
 }
