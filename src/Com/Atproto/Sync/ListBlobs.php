@@ -26,17 +26,18 @@ final readonly class ListBlobs
         ?string $since = null,
         ?int $limit = null,
         ?string $cursor = null,
-    ): RequestInterface {
+    ): RequestInterface
+    {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
                 $pdsUri->withPath('xrpc/com.atproto.sync.listBlobs')
                     ->withQuery(\http_build_query(\array_filter([
-                        'did' => $did,
-                        'since' => $since,
-                        'limit' => $limit,
-                        'cursor' => $cursor,
-                    ])))
+                    'did' => $did,
+                    'since' => $since,
+                    'limit' => $limit,
+                    'cursor' => $cursor,
+                ])))
             );
 
         $headers = [
