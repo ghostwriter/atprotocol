@@ -11,8 +11,11 @@ use Psr\Http\Message\UriInterface;
 
 use const JSON_THROW_ON_ERROR;
 
+use function array_filter;
+use function json_encode;
+
 /**
- * Create or update setting option
+ * Create or update setting option.
  *
  * @see UpsertOptionTest
  */
@@ -21,8 +24,7 @@ final readonly class UpsertOption
     public function __construct(
         private RequestFactoryInterface $requestFactory,
         private StreamFactoryInterface $streamFactory,
-    ) {
-    }
+    ) {}
 
     public function __invoke(
         UriInterface $pdsUri,
@@ -31,13 +33,9 @@ final readonly class UpsertOption
         ?string $value = null,
         ?string $description = null,
         ?string $managerRole = null,
-    ): RequestInterface
-    {
+    ): RequestInterface {
         $request = $this->requestFactory
-            ->createRequest(
-                'POST',
-                $pdsUri->withPath('xrpc/tools.ozone.setting.upsertOption')
-            );
+            ->createRequest('POST', $pdsUri->withPath('xrpc/tools.ozone.setting.upsertOption'));
 
         $headers = [
             'Accept' => 'application/json',
@@ -48,7 +46,7 @@ final readonly class UpsertOption
             $request = $request->withHeader($name, $value);
         }
 
-        $jsonBody = \json_encode(\array_filter([
+        $jsonBody = json_encode(array_filter([
             'key' => $key,
             'scope' => $scope,
             'value' => $value,
@@ -56,10 +54,6 @@ final readonly class UpsertOption
             'managerRole' => $managerRole,
         ]), JSON_THROW_ON_ERROR);
 
-        return $request->withBody(
-            $this->streamFactory->createStream(
-                $jsonBody
-            )
-        );
+        return $request->withBody($this->streamFactory->createStream($jsonBody));
     }
 }
