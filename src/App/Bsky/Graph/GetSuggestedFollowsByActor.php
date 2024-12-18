@@ -20,15 +20,18 @@ final readonly class GetSuggestedFollowsByActor
     ) {
     }
 
-    public function __invoke(UriInterface $pdsUri, ?string $actor = null): RequestInterface
+    public function __invoke(
+        UriInterface $pdsUri,
+        ?string $actor = null,
+    ): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
                 $pdsUri->withPath('xrpc/app.bsky.graph.getSuggestedFollowsByActor')
                     ->withQuery(\http_build_query(\array_filter([
-                        'actor' => $actor,
-                    ])))
+                    'actor' => $actor,
+                ])))
             );
 
         $headers = [
