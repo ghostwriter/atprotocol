@@ -25,16 +25,17 @@ final readonly class GetServiceAuth
         ?string $aud = null,
         ?int $exp = null,
         ?string $lxm = null,
-    ): RequestInterface {
+    ): RequestInterface
+    {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
                 $pdsUri->withPath('xrpc/com.atproto.server.getServiceAuth')
                     ->withQuery(\http_build_query(\array_filter([
-                        'aud' => $aud,
-                        'exp' => $exp,
-                        'lxm' => $lxm,
-                    ])))
+                    'aud' => $aud,
+                    'exp' => $exp,
+                    'lxm' => $lxm,
+                ])))
             );
 
         $headers = [
