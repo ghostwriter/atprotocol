@@ -9,6 +9,7 @@ use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
 /**
+ * ExportAccountData
  *
  * @see ExportAccountDataTest
  */
@@ -19,7 +20,9 @@ final readonly class ExportAccountData
     ) {
     }
 
-    public function __invoke(UriInterface $pdsUri): RequestInterface
+    public function __invoke(
+        UriInterface $pdsUri,
+    ): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
