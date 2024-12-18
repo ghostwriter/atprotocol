@@ -8,7 +8,8 @@ use Psr\Http\Message\RequestFactoryInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriInterface;
-use RuntimeException;
+
+use const JSON_THROW_ON_ERROR;
 
 /**
  * Update the password for a user account as an administrator.
@@ -27,9 +28,13 @@ final readonly class UpdateAccountPassword
         UriInterface $pdsUri,
         ?string $did = null,
         ?string $password = null,
-    ): RequestInterface {
+    ): RequestInterface
+    {
         $request = $this->requestFactory
-            ->createRequest('POST', $pdsUri->withPath('xrpc/com.atproto.admin.updateAccountPassword'));
+            ->createRequest(
+                'POST',
+                $pdsUri->withPath('xrpc/com.atproto.admin.updateAccountPassword')
+            );
 
         $headers = [
             'Accept' => 'application/json',
@@ -43,12 +48,12 @@ final readonly class UpdateAccountPassword
         $jsonBody = \json_encode(\array_filter([
             'did' => $did,
             'password' => $password,
-        ]));
+        ]), JSON_THROW_ON_ERROR);
 
-        if ($jsonBody === false) {
-            throw new RuntimeException('Failed to encode JSON');
-        }
-
-        return $request->withBody($this->streamFactory->createStream($jsonBody));
+        return $request->withBody(
+            $this->streamFactory->createStream(
+                $jsonBody
+            )
+        );
     }
 }
