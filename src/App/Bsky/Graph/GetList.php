@@ -8,6 +8,9 @@ use Psr\Http\Message\RequestFactoryInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
+use function array_filter;
+use function http_build_query;
+
 /**
  * Gets a 'view' (with additional context) of a specified list.
  *
@@ -17,25 +20,23 @@ final readonly class GetList
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
-    ) {
-    }
+    ) {}
 
     public function __invoke(
         UriInterface $pdsUri,
         ?string $list = null,
         ?int $limit = null,
         ?string $cursor = null,
-    ): RequestInterface
-    {
+    ): RequestInterface {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
                 $pdsUri->withPath('xrpc/app.bsky.graph.getList')
-                    ->withQuery(\http_build_query(\array_filter([
-                    'list' => $list,
-                    'limit' => $limit,
-                    'cursor' => $cursor,
-                ])))
+                    ->withQuery(http_build_query(array_filter([
+                        'list' => $list,
+                        'limit' => $limit,
+                        'cursor' => $cursor,
+                    ])))
             );
 
         $headers = [
