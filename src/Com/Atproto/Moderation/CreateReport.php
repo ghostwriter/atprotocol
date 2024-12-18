@@ -8,7 +8,8 @@ use Psr\Http\Message\RequestFactoryInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriInterface;
-use RuntimeException;
+
+use const JSON_THROW_ON_ERROR;
 
 /**
  * Submit a moderation report regarding an atproto account or record. Implemented by moderation services (with PDS proxying), and requires auth.
@@ -28,9 +29,13 @@ final readonly class CreateReport
         ?string $reasonType = null,
         ?string $subject = null,
         ?string $reason = null,
-    ): RequestInterface {
+    ): RequestInterface
+    {
         $request = $this->requestFactory
-            ->createRequest('POST', $pdsUri->withPath('xrpc/com.atproto.moderation.createReport'));
+            ->createRequest(
+                'POST',
+                $pdsUri->withPath('xrpc/com.atproto.moderation.createReport')
+            );
 
         $headers = [
             'Accept' => 'application/json',
@@ -45,12 +50,12 @@ final readonly class CreateReport
             'reasonType' => $reasonType,
             'reason' => $reason,
             'subject' => $subject,
-        ]));
+        ]), JSON_THROW_ON_ERROR);
 
-        if ($jsonBody === false) {
-            throw new RuntimeException('Failed to encode JSON');
-        }
-
-        return $request->withBody($this->streamFactory->createStream($jsonBody));
+        return $request->withBody(
+            $this->streamFactory->createStream(
+                $jsonBody
+            )
+        );
     }
 }
