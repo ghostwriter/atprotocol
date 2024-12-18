@@ -8,6 +8,9 @@ use Psr\Http\Message\RequestFactoryInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
+use function array_filter;
+use function http_build_query;
+
 /**
  * Gets post views for a specified list of posts (by AT-URI). This is sometimes referred to as 'hydrating' a 'feed skeleton'.
  *
@@ -17,21 +20,17 @@ final readonly class GetPosts
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
-    ) {
-    }
+    ) {}
 
-    public function __invoke(
-        UriInterface $pdsUri,
-        ?array $uris = null,
-    ): RequestInterface
+    public function __invoke(UriInterface $pdsUri, ?array $uris = null): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
                 $pdsUri->withPath('xrpc/app.bsky.feed.getPosts')
-                    ->withQuery(\http_build_query(\array_filter([
-                    'uris' => $uris,
-                ])))
+                    ->withQuery(http_build_query(array_filter([
+                        'uris' => $uris,
+                    ])))
             );
 
         $headers = [
