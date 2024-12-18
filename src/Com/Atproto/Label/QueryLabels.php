@@ -26,17 +26,18 @@ final readonly class QueryLabels
         ?array $sources = null,
         ?int $limit = null,
         ?string $cursor = null,
-    ): RequestInterface {
+    ): RequestInterface
+    {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
                 $pdsUri->withPath('xrpc/com.atproto.label.queryLabels')
                     ->withQuery(\http_build_query(\array_filter([
-                        'uriPatterns' => $uriPatterns,
-                        'sources' => $sources,
-                        'limit' => $limit,
-                        'cursor' => $cursor,
-                    ])))
+                    'uriPatterns' => $uriPatterns,
+                    'sources' => $sources,
+                    'limit' => $limit,
+                    'cursor' => $cursor,
+                ])))
             );
 
         $headers = [
