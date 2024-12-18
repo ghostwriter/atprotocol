@@ -20,15 +20,18 @@ final readonly class GetStarterPacks
     ) {
     }
 
-    public function __invoke(UriInterface $pdsUri, ?array $uris = null): RequestInterface
+    public function __invoke(
+        UriInterface $pdsUri,
+        ?array $uris = null,
+    ): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
                 $pdsUri->withPath('xrpc/app.bsky.graph.getStarterPacks')
                     ->withQuery(\http_build_query(\array_filter([
-                        'uris' => $uris,
-                    ])))
+                    'uris' => $uris,
+                ])))
             );
 
         $headers = [
