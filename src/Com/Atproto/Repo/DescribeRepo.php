@@ -20,15 +20,18 @@ final readonly class DescribeRepo
     ) {
     }
 
-    public function __invoke(UriInterface $pdsUri, ?string $repo = null): RequestInterface
+    public function __invoke(
+        UriInterface $pdsUri,
+        ?string $repo = null,
+    ): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
                 $pdsUri->withPath('xrpc/com.atproto.repo.describeRepo')
                     ->withQuery(\http_build_query(\array_filter([
-                        'repo' => $repo,
-                    ])))
+                    'repo' => $repo,
+                ])))
             );
 
         $headers = [
