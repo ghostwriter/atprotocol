@@ -11,6 +11,9 @@ use Psr\Http\Message\UriInterface;
 
 use const JSON_THROW_ON_ERROR;
 
+use function array_filter;
+use function json_encode;
+
 /**
  * Initiate a user account password reset via email.
  *
@@ -21,19 +24,12 @@ final readonly class RequestPasswordReset
     public function __construct(
         private RequestFactoryInterface $requestFactory,
         private StreamFactoryInterface $streamFactory,
-    ) {
-    }
+    ) {}
 
-    public function __invoke(
-        UriInterface $pdsUri,
-        ?string $email = null,
-    ): RequestInterface
+    public function __invoke(UriInterface $pdsUri, ?string $email = null): RequestInterface
     {
         $request = $this->requestFactory
-            ->createRequest(
-                'POST',
-                $pdsUri->withPath('xrpc/com.atproto.server.requestPasswordReset')
-            );
+            ->createRequest('POST', $pdsUri->withPath('xrpc/com.atproto.server.requestPasswordReset'));
 
         $headers = [
             'Accept' => 'application/json',
@@ -44,14 +40,10 @@ final readonly class RequestPasswordReset
             $request = $request->withHeader($name, $value);
         }
 
-        $jsonBody = \json_encode(\array_filter([
+        $jsonBody = json_encode(array_filter([
             'email' => $email,
         ]), JSON_THROW_ON_ERROR);
 
-        return $request->withBody(
-            $this->streamFactory->createStream(
-                $jsonBody
-            )
-        );
+        return $request->withBody($this->streamFactory->createStream($jsonBody));
     }
 }
