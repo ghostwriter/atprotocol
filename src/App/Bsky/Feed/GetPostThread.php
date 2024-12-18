@@ -25,16 +25,17 @@ final readonly class GetPostThread
         ?string $uri = null,
         ?int $depth = null,
         ?int $parentHeight = null,
-    ): RequestInterface {
+    ): RequestInterface
+    {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
                 $pdsUri->withPath('xrpc/app.bsky.feed.getPostThread')
                     ->withQuery(\http_build_query(\array_filter([
-                        'uri' => $uri,
-                        'depth' => $depth,
-                        'parentHeight' => $parentHeight,
-                    ])))
+                    'uri' => $uri,
+                    'depth' => $depth,
+                    'parentHeight' => $parentHeight,
+                ])))
             );
 
         $headers = [
