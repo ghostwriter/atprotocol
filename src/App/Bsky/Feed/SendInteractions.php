@@ -8,7 +8,8 @@ use Psr\Http\Message\RequestFactoryInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriInterface;
-use RuntimeException;
+
+use const JSON_THROW_ON_ERROR;
 
 /**
  * Send information about interactions with feed items back to the feed generator that served them.
@@ -23,10 +24,16 @@ final readonly class SendInteractions
     ) {
     }
 
-    public function __invoke(UriInterface $pdsUri, ?array $interactions = null): RequestInterface
+    public function __invoke(
+        UriInterface $pdsUri,
+        ?array $interactions = null,
+    ): RequestInterface
     {
         $request = $this->requestFactory
-            ->createRequest('POST', $pdsUri->withPath('xrpc/app.bsky.feed.sendInteractions'));
+            ->createRequest(
+                'POST',
+                $pdsUri->withPath('xrpc/app.bsky.feed.sendInteractions')
+            );
 
         $headers = [
             'Accept' => 'application/json',
@@ -39,12 +46,12 @@ final readonly class SendInteractions
 
         $jsonBody = \json_encode(\array_filter([
             'interactions' => $interactions,
-        ]));
+        ]), JSON_THROW_ON_ERROR);
 
-        if ($jsonBody === false) {
-            throw new RuntimeException('Failed to encode JSON');
-        }
-
-        return $request->withBody($this->streamFactory->createStream($jsonBody));
+        return $request->withBody(
+            $this->streamFactory->createStream(
+                $jsonBody
+            )
+        );
     }
 }
