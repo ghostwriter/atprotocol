@@ -8,6 +8,9 @@ use Psr\Http\Message\RequestFactoryInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
+use function array_filter;
+use function http_build_query;
+
 /**
  * List moderation events related to a subject.
  *
@@ -17,8 +20,7 @@ final readonly class QueryEvents
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
-    ) {
-    }
+    ) {}
 
     public function __invoke(
         UriInterface $pdsUri,
@@ -40,32 +42,31 @@ final readonly class QueryEvents
         ?array $removedTags = null,
         ?array $reportTypes = null,
         ?string $cursor = null,
-    ): RequestInterface
-    {
+    ): RequestInterface {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
                 $pdsUri->withPath('xrpc/tools.ozone.moderation.queryEvents')
-                    ->withQuery(\http_build_query(\array_filter([
-                    'types' => $types,
-                    'createdBy' => $createdBy,
-                    'sortDirection' => $sortDirection,
-                    'createdAfter' => $createdAfter,
-                    'createdBefore' => $createdBefore,
-                    'subject' => $subject,
-                    'collections' => $collections,
-                    'subjectType' => $subjectType,
-                    'includeAllUserRecords' => $includeAllUserRecords,
-                    'limit' => $limit,
-                    'hasComment' => $hasComment,
-                    'comment' => $comment,
-                    'addedLabels' => $addedLabels,
-                    'removedLabels' => $removedLabels,
-                    'addedTags' => $addedTags,
-                    'removedTags' => $removedTags,
-                    'reportTypes' => $reportTypes,
-                    'cursor' => $cursor,
-                ])))
+                    ->withQuery(http_build_query(array_filter([
+                        'types' => $types,
+                        'createdBy' => $createdBy,
+                        'sortDirection' => $sortDirection,
+                        'createdAfter' => $createdAfter,
+                        'createdBefore' => $createdBefore,
+                        'subject' => $subject,
+                        'collections' => $collections,
+                        'subjectType' => $subjectType,
+                        'includeAllUserRecords' => $includeAllUserRecords,
+                        'limit' => $limit,
+                        'hasComment' => $hasComment,
+                        'comment' => $comment,
+                        'addedLabels' => $addedLabels,
+                        'removedLabels' => $removedLabels,
+                        'addedTags' => $addedTags,
+                        'removedTags' => $removedTags,
+                        'reportTypes' => $reportTypes,
+                        'cursor' => $cursor,
+                    ])))
             );
 
         $headers = [
