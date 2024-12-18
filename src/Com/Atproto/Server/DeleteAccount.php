@@ -8,7 +8,8 @@ use Psr\Http\Message\RequestFactoryInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriInterface;
-use RuntimeException;
+
+use const JSON_THROW_ON_ERROR;
 
 /**
  * Delete an actor's account with a token and password. Can only be called after requesting a deletion token. Requires auth.
@@ -28,9 +29,13 @@ final readonly class DeleteAccount
         ?string $did = null,
         ?string $password = null,
         ?string $token = null,
-    ): RequestInterface {
+    ): RequestInterface
+    {
         $request = $this->requestFactory
-            ->createRequest('POST', $pdsUri->withPath('xrpc/com.atproto.server.deleteAccount'));
+            ->createRequest(
+                'POST',
+                $pdsUri->withPath('xrpc/com.atproto.server.deleteAccount')
+            );
 
         $headers = [
             'Accept' => 'application/json',
@@ -45,12 +50,12 @@ final readonly class DeleteAccount
             'did' => $did,
             'password' => $password,
             'token' => $token,
-        ]));
+        ]), JSON_THROW_ON_ERROR);
 
-        if ($jsonBody === false) {
-            throw new RuntimeException('Failed to encode JSON');
-        }
-
-        return $request->withBody($this->streamFactory->createStream($jsonBody));
+        return $request->withBody(
+            $this->streamFactory->createStream(
+                $jsonBody
+            )
+        );
     }
 }
