@@ -20,16 +20,20 @@ final readonly class GetRecord
     ) {
     }
 
-    public function __invoke(UriInterface $pdsUri, ?string $uri = null, ?string $cid = null): RequestInterface
+    public function __invoke(
+        UriInterface $pdsUri,
+        ?string $uri = null,
+        ?string $cid = null,
+    ): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
                 $pdsUri->withPath('xrpc/tools.ozone.moderation.getRecord')
                     ->withQuery(\http_build_query(\array_filter([
-                        'uri' => $uri,
-                        'cid' => $cid,
-                    ])))
+                    'uri' => $uri,
+                    'cid' => $cid,
+                ])))
             );
 
         $headers = [
