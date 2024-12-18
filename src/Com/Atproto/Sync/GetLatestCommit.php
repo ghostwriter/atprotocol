@@ -20,15 +20,18 @@ final readonly class GetLatestCommit
     ) {
     }
 
-    public function __invoke(UriInterface $pdsUri, ?string $did = null): RequestInterface
+    public function __invoke(
+        UriInterface $pdsUri,
+        ?string $did = null,
+    ): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
                 $pdsUri->withPath('xrpc/com.atproto.sync.getLatestCommit')
                     ->withQuery(\http_build_query(\array_filter([
-                        'did' => $did,
-                    ])))
+                    'did' => $did,
+                ])))
             );
 
         $headers = [
