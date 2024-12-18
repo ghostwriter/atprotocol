@@ -11,8 +11,10 @@ use Psr\Http\Message\UriInterface;
 
 use const JSON_THROW_ON_ERROR;
 
+use function array_filter;
+use function json_encode;
+
 /**
- * UpdateActorAccess
  *
  * @see UpdateActorAccessTest
  */
@@ -21,21 +23,16 @@ final readonly class UpdateActorAccess
     public function __construct(
         private RequestFactoryInterface $requestFactory,
         private StreamFactoryInterface $streamFactory,
-    ) {
-    }
+    ) {}
 
     public function __invoke(
         UriInterface $pdsUri,
         ?string $actor = null,
         ?bool $allowAccess = null,
         ?string $ref = null,
-    ): RequestInterface
-    {
+    ): RequestInterface {
         $request = $this->requestFactory
-            ->createRequest(
-                'POST',
-                $pdsUri->withPath('xrpc/chat.bsky.moderation.updateActorAccess')
-            );
+            ->createRequest('POST', $pdsUri->withPath('xrpc/chat.bsky.moderation.updateActorAccess'));
 
         $headers = [
             'Accept' => 'application/json',
@@ -46,16 +43,12 @@ final readonly class UpdateActorAccess
             $request = $request->withHeader($name, $value);
         }
 
-        $jsonBody = \json_encode(\array_filter([
+        $jsonBody = json_encode(array_filter([
             'actor' => $actor,
             'allowAccess' => $allowAccess,
             'ref' => $ref,
         ]), JSON_THROW_ON_ERROR);
 
-        return $request->withBody(
-            $this->streamFactory->createStream(
-                $jsonBody
-            )
-        );
+        return $request->withBody($this->streamFactory->createStream($jsonBody));
     }
 }
