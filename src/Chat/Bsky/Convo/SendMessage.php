@@ -8,9 +8,11 @@ use Psr\Http\Message\RequestFactoryInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriInterface;
-use RuntimeException;
+
+use const JSON_THROW_ON_ERROR;
 
 /**
+ * SendMessage
  *
  * @see SendMessageTest
  */
@@ -26,9 +28,13 @@ final readonly class SendMessage
         UriInterface $pdsUri,
         ?string $convoId = null,
         ?string $message = null,
-    ): RequestInterface {
+    ): RequestInterface
+    {
         $request = $this->requestFactory
-            ->createRequest('POST', $pdsUri->withPath('xrpc/chat.bsky.convo.sendMessage'));
+            ->createRequest(
+                'POST',
+                $pdsUri->withPath('xrpc/chat.bsky.convo.sendMessage')
+            );
 
         $headers = [
             'Accept' => 'application/json',
@@ -42,12 +48,12 @@ final readonly class SendMessage
         $jsonBody = \json_encode(\array_filter([
             'convoId' => $convoId,
             'message' => $message,
-        ]));
+        ]), JSON_THROW_ON_ERROR);
 
-        if ($jsonBody === false) {
-            throw new RuntimeException('Failed to encode JSON');
-        }
-
-        return $request->withBody($this->streamFactory->createStream($jsonBody));
+        return $request->withBody(
+            $this->streamFactory->createStream(
+                $jsonBody
+            )
+        );
     }
 }
