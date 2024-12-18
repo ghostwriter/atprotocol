@@ -8,6 +8,9 @@ use Psr\Http\Message\RequestFactoryInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
+use function array_filter;
+use function http_build_query;
+
 /**
  * Find posts matching search criteria, returning views of those posts.
  *
@@ -17,8 +20,7 @@ final readonly class SearchPosts
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
-    ) {
-    }
+    ) {}
 
     public function __invoke(
         UriInterface $pdsUri,
@@ -34,26 +36,25 @@ final readonly class SearchPosts
         ?array $tag = null,
         ?int $limit = null,
         ?string $cursor = null,
-    ): RequestInterface
-    {
+    ): RequestInterface {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
                 $pdsUri->withPath('xrpc/app.bsky.feed.searchPosts')
-                    ->withQuery(\http_build_query(\array_filter([
-                    'q' => $q,
-                    'sort' => $sort,
-                    'since' => $since,
-                    'until' => $until,
-                    'mentions' => $mentions,
-                    'author' => $author,
-                    'lang' => $lang,
-                    'domain' => $domain,
-                    'url' => $url,
-                    'tag' => $tag,
-                    'limit' => $limit,
-                    'cursor' => $cursor,
-                ])))
+                    ->withQuery(http_build_query(array_filter([
+                        'q' => $q,
+                        'sort' => $sort,
+                        'since' => $since,
+                        'until' => $until,
+                        'mentions' => $mentions,
+                        'author' => $author,
+                        'lang' => $lang,
+                        'domain' => $domain,
+                        'url' => $url,
+                        'tag' => $tag,
+                        'limit' => $limit,
+                        'cursor' => $cursor,
+                    ])))
             );
 
         $headers = [
