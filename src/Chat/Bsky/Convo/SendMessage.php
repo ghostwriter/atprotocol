@@ -11,8 +11,10 @@ use Psr\Http\Message\UriInterface;
 
 use const JSON_THROW_ON_ERROR;
 
+use function array_filter;
+use function json_encode;
+
 /**
- * SendMessage
  *
  * @see SendMessageTest
  */
@@ -21,20 +23,15 @@ final readonly class SendMessage
     public function __construct(
         private RequestFactoryInterface $requestFactory,
         private StreamFactoryInterface $streamFactory,
-    ) {
-    }
+    ) {}
 
     public function __invoke(
         UriInterface $pdsUri,
         ?string $convoId = null,
         ?string $message = null,
-    ): RequestInterface
-    {
+    ): RequestInterface {
         $request = $this->requestFactory
-            ->createRequest(
-                'POST',
-                $pdsUri->withPath('xrpc/chat.bsky.convo.sendMessage')
-            );
+            ->createRequest('POST', $pdsUri->withPath('xrpc/chat.bsky.convo.sendMessage'));
 
         $headers = [
             'Accept' => 'application/json',
@@ -45,15 +42,11 @@ final readonly class SendMessage
             $request = $request->withHeader($name, $value);
         }
 
-        $jsonBody = \json_encode(\array_filter([
+        $jsonBody = json_encode(array_filter([
             'convoId' => $convoId,
             'message' => $message,
         ]), JSON_THROW_ON_ERROR);
 
-        return $request->withBody(
-            $this->streamFactory->createStream(
-                $jsonBody
-            )
-        );
+        return $request->withBody($this->streamFactory->createStream($jsonBody));
     }
 }
