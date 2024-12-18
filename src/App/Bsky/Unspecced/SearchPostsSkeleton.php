@@ -8,8 +8,11 @@ use Psr\Http\Message\RequestFactoryInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
+use function array_filter;
+use function http_build_query;
+
 /**
- * Backend Posts search, returns only skeleton
+ * Backend Posts search, returns only skeleton.
  *
  * @see SearchPostsSkeletonTest
  */
@@ -17,8 +20,7 @@ final readonly class SearchPostsSkeleton
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
-    ) {
-    }
+    ) {}
 
     public function __invoke(
         UriInterface $pdsUri,
@@ -35,27 +37,26 @@ final readonly class SearchPostsSkeleton
         ?string $viewer = null,
         ?int $limit = null,
         ?string $cursor = null,
-    ): RequestInterface
-    {
+    ): RequestInterface {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
                 $pdsUri->withPath('xrpc/app.bsky.unspecced.searchPostsSkeleton')
-                    ->withQuery(\http_build_query(\array_filter([
-                    'q' => $q,
-                    'sort' => $sort,
-                    'since' => $since,
-                    'until' => $until,
-                    'mentions' => $mentions,
-                    'author' => $author,
-                    'lang' => $lang,
-                    'domain' => $domain,
-                    'url' => $url,
-                    'tag' => $tag,
-                    'viewer' => $viewer,
-                    'limit' => $limit,
-                    'cursor' => $cursor,
-                ])))
+                    ->withQuery(http_build_query(array_filter([
+                        'q' => $q,
+                        'sort' => $sort,
+                        'since' => $since,
+                        'until' => $until,
+                        'mentions' => $mentions,
+                        'author' => $author,
+                        'lang' => $lang,
+                        'domain' => $domain,
+                        'url' => $url,
+                        'tag' => $tag,
+                        'viewer' => $viewer,
+                        'limit' => $limit,
+                        'cursor' => $cursor,
+                    ])))
             );
 
         $headers = [
