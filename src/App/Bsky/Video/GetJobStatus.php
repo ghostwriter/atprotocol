@@ -20,15 +20,18 @@ final readonly class GetJobStatus
     ) {
     }
 
-    public function __invoke(UriInterface $pdsUri, ?string $jobId = null): RequestInterface
+    public function __invoke(
+        UriInterface $pdsUri,
+        ?string $jobId = null,
+    ): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
                 $pdsUri->withPath('xrpc/app.bsky.video.getJobStatus')
                     ->withQuery(\http_build_query(\array_filter([
-                        'jobId' => $jobId,
-                    ])))
+                    'jobId' => $jobId,
+                ])))
             );
 
         $headers = [
