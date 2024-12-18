@@ -25,16 +25,17 @@ final readonly class SearchActors
         ?string $q = null,
         ?int $limit = null,
         ?string $cursor = null,
-    ): RequestInterface {
+    ): RequestInterface
+    {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
                 $pdsUri->withPath('xrpc/app.bsky.actor.searchActors')
                     ->withQuery(\http_build_query(\array_filter([
-                        'q' => $q,
-                        'limit' => $limit,
-                        'cursor' => $cursor,
-                    ])))
+                    'q' => $q,
+                    'limit' => $limit,
+                    'cursor' => $cursor,
+                ])))
             );
 
         $headers = [
