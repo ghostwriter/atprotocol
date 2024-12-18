@@ -11,8 +11,10 @@ use Psr\Http\Message\UriInterface;
 
 use const JSON_THROW_ON_ERROR;
 
+use function array_filter;
+use function json_encode;
+
 /**
- * MuteConvo
  *
  * @see MuteConvoTest
  */
@@ -21,19 +23,12 @@ final readonly class MuteConvo
     public function __construct(
         private RequestFactoryInterface $requestFactory,
         private StreamFactoryInterface $streamFactory,
-    ) {
-    }
+    ) {}
 
-    public function __invoke(
-        UriInterface $pdsUri,
-        ?string $convoId = null,
-    ): RequestInterface
+    public function __invoke(UriInterface $pdsUri, ?string $convoId = null): RequestInterface
     {
         $request = $this->requestFactory
-            ->createRequest(
-                'POST',
-                $pdsUri->withPath('xrpc/chat.bsky.convo.muteConvo')
-            );
+            ->createRequest('POST', $pdsUri->withPath('xrpc/chat.bsky.convo.muteConvo'));
 
         $headers = [
             'Accept' => 'application/json',
@@ -44,14 +39,10 @@ final readonly class MuteConvo
             $request = $request->withHeader($name, $value);
         }
 
-        $jsonBody = \json_encode(\array_filter([
+        $jsonBody = json_encode(array_filter([
             'convoId' => $convoId,
         ]), JSON_THROW_ON_ERROR);
 
-        return $request->withBody(
-            $this->streamFactory->createStream(
-                $jsonBody
-            )
-        );
+        return $request->withBody($this->streamFactory->createStream($jsonBody));
     }
 }
