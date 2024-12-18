@@ -27,18 +27,19 @@ final readonly class ListRecords
         ?int $limit = null,
         ?string $cursor = null,
         ?bool $reverse = null,
-    ): RequestInterface {
+    ): RequestInterface
+    {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
                 $pdsUri->withPath('xrpc/com.atproto.repo.listRecords')
                     ->withQuery(\http_build_query(\array_filter([
-                        'repo' => $repo,
-                        'collection' => $collection,
-                        'limit' => $limit,
-                        'cursor' => $cursor,
-                        'reverse' => $reverse,
-                    ])))
+                    'repo' => $repo,
+                    'collection' => $collection,
+                    'limit' => $limit,
+                    'cursor' => $cursor,
+                    'reverse' => $reverse,
+                ])))
             );
 
         $headers = [
