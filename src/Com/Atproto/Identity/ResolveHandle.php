@@ -20,15 +20,18 @@ final readonly class ResolveHandle
     ) {
     }
 
-    public function __invoke(UriInterface $pdsUri, ?string $handle = null): RequestInterface
+    public function __invoke(
+        UriInterface $pdsUri,
+        ?string $handle = null,
+    ): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
                 $pdsUri->withPath('xrpc/com.atproto.identity.resolveHandle')
                     ->withQuery(\http_build_query(\array_filter([
-                        'handle' => $handle,
-                    ])))
+                    'handle' => $handle,
+                ])))
             );
 
         $headers = [
