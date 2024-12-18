@@ -9,7 +9,7 @@ use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
 /**
- * DEPRECATED - please use com.atproto.sync.getRepo instead.
+ * DEPRECATED - please use com.atproto.sync.getRepo instead
  *
  * @see GetCheckoutTest
  */
@@ -20,15 +20,18 @@ final readonly class GetCheckout
     ) {
     }
 
-    public function __invoke(UriInterface $pdsUri, ?string $did = null): RequestInterface
+    public function __invoke(
+        UriInterface $pdsUri,
+        ?string $did = null,
+    ): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
                 $pdsUri->withPath('xrpc/com.atproto.sync.getCheckout')
                     ->withQuery(\http_build_query(\array_filter([
-                        'did' => $did,
-                    ])))
+                    'did' => $did,
+                ])))
             );
 
         $headers = [
