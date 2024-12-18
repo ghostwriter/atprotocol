@@ -20,15 +20,18 @@ final readonly class FindCorrelation
     ) {
     }
 
-    public function __invoke(UriInterface $pdsUri, ?array $dids = null): RequestInterface
+    public function __invoke(
+        UriInterface $pdsUri,
+        ?array $dids = null,
+    ): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
                 $pdsUri->withPath('xrpc/tools.ozone.signature.findCorrelation')
                     ->withQuery(\http_build_query(\array_filter([
-                        'dids' => $dids,
-                    ])))
+                    'dids' => $dids,
+                ])))
             );
 
         $headers = [
