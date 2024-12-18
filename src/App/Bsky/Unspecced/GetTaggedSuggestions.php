@@ -9,7 +9,7 @@ use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
 /**
- * Get a list of suggestions (feeds and users) tagged with categories.
+ * Get a list of suggestions (feeds and users) tagged with categories
  *
  * @see GetTaggedSuggestionsTest
  */
@@ -20,7 +20,9 @@ final readonly class GetTaggedSuggestions
     ) {
     }
 
-    public function __invoke(UriInterface $pdsUri): RequestInterface
+    public function __invoke(
+        UriInterface $pdsUri,
+    ): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
