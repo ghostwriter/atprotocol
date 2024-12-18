@@ -8,6 +8,9 @@ use Psr\Http\Message\RequestFactoryInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
+use function array_filter;
+use function http_build_query;
+
 /**
  * Resolves a handle (domain name) to a DID.
  *
@@ -17,21 +20,17 @@ final readonly class ResolveHandle
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
-    ) {
-    }
+    ) {}
 
-    public function __invoke(
-        UriInterface $pdsUri,
-        ?string $handle = null,
-    ): RequestInterface
+    public function __invoke(UriInterface $pdsUri, ?string $handle = null): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
                 $pdsUri->withPath('xrpc/com.atproto.identity.resolveHandle')
-                    ->withQuery(\http_build_query(\array_filter([
-                    'handle' => $handle,
-                ])))
+                    ->withQuery(http_build_query(array_filter([
+                        'handle' => $handle,
+                    ])))
             );
 
         $headers = [
