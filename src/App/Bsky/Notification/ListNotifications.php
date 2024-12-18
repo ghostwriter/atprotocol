@@ -22,21 +22,24 @@ final readonly class ListNotifications
 
     public function __invoke(
         UriInterface $pdsUri,
+        ?array $reasons = null,
         ?int $limit = null,
         ?bool $priority = null,
         ?string $cursor = null,
         ?string $seenAt = null,
-    ): RequestInterface {
+    ): RequestInterface
+    {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
                 $pdsUri->withPath('xrpc/app.bsky.notification.listNotifications')
                     ->withQuery(\http_build_query(\array_filter([
-                        'limit' => $limit,
-                        'priority' => $priority,
-                        'cursor' => $cursor,
-                        'seenAt' => $seenAt,
-                    ])))
+                    'reasons' => $reasons,
+                    'limit' => $limit,
+                    'priority' => $priority,
+                    'cursor' => $cursor,
+                    'seenAt' => $seenAt,
+                ])))
             );
 
         $headers = [
