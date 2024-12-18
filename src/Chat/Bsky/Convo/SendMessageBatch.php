@@ -8,9 +8,11 @@ use Psr\Http\Message\RequestFactoryInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriInterface;
-use RuntimeException;
+
+use const JSON_THROW_ON_ERROR;
 
 /**
+ * SendMessageBatch
  *
  * @see SendMessageBatchTest
  */
@@ -22,10 +24,16 @@ final readonly class SendMessageBatch
     ) {
     }
 
-    public function __invoke(UriInterface $pdsUri, ?array $items = null): RequestInterface
+    public function __invoke(
+        UriInterface $pdsUri,
+        ?array $items = null,
+    ): RequestInterface
     {
         $request = $this->requestFactory
-            ->createRequest('POST', $pdsUri->withPath('xrpc/chat.bsky.convo.sendMessageBatch'));
+            ->createRequest(
+                'POST',
+                $pdsUri->withPath('xrpc/chat.bsky.convo.sendMessageBatch')
+            );
 
         $headers = [
             'Accept' => 'application/json',
@@ -38,12 +46,12 @@ final readonly class SendMessageBatch
 
         $jsonBody = \json_encode(\array_filter([
             'items' => $items,
-        ]));
+        ]), JSON_THROW_ON_ERROR);
 
-        if ($jsonBody === false) {
-            throw new RuntimeException('Failed to encode JSON');
-        }
-
-        return $request->withBody($this->streamFactory->createStream($jsonBody));
+        return $request->withBody(
+            $this->streamFactory->createStream(
+                $jsonBody
+            )
+        );
     }
 }
