@@ -24,15 +24,16 @@ final readonly class GetAccountInviteCodes
         UriInterface $pdsUri,
         ?bool $includeUsed = null,
         ?bool $createAvailable = null,
-    ): RequestInterface {
+    ): RequestInterface
+    {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
                 $pdsUri->withPath('xrpc/com.atproto.server.getAccountInviteCodes')
                     ->withQuery(\http_build_query(\array_filter([
-                        'includeUsed' => $includeUsed,
-                        'createAvailable' => $createAvailable,
-                    ])))
+                    'includeUsed' => $includeUsed,
+                    'createAvailable' => $createAvailable,
+                ])))
             );
 
         $headers = [
