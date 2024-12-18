@@ -11,6 +11,9 @@ use Psr\Http\Message\UriInterface;
 
 use const JSON_THROW_ON_ERROR;
 
+use function array_filter;
+use function json_encode;
+
 /**
  * Delete an actor's account with a token and password. Can only be called after requesting a deletion token. Requires auth.
  *
@@ -21,21 +24,16 @@ final readonly class DeleteAccount
     public function __construct(
         private RequestFactoryInterface $requestFactory,
         private StreamFactoryInterface $streamFactory,
-    ) {
-    }
+    ) {}
 
     public function __invoke(
         UriInterface $pdsUri,
         ?string $did = null,
         ?string $password = null,
         ?string $token = null,
-    ): RequestInterface
-    {
+    ): RequestInterface {
         $request = $this->requestFactory
-            ->createRequest(
-                'POST',
-                $pdsUri->withPath('xrpc/com.atproto.server.deleteAccount')
-            );
+            ->createRequest('POST', $pdsUri->withPath('xrpc/com.atproto.server.deleteAccount'));
 
         $headers = [
             'Accept' => 'application/json',
@@ -46,16 +44,12 @@ final readonly class DeleteAccount
             $request = $request->withHeader($name, $value);
         }
 
-        $jsonBody = \json_encode(\array_filter([
+        $jsonBody = json_encode(array_filter([
             'did' => $did,
             'password' => $password,
             'token' => $token,
         ]), JSON_THROW_ON_ERROR);
 
-        return $request->withBody(
-            $this->streamFactory->createStream(
-                $jsonBody
-            )
-        );
+        return $request->withBody($this->streamFactory->createStream($jsonBody));
     }
 }
