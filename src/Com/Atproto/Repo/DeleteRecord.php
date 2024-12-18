@@ -8,7 +8,8 @@ use Psr\Http\Message\RequestFactoryInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriInterface;
-use RuntimeException;
+
+use const JSON_THROW_ON_ERROR;
 
 /**
  * Delete a repository record, or ensure it doesn't exist. Requires auth, implemented by PDS.
@@ -30,9 +31,13 @@ final readonly class DeleteRecord
         ?string $rkey = null,
         ?string $swapRecord = null,
         ?string $swapCommit = null,
-    ): RequestInterface {
+    ): RequestInterface
+    {
         $request = $this->requestFactory
-            ->createRequest('POST', $pdsUri->withPath('xrpc/com.atproto.repo.deleteRecord'));
+            ->createRequest(
+                'POST',
+                $pdsUri->withPath('xrpc/com.atproto.repo.deleteRecord')
+            );
 
         $headers = [
             'Accept' => 'application/json',
@@ -49,12 +54,12 @@ final readonly class DeleteRecord
             'rkey' => $rkey,
             'swapRecord' => $swapRecord,
             'swapCommit' => $swapCommit,
-        ]));
+        ]), JSON_THROW_ON_ERROR);
 
-        if ($jsonBody === false) {
-            throw new RuntimeException('Failed to encode JSON');
-        }
-
-        return $request->withBody($this->streamFactory->createStream($jsonBody));
+        return $request->withBody(
+            $this->streamFactory->createStream(
+                $jsonBody
+            )
+        );
     }
 }
