@@ -9,7 +9,7 @@ use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
 /**
- * List settings with optional filtering.
+ * List settings with optional filtering
  *
  * @see ListOptionsTest
  */
@@ -27,18 +27,19 @@ final readonly class ListOptions
         ?string $scope = null,
         ?string $prefix = null,
         ?array $keys = null,
-    ): RequestInterface {
+    ): RequestInterface
+    {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
                 $pdsUri->withPath('xrpc/tools.ozone.setting.listOptions')
                     ->withQuery(\http_build_query(\array_filter([
-                        'limit' => $limit,
-                        'cursor' => $cursor,
-                        'scope' => $scope,
-                        'prefix' => $prefix,
-                        'keys' => $keys,
-                    ])))
+                    'limit' => $limit,
+                    'cursor' => $cursor,
+                    'scope' => $scope,
+                    'prefix' => $prefix,
+                    'keys' => $keys,
+                ])))
             );
 
         $headers = [
