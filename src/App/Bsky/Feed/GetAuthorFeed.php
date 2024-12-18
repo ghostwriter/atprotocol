@@ -27,18 +27,19 @@ final readonly class GetAuthorFeed
         ?string $cursor = null,
         ?string $filter = null,
         ?bool $includePins = null,
-    ): RequestInterface {
+    ): RequestInterface
+    {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
                 $pdsUri->withPath('xrpc/app.bsky.feed.getAuthorFeed')
                     ->withQuery(\http_build_query(\array_filter([
-                        'actor' => $actor,
-                        'limit' => $limit,
-                        'cursor' => $cursor,
-                        'filter' => $filter,
-                        'includePins' => $includePins,
-                    ])))
+                    'actor' => $actor,
+                    'limit' => $limit,
+                    'cursor' => $cursor,
+                    'filter' => $filter,
+                    'includePins' => $includePins,
+                ])))
             );
 
         $headers = [
