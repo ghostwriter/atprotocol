@@ -11,6 +11,9 @@ use Psr\Http\Message\UriInterface;
 
 use const JSON_THROW_ON_ERROR;
 
+use function array_filter;
+use function json_encode;
+
 /**
  * Create an account. Implemented by PDS.
  *
@@ -21,8 +24,7 @@ final readonly class CreateAccount
     public function __construct(
         private RequestFactoryInterface $requestFactory,
         private StreamFactoryInterface $streamFactory,
-    ) {
-    }
+    ) {}
 
     public function __invoke(
         UriInterface $pdsUri,
@@ -35,13 +37,9 @@ final readonly class CreateAccount
         ?string $password = null,
         ?string $recoveryKey = null,
         ?string $plcOp = null,
-    ): RequestInterface
-    {
+    ): RequestInterface {
         $request = $this->requestFactory
-            ->createRequest(
-                'POST',
-                $pdsUri->withPath('xrpc/com.atproto.server.createAccount')
-            );
+            ->createRequest('POST', $pdsUri->withPath('xrpc/com.atproto.server.createAccount'));
 
         $headers = [
             'Accept' => 'application/json',
@@ -52,7 +50,7 @@ final readonly class CreateAccount
             $request = $request->withHeader($name, $value);
         }
 
-        $jsonBody = \json_encode(\array_filter([
+        $jsonBody = json_encode(array_filter([
             'email' => $email,
             'handle' => $handle,
             'did' => $did,
@@ -64,10 +62,6 @@ final readonly class CreateAccount
             'plcOp' => $plcOp,
         ]), JSON_THROW_ON_ERROR);
 
-        return $request->withBody(
-            $this->streamFactory->createStream(
-                $jsonBody
-            )
-        );
+        return $request->withBody($this->streamFactory->createStream($jsonBody));
     }
 }
