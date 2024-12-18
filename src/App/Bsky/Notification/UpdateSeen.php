@@ -11,6 +11,9 @@ use Psr\Http\Message\UriInterface;
 
 use const JSON_THROW_ON_ERROR;
 
+use function array_filter;
+use function json_encode;
+
 /**
  * Notify server that the requesting account has seen notifications. Requires auth.
  *
@@ -21,19 +24,12 @@ final readonly class UpdateSeen
     public function __construct(
         private RequestFactoryInterface $requestFactory,
         private StreamFactoryInterface $streamFactory,
-    ) {
-    }
+    ) {}
 
-    public function __invoke(
-        UriInterface $pdsUri,
-        ?string $seenAt = null,
-    ): RequestInterface
+    public function __invoke(UriInterface $pdsUri, ?string $seenAt = null): RequestInterface
     {
         $request = $this->requestFactory
-            ->createRequest(
-                'POST',
-                $pdsUri->withPath('xrpc/app.bsky.notification.updateSeen')
-            );
+            ->createRequest('POST', $pdsUri->withPath('xrpc/app.bsky.notification.updateSeen'));
 
         $headers = [
             'Accept' => 'application/json',
@@ -44,14 +40,10 @@ final readonly class UpdateSeen
             $request = $request->withHeader($name, $value);
         }
 
-        $jsonBody = \json_encode(\array_filter([
+        $jsonBody = json_encode(array_filter([
             'seenAt' => $seenAt,
         ]), JSON_THROW_ON_ERROR);
 
-        return $request->withBody(
-            $this->streamFactory->createStream(
-                $jsonBody
-            )
-        );
+        return $request->withBody($this->streamFactory->createStream($jsonBody));
     }
 }
