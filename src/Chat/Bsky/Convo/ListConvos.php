@@ -8,8 +8,10 @@ use Psr\Http\Message\RequestFactoryInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
+use function array_filter;
+use function http_build_query;
+
 /**
- * ListConvos
  *
  * @see ListConvosTest
  */
@@ -17,23 +19,18 @@ final readonly class ListConvos
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
-    ) {
-    }
+    ) {}
 
-    public function __invoke(
-        UriInterface $pdsUri,
-        ?int $limit = null,
-        ?string $cursor = null,
-    ): RequestInterface
+    public function __invoke(UriInterface $pdsUri, ?int $limit = null, ?string $cursor = null): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
                 $pdsUri->withPath('xrpc/chat.bsky.convo.listConvos')
-                    ->withQuery(\http_build_query(\array_filter([
-                    'limit' => $limit,
-                    'cursor' => $cursor,
-                ])))
+                    ->withQuery(http_build_query(array_filter([
+                        'limit' => $limit,
+                        'cursor' => $cursor,
+                    ])))
             );
 
         $headers = [
