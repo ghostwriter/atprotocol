@@ -8,7 +8,8 @@ use Psr\Http\Message\RequestFactoryInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriInterface;
-use RuntimeException;
+
+use const JSON_THROW_ON_ERROR;
 
 /**
  * Register to receive push notifications, via a specified service, for the requesting account. Requires auth.
@@ -29,9 +30,13 @@ final readonly class RegisterPush
         ?string $token = null,
         ?string $platform = null,
         ?string $appId = null,
-    ): RequestInterface {
+    ): RequestInterface
+    {
         $request = $this->requestFactory
-            ->createRequest('POST', $pdsUri->withPath('xrpc/app.bsky.notification.registerPush'));
+            ->createRequest(
+                'POST',
+                $pdsUri->withPath('xrpc/app.bsky.notification.registerPush')
+            );
 
         $headers = [
             'Accept' => 'application/json',
@@ -47,12 +52,12 @@ final readonly class RegisterPush
             'token' => $token,
             'platform' => $platform,
             'appId' => $appId,
-        ]));
+        ]), JSON_THROW_ON_ERROR);
 
-        if ($jsonBody === false) {
-            throw new RuntimeException('Failed to encode JSON');
-        }
-
-        return $request->withBody($this->streamFactory->createStream($jsonBody));
+        return $request->withBody(
+            $this->streamFactory->createStream(
+                $jsonBody
+            )
+        );
     }
 }
