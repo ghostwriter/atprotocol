@@ -8,8 +8,11 @@ use Psr\Http\Message\RequestFactoryInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
+use function array_filter;
+use function http_build_query;
+
 /**
- * List settings with optional filtering
+ * List settings with optional filtering.
  *
  * @see ListOptionsTest
  */
@@ -17,8 +20,7 @@ final readonly class ListOptions
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
-    ) {
-    }
+    ) {}
 
     public function __invoke(
         UriInterface $pdsUri,
@@ -27,19 +29,18 @@ final readonly class ListOptions
         ?string $scope = null,
         ?string $prefix = null,
         ?array $keys = null,
-    ): RequestInterface
-    {
+    ): RequestInterface {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
                 $pdsUri->withPath('xrpc/tools.ozone.setting.listOptions')
-                    ->withQuery(\http_build_query(\array_filter([
-                    'limit' => $limit,
-                    'cursor' => $cursor,
-                    'scope' => $scope,
-                    'prefix' => $prefix,
-                    'keys' => $keys,
-                ])))
+                    ->withQuery(http_build_query(array_filter([
+                        'limit' => $limit,
+                        'cursor' => $cursor,
+                        'scope' => $scope,
+                        'prefix' => $prefix,
+                        'keys' => $keys,
+                    ])))
             );
 
         $headers = [
