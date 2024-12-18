@@ -34,25 +34,26 @@ final readonly class SearchPosts
         ?array $tag = null,
         ?int $limit = null,
         ?string $cursor = null,
-    ): RequestInterface {
+    ): RequestInterface
+    {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
                 $pdsUri->withPath('xrpc/app.bsky.feed.searchPosts')
                     ->withQuery(\http_build_query(\array_filter([
-                        'q' => $q,
-                        'sort' => $sort,
-                        'since' => $since,
-                        'until' => $until,
-                        'mentions' => $mentions,
-                        'author' => $author,
-                        'lang' => $lang,
-                        'domain' => $domain,
-                        'url' => $url,
-                        'tag' => $tag,
-                        'limit' => $limit,
-                        'cursor' => $cursor,
-                    ])))
+                    'q' => $q,
+                    'sort' => $sort,
+                    'since' => $since,
+                    'until' => $until,
+                    'mentions' => $mentions,
+                    'author' => $author,
+                    'lang' => $lang,
+                    'domain' => $domain,
+                    'url' => $url,
+                    'tag' => $tag,
+                    'limit' => $limit,
+                    'cursor' => $cursor,
+                ])))
             );
 
         $headers = [
