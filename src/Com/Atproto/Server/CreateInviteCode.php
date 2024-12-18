@@ -8,7 +8,8 @@ use Psr\Http\Message\RequestFactoryInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriInterface;
-use RuntimeException;
+
+use const JSON_THROW_ON_ERROR;
 
 /**
  * Create an invite code.
@@ -27,9 +28,13 @@ final readonly class CreateInviteCode
         UriInterface $pdsUri,
         ?int $useCount = null,
         ?string $forAccount = null,
-    ): RequestInterface {
+    ): RequestInterface
+    {
         $request = $this->requestFactory
-            ->createRequest('POST', $pdsUri->withPath('xrpc/com.atproto.server.createInviteCode'));
+            ->createRequest(
+                'POST',
+                $pdsUri->withPath('xrpc/com.atproto.server.createInviteCode')
+            );
 
         $headers = [
             'Accept' => 'application/json',
@@ -43,12 +48,12 @@ final readonly class CreateInviteCode
         $jsonBody = \json_encode(\array_filter([
             'useCount' => $useCount,
             'forAccount' => $forAccount,
-        ]));
+        ]), JSON_THROW_ON_ERROR);
 
-        if ($jsonBody === false) {
-            throw new RuntimeException('Failed to encode JSON');
-        }
-
-        return $request->withBody($this->streamFactory->createStream($jsonBody));
+        return $request->withBody(
+            $this->streamFactory->createStream(
+                $jsonBody
+            )
+        );
     }
 }
