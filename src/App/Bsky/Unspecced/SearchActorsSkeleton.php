@@ -27,18 +27,19 @@ final readonly class SearchActorsSkeleton
         ?bool $typeahead = null,
         ?int $limit = null,
         ?string $cursor = null,
-    ): RequestInterface {
+    ): RequestInterface
+    {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
                 $pdsUri->withPath('xrpc/app.bsky.unspecced.searchActorsSkeleton')
                     ->withQuery(\http_build_query(\array_filter([
-                        'q' => $q,
-                        'viewer' => $viewer,
-                        'typeahead' => $typeahead,
-                        'limit' => $limit,
-                        'cursor' => $cursor,
-                    ])))
+                    'q' => $q,
+                    'viewer' => $viewer,
+                    'typeahead' => $typeahead,
+                    'limit' => $limit,
+                    'cursor' => $cursor,
+                ])))
             );
 
         $headers = [
