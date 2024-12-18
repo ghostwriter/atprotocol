@@ -20,7 +20,9 @@ final readonly class DescribeFeedGenerator
     ) {
     }
 
-    public function __invoke(UriInterface $pdsUri): RequestInterface
+    public function __invoke(
+        UriInterface $pdsUri,
+    ): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
