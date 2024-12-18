@@ -25,16 +25,17 @@ final readonly class GetActorFeeds
         ?string $actor = null,
         ?int $limit = null,
         ?string $cursor = null,
-    ): RequestInterface {
+    ): RequestInterface
+    {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
                 $pdsUri->withPath('xrpc/app.bsky.feed.getActorFeeds')
                     ->withQuery(\http_build_query(\array_filter([
-                        'actor' => $actor,
-                        'limit' => $limit,
-                        'cursor' => $cursor,
-                    ])))
+                    'actor' => $actor,
+                    'limit' => $limit,
+                    'cursor' => $cursor,
+                ])))
             );
 
         $headers = [
