@@ -8,7 +8,8 @@ use Psr\Http\Message\RequestFactoryInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriInterface;
-use RuntimeException;
+
+use const JSON_THROW_ON_ERROR;
 
 /**
  * Delete an entire set. Attempting to delete a set that does not exist will result in an error.
@@ -23,10 +24,16 @@ final readonly class DeleteSet
     ) {
     }
 
-    public function __invoke(UriInterface $pdsUri, ?string $name = null): RequestInterface
+    public function __invoke(
+        UriInterface $pdsUri,
+        ?string $name = null,
+    ): RequestInterface
     {
         $request = $this->requestFactory
-            ->createRequest('POST', $pdsUri->withPath('xrpc/tools.ozone.set.deleteSet'));
+            ->createRequest(
+                'POST',
+                $pdsUri->withPath('xrpc/tools.ozone.set.deleteSet')
+            );
 
         $headers = [
             'Accept' => 'application/json',
@@ -39,12 +46,12 @@ final readonly class DeleteSet
 
         $jsonBody = \json_encode(\array_filter([
             'name' => $name,
-        ]));
+        ]), JSON_THROW_ON_ERROR);
 
-        if ($jsonBody === false) {
-            throw new RuntimeException('Failed to encode JSON');
-        }
-
-        return $request->withBody($this->streamFactory->createStream($jsonBody));
+        return $request->withBody(
+            $this->streamFactory->createStream(
+                $jsonBody
+            )
+        );
     }
 }
