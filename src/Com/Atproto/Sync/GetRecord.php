@@ -25,16 +25,17 @@ final readonly class GetRecord
         ?string $did = null,
         ?string $collection = null,
         ?string $rkey = null,
-    ): RequestInterface {
+    ): RequestInterface
+    {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
                 $pdsUri->withPath('xrpc/com.atproto.sync.getRecord')
                     ->withQuery(\http_build_query(\array_filter([
-                        'did' => $did,
-                        'collection' => $collection,
-                        'rkey' => $rkey,
-                    ])))
+                    'did' => $did,
+                    'collection' => $collection,
+                    'rkey' => $rkey,
+                ])))
             );
 
         $headers = [
