@@ -25,16 +25,17 @@ final readonly class SearchAccounts
         ?string $email = null,
         ?string $cursor = null,
         ?int $limit = null,
-    ): RequestInterface {
+    ): RequestInterface
+    {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
                 $pdsUri->withPath('xrpc/com.atproto.admin.searchAccounts')
                     ->withQuery(\http_build_query(\array_filter([
-                        'email' => $email,
-                        'cursor' => $cursor,
-                        'limit' => $limit,
-                    ])))
+                    'email' => $email,
+                    'cursor' => $cursor,
+                    'limit' => $limit,
+                ])))
             );
 
         $headers = [
