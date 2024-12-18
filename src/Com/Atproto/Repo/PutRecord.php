@@ -8,7 +8,8 @@ use Psr\Http\Message\RequestFactoryInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriInterface;
-use RuntimeException;
+
+use const JSON_THROW_ON_ERROR;
 
 /**
  * Write a repository record, creating or updating it as needed. Requires auth, implemented by PDS.
@@ -32,9 +33,13 @@ final readonly class PutRecord
         ?bool $validate = null,
         ?string $swapRecord = null,
         ?string $swapCommit = null,
-    ): RequestInterface {
+    ): RequestInterface
+    {
         $request = $this->requestFactory
-            ->createRequest('POST', $pdsUri->withPath('xrpc/com.atproto.repo.putRecord'));
+            ->createRequest(
+                'POST',
+                $pdsUri->withPath('xrpc/com.atproto.repo.putRecord')
+            );
 
         $headers = [
             'Accept' => 'application/json',
@@ -53,12 +58,12 @@ final readonly class PutRecord
             'record' => $record,
             'swapRecord' => $swapRecord,
             'swapCommit' => $swapCommit,
-        ]));
+        ]), JSON_THROW_ON_ERROR);
 
-        if ($jsonBody === false) {
-            throw new RuntimeException('Failed to encode JSON');
-        }
-
-        return $request->withBody($this->streamFactory->createStream($jsonBody));
+        return $request->withBody(
+            $this->streamFactory->createStream(
+                $jsonBody
+            )
+        );
     }
 }
