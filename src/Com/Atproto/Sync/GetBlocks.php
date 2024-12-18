@@ -20,16 +20,20 @@ final readonly class GetBlocks
     ) {
     }
 
-    public function __invoke(UriInterface $pdsUri, ?string $did = null, ?array $cids = null): RequestInterface
+    public function __invoke(
+        UriInterface $pdsUri,
+        ?string $did = null,
+        ?array $cids = null,
+    ): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
                 $pdsUri->withPath('xrpc/com.atproto.sync.getBlocks')
                     ->withQuery(\http_build_query(\array_filter([
-                        'did' => $did,
-                        'cids' => $cids,
-                    ])))
+                    'did' => $did,
+                    'cids' => $cids,
+                ])))
             );
 
         $headers = [
