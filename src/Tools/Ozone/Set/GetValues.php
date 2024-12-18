@@ -9,7 +9,7 @@ use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
 /**
- * Get a specific set and its values.
+ * Get a specific set and its values
  *
  * @see GetValuesTest
  */
@@ -25,16 +25,17 @@ final readonly class GetValues
         ?string $name = null,
         ?int $limit = null,
         ?string $cursor = null,
-    ): RequestInterface {
+    ): RequestInterface
+    {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
                 $pdsUri->withPath('xrpc/tools.ozone.set.getValues')
                     ->withQuery(\http_build_query(\array_filter([
-                        'name' => $name,
-                        'limit' => $limit,
-                        'cursor' => $cursor,
-                    ])))
+                    'name' => $name,
+                    'limit' => $limit,
+                    'cursor' => $cursor,
+                ])))
             );
 
         $headers = [
