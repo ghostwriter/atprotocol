@@ -8,6 +8,9 @@ use Psr\Http\Message\RequestFactoryInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
+use function array_filter;
+use function http_build_query;
+
 /**
  * Get a list of quotes for a given post.
  *
@@ -17,8 +20,7 @@ final readonly class GetQuotes
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
-    ) {
-    }
+    ) {}
 
     public function __invoke(
         UriInterface $pdsUri,
@@ -26,18 +28,17 @@ final readonly class GetQuotes
         ?string $cid = null,
         ?int $limit = null,
         ?string $cursor = null,
-    ): RequestInterface
-    {
+    ): RequestInterface {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
                 $pdsUri->withPath('xrpc/app.bsky.feed.getQuotes')
-                    ->withQuery(\http_build_query(\array_filter([
-                    'uri' => $uri,
-                    'cid' => $cid,
-                    'limit' => $limit,
-                    'cursor' => $cursor,
-                ])))
+                    ->withQuery(http_build_query(array_filter([
+                        'uri' => $uri,
+                        'cid' => $cid,
+                        'limit' => $limit,
+                        'cursor' => $cursor,
+                    ])))
             );
 
         $headers = [
