@@ -25,16 +25,17 @@ final readonly class GetListFeed
         ?string $list = null,
         ?int $limit = null,
         ?string $cursor = null,
-    ): RequestInterface {
+    ): RequestInterface
+    {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
                 $pdsUri->withPath('xrpc/app.bsky.feed.getListFeed')
                     ->withQuery(\http_build_query(\array_filter([
-                        'list' => $list,
-                        'limit' => $limit,
-                        'cursor' => $cursor,
-                    ])))
+                    'list' => $list,
+                    'limit' => $limit,
+                    'cursor' => $cursor,
+                ])))
             );
 
         $headers = [
