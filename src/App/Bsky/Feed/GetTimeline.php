@@ -25,16 +25,17 @@ final readonly class GetTimeline
         ?string $algorithm = null,
         ?int $limit = null,
         ?string $cursor = null,
-    ): RequestInterface {
+    ): RequestInterface
+    {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
                 $pdsUri->withPath('xrpc/app.bsky.feed.getTimeline')
                     ->withQuery(\http_build_query(\array_filter([
-                        'algorithm' => $algorithm,
-                        'limit' => $limit,
-                        'cursor' => $cursor,
-                    ])))
+                    'algorithm' => $algorithm,
+                    'limit' => $limit,
+                    'cursor' => $cursor,
+                ])))
             );
 
         $headers = [
