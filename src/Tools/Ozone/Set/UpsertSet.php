@@ -11,8 +11,11 @@ use Psr\Http\Message\UriInterface;
 
 use const JSON_THROW_ON_ERROR;
 
+use function array_filter;
+use function json_encode;
+
 /**
- * Create or update set metadata
+ * Create or update set metadata.
  *
  * @see UpsertSetTest
  */
@@ -21,18 +24,12 @@ final readonly class UpsertSet
     public function __construct(
         private RequestFactoryInterface $requestFactory,
         private StreamFactoryInterface $streamFactory,
-    ) {
-    }
+    ) {}
 
-    public function __invoke(
-        UriInterface $pdsUri,
-    ): RequestInterface
+    public function __invoke(UriInterface $pdsUri): RequestInterface
     {
         $request = $this->requestFactory
-            ->createRequest(
-                'POST',
-                $pdsUri->withPath('xrpc/tools.ozone.set.upsertSet')
-            );
+            ->createRequest('POST', $pdsUri->withPath('xrpc/tools.ozone.set.upsertSet'));
 
         $headers = [
             'Accept' => 'application/json',
@@ -43,14 +40,8 @@ final readonly class UpsertSet
             $request = $request->withHeader($name, $value);
         }
 
-        $jsonBody = \json_encode(\array_filter([
-            
-        ]), JSON_THROW_ON_ERROR);
+        $jsonBody = json_encode(array_filter([]), JSON_THROW_ON_ERROR);
 
-        return $request->withBody(
-            $this->streamFactory->createStream(
-                $jsonBody
-            )
-        );
+        return $request->withBody($this->streamFactory->createStream($jsonBody));
     }
 }
