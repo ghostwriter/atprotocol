@@ -8,8 +8,10 @@ use Psr\Http\Message\RequestFactoryInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
+use function array_filter;
+use function http_build_query;
+
 /**
- * GetConvo
  *
  * @see GetConvoTest
  */
@@ -17,21 +19,17 @@ final readonly class GetConvo
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
-    ) {
-    }
+    ) {}
 
-    public function __invoke(
-        UriInterface $pdsUri,
-        ?string $convoId = null,
-    ): RequestInterface
+    public function __invoke(UriInterface $pdsUri, ?string $convoId = null): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
                 $pdsUri->withPath('xrpc/chat.bsky.convo.getConvo')
-                    ->withQuery(\http_build_query(\array_filter([
-                    'convoId' => $convoId,
-                ])))
+                    ->withQuery(http_build_query(array_filter([
+                        'convoId' => $convoId,
+                    ])))
             );
 
         $headers = [
