@@ -11,6 +11,9 @@ use Psr\Http\Message\UriInterface;
 
 use const JSON_THROW_ON_ERROR;
 
+use function array_filter;
+use function json_encode;
+
 /**
  * Take a moderation action on an actor.
  *
@@ -21,8 +24,7 @@ final readonly class EmitEvent
     public function __construct(
         private RequestFactoryInterface $requestFactory,
         private StreamFactoryInterface $streamFactory,
-    ) {
-    }
+    ) {}
 
     public function __invoke(
         UriInterface $pdsUri,
@@ -30,13 +32,9 @@ final readonly class EmitEvent
         ?string $subject = null,
         ?string $createdBy = null,
         ?array $subjectBlobCids = null,
-    ): RequestInterface
-    {
+    ): RequestInterface {
         $request = $this->requestFactory
-            ->createRequest(
-                'POST',
-                $pdsUri->withPath('xrpc/tools.ozone.moderation.emitEvent')
-            );
+            ->createRequest('POST', $pdsUri->withPath('xrpc/tools.ozone.moderation.emitEvent'));
 
         $headers = [
             'Accept' => 'application/json',
@@ -47,17 +45,13 @@ final readonly class EmitEvent
             $request = $request->withHeader($name, $value);
         }
 
-        $jsonBody = \json_encode(\array_filter([
+        $jsonBody = json_encode(array_filter([
             'event' => $event,
             'subject' => $subject,
             'subjectBlobCids' => $subjectBlobCids,
             'createdBy' => $createdBy,
         ]), JSON_THROW_ON_ERROR);
 
-        return $request->withBody(
-            $this->streamFactory->createStream(
-                $jsonBody
-            )
-        );
+        return $request->withBody($this->streamFactory->createStream($jsonBody));
     }
 }
