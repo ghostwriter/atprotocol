@@ -25,16 +25,17 @@ final readonly class GetLists
         ?string $actor = null,
         ?int $limit = null,
         ?string $cursor = null,
-    ): RequestInterface {
+    ): RequestInterface
+    {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
                 $pdsUri->withPath('xrpc/app.bsky.graph.getLists')
                     ->withQuery(\http_build_query(\array_filter([
-                        'actor' => $actor,
-                        'limit' => $limit,
-                        'cursor' => $cursor,
-                    ])))
+                    'actor' => $actor,
+                    'limit' => $limit,
+                    'cursor' => $cursor,
+                ])))
             );
 
         $headers = [
