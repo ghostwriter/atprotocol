@@ -8,6 +8,9 @@ use Psr\Http\Message\RequestFactoryInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
+use function array_filter;
+use function http_build_query;
+
 /**
  * View moderation statuses of subjects (record or repo).
  *
@@ -17,8 +20,7 @@ final readonly class QueryStatuses
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
-    ) {
-    }
+    ) {}
 
     public function __invoke(
         UriInterface $pdsUri,
@@ -49,41 +51,40 @@ final readonly class QueryStatuses
         ?string $cursor = null,
         ?array $collections = null,
         ?string $subjectType = null,
-    ): RequestInterface
-    {
+    ): RequestInterface {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
                 $pdsUri->withPath('xrpc/tools.ozone.moderation.queryStatuses')
-                    ->withQuery(\http_build_query(\array_filter([
-                    'includeAllUserRecords' => $includeAllUserRecords,
-                    'subject' => $subject,
-                    'comment' => $comment,
-                    'reportedAfter' => $reportedAfter,
-                    'reportedBefore' => $reportedBefore,
-                    'reviewedAfter' => $reviewedAfter,
-                    'hostingDeletedAfter' => $hostingDeletedAfter,
-                    'hostingDeletedBefore' => $hostingDeletedBefore,
-                    'hostingUpdatedAfter' => $hostingUpdatedAfter,
-                    'hostingUpdatedBefore' => $hostingUpdatedBefore,
-                    'hostingStatuses' => $hostingStatuses,
-                    'reviewedBefore' => $reviewedBefore,
-                    'includeMuted' => $includeMuted,
-                    'onlyMuted' => $onlyMuted,
-                    'reviewState' => $reviewState,
-                    'ignoreSubjects' => $ignoreSubjects,
-                    'lastReviewedBy' => $lastReviewedBy,
-                    'sortField' => $sortField,
-                    'sortDirection' => $sortDirection,
-                    'takendown' => $takendown,
-                    'appealed' => $appealed,
-                    'limit' => $limit,
-                    'tags' => $tags,
-                    'excludeTags' => $excludeTags,
-                    'cursor' => $cursor,
-                    'collections' => $collections,
-                    'subjectType' => $subjectType,
-                ])))
+                    ->withQuery(http_build_query(array_filter([
+                        'includeAllUserRecords' => $includeAllUserRecords,
+                        'subject' => $subject,
+                        'comment' => $comment,
+                        'reportedAfter' => $reportedAfter,
+                        'reportedBefore' => $reportedBefore,
+                        'reviewedAfter' => $reviewedAfter,
+                        'hostingDeletedAfter' => $hostingDeletedAfter,
+                        'hostingDeletedBefore' => $hostingDeletedBefore,
+                        'hostingUpdatedAfter' => $hostingUpdatedAfter,
+                        'hostingUpdatedBefore' => $hostingUpdatedBefore,
+                        'hostingStatuses' => $hostingStatuses,
+                        'reviewedBefore' => $reviewedBefore,
+                        'includeMuted' => $includeMuted,
+                        'onlyMuted' => $onlyMuted,
+                        'reviewState' => $reviewState,
+                        'ignoreSubjects' => $ignoreSubjects,
+                        'lastReviewedBy' => $lastReviewedBy,
+                        'sortField' => $sortField,
+                        'sortDirection' => $sortDirection,
+                        'takendown' => $takendown,
+                        'appealed' => $appealed,
+                        'limit' => $limit,
+                        'tags' => $tags,
+                        'excludeTags' => $excludeTags,
+                        'cursor' => $cursor,
+                        'collections' => $collections,
+                        'subjectType' => $subjectType,
+                    ])))
             );
 
         $headers = [
