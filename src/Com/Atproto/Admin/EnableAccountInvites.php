@@ -8,7 +8,8 @@ use Psr\Http\Message\RequestFactoryInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriInterface;
-use RuntimeException;
+
+use const JSON_THROW_ON_ERROR;
 
 /**
  * Re-enable an account's ability to receive invite codes.
@@ -27,9 +28,13 @@ final readonly class EnableAccountInvites
         UriInterface $pdsUri,
         ?string $account = null,
         ?string $note = null,
-    ): RequestInterface {
+    ): RequestInterface
+    {
         $request = $this->requestFactory
-            ->createRequest('POST', $pdsUri->withPath('xrpc/com.atproto.admin.enableAccountInvites'));
+            ->createRequest(
+                'POST',
+                $pdsUri->withPath('xrpc/com.atproto.admin.enableAccountInvites')
+            );
 
         $headers = [
             'Accept' => 'application/json',
@@ -43,12 +48,12 @@ final readonly class EnableAccountInvites
         $jsonBody = \json_encode(\array_filter([
             'account' => $account,
             'note' => $note,
-        ]));
+        ]), JSON_THROW_ON_ERROR);
 
-        if ($jsonBody === false) {
-            throw new RuntimeException('Failed to encode JSON');
-        }
-
-        return $request->withBody($this->streamFactory->createStream($jsonBody));
+        return $request->withBody(
+            $this->streamFactory->createStream(
+                $jsonBody
+            )
+        );
     }
 }
