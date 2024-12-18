@@ -11,6 +11,9 @@ use Psr\Http\Message\UriInterface;
 
 use const JSON_THROW_ON_ERROR;
 
+use function array_filter;
+use function json_encode;
+
 /**
  * Delete an entire set. Attempting to delete a set that does not exist will result in an error.
  *
@@ -21,19 +24,12 @@ final readonly class DeleteSet
     public function __construct(
         private RequestFactoryInterface $requestFactory,
         private StreamFactoryInterface $streamFactory,
-    ) {
-    }
+    ) {}
 
-    public function __invoke(
-        UriInterface $pdsUri,
-        ?string $name = null,
-    ): RequestInterface
+    public function __invoke(UriInterface $pdsUri, ?string $name = null): RequestInterface
     {
         $request = $this->requestFactory
-            ->createRequest(
-                'POST',
-                $pdsUri->withPath('xrpc/tools.ozone.set.deleteSet')
-            );
+            ->createRequest('POST', $pdsUri->withPath('xrpc/tools.ozone.set.deleteSet'));
 
         $headers = [
             'Accept' => 'application/json',
@@ -44,14 +40,10 @@ final readonly class DeleteSet
             $request = $request->withHeader($name, $value);
         }
 
-        $jsonBody = \json_encode(\array_filter([
+        $jsonBody = json_encode(array_filter([
             'name' => $name,
         ]), JSON_THROW_ON_ERROR);
 
-        return $request->withBody(
-            $this->streamFactory->createStream(
-                $jsonBody
-            )
-        );
+        return $request->withBody($this->streamFactory->createStream($jsonBody));
     }
 }
