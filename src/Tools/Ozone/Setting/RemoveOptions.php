@@ -8,10 +8,11 @@ use Psr\Http\Message\RequestFactoryInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriInterface;
-use RuntimeException;
+
+use const JSON_THROW_ON_ERROR;
 
 /**
- * Delete settings by key.
+ * Delete settings by key
  *
  * @see RemoveOptionsTest
  */
@@ -23,10 +24,17 @@ final readonly class RemoveOptions
     ) {
     }
 
-    public function __invoke(UriInterface $pdsUri, ?array $keys = null, ?string $scope = null): RequestInterface
+    public function __invoke(
+        UriInterface $pdsUri,
+        ?array $keys = null,
+        ?string $scope = null,
+    ): RequestInterface
     {
         $request = $this->requestFactory
-            ->createRequest('POST', $pdsUri->withPath('xrpc/tools.ozone.setting.removeOptions'));
+            ->createRequest(
+                'POST',
+                $pdsUri->withPath('xrpc/tools.ozone.setting.removeOptions')
+            );
 
         $headers = [
             'Accept' => 'application/json',
@@ -40,12 +48,12 @@ final readonly class RemoveOptions
         $jsonBody = \json_encode(\array_filter([
             'keys' => $keys,
             'scope' => $scope,
-        ]));
+        ]), JSON_THROW_ON_ERROR);
 
-        if ($jsonBody === false) {
-            throw new RuntimeException('Failed to encode JSON');
-        }
-
-        return $request->withBody($this->streamFactory->createStream($jsonBody));
+        return $request->withBody(
+            $this->streamFactory->createStream(
+                $jsonBody
+            )
+        );
     }
 }
