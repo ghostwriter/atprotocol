@@ -25,16 +25,17 @@ final readonly class SearchAccounts
         ?array $values = null,
         ?string $cursor = null,
         ?int $limit = null,
-    ): RequestInterface {
+    ): RequestInterface
+    {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
                 $pdsUri->withPath('xrpc/tools.ozone.signature.searchAccounts')
                     ->withQuery(\http_build_query(\array_filter([
-                        'values' => $values,
-                        'cursor' => $cursor,
-                        'limit' => $limit,
-                    ])))
+                    'values' => $values,
+                    'cursor' => $cursor,
+                    'limit' => $limit,
+                ])))
             );
 
         $headers = [
