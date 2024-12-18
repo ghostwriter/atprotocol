@@ -11,6 +11,9 @@ use Psr\Http\Message\UriInterface;
 
 use const JSON_THROW_ON_ERROR;
 
+use function array_filter;
+use function json_encode;
+
 /**
  * Signs a PLC operation to update some value(s) in the requesting DID's document.
  *
@@ -21,8 +24,7 @@ final readonly class SignPlcOperation
     public function __construct(
         private RequestFactoryInterface $requestFactory,
         private StreamFactoryInterface $streamFactory,
-    ) {
-    }
+    ) {}
 
     public function __invoke(
         UriInterface $pdsUri,
@@ -31,13 +33,9 @@ final readonly class SignPlcOperation
         ?array $alsoKnownAs = null,
         ?string $verificationMethods = null,
         ?string $services = null,
-    ): RequestInterface
-    {
+    ): RequestInterface {
         $request = $this->requestFactory
-            ->createRequest(
-                'POST',
-                $pdsUri->withPath('xrpc/com.atproto.identity.signPlcOperation')
-            );
+            ->createRequest('POST', $pdsUri->withPath('xrpc/com.atproto.identity.signPlcOperation'));
 
         $headers = [
             'Accept' => 'application/json',
@@ -48,7 +46,7 @@ final readonly class SignPlcOperation
             $request = $request->withHeader($name, $value);
         }
 
-        $jsonBody = \json_encode(\array_filter([
+        $jsonBody = json_encode(array_filter([
             'token' => $token,
             'rotationKeys' => $rotationKeys,
             'alsoKnownAs' => $alsoKnownAs,
@@ -56,10 +54,6 @@ final readonly class SignPlcOperation
             'services' => $services,
         ]), JSON_THROW_ON_ERROR);
 
-        return $request->withBody(
-            $this->streamFactory->createStream(
-                $jsonBody
-            )
-        );
+        return $request->withBody($this->streamFactory->createStream($jsonBody));
     }
 }
