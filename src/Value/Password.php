@@ -9,13 +9,15 @@ use Override;
 use SensitiveParameter;
 use Stringable;
 
+use function mb_strlen;
+
 final readonly class Password implements Stringable
 {
     public function __construct(
         #[SensitiveParameter]
         private string $password,
     ) {
-        if (\mb_strlen($this->password) < 3) {
+        if (mb_strlen($this->password) < 3) {
             throw new InvalidArgumentException('Invalid Password length: ' . $this->password);
         }
     }
