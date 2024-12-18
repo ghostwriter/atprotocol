@@ -8,6 +8,9 @@ use Psr\Http\Message\RequestFactoryInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
+use function array_filter;
+use function http_build_query;
+
 /**
  * Get details about ozone's server configuration.
  *
@@ -17,18 +20,15 @@ final readonly class GetConfig
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
-    ) {
-    }
+    ) {}
 
-    public function __invoke(
-        UriInterface $pdsUri,
-    ): RequestInterface
+    public function __invoke(UriInterface $pdsUri): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
                 $pdsUri->withPath('xrpc/tools.ozone.server.getConfig')
-                    ->withQuery(\http_build_query(\array_filter([])))
+                    ->withQuery(http_build_query(array_filter([])))
             );
 
         $headers = [
