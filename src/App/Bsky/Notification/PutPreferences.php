@@ -8,7 +8,8 @@ use Psr\Http\Message\RequestFactoryInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriInterface;
-use RuntimeException;
+
+use const JSON_THROW_ON_ERROR;
 
 /**
  * Set notification-related preferences for an account. Requires auth.
@@ -23,10 +24,16 @@ final readonly class PutPreferences
     ) {
     }
 
-    public function __invoke(UriInterface $pdsUri, ?bool $priority = null): RequestInterface
+    public function __invoke(
+        UriInterface $pdsUri,
+        ?bool $priority = null,
+    ): RequestInterface
     {
         $request = $this->requestFactory
-            ->createRequest('POST', $pdsUri->withPath('xrpc/app.bsky.notification.putPreferences'));
+            ->createRequest(
+                'POST',
+                $pdsUri->withPath('xrpc/app.bsky.notification.putPreferences')
+            );
 
         $headers = [
             'Accept' => 'application/json',
@@ -39,12 +46,12 @@ final readonly class PutPreferences
 
         $jsonBody = \json_encode(\array_filter([
             'priority' => $priority,
-        ]));
+        ]), JSON_THROW_ON_ERROR);
 
-        if ($jsonBody === false) {
-            throw new RuntimeException('Failed to encode JSON');
-        }
-
-        return $request->withBody($this->streamFactory->createStream($jsonBody));
+        return $request->withBody(
+            $this->streamFactory->createStream(
+                $jsonBody
+            )
+        );
     }
 }
