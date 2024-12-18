@@ -37,12 +37,7 @@
     </PossiblyUnusedMethod>
   </file>
   <file src="src/App/Bsky/Actor/PutPreferences.php">
-    <DocblockTypeContradiction>
-      <code><![CDATA[$jsonBody === false]]></code>
-      <code><![CDATA[$jsonBody === false]]></code>
-    </DocblockTypeContradiction>
     <MissingThrowsDocblock>
-      <code><![CDATA[throw new RuntimeException('Failed to encode JSON');]]></code>
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
@@ -222,12 +217,7 @@
     </PossiblyUnusedMethod>
   </file>
   <file src="src/App/Bsky/Feed/SendInteractions.php">
-    <DocblockTypeContradiction>
-      <code><![CDATA[$jsonBody === false]]></code>
-      <code><![CDATA[$jsonBody === false]]></code>
-    </DocblockTypeContradiction>
     <MissingThrowsDocblock>
-      <code><![CDATA[throw new RuntimeException('Failed to encode JSON');]]></code>
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
@@ -362,12 +352,7 @@
     </PossiblyUnusedMethod>
   </file>
   <file src="src/App/Bsky/Graph/MuteActor.php">
-    <DocblockTypeContradiction>
-      <code><![CDATA[$jsonBody === false]]></code>
-      <code><![CDATA[$jsonBody === false]]></code>
-    </DocblockTypeContradiction>
     <MissingThrowsDocblock>
-      <code><![CDATA[throw new RuntimeException('Failed to encode JSON');]]></code>
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
@@ -376,12 +361,7 @@
     </PossiblyUnusedMethod>
   </file>
   <file src="src/App/Bsky/Graph/MuteActorList.php">
-    <DocblockTypeContradiction>
-      <code><![CDATA[$jsonBody === false]]></code>
-      <code><![CDATA[$jsonBody === false]]></code>
-    </DocblockTypeContradiction>
     <MissingThrowsDocblock>
-      <code><![CDATA[throw new RuntimeException('Failed to encode JSON');]]></code>
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
@@ -390,12 +370,7 @@
     </PossiblyUnusedMethod>
   </file>
   <file src="src/App/Bsky/Graph/MuteThread.php">
-    <DocblockTypeContradiction>
-      <code><![CDATA[$jsonBody === false]]></code>
-      <code><![CDATA[$jsonBody === false]]></code>
-    </DocblockTypeContradiction>
     <MissingThrowsDocblock>
-      <code><![CDATA[throw new RuntimeException('Failed to encode JSON');]]></code>
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
@@ -403,13 +378,17 @@
       <code><![CDATA[__construct]]></code>
     </PossiblyUnusedMethod>
   </file>
-  <file src="src/App/Bsky/Graph/UnmuteActor.php">
-    <DocblockTypeContradiction>
-      <code><![CDATA[$jsonBody === false]]></code>
-      <code><![CDATA[$jsonBody === false]]></code>
-    </DocblockTypeContradiction>
+  <file src="src/App/Bsky/Graph/SearchStarterPacks.php">
     <MissingThrowsDocblock>
-      <code><![CDATA[throw new RuntimeException('Failed to encode JSON');]]></code>
+      <code><![CDATA[withPath]]></code>
+      <code><![CDATA[withQuery]]></code>
+    </MissingThrowsDocblock>
+    <UnusedClass>
+      <code><![CDATA[SearchStarterPacks]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/App/Bsky/Graph/UnmuteActor.php">
+    <MissingThrowsDocblock>
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
@@ -418,12 +397,7 @@
     </PossiblyUnusedMethod>
   </file>
   <file src="src/App/Bsky/Graph/UnmuteActorList.php">
-    <DocblockTypeContradiction>
-      <code><![CDATA[$jsonBody === false]]></code>
-      <code><![CDATA[$jsonBody === false]]></code>
-    </DocblockTypeContradiction>
     <MissingThrowsDocblock>
-      <code><![CDATA[throw new RuntimeException('Failed to encode JSON');]]></code>
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
@@ -432,12 +406,7 @@
     </PossiblyUnusedMethod>
   </file>
   <file src="src/App/Bsky/Graph/UnmuteThread.php">
-    <DocblockTypeContradiction>
-      <code><![CDATA[$jsonBody === false]]></code>
-      <code><![CDATA[$jsonBody === false]]></code>
-    </DocblockTypeContradiction>
     <MissingThrowsDocblock>
-      <code><![CDATA[throw new RuntimeException('Failed to encode JSON');]]></code>
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
@@ -474,7 +443,6 @@
   </file>
   <file src="src/App/Bsky/Notification/PutPreferences.php">
     <MissingThrowsDocblock>
-      <code><![CDATA[throw new RuntimeException('Failed to encode JSON');]]></code>
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
@@ -483,12 +451,7 @@
     </PossiblyUnusedMethod>
   </file>
   <file src="src/App/Bsky/Notification/RegisterPush.php">
-    <DocblockTypeContradiction>
-      <code><![CDATA[$jsonBody === false]]></code>
-      <code><![CDATA[$jsonBody === false]]></code>
-    </DocblockTypeContradiction>
     <MissingThrowsDocblock>
-      <code><![CDATA[throw new RuntimeException('Failed to encode JSON');]]></code>
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
@@ -497,18 +460,22 @@
     </PossiblyUnusedMethod>
   </file>
   <file src="src/App/Bsky/Notification/UpdateSeen.php">
-    <DocblockTypeContradiction>
-      <code><![CDATA[$jsonBody === false]]></code>
-      <code><![CDATA[$jsonBody === false]]></code>
-    </DocblockTypeContradiction>
     <MissingThrowsDocblock>
-      <code><![CDATA[throw new RuntimeException('Failed to encode JSON');]]></code>
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
     <PossiblyUnusedMethod>
       <code><![CDATA[__construct]]></code>
     </PossiblyUnusedMethod>
+  </file>
+  <file src="src/App/Bsky/Unspecced/GetConfig.php">
+    <MissingThrowsDocblock>
+      <code><![CDATA[withPath]]></code>
+      <code><![CDATA[withQuery]]></code>
+    </MissingThrowsDocblock>
+    <UnusedClass>
+      <code><![CDATA[GetConfig]]></code>
+    </UnusedClass>
   </file>
   <file src="src/App/Bsky/Unspecced/GetPopularFeedGenerators.php">
     <MissingThrowsDocblock>
@@ -537,6 +504,15 @@
       <code><![CDATA[__construct]]></code>
     </PossiblyUnusedMethod>
   </file>
+  <file src="src/App/Bsky/Unspecced/GetTrendingTopics.php">
+    <MissingThrowsDocblock>
+      <code><![CDATA[withPath]]></code>
+      <code><![CDATA[withQuery]]></code>
+    </MissingThrowsDocblock>
+    <UnusedClass>
+      <code><![CDATA[GetTrendingTopics]]></code>
+    </UnusedClass>
+  </file>
   <file src="src/App/Bsky/Unspecced/SearchActorsSkeleton.php">
     <MissingThrowsDocblock>
       <code><![CDATA[withPath]]></code>
@@ -554,6 +530,15 @@
     <PossiblyUnusedMethod>
       <code><![CDATA[__construct]]></code>
     </PossiblyUnusedMethod>
+  </file>
+  <file src="src/App/Bsky/Unspecced/SearchStarterPacksSkeleton.php">
+    <MissingThrowsDocblock>
+      <code><![CDATA[withPath]]></code>
+      <code><![CDATA[withQuery]]></code>
+    </MissingThrowsDocblock>
+    <UnusedClass>
+      <code><![CDATA[SearchStarterPacksSkeleton]]></code>
+    </UnusedClass>
   </file>
   <file src="src/App/Bsky/Video/GetJobStatus.php">
     <MissingThrowsDocblock>
@@ -575,7 +560,6 @@
   </file>
   <file src="src/App/Bsky/Video/UploadVideo.php">
     <MissingThrowsDocblock>
-      <code><![CDATA[throw new RuntimeException('Failed to encode JSON');]]></code>
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
@@ -584,32 +568,16 @@
     </PossiblyUnusedMethod>
   </file>
   <file src="src/AtProtocol.php">
-    <InvalidArgument>
-      <code><![CDATA[\json_encode([
-                'content' => $content,
-                'attachments' => $attachments,
-            ], JSON_THROW_ON_ERROR) ?: '']]></code>
-    </InvalidArgument>
-    <MissingPropertyType>
-      <code><![CDATA[$createSession]]></code>
-    </MissingPropertyType>
-    <MissingThrowsDocblock>
-      <code><![CDATA[sendRequest]]></code>
-    </MissingThrowsDocblock>
-    <MixedArgument>
-      <code><![CDATA[($this->createSession)($username, $password)]]></code>
-    </MixedArgument>
-    <MixedFunctionCall>
-      <code><![CDATA[($this->createSession)($username, $password)]]></code>
-    </MixedFunctionCall>
     <PossiblyUnusedMethod>
       <code><![CDATA[createSession]]></code>
       <code><![CDATA[updateStatus]]></code>
     </PossiblyUnusedMethod>
+    <PropertyNotSetInConstructor>
+      <code><![CDATA[$createSession]]></code>
+    </PropertyNotSetInConstructor>
   </file>
   <file src="src/Chat/Bsky/Actor/DeleteAccount.php">
     <MissingThrowsDocblock>
-      <code><![CDATA[throw new RuntimeException('Failed to encode JSON');]]></code>
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
@@ -627,12 +595,7 @@
     </PossiblyUnusedMethod>
   </file>
   <file src="src/Chat/Bsky/Convo/DeleteMessageForSelf.php">
-    <DocblockTypeContradiction>
-      <code><![CDATA[$jsonBody === false]]></code>
-      <code><![CDATA[$jsonBody === false]]></code>
-    </DocblockTypeContradiction>
     <MissingThrowsDocblock>
-      <code><![CDATA[throw new RuntimeException('Failed to encode JSON');]]></code>
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
@@ -677,12 +640,7 @@
     </PossiblyUnusedMethod>
   </file>
   <file src="src/Chat/Bsky/Convo/LeaveConvo.php">
-    <DocblockTypeContradiction>
-      <code><![CDATA[$jsonBody === false]]></code>
-      <code><![CDATA[$jsonBody === false]]></code>
-    </DocblockTypeContradiction>
     <MissingThrowsDocblock>
-      <code><![CDATA[throw new RuntimeException('Failed to encode JSON');]]></code>
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
@@ -700,12 +658,7 @@
     </PossiblyUnusedMethod>
   </file>
   <file src="src/Chat/Bsky/Convo/MuteConvo.php">
-    <DocblockTypeContradiction>
-      <code><![CDATA[$jsonBody === false]]></code>
-      <code><![CDATA[$jsonBody === false]]></code>
-    </DocblockTypeContradiction>
     <MissingThrowsDocblock>
-      <code><![CDATA[throw new RuntimeException('Failed to encode JSON');]]></code>
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
@@ -714,12 +667,7 @@
     </PossiblyUnusedMethod>
   </file>
   <file src="src/Chat/Bsky/Convo/SendMessage.php">
-    <DocblockTypeContradiction>
-      <code><![CDATA[$jsonBody === false]]></code>
-      <code><![CDATA[$jsonBody === false]]></code>
-    </DocblockTypeContradiction>
     <MissingThrowsDocblock>
-      <code><![CDATA[throw new RuntimeException('Failed to encode JSON');]]></code>
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
@@ -728,12 +676,7 @@
     </PossiblyUnusedMethod>
   </file>
   <file src="src/Chat/Bsky/Convo/SendMessageBatch.php">
-    <DocblockTypeContradiction>
-      <code><![CDATA[$jsonBody === false]]></code>
-      <code><![CDATA[$jsonBody === false]]></code>
-    </DocblockTypeContradiction>
     <MissingThrowsDocblock>
-      <code><![CDATA[throw new RuntimeException('Failed to encode JSON');]]></code>
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
@@ -742,12 +685,7 @@
     </PossiblyUnusedMethod>
   </file>
   <file src="src/Chat/Bsky/Convo/UnmuteConvo.php">
-    <DocblockTypeContradiction>
-      <code><![CDATA[$jsonBody === false]]></code>
-      <code><![CDATA[$jsonBody === false]]></code>
-    </DocblockTypeContradiction>
     <MissingThrowsDocblock>
-      <code><![CDATA[throw new RuntimeException('Failed to encode JSON');]]></code>
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
@@ -756,12 +694,7 @@
     </PossiblyUnusedMethod>
   </file>
   <file src="src/Chat/Bsky/Convo/UpdateRead.php">
-    <DocblockTypeContradiction>
-      <code><![CDATA[$jsonBody === false]]></code>
-      <code><![CDATA[$jsonBody === false]]></code>
-    </DocblockTypeContradiction>
     <MissingThrowsDocblock>
-      <code><![CDATA[throw new RuntimeException('Failed to encode JSON');]]></code>
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
@@ -788,12 +721,7 @@
     </PossiblyUnusedMethod>
   </file>
   <file src="src/Chat/Bsky/Moderation/UpdateActorAccess.php">
-    <DocblockTypeContradiction>
-      <code><![CDATA[$jsonBody === false]]></code>
-      <code><![CDATA[$jsonBody === false]]></code>
-    </DocblockTypeContradiction>
     <MissingThrowsDocblock>
-      <code><![CDATA[throw new RuntimeException('Failed to encode JSON');]]></code>
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
@@ -802,12 +730,7 @@
     </PossiblyUnusedMethod>
   </file>
   <file src="src/Com/Atproto/Admin/DeleteAccount.php">
-    <DocblockTypeContradiction>
-      <code><![CDATA[$jsonBody === false]]></code>
-      <code><![CDATA[$jsonBody === false]]></code>
-    </DocblockTypeContradiction>
     <MissingThrowsDocblock>
-      <code><![CDATA[throw new RuntimeException('Failed to encode JSON');]]></code>
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
@@ -816,12 +739,7 @@
     </PossiblyUnusedMethod>
   </file>
   <file src="src/Com/Atproto/Admin/DisableAccountInvites.php">
-    <DocblockTypeContradiction>
-      <code><![CDATA[$jsonBody === false]]></code>
-      <code><![CDATA[$jsonBody === false]]></code>
-    </DocblockTypeContradiction>
     <MissingThrowsDocblock>
-      <code><![CDATA[throw new RuntimeException('Failed to encode JSON');]]></code>
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
@@ -830,12 +748,7 @@
     </PossiblyUnusedMethod>
   </file>
   <file src="src/Com/Atproto/Admin/DisableInviteCodes.php">
-    <DocblockTypeContradiction>
-      <code><![CDATA[$jsonBody === false]]></code>
-      <code><![CDATA[$jsonBody === false]]></code>
-    </DocblockTypeContradiction>
     <MissingThrowsDocblock>
-      <code><![CDATA[throw new RuntimeException('Failed to encode JSON');]]></code>
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
@@ -844,12 +757,7 @@
     </PossiblyUnusedMethod>
   </file>
   <file src="src/Com/Atproto/Admin/EnableAccountInvites.php">
-    <DocblockTypeContradiction>
-      <code><![CDATA[$jsonBody === false]]></code>
-      <code><![CDATA[$jsonBody === false]]></code>
-    </DocblockTypeContradiction>
     <MissingThrowsDocblock>
-      <code><![CDATA[throw new RuntimeException('Failed to encode JSON');]]></code>
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
@@ -903,12 +811,7 @@
     </PossiblyUnusedMethod>
   </file>
   <file src="src/Com/Atproto/Admin/SendEmail.php">
-    <DocblockTypeContradiction>
-      <code><![CDATA[$jsonBody === false]]></code>
-      <code><![CDATA[$jsonBody === false]]></code>
-    </DocblockTypeContradiction>
     <MissingThrowsDocblock>
-      <code><![CDATA[throw new RuntimeException('Failed to encode JSON');]]></code>
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
@@ -917,12 +820,7 @@
     </PossiblyUnusedMethod>
   </file>
   <file src="src/Com/Atproto/Admin/UpdateAccountEmail.php">
-    <DocblockTypeContradiction>
-      <code><![CDATA[$jsonBody === false]]></code>
-      <code><![CDATA[$jsonBody === false]]></code>
-    </DocblockTypeContradiction>
     <MissingThrowsDocblock>
-      <code><![CDATA[throw new RuntimeException('Failed to encode JSON');]]></code>
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
@@ -931,12 +829,7 @@
     </PossiblyUnusedMethod>
   </file>
   <file src="src/Com/Atproto/Admin/UpdateAccountHandle.php">
-    <DocblockTypeContradiction>
-      <code><![CDATA[$jsonBody === false]]></code>
-      <code><![CDATA[$jsonBody === false]]></code>
-    </DocblockTypeContradiction>
     <MissingThrowsDocblock>
-      <code><![CDATA[throw new RuntimeException('Failed to encode JSON');]]></code>
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
@@ -945,12 +838,7 @@
     </PossiblyUnusedMethod>
   </file>
   <file src="src/Com/Atproto/Admin/UpdateAccountPassword.php">
-    <DocblockTypeContradiction>
-      <code><![CDATA[$jsonBody === false]]></code>
-      <code><![CDATA[$jsonBody === false]]></code>
-    </DocblockTypeContradiction>
     <MissingThrowsDocblock>
-      <code><![CDATA[throw new RuntimeException('Failed to encode JSON');]]></code>
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
@@ -959,12 +847,7 @@
     </PossiblyUnusedMethod>
   </file>
   <file src="src/Com/Atproto/Admin/UpdateSubjectStatus.php">
-    <DocblockTypeContradiction>
-      <code><![CDATA[$jsonBody === false]]></code>
-      <code><![CDATA[$jsonBody === false]]></code>
-    </DocblockTypeContradiction>
     <MissingThrowsDocblock>
-      <code><![CDATA[throw new RuntimeException('Failed to encode JSON');]]></code>
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
@@ -983,7 +866,6 @@
   </file>
   <file src="src/Com/Atproto/Identity/RequestPlcOperationSignature.php">
     <MissingThrowsDocblock>
-      <code><![CDATA[throw new RuntimeException('Failed to encode JSON');]]></code>
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
@@ -1001,12 +883,7 @@
     </PossiblyUnusedMethod>
   </file>
   <file src="src/Com/Atproto/Identity/SignPlcOperation.php">
-    <DocblockTypeContradiction>
-      <code><![CDATA[$jsonBody === false]]></code>
-      <code><![CDATA[$jsonBody === false]]></code>
-    </DocblockTypeContradiction>
     <MissingThrowsDocblock>
-      <code><![CDATA[throw new RuntimeException('Failed to encode JSON');]]></code>
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
@@ -1015,12 +892,7 @@
     </PossiblyUnusedMethod>
   </file>
   <file src="src/Com/Atproto/Identity/SubmitPlcOperation.php">
-    <DocblockTypeContradiction>
-      <code><![CDATA[$jsonBody === false]]></code>
-      <code><![CDATA[$jsonBody === false]]></code>
-    </DocblockTypeContradiction>
     <MissingThrowsDocblock>
-      <code><![CDATA[throw new RuntimeException('Failed to encode JSON');]]></code>
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
@@ -1029,12 +901,7 @@
     </PossiblyUnusedMethod>
   </file>
   <file src="src/Com/Atproto/Identity/UpdateHandle.php">
-    <DocblockTypeContradiction>
-      <code><![CDATA[$jsonBody === false]]></code>
-      <code><![CDATA[$jsonBody === false]]></code>
-    </DocblockTypeContradiction>
     <MissingThrowsDocblock>
-      <code><![CDATA[throw new RuntimeException('Failed to encode JSON');]]></code>
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
@@ -1052,12 +919,7 @@
     </PossiblyUnusedMethod>
   </file>
   <file src="src/Com/Atproto/Moderation/CreateReport.php">
-    <DocblockTypeContradiction>
-      <code><![CDATA[$jsonBody === false]]></code>
-      <code><![CDATA[$jsonBody === false]]></code>
-    </DocblockTypeContradiction>
     <MissingThrowsDocblock>
-      <code><![CDATA[throw new RuntimeException('Failed to encode JSON');]]></code>
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
@@ -1066,12 +928,7 @@
     </PossiblyUnusedMethod>
   </file>
   <file src="src/Com/Atproto/Repo/ApplyWrites.php">
-    <DocblockTypeContradiction>
-      <code><![CDATA[$jsonBody === false]]></code>
-      <code><![CDATA[$jsonBody === false]]></code>
-    </DocblockTypeContradiction>
     <MissingThrowsDocblock>
-      <code><![CDATA[throw new RuntimeException('Failed to encode JSON');]]></code>
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
@@ -1080,12 +937,7 @@
     </PossiblyUnusedMethod>
   </file>
   <file src="src/Com/Atproto/Repo/CreateRecord.php">
-    <DocblockTypeContradiction>
-      <code><![CDATA[$jsonBody === false]]></code>
-      <code><![CDATA[$jsonBody === false]]></code>
-    </DocblockTypeContradiction>
     <MissingThrowsDocblock>
-      <code><![CDATA[throw new RuntimeException('Failed to encode JSON');]]></code>
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
@@ -1094,12 +946,7 @@
     </PossiblyUnusedMethod>
   </file>
   <file src="src/Com/Atproto/Repo/DeleteRecord.php">
-    <DocblockTypeContradiction>
-      <code><![CDATA[$jsonBody === false]]></code>
-      <code><![CDATA[$jsonBody === false]]></code>
-    </DocblockTypeContradiction>
     <MissingThrowsDocblock>
-      <code><![CDATA[throw new RuntimeException('Failed to encode JSON');]]></code>
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
@@ -1127,7 +974,6 @@
   </file>
   <file src="src/Com/Atproto/Repo/ImportRepo.php">
     <MissingThrowsDocblock>
-      <code><![CDATA[throw new RuntimeException('Failed to encode JSON');]]></code>
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
@@ -1154,12 +1000,7 @@
     </PossiblyUnusedMethod>
   </file>
   <file src="src/Com/Atproto/Repo/PutRecord.php">
-    <DocblockTypeContradiction>
-      <code><![CDATA[$jsonBody === false]]></code>
-      <code><![CDATA[$jsonBody === false]]></code>
-    </DocblockTypeContradiction>
     <MissingThrowsDocblock>
-      <code><![CDATA[throw new RuntimeException('Failed to encode JSON');]]></code>
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
@@ -1169,7 +1010,6 @@
   </file>
   <file src="src/Com/Atproto/Repo/UploadBlob.php">
     <MissingThrowsDocblock>
-      <code><![CDATA[throw new RuntimeException('Failed to encode JSON');]]></code>
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
@@ -1179,7 +1019,6 @@
   </file>
   <file src="src/Com/Atproto/Server/ActivateAccount.php">
     <MissingThrowsDocblock>
-      <code><![CDATA[throw new RuntimeException('Failed to encode JSON');]]></code>
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
@@ -1197,12 +1036,7 @@
     </PossiblyUnusedMethod>
   </file>
   <file src="src/Com/Atproto/Server/ConfirmEmail.php">
-    <DocblockTypeContradiction>
-      <code><![CDATA[$jsonBody === false]]></code>
-      <code><![CDATA[$jsonBody === false]]></code>
-    </DocblockTypeContradiction>
     <MissingThrowsDocblock>
-      <code><![CDATA[throw new RuntimeException('Failed to encode JSON');]]></code>
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
@@ -1211,12 +1045,7 @@
     </PossiblyUnusedMethod>
   </file>
   <file src="src/Com/Atproto/Server/CreateAccount.php">
-    <DocblockTypeContradiction>
-      <code><![CDATA[$jsonBody === false]]></code>
-      <code><![CDATA[$jsonBody === false]]></code>
-    </DocblockTypeContradiction>
     <MissingThrowsDocblock>
-      <code><![CDATA[throw new RuntimeException('Failed to encode JSON');]]></code>
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
@@ -1225,12 +1054,7 @@
     </PossiblyUnusedMethod>
   </file>
   <file src="src/Com/Atproto/Server/CreateAppPassword.php">
-    <DocblockTypeContradiction>
-      <code><![CDATA[$jsonBody === false]]></code>
-      <code><![CDATA[$jsonBody === false]]></code>
-    </DocblockTypeContradiction>
     <MissingThrowsDocblock>
-      <code><![CDATA[throw new RuntimeException('Failed to encode JSON');]]></code>
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
@@ -1242,12 +1066,7 @@
     </UnusedParam>
   </file>
   <file src="src/Com/Atproto/Server/CreateInviteCode.php">
-    <DocblockTypeContradiction>
-      <code><![CDATA[$jsonBody === false]]></code>
-      <code><![CDATA[$jsonBody === false]]></code>
-    </DocblockTypeContradiction>
     <MissingThrowsDocblock>
-      <code><![CDATA[throw new RuntimeException('Failed to encode JSON');]]></code>
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
@@ -1256,12 +1075,7 @@
     </PossiblyUnusedMethod>
   </file>
   <file src="src/Com/Atproto/Server/CreateInviteCodes.php">
-    <DocblockTypeContradiction>
-      <code><![CDATA[$jsonBody === false]]></code>
-      <code><![CDATA[$jsonBody === false]]></code>
-    </DocblockTypeContradiction>
     <MissingThrowsDocblock>
-      <code><![CDATA[throw new RuntimeException('Failed to encode JSON');]]></code>
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
@@ -1270,12 +1084,7 @@
     </PossiblyUnusedMethod>
   </file>
   <file src="src/Com/Atproto/Server/CreateSession.php">
-    <DocblockTypeContradiction>
-      <code><![CDATA[$jsonBody === false]]></code>
-      <code><![CDATA[$jsonBody === false]]></code>
-    </DocblockTypeContradiction>
     <MissingThrowsDocblock>
-      <code><![CDATA[throw new RuntimeException('Failed to encode JSON');]]></code>
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
@@ -1284,12 +1093,7 @@
     </PossiblyUnusedMethod>
   </file>
   <file src="src/Com/Atproto/Server/DeactivateAccount.php">
-    <DocblockTypeContradiction>
-      <code><![CDATA[$jsonBody === false]]></code>
-      <code><![CDATA[$jsonBody === false]]></code>
-    </DocblockTypeContradiction>
     <MissingThrowsDocblock>
-      <code><![CDATA[throw new RuntimeException('Failed to encode JSON');]]></code>
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
@@ -1298,12 +1102,7 @@
     </PossiblyUnusedMethod>
   </file>
   <file src="src/Com/Atproto/Server/DeleteAccount.php">
-    <DocblockTypeContradiction>
-      <code><![CDATA[$jsonBody === false]]></code>
-      <code><![CDATA[$jsonBody === false]]></code>
-    </DocblockTypeContradiction>
     <MissingThrowsDocblock>
-      <code><![CDATA[throw new RuntimeException('Failed to encode JSON');]]></code>
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
@@ -1313,7 +1112,6 @@
   </file>
   <file src="src/Com/Atproto/Server/DeleteSession.php">
     <MissingThrowsDocblock>
-      <code><![CDATA[throw new RuntimeException('Failed to encode JSON');]]></code>
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
@@ -1368,7 +1166,6 @@
   </file>
   <file src="src/Com/Atproto/Server/RefreshSession.php">
     <MissingThrowsDocblock>
-      <code><![CDATA[throw new RuntimeException('Failed to encode JSON');]]></code>
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
@@ -1378,7 +1175,6 @@
   </file>
   <file src="src/Com/Atproto/Server/RequestAccountDelete.php">
     <MissingThrowsDocblock>
-      <code><![CDATA[throw new RuntimeException('Failed to encode JSON');]]></code>
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
@@ -1388,7 +1184,6 @@
   </file>
   <file src="src/Com/Atproto/Server/RequestEmailConfirmation.php">
     <MissingThrowsDocblock>
-      <code><![CDATA[throw new RuntimeException('Failed to encode JSON');]]></code>
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
@@ -1398,7 +1193,6 @@
   </file>
   <file src="src/Com/Atproto/Server/RequestEmailUpdate.php">
     <MissingThrowsDocblock>
-      <code><![CDATA[throw new RuntimeException('Failed to encode JSON');]]></code>
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
@@ -1407,12 +1201,7 @@
     </PossiblyUnusedMethod>
   </file>
   <file src="src/Com/Atproto/Server/RequestPasswordReset.php">
-    <DocblockTypeContradiction>
-      <code><![CDATA[$jsonBody === false]]></code>
-      <code><![CDATA[$jsonBody === false]]></code>
-    </DocblockTypeContradiction>
     <MissingThrowsDocblock>
-      <code><![CDATA[throw new RuntimeException('Failed to encode JSON');]]></code>
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
@@ -1421,12 +1210,7 @@
     </PossiblyUnusedMethod>
   </file>
   <file src="src/Com/Atproto/Server/ReserveSigningKey.php">
-    <DocblockTypeContradiction>
-      <code><![CDATA[$jsonBody === false]]></code>
-      <code><![CDATA[$jsonBody === false]]></code>
-    </DocblockTypeContradiction>
     <MissingThrowsDocblock>
-      <code><![CDATA[throw new RuntimeException('Failed to encode JSON');]]></code>
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
@@ -1435,12 +1219,7 @@
     </PossiblyUnusedMethod>
   </file>
   <file src="src/Com/Atproto/Server/ResetPassword.php">
-    <DocblockTypeContradiction>
-      <code><![CDATA[$jsonBody === false]]></code>
-      <code><![CDATA[$jsonBody === false]]></code>
-    </DocblockTypeContradiction>
     <MissingThrowsDocblock>
-      <code><![CDATA[throw new RuntimeException('Failed to encode JSON');]]></code>
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
@@ -1449,12 +1228,7 @@
     </PossiblyUnusedMethod>
   </file>
   <file src="src/Com/Atproto/Server/RevokeAppPassword.php">
-    <DocblockTypeContradiction>
-      <code><![CDATA[$jsonBody === false]]></code>
-      <code><![CDATA[$jsonBody === false]]></code>
-    </DocblockTypeContradiction>
     <MissingThrowsDocblock>
-      <code><![CDATA[throw new RuntimeException('Failed to encode JSON');]]></code>
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
@@ -1466,12 +1240,7 @@
     </UnusedParam>
   </file>
   <file src="src/Com/Atproto/Server/UpdateEmail.php">
-    <DocblockTypeContradiction>
-      <code><![CDATA[$jsonBody === false]]></code>
-      <code><![CDATA[$jsonBody === false]]></code>
-    </DocblockTypeContradiction>
     <MissingThrowsDocblock>
-      <code><![CDATA[throw new RuntimeException('Failed to encode JSON');]]></code>
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
@@ -1570,12 +1339,7 @@
     </PossiblyUnusedMethod>
   </file>
   <file src="src/Com/Atproto/Sync/NotifyOfUpdate.php">
-    <DocblockTypeContradiction>
-      <code><![CDATA[$jsonBody === false]]></code>
-      <code><![CDATA[$jsonBody === false]]></code>
-    </DocblockTypeContradiction>
     <MissingThrowsDocblock>
-      <code><![CDATA[throw new RuntimeException('Failed to encode JSON');]]></code>
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
@@ -1584,18 +1348,22 @@
     </PossiblyUnusedMethod>
   </file>
   <file src="src/Com/Atproto/Sync/RequestCrawl.php">
-    <DocblockTypeContradiction>
-      <code><![CDATA[$jsonBody === false]]></code>
-      <code><![CDATA[$jsonBody === false]]></code>
-    </DocblockTypeContradiction>
     <MissingThrowsDocblock>
-      <code><![CDATA[throw new RuntimeException('Failed to encode JSON');]]></code>
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
     <PossiblyUnusedMethod>
       <code><![CDATA[__construct]]></code>
     </PossiblyUnusedMethod>
+  </file>
+  <file src="src/Com/Atproto/Temp/AddReservedHandle.php">
+    <MissingThrowsDocblock>
+      <code><![CDATA[withBody]]></code>
+      <code><![CDATA[withPath]]></code>
+    </MissingThrowsDocblock>
+    <UnusedClass>
+      <code><![CDATA[AddReservedHandle]]></code>
+    </UnusedClass>
   </file>
   <file src="src/Com/Atproto/Temp/CheckSignupQueue.php">
     <MissingThrowsDocblock>
@@ -1616,12 +1384,7 @@
     </PossiblyUnusedMethod>
   </file>
   <file src="src/Com/Atproto/Temp/RequestPhoneVerification.php">
-    <DocblockTypeContradiction>
-      <code><![CDATA[$jsonBody === false]]></code>
-      <code><![CDATA[$jsonBody === false]]></code>
-    </DocblockTypeContradiction>
     <MissingThrowsDocblock>
-      <code><![CDATA[throw new RuntimeException('Failed to encode JSON');]]></code>
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
@@ -1656,12 +1419,7 @@
     </UnusedProperty>
   </file>
   <file src="src/Tools/Ozone/Communication/CreateTemplate.php">
-    <DocblockTypeContradiction>
-      <code><![CDATA[$jsonBody === false]]></code>
-      <code><![CDATA[$jsonBody === false]]></code>
-    </DocblockTypeContradiction>
     <MissingThrowsDocblock>
-      <code><![CDATA[throw new RuntimeException('Failed to encode JSON');]]></code>
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
@@ -1673,12 +1431,7 @@
     </UnusedParam>
   </file>
   <file src="src/Tools/Ozone/Communication/DeleteTemplate.php">
-    <DocblockTypeContradiction>
-      <code><![CDATA[$jsonBody === false]]></code>
-      <code><![CDATA[$jsonBody === false]]></code>
-    </DocblockTypeContradiction>
     <MissingThrowsDocblock>
-      <code><![CDATA[throw new RuntimeException('Failed to encode JSON');]]></code>
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
@@ -1696,12 +1449,7 @@
     </PossiblyUnusedMethod>
   </file>
   <file src="src/Tools/Ozone/Communication/UpdateTemplate.php">
-    <DocblockTypeContradiction>
-      <code><![CDATA[$jsonBody === false]]></code>
-      <code><![CDATA[$jsonBody === false]]></code>
-    </DocblockTypeContradiction>
     <MissingThrowsDocblock>
-      <code><![CDATA[throw new RuntimeException('Failed to encode JSON');]]></code>
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
@@ -1713,12 +1461,7 @@
     </UnusedParam>
   </file>
   <file src="src/Tools/Ozone/Moderation/EmitEvent.php">
-    <DocblockTypeContradiction>
-      <code><![CDATA[$jsonBody === false]]></code>
-      <code><![CDATA[$jsonBody === false]]></code>
-    </DocblockTypeContradiction>
     <MissingThrowsDocblock>
-      <code><![CDATA[throw new RuntimeException('Failed to encode JSON');]]></code>
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
@@ -1744,6 +1487,15 @@
       <code><![CDATA[__construct]]></code>
     </PossiblyUnusedMethod>
   </file>
+  <file src="src/Tools/Ozone/Moderation/GetRecords.php">
+    <MissingThrowsDocblock>
+      <code><![CDATA[withPath]]></code>
+      <code><![CDATA[withQuery]]></code>
+    </MissingThrowsDocblock>
+    <UnusedClass>
+      <code><![CDATA[GetRecords]]></code>
+    </UnusedClass>
+  </file>
   <file src="src/Tools/Ozone/Moderation/GetRepo.php">
     <MissingThrowsDocblock>
       <code><![CDATA[withPath]]></code>
@@ -1752,6 +1504,15 @@
     <PossiblyUnusedMethod>
       <code><![CDATA[__construct]]></code>
     </PossiblyUnusedMethod>
+  </file>
+  <file src="src/Tools/Ozone/Moderation/GetRepos.php">
+    <MissingThrowsDocblock>
+      <code><![CDATA[withPath]]></code>
+      <code><![CDATA[withQuery]]></code>
+    </MissingThrowsDocblock>
+    <UnusedClass>
+      <code><![CDATA[GetRepos]]></code>
+    </UnusedClass>
   </file>
   <file src="src/Tools/Ozone/Moderation/QueryEvents.php">
     <MissingThrowsDocblock>
@@ -1789,13 +1550,128 @@
       <code><![CDATA[__construct]]></code>
     </PossiblyUnusedMethod>
   </file>
-  <file src="src/Tools/Ozone/Team/AddMember.php">
-    <DocblockTypeContradiction>
-      <code><![CDATA[$jsonBody === false]]></code>
-      <code><![CDATA[$jsonBody === false]]></code>
-    </DocblockTypeContradiction>
+  <file src="src/Tools/Ozone/Set/AddValues.php">
     <MissingThrowsDocblock>
-      <code><![CDATA[throw new RuntimeException('Failed to encode JSON');]]></code>
+      <code><![CDATA[withBody]]></code>
+      <code><![CDATA[withPath]]></code>
+    </MissingThrowsDocblock>
+    <UnusedClass>
+      <code><![CDATA[AddValues]]></code>
+    </UnusedClass>
+    <UnusedParam>
+      <code><![CDATA[$name]]></code>
+    </UnusedParam>
+  </file>
+  <file src="src/Tools/Ozone/Set/DeleteSet.php">
+    <MissingThrowsDocblock>
+      <code><![CDATA[withBody]]></code>
+      <code><![CDATA[withPath]]></code>
+    </MissingThrowsDocblock>
+    <UnusedClass>
+      <code><![CDATA[DeleteSet]]></code>
+    </UnusedClass>
+    <UnusedParam>
+      <code><![CDATA[$name]]></code>
+    </UnusedParam>
+  </file>
+  <file src="src/Tools/Ozone/Set/DeleteValues.php">
+    <MissingThrowsDocblock>
+      <code><![CDATA[withBody]]></code>
+      <code><![CDATA[withPath]]></code>
+    </MissingThrowsDocblock>
+    <UnusedClass>
+      <code><![CDATA[DeleteValues]]></code>
+    </UnusedClass>
+    <UnusedParam>
+      <code><![CDATA[$name]]></code>
+    </UnusedParam>
+  </file>
+  <file src="src/Tools/Ozone/Set/GetValues.php">
+    <MissingThrowsDocblock>
+      <code><![CDATA[withPath]]></code>
+      <code><![CDATA[withQuery]]></code>
+    </MissingThrowsDocblock>
+    <UnusedClass>
+      <code><![CDATA[GetValues]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/Tools/Ozone/Set/QuerySets.php">
+    <MissingThrowsDocblock>
+      <code><![CDATA[withPath]]></code>
+      <code><![CDATA[withQuery]]></code>
+    </MissingThrowsDocblock>
+    <UnusedClass>
+      <code><![CDATA[QuerySets]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/Tools/Ozone/Set/UpsertSet.php">
+    <MissingThrowsDocblock>
+      <code><![CDATA[withBody]]></code>
+      <code><![CDATA[withPath]]></code>
+    </MissingThrowsDocblock>
+    <UnusedClass>
+      <code><![CDATA[UpsertSet]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/Tools/Ozone/Setting/ListOptions.php">
+    <MissingThrowsDocblock>
+      <code><![CDATA[withPath]]></code>
+      <code><![CDATA[withQuery]]></code>
+    </MissingThrowsDocblock>
+    <UnusedClass>
+      <code><![CDATA[ListOptions]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/Tools/Ozone/Setting/RemoveOptions.php">
+    <MissingThrowsDocblock>
+      <code><![CDATA[withBody]]></code>
+      <code><![CDATA[withPath]]></code>
+    </MissingThrowsDocblock>
+    <UnusedClass>
+      <code><![CDATA[RemoveOptions]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/Tools/Ozone/Setting/UpsertOption.php">
+    <MissingThrowsDocblock>
+      <code><![CDATA[withBody]]></code>
+      <code><![CDATA[withPath]]></code>
+    </MissingThrowsDocblock>
+    <UnusedClass>
+      <code><![CDATA[UpsertOption]]></code>
+    </UnusedClass>
+    <UnusedParam>
+      <code><![CDATA[$value]]></code>
+    </UnusedParam>
+  </file>
+  <file src="src/Tools/Ozone/Signature/FindCorrelation.php">
+    <MissingThrowsDocblock>
+      <code><![CDATA[withPath]]></code>
+      <code><![CDATA[withQuery]]></code>
+    </MissingThrowsDocblock>
+    <UnusedClass>
+      <code><![CDATA[FindCorrelation]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/Tools/Ozone/Signature/FindRelatedAccounts.php">
+    <MissingThrowsDocblock>
+      <code><![CDATA[withPath]]></code>
+      <code><![CDATA[withQuery]]></code>
+    </MissingThrowsDocblock>
+    <UnusedClass>
+      <code><![CDATA[FindRelatedAccounts]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/Tools/Ozone/Signature/SearchAccounts.php">
+    <MissingThrowsDocblock>
+      <code><![CDATA[withPath]]></code>
+      <code><![CDATA[withQuery]]></code>
+    </MissingThrowsDocblock>
+    <UnusedClass>
+      <code><![CDATA[SearchAccounts]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/Tools/Ozone/Team/AddMember.php">
+    <MissingThrowsDocblock>
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
@@ -1804,12 +1680,7 @@
     </PossiblyUnusedMethod>
   </file>
   <file src="src/Tools/Ozone/Team/DeleteMember.php">
-    <DocblockTypeContradiction>
-      <code><![CDATA[$jsonBody === false]]></code>
-      <code><![CDATA[$jsonBody === false]]></code>
-    </DocblockTypeContradiction>
     <MissingThrowsDocblock>
-      <code><![CDATA[throw new RuntimeException('Failed to encode JSON');]]></code>
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
@@ -1827,12 +1698,7 @@
     </PossiblyUnusedMethod>
   </file>
   <file src="src/Tools/Ozone/Team/UpdateMember.php">
-    <DocblockTypeContradiction>
-      <code><![CDATA[$jsonBody === false]]></code>
-      <code><![CDATA[$jsonBody === false]]></code>
-    </DocblockTypeContradiction>
     <MissingThrowsDocblock>
-      <code><![CDATA[throw new RuntimeException('Failed to encode JSON');]]></code>
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
@@ -1843,11 +1709,9 @@
   <file src="src/Trait/HttpTrait.php">
     <MissingThrowsDocblock>
       <code><![CDATA[new Client()]]></code>
+      <code><![CDATA[self::defaultHeaders()]]></code>
       <code><![CDATA[sendRequest]]></code>
-      <code><![CDATA[sendRequest]]></code>
-      <code><![CDATA[sendRequest]]></code>
-      <code><![CDATA[sendRequest]]></code>
-      <code><![CDATA[sendRequest]]></code>
+      <code><![CDATA[throw new ShouldNotHappenException('curl version not found');]]></code>
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
       <code><![CDATA[withQuery]]></code>
@@ -1855,8 +1719,11 @@
     <MixedArgumentTypeCoercion>
       <code><![CDATA[$value]]></code>
     </MixedArgumentTypeCoercion>
+    <MixedInferredReturnType>
+      <code><![CDATA[string]]></code>
+    </MixedInferredReturnType>
     <PossiblyNullArgument>
-      <code><![CDATA[InstalledVersions::getPrettyVersion('ghostwriter/atprotocol')]]></code>
+      <code><![CDATA[InstalledVersions::getPrettyVersion(self::GHOSTWRITER_ATPROTOCOL)]]></code>
     </PossiblyNullArgument>
     <PossiblyUnusedMethod>
       <code><![CDATA[delete]]></code>
