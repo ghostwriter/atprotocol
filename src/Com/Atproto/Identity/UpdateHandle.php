@@ -8,7 +8,8 @@ use Psr\Http\Message\RequestFactoryInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriInterface;
-use RuntimeException;
+
+use const JSON_THROW_ON_ERROR;
 
 /**
  * Updates the current account's handle. Verifies handle validity, and updates did:plc document if necessary. Implemented by PDS, and requires auth.
@@ -23,10 +24,16 @@ final readonly class UpdateHandle
     ) {
     }
 
-    public function __invoke(UriInterface $pdsUri, ?string $handle = null): RequestInterface
+    public function __invoke(
+        UriInterface $pdsUri,
+        ?string $handle = null,
+    ): RequestInterface
     {
         $request = $this->requestFactory
-            ->createRequest('POST', $pdsUri->withPath('xrpc/com.atproto.identity.updateHandle'));
+            ->createRequest(
+                'POST',
+                $pdsUri->withPath('xrpc/com.atproto.identity.updateHandle')
+            );
 
         $headers = [
             'Accept' => 'application/json',
@@ -39,12 +46,12 @@ final readonly class UpdateHandle
 
         $jsonBody = \json_encode(\array_filter([
             'handle' => $handle,
-        ]));
+        ]), JSON_THROW_ON_ERROR);
 
-        if ($jsonBody === false) {
-            throw new RuntimeException('Failed to encode JSON');
-        }
-
-        return $request->withBody($this->streamFactory->createStream($jsonBody));
+        return $request->withBody(
+            $this->streamFactory->createStream(
+                $jsonBody
+            )
+        );
     }
 }
