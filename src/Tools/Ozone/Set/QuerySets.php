@@ -8,8 +8,11 @@ use Psr\Http\Message\RequestFactoryInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
+use function array_filter;
+use function http_build_query;
+
 /**
- * Query available sets
+ * Query available sets.
  *
  * @see QuerySetsTest
  */
@@ -17,8 +20,7 @@ final readonly class QuerySets
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
-    ) {
-    }
+    ) {}
 
     public function __invoke(
         UriInterface $pdsUri,
@@ -27,19 +29,18 @@ final readonly class QuerySets
         ?string $namePrefix = null,
         ?string $sortBy = null,
         ?string $sortDirection = null,
-    ): RequestInterface
-    {
+    ): RequestInterface {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
                 $pdsUri->withPath('xrpc/tools.ozone.set.querySets')
-                    ->withQuery(\http_build_query(\array_filter([
-                    'limit' => $limit,
-                    'cursor' => $cursor,
-                    'namePrefix' => $namePrefix,
-                    'sortBy' => $sortBy,
-                    'sortDirection' => $sortDirection,
-                ])))
+                    ->withQuery(http_build_query(array_filter([
+                        'limit' => $limit,
+                        'cursor' => $cursor,
+                        'namePrefix' => $namePrefix,
+                        'sortBy' => $sortBy,
+                        'sortDirection' => $sortDirection,
+                    ])))
             );
 
         $headers = [
