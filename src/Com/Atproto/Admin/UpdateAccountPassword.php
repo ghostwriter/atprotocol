@@ -11,6 +11,9 @@ use Psr\Http\Message\UriInterface;
 
 use const JSON_THROW_ON_ERROR;
 
+use function array_filter;
+use function json_encode;
+
 /**
  * Update the password for a user account as an administrator.
  *
@@ -21,20 +24,15 @@ final readonly class UpdateAccountPassword
     public function __construct(
         private RequestFactoryInterface $requestFactory,
         private StreamFactoryInterface $streamFactory,
-    ) {
-    }
+    ) {}
 
     public function __invoke(
         UriInterface $pdsUri,
         ?string $did = null,
         ?string $password = null,
-    ): RequestInterface
-    {
+    ): RequestInterface {
         $request = $this->requestFactory
-            ->createRequest(
-                'POST',
-                $pdsUri->withPath('xrpc/com.atproto.admin.updateAccountPassword')
-            );
+            ->createRequest('POST', $pdsUri->withPath('xrpc/com.atproto.admin.updateAccountPassword'));
 
         $headers = [
             'Accept' => 'application/json',
@@ -45,15 +43,11 @@ final readonly class UpdateAccountPassword
             $request = $request->withHeader($name, $value);
         }
 
-        $jsonBody = \json_encode(\array_filter([
+        $jsonBody = json_encode(array_filter([
             'did' => $did,
             'password' => $password,
         ]), JSON_THROW_ON_ERROR);
 
-        return $request->withBody(
-            $this->streamFactory->createStream(
-                $jsonBody
-            )
-        );
+        return $request->withBody($this->streamFactory->createStream($jsonBody));
     }
 }
