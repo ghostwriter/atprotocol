@@ -11,6 +11,9 @@ use Psr\Http\Message\UriInterface;
 
 use const JSON_THROW_ON_ERROR;
 
+use function array_filter;
+use function json_encode;
+
 /**
  * Delete a repository record, or ensure it doesn't exist. Requires auth, implemented by PDS.
  *
@@ -21,8 +24,7 @@ final readonly class DeleteRecord
     public function __construct(
         private RequestFactoryInterface $requestFactory,
         private StreamFactoryInterface $streamFactory,
-    ) {
-    }
+    ) {}
 
     public function __invoke(
         UriInterface $pdsUri,
@@ -31,13 +33,9 @@ final readonly class DeleteRecord
         ?string $rkey = null,
         ?string $swapRecord = null,
         ?string $swapCommit = null,
-    ): RequestInterface
-    {
+    ): RequestInterface {
         $request = $this->requestFactory
-            ->createRequest(
-                'POST',
-                $pdsUri->withPath('xrpc/com.atproto.repo.deleteRecord')
-            );
+            ->createRequest('POST', $pdsUri->withPath('xrpc/com.atproto.repo.deleteRecord'));
 
         $headers = [
             'Accept' => 'application/json',
@@ -48,7 +46,7 @@ final readonly class DeleteRecord
             $request = $request->withHeader($name, $value);
         }
 
-        $jsonBody = \json_encode(\array_filter([
+        $jsonBody = json_encode(array_filter([
             'repo' => $repo,
             'collection' => $collection,
             'rkey' => $rkey,
@@ -56,10 +54,6 @@ final readonly class DeleteRecord
             'swapCommit' => $swapCommit,
         ]), JSON_THROW_ON_ERROR);
 
-        return $request->withBody(
-            $this->streamFactory->createStream(
-                $jsonBody
-            )
-        );
+        return $request->withBody($this->streamFactory->createStream($jsonBody));
     }
 }
