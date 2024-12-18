@@ -8,7 +8,8 @@ use Psr\Http\Message\RequestFactoryInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriInterface;
-use RuntimeException;
+
+use const JSON_THROW_ON_ERROR;
 
 /**
  * Unmutes the specified thread. Requires auth.
@@ -23,10 +24,16 @@ final readonly class UnmuteThread
     ) {
     }
 
-    public function __invoke(UriInterface $pdsUri, ?string $root = null): RequestInterface
+    public function __invoke(
+        UriInterface $pdsUri,
+        ?string $root = null,
+    ): RequestInterface
     {
         $request = $this->requestFactory
-            ->createRequest('POST', $pdsUri->withPath('xrpc/app.bsky.graph.unmuteThread'));
+            ->createRequest(
+                'POST',
+                $pdsUri->withPath('xrpc/app.bsky.graph.unmuteThread')
+            );
 
         $headers = [
             'Accept' => 'application/json',
@@ -39,12 +46,12 @@ final readonly class UnmuteThread
 
         $jsonBody = \json_encode(\array_filter([
             'root' => $root,
-        ]));
+        ]), JSON_THROW_ON_ERROR);
 
-        if ($jsonBody === false) {
-            throw new RuntimeException('Failed to encode JSON');
-        }
-
-        return $request->withBody($this->streamFactory->createStream($jsonBody));
+        return $request->withBody(
+            $this->streamFactory->createStream(
+                $jsonBody
+            )
+        );
     }
 }
