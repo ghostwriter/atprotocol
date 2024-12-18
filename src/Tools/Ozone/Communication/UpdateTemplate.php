@@ -8,7 +8,8 @@ use Psr\Http\Message\RequestFactoryInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriInterface;
-use RuntimeException;
+
+use const JSON_THROW_ON_ERROR;
 
 /**
  * Administrative action to update an existing communication template. Allows passing partial fields to patch specific fields only.
@@ -32,9 +33,13 @@ final readonly class UpdateTemplate
         ?string $subject = null,
         ?string $updatedBy = null,
         ?bool $disabled = null,
-    ): RequestInterface {
+    ): RequestInterface
+    {
         $request = $this->requestFactory
-            ->createRequest('POST', $pdsUri->withPath('xrpc/tools.ozone.communication.updateTemplate'));
+            ->createRequest(
+                'POST',
+                $pdsUri->withPath('xrpc/tools.ozone.communication.updateTemplate')
+            );
 
         $headers = [
             'Accept' => 'application/json',
@@ -53,12 +58,12 @@ final readonly class UpdateTemplate
             'subject' => $subject,
             'updatedBy' => $updatedBy,
             'disabled' => $disabled,
-        ]));
+        ]), JSON_THROW_ON_ERROR);
 
-        if ($jsonBody === false) {
-            throw new RuntimeException('Failed to encode JSON');
-        }
-
-        return $request->withBody($this->streamFactory->createStream($jsonBody));
+        return $request->withBody(
+            $this->streamFactory->createStream(
+                $jsonBody
+            )
+        );
     }
 }
