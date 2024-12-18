@@ -8,7 +8,8 @@ use Psr\Http\Message\RequestFactoryInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriInterface;
-use RuntimeException;
+
+use const JSON_THROW_ON_ERROR;
 
 /**
  * Notify server that the requesting account has seen notifications. Requires auth.
@@ -23,10 +24,16 @@ final readonly class UpdateSeen
     ) {
     }
 
-    public function __invoke(UriInterface $pdsUri, ?string $seenAt = null): RequestInterface
+    public function __invoke(
+        UriInterface $pdsUri,
+        ?string $seenAt = null,
+    ): RequestInterface
     {
         $request = $this->requestFactory
-            ->createRequest('POST', $pdsUri->withPath('xrpc/app.bsky.notification.updateSeen'));
+            ->createRequest(
+                'POST',
+                $pdsUri->withPath('xrpc/app.bsky.notification.updateSeen')
+            );
 
         $headers = [
             'Accept' => 'application/json',
@@ -39,12 +46,12 @@ final readonly class UpdateSeen
 
         $jsonBody = \json_encode(\array_filter([
             'seenAt' => $seenAt,
-        ]));
+        ]), JSON_THROW_ON_ERROR);
 
-        if ($jsonBody === false) {
-            throw new RuntimeException('Failed to encode JSON');
-        }
-
-        return $request->withBody($this->streamFactory->createStream($jsonBody));
+        return $request->withBody(
+            $this->streamFactory->createStream(
+                $jsonBody
+            )
+        );
     }
 }
