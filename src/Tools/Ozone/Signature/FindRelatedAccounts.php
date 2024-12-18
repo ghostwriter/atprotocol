@@ -25,16 +25,17 @@ final readonly class FindRelatedAccounts
         ?string $did = null,
         ?string $cursor = null,
         ?int $limit = null,
-    ): RequestInterface {
+    ): RequestInterface
+    {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
                 $pdsUri->withPath('xrpc/tools.ozone.signature.findRelatedAccounts')
                     ->withQuery(\http_build_query(\array_filter([
-                        'did' => $did,
-                        'cursor' => $cursor,
-                        'limit' => $limit,
-                    ])))
+                    'did' => $did,
+                    'cursor' => $cursor,
+                    'limit' => $limit,
+                ])))
             );
 
         $headers = [
