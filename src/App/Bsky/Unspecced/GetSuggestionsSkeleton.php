@@ -9,7 +9,7 @@ use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
 /**
- * Get a skeleton of suggested actors. Intended to be called and then hydrated through app.bsky.actor.getSuggestions.
+ * Get a skeleton of suggested actors. Intended to be called and then hydrated through app.bsky.actor.getSuggestions
  *
  * @see GetSuggestionsSkeletonTest
  */
@@ -26,17 +26,18 @@ final readonly class GetSuggestionsSkeleton
         ?int $limit = null,
         ?string $cursor = null,
         ?string $relativeToDid = null,
-    ): RequestInterface {
+    ): RequestInterface
+    {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
                 $pdsUri->withPath('xrpc/app.bsky.unspecced.getSuggestionsSkeleton')
                     ->withQuery(\http_build_query(\array_filter([
-                        'viewer' => $viewer,
-                        'limit' => $limit,
-                        'cursor' => $cursor,
-                        'relativeToDid' => $relativeToDid,
-                    ])))
+                    'viewer' => $viewer,
+                    'limit' => $limit,
+                    'cursor' => $cursor,
+                    'relativeToDid' => $relativeToDid,
+                ])))
             );
 
         $headers = [
