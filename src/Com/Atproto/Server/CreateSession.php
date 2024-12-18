@@ -11,6 +11,9 @@ use Psr\Http\Message\UriInterface;
 
 use const JSON_THROW_ON_ERROR;
 
+use function array_filter;
+use function json_encode;
+
 /**
  * Create an authentication session.
  *
@@ -21,21 +24,16 @@ final readonly class CreateSession
     public function __construct(
         private RequestFactoryInterface $requestFactory,
         private StreamFactoryInterface $streamFactory,
-    ) {
-    }
+    ) {}
 
     public function __invoke(
         UriInterface $pdsUri,
         ?string $identifier = null,
         ?string $password = null,
         ?string $authFactorToken = null,
-    ): RequestInterface
-    {
+    ): RequestInterface {
         $request = $this->requestFactory
-            ->createRequest(
-                'POST',
-                $pdsUri->withPath('xrpc/com.atproto.server.createSession')
-            );
+            ->createRequest('POST', $pdsUri->withPath('xrpc/com.atproto.server.createSession'));
 
         $headers = [
             'Accept' => 'application/json',
@@ -46,16 +44,12 @@ final readonly class CreateSession
             $request = $request->withHeader($name, $value);
         }
 
-        $jsonBody = \json_encode(\array_filter([
+        $jsonBody = json_encode(array_filter([
             'identifier' => $identifier,
             'password' => $password,
             'authFactorToken' => $authFactorToken,
         ]), JSON_THROW_ON_ERROR);
 
-        return $request->withBody(
-            $this->streamFactory->createStream(
-                $jsonBody
-            )
-        );
+        return $request->withBody($this->streamFactory->createStream($jsonBody));
     }
 }
