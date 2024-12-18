@@ -20,16 +20,20 @@ final readonly class GetSuggestedFeeds
     ) {
     }
 
-    public function __invoke(UriInterface $pdsUri, ?int $limit = null, ?string $cursor = null): RequestInterface
+    public function __invoke(
+        UriInterface $pdsUri,
+        ?int $limit = null,
+        ?string $cursor = null,
+    ): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
                 $pdsUri->withPath('xrpc/app.bsky.feed.getSuggestedFeeds')
                     ->withQuery(\http_build_query(\array_filter([
-                        'limit' => $limit,
-                        'cursor' => $cursor,
-                    ])))
+                    'limit' => $limit,
+                    'cursor' => $cursor,
+                ])))
             );
 
         $headers = [
