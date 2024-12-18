@@ -20,15 +20,18 @@ final readonly class GetProfiles
     ) {
     }
 
-    public function __invoke(UriInterface $pdsUri, ?array $actors = null): RequestInterface
+    public function __invoke(
+        UriInterface $pdsUri,
+        ?array $actors = null,
+    ): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
                 $pdsUri->withPath('xrpc/app.bsky.actor.getProfiles')
                     ->withQuery(\http_build_query(\array_filter([
-                        'actors' => $actors,
-                    ])))
+                    'actors' => $actors,
+                ])))
             );
 
         $headers = [
