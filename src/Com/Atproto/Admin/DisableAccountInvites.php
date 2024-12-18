@@ -8,7 +8,8 @@ use Psr\Http\Message\RequestFactoryInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriInterface;
-use RuntimeException;
+
+use const JSON_THROW_ON_ERROR;
 
 /**
  * Disable an account from receiving new invite codes, but does not invalidate existing codes.
@@ -27,9 +28,13 @@ final readonly class DisableAccountInvites
         UriInterface $pdsUri,
         ?string $account = null,
         ?string $note = null,
-    ): RequestInterface {
+    ): RequestInterface
+    {
         $request = $this->requestFactory
-            ->createRequest('POST', $pdsUri->withPath('xrpc/com.atproto.admin.disableAccountInvites'));
+            ->createRequest(
+                'POST',
+                $pdsUri->withPath('xrpc/com.atproto.admin.disableAccountInvites')
+            );
 
         $headers = [
             'Accept' => 'application/json',
@@ -43,12 +48,12 @@ final readonly class DisableAccountInvites
         $jsonBody = \json_encode(\array_filter([
             'account' => $account,
             'note' => $note,
-        ]));
+        ]), JSON_THROW_ON_ERROR);
 
-        if ($jsonBody === false) {
-            throw new RuntimeException('Failed to encode JSON');
-        }
-
-        return $request->withBody($this->streamFactory->createStream($jsonBody));
+        return $request->withBody(
+            $this->streamFactory->createStream(
+                $jsonBody
+            )
+        );
     }
 }
