@@ -11,6 +11,9 @@ use Psr\Http\Message\UriInterface;
 
 use const JSON_THROW_ON_ERROR;
 
+use function array_filter;
+use function json_encode;
+
 /**
  * Create invite codes.
  *
@@ -21,21 +24,16 @@ final readonly class CreateInviteCodes
     public function __construct(
         private RequestFactoryInterface $requestFactory,
         private StreamFactoryInterface $streamFactory,
-    ) {
-    }
+    ) {}
 
     public function __invoke(
         UriInterface $pdsUri,
         ?int $codeCount = null,
         ?int $useCount = null,
         ?array $forAccounts = null,
-    ): RequestInterface
-    {
+    ): RequestInterface {
         $request = $this->requestFactory
-            ->createRequest(
-                'POST',
-                $pdsUri->withPath('xrpc/com.atproto.server.createInviteCodes')
-            );
+            ->createRequest('POST', $pdsUri->withPath('xrpc/com.atproto.server.createInviteCodes'));
 
         $headers = [
             'Accept' => 'application/json',
@@ -46,16 +44,12 @@ final readonly class CreateInviteCodes
             $request = $request->withHeader($name, $value);
         }
 
-        $jsonBody = \json_encode(\array_filter([
+        $jsonBody = json_encode(array_filter([
             'codeCount' => $codeCount,
             'useCount' => $useCount,
             'forAccounts' => $forAccounts,
         ]), JSON_THROW_ON_ERROR);
 
-        return $request->withBody(
-            $this->streamFactory->createStream(
-                $jsonBody
-            )
-        );
+        return $request->withBody($this->streamFactory->createStream($jsonBody));
     }
 }
