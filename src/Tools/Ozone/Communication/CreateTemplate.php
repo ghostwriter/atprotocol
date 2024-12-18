@@ -11,6 +11,9 @@ use Psr\Http\Message\UriInterface;
 
 use const JSON_THROW_ON_ERROR;
 
+use function array_filter;
+use function json_encode;
+
 /**
  * Administrative action to create a new, re-usable communication (email for now) template.
  *
@@ -21,8 +24,7 @@ final readonly class CreateTemplate
     public function __construct(
         private RequestFactoryInterface $requestFactory,
         private StreamFactoryInterface $streamFactory,
-    ) {
-    }
+    ) {}
 
     public function __invoke(
         UriInterface $pdsUri,
@@ -31,13 +33,9 @@ final readonly class CreateTemplate
         ?string $subject = null,
         ?string $lang = null,
         ?string $createdBy = null,
-    ): RequestInterface
-    {
+    ): RequestInterface {
         $request = $this->requestFactory
-            ->createRequest(
-                'POST',
-                $pdsUri->withPath('xrpc/tools.ozone.communication.createTemplate')
-            );
+            ->createRequest('POST', $pdsUri->withPath('xrpc/tools.ozone.communication.createTemplate'));
 
         $headers = [
             'Accept' => 'application/json',
@@ -48,7 +46,7 @@ final readonly class CreateTemplate
             $request = $request->withHeader($name, $value);
         }
 
-        $jsonBody = \json_encode(\array_filter([
+        $jsonBody = json_encode(array_filter([
             'name' => $name,
             'contentMarkdown' => $contentMarkdown,
             'subject' => $subject,
@@ -56,10 +54,6 @@ final readonly class CreateTemplate
             'createdBy' => $createdBy,
         ]), JSON_THROW_ON_ERROR);
 
-        return $request->withBody(
-            $this->streamFactory->createStream(
-                $jsonBody
-            )
-        );
+        return $request->withBody($this->streamFactory->createStream($jsonBody));
     }
 }
