@@ -11,6 +11,9 @@ use Psr\Http\Message\UriInterface;
 
 use const JSON_THROW_ON_ERROR;
 
+use function array_filter;
+use function json_encode;
+
 /**
  * Administrative action to update an account's handle.
  *
@@ -21,20 +24,12 @@ final readonly class UpdateAccountHandle
     public function __construct(
         private RequestFactoryInterface $requestFactory,
         private StreamFactoryInterface $streamFactory,
-    ) {
-    }
+    ) {}
 
-    public function __invoke(
-        UriInterface $pdsUri,
-        ?string $did = null,
-        ?string $handle = null,
-    ): RequestInterface
+    public function __invoke(UriInterface $pdsUri, ?string $did = null, ?string $handle = null): RequestInterface
     {
         $request = $this->requestFactory
-            ->createRequest(
-                'POST',
-                $pdsUri->withPath('xrpc/com.atproto.admin.updateAccountHandle')
-            );
+            ->createRequest('POST', $pdsUri->withPath('xrpc/com.atproto.admin.updateAccountHandle'));
 
         $headers = [
             'Accept' => 'application/json',
@@ -45,15 +40,11 @@ final readonly class UpdateAccountHandle
             $request = $request->withHeader($name, $value);
         }
 
-        $jsonBody = \json_encode(\array_filter([
+        $jsonBody = json_encode(array_filter([
             'did' => $did,
             'handle' => $handle,
         ]), JSON_THROW_ON_ERROR);
 
-        return $request->withBody(
-            $this->streamFactory->createStream(
-                $jsonBody
-            )
-        );
+        return $request->withBody($this->streamFactory->createStream($jsonBody));
     }
 }
