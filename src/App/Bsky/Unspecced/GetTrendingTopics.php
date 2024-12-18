@@ -8,8 +8,11 @@ use Psr\Http\Message\RequestFactoryInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
+use function array_filter;
+use function http_build_query;
+
 /**
- * Get a list of trending topics
+ * Get a list of trending topics.
  *
  * @see GetTrendingTopicsTest
  */
@@ -17,23 +20,18 @@ final readonly class GetTrendingTopics
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
-    ) {
-    }
+    ) {}
 
-    public function __invoke(
-        UriInterface $pdsUri,
-        ?string $viewer = null,
-        ?int $limit = null,
-    ): RequestInterface
+    public function __invoke(UriInterface $pdsUri, ?string $viewer = null, ?int $limit = null): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
                 $pdsUri->withPath('xrpc/app.bsky.unspecced.getTrendingTopics')
-                    ->withQuery(\http_build_query(\array_filter([
-                    'viewer' => $viewer,
-                    'limit' => $limit,
-                ])))
+                    ->withQuery(http_build_query(array_filter([
+                        'viewer' => $viewer,
+                        'limit' => $limit,
+                    ])))
             );
 
         $headers = [
