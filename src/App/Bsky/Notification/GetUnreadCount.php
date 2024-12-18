@@ -24,15 +24,16 @@ final readonly class GetUnreadCount
         UriInterface $pdsUri,
         ?bool $priority = null,
         ?string $seenAt = null,
-    ): RequestInterface {
+    ): RequestInterface
+    {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
                 $pdsUri->withPath('xrpc/app.bsky.notification.getUnreadCount')
                     ->withQuery(\http_build_query(\array_filter([
-                        'priority' => $priority,
-                        'seenAt' => $seenAt,
-                    ])))
+                    'priority' => $priority,
+                    'seenAt' => $seenAt,
+                ])))
             );
 
         $headers = [
