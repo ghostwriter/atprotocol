@@ -8,6 +8,9 @@ use Psr\Http\Message\RequestFactoryInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
+use function array_filter;
+use function http_build_query;
+
 /**
  * Get details about some accounts.
  *
@@ -17,21 +20,17 @@ final readonly class GetAccountInfos
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
-    ) {
-    }
+    ) {}
 
-    public function __invoke(
-        UriInterface $pdsUri,
-        ?array $dids = null,
-    ): RequestInterface
+    public function __invoke(UriInterface $pdsUri, ?array $dids = null): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
                 $pdsUri->withPath('xrpc/com.atproto.admin.getAccountInfos')
-                    ->withQuery(\http_build_query(\array_filter([
-                    'dids' => $dids,
-                ])))
+                    ->withQuery(http_build_query(array_filter([
+                        'dids' => $dids,
+                    ])))
             );
 
         $headers = [
