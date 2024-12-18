@@ -25,16 +25,17 @@ final readonly class GetFeedSkeleton
         ?string $feed = null,
         ?int $limit = null,
         ?string $cursor = null,
-    ): RequestInterface {
+    ): RequestInterface
+    {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
                 $pdsUri->withPath('xrpc/app.bsky.feed.getFeedSkeleton')
                     ->withQuery(\http_build_query(\array_filter([
-                        'feed' => $feed,
-                        'limit' => $limit,
-                        'cursor' => $cursor,
-                    ])))
+                    'feed' => $feed,
+                    'limit' => $limit,
+                    'cursor' => $cursor,
+                ])))
             );
 
         $headers = [
