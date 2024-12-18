@@ -9,7 +9,7 @@ use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
 /**
- * Query available sets.
+ * Query available sets
  *
  * @see QuerySetsTest
  */
@@ -27,18 +27,19 @@ final readonly class QuerySets
         ?string $namePrefix = null,
         ?string $sortBy = null,
         ?string $sortDirection = null,
-    ): RequestInterface {
+    ): RequestInterface
+    {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
                 $pdsUri->withPath('xrpc/tools.ozone.set.querySets')
                     ->withQuery(\http_build_query(\array_filter([
-                        'limit' => $limit,
-                        'cursor' => $cursor,
-                        'namePrefix' => $namePrefix,
-                        'sortBy' => $sortBy,
-                        'sortDirection' => $sortDirection,
-                    ])))
+                    'limit' => $limit,
+                    'cursor' => $cursor,
+                    'namePrefix' => $namePrefix,
+                    'sortBy' => $sortBy,
+                    'sortDirection' => $sortDirection,
+                ])))
             );
 
         $headers = [
