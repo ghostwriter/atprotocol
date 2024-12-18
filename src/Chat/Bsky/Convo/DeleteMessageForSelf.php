@@ -8,9 +8,11 @@ use Psr\Http\Message\RequestFactoryInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriInterface;
-use RuntimeException;
+
+use const JSON_THROW_ON_ERROR;
 
 /**
+ * DeleteMessageForSelf
  *
  * @see DeleteMessageForSelfTest
  */
@@ -26,9 +28,13 @@ final readonly class DeleteMessageForSelf
         UriInterface $pdsUri,
         ?string $convoId = null,
         ?string $messageId = null,
-    ): RequestInterface {
+    ): RequestInterface
+    {
         $request = $this->requestFactory
-            ->createRequest('POST', $pdsUri->withPath('xrpc/chat.bsky.convo.deleteMessageForSelf'));
+            ->createRequest(
+                'POST',
+                $pdsUri->withPath('xrpc/chat.bsky.convo.deleteMessageForSelf')
+            );
 
         $headers = [
             'Accept' => 'application/json',
@@ -42,12 +48,12 @@ final readonly class DeleteMessageForSelf
         $jsonBody = \json_encode(\array_filter([
             'convoId' => $convoId,
             'messageId' => $messageId,
-        ]));
+        ]), JSON_THROW_ON_ERROR);
 
-        if ($jsonBody === false) {
-            throw new RuntimeException('Failed to encode JSON');
-        }
-
-        return $request->withBody($this->streamFactory->createStream($jsonBody));
+        return $request->withBody(
+            $this->streamFactory->createStream(
+                $jsonBody
+            )
+        );
     }
 }
