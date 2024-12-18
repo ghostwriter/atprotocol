@@ -26,17 +26,18 @@ final readonly class SearchStarterPacksSkeleton
         ?string $viewer = null,
         ?int $limit = null,
         ?string $cursor = null,
-    ): RequestInterface {
+    ): RequestInterface
+    {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
                 $pdsUri->withPath('xrpc/app.bsky.unspecced.searchStarterPacksSkeleton')
                     ->withQuery(\http_build_query(\array_filter([
-                        'q' => $q,
-                        'viewer' => $viewer,
-                        'limit' => $limit,
-                        'cursor' => $cursor,
-                    ])))
+                    'q' => $q,
+                    'viewer' => $viewer,
+                    'limit' => $limit,
+                    'cursor' => $cursor,
+                ])))
             );
 
         $headers = [
