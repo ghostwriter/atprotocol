@@ -20,16 +20,20 @@ final readonly class GetBlob
     ) {
     }
 
-    public function __invoke(UriInterface $pdsUri, ?string $did = null, ?string $cid = null): RequestInterface
+    public function __invoke(
+        UriInterface $pdsUri,
+        ?string $did = null,
+        ?string $cid = null,
+    ): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
                 $pdsUri->withPath('xrpc/com.atproto.sync.getBlob')
                     ->withQuery(\http_build_query(\array_filter([
-                        'did' => $did,
-                        'cid' => $cid,
-                    ])))
+                    'did' => $did,
+                    'cid' => $cid,
+                ])))
             );
 
         $headers = [
