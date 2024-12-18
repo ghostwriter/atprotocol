@@ -8,7 +8,8 @@ use Psr\Http\Message\RequestFactoryInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriInterface;
-use RuntimeException;
+
+use const JSON_THROW_ON_ERROR;
 
 /**
  * Add a handle to the set of reserved handles.
@@ -23,10 +24,16 @@ final readonly class AddReservedHandle
     ) {
     }
 
-    public function __invoke(UriInterface $pdsUri, ?string $handle = null): RequestInterface
+    public function __invoke(
+        UriInterface $pdsUri,
+        ?string $handle = null,
+    ): RequestInterface
     {
         $request = $this->requestFactory
-            ->createRequest('POST', $pdsUri->withPath('xrpc/com.atproto.temp.addReservedHandle'));
+            ->createRequest(
+                'POST',
+                $pdsUri->withPath('xrpc/com.atproto.temp.addReservedHandle')
+            );
 
         $headers = [
             'Accept' => 'application/json',
@@ -39,12 +46,12 @@ final readonly class AddReservedHandle
 
         $jsonBody = \json_encode(\array_filter([
             'handle' => $handle,
-        ]));
+        ]), JSON_THROW_ON_ERROR);
 
-        if ($jsonBody === false) {
-            throw new RuntimeException('Failed to encode JSON');
-        }
-
-        return $request->withBody($this->streamFactory->createStream($jsonBody));
+        return $request->withBody(
+            $this->streamFactory->createStream(
+                $jsonBody
+            )
+        );
     }
 }
