@@ -9,6 +9,7 @@ use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
 /**
+ * GetLog
  *
  * @see GetLogTest
  */
@@ -19,15 +20,18 @@ final readonly class GetLog
     ) {
     }
 
-    public function __invoke(UriInterface $pdsUri, ?string $cursor = null): RequestInterface
+    public function __invoke(
+        UriInterface $pdsUri,
+        ?string $cursor = null,
+    ): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
                 $pdsUri->withPath('xrpc/chat.bsky.convo.getLog')
                     ->withQuery(\http_build_query(\array_filter([
-                        'cursor' => $cursor,
-                    ])))
+                    'cursor' => $cursor,
+                ])))
             );
 
         $headers = [
