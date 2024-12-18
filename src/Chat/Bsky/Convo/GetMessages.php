@@ -9,6 +9,7 @@ use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
 /**
+ * GetMessages
  *
  * @see GetMessagesTest
  */
@@ -24,16 +25,17 @@ final readonly class GetMessages
         ?string $convoId = null,
         ?int $limit = null,
         ?string $cursor = null,
-    ): RequestInterface {
+    ): RequestInterface
+    {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
                 $pdsUri->withPath('xrpc/chat.bsky.convo.getMessages')
                     ->withQuery(\http_build_query(\array_filter([
-                        'convoId' => $convoId,
-                        'limit' => $limit,
-                        'cursor' => $cursor,
-                    ])))
+                    'convoId' => $convoId,
+                    'limit' => $limit,
+                    'cursor' => $cursor,
+                ])))
             );
 
         $headers = [
