@@ -9,6 +9,7 @@ use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
 /**
+ * GetConvoForMembers
  *
  * @see GetConvoForMembersTest
  */
@@ -19,15 +20,18 @@ final readonly class GetConvoForMembers
     ) {
     }
 
-    public function __invoke(UriInterface $pdsUri, ?array $members = null): RequestInterface
+    public function __invoke(
+        UriInterface $pdsUri,
+        ?array $members = null,
+    ): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
                 $pdsUri->withPath('xrpc/chat.bsky.convo.getConvoForMembers')
                     ->withQuery(\http_build_query(\array_filter([
-                        'members' => $members,
-                    ])))
+                    'members' => $members,
+                ])))
             );
 
         $headers = [
