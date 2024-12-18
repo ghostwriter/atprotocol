@@ -8,6 +8,9 @@ use Psr\Http\Message\RequestFactoryInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
+use function array_filter;
+use function http_build_query;
+
 /**
  * Get accounts that share some matching threat signatures with the root account.
  *
@@ -17,25 +20,23 @@ final readonly class FindRelatedAccounts
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
-    ) {
-    }
+    ) {}
 
     public function __invoke(
         UriInterface $pdsUri,
         ?string $did = null,
         ?string $cursor = null,
         ?int $limit = null,
-    ): RequestInterface
-    {
+    ): RequestInterface {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
                 $pdsUri->withPath('xrpc/tools.ozone.signature.findRelatedAccounts')
-                    ->withQuery(\http_build_query(\array_filter([
-                    'did' => $did,
-                    'cursor' => $cursor,
-                    'limit' => $limit,
-                ])))
+                    ->withQuery(http_build_query(array_filter([
+                        'did' => $did,
+                        'cursor' => $cursor,
+                        'limit' => $limit,
+                    ])))
             );
 
         $headers = [
