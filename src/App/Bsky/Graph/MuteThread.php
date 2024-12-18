@@ -8,7 +8,8 @@ use Psr\Http\Message\RequestFactoryInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriInterface;
-use RuntimeException;
+
+use const JSON_THROW_ON_ERROR;
 
 /**
  * Mutes a thread preventing notifications from the thread and any of its children. Mutes are private in Bluesky. Requires auth.
@@ -23,10 +24,16 @@ final readonly class MuteThread
     ) {
     }
 
-    public function __invoke(UriInterface $pdsUri, ?string $root = null): RequestInterface
+    public function __invoke(
+        UriInterface $pdsUri,
+        ?string $root = null,
+    ): RequestInterface
     {
         $request = $this->requestFactory
-            ->createRequest('POST', $pdsUri->withPath('xrpc/app.bsky.graph.muteThread'));
+            ->createRequest(
+                'POST',
+                $pdsUri->withPath('xrpc/app.bsky.graph.muteThread')
+            );
 
         $headers = [
             'Accept' => 'application/json',
@@ -39,12 +46,12 @@ final readonly class MuteThread
 
         $jsonBody = \json_encode(\array_filter([
             'root' => $root,
-        ]));
+        ]), JSON_THROW_ON_ERROR);
 
-        if ($jsonBody === false) {
-            throw new RuntimeException('Failed to encode JSON');
-        }
-
-        return $request->withBody($this->streamFactory->createStream($jsonBody));
+        return $request->withBody(
+            $this->streamFactory->createStream(
+                $jsonBody
+            )
+        );
     }
 }
