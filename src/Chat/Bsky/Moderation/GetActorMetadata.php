@@ -9,6 +9,7 @@ use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
 /**
+ * GetActorMetadata
  *
  * @see GetActorMetadataTest
  */
@@ -19,15 +20,18 @@ final readonly class GetActorMetadata
     ) {
     }
 
-    public function __invoke(UriInterface $pdsUri, ?string $actor = null): RequestInterface
+    public function __invoke(
+        UriInterface $pdsUri,
+        ?string $actor = null,
+    ): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
                 $pdsUri->withPath('xrpc/chat.bsky.moderation.getActorMetadata')
                     ->withQuery(\http_build_query(\array_filter([
-                        'actor' => $actor,
-                    ])))
+                    'actor' => $actor,
+                ])))
             );
 
         $headers = [
