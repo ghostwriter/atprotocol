@@ -8,10 +8,11 @@ use Psr\Http\Message\RequestFactoryInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriInterface;
-use RuntimeException;
+
+use const JSON_THROW_ON_ERROR;
 
 /**
- * Create or update setting option.
+ * Create or update setting option
  *
  * @see UpsertOptionTest
  */
@@ -30,9 +31,13 @@ final readonly class UpsertOption
         ?string $value = null,
         ?string $description = null,
         ?string $managerRole = null,
-    ): RequestInterface {
+    ): RequestInterface
+    {
         $request = $this->requestFactory
-            ->createRequest('POST', $pdsUri->withPath('xrpc/tools.ozone.setting.upsertOption'));
+            ->createRequest(
+                'POST',
+                $pdsUri->withPath('xrpc/tools.ozone.setting.upsertOption')
+            );
 
         $headers = [
             'Accept' => 'application/json',
@@ -49,12 +54,12 @@ final readonly class UpsertOption
             'value' => $value,
             'description' => $description,
             'managerRole' => $managerRole,
-        ]));
+        ]), JSON_THROW_ON_ERROR);
 
-        if ($jsonBody === false) {
-            throw new RuntimeException('Failed to encode JSON');
-        }
-
-        return $request->withBody($this->streamFactory->createStream($jsonBody));
+        return $request->withBody(
+            $this->streamFactory->createStream(
+                $jsonBody
+            )
+        );
     }
 }
