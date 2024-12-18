@@ -4,6 +4,4 @@ declare(strict_types=1);
 
 namespace Ghostwriter\AtProtocol\Value;
 
-final readonly class SessionData
-{
-}
+final readonly class SessionData {}
