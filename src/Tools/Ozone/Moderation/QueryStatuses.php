@@ -24,6 +24,9 @@ final readonly class QueryStatuses
 
     public function __invoke(
         UriInterface $pdsUri,
+        ?int $queueCount = null,
+        ?int $queueIndex = null,
+        ?string $queueSeed = null,
         ?bool $includeAllUserRecords = null,
         ?string $subject = null,
         ?string $comment = null,
@@ -57,6 +60,9 @@ final readonly class QueryStatuses
                 'GET',
                 $pdsUri->withPath('xrpc/tools.ozone.moderation.queryStatuses')
                     ->withQuery(http_build_query(array_filter([
+                        'queueCount' => $queueCount,
+                        'queueIndex' => $queueIndex,
+                        'queueSeed' => $queueSeed,
                         'includeAllUserRecords' => $includeAllUserRecords,
                         'subject' => $subject,
                         'comment' => $comment,
