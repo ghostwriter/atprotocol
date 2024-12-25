@@ -31,6 +31,7 @@ final readonly class CreateSession
         ?string $identifier = null,
         ?string $password = null,
         ?string $authFactorToken = null,
+        ?bool $allowTakendown = null,
     ): RequestInterface {
         $request = $this->requestFactory
             ->createRequest('POST', $pdsUri->withPath('xrpc/com.atproto.server.createSession'));
@@ -48,6 +49,7 @@ final readonly class CreateSession
             'identifier' => $identifier,
             'password' => $password,
             'authFactorToken' => $authFactorToken,
+            'allowTakendown' => $allowTakendown,
         ]), JSON_THROW_ON_ERROR);
 
         return $request->withBody($this->streamFactory->createStream($jsonBody));
