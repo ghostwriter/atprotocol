@@ -140,6 +140,5 @@
             "@infection"
         ],
         "xdebug": "@putenv XDEBUG_MODE=coverage"
-    },
-    "$schema": "https://composerjs.org/schema.json"
+    }
 }
