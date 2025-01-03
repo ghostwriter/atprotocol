@@ -41,6 +41,7 @@ final readonly class QueryEvents
         ?array $addedTags = null,
         ?array $removedTags = null,
         ?array $reportTypes = null,
+        ?array $policies = null,
         ?string $cursor = null,
     ): RequestInterface {
         $request = $this->requestFactory
@@ -65,6 +66,7 @@ final readonly class QueryEvents
                         'addedTags' => $addedTags,
                         'removedTags' => $removedTags,
                         'reportTypes' => $reportTypes,
+                        'policies' => $policies,
                         'cursor' => $cursor,
                     ])))
             );
