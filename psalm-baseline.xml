@@ -383,9 +383,9 @@
       <code><![CDATA[withPath]]></code>
       <code><![CDATA[withQuery]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[SearchStarterPacks]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/App/Bsky/Graph/UnmuteActor.php">
     <MissingThrowsDocblock>
@@ -473,9 +473,9 @@
       <code><![CDATA[withPath]]></code>
       <code><![CDATA[withQuery]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[GetConfig]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/App/Bsky/Unspecced/GetPopularFeedGenerators.php">
     <MissingThrowsDocblock>
@@ -509,9 +509,9 @@
       <code><![CDATA[withPath]]></code>
       <code><![CDATA[withQuery]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[GetTrendingTopics]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/App/Bsky/Unspecced/SearchActorsSkeleton.php">
     <MissingThrowsDocblock>
@@ -536,9 +536,9 @@
       <code><![CDATA[withPath]]></code>
       <code><![CDATA[withQuery]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[SearchStarterPacksSkeleton]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/App/Bsky/Video/GetJobStatus.php">
     <MissingThrowsDocblock>
@@ -1361,9 +1361,9 @@
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[AddReservedHandle]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/Com/Atproto/Temp/CheckSignupQueue.php">
     <MissingThrowsDocblock>
@@ -1492,9 +1492,9 @@
       <code><![CDATA[withPath]]></code>
       <code><![CDATA[withQuery]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[GetRecords]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/Tools/Ozone/Moderation/GetRepo.php">
     <MissingThrowsDocblock>
@@ -1510,9 +1510,9 @@
       <code><![CDATA[withPath]]></code>
       <code><![CDATA[withQuery]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[GetRepos]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/Tools/Ozone/Moderation/QueryEvents.php">
     <MissingThrowsDocblock>
@@ -1555,9 +1555,9 @@
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[AddValues]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
     <UnusedParam>
       <code><![CDATA[$name]]></code>
     </UnusedParam>
@@ -1567,9 +1567,9 @@
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[DeleteSet]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
     <UnusedParam>
       <code><![CDATA[$name]]></code>
     </UnusedParam>
@@ -1579,9 +1579,9 @@
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[DeleteValues]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
     <UnusedParam>
       <code><![CDATA[$name]]></code>
     </UnusedParam>
@@ -1591,54 +1591,54 @@
       <code><![CDATA[withPath]]></code>
       <code><![CDATA[withQuery]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[GetValues]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/Tools/Ozone/Set/QuerySets.php">
     <MissingThrowsDocblock>
       <code><![CDATA[withPath]]></code>
       <code><![CDATA[withQuery]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[QuerySets]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/Tools/Ozone/Set/UpsertSet.php">
     <MissingThrowsDocblock>
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[UpsertSet]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/Tools/Ozone/Setting/ListOptions.php">
     <MissingThrowsDocblock>
       <code><![CDATA[withPath]]></code>
       <code><![CDATA[withQuery]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[ListOptions]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/Tools/Ozone/Setting/RemoveOptions.php">
     <MissingThrowsDocblock>
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[RemoveOptions]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/Tools/Ozone/Setting/UpsertOption.php">
     <MissingThrowsDocblock>
       <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[UpsertOption]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
     <UnusedParam>
       <code><![CDATA[$value]]></code>
     </UnusedParam>
@@ -1648,27 +1648,27 @@
       <code><![CDATA[withPath]]></code>
       <code><![CDATA[withQuery]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[FindCorrelation]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/Tools/Ozone/Signature/FindRelatedAccounts.php">
     <MissingThrowsDocblock>
       <code><![CDATA[withPath]]></code>
       <code><![CDATA[withQuery]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[FindRelatedAccounts]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/Tools/Ozone/Signature/SearchAccounts.php">
     <MissingThrowsDocblock>
       <code><![CDATA[withPath]]></code>
       <code><![CDATA[withQuery]]></code>
     </MissingThrowsDocblock>
-    <UnusedClass>
-      <code><![CDATA[SearchAccounts]]></code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/Tools/Ozone/Team/AddMember.php">
     <MissingThrowsDocblock>
@@ -1709,10 +1709,7 @@
   <file src="src/Trait/HttpTrait.php">
     <MissingThrowsDocblock>
       <code><![CDATA[new Client()]]></code>
-      <code><![CDATA[self::defaultHeaders()]]></code>
-      <code><![CDATA[sendRequest]]></code>
       <code><![CDATA[throw new ShouldNotHappenException('curl version not found');]]></code>
-      <code><![CDATA[withBody]]></code>
       <code><![CDATA[withPath]]></code>
       <code><![CDATA[withQuery]]></code>
     </MissingThrowsDocblock>
