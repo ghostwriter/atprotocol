@@ -40,6 +40,7 @@
     ],
     "require": {
         "php": ">=8.3",
+        "ext-curl": "*",
         "ghostwriter/collection": "^2.0.0",
         "ghostwriter/config": "^0.4.1",
         "ghostwriter/container": "^4.0.3",
@@ -52,13 +53,12 @@
         "laminas/laminas-diactoros": "^3.5.0",
         "php-http/curl-client": "^2.3.3",
         "psr/http-client": "^1.0.3",
-        "psr/http-factory": "^1.1.0",
-        "ext-curl": "*"
+        "psr/http-factory": "^1.1.0"
     },
     "require-dev": {
         "ghostwriter/coding-standard": "dev-main",
-        "ghostwriter/psalm-plugin": "dev-main",
-        "ghostwriter/filesystem": "^0.1.1"
+        "ghostwriter/filesystem": "^0.1.1",
+        "ghostwriter/psalm-plugin": "dev-main"
     },
     "minimum-stability": "stable",
     "prefer-stable": true,
@@ -112,8 +112,10 @@
             "@ecs",
             "@test"
         ],
+        "composer-normalize": "vendor/ghostwriter/coding-standard/tools/composer-normalize --no-cache --diff --no-check-lock --no-scripts --no-plugins",
         "dev": [
             "@cache:clear",
+            "@composer-normalize",
             "@check",
             "@psalm:update",
             "@psalm:security",
