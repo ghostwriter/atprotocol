@@ -1,28 +1,22 @@
 name: Automation
 
 on:
-  pull_request:
-  push:
+  pull_request: # https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#pull_request
+  push: # https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#push
     branches:
-      # Default branch
-      - "main"
-      # Release branches
-      ## 1.2.x - e.g. Semantic Versioning
-      - "[0-9]+.[0-9]+.x"
-      ## v1 - e.g. GitHub Actions Versioning
-      - "v[0-9]+"
-  # Scheduled workflow
-  schedule:
-    # Runs hourly
-    - cron: "0 * * * *"
-  # Manually Trigger workflow
-  workflow_dispatch:
+      - "main" # Default branch
+      - "[0-9]+.[0-9]+.x" # Release branches (1.2.x - e.g. Semantic Versioning)
+      - "v[0-9]+" # v1 - e.g. GitHub Actions Versioning
+  schedule: # https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#onschedule
+    - cron: "0 * * * *" # Runs hourly
+  workflow_dispatch: # https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#onworkflow_dispatch
 
-# https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#permissions
 # values: read, write, none
-permissions:
+permissions: # https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#permissions
   # actions: Work with GitHub Actions. For example, actions: write permits an action to cancel a workflow run.
   actions: write
+  # attestations: Work with artifact attestations. For example, attestations: write permits an action to generate an artifact attestation for a build.
+  attestations: write
   # checks: Work with check runs and check suites. For example, checks: write permits an action to create a check run.
   checks: write
   # contents: Work with the contents of the repository. For example, contents: read permits an action to list the commits, and contents:write allows the action to create a release.
