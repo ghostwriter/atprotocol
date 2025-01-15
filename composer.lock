@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3d134f0f34dd5769a31e5f85f816a271",
+    "content-hash": "d329ddb5d64f521697554b0031194b96",
     "packages": [
         {
             "name": "clue/stream-filter",
@@ -317,12 +317,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ghostwriter/http.git",
-                "reference": "6b65ee374b3df46b131d16b7cb129f846672cb02"
+                "reference": "108dbc6db1e8b276c81b9c6656de35ae79bab792"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ghostwriter/http/zipball/6b65ee374b3df46b131d16b7cb129f846672cb02",
-                "reference": "6b65ee374b3df46b131d16b7cb129f846672cb02",
+                "url": "https://api.github.com/repos/ghostwriter/http/zipball/108dbc6db1e8b276c81b9c6656de35ae79bab792",
+                "reference": "108dbc6db1e8b276c81b9c6656de35ae79bab792",
                 "shasum": ""
             },
             "require": {
@@ -374,7 +374,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-07-17T19:48:21+00:00"
+            "time": "2025-01-08T06:33:06+00:00"
         },
         {
             "name": "ghostwriter/json",
@@ -1325,16 +1325,16 @@
     "packages-dev": [
         {
             "name": "composer/ca-bundle",
-            "version": "1.5.4",
+            "version": "1.5.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/ca-bundle.git",
-                "reference": "bc0593537a463e55cadf45fd938d23b75095b7e1"
+                "reference": "08c50d5ec4c6ced7d0271d2862dec8c1033283e6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/ca-bundle/zipball/bc0593537a463e55cadf45fd938d23b75095b7e1",
-                "reference": "bc0593537a463e55cadf45fd938d23b75095b7e1",
+                "url": "https://api.github.com/repos/composer/ca-bundle/zipball/08c50d5ec4c6ced7d0271d2862dec8c1033283e6",
+                "reference": "08c50d5ec4c6ced7d0271d2862dec8c1033283e6",
                 "shasum": ""
             },
             "require": {
@@ -1381,7 +1381,7 @@
             "support": {
                 "irc": "irc://irc.freenode.org/composer",
                 "issues": "https://github.com/composer/ca-bundle/issues",
-                "source": "https://github.com/composer/ca-bundle/tree/1.5.4"
+                "source": "https://github.com/composer/ca-bundle/tree/1.5.5"
             },
             "funding": [
                 {
@@ -1397,7 +1397,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-11-27T15:35:25+00:00"
+            "time": "2025-01-08T16:17:16+00:00"
         },
         {
             "name": "composer/class-map-generator",
@@ -1967,12 +1967,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ghostwriter/coding-standard.git",
-                "reference": "9a085f5915cbd5548bab5ab49f590ae2bea599ae"
+                "reference": "1dd832550f4e6859e4f90e176609e3c17a8afd00"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ghostwriter/coding-standard/zipball/9a085f5915cbd5548bab5ab49f590ae2bea599ae",
-                "reference": "9a085f5915cbd5548bab5ab49f590ae2bea599ae",
+                "url": "https://api.github.com/repos/ghostwriter/coding-standard/zipball/1dd832550f4e6859e4f90e176609e3c17a8afd00",
+                "reference": "1dd832550f4e6859e4f90e176609e3c17a8afd00",
                 "shasum": ""
             },
             "require": {
@@ -2043,7 +2043,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-12-28T16:47:57+00:00"
+            "time": "2025-01-15T03:14:49+00:00"
         },
         {
             "name": "ghostwriter/filesystem",
@@ -2111,12 +2111,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ghostwriter/psalm-plugin.git",
-                "reference": "9e9ce43f5fba7d9e4ad15273d5053a85dbeb88ad"
+                "reference": "bffd0762547b19b7e76c0797985fa5b708defe46"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ghostwriter/psalm-plugin/zipball/9e9ce43f5fba7d9e4ad15273d5053a85dbeb88ad",
-                "reference": "9e9ce43f5fba7d9e4ad15273d5053a85dbeb88ad",
+                "url": "https://api.github.com/repos/ghostwriter/psalm-plugin/zipball/bffd0762547b19b7e76c0797985fa5b708defe46",
+                "reference": "bffd0762547b19b7e76c0797985fa5b708defe46",
                 "shasum": ""
             },
             "require": {
@@ -2128,9 +2128,9 @@
             },
             "require-dev": {
                 "ghostwriter/coding-standard": "dev-main",
-                "ghostwriter/psalm-plugin-tester": "^0.2 || ^0.3 || ^1.0",
-                "psr/container": "^1.1 || ^2.0",
-                "vimeo/psalm": "^5.0 || ^6.0"
+                "ghostwriter/psalm-plugin-tester": "^0.2.1",
+                "psr/container": "^2.0.2",
+                "vimeo/psalm": "^5.26.1"
             },
             "default-branch": true,
             "type": "psalm-plugin",
@@ -2178,7 +2178,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-08-31T16:08:40+00:00"
+            "time": "2025-01-08T15:47:51+00:00"
         },
         {
             "name": "hamcrest/hamcrest-php",
@@ -3387,16 +3387,16 @@
         },
         {
             "name": "sebastian/comparator",
-            "version": "6.2.1",
+            "version": "6.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/comparator.git",
-                "reference": "43d129d6a0f81c78bee378b46688293eb7ea3739"
+                "reference": "d4e47a769525c4dd38cea90e5dcd435ddbbc7115"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/comparator/zipball/43d129d6a0f81c78bee378b46688293eb7ea3739",
-                "reference": "43d129d6a0f81c78bee378b46688293eb7ea3739",
+                "url": "https://api.github.com/repos/sebastianbergmann/comparator/zipball/d4e47a769525c4dd38cea90e5dcd435ddbbc7115",
+                "reference": "d4e47a769525c4dd38cea90e5dcd435ddbbc7115",
                 "shasum": ""
             },
             "require": {
@@ -3408,6 +3408,9 @@
             },
             "require-dev": {
                 "phpunit/phpunit": "^11.4"
+            },
+            "suggest": {
+                "ext-bcmath": "For comparing BcMath\\Number objects"
             },
             "type": "library",
             "extra": {
@@ -3452,7 +3455,7 @@
             "support": {
                 "issues": "https://github.com/sebastianbergmann/comparator/issues",
                 "security": "https://github.com/sebastianbergmann/comparator/security/policy",
-                "source": "https://github.com/sebastianbergmann/comparator/tree/6.2.1"
+                "source": "https://github.com/sebastianbergmann/comparator/tree/6.3.0"
             },
             "funding": [
                 {
@@ -3460,7 +3463,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-10-31T05:30:08+00:00"
+            "time": "2025-01-06T10:28:19+00:00"
         },
         {
             "name": "sebastian/complexity",
@@ -5514,7 +5517,7 @@
         "php": ">=8.3",
         "ext-curl": "*"
     },
-    "platform-dev": [],
+    "platform-dev": {},
     "platform-overrides": {
         "php": "8.3.999"
     },
