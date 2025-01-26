@@ -54,6 +54,9 @@ final readonly class QueryStatuses
         ?string $cursor = null,
         ?array $collections = null,
         ?string $subjectType = null,
+        ?int $minAccountSuspendCount = null,
+        ?int $minReportedRecordsCount = null,
+        ?int $minTakendownRecordsCount = null,
     ): RequestInterface {
         $request = $this->requestFactory
             ->createRequest(
@@ -90,6 +93,9 @@ final readonly class QueryStatuses
                         'cursor' => $cursor,
                         'collections' => $collections,
                         'subjectType' => $subjectType,
+                        'minAccountSuspendCount' => $minAccountSuspendCount,
+                        'minReportedRecordsCount' => $minReportedRecordsCount,
+                        'minTakendownRecordsCount' => $minTakendownRecordsCount,
                     ])))
             );
 
