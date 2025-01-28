@@ -3,8 +3,6 @@
 [![Automation](https://github.com/ghostwriter/atprotocol/actions/workflows/automation.yml/badge.svg)](https://github.com/ghostwriter/atprotocol/actions/workflows/automation.yml)
 [![Supported PHP Version](https://badgen.net/packagist/php/ghostwriter/atprotocol?color=8892bf)](https://www.php.net/supported-versions)
 [![GitHub Sponsors](https://img.shields.io/github/sponsors/ghostwriter?label=Sponsor+@ghostwriter/atprotocol&logo=GitHub+Sponsors)](https://github.com/sponsors/ghostwriter)
-[![Code Coverage](https://codecov.io/gh/ghostwriter/atprotocol/branch/main/graph/badge.svg)](https://codecov.io/gh/ghostwriter/atprotocol)
-[![Latest Version on Packagist](https://badgen.net/packagist/v/ghostwriter/atprotocol)](https://packagist.org/packages/ghostwriter/atprotocol)
 [![Downloads](https://badgen.net/packagist/dt/ghostwriter/atprotocol?color=blue)](https://packagist.org/packages/ghostwriter/atprotocol)
 
 > [!WARNING]
