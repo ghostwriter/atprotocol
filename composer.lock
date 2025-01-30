@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d329ddb5d64f521697554b0031194b96",
+    "content-hash": "5d6c22c2ddbb6e3e391b3b217ef44c32",
     "packages": [
         {
             "name": "clue/stream-filter",
@@ -558,16 +558,16 @@
         },
         {
             "name": "ghostwriter/uuid",
-            "version": "1.0.1",
+            "version": "1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ghostwriter/uuid.git",
-                "reference": "bece9c34ccf981fc65150cde0087cd5af57c6603"
+                "reference": "0867b6c92d5e2973c87ad13f88aae66f39ce7dd6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ghostwriter/uuid/zipball/bece9c34ccf981fc65150cde0087cd5af57c6603",
-                "reference": "bece9c34ccf981fc65150cde0087cd5af57c6603",
+                "url": "https://api.github.com/repos/ghostwriter/uuid/zipball/0867b6c92d5e2973c87ad13f88aae66f39ce7dd6",
+                "reference": "0867b6c92d5e2973c87ad13f88aae66f39ce7dd6",
                 "shasum": ""
             },
             "require": {
@@ -575,7 +575,8 @@
                 "php": ">=8.3"
             },
             "require-dev": {
-                "ghostwriter/coding-standard": "dev-main"
+                "ghostwriter/coding-standard": "dev-main",
+                "ghostwriter/handrail": "dev-main"
             },
             "type": "library",
             "autoload": {
@@ -602,8 +603,6 @@
                 "uuid"
             ],
             "support": {
-                "docs": "https://github.com/ghostwriter/uuid",
-                "forum": "https://github.com/ghostwriter/uuid/discussions",
                 "issues": "https://github.com/ghostwriter/uuid/issues",
                 "rss": "https://github.com/ghostwriter/uuid/releases.atom",
                 "security": "https://github.com/ghostwriter/uuid/security/advisories/new",
@@ -615,7 +614,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-07-21T21:08:22+00:00"
+            "time": "2025-01-28T18:15:13+00:00"
         },
         {
             "name": "laminas/laminas-diactoros",
