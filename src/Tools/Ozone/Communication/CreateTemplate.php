@@ -8,7 +8,8 @@ use Psr\Http\Message\RequestFactoryInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriInterface;
-use RuntimeException;
+
+use const JSON_THROW_ON_ERROR;
 
 use function array_filter;
 use function json_encode;
@@ -23,18 +24,18 @@ final readonly class CreateTemplate
     public function __construct(
         private RequestFactoryInterface $requestFactory,
         private StreamFactoryInterface $streamFactory,
-    ) {
-    }
+    ) {}
 
     public function __invoke(
-        UriInterface $uri,
+        UriInterface $pdsUri,
         ?string $name = null,
         ?string $contentMarkdown = null,
         ?string $subject = null,
+        ?string $lang = null,
         ?string $createdBy = null,
     ): RequestInterface {
         $request = $this->requestFactory
-            ->createRequest('POST', $uri->withPath('xrpc/tools.ozone.communication.createTemplate'));
+            ->createRequest('POST', $pdsUri->withPath('xrpc/tools.ozone.communication.createTemplate'));
 
         $headers = [
             'Accept' => 'application/json',
@@ -49,12 +50,9 @@ final readonly class CreateTemplate
             'name' => $name,
             'contentMarkdown' => $contentMarkdown,
             'subject' => $subject,
+            'lang' => $lang,
             'createdBy' => $createdBy,
-        ]));
-
-        if ($jsonBody === false) {
-            throw new RuntimeException('Failed to encode JSON');
-        }
+        ]), JSON_THROW_ON_ERROR);
 
         return $request->withBody($this->streamFactory->createStream($jsonBody));
     }

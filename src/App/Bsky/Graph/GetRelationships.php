@@ -20,15 +20,14 @@ final readonly class GetRelationships
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
-    ) {
-    }
+    ) {}
 
-    public function __invoke(UriInterface $uri, ?string $actor = null, ?array $others = null): RequestInterface
+    public function __invoke(UriInterface $pdsUri, ?string $actor = null, ?array $others = null): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $uri->withPath('xrpc/app.bsky.graph.getRelationships')
+                $pdsUri->withPath('xrpc/app.bsky.graph.getRelationships')
                     ->withQuery(http_build_query(array_filter([
                         'actor' => $actor,
                         'others' => $others,

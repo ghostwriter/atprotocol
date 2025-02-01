@@ -20,15 +20,14 @@ final readonly class GetSession
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
-    ) {
-    }
+    ) {}
 
-    public function __invoke(UriInterface $uri): RequestInterface
+    public function __invoke(UriInterface $pdsUri): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $uri->withPath('xrpc/com.atproto.server.getSession')
+                $pdsUri->withPath('xrpc/com.atproto.server.getSession')
                     ->withQuery(http_build_query(array_filter([])))
             );
 

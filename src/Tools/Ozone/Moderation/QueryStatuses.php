@@ -20,16 +20,24 @@ final readonly class QueryStatuses
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
-    ) {
-    }
+    ) {}
 
     public function __invoke(
-        UriInterface $uri,
+        UriInterface $pdsUri,
+        ?int $queueCount = null,
+        ?int $queueIndex = null,
+        ?string $queueSeed = null,
+        ?bool $includeAllUserRecords = null,
         ?string $subject = null,
         ?string $comment = null,
         ?string $reportedAfter = null,
         ?string $reportedBefore = null,
         ?string $reviewedAfter = null,
+        ?string $hostingDeletedAfter = null,
+        ?string $hostingDeletedBefore = null,
+        ?string $hostingUpdatedAfter = null,
+        ?string $hostingUpdatedBefore = null,
+        ?array $hostingStatuses = null,
         ?string $reviewedBefore = null,
         ?bool $includeMuted = null,
         ?bool $onlyMuted = null,
@@ -44,17 +52,31 @@ final readonly class QueryStatuses
         ?array $tags = null,
         ?array $excludeTags = null,
         ?string $cursor = null,
+        ?array $collections = null,
+        ?string $subjectType = null,
+        ?int $minAccountSuspendCount = null,
+        ?int $minReportedRecordsCount = null,
+        ?int $minTakendownRecordsCount = null,
     ): RequestInterface {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $uri->withPath('xrpc/tools.ozone.moderation.queryStatuses')
+                $pdsUri->withPath('xrpc/tools.ozone.moderation.queryStatuses')
                     ->withQuery(http_build_query(array_filter([
+                        'queueCount' => $queueCount,
+                        'queueIndex' => $queueIndex,
+                        'queueSeed' => $queueSeed,
+                        'includeAllUserRecords' => $includeAllUserRecords,
                         'subject' => $subject,
                         'comment' => $comment,
                         'reportedAfter' => $reportedAfter,
                         'reportedBefore' => $reportedBefore,
                         'reviewedAfter' => $reviewedAfter,
+                        'hostingDeletedAfter' => $hostingDeletedAfter,
+                        'hostingDeletedBefore' => $hostingDeletedBefore,
+                        'hostingUpdatedAfter' => $hostingUpdatedAfter,
+                        'hostingUpdatedBefore' => $hostingUpdatedBefore,
+                        'hostingStatuses' => $hostingStatuses,
                         'reviewedBefore' => $reviewedBefore,
                         'includeMuted' => $includeMuted,
                         'onlyMuted' => $onlyMuted,
@@ -69,6 +91,11 @@ final readonly class QueryStatuses
                         'tags' => $tags,
                         'excludeTags' => $excludeTags,
                         'cursor' => $cursor,
+                        'collections' => $collections,
+                        'subjectType' => $subjectType,
+                        'minAccountSuspendCount' => $minAccountSuspendCount,
+                        'minReportedRecordsCount' => $minReportedRecordsCount,
+                        'minTakendownRecordsCount' => $minTakendownRecordsCount,
                     ])))
             );
 

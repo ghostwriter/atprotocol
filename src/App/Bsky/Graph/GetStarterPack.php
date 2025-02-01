@@ -20,15 +20,14 @@ final readonly class GetStarterPack
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
-    ) {
-    }
+    ) {}
 
-    public function __invoke(UriInterface $uri, ?string $starterPack = null): RequestInterface
+    public function __invoke(UriInterface $pdsUri, ?string $starterPack = null): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $uri->withPath('xrpc/app.bsky.graph.getStarterPack')
+                $pdsUri->withPath('xrpc/app.bsky.graph.getStarterPack')
                     ->withQuery(http_build_query(array_filter([
                         'starterPack' => $starterPack,
                     ])))

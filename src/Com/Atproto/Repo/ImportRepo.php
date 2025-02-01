@@ -8,7 +8,8 @@ use Psr\Http\Message\RequestFactoryInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriInterface;
-use RuntimeException;
+
+use const JSON_THROW_ON_ERROR;
 
 use function array_filter;
 use function json_encode;
@@ -23,16 +24,15 @@ final readonly class ImportRepo
     public function __construct(
         private RequestFactoryInterface $requestFactory,
         private StreamFactoryInterface $streamFactory,
-    ) {
-    }
+    ) {}
 
-    public function __invoke(UriInterface $uri): RequestInterface
+    public function __invoke(UriInterface $pdsUri): RequestInterface
     {
         $request = $this->requestFactory
-            ->createRequest('POST', $uri->withPath('xrpc/com.atproto.repo.importRepo'));
+            ->createRequest('POST', $pdsUri->withPath('xrpc/com.atproto.repo.importRepo'));
 
         $headers = [
-            'Accept' => 'application/json',
+            'Accept' => 'application/vnd.ipld.car',
             'Content-Type' => 'application/json; charset=utf-8',
         ];
 
@@ -40,11 +40,7 @@ final readonly class ImportRepo
             $request = $request->withHeader($name, $value);
         }
 
-        $jsonBody = json_encode(array_filter([]));
-
-        if ($jsonBody === false) {
-            throw new RuntimeException('Failed to encode JSON');
-        }
+        $jsonBody = json_encode(array_filter([]), JSON_THROW_ON_ERROR);
 
         return $request->withBody($this->streamFactory->createStream($jsonBody));
     }

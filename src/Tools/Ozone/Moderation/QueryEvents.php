@@ -20,17 +20,18 @@ final readonly class QueryEvents
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
-    ) {
-    }
+    ) {}
 
     public function __invoke(
-        UriInterface $uri,
+        UriInterface $pdsUri,
         ?array $types = null,
         ?string $createdBy = null,
         ?string $sortDirection = null,
         ?string $createdAfter = null,
         ?string $createdBefore = null,
         ?string $subject = null,
+        ?array $collections = null,
+        ?string $subjectType = null,
         ?bool $includeAllUserRecords = null,
         ?int $limit = null,
         ?bool $hasComment = null,
@@ -40,12 +41,13 @@ final readonly class QueryEvents
         ?array $addedTags = null,
         ?array $removedTags = null,
         ?array $reportTypes = null,
+        ?array $policies = null,
         ?string $cursor = null,
     ): RequestInterface {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $uri->withPath('xrpc/tools.ozone.moderation.queryEvents')
+                $pdsUri->withPath('xrpc/tools.ozone.moderation.queryEvents')
                     ->withQuery(http_build_query(array_filter([
                         'types' => $types,
                         'createdBy' => $createdBy,
@@ -53,6 +55,8 @@ final readonly class QueryEvents
                         'createdAfter' => $createdAfter,
                         'createdBefore' => $createdBefore,
                         'subject' => $subject,
+                        'collections' => $collections,
+                        'subjectType' => $subjectType,
                         'includeAllUserRecords' => $includeAllUserRecords,
                         'limit' => $limit,
                         'hasComment' => $hasComment,
@@ -62,6 +66,7 @@ final readonly class QueryEvents
                         'addedTags' => $addedTags,
                         'removedTags' => $removedTags,
                         'reportTypes' => $reportTypes,
+                        'policies' => $policies,
                         'cursor' => $cursor,
                     ])))
             );

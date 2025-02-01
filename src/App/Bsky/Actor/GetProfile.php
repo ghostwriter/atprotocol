@@ -20,15 +20,14 @@ final readonly class GetProfile
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
-    ) {
-    }
+    ) {}
 
-    public function __invoke(UriInterface $uri, ?string $actor = null): RequestInterface
+    public function __invoke(UriInterface $pdsUri, ?string $actor = null): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $uri->withPath('xrpc/app.bsky.actor.getProfile')
+                $pdsUri->withPath('xrpc/app.bsky.actor.getProfile')
                     ->withQuery(http_build_query(array_filter([
                         'actor' => $actor,
                     ])))
