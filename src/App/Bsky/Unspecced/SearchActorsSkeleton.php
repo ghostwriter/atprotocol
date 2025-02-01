@@ -20,11 +20,10 @@ final readonly class SearchActorsSkeleton
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
-    ) {
-    }
+    ) {}
 
     public function __invoke(
-        UriInterface $uri,
+        UriInterface $pdsUri,
         ?string $q = null,
         ?string $viewer = null,
         ?bool $typeahead = null,
@@ -34,7 +33,7 @@ final readonly class SearchActorsSkeleton
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $uri->withPath('xrpc/app.bsky.unspecced.searchActorsSkeleton')
+                $pdsUri->withPath('xrpc/app.bsky.unspecced.searchActorsSkeleton')
                     ->withQuery(http_build_query(array_filter([
                         'q' => $q,
                         'viewer' => $viewer,

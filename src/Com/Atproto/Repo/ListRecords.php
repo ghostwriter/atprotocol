@@ -20,11 +20,10 @@ final readonly class ListRecords
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
-    ) {
-    }
+    ) {}
 
     public function __invoke(
-        UriInterface $uri,
+        UriInterface $pdsUri,
         ?string $repo = null,
         ?string $collection = null,
         ?int $limit = null,
@@ -34,7 +33,7 @@ final readonly class ListRecords
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $uri->withPath('xrpc/com.atproto.repo.listRecords')
+                $pdsUri->withPath('xrpc/com.atproto.repo.listRecords')
                     ->withQuery(http_build_query(array_filter([
                         'repo' => $repo,
                         'collection' => $collection,

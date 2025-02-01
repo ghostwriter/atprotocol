@@ -8,7 +8,8 @@ use Psr\Http\Message\RequestFactoryInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriInterface;
-use RuntimeException;
+
+use const JSON_THROW_ON_ERROR;
 
 use function array_filter;
 use function json_encode;
@@ -23,17 +24,16 @@ final readonly class UpdateMember
     public function __construct(
         private RequestFactoryInterface $requestFactory,
         private StreamFactoryInterface $streamFactory,
-    ) {
-    }
+    ) {}
 
     public function __invoke(
-        UriInterface $uri,
+        UriInterface $pdsUri,
         ?string $did = null,
         ?bool $disabled = null,
         ?string $role = null,
     ): RequestInterface {
         $request = $this->requestFactory
-            ->createRequest('POST', $uri->withPath('xrpc/tools.ozone.team.updateMember'));
+            ->createRequest('POST', $pdsUri->withPath('xrpc/tools.ozone.team.updateMember'));
 
         $headers = [
             'Accept' => 'application/json',
@@ -48,11 +48,7 @@ final readonly class UpdateMember
             'did' => $did,
             'disabled' => $disabled,
             'role' => $role,
-        ]));
-
-        if ($jsonBody === false) {
-            throw new RuntimeException('Failed to encode JSON');
-        }
+        ]), JSON_THROW_ON_ERROR);
 
         return $request->withBody($this->streamFactory->createStream($jsonBody));
     }

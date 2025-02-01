@@ -20,15 +20,14 @@ final readonly class FetchLabels
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
-    ) {
-    }
+    ) {}
 
-    public function __invoke(UriInterface $uri, ?int $since = null, ?int $limit = null): RequestInterface
+    public function __invoke(UriInterface $pdsUri, ?int $since = null, ?int $limit = null): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $uri->withPath('xrpc/com.atproto.temp.fetchLabels')
+                $pdsUri->withPath('xrpc/com.atproto.temp.fetchLabels')
                     ->withQuery(http_build_query(array_filter([
                         'since' => $since,
                         'limit' => $limit,

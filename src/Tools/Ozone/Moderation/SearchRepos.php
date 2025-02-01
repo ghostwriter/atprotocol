@@ -20,11 +20,10 @@ final readonly class SearchRepos
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
-    ) {
-    }
+    ) {}
 
     public function __invoke(
-        UriInterface $uri,
+        UriInterface $pdsUri,
         ?string $q = null,
         ?int $limit = null,
         ?string $cursor = null,
@@ -32,7 +31,7 @@ final readonly class SearchRepos
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $uri->withPath('xrpc/tools.ozone.moderation.searchRepos')
+                $pdsUri->withPath('xrpc/tools.ozone.moderation.searchRepos')
                     ->withQuery(http_build_query(array_filter([
                         'q' => $q,
                         'limit' => $limit,

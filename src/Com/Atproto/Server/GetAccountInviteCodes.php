@@ -20,18 +20,17 @@ final readonly class GetAccountInviteCodes
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
-    ) {
-    }
+    ) {}
 
     public function __invoke(
-        UriInterface $uri,
+        UriInterface $pdsUri,
         ?bool $includeUsed = null,
         ?bool $createAvailable = null,
     ): RequestInterface {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $uri->withPath('xrpc/com.atproto.server.getAccountInviteCodes')
+                $pdsUri->withPath('xrpc/com.atproto.server.getAccountInviteCodes')
                     ->withQuery(http_build_query(array_filter([
                         'includeUsed' => $includeUsed,
                         'createAvailable' => $createAvailable,

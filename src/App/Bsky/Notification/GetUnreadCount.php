@@ -20,15 +20,17 @@ final readonly class GetUnreadCount
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
-    ) {
-    }
+    ) {}
 
-    public function __invoke(UriInterface $uri, ?bool $priority = null, ?string $seenAt = null): RequestInterface
-    {
+    public function __invoke(
+        UriInterface $pdsUri,
+        ?bool $priority = null,
+        ?string $seenAt = null,
+    ): RequestInterface {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $uri->withPath('xrpc/app.bsky.notification.getUnreadCount')
+                $pdsUri->withPath('xrpc/app.bsky.notification.getUnreadCount')
                     ->withQuery(http_build_query(array_filter([
                         'priority' => $priority,
                         'seenAt' => $seenAt,

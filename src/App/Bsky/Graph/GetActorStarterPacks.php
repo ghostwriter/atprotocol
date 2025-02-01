@@ -20,11 +20,10 @@ final readonly class GetActorStarterPacks
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
-    ) {
-    }
+    ) {}
 
     public function __invoke(
-        UriInterface $uri,
+        UriInterface $pdsUri,
         ?string $actor = null,
         ?int $limit = null,
         ?string $cursor = null,
@@ -32,7 +31,7 @@ final readonly class GetActorStarterPacks
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $uri->withPath('xrpc/app.bsky.graph.getActorStarterPacks')
+                $pdsUri->withPath('xrpc/app.bsky.graph.getActorStarterPacks')
                     ->withQuery(http_build_query(array_filter([
                         'actor' => $actor,
                         'limit' => $limit,

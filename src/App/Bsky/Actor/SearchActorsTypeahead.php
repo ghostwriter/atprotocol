@@ -20,15 +20,14 @@ final readonly class SearchActorsTypeahead
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
-    ) {
-    }
+    ) {}
 
-    public function __invoke(UriInterface $uri, ?string $q = null, ?int $limit = null): RequestInterface
+    public function __invoke(UriInterface $pdsUri, ?string $q = null, ?int $limit = null): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $uri->withPath('xrpc/app.bsky.actor.searchActorsTypeahead')
+                $pdsUri->withPath('xrpc/app.bsky.actor.searchActorsTypeahead')
                     ->withQuery(http_build_query(array_filter([
                         'q' => $q,
                         'limit' => $limit,

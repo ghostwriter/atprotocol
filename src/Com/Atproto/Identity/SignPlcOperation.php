@@ -8,7 +8,8 @@ use Psr\Http\Message\RequestFactoryInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriInterface;
-use RuntimeException;
+
+use const JSON_THROW_ON_ERROR;
 
 use function array_filter;
 use function json_encode;
@@ -23,11 +24,10 @@ final readonly class SignPlcOperation
     public function __construct(
         private RequestFactoryInterface $requestFactory,
         private StreamFactoryInterface $streamFactory,
-    ) {
-    }
+    ) {}
 
     public function __invoke(
-        UriInterface $uri,
+        UriInterface $pdsUri,
         ?string $token = null,
         ?array $rotationKeys = null,
         ?array $alsoKnownAs = null,
@@ -35,7 +35,7 @@ final readonly class SignPlcOperation
         ?string $services = null,
     ): RequestInterface {
         $request = $this->requestFactory
-            ->createRequest('POST', $uri->withPath('xrpc/com.atproto.identity.signPlcOperation'));
+            ->createRequest('POST', $pdsUri->withPath('xrpc/com.atproto.identity.signPlcOperation'));
 
         $headers = [
             'Accept' => 'application/json',
@@ -52,11 +52,7 @@ final readonly class SignPlcOperation
             'alsoKnownAs' => $alsoKnownAs,
             'verificationMethods' => $verificationMethods,
             'services' => $services,
-        ]));
-
-        if ($jsonBody === false) {
-            throw new RuntimeException('Failed to encode JSON');
-        }
+        ]), JSON_THROW_ON_ERROR);
 
         return $request->withBody($this->streamFactory->createStream($jsonBody));
     }

@@ -8,7 +8,8 @@ use Psr\Http\Message\RequestFactoryInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriInterface;
-use RuntimeException;
+
+use const JSON_THROW_ON_ERROR;
 
 use function array_filter;
 use function json_encode;
@@ -23,13 +24,15 @@ final readonly class UpdateAccountPassword
     public function __construct(
         private RequestFactoryInterface $requestFactory,
         private StreamFactoryInterface $streamFactory,
-    ) {
-    }
+    ) {}
 
-    public function __invoke(UriInterface $uri, ?string $did = null, ?string $password = null): RequestInterface
-    {
+    public function __invoke(
+        UriInterface $pdsUri,
+        ?string $did = null,
+        ?string $password = null,
+    ): RequestInterface {
         $request = $this->requestFactory
-            ->createRequest('POST', $uri->withPath('xrpc/com.atproto.admin.updateAccountPassword'));
+            ->createRequest('POST', $pdsUri->withPath('xrpc/com.atproto.admin.updateAccountPassword'));
 
         $headers = [
             'Accept' => 'application/json',
@@ -43,11 +46,7 @@ final readonly class UpdateAccountPassword
         $jsonBody = json_encode(array_filter([
             'did' => $did,
             'password' => $password,
-        ]));
-
-        if ($jsonBody === false) {
-            throw new RuntimeException('Failed to encode JSON');
-        }
+        ]), JSON_THROW_ON_ERROR);
 
         return $request->withBody($this->streamFactory->createStream($jsonBody));
     }

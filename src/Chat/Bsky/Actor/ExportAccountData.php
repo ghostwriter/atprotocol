@@ -19,21 +19,20 @@ final readonly class ExportAccountData
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
-    ) {
-    }
+    ) {}
 
-    public function __invoke(UriInterface $uri): RequestInterface
+    public function __invoke(UriInterface $pdsUri): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $uri->withPath('xrpc/chat.bsky.actor.exportAccountData')
+                $pdsUri->withPath('xrpc/chat.bsky.actor.exportAccountData')
                     ->withQuery(http_build_query(array_filter([])))
             );
 
         $headers = [
             'Accept' => 'application/json',
-            'Content-Type' => 'application/json; charset=utf-8',
+            'Content-Type' => 'application/jsonl; charset=utf-8',
         ];
 
         foreach ($headers as $name => $value) {
