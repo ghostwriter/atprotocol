@@ -14,7 +14,20 @@ final readonly class Bluesky
 {
     public function __construct(
         private PersonalDataServer $personalDataServer
-    ) {
+    ) {}
+
+    public static function new(PersonalDataServer|string|UriInterface $personalDataServer): self
+    {
+        return new self(
+            match (true) {
+                is_string($personalDataServer) => PersonalDataServer::new($personalDataServer),
+                $personalDataServer instanceof UriInterface => PersonalDataServer::new(
+                    $personalDataServer->__toString()
+                ),
+                $personalDataServer instanceof PersonalDataServer => $personalDataServer,
+                default => throw new InvalidArgumentException('Invalid personal data server'),
+            },
+        );
     }
 
     public function atProtocol(): AtProtocol
@@ -30,19 +43,5 @@ final readonly class Bluesky
     public function resumeSession(SessionData $sessionData): SessionData
     {
         return $sessionData;
-    }
-
-    public static function new(PersonalDataServer|string|UriInterface $personalDataServer): self
-    {
-        return new self(
-            match (true) {
-                is_string($personalDataServer) => PersonalDataServer::new($personalDataServer),
-                $personalDataServer instanceof UriInterface => PersonalDataServer::new(
-                    $personalDataServer->__toString()
-                ),
-                $personalDataServer instanceof PersonalDataServer => $personalDataServer,
-                default => throw new InvalidArgumentException('Invalid personal data server'),
-            },
-        );
     }
 }

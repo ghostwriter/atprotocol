@@ -8,7 +8,8 @@ use Psr\Http\Message\RequestFactoryInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriInterface;
-use RuntimeException;
+
+use const JSON_THROW_ON_ERROR;
 
 use function array_filter;
 use function json_encode;
@@ -23,18 +24,17 @@ final readonly class RegisterPush
     public function __construct(
         private RequestFactoryInterface $requestFactory,
         private StreamFactoryInterface $streamFactory,
-    ) {
-    }
+    ) {}
 
     public function __invoke(
-        UriInterface $uri,
+        UriInterface $pdsUri,
         ?string $serviceDid = null,
         ?string $token = null,
         ?string $platform = null,
         ?string $appId = null,
     ): RequestInterface {
         $request = $this->requestFactory
-            ->createRequest('POST', $uri->withPath('xrpc/app.bsky.notification.registerPush'));
+            ->createRequest('POST', $pdsUri->withPath('xrpc/app.bsky.notification.registerPush'));
 
         $headers = [
             'Accept' => 'application/json',
@@ -50,11 +50,7 @@ final readonly class RegisterPush
             'token' => $token,
             'platform' => $platform,
             'appId' => $appId,
-        ]));
-
-        if ($jsonBody === false) {
-            throw new RuntimeException('Failed to encode JSON');
-        }
+        ]), JSON_THROW_ON_ERROR);
 
         return $request->withBody($this->streamFactory->createStream($jsonBody));
     }

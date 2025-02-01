@@ -20,11 +20,10 @@ final readonly class GetSubjectStatus
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
-    ) {
-    }
+    ) {}
 
     public function __invoke(
-        UriInterface $uri,
+        UriInterface $pdsUri,
         ?string $did = null,
         ?string $uri = null,
         ?string $blob = null,
@@ -32,7 +31,7 @@ final readonly class GetSubjectStatus
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $uri->withPath('xrpc/com.atproto.admin.getSubjectStatus')
+                $pdsUri->withPath('xrpc/com.atproto.admin.getSubjectStatus')
                     ->withQuery(http_build_query(array_filter([
                         'did' => $did,
                         'uri' => $uri,

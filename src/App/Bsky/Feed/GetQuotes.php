@@ -20,11 +20,10 @@ final readonly class GetQuotes
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
-    ) {
-    }
+    ) {}
 
     public function __invoke(
-        UriInterface $uri,
+        UriInterface $pdsUri,
         ?string $uri = null,
         ?string $cid = null,
         ?int $limit = null,
@@ -33,7 +32,7 @@ final readonly class GetQuotes
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $uri->withPath('xrpc/app.bsky.feed.getQuotes')
+                $pdsUri->withPath('xrpc/app.bsky.feed.getQuotes')
                     ->withQuery(http_build_query(array_filter([
                         'uri' => $uri,
                         'cid' => $cid,

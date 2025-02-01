@@ -8,7 +8,8 @@ use Psr\Http\Message\RequestFactoryInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriInterface;
-use RuntimeException;
+
+use const JSON_THROW_ON_ERROR;
 
 use function array_filter;
 use function json_encode;
@@ -23,13 +24,12 @@ final readonly class MuteActor
     public function __construct(
         private RequestFactoryInterface $requestFactory,
         private StreamFactoryInterface $streamFactory,
-    ) {
-    }
+    ) {}
 
-    public function __invoke(UriInterface $uri, ?string $actor = null): RequestInterface
+    public function __invoke(UriInterface $pdsUri, ?string $actor = null): RequestInterface
     {
         $request = $this->requestFactory
-            ->createRequest('POST', $uri->withPath('xrpc/app.bsky.graph.muteActor'));
+            ->createRequest('POST', $pdsUri->withPath('xrpc/app.bsky.graph.muteActor'));
 
         $headers = [
             'Accept' => 'application/json',
@@ -42,11 +42,7 @@ final readonly class MuteActor
 
         $jsonBody = json_encode(array_filter([
             'actor' => $actor,
-        ]));
-
-        if ($jsonBody === false) {
-            throw new RuntimeException('Failed to encode JSON');
-        }
+        ]), JSON_THROW_ON_ERROR);
 
         return $request->withBody($this->streamFactory->createStream($jsonBody));
     }
