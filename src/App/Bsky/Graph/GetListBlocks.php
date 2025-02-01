@@ -20,15 +20,14 @@ final readonly class GetListBlocks
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
-    ) {
-    }
+    ) {}
 
-    public function __invoke(UriInterface $uri, ?int $limit = null, ?string $cursor = null): RequestInterface
+    public function __invoke(UriInterface $pdsUri, ?int $limit = null, ?string $cursor = null): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $uri->withPath('xrpc/app.bsky.graph.getListBlocks')
+                $pdsUri->withPath('xrpc/app.bsky.graph.getListBlocks')
                     ->withQuery(http_build_query(array_filter([
                         'limit' => $limit,
                         'cursor' => $cursor,

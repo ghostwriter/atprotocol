@@ -20,15 +20,14 @@ final readonly class GetFeedGenerators
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
-    ) {
-    }
+    ) {}
 
-    public function __invoke(UriInterface $uri, ?array $feeds = null): RequestInterface
+    public function __invoke(UriInterface $pdsUri, ?array $feeds = null): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $uri->withPath('xrpc/app.bsky.feed.getFeedGenerators')
+                $pdsUri->withPath('xrpc/app.bsky.feed.getFeedGenerators')
                     ->withQuery(http_build_query(array_filter([
                         'feeds' => $feeds,
                     ])))

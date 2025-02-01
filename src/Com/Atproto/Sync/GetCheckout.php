@@ -20,15 +20,14 @@ final readonly class GetCheckout
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
-    ) {
-    }
+    ) {}
 
-    public function __invoke(UriInterface $uri, ?string $did = null): RequestInterface
+    public function __invoke(UriInterface $pdsUri, ?string $did = null): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $uri->withPath('xrpc/com.atproto.sync.getCheckout')
+                $pdsUri->withPath('xrpc/com.atproto.sync.getCheckout')
                     ->withQuery(http_build_query(array_filter([
                         'did' => $did,
                     ])))
@@ -36,7 +35,7 @@ final readonly class GetCheckout
 
         $headers = [
             'Accept' => 'application/json',
-            'Content-Type' => 'application/json; charset=utf-8',
+            'Content-Type' => 'application/vnd.ipld.car; charset=utf-8',
         ];
 
         foreach ($headers as $name => $value) {

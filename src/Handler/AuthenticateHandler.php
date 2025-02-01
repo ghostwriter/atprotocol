@@ -11,8 +11,7 @@ final readonly class AuthenticateHandler
     public function __construct(
         private string $username,
         private string $password,
-    ) {
-    }
+    ) {}
 
     public function __invoke(RequestInterface $request): RequestInterface
     {

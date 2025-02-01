@@ -20,11 +20,10 @@ final readonly class GetPostThread
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
-    ) {
-    }
+    ) {}
 
     public function __invoke(
-        UriInterface $uri,
+        UriInterface $pdsUri,
         ?string $uri = null,
         ?int $depth = null,
         ?int $parentHeight = null,
@@ -32,7 +31,7 @@ final readonly class GetPostThread
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $uri->withPath('xrpc/app.bsky.feed.getPostThread')
+                $pdsUri->withPath('xrpc/app.bsky.feed.getPostThread')
                     ->withQuery(http_build_query(array_filter([
                         'uri' => $uri,
                         'depth' => $depth,

@@ -8,7 +8,8 @@ use Psr\Http\Message\RequestFactoryInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriInterface;
-use RuntimeException;
+
+use const JSON_THROW_ON_ERROR;
 
 use function array_filter;
 use function json_encode;
@@ -23,20 +24,20 @@ final readonly class UpdateTemplate
     public function __construct(
         private RequestFactoryInterface $requestFactory,
         private StreamFactoryInterface $streamFactory,
-    ) {
-    }
+    ) {}
 
     public function __invoke(
-        UriInterface $uri,
+        UriInterface $pdsUri,
         ?string $id = null,
         ?string $name = null,
+        ?string $lang = null,
         ?string $contentMarkdown = null,
         ?string $subject = null,
         ?string $updatedBy = null,
         ?bool $disabled = null,
     ): RequestInterface {
         $request = $this->requestFactory
-            ->createRequest('POST', $uri->withPath('xrpc/tools.ozone.communication.updateTemplate'));
+            ->createRequest('POST', $pdsUri->withPath('xrpc/tools.ozone.communication.updateTemplate'));
 
         $headers = [
             'Accept' => 'application/json',
@@ -50,15 +51,12 @@ final readonly class UpdateTemplate
         $jsonBody = json_encode(array_filter([
             'id' => $id,
             'name' => $name,
+            'lang' => $lang,
             'contentMarkdown' => $contentMarkdown,
             'subject' => $subject,
             'updatedBy' => $updatedBy,
             'disabled' => $disabled,
-        ]));
-
-        if ($jsonBody === false) {
-            throw new RuntimeException('Failed to encode JSON');
-        }
+        ]), JSON_THROW_ON_ERROR);
 
         return $request->withBody($this->streamFactory->createStream($jsonBody));
     }

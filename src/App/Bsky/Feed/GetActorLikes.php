@@ -12,7 +12,7 @@ use function array_filter;
 use function http_build_query;
 
 /**
- * Get a list of posts liked by an actor. Does not require auth.
+ * Get a list of posts liked by an actor. Requires auth, actor must be the requesting account.
  *
  * @see GetActorLikesTest
  */
@@ -20,11 +20,10 @@ final readonly class GetActorLikes
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
-    ) {
-    }
+    ) {}
 
     public function __invoke(
-        UriInterface $uri,
+        UriInterface $pdsUri,
         ?string $actor = null,
         ?int $limit = null,
         ?string $cursor = null,
@@ -32,7 +31,7 @@ final readonly class GetActorLikes
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $uri->withPath('xrpc/app.bsky.feed.getActorLikes')
+                $pdsUri->withPath('xrpc/app.bsky.feed.getActorLikes')
                     ->withQuery(http_build_query(array_filter([
                         'actor' => $actor,
                         'limit' => $limit,

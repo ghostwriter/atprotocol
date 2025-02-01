@@ -19,15 +19,14 @@ final readonly class GetLog
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
-    ) {
-    }
+    ) {}
 
-    public function __invoke(UriInterface $uri, ?string $cursor = null): RequestInterface
+    public function __invoke(UriInterface $pdsUri, ?string $cursor = null): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $uri->withPath('xrpc/chat.bsky.convo.getLog')
+                $pdsUri->withPath('xrpc/chat.bsky.convo.getLog')
                     ->withQuery(http_build_query(array_filter([
                         'cursor' => $cursor,
                     ])))

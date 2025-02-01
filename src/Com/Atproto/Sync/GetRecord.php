@@ -20,11 +20,10 @@ final readonly class GetRecord
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
-    ) {
-    }
+    ) {}
 
     public function __invoke(
-        UriInterface $uri,
+        UriInterface $pdsUri,
         ?string $did = null,
         ?string $collection = null,
         ?string $rkey = null,
@@ -32,7 +31,7 @@ final readonly class GetRecord
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $uri->withPath('xrpc/com.atproto.sync.getRecord')
+                $pdsUri->withPath('xrpc/com.atproto.sync.getRecord')
                     ->withQuery(http_build_query(array_filter([
                         'did' => $did,
                         'collection' => $collection,
@@ -42,7 +41,7 @@ final readonly class GetRecord
 
         $headers = [
             'Accept' => 'application/json',
-            'Content-Type' => 'application/json; charset=utf-8',
+            'Content-Type' => 'application/vnd.ipld.car; charset=utf-8',
         ];
 
         foreach ($headers as $name => $value) {

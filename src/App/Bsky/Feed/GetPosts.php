@@ -20,15 +20,14 @@ final readonly class GetPosts
 {
     public function __construct(
         private RequestFactoryInterface $requestFactory,
-    ) {
-    }
+    ) {}
 
-    public function __invoke(UriInterface $uri, ?array $uris = null): RequestInterface
+    public function __invoke(UriInterface $pdsUri, ?array $uris = null): RequestInterface
     {
         $request = $this->requestFactory
             ->createRequest(
                 'GET',
-                $uri->withPath('xrpc/app.bsky.feed.getPosts')
+                $pdsUri->withPath('xrpc/app.bsky.feed.getPosts')
                     ->withQuery(http_build_query(array_filter([
                         'uris' => $uris,
                     ])))
