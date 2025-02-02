@@ -43,7 +43,7 @@
         "ext-curl": "*",
         "ghostwriter/collection": "^2.0.0",
         "ghostwriter/config": "^0.4.1",
-        "ghostwriter/container": "^4.0.3",
+        "ghostwriter/container": "^4.0.5",
         "ghostwriter/event-dispatcher": "^5.0.2",
         "ghostwriter/http": "dev-main",
         "ghostwriter/json": "^3.0.0",
