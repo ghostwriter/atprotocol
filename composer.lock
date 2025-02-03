@@ -7431,7 +7431,7 @@
         "php": ">=8.3",
         "ext-curl": "*"
     },
-    "platform-dev": [],
+    "platform-dev": {},
     "platform-overrides": {
         "php": "8.3.999"
     },
