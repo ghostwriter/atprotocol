@@ -85,7 +85,7 @@
         "discard-changes": true,
         "optimize-autoloader": true,
         "platform": {
-            "php": "8.3.999"
+            "php": "8.4.999"
         },
         "preferred-install": "dist",
         "prepend-autoloader": true,
