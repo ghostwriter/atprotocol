@@ -41,6 +41,7 @@
     "require": {
         "php": ">=8.3",
         "ext-curl": "*",
+        "ghostwriter/case-converter": "^2.0.0",
         "ghostwriter/collection": "^2.0.0",
         "ghostwriter/config": "^1.0.0",
         "ghostwriter/container": "^4.0.5",
@@ -71,6 +72,9 @@
         "psr-4": {
             "Tests\\Unit\\": "tests/unit/"
         },
+        "files": [
+            "tests/bootstrap.php"
+        ],
         "exclude-from-classmap": [
             "tests/fixture/"
         ]
