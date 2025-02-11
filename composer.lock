@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "70511e5f0a72201e6c1761976868b171",
+    "content-hash": "bd9472fd8b1033048a8b9bb698436394",
     "packages": [
         {
             "name": "clue/stream-filter",
@@ -2034,12 +2034,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ghostwriter/coding-standard.git",
-                "reference": "809a732740176b20ea3f74aa5e1fe6c205baa81e"
+                "reference": "ae1e31fb5da43e91c51e3b31624a0570c5065017"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ghostwriter/coding-standard/zipball/809a732740176b20ea3f74aa5e1fe6c205baa81e",
-                "reference": "809a732740176b20ea3f74aa5e1fe6c205baa81e",
+                "url": "https://api.github.com/repos/ghostwriter/coding-standard/zipball/ae1e31fb5da43e91c51e3b31624a0570c5065017",
+                "reference": "ae1e31fb5da43e91c51e3b31624a0570c5065017",
                 "shasum": ""
             },
             "require": {
@@ -2070,7 +2070,7 @@
                 "ext-xmlwriter": "*",
                 "ext-zlib": "*",
                 "mockery/mockery": "^1.6.12",
-                "php": "^8.2",
+                "php": "^8.4",
                 "phpunit/phpunit": "^12.0.2",
                 "symfony/var-dumper": "^7.2.3"
             },
@@ -2078,6 +2078,7 @@
                 "vimeo/psalm": "<6.0"
             },
             "require-dev": {
+                "ghostwriter/case-converter": "^2.0.0",
                 "ghostwriter/container": "^4.0.5",
                 "ghostwriter/filesystem": "^0.1.1",
                 "ghostwriter/json": "^3.0.0",
@@ -2098,7 +2099,7 @@
             },
             "autoload": {
                 "psr-4": {
-                    "Ghostwriter\\CodingStandard\\": "src"
+                    "Ghostwriter\\CodingStandard\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -2134,7 +2135,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-02-08T17:01:17+00:00"
+            "time": "2025-02-10T20:18:56+00:00"
         },
         {
             "name": "ghostwriter/filesystem",
@@ -2195,81 +2196,6 @@
                 }
             ],
             "time": "2024-10-10T16:28:42+00:00"
-        },
-        {
-            "name": "ghostwriter/psalm-plugin",
-            "version": "dev-main",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/ghostwriter/psalm-plugin.git",
-                "reference": "bffd0762547b19b7e76c0797985fa5b708defe46"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/ghostwriter/psalm-plugin/zipball/bffd0762547b19b7e76c0797985fa5b708defe46",
-                "reference": "bffd0762547b19b7e76c0797985fa5b708defe46",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=8.1"
-            },
-            "replace": {
-                "ghostwriter/example-psalm-plugin": "*",
-                "ghostwriter/phpunit-psalm-plugin": "*"
-            },
-            "require-dev": {
-                "ghostwriter/coding-standard": "dev-main",
-                "ghostwriter/psalm-plugin-tester": "^0.2.1",
-                "psr/container": "^2.0.2",
-                "vimeo/psalm": "^5.26.1"
-            },
-            "default-branch": true,
-            "type": "psalm-plugin",
-            "extra": {
-                "psalm": {
-                    "pluginClass": "Ghostwriter\\PsalmPlugin\\Plugin"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Ghostwriter\\PsalmPlugin\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Nathanael Esayeas",
-                    "email": "nathanael.esayeas@protonmail.com",
-                    "homepage": "https://github.com/ghostwriter",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Provides a plugin for Psalm",
-            "homepage": "https://github.com/ghostwriter/psalm-plugin",
-            "keywords": [
-                "dev",
-                "ghostwriter",
-                "psalm",
-                "psalm-plugin",
-                "static analysis"
-            ],
-            "support": {
-                "docs": "https://github.com/ghostwriter/psalm-plugin",
-                "forum": "https://github.com/ghostwriter/psalm-plugin/discussions",
-                "issues": "https://github.com/ghostwriter/psalm-plugin/issues",
-                "rss": "https://github.com/ghostwriter/psalm-plugin/releases.atom",
-                "source": "https://github.com/ghostwriter/psalm-plugin"
-            },
-            "funding": [
-                {
-                    "url": "https://github.com/sponsors/ghostwriter",
-                    "type": "github"
-                }
-            ],
-            "time": "2025-01-08T15:47:51+00:00"
         },
         {
             "name": "hamcrest/hamcrest-php",
@@ -5481,8 +5407,7 @@
     "minimum-stability": "stable",
     "stability-flags": {
         "ghostwriter/coding-standard": 20,
-        "ghostwriter/http": 20,
-        "ghostwriter/psalm-plugin": 20
+        "ghostwriter/http": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,

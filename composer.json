@@ -58,8 +58,7 @@
     },
     "require-dev": {
         "ghostwriter/coding-standard": "dev-main",
-        "ghostwriter/filesystem": "^0.1.1",
-        "ghostwriter/psalm-plugin": "dev-main"
+        "ghostwriter/filesystem": "^0.1.1"
     },
     "minimum-stability": "stable",
     "prefer-stable": true,
@@ -81,9 +80,7 @@
     },
     "config": {
         "allow-plugins": {
-            "ghostwriter/coding-standard": true,
-            "ghostwriter/handrail": true,
-            "php-http/discovery": true
+            "ghostwriter/coding-standard": true
         },
         "classmap-authoritative": false,
         "discard-changes": true,
