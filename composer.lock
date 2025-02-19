@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "bd9472fd8b1033048a8b9bb698436394",
+    "content-hash": "9857f23be6e25c22900a7ac6966ae44a",
     "packages": [
         {
             "name": "clue/stream-filter",
@@ -2034,12 +2034,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ghostwriter/coding-standard.git",
-                "reference": "6b94452200d90c1346b33a635af5f3ff20621ff2"
+                "reference": "95742ccce685abd58ed72018e208ed262d817eeb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ghostwriter/coding-standard/zipball/6b94452200d90c1346b33a635af5f3ff20621ff2",
-                "reference": "6b94452200d90c1346b33a635af5f3ff20621ff2",
+                "url": "https://api.github.com/repos/ghostwriter/coding-standard/zipball/95742ccce685abd58ed72018e208ed262d817eeb",
+                "reference": "95742ccce685abd58ed72018e208ed262d817eeb",
                 "shasum": ""
             },
             "require": {
@@ -2135,7 +2135,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-02-18T23:01:24+00:00"
+            "time": "2025-02-19T20:38:02+00:00"
         },
         {
             "name": "ghostwriter/filesystem",
@@ -5412,7 +5412,7 @@
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
-        "php": ">=8.3",
+        "php": ">=8.4",
         "ext-curl": "*"
     },
     "platform-dev": [],
