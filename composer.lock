@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9857f23be6e25c22900a7ac6966ae44a",
+    "content-hash": "26cefd6ae3d25d16e154008f593da9d4",
     "packages": [
         {
             "name": "clue/stream-filter",
@@ -263,25 +263,23 @@
         },
         {
             "name": "ghostwriter/container",
-            "version": "4.0.5",
+            "version": "5.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ghostwriter/container.git",
-                "reference": "a0aa3c884e1b8e4bb1b044c72ebac74675a45bf6"
+                "reference": "e92b51b825b9b3883bfab6d1077e050bd8035d78"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ghostwriter/container/zipball/a0aa3c884e1b8e4bb1b044c72ebac74675a45bf6",
-                "reference": "a0aa3c884e1b8e4bb1b044c72ebac74675a45bf6",
+                "url": "https://api.github.com/repos/ghostwriter/container/zipball/e92b51b825b9b3883bfab6d1077e050bd8035d78",
+                "reference": "e92b51b825b9b3883bfab6d1077e050bd8035d78",
                 "shasum": ""
             },
             "require": {
-                "php": ">=8.3"
+                "php": ">=8.4"
             },
             "require-dev": {
-                "ghostwriter/coding-standard": "@dev",
-                "ghostwriter/psalm-plugin": "@dev",
-                "ghostwriter/testify": "@dev"
+                "ghostwriter/coding-standard": "dev-main"
             },
             "type": "library",
             "autoload": {
@@ -319,25 +317,25 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-02-02T00:23:20+00:00"
+            "time": "2025-02-21T19:09:09+00:00"
         },
         {
             "name": "ghostwriter/event-dispatcher",
-            "version": "5.0.2",
+            "version": "5.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ghostwriter/event-dispatcher.git",
-                "reference": "3fd8e9b0714298930b2a250a4c369c05c614a33a"
+                "reference": "71cb9a58f959130dc41573e2f31d84aaf07d4f9d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ghostwriter/event-dispatcher/zipball/3fd8e9b0714298930b2a250a4c369c05c614a33a",
-                "reference": "3fd8e9b0714298930b2a250a4c369c05c614a33a",
+                "url": "https://api.github.com/repos/ghostwriter/event-dispatcher/zipball/71cb9a58f959130dc41573e2f31d84aaf07d4f9d",
+                "reference": "71cb9a58f959130dc41573e2f31d84aaf07d4f9d",
                 "shasum": ""
             },
             "require": {
-                "ghostwriter/container": "^4.0.2",
-                "php": ">=8.3"
+                "ghostwriter/container": "^5.0.0",
+                "php": ">=8.4"
             },
             "require-dev": {
                 "ghostwriter/coding-standard": "dev-main"
@@ -361,13 +359,12 @@
                 }
             ],
             "description": "Event Dispatcher implementation.",
+            "homepage": "https://github.com/ghostwriter/event-dispatcher",
             "keywords": [
                 "event-dispatcher",
                 "ghostwriter"
             ],
             "support": {
-                "docs": "https://github.com/ghostwriter/event-dispatcher",
-                "forum": "https://github.com/ghostwriter/event-dispatcher/discussions",
                 "issues": "https://github.com/ghostwriter/event-dispatcher/issues",
                 "rss": "https://github.com/ghostwriter/event-dispatcher/releases.atom",
                 "security": "https://github.com/ghostwriter/event-dispatcher/security/advisories/new",
@@ -379,7 +376,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-07-15T22:32:15+00:00"
+            "time": "2025-02-21T19:18:04+00:00"
         },
         {
             "name": "ghostwriter/http",
