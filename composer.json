@@ -42,6 +42,7 @@
         "php": ">=8.4",
         "ext-curl": "*",
         "ghostwriter/case-converter": "^2.0.0",
+        "ghostwriter/coding-standard": "dev-main",
         "ghostwriter/collection": "^2.0.0",
         "ghostwriter/config": "^1.0.0",
         "ghostwriter/container": "5.0.0",
@@ -57,7 +58,6 @@
         "psr/http-factory": "^1.1.0"
     },
     "require-dev": {
-        "ghostwriter/coding-standard": "dev-main",
         "ghostwriter/filesystem": "^0.1.1"
     },
     "minimum-stability": "stable",
