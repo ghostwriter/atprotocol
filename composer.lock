@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1758a9ad8975a41547e83f8c1c7a994b",
+    "content-hash": "5b8e0b6896183eea06dc96aac159ec4a",
     "packages": [
         {
             "name": "clue/stream-filter",
@@ -2031,12 +2031,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ghostwriter/coding-standard.git",
-                "reference": "3ea929a51fe02b1ea0abc6c1f0c07d5b4f915b03"
+                "reference": "ba3bb4d876b0a78bcc309d034124df20f5dd58ca"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ghostwriter/coding-standard/zipball/3ea929a51fe02b1ea0abc6c1f0c07d5b4f915b03",
-                "reference": "3ea929a51fe02b1ea0abc6c1f0c07d5b4f915b03",
+                "url": "https://api.github.com/repos/ghostwriter/coding-standard/zipball/ba3bb4d876b0a78bcc309d034124df20f5dd58ca",
+                "reference": "ba3bb4d876b0a78bcc309d034124df20f5dd58ca",
                 "shasum": ""
             },
             "require": {
@@ -2132,7 +2132,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-02-25T16:53:32+00:00"
+            "time": "2025-02-26T16:46:33+00:00"
         },
         {
             "name": "ghostwriter/filesystem",
