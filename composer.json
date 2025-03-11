@@ -83,6 +83,7 @@
             "ghostwriter/coding-standard": true,
             "infection/extension-installer": true
         },
+        "bump-after-update": false,
         "classmap-authoritative": false,
         "discard-changes": true,
         "optimize-autoloader": true,
