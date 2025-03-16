@@ -3222,19 +3222,19 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ghostwriter/coding-standard.git",
-                "reference": "411a35dad89c196df5f3e8da2646ae95e8b5f141"
+                "reference": "819fd1014358c4dc0b575d93227feb7303b39785"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ghostwriter/coding-standard/zipball/411a35dad89c196df5f3e8da2646ae95e8b5f141",
-                "reference": "411a35dad89c196df5f3e8da2646ae95e8b5f141",
+                "url": "https://api.github.com/repos/ghostwriter/coding-standard/zipball/819fd1014358c4dc0b575d93227feb7303b39785",
+                "reference": "819fd1014358c4dc0b575d93227feb7303b39785",
                 "shasum": ""
             },
             "require": {
                 "composer-plugin-api": "^2.6.0",
                 "composer-runtime-api": "^2.2.2",
-                "composer/composer": "^2.8.6",
-                "composer/semver": "^3.4.3",
+                "composer/composer": "@stable",
+                "composer/semver": "@stable",
                 "ext-ctype": "*",
                 "ext-curl": "*",
                 "ext-dom": "*",
@@ -3257,20 +3257,24 @@
                 "ext-xml": "*",
                 "ext-xmlwriter": "*",
                 "ext-zlib": "*",
-                "infection/infection": "^0.29.14",
-                "mockery/mockery": "^1.6.12",
+                "infection/infection": "@stable",
+                "mockery/mockery": "@stable",
                 "php": "^8.4",
-                "phpunit/phpunit": "^12.0.7",
-                "symfony/var-dumper": "^7.2.3",
-                "vimeo/psalm": "^6.8.9"
+                "phpunit/phpunit": "@stable",
+                "symfony/var-dumper": "@stable",
+                "vimeo/psalm": "@stable"
+            },
+            "conflict": {
+                "pestphp/pest": "*",
+                "phpunit/phpunit": "<12.0"
             },
             "require-dev": {
-                "doctrine/inflector": "^2.0.10",
-                "ghostwriter/case-converter": "^2.0.0",
-                "ghostwriter/container": "^5.0.0",
-                "ghostwriter/filesystem": "^0.1.1",
-                "ghostwriter/json": "^3.0.0",
-                "ghostwriter/shell": "^0.1.0"
+                "doctrine/inflector": "@stable",
+                "ghostwriter/case-converter": "@stable",
+                "ghostwriter/container": "@stable",
+                "ghostwriter/filesystem": "@stable",
+                "ghostwriter/json": "@stable",
+                "ghostwriter/shell": "@stable"
             },
             "default-branch": true,
             "bin": [
@@ -3280,6 +3284,51 @@
             "type": "composer-plugin",
             "extra": {
                 "class": "Ghostwriter\\CodingStandard\\Plugin\\ComposerPlugin",
+                "ghostwriter": {
+                    "conflict": {
+                        "enabled": true,
+                        "vendors": [
+                            "250",
+                            "acmephp",
+                            "asm89",
+                            "async",
+                            "bilge",
+                            "binarykitten",
+                            "codelegance",
+                            "connectors",
+                            "doctrine",
+                            "ezsystems",
+                            "growthbook",
+                            "jdorn",
+                            "joomla",
+                            "jwage",
+                            "kazist",
+                            "khanamiryan",
+                            "larastan",
+                            "nunomaduro",
+                            "object-calisthenics",
+                            "ocramius",
+                            "pegasus",
+                            "pestphp",
+                            "phptal",
+                            "phptype",
+                            "pimcore",
+                            "provider",
+                            "roave",
+                            "scriptfusion",
+                            "silverstripe",
+                            "socialiteproviders",
+                            "spatie",
+                            "tga",
+                            "topthink",
+                            "yiisoft",
+                            "yuan1994",
+                            "zendframework",
+                            "zetacomponents",
+                            "zf-commons"
+                        ]
+                    }
+                },
                 "plugin-optional": false,
                 "plugin-modifies-downloads": false,
                 "plugin-modifies-install-path": false
@@ -3322,7 +3371,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-03-15T18:15:26+00:00"
+            "time": "2025-03-16T02:31:09+00:00"
         },
         {
             "name": "ghostwriter/filesystem",
