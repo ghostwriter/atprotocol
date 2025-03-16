@@ -43,7 +43,7 @@
     <testsuites>
         <testsuite name="default">
             <directory>tests/Unit</directory>
-            <exclude>tests/fixture</exclude>
+            <exclude>tests/Fixture</exclude>
         </testsuite>
     </testsuites>
 </phpunit>
