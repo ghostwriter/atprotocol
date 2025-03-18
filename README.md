@@ -126,4 +126,4 @@ If you discover any security-related issues, please use [`Security Advisories`](
 
 ### License
 
-The BSD-3-Clause. Please see [License File](./LICENSE) for more information.
+The BSD-4-Clause. Please see [License File](./LICENSE) for more information.

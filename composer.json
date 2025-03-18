@@ -1,7 +1,7 @@
 {
     "name": "ghostwriter/atprotocol",
     "description": "Bluesky API Client for AT Protocol",
-    "license": "BSD-3-Clause",
+    "license": "BSD-4-Clause",
     "type": "library",
     "keywords": [
         "ghostwriter",
