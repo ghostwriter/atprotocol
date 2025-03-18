@@ -3222,19 +3222,19 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ghostwriter/coding-standard.git",
-                "reference": "b477d1c685cba5778807fb3afe16c30caabff58d"
+                "reference": "86be9a0b01be556511d3e1b125901a745776be99"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ghostwriter/coding-standard/zipball/b477d1c685cba5778807fb3afe16c30caabff58d",
-                "reference": "b477d1c685cba5778807fb3afe16c30caabff58d",
+                "url": "https://api.github.com/repos/ghostwriter/coding-standard/zipball/86be9a0b01be556511d3e1b125901a745776be99",
+                "reference": "86be9a0b01be556511d3e1b125901a745776be99",
                 "shasum": ""
             },
             "require": {
                 "composer-plugin-api": "^2.6.0",
                 "composer-runtime-api": "^2.2.2",
-                "composer/composer": "@stable",
-                "composer/semver": "@stable",
+                "composer/composer": "^2.8 <3.0",
+                "composer/semver": "^3.0 <4.0",
                 "ext-ctype": "*",
                 "ext-curl": "*",
                 "ext-dom": "*",
@@ -3257,24 +3257,24 @@
                 "ext-xml": "*",
                 "ext-xmlwriter": "*",
                 "ext-zlib": "*",
-                "infection/infection": "@stable",
-                "mockery/mockery": "@stable",
+                "infection/infection": "^0.29 <1.0",
+                "mockery/mockery": "^1.6 <2.0",
                 "php": "^8.4",
-                "phpunit/phpunit": "@stable",
-                "symfony/var-dumper": "@stable",
-                "vimeo/psalm": "^6.9.1"
+                "phpunit/phpunit": "^12.0 <13.0",
+                "symfony/var-dumper": "^7.0 <8.0",
+                "vimeo/psalm": "^6.9 <7.0"
             },
             "conflict": {
                 "pestphp/pest": "*",
                 "phpunit/phpunit": "<12.0"
             },
             "require-dev": {
-                "doctrine/inflector": "@stable",
-                "ghostwriter/case-converter": "@stable",
-                "ghostwriter/container": "@stable",
-                "ghostwriter/filesystem": "@stable",
-                "ghostwriter/json": "@stable",
-                "ghostwriter/shell": "@stable"
+                "doctrine/inflector": "^2.0.10",
+                "ghostwriter/case-converter": "^2.0.0",
+                "ghostwriter/container": "^5.0.0",
+                "ghostwriter/filesystem": "^0.1.1",
+                "ghostwriter/json": "^3.0.0",
+                "ghostwriter/shell": "^0.1.0"
             },
             "default-branch": true,
             "bin": [
@@ -3340,7 +3340,7 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "BSD-3-Clause"
+                "BSD-4-Clause"
             ],
             "authors": [
                 {
@@ -3371,7 +3371,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-03-17T22:58:38+00:00"
+            "time": "2025-03-18T05:12:16+00:00"
         },
         {
             "name": "ghostwriter/filesystem",
