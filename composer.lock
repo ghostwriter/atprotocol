@@ -263,23 +263,27 @@
         },
         {
             "name": "ghostwriter/container",
-            "version": "5.0.0",
+            "version": "5.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ghostwriter/container.git",
-                "reference": "e92b51b825b9b3883bfab6d1077e050bd8035d78"
+                "reference": "e77a71185922b5a67a0219de6acce2d5be8496f2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ghostwriter/container/zipball/e92b51b825b9b3883bfab6d1077e050bd8035d78",
-                "reference": "e92b51b825b9b3883bfab6d1077e050bd8035d78",
+                "url": "https://api.github.com/repos/ghostwriter/container/zipball/e77a71185922b5a67a0219de6acce2d5be8496f2",
+                "reference": "e77a71185922b5a67a0219de6acce2d5be8496f2",
                 "shasum": ""
             },
             "require": {
-                "php": ">=8.4"
+                "php": "^8.4"
+            },
+            "provide": {
+                "psr/container-implementation": "*"
             },
             "require-dev": {
-                "ghostwriter/coding-standard": "dev-main"
+                "ghostwriter/coding-standard": "dev-main",
+                "psr/container": "^1.1 || ^2.0"
             },
             "type": "library",
             "autoload": {
@@ -289,7 +293,7 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "BSD-3-Clause"
+                "BSD-4-Clause"
             ],
             "authors": [
                 {
@@ -317,7 +321,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-02-21T19:09:09+00:00"
+            "time": "2025-03-18T19:43:29+00:00"
         },
         {
             "name": "ghostwriter/event-dispatcher",
