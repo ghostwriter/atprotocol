@@ -3226,12 +3226,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ghostwriter/coding-standard.git",
-                "reference": "cff4aea87a06ce745f5a40b340bb5de25cc09f39"
+                "reference": "8f72a6c8d819213790aaab39daa3f646f3abb280"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ghostwriter/coding-standard/zipball/cff4aea87a06ce745f5a40b340bb5de25cc09f39",
-                "reference": "cff4aea87a06ce745f5a40b340bb5de25cc09f39",
+                "url": "https://api.github.com/repos/ghostwriter/coding-standard/zipball/8f72a6c8d819213790aaab39daa3f646f3abb280",
+                "reference": "8f72a6c8d819213790aaab39daa3f646f3abb280",
                 "shasum": ""
             },
             "require": {
@@ -3275,7 +3275,7 @@
             "require-dev": {
                 "doctrine/inflector": "^2.0.10",
                 "ghostwriter/case-converter": "^2.0.0",
-                "ghostwriter/container": "^5.0.0",
+                "ghostwriter/container": "^5.0.1",
                 "ghostwriter/filesystem": "^0.1.1",
                 "ghostwriter/json": "^3.0.0",
                 "ghostwriter/shell": "^0.1.0"
@@ -3375,7 +3375,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-03-18T17:13:44+00:00"
+            "time": "2025-03-19T16:11:48+00:00"
         },
         {
             "name": "ghostwriter/filesystem",
@@ -5137,16 +5137,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "12.0.8",
+            "version": "12.0.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "ef9ca85556e4142ee2ca05ffb5afbe4303da20ac"
+                "reference": "7835bb4276780e0bbb385ce0a777b839e03096db"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/ef9ca85556e4142ee2ca05ffb5afbe4303da20ac",
-                "reference": "ef9ca85556e4142ee2ca05ffb5afbe4303da20ac",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/7835bb4276780e0bbb385ce0a777b839e03096db",
+                "reference": "7835bb4276780e0bbb385ce0a777b839e03096db",
                 "shasum": ""
             },
             "require": {
@@ -5214,7 +5214,7 @@
             "support": {
                 "issues": "https://github.com/sebastianbergmann/phpunit/issues",
                 "security": "https://github.com/sebastianbergmann/phpunit/security/policy",
-                "source": "https://github.com/sebastianbergmann/phpunit/tree/12.0.8"
+                "source": "https://github.com/sebastianbergmann/phpunit/tree/12.0.9"
             },
             "funding": [
                 {
@@ -5230,7 +5230,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-03-18T13:44:41+00:00"
+            "time": "2025-03-19T13:47:33+00:00"
         },
         {
             "name": "psr/container",
