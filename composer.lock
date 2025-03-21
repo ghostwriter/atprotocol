@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "99010d3a1e048b6aa2b00042325cb8b1",
+    "content-hash": "e56907103a2c2e2d297b86dd2cad57ba",
     "packages": [
         {
             "name": "clue/stream-filter",
@@ -3227,12 +3227,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ghostwriter/coding-standard.git",
-                "reference": "ea3f2cd6f5487370fd10e8e7e3a9dc507e674410"
+                "reference": "e61fcd5e61886f1fd635b73a85c69701e8cde4cd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ghostwriter/coding-standard/zipball/ea3f2cd6f5487370fd10e8e7e3a9dc507e674410",
-                "reference": "ea3f2cd6f5487370fd10e8e7e3a9dc507e674410",
+                "url": "https://api.github.com/repos/ghostwriter/coding-standard/zipball/e61fcd5e61886f1fd635b73a85c69701e8cde4cd",
+                "reference": "e61fcd5e61886f1fd635b73a85c69701e8cde4cd",
                 "shasum": ""
             },
             "require": {
@@ -3267,7 +3267,7 @@
                 "php": "^8.2",
                 "phpunit/phpunit": "~11.5.14 || ~12.0.9",
                 "symfony/var-dumper": "~7.2.3",
-                "vimeo/psalm": "~6.9.1"
+                "vimeo/psalm": "~6.9.4"
             },
             "conflict": {
                 "pestphp/pest": "*",
@@ -3377,7 +3377,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-03-21T03:55:37+00:00"
+            "time": "2025-03-21T22:50:06+00:00"
         },
         {
             "name": "ghostwriter/filesystem",
@@ -8258,7 +8258,7 @@
         "php": "^8.4",
         "ext-curl": "*"
     },
-    "platform-dev": {},
+    "platform-dev": [],
     "platform-overrides": {
         "php": "8.4.999"
     },
