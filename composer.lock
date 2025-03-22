@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e56907103a2c2e2d297b86dd2cad57ba",
+    "content-hash": "70a3a36badf2c0fd8a53c93675c4a321",
     "packages": [
         {
             "name": "clue/stream-filter",
@@ -3227,12 +3227,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ghostwriter/coding-standard.git",
-                "reference": "c668dcfbf8f571ca46bf053035c159d99e7d64df"
+                "reference": "56da801e53ef34428334a7d96e5ea35e90187587"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ghostwriter/coding-standard/zipball/c668dcfbf8f571ca46bf053035c159d99e7d64df",
-                "reference": "c668dcfbf8f571ca46bf053035c159d99e7d64df",
+                "url": "https://api.github.com/repos/ghostwriter/coding-standard/zipball/56da801e53ef34428334a7d96e5ea35e90187587",
+                "reference": "56da801e53ef34428334a7d96e5ea35e90187587",
                 "shasum": ""
             },
             "require": {
@@ -3271,11 +3271,11 @@
             },
             "conflict": {
                 "pestphp/pest": "*",
-                "phpunit/phpunit": "<12.0"
+                "phpunit/phpunit": "<11.5.14"
             },
             "require-dev": {
                 "doctrine/inflector": "~2.0.10",
-                "ghostwriter/case-converter": "~2.0.0",
+                "ghostwriter/case-converter": "~2.1.0",
                 "ghostwriter/container": "~5.0.1",
                 "ghostwriter/event-dispatcher": "~5.0.3",
                 "ghostwriter/filesystem": "~0.1.1",
@@ -3377,7 +3377,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-03-22T11:44:01+00:00"
+            "time": "2025-03-22T16:13:20+00:00"
         },
         {
             "name": "ghostwriter/filesystem",
