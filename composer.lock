@@ -3227,12 +3227,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ghostwriter/coding-standard.git",
-                "reference": "29c102cfd5374c46e840e2aeea86cfc5a3da900e"
+                "reference": "0852f3845126fdd47e811fcedf2311ddb27db224"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ghostwriter/coding-standard/zipball/29c102cfd5374c46e840e2aeea86cfc5a3da900e",
-                "reference": "29c102cfd5374c46e840e2aeea86cfc5a3da900e",
+                "url": "https://api.github.com/repos/ghostwriter/coding-standard/zipball/0852f3845126fdd47e811fcedf2311ddb27db224",
+                "reference": "0852f3845126fdd47e811fcedf2311ddb27db224",
                 "shasum": ""
             },
             "require": {
@@ -3265,7 +3265,7 @@
                 "infection/infection": "~0.29.14",
                 "mockery/mockery": "~1.6.12",
                 "php": "^8.4",
-                "phpunit/phpunit": "~11.5.14 || ~12.0.9",
+                "phpunit/phpunit": "~11.5.14 || ~12.0.10",
                 "symfony/var-dumper": "~7.2.3",
                 "vimeo/psalm": "~6.9.4"
             },
@@ -3377,7 +3377,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-03-22T21:23:51+00:00"
+            "time": "2025-03-23T18:33:15+00:00"
         },
         {
             "name": "ghostwriter/filesystem",
@@ -5139,16 +5139,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "12.0.9",
+            "version": "12.0.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "7835bb4276780e0bbb385ce0a777b839e03096db"
+                "reference": "6075843014de23bcd6992842d69ca99d25d6a433"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/7835bb4276780e0bbb385ce0a777b839e03096db",
-                "reference": "7835bb4276780e0bbb385ce0a777b839e03096db",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/6075843014de23bcd6992842d69ca99d25d6a433",
+                "reference": "6075843014de23bcd6992842d69ca99d25d6a433",
                 "shasum": ""
             },
             "require": {
@@ -5216,7 +5216,7 @@
             "support": {
                 "issues": "https://github.com/sebastianbergmann/phpunit/issues",
                 "security": "https://github.com/sebastianbergmann/phpunit/security/policy",
-                "source": "https://github.com/sebastianbergmann/phpunit/tree/12.0.9"
+                "source": "https://github.com/sebastianbergmann/phpunit/tree/12.0.10"
             },
             "funding": [
                 {
@@ -5232,7 +5232,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-03-19T13:47:33+00:00"
+            "time": "2025-03-23T16:03:59+00:00"
         },
         {
             "name": "psr/container",
