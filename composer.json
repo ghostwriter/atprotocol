@@ -122,6 +122,12 @@
             "@psalm:security",
             "@psalm:dry-run"
         ],
+        "docker": [
+            "@docker:build",
+            "@docker:run"
+        ],
+        "docker:build": "docker buildx build --pull --tag workspace .",
+        "docker:run": "docker run -v $(PWD):/github/workspace -w=/github/workspace -e GITHUB_DEBUG=1 -e GITHUB_WORKSPACE=/github/workspace -e GITHUB_TOKEN=github-token -e SIGNING_SECRET_KEY=secret-key workspace",
         "ecs": "@bin_ecs --fix",
         "git:submodule:update": "git submodule update --depth=1 --init --recursive --recommend-shallow --remote",
         "infection": [
@@ -141,19 +147,20 @@
             "@xdebug",
             "@bin_phpunit --migrate-configuration"
         ],
-        "psalm": "@bin_psalm --show-info=true",
+        "psalm": "@bin_psalm --show-info=true --no-diff --shepherd --stats",
         "psalm:alter": "@bin_psalm --alter --allow-backwards-incompatible-changes=false --safe-types",
-        "psalm:baseline": "@psalm --no-diff --set-baseline=psalm-baseline.xml",
-        "psalm:dry-run": "@psalm:alter --issues=all --dry-run",
-        "psalm:fix": "@psalm:alter --issues=UnnecessaryVarAnnotation",
-        "psalm:security": "@psalm --no-diff --taint-analysis",
+        "psalm:baseline": "@bin_psalm --no-diff --set-baseline=psalm-baseline.xml",
+        "psalm:dry-run": "@bin_psalm --alter --issues=all --dry-run",
+        "psalm:fix": "@bin_psalm --alter --issues=UnnecessaryVarAnnotation",
+        "psalm:security": "@bin_psalm --no-diff --taint-analysis",
         "psalm:shepherd": "@psalm --no-diff --shepherd --stats",
-        "psalm:update": "@psalm --no-diff --update-baseline=psalm-baseline.xml",
+        "psalm:update": "@bin_psalm --no-diff --update-baseline=psalm-baseline.xml",
         "rector": "@bin_rector",
         "rector:dry-run": "@rector --dry-run",
         "test": [
             "@phpunit",
-            "@infection"
+            "@infection",
+            "@psalm"
         ],
         "xdebug": "@putenv XDEBUG_MODE=coverage"
     }
