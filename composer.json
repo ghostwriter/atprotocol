@@ -80,8 +80,7 @@
     },
     "config": {
         "allow-plugins": {
-            "ghostwriter/coding-standard": true,
-            "infection/extension-installer": true
+            "ghostwriter/coding-standard": true
         },
         "bump-after-update": false,
         "classmap-authoritative": false,
@@ -102,15 +101,13 @@
         "bin_infection": "vendor/ghostwriter/coding-standard/tools/infection --ansi --min-covered-msi=0 --min-msi=0 --show-mutations --threads=max",
         "bin_normalize": "vendor/ghostwriter/coding-standard/tools/composer-normalize",
         "bin_phive": "vendor/ghostwriter/coding-standard/tools/phive",
-        "bin_phpunit": "vendor/ghostwriter/coding-standard/tools/phpunit --do-not-cache-result --colors=always",
+        "bin_phpunit": "vendor/bin/phpunit --do-not-cache-result --colors=always",
         "bin_psalm": "vendor/ghostwriter/coding-standard/tools/psalm --no-cache",
         "bin_rector": "rector process --no-ansi --clear-cache",
         "cache:clear": "rm -rf ./.cache/*",
         "check": [
             "@cache:clear",
             "@bin_composer validate",
-            "@normalize",
-            "@ecs",
             "@test"
         ],
         "composer-normalize": "vendor/ghostwriter/coding-standard/tools/composer-normalize --no-cache --diff --no-check-lock --no-scripts --no-plugins",
