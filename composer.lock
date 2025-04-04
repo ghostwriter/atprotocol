@@ -3202,12 +3202,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ghostwriter/coding-standard.git",
-                "reference": "f5c053874e788a8d75a53fa401054d28de385c2e"
+                "reference": "d0eb866acbd4aa32f0a9b7719021b83509256e09"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ghostwriter/coding-standard/zipball/f5c053874e788a8d75a53fa401054d28de385c2e",
-                "reference": "f5c053874e788a8d75a53fa401054d28de385c2e",
+                "url": "https://api.github.com/repos/ghostwriter/coding-standard/zipball/d0eb866acbd4aa32f0a9b7719021b83509256e09",
+                "reference": "d0eb866acbd4aa32f0a9b7719021b83509256e09",
                 "shasum": ""
             },
             "require": {
@@ -3353,7 +3353,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-04-04T05:00:11+00:00"
+            "time": "2025-04-04T14:46:23+00:00"
         },
         {
             "name": "ghostwriter/filesystem",
@@ -3529,16 +3529,16 @@
         },
         {
             "name": "justinrainbow/json-schema",
-            "version": "6.4.0",
+            "version": "6.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/jsonrainbow/json-schema.git",
-                "reference": "16b274cb469bc8165c59b76c283724a035d27f4c"
+                "reference": "35d262c94959571e8736db1e5c9bc36ab94ae900"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jsonrainbow/json-schema/zipball/16b274cb469bc8165c59b76c283724a035d27f4c",
-                "reference": "16b274cb469bc8165c59b76c283724a035d27f4c",
+                "url": "https://api.github.com/repos/jsonrainbow/json-schema/zipball/35d262c94959571e8736db1e5c9bc36ab94ae900",
+                "reference": "35d262c94959571e8736db1e5c9bc36ab94ae900",
                 "shasum": ""
             },
             "require": {
@@ -3598,9 +3598,9 @@
             ],
             "support": {
                 "issues": "https://github.com/jsonrainbow/json-schema/issues",
-                "source": "https://github.com/jsonrainbow/json-schema/tree/6.4.0"
+                "source": "https://github.com/jsonrainbow/json-schema/tree/6.4.1"
             },
-            "time": "2025-04-01T18:50:59+00:00"
+            "time": "2025-04-04T13:08:07+00:00"
         },
         {
             "name": "kelunik/certificate",
