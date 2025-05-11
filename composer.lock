@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a87f826d5452ac1ba6802ad4d17f46b8",
+    "content-hash": "074a9059aeacc5ea016388c7cc80a352",
     "packages": [
         {
             "name": "clue/stream-filter",
@@ -2036,12 +2036,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ghostwriter/coding-standard.git",
-                "reference": "cb35a511b0952803277540aab6f7b8243f2cdd3d"
+                "reference": "ce75a2d5434294e5ee39787fbac8701d4e7817dc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ghostwriter/coding-standard/zipball/cb35a511b0952803277540aab6f7b8243f2cdd3d",
-                "reference": "cb35a511b0952803277540aab6f7b8243f2cdd3d",
+                "url": "https://api.github.com/repos/ghostwriter/coding-standard/zipball/ce75a2d5434294e5ee39787fbac8701d4e7817dc",
+                "reference": "ce75a2d5434294e5ee39787fbac8701d4e7817dc",
                 "shasum": ""
             },
             "require": {
@@ -2086,7 +2086,7 @@
             "require-dev": {
                 "mockery/mockery": "~1.6.12",
                 "nikic/php-parser": "~5.4.0",
-                "phpunit/phpunit": "~12.1.4",
+                "phpunit/phpunit": "~12.1.5",
                 "vimeo/psalm": "~6.10.3"
             },
             "default-branch": true,
@@ -2184,7 +2184,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-05-06T12:42:00+00:00"
+            "time": "2025-05-11T07:39:54+00:00"
         },
         {
             "name": "ghostwriter/filesystem",
@@ -3161,16 +3161,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "12.1.4",
+            "version": "12.1.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "5ee57ad690bda2c487594577600931a99053436c"
+                "reference": "f93ef2198df8d54b3195bcee381a33be51d8705e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/5ee57ad690bda2c487594577600931a99053436c",
-                "reference": "5ee57ad690bda2c487594577600931a99053436c",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/f93ef2198df8d54b3195bcee381a33be51d8705e",
+                "reference": "f93ef2198df8d54b3195bcee381a33be51d8705e",
                 "shasum": ""
             },
             "require": {
@@ -3184,7 +3184,7 @@
                 "phar-io/manifest": "^2.0.4",
                 "phar-io/version": "^3.2.1",
                 "php": ">=8.3",
-                "phpunit/php-code-coverage": "^12.1.2",
+                "phpunit/php-code-coverage": "^12.2.1",
                 "phpunit/php-file-iterator": "^6.0.0",
                 "phpunit/php-invoker": "^6.0.0",
                 "phpunit/php-text-template": "^5.0.0",
@@ -3238,7 +3238,7 @@
             "support": {
                 "issues": "https://github.com/sebastianbergmann/phpunit/issues",
                 "security": "https://github.com/sebastianbergmann/phpunit/security/policy",
-                "source": "https://github.com/sebastianbergmann/phpunit/tree/12.1.4"
+                "source": "https://github.com/sebastianbergmann/phpunit/tree/12.1.5"
             },
             "funding": [
                 {
@@ -3262,7 +3262,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-05-02T07:01:56+00:00"
+            "time": "2025-05-11T06:44:52+00:00"
         },
         {
             "name": "psr/container",
