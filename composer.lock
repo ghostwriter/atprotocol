@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "074a9059aeacc5ea016388c7cc80a352",
+    "content-hash": "6e37797df30741343fcdd0cacaa7f9d8",
     "packages": [
         {
             "name": "clue/stream-filter",
@@ -2036,12 +2036,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ghostwriter/coding-standard.git",
-                "reference": "73e273780038f8ff0a7211d225154e7af6ddef3e"
+                "reference": "5944ac8ac14cbabb70f4213a9f122eee113367ae"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ghostwriter/coding-standard/zipball/73e273780038f8ff0a7211d225154e7af6ddef3e",
-                "reference": "73e273780038f8ff0a7211d225154e7af6ddef3e",
+                "url": "https://api.github.com/repos/ghostwriter/coding-standard/zipball/5944ac8ac14cbabb70f4213a9f122eee113367ae",
+                "reference": "5944ac8ac14cbabb70f4213a9f122eee113367ae",
                 "shasum": ""
             },
             "require": {
@@ -2086,7 +2086,7 @@
             "require-dev": {
                 "mockery/mockery": "~1.6.12",
                 "nikic/php-parser": "~5.4.0",
-                "phpunit/phpunit": "~12.1.5",
+                "phpunit/phpunit": "~12.1.6",
                 "vimeo/psalm": "~6.10.3 || ~6.11.0"
             },
             "default-branch": true,
@@ -2184,7 +2184,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-05-20T18:44:11+00:00"
+            "time": "2025-05-21T13:11:47+00:00"
         },
         {
             "name": "ghostwriter/filesystem",
@@ -3161,16 +3161,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "12.1.5",
+            "version": "12.1.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "f93ef2198df8d54b3195bcee381a33be51d8705e"
+                "reference": "2fdf0056c673c8f0f1eed00030be5f8243c1e6e0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/f93ef2198df8d54b3195bcee381a33be51d8705e",
-                "reference": "f93ef2198df8d54b3195bcee381a33be51d8705e",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/2fdf0056c673c8f0f1eed00030be5f8243c1e6e0",
+                "reference": "2fdf0056c673c8f0f1eed00030be5f8243c1e6e0",
                 "shasum": ""
             },
             "require": {
@@ -3192,7 +3192,7 @@
                 "sebastian/cli-parser": "^4.0.0",
                 "sebastian/comparator": "^7.0.1",
                 "sebastian/diff": "^7.0.0",
-                "sebastian/environment": "^8.0.0",
+                "sebastian/environment": "^8.0.1",
                 "sebastian/exporter": "^7.0.0",
                 "sebastian/global-state": "^8.0.0",
                 "sebastian/object-enumerator": "^7.0.0",
@@ -3238,7 +3238,7 @@
             "support": {
                 "issues": "https://github.com/sebastianbergmann/phpunit/issues",
                 "security": "https://github.com/sebastianbergmann/phpunit/security/policy",
-                "source": "https://github.com/sebastianbergmann/phpunit/tree/12.1.5"
+                "source": "https://github.com/sebastianbergmann/phpunit/tree/12.1.6"
             },
             "funding": [
                 {
@@ -3262,7 +3262,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-05-11T06:44:52+00:00"
+            "time": "2025-05-21T12:36:31+00:00"
         },
         {
             "name": "psr/container",
@@ -3704,16 +3704,16 @@
         },
         {
             "name": "sebastian/environment",
-            "version": "8.0.0",
+            "version": "8.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/environment.git",
-                "reference": "8afe311eca49171bf95405cc0078be9a3821f9f2"
+                "reference": "c2bca31078c575fb7aa91e3fe32cc0cd781fd228"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/environment/zipball/8afe311eca49171bf95405cc0078be9a3821f9f2",
-                "reference": "8afe311eca49171bf95405cc0078be9a3821f9f2",
+                "url": "https://api.github.com/repos/sebastianbergmann/environment/zipball/c2bca31078c575fb7aa91e3fe32cc0cd781fd228",
+                "reference": "c2bca31078c575fb7aa91e3fe32cc0cd781fd228",
                 "shasum": ""
             },
             "require": {
@@ -3756,15 +3756,27 @@
             "support": {
                 "issues": "https://github.com/sebastianbergmann/environment/issues",
                 "security": "https://github.com/sebastianbergmann/environment/security/policy",
-                "source": "https://github.com/sebastianbergmann/environment/tree/8.0.0"
+                "source": "https://github.com/sebastianbergmann/environment/tree/8.0.1"
             },
             "funding": [
                 {
                     "url": "https://github.com/sebastianbergmann",
                     "type": "github"
+                },
+                {
+                    "url": "https://liberapay.com/sebastianbergmann",
+                    "type": "liberapay"
+                },
+                {
+                    "url": "https://thanks.dev/u/gh/sebastianbergmann",
+                    "type": "thanks_dev"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/sebastian/environment",
+                    "type": "tidelift"
                 }
             ],
-            "time": "2025-02-07T04:56:08+00:00"
+            "time": "2025-05-21T11:59:10+00:00"
         },
         {
             "name": "sebastian/exporter",
