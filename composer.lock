@@ -2036,12 +2036,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ghostwriter/coding-standard.git",
-                "reference": "5944ac8ac14cbabb70f4213a9f122eee113367ae"
+                "reference": "f244be19f1e0764009f18655cac041a0335bcc81"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ghostwriter/coding-standard/zipball/5944ac8ac14cbabb70f4213a9f122eee113367ae",
-                "reference": "5944ac8ac14cbabb70f4213a9f122eee113367ae",
+                "url": "https://api.github.com/repos/ghostwriter/coding-standard/zipball/f244be19f1e0764009f18655cac041a0335bcc81",
+                "reference": "f244be19f1e0764009f18655cac041a0335bcc81",
                 "shasum": ""
             },
             "require": {
@@ -2184,7 +2184,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-05-21T13:11:47+00:00"
+            "time": "2025-05-27T12:40:04+00:00"
         },
         {
             "name": "ghostwriter/filesystem",
@@ -3704,16 +3704,16 @@
         },
         {
             "name": "sebastian/environment",
-            "version": "8.0.1",
+            "version": "8.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/environment.git",
-                "reference": "c2bca31078c575fb7aa91e3fe32cc0cd781fd228"
+                "reference": "d364b9e5d0d3b18a2573351a1786fbf96b7e0792"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/environment/zipball/c2bca31078c575fb7aa91e3fe32cc0cd781fd228",
-                "reference": "c2bca31078c575fb7aa91e3fe32cc0cd781fd228",
+                "url": "https://api.github.com/repos/sebastianbergmann/environment/zipball/d364b9e5d0d3b18a2573351a1786fbf96b7e0792",
+                "reference": "d364b9e5d0d3b18a2573351a1786fbf96b7e0792",
                 "shasum": ""
             },
             "require": {
@@ -3756,7 +3756,7 @@
             "support": {
                 "issues": "https://github.com/sebastianbergmann/environment/issues",
                 "security": "https://github.com/sebastianbergmann/environment/security/policy",
-                "source": "https://github.com/sebastianbergmann/environment/tree/8.0.1"
+                "source": "https://github.com/sebastianbergmann/environment/tree/8.0.2"
             },
             "funding": [
                 {
@@ -3776,7 +3776,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-05-21T11:59:10+00:00"
+            "time": "2025-05-21T15:05:44+00:00"
         },
         {
             "name": "sebastian/exporter",
