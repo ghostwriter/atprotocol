@@ -63,8 +63,7 @@
         "phpunit/phpunit": "~12.1.6",
         "ext-xdebug": "*",
         "vimeo/psalm": "~6.12.0",
-        "infection/infection": "~0.29.14",
-        "symfony/var-dumper": "~7.3.0"
+        "infection/infection": "~0.29.14"
     },
     "minimum-stability": "stable",
     "prefer-stable": true,

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "43acda5ae580aa84fd33f90adf22ab88",
+    "content-hash": "0c3871761d5a37bea3741032c375ecf6",
     "packages": [
         {
             "name": "clue/stream-filter",
@@ -3230,12 +3230,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ghostwriter/coding-standard.git",
-                "reference": "b573476b4e677e8e1a6e4293b96d295b1f415cc6"
+                "reference": "73141dd7c7eedd78ae0a399caa7ba7b7ea77ca05"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ghostwriter/coding-standard/zipball/b573476b4e677e8e1a6e4293b96d295b1f415cc6",
-                "reference": "b573476b4e677e8e1a6e4293b96d295b1f415cc6",
+                "url": "https://api.github.com/repos/ghostwriter/coding-standard/zipball/73141dd7c7eedd78ae0a399caa7ba7b7ea77ca05",
+                "reference": "73141dd7c7eedd78ae0a399caa7ba7b7ea77ca05",
                 "shasum": ""
             },
             "require": {
@@ -3378,7 +3378,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-06-04T16:35:55+00:00"
+            "time": "2025-06-04T17:53:36+00:00"
         },
         {
             "name": "ghostwriter/filesystem",
@@ -7975,90 +7975,6 @@
                 }
             ],
             "time": "2025-04-20T20:19:01+00:00"
-        },
-        {
-            "name": "symfony/var-dumper",
-            "version": "v7.3.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/var-dumper.git",
-                "reference": "548f6760c54197b1084e1e5c71f6d9d523f2f78e"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/548f6760c54197b1084e1e5c71f6d9d523f2f78e",
-                "reference": "548f6760c54197b1084e1e5c71f6d9d523f2f78e",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=8.2",
-                "symfony/deprecation-contracts": "^2.5|^3",
-                "symfony/polyfill-mbstring": "~1.0"
-            },
-            "conflict": {
-                "symfony/console": "<6.4"
-            },
-            "require-dev": {
-                "ext-iconv": "*",
-                "symfony/console": "^6.4|^7.0",
-                "symfony/http-kernel": "^6.4|^7.0",
-                "symfony/process": "^6.4|^7.0",
-                "symfony/uid": "^6.4|^7.0",
-                "twig/twig": "^3.12"
-            },
-            "bin": [
-                "Resources/bin/var-dump-server"
-            ],
-            "type": "library",
-            "autoload": {
-                "files": [
-                    "Resources/functions/dump.php"
-                ],
-                "psr-4": {
-                    "Symfony\\Component\\VarDumper\\": ""
-                },
-                "exclude-from-classmap": [
-                    "/Tests/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Nicolas Grekas",
-                    "email": "p@tchwork.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                }
-            ],
-            "description": "Provides mechanisms for walking through any arbitrary PHP variable",
-            "homepage": "https://symfony.com",
-            "keywords": [
-                "debug",
-                "dump"
-            ],
-            "support": {
-                "source": "https://github.com/symfony/var-dumper/tree/v7.3.0"
-            },
-            "funding": [
-                {
-                    "url": "https://symfony.com/sponsor",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/fabpot",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-                    "type": "tidelift"
-                }
-            ],
-            "time": "2025-04-27T18:39:23+00:00"
         },
         {
             "name": "thecodingmachine/safe",
