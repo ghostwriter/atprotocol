@@ -57,13 +57,14 @@
         "psr/http-factory": "~1.1.0"
     },
     "require-dev": {
+        "ext-xdebug": "*",
         "ghostwriter/coding-standard": "dev-main",
         "ghostwriter/filesystem": "~0.1.1",
+        "infection/infection": "~0.29.14",
         "mockery/mockery": "~1.6.12",
         "phpunit/phpunit": "~12.1.6",
-        "ext-xdebug": "*",
-        "vimeo/psalm": "~6.12.0",
-        "infection/infection": "~0.29.14"
+        "symfony/var-dumper": "~7.3.0",
+        "vimeo/psalm": "~6.12.0"
     },
     "minimum-stability": "stable",
     "prefer-stable": true,
@@ -85,7 +86,8 @@
     },
     "config": {
         "allow-plugins": {
-            "ghostwriter/coding-standard": true
+            "ghostwriter/coding-standard": true,
+            "infection/extension-installer": true
         },
         "bump-after-update": false,
         "classmap-authoritative": false,
@@ -110,19 +112,45 @@
         "bin_psalm": "vendor/ghostwriter/coding-standard/tools/psalm --no-cache",
         "bin_rector": "rector process --no-ansi --clear-cache",
         "cache:clear": "rm -rf ./.cache/*",
-        "check": ["@cache:clear", "@bin_composer validate", "@test"],
+        "check": [
+            "@cache:clear",
+            "@bin_composer validate",
+            "@test"
+        ],
         "composer-normalize": "vendor/ghostwriter/coding-standard/tools/composer-normalize --no-cache --diff --no-check-lock --no-scripts --no-plugins",
-        "dev": ["@cache:clear", "@composer-normalize", "@check", "@psalm:update", "@psalm:security", "@psalm:dry-run"],
-        "docker": ["@docker:build", "@docker:run"],
+        "dev": [
+            "@cache:clear",
+            "@composer-normalize",
+            "@check",
+            "@psalm:update",
+            "@psalm:security",
+            "@psalm:dry-run"
+        ],
+        "docker": [
+            "@docker:build",
+            "@docker:run"
+        ],
         "docker:build": "docker buildx build --pull --tag workspace .",
         "docker:run": "docker run -v $(PWD):/github/workspace -w=/github/workspace -e GITHUB_DEBUG=1 -e GITHUB_WORKSPACE=/github/workspace -e GITHUB_TOKEN=github-token -e SIGNING_SECRET_KEY=secret-key workspace",
         "ecs": "@bin_ecs --fix",
         "git:submodule:update": "git submodule update --depth=1 --init --recursive --recommend-shallow --remote",
-        "infection": ["@xdebug", "@bin_infection"],
+        "infection": [
+            "@xdebug",
+            "@bin_infection"
+        ],
         "normalize": "@bin_normalize --no-cache --diff --no-check-lock --no-scripts --no-plugins",
-        "phive": ["@bin_phive update --force-accept-unsigned", "@bin_phive purge"],
-        "phpunit": ["@xdebug", "@bin_phpunit"],
-        "phpunit:migrate": ["@xdebug", "@bin_phpunit --migrate-configuration"],
+        "phive": [
+            "@bin_phive update --force-accept-unsigned",
+            "@bin_phive purge"
+        ],
+        "phpunit": [
+            "@xdebug",
+            "@bin_phpunit"
+        ],
+        "phpunit:migrate": [
+            "@xdebug",
+            "@bin_phpunit --migrate-configuration"
+        ],
         "psalm": "@bin_psalm --show-info=true --no-diff --shepherd --stats",
         "psalm:alter": "@bin_psalm --alter --allow-backwards-incompatible-changes=false --safe-types",
         "psalm:baseline": "@bin_psalm --no-diff --set-baseline=psalm-baseline.xml",
@@ -133,7 +161,11 @@
         "psalm:update": "@bin_psalm --no-diff --update-baseline=psalm-baseline.xml",
         "rector": "@bin_rector",
         "rector:dry-run": "@rector --dry-run",
-        "test": ["@phpunit", "@infection", "@psalm"],
+        "test": [
+            "@phpunit",
+            "@infection",
+            "@psalm"
+        ],
         "xdebug": "@putenv XDEBUG_MODE=coverage"
     }
 }
