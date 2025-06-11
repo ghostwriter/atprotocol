@@ -25,7 +25,7 @@
     failOnWarning="true"
     requireCoverageMetadata="true"
 >
-    <coverage>
+    <coverage pathCoverage="true" disableCodeCoverageIgnore="true">
         <report>
             <html outputDirectory=".cache/phpunit/coverage-html"/>
             <clover outputFile=".cache/phpunit/clover.xml"/>
