@@ -3,6 +3,7 @@
 *.env
 *.env*
 .DS_Store
+.devenv/
 .direnv/
 .dotenv/
 .env
