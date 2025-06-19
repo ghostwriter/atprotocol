@@ -1,3 +1,26 @@
-/.cache/
-/vendor/
-/.env
+# Ignore
+
+*.env
+*.env*
+.DS_Store
+.devenv/
+.direnv/
+.dotenv/
+.env
+.idea/
+.phpactor.json
+.vscode/
+build/
+node_modules/
+result
+result-*
+vendor/
+
+# Allow
+
+!.env.dist
+!.env.example
+!.env.me
+!.env.vault
+!.envrc
+!tests/Fixture/**/*.env*

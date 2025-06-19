@@ -3,9 +3,13 @@
 *.md text diff=markdown
 *.php text eol=lf diff=php
 /.editorconfig export-ignore
+/.envrc export-ignore
 /.gitattributes export-ignore
 /.github export-ignore
 /.gitignore export-ignore
+/CHANGELOG.md export-ignore
+/CONTRIBUTING.md export-ignore
+/SECURITY.md export-ignore
 /composer.lock export-ignore
 /infection.json5.dist export-ignore
 /phpunit.xml.dist export-ignore
