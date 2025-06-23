@@ -3,15 +3,19 @@
 *.env
 *.env*
 .DS_Store
+.cache/
 .devenv/
 .direnv/
 .dotenv/
 .env
 .idea/
 .phpactor.json
+.phpunit.cache/
+.phpunit.result.cache
 .vscode/
 build/
 node_modules/
+phpunit.xml
 result
 result-*
 vendor/
@@ -19,7 +23,6 @@ vendor/
 # Allow
 
 !.env.dist
-!.env.example
 !.env.me
 !.env.vault
 !.envrc
