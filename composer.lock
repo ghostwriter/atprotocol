@@ -3230,12 +3230,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ghostwriter/coding-standard.git",
-                "reference": "4956707b5a4d1520608399572cd780022e069234"
+                "reference": "f0095e4aac9a239dda00d206aa84c190cacd7ce0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ghostwriter/coding-standard/zipball/4956707b5a4d1520608399572cd780022e069234",
-                "reference": "4956707b5a4d1520608399572cd780022e069234",
+                "url": "https://api.github.com/repos/ghostwriter/coding-standard/zipball/f0095e4aac9a239dda00d206aa84c190cacd7ce0",
+                "reference": "f0095e4aac9a239dda00d206aa84c190cacd7ce0",
                 "shasum": ""
             },
             "require": {
@@ -3281,7 +3281,7 @@
                 "ext-xdebug": "*",
                 "mockery/mockery": "~1.6.12",
                 "nikic/php-parser": "~5.4.0 || ~5.5.0",
-                "phpunit/phpunit": "~12.1.6 || ~12.2.1",
+                "phpunit/phpunit": "~12.2.5",
                 "vimeo/psalm": "~6.11.0 || ~6.12.0"
             },
             "default-branch": true,
@@ -3379,7 +3379,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-06-26T16:46:56+00:00"
+            "time": "2025-06-29T11:58:21+00:00"
         },
         {
             "name": "ghostwriter/filesystem",
@@ -6909,16 +6909,16 @@
         },
         {
             "name": "symfony/console",
-            "version": "v7.3.0",
+            "version": "v7.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "66c1440edf6f339fd82ed6c7caa76cb006211b44"
+                "reference": "9e27aecde8f506ba0fd1d9989620c04a87697101"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/66c1440edf6f339fd82ed6c7caa76cb006211b44",
-                "reference": "66c1440edf6f339fd82ed6c7caa76cb006211b44",
+                "url": "https://api.github.com/repos/symfony/console/zipball/9e27aecde8f506ba0fd1d9989620c04a87697101",
+                "reference": "9e27aecde8f506ba0fd1d9989620c04a87697101",
                 "shasum": ""
             },
             "require": {
@@ -6983,7 +6983,7 @@
                 "terminal"
             ],
             "support": {
-                "source": "https://github.com/symfony/console/tree/v7.3.0"
+                "source": "https://github.com/symfony/console/tree/v7.3.1"
             },
             "funding": [
                 {
@@ -6999,7 +6999,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-05-24T10:34:04+00:00"
+            "time": "2025-06-27T19:55:54+00:00"
         },
         {
             "name": "symfony/filesystem",
