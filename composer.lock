@@ -3230,12 +3230,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ghostwriter/coding-standard.git",
-                "reference": "f0095e4aac9a239dda00d206aa84c190cacd7ce0"
+                "reference": "8bea28ca740ba0906d39d5e6ed0e1901a7425c6b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ghostwriter/coding-standard/zipball/f0095e4aac9a239dda00d206aa84c190cacd7ce0",
-                "reference": "f0095e4aac9a239dda00d206aa84c190cacd7ce0",
+                "url": "https://api.github.com/repos/ghostwriter/coding-standard/zipball/8bea28ca740ba0906d39d5e6ed0e1901a7425c6b",
+                "reference": "8bea28ca740ba0906d39d5e6ed0e1901a7425c6b",
                 "shasum": ""
             },
             "require": {
@@ -3379,7 +3379,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-06-29T11:58:21+00:00"
+            "time": "2025-07-03T00:11:52+00:00"
         },
         {
             "name": "ghostwriter/filesystem",
@@ -5716,16 +5716,16 @@
         },
         {
             "name": "sanmai/pipeline",
-            "version": "6.17",
+            "version": "6.18",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sanmai/pipeline.git",
-                "reference": "491b172349d77c9e2f2f2aa1791c9de95bfd1abe"
+                "reference": "d9fbdf2a4a363f44f4d8155f71766f35d49b8fb2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sanmai/pipeline/zipball/491b172349d77c9e2f2f2aa1791c9de95bfd1abe",
-                "reference": "491b172349d77c9e2f2f2aa1791c9de95bfd1abe",
+                "url": "https://api.github.com/repos/sanmai/pipeline/zipball/d9fbdf2a4a363f44f4d8155f71766f35d49b8fb2",
+                "reference": "d9fbdf2a4a363f44f4d8155f71766f35d49b8fb2",
                 "shasum": ""
             },
             "require": {
@@ -5769,7 +5769,7 @@
             "description": "General-purpose collections pipeline",
             "support": {
                 "issues": "https://github.com/sanmai/pipeline/issues",
-                "source": "https://github.com/sanmai/pipeline/tree/6.17"
+                "source": "https://github.com/sanmai/pipeline/tree/v6.12"
             },
             "funding": [
                 {
@@ -5777,7 +5777,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-06-16T07:09:33+00:00"
+            "time": "2025-06-30T23:36:16+00:00"
         },
         {
             "name": "sebastian/cli-parser",
