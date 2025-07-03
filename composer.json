@@ -61,7 +61,7 @@
         "ext-xdebug": "*",
         "ghostwriter/coding-standard": "dev-main",
         "ghostwriter/filesystem": "~0.1.1",
-        "infection/infection": "~0.29.14",
+        "infection/infection": "~0.30.0",
         "mockery/mockery": "~1.6.12",
         "phpunit/phpunit": "~12.2.5",
         "vimeo/psalm": "~6.12.0"
