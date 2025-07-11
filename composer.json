@@ -63,7 +63,7 @@
         "ghostwriter/filesystem": "~0.1.1",
         "infection/infection": "~0.30.2",
         "mockery/mockery": "~1.6.12",
-        "phpunit/phpunit": "~12.2.6",
+        "phpunit/phpunit": "~12.2.7",
         "vimeo/psalm": "~6.12.1"
     },
     "minimum-stability": "stable",
