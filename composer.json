@@ -42,7 +42,7 @@
     "require": {
         "php": "~8.4.0",
         "ext-curl": "*",
-        "ghostwriter/case-converter": "~2.0.0 || ~2.1.0",
+        "ghostwriter/case-converter": "~2.1.0",
         "ghostwriter/collection": "~2.0.0",
         "ghostwriter/config": "~1.0.0",
         "ghostwriter/container": "~5.0.1",
@@ -52,7 +52,7 @@
         "ghostwriter/option": "~2.0.0",
         "ghostwriter/result": "~2.0.0",
         "ghostwriter/uuid": "~1.0.3",
-        "laminas/laminas-diactoros": "~3.5.0 || ~3.6.0",
+        "laminas/laminas-diactoros": "~3.6.0",
         "php-http/curl-client": "~2.3.3",
         "psr/http-client": "~1.0.3",
         "psr/http-factory": "~1.1.0"
