@@ -3230,12 +3230,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ghostwriter/coding-standard.git",
-                "reference": "a83b3f9a8566658ec0825e9ef4b06f4b6112ab60"
+                "reference": "13fd1073fa6bb72971db5eac7cb1519744fb3fc2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ghostwriter/coding-standard/zipball/a83b3f9a8566658ec0825e9ef4b06f4b6112ab60",
-                "reference": "a83b3f9a8566658ec0825e9ef4b06f4b6112ab60",
+                "url": "https://api.github.com/repos/ghostwriter/coding-standard/zipball/13fd1073fa6bb72971db5eac7cb1519744fb3fc2",
+                "reference": "13fd1073fa6bb72971db5eac7cb1519744fb3fc2",
                 "shasum": ""
             },
             "require": {
@@ -3379,7 +3379,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-07-12T00:31:51+00:00"
+            "time": "2025-07-13T08:10:12+00:00"
         },
         {
             "name": "ghostwriter/filesystem",
@@ -4917,16 +4917,16 @@
         },
         {
             "name": "phpstan/phpdoc-parser",
-            "version": "2.1.0",
+            "version": "2.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpdoc-parser.git",
-                "reference": "9b30d6fd026b2c132b3985ce6b23bec09ab3aa68"
+                "reference": "b9e61a61e39e02dd90944e9115241c7f7e76bfd8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpdoc-parser/zipball/9b30d6fd026b2c132b3985ce6b23bec09ab3aa68",
-                "reference": "9b30d6fd026b2c132b3985ce6b23bec09ab3aa68",
+                "url": "https://api.github.com/repos/phpstan/phpdoc-parser/zipball/b9e61a61e39e02dd90944e9115241c7f7e76bfd8",
+                "reference": "b9e61a61e39e02dd90944e9115241c7f7e76bfd8",
                 "shasum": ""
             },
             "require": {
@@ -4958,9 +4958,9 @@
             "description": "PHPDoc parser with support for nullable, intersection and generic types",
             "support": {
                 "issues": "https://github.com/phpstan/phpdoc-parser/issues",
-                "source": "https://github.com/phpstan/phpdoc-parser/tree/2.1.0"
+                "source": "https://github.com/phpstan/phpdoc-parser/tree/2.2.0"
             },
-            "time": "2025-02-19T13:28:12+00:00"
+            "time": "2025-07-13T07:04:09+00:00"
         },
         {
             "name": "phpunit/php-code-coverage",
