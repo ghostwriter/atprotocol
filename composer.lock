@@ -3230,12 +3230,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ghostwriter/coding-standard.git",
-                "reference": "7b25ba1b4101b78ad330c77e709f9548f649345a"
+                "reference": "4b0952942967b4b85f6c976bb8495a7f263f4f0e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ghostwriter/coding-standard/zipball/7b25ba1b4101b78ad330c77e709f9548f649345a",
-                "reference": "7b25ba1b4101b78ad330c77e709f9548f649345a",
+                "url": "https://api.github.com/repos/ghostwriter/coding-standard/zipball/4b0952942967b4b85f6c976bb8495a7f263f4f0e",
+                "reference": "4b0952942967b4b85f6c976bb8495a7f263f4f0e",
                 "shasum": ""
             },
             "require": {
@@ -3281,10 +3281,10 @@
                 "ext-xdebug": "*",
                 "infection/infection": "~0.30.3",
                 "mockery/mockery": "~1.6.12",
-                "nikic/php-parser": "~5.4.0 || ~5.5.0",
+                "nikic/php-parser": "~5.5.0",
                 "phpunit/phpunit": "~12.2.7",
                 "symfony/var-dumper": "~7.3.1",
-                "vimeo/psalm": "~6.12.1"
+                "vimeo/psalm": "~6.13.0"
             },
             "default-branch": true,
             "bin": [
@@ -3381,7 +3381,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-07-13T15:47:27+00:00"
+            "time": "2025-07-17T15:22:40+00:00"
         },
         {
             "name": "ghostwriter/filesystem",
@@ -5717,16 +5717,16 @@
         },
         {
             "name": "sanmai/pipeline",
-            "version": "6.19",
+            "version": "6.21",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sanmai/pipeline.git",
-                "reference": "3707180c66dd6b3b9c4b5f9fe26155325812037d"
+                "reference": "6d729c0b0c662010d84cdea9b99f90a65ae4cf5e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sanmai/pipeline/zipball/3707180c66dd6b3b9c4b5f9fe26155325812037d",
-                "reference": "3707180c66dd6b3b9c4b5f9fe26155325812037d",
+                "url": "https://api.github.com/repos/sanmai/pipeline/zipball/6d729c0b0c662010d84cdea9b99f90a65ae4cf5e",
+                "reference": "6d729c0b0c662010d84cdea9b99f90a65ae4cf5e",
                 "shasum": ""
             },
             "require": {
@@ -5735,9 +5735,10 @@
             "require-dev": {
                 "ergebnis/composer-normalize": "^2.8",
                 "friendsofphp/php-cs-fixer": "^3.17",
-                "infection/infection": ">=0.10.5",
+                "infection/infection": ">=0.30.3",
                 "league/pipeline": "^0.3 || ^1.0",
                 "php-coveralls/php-coveralls": "^2.4.1",
+                "phpstan/extension-installer": "^1.4",
                 "phpstan/phpstan": "^2",
                 "phpunit/phpunit": ">=9.4 <12",
                 "sanmai/phpstan-rules": "^0.3.0",
@@ -5770,7 +5771,7 @@
             "description": "General-purpose collections pipeline",
             "support": {
                 "issues": "https://github.com/sanmai/pipeline/issues",
-                "source": "https://github.com/sanmai/pipeline/tree/6.19"
+                "source": "https://github.com/sanmai/pipeline/tree/6.21"
             },
             "funding": [
                 {
@@ -5778,7 +5779,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-07-05T14:39:33+00:00"
+            "time": "2025-07-16T04:06:56+00:00"
         },
         {
             "name": "sebastian/cli-parser",
