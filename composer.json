@@ -61,7 +61,7 @@
         "ext-xdebug": "*",
         "ghostwriter/coding-standard": "dev-main",
         "ghostwriter/filesystem": "~0.1.1",
-        "infection/infection": "~0.30.3",
+        "infection/infection": "~0.31.0",
         "mockery/mockery": "~1.6.12",
         "phpunit/phpunit": "~12.2.7",
         "symfony/var-dumper": "~7.3.1",
