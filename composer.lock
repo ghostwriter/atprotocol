@@ -3234,12 +3234,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ghostwriter/coding-standard.git",
-                "reference": "b3a3c2c6570d8b03683879a6788104a8455cbafd"
+                "reference": "d2f24282274edfd60177d163c3d1c851b1276373"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ghostwriter/coding-standard/zipball/b3a3c2c6570d8b03683879a6788104a8455cbafd",
-                "reference": "b3a3c2c6570d8b03683879a6788104a8455cbafd",
+                "url": "https://api.github.com/repos/ghostwriter/coding-standard/zipball/d2f24282274edfd60177d163c3d1c851b1276373",
+                "reference": "d2f24282274edfd60177d163c3d1c851b1276373",
                 "shasum": ""
             },
             "require": {
@@ -3286,7 +3286,7 @@
                 "infection/infection": "~0.31.0",
                 "mockery/mockery": "~1.6.12",
                 "nikic/php-parser": "~5.6.0",
-                "phpunit/phpunit": "~12.2.9",
+                "phpunit/phpunit": "~12.3.0",
                 "symfony/var-dumper": "~7.3.2",
                 "vimeo/psalm": "~6.13.0"
             },
@@ -3385,7 +3385,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-07-31T13:07:36+00:00"
+            "time": "2025-08-01T08:38:05+00:00"
         },
         {
             "name": "ghostwriter/filesystem",
@@ -4385,16 +4385,16 @@
         },
         {
             "name": "myclabs/deep-copy",
-            "version": "1.13.3",
+            "version": "1.13.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/myclabs/DeepCopy.git",
-                "reference": "faed855a7b5f4d4637717c2b3863e277116beb36"
+                "reference": "07d290f0c47959fd5eed98c95ee5602db07e0b6a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/myclabs/DeepCopy/zipball/faed855a7b5f4d4637717c2b3863e277116beb36",
-                "reference": "faed855a7b5f4d4637717c2b3863e277116beb36",
+                "url": "https://api.github.com/repos/myclabs/DeepCopy/zipball/07d290f0c47959fd5eed98c95ee5602db07e0b6a",
+                "reference": "07d290f0c47959fd5eed98c95ee5602db07e0b6a",
                 "shasum": ""
             },
             "require": {
@@ -4433,7 +4433,7 @@
             ],
             "support": {
                 "issues": "https://github.com/myclabs/DeepCopy/issues",
-                "source": "https://github.com/myclabs/DeepCopy/tree/1.13.3"
+                "source": "https://github.com/myclabs/DeepCopy/tree/1.13.4"
             },
             "funding": [
                 {
@@ -4441,7 +4441,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-07-05T12:25:42+00:00"
+            "time": "2025-08-01T08:46:24+00:00"
         },
         {
             "name": "netresearch/jsonmapper",
