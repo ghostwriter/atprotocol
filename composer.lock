@@ -3234,12 +3234,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ghostwriter/coding-standard.git",
-                "reference": "699de3a53b90a0e003dfa09275083ebd0d0d3733"
+                "reference": "a8f9dae205f36ca017029cd1b3cd4f47dcdc0b72"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ghostwriter/coding-standard/zipball/699de3a53b90a0e003dfa09275083ebd0d0d3733",
-                "reference": "699de3a53b90a0e003dfa09275083ebd0d0d3733",
+                "url": "https://api.github.com/repos/ghostwriter/coding-standard/zipball/a8f9dae205f36ca017029cd1b3cd4f47dcdc0b72",
+                "reference": "a8f9dae205f36ca017029cd1b3cd4f47dcdc0b72",
                 "shasum": ""
             },
             "require": {
@@ -3283,7 +3283,7 @@
             },
             "require-dev": {
                 "ext-xdebug": "*",
-                "infection/infection": "~0.31.0",
+                "infection/infection": "~0.31.1",
                 "mockery/mockery": "~1.6.12",
                 "nikic/php-parser": "~5.6.0",
                 "phpunit/phpunit": "~12.3.0",
@@ -3385,7 +3385,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-08-04T10:30:02+00:00"
+            "time": "2025-08-04T14:49:07+00:00"
         },
         {
             "name": "ghostwriter/filesystem",
