@@ -3234,12 +3234,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ghostwriter/coding-standard.git",
-                "reference": "fc3b92cddc65c83563433d7b9e874dccfa3021c9"
+                "reference": "699de3a53b90a0e003dfa09275083ebd0d0d3733"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ghostwriter/coding-standard/zipball/fc3b92cddc65c83563433d7b9e874dccfa3021c9",
-                "reference": "fc3b92cddc65c83563433d7b9e874dccfa3021c9",
+                "url": "https://api.github.com/repos/ghostwriter/coding-standard/zipball/699de3a53b90a0e003dfa09275083ebd0d0d3733",
+                "reference": "699de3a53b90a0e003dfa09275083ebd0d0d3733",
                 "shasum": ""
             },
             "require": {
@@ -3385,7 +3385,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-08-01T10:57:31+00:00"
+            "time": "2025-08-04T10:30:02+00:00"
         },
         {
             "name": "ghostwriter/filesystem",
@@ -5707,21 +5707,21 @@
         },
         {
             "name": "sanmai/di-container",
-            "version": "0.1.4",
+            "version": "0.1.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sanmai/di-container.git",
-                "reference": "7141a28f33d72dd7a9e3148e32a8b54b93050453"
+                "reference": "355534ad7970fc7dab4211ecaf2da5c546855ee8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sanmai/di-container/zipball/7141a28f33d72dd7a9e3148e32a8b54b93050453",
-                "reference": "7141a28f33d72dd7a9e3148e32a8b54b93050453",
+                "url": "https://api.github.com/repos/sanmai/di-container/zipball/355534ad7970fc7dab4211ecaf2da5c546855ee8",
+                "reference": "355534ad7970fc7dab4211ecaf2da5c546855ee8",
                 "shasum": ""
             },
             "require": {
                 "php": ">=8.2",
-                "psr/container": "^2.0",
+                "psr/container": "^1.1.2 || ^2.0",
                 "sanmai/pipeline": "^6.17 || ^7.0"
             },
             "require-dev": {
@@ -5761,10 +5761,16 @@
                     "homepage": "https://twitter.com/tfidry"
                 }
             ],
-            "description": "Straightforward DI container with autowiring",
+            "description": "dependency injection container with automatic constructor dependency resolution",
+            "keywords": [
+                "Autowiring",
+                "constructor di",
+                "di container",
+                "psr 11"
+            ],
             "support": {
                 "issues": "https://github.com/sanmai/di-container/issues",
-                "source": "https://github.com/sanmai/di-container/tree/0.1.4"
+                "source": "https://github.com/sanmai/di-container/tree/0.1.5"
             },
             "funding": [
                 {
@@ -5772,7 +5778,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-07-24T03:40:49+00:00"
+            "time": "2025-08-04T09:43:58+00:00"
         },
         {
             "name": "sanmai/duoclock",
