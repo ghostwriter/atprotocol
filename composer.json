@@ -65,7 +65,7 @@
         "mockery/mockery": "~1.6.12",
         "phpunit/phpunit": "~12.3.0",
         "symfony/var-dumper": "~7.3.2",
-        "vimeo/psalm": "~6.13.0"
+        "vimeo/psalm": "~6.13.1"
     },
     "minimum-stability": "stable",
     "prefer-stable": true,
