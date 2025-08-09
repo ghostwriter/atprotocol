@@ -1,0 +1,24 @@
+"repository":
+  "name": "atprotocol"
+  "description": "[WIP] Bluesky API Client for AT Protocol"
+  "homepage": "https://github.com/ghostwriter/atprotocol"
+  "topics": "atp, atproto, atprotocol, bluesky, bluesky-api, bluesky-app, bluesky-bot, bluesky-client, bluesky-feed, bluesky-generator, bluesky-social, bluesky-webclient, bsky, ghostwriter, lexicon, lexicons"
+  "private": false
+  "has_issues": true
+  "has_projects": false
+  "has_wiki": false
+  "has_downloads": true
+  "default_branch": "0.1.x"
+  "allow_squash_merge": true
+  "allow_merge_commit": true
+  "allow_rebase_merge": true
+  "delete_branch_on_merge": true
+  "enable_automated_security_fixes": true
+  "enable_vulnerability_alerts": true
+"milestones":
+  - "title": "0.1.0"
+    "description": "Minor release – targeting 0.1.x branch (semantic version: 0.1.0)"
+    "state": "open"
+  - "title": "1.0.0"
+    "description": "Major release – targeting 1.0.x branch (semantic version: 1.0.0)"
+    "state": "open"
