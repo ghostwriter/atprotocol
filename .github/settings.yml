@@ -4,8 +4,8 @@
   "homepage": "https://github.com/ghostwriter/atprotocol"
   "topics": "atp, atproto, atprotocol, bluesky, bluesky-api, bluesky-app, bluesky-bot, bluesky-client, bluesky-feed, bluesky-generator, bluesky-social, bluesky-webclient, bsky, ghostwriter, lexicon, lexicons"
   "has_issues": true
-  "has_projects": false
-  "has_wiki": false
+  "has_projects": true
+  "has_wiki": true
   "has_downloads": true
   "default_branch": "0.1.x"
   "allow_squash_merge": true
@@ -14,6 +14,9 @@
   "delete_branch_on_merge": true
   "enable_automated_security_fixes": true
   "enable_vulnerability_alerts": true
+  "allow_auto_merge": true
+  "allow_update_branch": true
+  "web_commit_signoff_required": true
 "milestones":
   - "title": "0.1.0"
     "description": "Minor release – targeting 0.1.x branch (semantic version: 0.1.0)"
