@@ -4,8 +4,8 @@
   "homepage": "https://github.com/ghostwriter/atprotocol"
   "topics": "atp, atproto, atprotocol, bluesky, bluesky-api, bluesky-app, bluesky-bot, bluesky-client, bluesky-feed, bluesky-generator, bluesky-social, bluesky-webclient, bsky, ghostwriter, lexicon, lexicons"
   "has_issues": true
-  "has_projects": true
-  "has_wiki": true
+  "has_projects": false
+  "has_wiki": false
   "has_downloads": true
   "default_branch": "0.1.x"
   "allow_squash_merge": true
