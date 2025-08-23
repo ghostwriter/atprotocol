@@ -1,22 +1,3 @@
-"repository":
-  "name": "atprotocol"
-  "description": "[WIP] Bluesky API Client for AT Protocol"
-  "homepage": "https://github.com/ghostwriter/atprotocol"
-  "topics": "atp, atproto, atprotocol, bluesky, bluesky-api, bluesky-app, bluesky-bot, bluesky-client, bluesky-feed, bluesky-generator, bluesky-social, bluesky-webclient, bsky, ghostwriter, lexicon, lexicons"
-  "has_issues": true
-  "has_projects": false
-  "has_wiki": false
-  "has_downloads": true
-  "default_branch": "0.1.x"
-  "allow_squash_merge": true
-  "allow_merge_commit": true
-  "allow_rebase_merge": true
-  "delete_branch_on_merge": true
-  "enable_automated_security_fixes": true
-  "enable_vulnerability_alerts": true
-  "allow_auto_merge": true
-  "allow_update_branch": true
-  "web_commit_signoff_required": true
 "milestones":
   - "title": "0.1.0"
     "description": "Minor release – targeting 0.1.x branch (semantic version: 0.1.0)"
@@ -24,3 +5,36 @@
   - "title": "1.0.0"
     "description": "Major release – targeting 1.0.x branch (semantic version: 1.0.0)"
     "state": "open"
+"repository":
+  "name": "atprotocol"
+  "description": "[WIP] Bluesky API Client for AT Protocol"
+  "topics": "atp, atproto, atprotocol, bluesky, bluesky-api, bluesky-app, bluesky-bot, bluesky-client, bluesky-feed, bluesky-generator, bluesky-social, bluesky-webclient, bsky, ghostwriter, lexicon, lexicons"
+  "homepage": "https://github.com/ghostwriter/atprotocol"
+  "default_branch": "0.1.x"
+  "allow_auto_merge": true
+  "allow_forking": true
+  "allow_merge_commit": true
+  "allow_rebase_merge": true
+  "allow_squash_merge": true
+  "allow_update_branch": true
+  "delete_branch_on_merge": true
+  "enable_automated_security_fixes": true
+  "enable_vulnerability_alerts": true
+  "has_downloads": true
+  "has_issues": true
+  "has_projects": false
+  "has_wiki": false
+  "security_and_analysis":
+    "advanced_security":
+      "status": "enabled"
+    "code_security":
+      "status": "enabled"
+    "secret_scanning":
+      "status": "enabled"
+    "secret_scanning_ai_detection":
+      "status": "enabled"
+    "secret_scanning_non_provider_patterns":
+      "status": "enabled"
+    "secret_scanning_push_protection":
+      "status": "enabled"
+  "web_commit_signoff_required": true
