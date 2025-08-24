@@ -102,14 +102,13 @@
         "use-parent-dir": false
     },
     "scripts": {
-        "bin_composer": "vendor/ghostwriter/coding-standard/tools/composer",
+        "bin_composer": "vendor/ghostwriter/coding-standard/tools/phar/composer",
         "bin_ecs": "ecs check --clear-cache --no-interaction",
-        "bin_infection": "vendor/ghostwriter/coding-standard/tools/infection --ansi --min-covered-msi=0 --min-msi=0 --show-mutations --threads=max",
-        "bin_normalize": "vendor/ghostwriter/coding-standard/tools/composer-normalize",
-        "bin_phive": "vendor/ghostwriter/coding-standard/tools/phive",
+        "bin_infection": "vendor/ghostwriter/coding-standard/tools/phar/infection --ansi --min-covered-msi=0 --min-msi=0 --show-mutations --threads=max",
+        "bin_normalize": "vendor/ghostwriter/coding-standard/tools/phar/composer-normalize",
+        "bin_phive": "vendor/ghostwriter/coding-standard/tools/phar/phive",
         "bin_phpunit": "vendor/bin/phpunit --do-not-cache-result --colors=always",
-        "bin_psalm": "vendor/ghostwriter/coding-standard/tools/psalm --no-cache",
-        "bin_rector": "rector process --no-ansi --clear-cache",
+        "bin_psalm": "vendor/ghostwriter/coding-standard/tools/phar/psalm --no-cache",
         "cache:clear": "rm -rf ./.cache/*",
         "check": [
             "@cache:clear",
