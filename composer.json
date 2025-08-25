@@ -155,7 +155,6 @@
         "psalm:security": "@bin_psalm --no-diff --taint-analysis",
         "psalm:shepherd": "@psalm --no-diff --shepherd --stats",
         "psalm:update": "@bin_psalm --no-diff --update-baseline=psalm-baseline.xml",
-        "rector:dry-run": "@rector --dry-run",
         "test": [
             "@phpunit",
             "@infection",
