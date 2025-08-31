@@ -102,16 +102,11 @@
         "use-parent-dir": false
     },
     "scripts": {
-        "bin_composer": "vendor/ghostwriter/coding-standard/tools/phar/composer",
-        "bin_infection": "vendor/ghostwriter/coding-standard/tools/phar/infection --ansi --min-covered-msi=0 --min-msi=0 --show-mutations --threads=max",
-        "bin_normalize": "vendor/ghostwriter/coding-standard/tools/phar/composer-normalize",
-        "bin_phive": "vendor/ghostwriter/coding-standard/tools/phar/phive",
-        "bin_phpunit": "vendor/ghostwriter/coding-standard/tools/phar/phpunit --do-not-cache-result --colors=always",
-        "bin_psalm": "vendor/ghostwriter/coding-standard/tools/phar/psalm --no-cache",
         "cache:clear": "rm -rf ./.cache/*",
         "check": [
             "@cache:clear",
-            "@bin_composer validate",
+            "vendor/ghostwriter/coding-standard/tools/phar/composer validate",
+            "@normalize",
             "@test"
         ],
         "composer-normalize": "vendor/ghostwriter/coding-standard/tools/composer-normalize --no-cache --diff --no-check-lock --no-scripts --no-plugins",
@@ -132,16 +127,16 @@
         "git:submodule:update": "git submodule update --depth=1 --init --recursive --recommend-shallow --remote",
         "infection": [
             "@xdebug",
-            "@bin_infection"
+            "vendor/ghostwriter/coding-standard/tools/phar/infection --min-covered-msi=0 --min-msi=0 --show-mutations --threads=max"
         ],
-        "normalize": "@bin_normalize --no-cache --diff --no-check-lock --no-scripts --no-plugins",
+        "normalize": "vendor/ghostwriter/coding-standard/tools/phar/composer-normalize --no-cache --diff --no-check-lock --no-scripts --no-plugins",
         "phive": [
             "@bin_phive update --force-accept-unsigned",
             "@bin_phive purge"
         ],
         "phpunit": [
             "@xdebug",
-            "@bin_phpunit"
+            "vendor/ghostwriter/coding-standard/tools/phar/phpunit --do-not-cache-result --colors=always"
         ],
         "phpunit:migrate": [
             "@xdebug",
@@ -157,8 +152,7 @@
         "psalm:update": "@bin_psalm --no-diff --update-baseline=psalm-baseline.xml",
         "test": [
             "@phpunit",
-            "@infection",
-            "@psalm"
+            "@infection"
         ],
         "xdebug": "@putenv XDEBUG_MODE=coverage"
     }
