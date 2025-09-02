@@ -61,7 +61,6 @@
         "ext-xdebug": "*",
         "ghostwriter/coding-standard": "dev-main",
         "ghostwriter/filesystem": "~0.1.1",
-        "ghostwriter/workbench": "0.1.x-dev",
         "mockery/mockery": "~1.6.12",
         "phpunit/phpunit": "~12.3.7",
         "symfony/var-dumper": "~7.3.3"
@@ -85,8 +84,7 @@
     },
     "config": {
         "allow-plugins": {
-            "ghostwriter/coding-standard": true,
-            "ghostwriter/workbench": true
+            "ghostwriter/coding-standard": true
         },
         "bump-after-update": false,
         "classmap-authoritative": false,
