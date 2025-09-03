@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9d2d0b1671145515395d89ebaf7e781d",
+    "content-hash": "b50faf0b582a049a69f5e42620571885",
     "packages": [
         {
             "name": "clue/stream-filter",
@@ -5734,7 +5734,8 @@
     "prefer-lowest": false,
     "platform": {
         "php": "~8.4.0 || ~8.5.0",
-        "ext-curl": "*"
+        "ext-curl": "*",
+        "ext-mbstring": "*"
     },
     "platform-dev": {
         "ext-xdebug": "*"
