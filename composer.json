@@ -107,15 +107,6 @@
             "@normalize",
             "@test"
         ],
-        "composer-normalize": "vendor/ghostwriter/coding-standard/tools/composer-normalize --no-cache --diff --no-check-lock --no-scripts --no-plugins",
-        "dev": [
-            "@cache:clear",
-            "@composer-normalize",
-            "@check",
-            "@psalm:update",
-            "@psalm:security",
-            "@psalm:dry-run"
-        ],
         "docker": [
             "@docker:build",
             "@docker:run"
@@ -128,26 +119,11 @@
             "vendor/ghostwriter/coding-standard/tools/phar/infection --min-covered-msi=0 --min-msi=0 --show-mutations --threads=max"
         ],
         "normalize": "vendor/ghostwriter/coding-standard/tools/phar/composer-normalize --no-cache --diff --no-check-lock --no-scripts --no-plugins",
-        "phive": [
-            "@bin_phive update --force-accept-unsigned",
-            "@bin_phive purge"
-        ],
+        "phpbench": "vendor/ghostwriter/coding-standard/tools/phar/phpbench run --report='extends:aggregate,cols:[benchmark,subject,revs,its,mem_peak,mode,rstdev]' --time-unit=milliseconds",
         "phpunit": [
             "@xdebug",
             "vendor/ghostwriter/coding-standard/tools/phar/phpunit --do-not-cache-result --colors=always"
         ],
-        "phpunit:migrate": [
-            "@xdebug",
-            "@bin_phpunit --migrate-configuration"
-        ],
-        "psalm": "@bin_psalm --show-info=true --no-diff --shepherd --stats",
-        "psalm:alter": "@bin_psalm --alter --allow-backwards-incompatible-changes=false --safe-types",
-        "psalm:baseline": "@bin_psalm --no-diff --set-baseline=psalm-baseline.xml",
-        "psalm:dry-run": "@bin_psalm --alter --issues=all --dry-run",
-        "psalm:fix": "@bin_psalm --alter --issues=UnnecessaryVarAnnotation",
-        "psalm:security": "@bin_psalm --no-diff --taint-analysis",
-        "psalm:shepherd": "@psalm --no-diff --shepherd --stats",
-        "psalm:update": "@bin_psalm --no-diff --update-baseline=psalm-baseline.xml",
         "test": [
             "@phpunit",
             "@infection"
