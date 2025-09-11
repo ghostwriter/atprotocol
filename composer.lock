@@ -2018,12 +2018,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ghostwriter/coding-standard.git",
-                "reference": "17776b9d6f4382441d4935aa212465b707f67782"
+                "reference": "b41b8c9261587c68541e6bf38933426ce8b9c8db"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ghostwriter/coding-standard/zipball/17776b9d6f4382441d4935aa212465b707f67782",
-                "reference": "17776b9d6f4382441d4935aa212465b707f67782",
+                "url": "https://api.github.com/repos/ghostwriter/coding-standard/zipball/b41b8c9261587c68541e6bf38933426ce8b9c8db",
+                "reference": "b41b8c9261587c68541e6bf38933426ce8b9c8db",
                 "shasum": ""
             },
             "require": {
@@ -2078,17 +2078,17 @@
             },
             "default-branch": true,
             "bin": [
-                "tools/phar/composer",
-                "tools/phar/composer-normalize",
-                "tools/phar/composer-require-checker",
-                "tools/phar/composer-unused",
-                "tools/phar/infection",
-                "tools/phar/phive",
-                "tools/phar/phpactor",
-                "tools/phar/phpbench",
-                "tools/phar/phpdocumentor",
-                "tools/phar/phpunit",
-                "tools/phar/psalm"
+                "tools/phar/composer-normalize.phar",
+                "tools/phar/composer-require-checker.phar",
+                "tools/phar/composer-unused.phar",
+                "tools/phar/composer.phar",
+                "tools/phar/infection.phar",
+                "tools/phar/phive.phar",
+                "tools/phar/phpactor.phar",
+                "tools/phar/phpbench.phar",
+                "tools/phar/phpdocumentor.phar",
+                "tools/phar/phpunit.phar",
+                "tools/phar/psalm.phar"
             ],
             "type": "composer-plugin",
             "extra": {
@@ -2180,7 +2180,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-09-11T12:59:06+00:00"
+            "time": "2025-09-11T17:06:16+00:00"
         },
         {
             "name": "ghostwriter/filesystem",
