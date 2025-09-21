@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "971e38ffd32deb177fca846701df5618",
+    "content-hash": "d04a50ae3e324fd8a2b385fb8abad5bf",
     "packages": [
         {
             "name": "clue/stream-filter",
@@ -2018,12 +2018,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ghostwriter/coding-standard.git",
-                "reference": "5a3b19053dc74511910d5f81bb41e8422c6842c8"
+                "reference": "62def0cbc87cc8cea445ef9bceb42278b8f9d08e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ghostwriter/coding-standard/zipball/5a3b19053dc74511910d5f81bb41e8422c6842c8",
-                "reference": "5a3b19053dc74511910d5f81bb41e8422c6842c8",
+                "url": "https://api.github.com/repos/ghostwriter/coding-standard/zipball/62def0cbc87cc8cea445ef9bceb42278b8f9d08e",
+                "reference": "62def0cbc87cc8cea445ef9bceb42278b8f9d08e",
                 "shasum": ""
             },
             "require": {
@@ -2073,7 +2073,7 @@
                 "ext-xdebug": "*",
                 "mockery/mockery": "~1.6.12",
                 "nikic/php-parser": "~5.6.1",
-                "phpunit/phpunit": "~12.3.11",
+                "phpunit/phpunit": "~12.3.12",
                 "symfony/var-dumper": "~7.3.3"
             },
             "default-branch": true,
@@ -2180,7 +2180,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-09-19T12:54:01+00:00"
+            "time": "2025-09-21T14:31:25+00:00"
         },
         {
             "name": "ghostwriter/filesystem",
