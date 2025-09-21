@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "971e38ffd32deb177fca846701df5618",
+    "content-hash": "31789507e87f335454c17cf8ac34c897",
     "packages": [
         {
             "name": "clue/stream-filter",
@@ -2018,19 +2018,19 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ghostwriter/coding-standard.git",
-                "reference": "ea2be7cf71be411d7350ff61c003867453992ba0"
+                "reference": "7e540764e57168712b63cda550a95f1093bd90b7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ghostwriter/coding-standard/zipball/ea2be7cf71be411d7350ff61c003867453992ba0",
-                "reference": "ea2be7cf71be411d7350ff61c003867453992ba0",
+                "url": "https://api.github.com/repos/ghostwriter/coding-standard/zipball/7e540764e57168712b63cda550a95f1093bd90b7",
+                "reference": "7e540764e57168712b63cda550a95f1093bd90b7",
                 "shasum": ""
             },
             "require": {
                 "composer-plugin-api": "~2.6.0",
                 "composer-runtime-api": "~2.2.2",
-                "composer/composer": "~2.8.12",
-                "composer/semver": "~3.4.4",
+                "composer/composer": "^2.8.12",
+                "composer/semver": "^3.4.4",
                 "ext-ctype": "*",
                 "ext-curl": "*",
                 "ext-dom": "*",
@@ -2053,28 +2053,28 @@
                 "ext-xml": "*",
                 "ext-xmlwriter": "*",
                 "ext-zlib": "*",
-                "ghostwriter/case-converter": "~2.1.0",
-                "ghostwriter/clock": "~3.0.1",
-                "ghostwriter/config": "~1.0.0",
-                "ghostwriter/container": "~5.0.1",
-                "ghostwriter/event-dispatcher": "~5.0.3",
-                "ghostwriter/filesystem": "~0.1.1",
-                "ghostwriter/json": "~3.0.0",
-                "ghostwriter/option": "~2.0.0",
-                "ghostwriter/result": "~2.0.0",
-                "ghostwriter/shell": "~0.1.0",
+                "ghostwriter/case-converter": "^2.1.0",
+                "ghostwriter/clock": "^3.0.1",
+                "ghostwriter/config": "^1.0.0",
+                "ghostwriter/container": "^5.0.1",
+                "ghostwriter/event-dispatcher": "^5.0.3",
+                "ghostwriter/filesystem": "^0.1.1",
+                "ghostwriter/json": "^3.0.0",
+                "ghostwriter/option": "^2.0.0",
+                "ghostwriter/result": "^2.0.0",
+                "ghostwriter/shell": "^0.1.0",
                 "php": "~8.4.0 || ~8.5.0",
-                "symfony/console": "~7.3.3"
+                "symfony/console": "^7.3.3"
             },
             "conflict": {
                 "pestphp/pest": "*"
             },
             "require-dev": {
                 "ext-xdebug": "*",
-                "mockery/mockery": "~1.6.12",
-                "nikic/php-parser": "~5.6.1",
-                "phpunit/phpunit": "~12.3.12",
-                "symfony/var-dumper": "~7.3.3"
+                "mockery/mockery": "^1.6.12",
+                "nikic/php-parser": "^5.6.1",
+                "phpunit/phpunit": "^12.3.12",
+                "symfony/var-dumper": "^7.3.3"
             },
             "default-branch": true,
             "bin": [
@@ -2180,7 +2180,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-09-21T15:43:42+00:00"
+            "time": "2025-09-21T17:11:39+00:00"
         },
         {
             "name": "ghostwriter/filesystem",
