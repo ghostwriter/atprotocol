@@ -63,7 +63,7 @@
         "ghostwriter/filesystem": "^0.1.1",
         "mockery/mockery": "^1.6.12",
         "phpunit/phpunit": "^12.3.14",
-        "symfony/var-dumper": "^7.3.3"
+        "symfony/var-dumper": "^7.3.4"
     },
     "prefer-stable": true,
     "autoload": {
