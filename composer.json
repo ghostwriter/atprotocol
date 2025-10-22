@@ -110,6 +110,7 @@
         "phpbench": "vendor/ghostwriter/coding-standard/tools/phar/phpbench run --report='extends:aggregate,cols:[benchmark,subject,revs,its,mem_peak,mode,rstdev]' --time-unit=milliseconds",
         "phpunit": ["@xdebug", "vendor/ghostwriter/coding-standard/tools/phar/phpunit --do-not-cache-result --colors=always"],
         "test": ["@phpunit", "@infection"],
-        "xdebug": "@putenv XDEBUG_MODE=coverage"
+        "xdebug": "@putenv XDEBUG_MODE=coverage",
+        "unused": "vendor/ghostwriter/coding-standard/tools/phar/composer-unused --no-interaction --ansi"
     }
 }
