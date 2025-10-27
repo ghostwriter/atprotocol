@@ -79,9 +79,7 @@
         "files": [
             "tests/bootstrap.php"
         ],
-        "exclude-from-classmap": [
-            "/tests/"
-        ]
+        "exclude-from-classmap": ["/tests/"]
     },
     "config": {
         "allow-plugins": {
@@ -102,33 +100,16 @@
     },
     "scripts": {
         "cache:clear": "rm -rf ./.cache/*",
-        "check": [
-            "@cache:clear",
-            "vendor/ghostwriter/coding-standard/tools/phar/composer validate",
-            "@normalize",
-            "@test"
-        ],
-        "docker": [
-            "@docker:build",
-            "@docker:run"
-        ],
+        "check": ["@cache:clear", "vendor/ghostwriter/coding-standard/tools/phar/composer validate", "@normalize", "@test"],
+        "docker": ["@docker:build", "@docker:run"],
         "docker:build": "docker buildx build --pull --tag workspace .",
         "docker:run": "docker run -v $(PWD):/github/workspace -w=/github/workspace -e GITHUB_DEBUG=1 -e GITHUB_WORKSPACE=/github/workspace -e GITHUB_TOKEN=github-token -e SIGNING_SECRET_KEY=secret-key workspace",
         "git:submodule:update": "git submodule update --depth=1 --init --recursive --recommend-shallow --remote",
-        "infection": [
-            "@xdebug",
-            "vendor/ghostwriter/coding-standard/tools/phar/infection --min-covered-msi=0 --min-msi=0 --show-mutations --threads=max"
-        ],
+        "infection": ["@xdebug", "vendor/ghostwriter/coding-standard/tools/phar/infection --min-covered-msi=0 --min-msi=0 --show-mutations --threads=max"],
         "normalize": "vendor/ghostwriter/coding-standard/tools/phar/composer-normalize --no-cache --diff --no-check-lock --no-scripts --no-plugins",
         "phpbench": "vendor/ghostwriter/coding-standard/tools/phar/phpbench run --report='extends:aggregate,cols:[benchmark,subject,revs,its,mem_peak,mode,rstdev]' --time-unit=milliseconds",
-        "phpunit": [
-            "@xdebug",
-            "vendor/ghostwriter/coding-standard/tools/phar/phpunit --do-not-cache-result --colors=always"
-        ],
-        "test": [
-            "@phpunit",
-            "@infection"
-        ],
+        "phpunit": ["@xdebug", "vendor/ghostwriter/coding-standard/tools/phar/phpunit --do-not-cache-result --colors=always"],
+        "test": ["@phpunit", "@infection"],
         "unused": "vendor/ghostwriter/coding-standard/tools/phar/composer-unused --no-interaction --ansi",
         "xdebug": "@putenv XDEBUG_MODE=coverage"
     }
