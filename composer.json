@@ -107,7 +107,7 @@
         "git:submodule:update": "git submodule update --depth=1 --init --recursive --recommend-shallow --remote",
         "infection": ["@xdebug", "vendor/ghostwriter/coding-standard/tools/phar/infection --min-covered-msi=0 --min-msi=0 --show-mutations --threads=max"],
         "phpbench": "vendor/ghostwriter/coding-standard/tools/phar/phpbench run --report='extends:aggregate,cols:[benchmark,subject,revs,its,mem_peak,mode,rstdev]' --time-unit=milliseconds ./tests/Benchmark",
-        "phpunit": ["@xdebug", "vendor/ghostwriter/coding-standard/tools/phar/phpunit --do-not-cache-result --colors=always"],
+        "phpunit": ["@xdebug", "vendor/bin/phpunit --do-not-cache-result --colors=always"],
         "test": ["@phpunit", "@infection"],
         "unused": "vendor/ghostwriter/coding-standard/tools/phar/composer-unused --no-interaction --ansi",
         "xdebug": "@putenv XDEBUG_MODE=coverage"
