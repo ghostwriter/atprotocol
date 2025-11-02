@@ -1954,76 +1954,17 @@
             "time": "2024-05-06T16:37:16+00:00"
         },
         {
-            "name": "ghostwriter/clock",
-            "version": "3.0.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/ghostwriter/clock.git",
-                "reference": "e68368475feb957b7d40e3d1e03de411fe6b032d"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/ghostwriter/clock/zipball/e68368475feb957b7d40e3d1e03de411fe6b032d",
-                "reference": "e68368475feb957b7d40e3d1e03de411fe6b032d",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=8.3"
-            },
-            "require-dev": {
-                "ghostwriter/coding-standard": "dev-main",
-                "ghostwriter/psalm-plugin": "dev-main"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Ghostwriter\\Clock\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Nathanael Esayeas",
-                    "email": "nathanael.esayeas@protonmail.com",
-                    "homepage": "https://github.com/ghostwriter",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Provides a Clock implementation for PHP",
-            "homepage": "https://github.com/ghostwriter/clock",
-            "keywords": [
-                "clock",
-                "ghostwriter"
-            ],
-            "support": {
-                "issues": "https://github.com/ghostwriter/clock/issues",
-                "rss": "https://github.com/ghostwriter/clock/releases.atom",
-                "security": "https://github.com/ghostwriter/clock/security/advisories/new",
-                "source": "https://github.com/ghostwriter/clock"
-            },
-            "funding": [
-                {
-                    "url": "https://github.com/sponsors/ghostwriter",
-                    "type": "github"
-                }
-            ],
-            "time": "2025-01-05T19:26:41+00:00"
-        },
-        {
             "name": "ghostwriter/coding-standard",
             "version": "dev-main",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ghostwriter/coding-standard.git",
-                "reference": "3ae3e7ee0910cfee6f848a5e2328672f378adcb6"
+                "reference": "304b3fc8b0e3937a3987aa068e52760d79c94c11"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ghostwriter/coding-standard/zipball/3ae3e7ee0910cfee6f848a5e2328672f378adcb6",
-                "reference": "3ae3e7ee0910cfee6f848a5e2328672f378adcb6",
+                "url": "https://api.github.com/repos/ghostwriter/coding-standard/zipball/304b3fc8b0e3937a3987aa068e52760d79c94c11",
+                "reference": "304b3fc8b0e3937a3987aa068e52760d79c94c11",
                 "shasum": ""
             },
             "require": {
@@ -2053,16 +1994,6 @@
                 "ext-xml": "*",
                 "ext-xmlwriter": "*",
                 "ext-zlib": "*",
-                "ghostwriter/case-converter": "^2.1.0",
-                "ghostwriter/clock": "^3.0.1",
-                "ghostwriter/config": "^1.0.0",
-                "ghostwriter/container": "^5.0.1",
-                "ghostwriter/event-dispatcher": "^5.0.3",
-                "ghostwriter/filesystem": "^0.1.1",
-                "ghostwriter/json": "^3.0.0",
-                "ghostwriter/option": "^2.0.0",
-                "ghostwriter/result": "^2.0.0",
-                "ghostwriter/shell": "^0.1.0",
                 "php": "~8.4.0 || ~8.5.0",
                 "symfony/console": "^7.3.5"
             },
@@ -2179,7 +2110,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-10-30T17:11:59+00:00"
+            "time": "2025-11-02T03:40:48+00:00"
         },
         {
             "name": "ghostwriter/filesystem",
@@ -2240,67 +2171,6 @@
                 }
             ],
             "time": "2024-10-10T16:28:42+00:00"
-        },
-        {
-            "name": "ghostwriter/shell",
-            "version": "0.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/ghostwriter/shell.git",
-                "reference": "6a8eae4c14490180b99cdd1260cf767072a6ff83"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/ghostwriter/shell/zipball/6a8eae4c14490180b99cdd1260cf767072a6ff83",
-                "reference": "6a8eae4c14490180b99cdd1260cf767072a6ff83",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=8.3"
-            },
-            "require-dev": {
-                "ghostwriter/coding-standard": "dev-main"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Ghostwriter\\Shell\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Nathanael Esayeas",
-                    "email": "nathanael.esayeas@protonmail.com",
-                    "homepage": "https://github.com/ghostwriter",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Execute commands and external programs",
-            "homepage": "https://github.com/ghostwriter/shell",
-            "keywords": [
-                "ghostwriter",
-                "process",
-                "shell"
-            ],
-            "support": {
-                "docs": "https://github.com/ghostwriter/shell",
-                "forum": "https://github.com/ghostwriter/shell/discussions",
-                "issues": "https://github.com/ghostwriter/shell/issues",
-                "rss": "https://github.com/ghostwriter/shell/releases.atom",
-                "security": "https://github.com/ghostwriter/shell/security/advisories/new",
-                "source": "https://github.com/ghostwriter/shell"
-            },
-            "funding": [
-                {
-                    "url": "https://github.com/sponsors/ghostwriter",
-                    "type": "github"
-                }
-            ],
-            "time": "2024-06-22T22:15:04+00:00"
         },
         {
             "name": "hamcrest/hamcrest-php",
