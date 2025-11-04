@@ -1963,12 +1963,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ghostwriter/coding-standard.git",
-                "reference": "f3c3de98f47dbbf5b2fd7f9b4511b6c78ec9a8f8"
+                "reference": "6360ee0ff32f2c000e7179a2637711e641c0c701"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ghostwriter/coding-standard/zipball/f3c3de98f47dbbf5b2fd7f9b4511b6c78ec9a8f8",
-                "reference": "f3c3de98f47dbbf5b2fd7f9b4511b6c78ec9a8f8",
+                "url": "https://api.github.com/repos/ghostwriter/coding-standard/zipball/6360ee0ff32f2c000e7179a2637711e641c0c701",
+                "reference": "6360ee0ff32f2c000e7179a2637711e641c0c701",
                 "shasum": ""
             },
             "require": {
@@ -2012,7 +2012,6 @@
             },
             "default-branch": true,
             "bin": [
-                "tools/phar/composer",
                 "tools/phar/composer-normalize",
                 "tools/phar/composer-require-checker",
                 "tools/phar/composer-unused",
@@ -2113,7 +2112,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-11-02T23:22:26+00:00"
+            "time": "2025-11-04T14:04:46+00:00"
         },
         {
             "name": "ghostwriter/filesystem",
