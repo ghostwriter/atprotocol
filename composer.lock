@@ -74,27 +74,38 @@
         },
         {
             "name": "ghostwriter/case-converter",
-            "version": "2.1.0",
+            "version": "2.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ghostwriter/case-converter.git",
-                "reference": "21ea17ef7518e2241b504895752a1957f5284cc3"
+                "reference": "0d9e4e54a80eaab35b38f0ed2482e45c31dde323"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ghostwriter/case-converter/zipball/21ea17ef7518e2241b504895752a1957f5284cc3",
-                "reference": "21ea17ef7518e2241b504895752a1957f5284cc3",
+                "url": "https://api.github.com/repos/ghostwriter/case-converter/zipball/0d9e4e54a80eaab35b38f0ed2482e45c31dde323",
+                "reference": "0d9e4e54a80eaab35b38f0ed2482e45c31dde323",
                 "shasum": ""
             },
             "require": {
                 "ext-mbstring": "*",
-                "php": "^8.4"
+                "php": "~8.4.0 || ~8.5.0"
             },
             "require-dev": {
+                "ext-xdebug": "*",
                 "ghostwriter/coding-standard": "dev-main",
-                "ghostwriter/container": "^5.0.1"
+                "ghostwriter/container": "^6.0.1",
+                "mockery/mockery": "^1.6.12",
+                "phpunit/phpunit": "^12.4.4",
+                "symfony/var-dumper": "^7.3.5"
             },
             "type": "library",
+            "extra": {
+                "ghostwriter": {
+                    "container": {
+                        "definition": "Ghostwriter\\CaseConverter\\Container\\CaseConverterDefinition"
+                    }
+                }
+            },
             "autoload": {
                 "psr-4": {
                     "Ghostwriter\\CaseConverter\\": "src"
@@ -142,7 +153,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-03-21T01:13:07+00:00"
+            "time": "2025-11-25T03:02:29+00:00"
         },
         {
             "name": "ghostwriter/collection",
