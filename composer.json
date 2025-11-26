@@ -45,7 +45,7 @@
         "ext-mbstring": "*",
         "ghostwriter/case-converter": "^2.2.0",
         "ghostwriter/collection": "^2.0.0",
-        "ghostwriter/config": "^2.0.0",
+        "ghostwriter/config": "^2.0.1",
         "ghostwriter/container": "^5.0.1",
         "ghostwriter/event-dispatcher": "^5.0.3",
         "ghostwriter/json": "^3.0.1",
