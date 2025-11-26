@@ -60,7 +60,7 @@
     "require-dev": {
         "ext-xdebug": "*",
         "ghostwriter/coding-standard": "dev-main",
-        "ghostwriter/filesystem": "^0.1.1",
+        "ghostwriter/filesystem": "^0.1.2",
         "mockery/mockery": "^1.6.12",
         "phpunit/phpunit": "^12.4.3",
         "symfony/var-dumper": "^7.3.5"
