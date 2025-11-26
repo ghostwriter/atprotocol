@@ -111,5 +111,11 @@
         "test": ["@phpunit", "@infection"],
         "unused": "vendor/ghostwriter/coding-standard/tools/phar/composer-unused --no-interaction --ansi",
         "xdebug": "@putenv XDEBUG_MODE=coverage"
+    },
+    "extra": {
+        "thanks": {
+            "url": "https://github.com/ghostwriter/atprotocol",
+            "name": "ghostwriter/atprotocol"
+        }
     }
 }
