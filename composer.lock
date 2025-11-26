@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7be6317caba41f68d401b6cb286e05da",
+    "content-hash": "94f89774312f723b6fae8aea4ee89524",
     "packages": [
         {
             "name": "clue/stream-filter",
@@ -389,27 +389,38 @@
         },
         {
             "name": "ghostwriter/json",
-            "version": "3.0.0",
+            "version": "3.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ghostwriter/json.git",
-                "reference": "233cb60e91ec3760ff849cf4b371fcc892819c6b"
+                "reference": "a672903f17a2f5e3a0359436ef7a10b3cf33462b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ghostwriter/json/zipball/233cb60e91ec3760ff849cf4b371fcc892819c6b",
-                "reference": "233cb60e91ec3760ff849cf4b371fcc892819c6b",
+                "url": "https://api.github.com/repos/ghostwriter/json/zipball/a672903f17a2f5e3a0359436ef7a10b3cf33462b",
+                "reference": "a672903f17a2f5e3a0359436ef7a10b3cf33462b",
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*",
-                "php": "^8.3"
+                "php": "~8.4.0 || ~8.5.0"
             },
             "require-dev": {
+                "ext-xdebug": "*",
                 "ghostwriter/coding-standard": "dev-main",
-                "ghostwriter/psalm-plugin": "^0.1 || ^0.2 || ^1.0"
+                "ghostwriter/container": "^6.0.1",
+                "mockery/mockery": "^1.6.12",
+                "phpunit/phpunit": "^12.4.4",
+                "symfony/var-dumper": "^7.3.5"
             },
             "type": "library",
+            "extra": {
+                "ghostwriter": {
+                    "container": {
+                        "definition": "Ghostwriter\\Json\\Container\\JsonDefinition"
+                    }
+                }
+            },
             "autoload": {
                 "psr-4": {
                     "Ghostwriter\\Json\\": "src/"
@@ -417,7 +428,7 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "BSD-3-Clause"
+                "BSD-4-Clause"
             ],
             "authors": [
                 {
@@ -434,10 +445,9 @@
                 "json"
             ],
             "support": {
-                "docs": "https://github.com/ghostwriter/json",
-                "forum": "https://github.com/ghostwriter/json/discussions",
                 "issues": "https://github.com/ghostwriter/json/issues",
                 "rss": "https://github.com/ghostwriter/json/releases.atom",
+                "security": "https://github.com/ghostwriter/json/security/advisories/new",
                 "source": "https://github.com/ghostwriter/json"
             },
             "funding": [
@@ -446,7 +456,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-02-09T19:45:55+00:00"
+            "time": "2025-11-25T16:30:02+00:00"
         },
         {
             "name": "ghostwriter/option",

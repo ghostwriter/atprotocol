@@ -48,7 +48,7 @@
         "ghostwriter/config": "^2.0.0",
         "ghostwriter/container": "^5.0.1",
         "ghostwriter/event-dispatcher": "^5.0.3",
-        "ghostwriter/json": "^3.0.0",
+        "ghostwriter/json": "^3.0.1",
         "ghostwriter/option": "^2.0.0",
         "ghostwriter/result": "^2.0.0",
         "ghostwriter/uuid": "^1.0.3",
