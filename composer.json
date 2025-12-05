@@ -62,7 +62,7 @@
         "ghostwriter/coding-standard": "dev-main",
         "ghostwriter/filesystem": "^0.1.2",
         "mockery/mockery": "^1.6.12",
-        "phpunit/phpunit": "^12.4.5",
+        "phpunit/phpunit": "^12.5.0",
         "symfony/var-dumper": "^8.0.0"
     },
     "prefer-stable": true,
