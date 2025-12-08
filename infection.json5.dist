@@ -9,9 +9,6 @@
             "vendor"
         ]
     },
-    "phpUnit": {
-        "customPath": "vendor/ghostwriter/coding-standard/tools/phar/phpunit"
-    },
     "mutators": {
         "@default": true
     },
