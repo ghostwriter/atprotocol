@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4e9ce558db1cb0b0b49088fee50c7e4d",
+    "content-hash": "5748b677dbc6ecd379c4745be2306016",
     "packages": [
         {
             "name": "clue/stream-filter",
@@ -217,16 +217,16 @@
         },
         {
             "name": "ghostwriter/config",
-            "version": "2.0.1",
+            "version": "2.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ghostwriter/config.git",
-                "reference": "97b0423aaed59c848a163ab10db5b0697a6d76d2"
+                "reference": "27a8517b8b344e9744262357c4cc6246ba9b73f4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ghostwriter/config/zipball/97b0423aaed59c848a163ab10db5b0697a6d76d2",
-                "reference": "97b0423aaed59c848a163ab10db5b0697a6d76d2",
+                "url": "https://api.github.com/repos/ghostwriter/config/zipball/27a8517b8b344e9744262357c4cc6246ba9b73f4",
+                "reference": "27a8517b8b344e9744262357c4cc6246ba9b73f4",
                 "shasum": ""
             },
             "require": {
@@ -237,11 +237,15 @@
                 "ghostwriter/coding-standard": "dev-main",
                 "ghostwriter/container": "^6.0.1",
                 "mockery/mockery": "^1.6.12",
-                "phpunit/phpunit": "^12.4.3",
-                "symfony/var-dumper": "^7.3.5"
+                "phpunit/phpunit": "^12.5.3",
+                "symfony/var-dumper": "^8.0.0"
             },
             "type": "library",
             "extra": {
+                "thanks": {
+                    "url": "https://github.com/ghostwriter/config",
+                    "name": "ghostwriter/config"
+                },
                 "ghostwriter": {
                     "container": {
                         "definition": "Ghostwriter\\Config\\Container\\ConfigurationDefinition"
@@ -283,7 +287,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-11-19T09:00:09+00:00"
+            "time": "2025-12-14T23:37:43+00:00"
         },
         {
             "name": "ghostwriter/container",
