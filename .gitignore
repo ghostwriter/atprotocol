@@ -8,6 +8,7 @@
 .direnv/
 .dotenv/
 .env
+.vercel
 .idea/
 .phpactor.json
 .phpunit.cache/
