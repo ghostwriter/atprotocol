@@ -10,7 +10,7 @@
   "description": "[WIP] Bluesky API Client for AT Protocol"
   "topics": "atp, atproto, atprotocol, bluesky, bluesky-api, bluesky-app, bluesky-bot, bluesky-client, bluesky-feed, bluesky-generator, bluesky-social, bluesky-webclient, bsky, ghostwriter, lexicon, lexicons"
   "homepage": "https://github.com/ghostwriter/atprotocol"
-  "default_branch": "0.1.x"
+  "default_branch": "0.1.0"
   "allow_auto_merge": true
   "allow_forking": true
   "allow_merge_commit": true
