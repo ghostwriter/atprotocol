@@ -2131,12 +2131,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ghostwriter/coding-standard.git",
-                "reference": "5321132d300d56d4aa9df868f44b2b653e371f8a"
+                "reference": "5a59581fb122db1d8c326626c90fd2b40f0b2f68"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ghostwriter/coding-standard/zipball/5321132d300d56d4aa9df868f44b2b653e371f8a",
-                "reference": "5321132d300d56d4aa9df868f44b2b653e371f8a",
+                "url": "https://api.github.com/repos/ghostwriter/coding-standard/zipball/5a59581fb122db1d8c326626c90fd2b40f0b2f68",
+                "reference": "5a59581fb122db1d8c326626c90fd2b40f0b2f68",
                 "shasum": ""
             },
             "require": {
@@ -2311,7 +2311,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-01-29T14:25:14+00:00"
+            "time": "2026-01-29T17:33:39+00:00"
         },
         {
             "name": "ghostwriter/console",
