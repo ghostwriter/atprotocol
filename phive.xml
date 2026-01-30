@@ -8,6 +8,6 @@
   <phar name="phpbench" version="^1.4.3" installed="1.4.3" location="./tools/phar/phpbench" copy="true"/>
   <phar name="phpdocumentor" version="^3.9.1" installed="3.9.1" location="./tools/phar/phpdocumentor" copy="true"/>
   <phar name="phpunit" version="^12.5.8" installed="12.5.8" location="./tools/phar/phpunit" copy="true"/>
-  <phar name="psalm" version="^6.14.3" installed="6.15.0" location="./tools/phar/psalm" copy="true"/>
+  <phar name="psalm" version="^6.15.0" installed="6.15.0" location="./tools/phar/psalm" copy="true"/>
   <phar name="phar-io/phive" version="^0.16.0" installed="0.16.0" location="./tools/phar/phive" copy="true"/>
 </phive>
