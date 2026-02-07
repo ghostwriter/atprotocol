@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <phpunit
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/sebastianbergmann/phpunit/12.5/phpunit.xsd"
+    xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/sebastianbergmann/phpunit/13.0/phpunit.xsd"
     beStrictAboutChangesToGlobalState="true"
     beStrictAboutCoverageMetadata="true"
     beStrictAboutOutputDuringTests="true"
@@ -11,14 +11,9 @@
     colors="true"
     displayDetailsOnAllIssues="true"
     executionOrder="depends,random"
-    failOnDeprecation="true"
-    failOnEmptyTestSuite="true"
-    failOnIncomplete="true"
-    failOnNotice="true"
-    failOnRisky="true"
-    failOnSkipped="true"
-    failOnWarning="true"
+    failOnAllIssues="true"
     requireCoverageMetadata="true"
+    stopOnFailure="true"
 >
     <coverage pathCoverage="true" disableCodeCoverageIgnore="true">
         <report>
