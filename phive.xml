@@ -7,7 +7,7 @@
   <phar name="infection" version="^0.32.4" installed="0.32.4" location="./tools/phar/infection" copy="true"/>
   <phar name="phpbench" version="^1.4.3" installed="1.4.3" location="./tools/phar/phpbench" copy="true"/>
   <phar name="phpdocumentor" version="^3.9.1" installed="3.9.1" location="./tools/phar/phpdocumentor" copy="true"/>
-  <phar name="phpunit" version="^13.0.1" installed="13.0.1" location="./tools/phar/phpunit" copy="true"/>
+  <phar name="phpunit" version="^13.0.2" installed="13.0.2" location="./tools/phar/phpunit" copy="true"/>
   <phar name="psalm" version="^6.15.1" installed="6.15.1" location="./tools/phar/psalm" copy="true"/>
   <phar name="phar-io/phive" version="^0.16.0" installed="0.16.0" location="./tools/phar/phive" copy="true"/>
 </phive>
