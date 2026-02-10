@@ -2131,12 +2131,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ghostwriter/coding-standard.git",
-                "reference": "a6a79bf5a92bc8dfc014ba450b8703b0b223bf39"
+                "reference": "e97f356c1abb489bfd0ff79c4f58d0907d0c202e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ghostwriter/coding-standard/zipball/a6a79bf5a92bc8dfc014ba450b8703b0b223bf39",
-                "reference": "a6a79bf5a92bc8dfc014ba450b8703b0b223bf39",
+                "url": "https://api.github.com/repos/ghostwriter/coding-standard/zipball/e97f356c1abb489bfd0ff79c4f58d0907d0c202e",
+                "reference": "e97f356c1abb489bfd0ff79c4f58d0907d0c202e",
                 "shasum": ""
             },
             "require": {
@@ -2196,7 +2196,7 @@
                 "mockery/mockery": "^1.6.12",
                 "nikic/php-parser": "^5.7.0",
                 "php": "~8.4.0 || ~8.5.0",
-                "phpunit/phpunit": "^13.0.1",
+                "phpunit/phpunit": "^13.0.2",
                 "symfony/process": "^8.0.5",
                 "symfony/var-dumper": "^8.0.4"
             },
@@ -2312,7 +2312,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-02-09T21:36:00+00:00"
+            "time": "2026-02-10T17:22:18+00:00"
         },
         {
             "name": "ghostwriter/console",
