@@ -1800,12 +1800,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ghostwriter/coding-standard.git",
-                "reference": "ec59c4b48c2f40f97a545427c9b0faf678899c7c"
+                "reference": "98200d23bab13ba3f914ed6ed8625bed5ed441a3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ghostwriter/coding-standard/zipball/ec59c4b48c2f40f97a545427c9b0faf678899c7c",
-                "reference": "ec59c4b48c2f40f97a545427c9b0faf678899c7c",
+                "url": "https://api.github.com/repos/ghostwriter/coding-standard/zipball/98200d23bab13ba3f914ed6ed8625bed5ed441a3",
+                "reference": "98200d23bab13ba3f914ed6ed8625bed5ed441a3",
                 "shasum": ""
             },
             "require": {
@@ -1855,7 +1855,7 @@
                 "ext-zend-opcache": "*",
                 "ext-zip": "*",
                 "ext-zlib": "*",
-                "infection/infection": "^0.32.4",
+                "infection/infection": "^0.32.5",
                 "mockery/mockery": "^1.6.12",
                 "php": "~8.4.0 || ~8.5.0",
                 "phpunit/phpunit": "^13.0.5",
@@ -1910,7 +1910,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-02-18T18:13:29+00:00"
+            "time": "2026-02-20T08:52:34+00:00"
         },
         {
             "name": "ghostwriter/filesystem",
@@ -2212,16 +2212,16 @@
         },
         {
             "name": "infection/infection",
-            "version": "0.32.4",
+            "version": "0.32.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/infection/infection.git",
-                "reference": "a2b0a3e47b56bd2f27ca13caecae47baa7e5abe8"
+                "reference": "932fc7aa7a03bdbe387e42f8c8bd17d9d347653e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/infection/infection/zipball/a2b0a3e47b56bd2f27ca13caecae47baa7e5abe8",
-                "reference": "a2b0a3e47b56bd2f27ca13caecae47baa7e5abe8",
+                "url": "https://api.github.com/repos/infection/infection/zipball/932fc7aa7a03bdbe387e42f8c8bd17d9d347653e",
+                "reference": "932fc7aa7a03bdbe387e42f8c8bd17d9d347653e",
                 "shasum": ""
             },
             "require": {
@@ -2332,7 +2332,7 @@
             ],
             "support": {
                 "issues": "https://github.com/infection/infection/issues",
-                "source": "https://github.com/infection/infection/tree/0.32.4"
+                "source": "https://github.com/infection/infection/tree/0.32.5"
             },
             "funding": [
                 {
@@ -2344,7 +2344,7 @@
                     "type": "open_collective"
                 }
             ],
-            "time": "2026-02-09T13:24:18+00:00"
+            "time": "2026-02-20T07:59:31+00:00"
         },
         {
             "name": "infection/mutator",
