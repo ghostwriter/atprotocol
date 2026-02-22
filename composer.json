@@ -24,6 +24,7 @@
     "support": {
         "issues": "https://github.com/ghostwriter/atprotocol/issues",
         "source": "https://github.com/ghostwriter/atprotocol",
+        "docs": "https://github.com/ghostwriter/atprotocol",
         "rss": "https://github.com/ghostwriter/atprotocol/releases.atom",
         "security": "https://github.com/ghostwriter/atprotocol/security/advisories/new"
     },
@@ -48,22 +49,23 @@
         "ghostwriter/config": "^2.0.2",
         "ghostwriter/container": "^6.0.1",
         "ghostwriter/event-dispatcher": "^6.0.2",
+        "ghostwriter/http": "^0.1.0",
         "ghostwriter/json": "^3.0.1",
         "ghostwriter/option": "^2.0.0",
         "ghostwriter/result": "^2.0.0",
-        "ghostwriter/uuid": "^1.0.3",
-        "laminas/laminas-diactoros": "^3.8.0",
-        "php-http/curl-client": "^2.4.0",
-        "psr/http-client": "^1.0.3",
-        "psr/http-factory": "^1.1.0"
+        "ghostwriter/uuid": "^1.0.3"
     },
     "require-dev": {
         "ext-xdebug": "*",
         "ghostwriter/coding-standard": "dev-main",
         "ghostwriter/filesystem": "^0.1.2",
         "mockery/mockery": "^1.6.12",
+        "nikic/php-parser": "^5.7.0",
         "phpunit/phpunit": "^13.0.5",
         "symfony/var-dumper": "^8.0.4"
+    },
+    "replace": {
+        "atproto/atproto": "*"
     },
     "prefer-stable": true,
     "autoload": {
@@ -93,11 +95,23 @@
         "platform": {
             "php": "8.4.999"
         },
+        "platform-check": true,
         "preferred-install": "dist",
         "prepend-autoloader": true,
         "process-timeout": 5000,
         "sort-packages": true,
         "use-parent-dir": false
+    },
+    "extra": {
+        "ghostwriter": {
+            "container": {
+                "definition": "Ghostwriter\\AtProtocol\\Container\\AtProtocolDefinition"
+            }
+        },
+        "thanks": {
+            "name": "ghostwriter/atprotocol",
+            "url": "https://github.com/ghostwriter/atprotocol"
+        }
     },
     "scripts": {
         "cache:clear": "rm -rf ./.cache/*",
@@ -112,11 +126,5 @@
         "test": ["@phpunit", "@infection"],
         "unused": "tools/phar/composer-unused --no-interaction --ansi",
         "xdebug": "@putenv XDEBUG_MODE=coverage"
-    },
-    "extra": {
-        "thanks": {
-            "name": "ghostwriter/atprotocol",
-            "url": "https://github.com/ghostwriter/atprotocol"
-        }
     }
 }
