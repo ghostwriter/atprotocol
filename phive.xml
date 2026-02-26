@@ -4,7 +4,7 @@
   <phar name="composer-normalize" version="^2.50.0" installed="2.50.0" location="./tools/phar/composer-normalize" copy="true"/>
   <phar name="composer-require-checker" version="^4.21.0" installed="4.21.0" location="./tools/phar/composer-require-checker" copy="true"/>
   <phar name="composer-unused" version="^0.9.6" installed="0.9.6" location="./tools/phar/composer-unused" copy="true"/>
-  <phar name="infection" version="^0.32.5" installed="0.32.5" location="./tools/phar/infection" copy="true"/>
+  <phar name="infection" version="^0.32.6" installed="0.32.6" location="./tools/phar/infection" copy="true"/>
   <phar name="phpbench" version="^1.4.3" installed="1.4.3" location="./tools/phar/phpbench" copy="true"/>
   <phar name="phpdocumentor" version="^3.9.1" installed="3.9.1" location="./tools/phar/phpdocumentor" copy="true"/>
   <phar name="phpunit" version="^13.0.5" installed="13.0.5" location="./tools/phar/phpunit" copy="true"/>
