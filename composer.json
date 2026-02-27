@@ -62,7 +62,7 @@
         "mockery/mockery": "^1.6.12",
         "nikic/php-parser": "^5.7.0",
         "phpunit/phpunit": "^13.0.5",
-        "symfony/var-dumper": "^8.0.4"
+        "symfony/var-dumper": "^8.0.6"
     },
     "replace": {
         "atproto/atproto": "*"
