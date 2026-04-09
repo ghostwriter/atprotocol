@@ -34,12 +34,7 @@
             "url": "https://github.com/sponsors/ghostwriter"
         }
     ],
-    "_comment": [
-        "#BlackLivesMatter",
-        "#FreePalestine",
-        "#StandWithUkraine",
-        "#StopGenocide"
-    ],
+    "_comment": ["#BlackLivesMatter", "#FreePalestine", "#StandWithIran", "#StandWithUkraine", "#StopGenocide"],
     "require": {
         "php": "~8.4.0 || ~8.5.0",
         "ext-curl": "*",
