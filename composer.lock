@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "312d4b59da45f913ce230c3ae4ff5001",
+    "content-hash": "8fcce788964c81bcf01c27701b25bc38",
     "packages": [
         {
             "name": "ghostwriter/case-converter",
@@ -284,16 +284,16 @@
         },
         {
             "name": "ghostwriter/container",
-            "version": "6.0.1",
+            "version": "6.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ghostwriter/container.git",
-                "reference": "bcfb2a1e2cbff14df8d6f3fb9cc12a4c3bb369d4"
+                "reference": "05aa763090b7dddc79d152b94852fbce73775d01"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ghostwriter/container/zipball/bcfb2a1e2cbff14df8d6f3fb9cc12a4c3bb369d4",
-                "reference": "bcfb2a1e2cbff14df8d6f3fb9cc12a4c3bb369d4",
+                "url": "https://api.github.com/repos/ghostwriter/container/zipball/05aa763090b7dddc79d152b94852fbce73775d01",
+                "reference": "05aa763090b7dddc79d152b94852fbce73775d01",
                 "shasum": ""
             },
             "require": {
@@ -307,14 +307,20 @@
                 "ext-xdebug": "*",
                 "ghostwriter/coding-standard": "dev-main",
                 "mockery/mockery": "^1.6.12",
-                "phpunit/phpunit": "^12.4.3",
-                "symfony/var-dumper": "^7.3.5"
+                "phpunit/phpunit": "^13.1.3",
+                "symfony/var-dumper": "^8.0.8"
             },
             "type": "library",
             "extra": {
+                "thanks": {
+                    "url": "https://github.com/ghostwriter/container",
+                    "name": "ghostwriter/container"
+                },
                 "ghostwriter": {
                     "container": {
-                        "definition": "Ghostwriter\\Container\\Service\\Definition\\ContainerDefinition"
+                        "provider": [
+                            "Ghostwriter\\Container\\Service\\Provider\\ContainerProvider"
+                        ]
                     }
                 }
             },
@@ -325,7 +331,7 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "BSD-4-Clause"
+                "BSD-3-Clause"
             ],
             "authors": [
                 {
@@ -353,7 +359,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-11-18T05:56:22+00:00"
+            "time": "2026-04-13T19:15:02+00:00"
         },
         {
             "name": "ghostwriter/event-dispatcher",
