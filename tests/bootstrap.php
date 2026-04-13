@@ -35,10 +35,12 @@ if (! \function_exists('ghostwriterSupportedPHPVersion')) {
             if ($currentPHPVersion < $versionChecked) {
                 continue;
             }
+
             $supportedPHPVersions[] = \sprintf('PHP%d', $versionChecked);
             if ($versionChecked !== $currentPHPVersion) {
                 continue;
             }
+
             $supportedPHPVersions[] = \sprintf('PHP%dOnly', $versionChecked);
         }
 
@@ -79,6 +81,7 @@ foreach (\ghostwriterSupportedPHPVersion() as $phpVersionName) {
     if (! \is_dir($phpVersionPath)) {
         continue;
     }
+
     $classLoader->addPsr4(\sprintf('Tests\\Fixture\\Autoload\\%s\\', $phpVersionName), $phpVersionPath);
     $classLoader->addPsr4(\sprintf('Tests\\Fixture\\%s\\', $phpVersionName), $phpVersionPath);
     $classLoader->addPsr4(\sprintf('%s\\', $phpVersionName), $phpVersionPath);
