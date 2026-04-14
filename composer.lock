@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "088f7314469a521ddaf1f972371ed2d9",
+    "content-hash": "217e8f5ea98cebe807925d3887679fa0",
     "packages": [
         {
             "name": "ghostwriter/case-converter",
@@ -536,16 +536,16 @@
         },
         {
             "name": "ghostwriter/json",
-            "version": "3.0.1",
+            "version": "3.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ghostwriter/json.git",
-                "reference": "a672903f17a2f5e3a0359436ef7a10b3cf33462b"
+                "reference": "133d8c816818938e7dd2a6f14b5e804efa43250c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ghostwriter/json/zipball/a672903f17a2f5e3a0359436ef7a10b3cf33462b",
-                "reference": "a672903f17a2f5e3a0359436ef7a10b3cf33462b",
+                "url": "https://api.github.com/repos/ghostwriter/json/zipball/133d8c816818938e7dd2a6f14b5e804efa43250c",
+                "reference": "133d8c816818938e7dd2a6f14b5e804efa43250c",
                 "shasum": ""
             },
             "require": {
@@ -555,16 +555,22 @@
             "require-dev": {
                 "ext-xdebug": "*",
                 "ghostwriter/coding-standard": "dev-main",
-                "ghostwriter/container": "^6.0.1",
+                "ghostwriter/container": "^6.1.1",
                 "mockery/mockery": "^1.6.12",
-                "phpunit/phpunit": "^12.4.4",
-                "symfony/var-dumper": "^7.3.5"
+                "phpunit/phpunit": "^13.1.3",
+                "symfony/var-dumper": "^8.0.8"
             },
             "type": "library",
             "extra": {
+                "thanks": {
+                    "url": "https://github.com/ghostwriter/json",
+                    "name": "ghostwriter/json"
+                },
                 "ghostwriter": {
                     "container": {
-                        "definition": "Ghostwriter\\Json\\Container\\JsonDefinition"
+                        "provider": [
+                            "Ghostwriter\\Json\\Container\\JsonProvider"
+                        ]
                     }
                 }
             },
@@ -575,7 +581,7 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "BSD-4-Clause"
+                "BSD-3-Clause"
             ],
             "authors": [
                 {
@@ -603,7 +609,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-11-25T16:30:02+00:00"
+            "time": "2026-04-14T15:18:31+00:00"
         },
         {
             "name": "ghostwriter/option",
