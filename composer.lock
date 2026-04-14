@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8fcce788964c81bcf01c27701b25bc38",
+    "content-hash": "06eed2dde49688fad6ebb1a9e674342f",
     "packages": [
         {
             "name": "ghostwriter/case-converter",
@@ -2092,16 +2092,16 @@
         },
         {
             "name": "ghostwriter/filesystem",
-            "version": "0.1.2",
+            "version": "0.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ghostwriter/filesystem.git",
-                "reference": "49caa2d2adfdf01afb5db347355bf3fb5efde704"
+                "reference": "5f4cf2cdb8c71523ff3d79402d23d05fd12d4979"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ghostwriter/filesystem/zipball/49caa2d2adfdf01afb5db347355bf3fb5efde704",
-                "reference": "49caa2d2adfdf01afb5db347355bf3fb5efde704",
+                "url": "https://api.github.com/repos/ghostwriter/filesystem/zipball/5f4cf2cdb8c71523ff3d79402d23d05fd12d4979",
+                "reference": "5f4cf2cdb8c71523ff3d79402d23d05fd12d4979",
                 "shasum": ""
             },
             "require": {
@@ -2110,16 +2110,22 @@
             "require-dev": {
                 "ext-xdebug": "*",
                 "ghostwriter/coding-standard": "dev-main",
-                "ghostwriter/container": "^6.0.1",
+                "ghostwriter/container": "^6.1.1",
                 "mockery/mockery": "^1.6.12",
-                "phpunit/phpunit": "^12.4.3",
-                "symfony/var-dumper": "^7.3.5"
+                "phpunit/phpunit": "^13.1.3",
+                "symfony/var-dumper": "^8.0.8"
             },
             "type": "library",
             "extra": {
+                "thanks": {
+                    "url": "https://github.com/ghostwriter/filesystem",
+                    "name": "ghostwriter/filesystem"
+                },
                 "ghostwriter": {
                     "container": {
-                        "definition": "Ghostwriter\\Filesystem\\Container\\FilesystemDefinition"
+                        "provider": [
+                            "Ghostwriter\\Filesystem\\Container\\FilesystemProvider"
+                        ]
                     }
                 }
             },
@@ -2130,7 +2136,7 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "BSD-4-Clause"
+                "BSD-3-Clause"
             ],
             "authors": [
                 {
@@ -2158,7 +2164,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-11-21T06:25:48+00:00"
+            "time": "2026-04-14T15:21:54+00:00"
         },
         {
             "name": "hamcrest/hamcrest-php",
