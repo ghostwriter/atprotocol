@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "06eed2dde49688fad6ebb1a9e674342f",
+    "content-hash": "088f7314469a521ddaf1f972371ed2d9",
     "packages": [
         {
             "name": "ghostwriter/case-converter",
-            "version": "2.2.0",
+            "version": "2.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ghostwriter/case-converter.git",
-                "reference": "0d9e4e54a80eaab35b38f0ed2482e45c31dde323"
+                "reference": "feed5dffb93164313bfd490ff160ed059bf209a7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ghostwriter/case-converter/zipball/0d9e4e54a80eaab35b38f0ed2482e45c31dde323",
-                "reference": "0d9e4e54a80eaab35b38f0ed2482e45c31dde323",
+                "url": "https://api.github.com/repos/ghostwriter/case-converter/zipball/feed5dffb93164313bfd490ff160ed059bf209a7",
+                "reference": "feed5dffb93164313bfd490ff160ed059bf209a7",
                 "shasum": ""
             },
             "require": {
@@ -27,16 +27,22 @@
             "require-dev": {
                 "ext-xdebug": "*",
                 "ghostwriter/coding-standard": "dev-main",
-                "ghostwriter/container": "^6.0.1",
+                "ghostwriter/container": "^6.1.1",
                 "mockery/mockery": "^1.6.12",
-                "phpunit/phpunit": "^12.4.4",
-                "symfony/var-dumper": "^7.3.5"
+                "phpunit/phpunit": "^13.1.3",
+                "symfony/var-dumper": "^8.0.8"
             },
             "type": "library",
             "extra": {
+                "thanks": {
+                    "url": "https://github.com/ghostwriter/case-converter",
+                    "name": "ghostwriter/case-converter"
+                },
                 "ghostwriter": {
                     "container": {
-                        "definition": "Ghostwriter\\CaseConverter\\Container\\CaseConverterDefinition"
+                        "provider": [
+                            "Ghostwriter\\CaseConverter\\Container\\CaseConverterProvider"
+                        ]
                     }
                 }
             },
@@ -47,7 +53,7 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "BSD-4-Clause"
+                "BSD-3-Clause"
             ],
             "authors": [
                 {
@@ -87,7 +93,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-11-25T03:02:29+00:00"
+            "time": "2026-04-14T16:15:45+00:00"
         },
         {
             "name": "ghostwriter/clock",
