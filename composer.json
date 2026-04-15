@@ -43,7 +43,7 @@
         "ghostwriter/collection": "^2.0.0",
         "ghostwriter/config": "^2.1.1",
         "ghostwriter/container": "^6.1.1",
-        "ghostwriter/event-dispatcher": "^6.0.2",
+        "ghostwriter/event-dispatcher": "^6.1.0",
         "ghostwriter/http": "^0.1.0",
         "ghostwriter/json": "^3.0.2",
         "ghostwriter/option": "^2.0.0",
