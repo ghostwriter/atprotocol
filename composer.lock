@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1639220e5ae947a64f8e9dd4bd3323cd",
+    "content-hash": "2007e872dd2a0de45bd167fc2a68b878",
     "packages": [
         {
             "name": "ghostwriter/case-converter",
@@ -156,26 +156,36 @@
         },
         {
             "name": "ghostwriter/collection",
-            "version": "2.0.0",
+            "version": "2.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ghostwriter/collection.git",
-                "reference": "5599d0f8bbae28fe444bd8d72f328db39b9c5831"
+                "reference": "4a884657ca3f1644e9fee3dc99560a8217834b4e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ghostwriter/collection/zipball/5599d0f8bbae28fe444bd8d72f328db39b9c5831",
-                "reference": "5599d0f8bbae28fe444bd8d72f328db39b9c5831",
+                "url": "https://api.github.com/repos/ghostwriter/collection/zipball/4a884657ca3f1644e9fee3dc99560a8217834b4e",
+                "reference": "4a884657ca3f1644e9fee3dc99560a8217834b4e",
                 "shasum": ""
             },
             "require": {
-                "php": ">=8.3"
+                "ext-mbstring": "*",
+                "php": "~8.4.0 || ~8.5.0"
             },
             "require-dev": {
+                "ext-xdebug": "*",
                 "ghostwriter/coding-standard": "dev-main",
-                "ghostwriter/psalm-plugin": ">=0.2"
+                "mockery/mockery": "^1.6.12",
+                "phpunit/phpunit": "^13.1.6",
+                "symfony/var-dumper": "^8.0.8"
             },
             "type": "library",
+            "extra": {
+                "thanks": {
+                    "url": "https://github.com/ghostwriter/collection",
+                    "name": "ghostwriter/collection"
+                }
+            },
             "autoload": {
                 "psr-4": {
                     "Ghostwriter\\Collection\\": "src/"
@@ -200,10 +210,9 @@
                 "ghostwriter"
             ],
             "support": {
-                "docs": "https://github.com/ghostwriter/collection",
-                "forum": "https://github.com/ghostwriter/collection/discussions",
                 "issues": "https://github.com/ghostwriter/collection/issues",
                 "rss": "https://github.com/ghostwriter/collection/releases.atom",
+                "security": "https://github.com/ghostwriter/collection/security/advisories/new",
                 "source": "https://github.com/ghostwriter/collection"
             },
             "funding": [
@@ -212,7 +221,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-02-22T20:29:16+00:00"
+            "time": "2026-04-17T18:31:40+00:00"
         },
         {
             "name": "ghostwriter/config",
@@ -1705,12 +1714,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ghostwriter/coding-standard.git",
-                "reference": "16d0a0e7e8f8cb9a1a6ef7eeb7e6a1e36c8e90dd"
+                "reference": "75e0a8e06e1e271b384141143cdce701de48d3ef"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ghostwriter/coding-standard/zipball/16d0a0e7e8f8cb9a1a6ef7eeb7e6a1e36c8e90dd",
-                "reference": "16d0a0e7e8f8cb9a1a6ef7eeb7e6a1e36c8e90dd",
+                "url": "https://api.github.com/repos/ghostwriter/coding-standard/zipball/75e0a8e06e1e271b384141143cdce701de48d3ef",
+                "reference": "75e0a8e06e1e271b384141143cdce701de48d3ef",
                 "shasum": ""
             },
             "require": {
@@ -1761,7 +1770,7 @@
                 "ext-zlib": "*",
                 "mockery/mockery": "^1.6.12",
                 "php": "~8.4.0 || ~8.5.0",
-                "phpunit/phpunit": "^13.1.5",
+                "phpunit/phpunit": "^13.1.6",
                 "symfony/var-dumper": "^8.0.8"
             },
             "conflict": {
@@ -1824,7 +1833,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-04-16T07:46:10+00:00"
+            "time": "2026-04-17T14:32:36+00:00"
         },
         {
             "name": "ghostwriter/filesystem",

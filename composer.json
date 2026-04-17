@@ -40,7 +40,7 @@
         "ext-curl": "*",
         "ext-mbstring": "*",
         "ghostwriter/case-converter": "^2.2.1",
-        "ghostwriter/collection": "^2.0.0",
+        "ghostwriter/collection": "^2.1.0",
         "ghostwriter/config": "^2.1.1",
         "ghostwriter/container": "^6.1.1",
         "ghostwriter/event-dispatcher": "^6.1.0",
