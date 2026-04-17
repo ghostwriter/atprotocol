@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7dcdf400661995d812534c4972fadcea",
+    "content-hash": "1639220e5ae947a64f8e9dd4bd3323cd",
     "packages": [
         {
             "name": "ghostwriter/case-converter",
@@ -1705,12 +1705,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ghostwriter/coding-standard.git",
-                "reference": "33c77a2ba3223da098d93f71347784d2680e905d"
+                "reference": "16d0a0e7e8f8cb9a1a6ef7eeb7e6a1e36c8e90dd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ghostwriter/coding-standard/zipball/33c77a2ba3223da098d93f71347784d2680e905d",
-                "reference": "33c77a2ba3223da098d93f71347784d2680e905d",
+                "url": "https://api.github.com/repos/ghostwriter/coding-standard/zipball/16d0a0e7e8f8cb9a1a6ef7eeb7e6a1e36c8e90dd",
+                "reference": "16d0a0e7e8f8cb9a1a6ef7eeb7e6a1e36c8e90dd",
                 "shasum": ""
             },
             "require": {
@@ -1824,7 +1824,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-04-16T05:50:44+00:00"
+            "time": "2026-04-16T07:46:10+00:00"
         },
         {
             "name": "ghostwriter/filesystem",
@@ -2656,16 +2656,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "13.1.5",
+            "version": "13.1.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "89adcba73441b38db31d5c0473b61e2907311db0"
+                "reference": "c3c414ea438e5a37d00697eaea43e6e05e201a42"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/89adcba73441b38db31d5c0473b61e2907311db0",
-                "reference": "89adcba73441b38db31d5c0473b61e2907311db0",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/c3c414ea438e5a37d00697eaea43e6e05e201a42",
+                "reference": "c3c414ea438e5a37d00697eaea43e6e05e201a42",
                 "shasum": ""
             },
             "require": {
@@ -2735,7 +2735,7 @@
             "support": {
                 "issues": "https://github.com/sebastianbergmann/phpunit/issues",
                 "security": "https://github.com/sebastianbergmann/phpunit/security/policy",
-                "source": "https://github.com/sebastianbergmann/phpunit/tree/13.1.5"
+                "source": "https://github.com/sebastianbergmann/phpunit/tree/13.1.6"
             },
             "funding": [
                 {
@@ -2743,7 +2743,7 @@
                     "type": "other"
                 }
             ],
-            "time": "2026-04-16T04:58:40+00:00"
+            "time": "2026-04-17T12:52:50+00:00"
         },
         {
             "name": "sebastian/cli-parser",
