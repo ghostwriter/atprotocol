@@ -1714,12 +1714,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ghostwriter/coding-standard.git",
-                "reference": "5dee2598c5e86cf44f2adb9dc19e8461538f8dc6"
+                "reference": "4c9b763dc9df5c67c90c1eb9fa7797feac52b7ca"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ghostwriter/coding-standard/zipball/5dee2598c5e86cf44f2adb9dc19e8461538f8dc6",
-                "reference": "5dee2598c5e86cf44f2adb9dc19e8461538f8dc6",
+                "url": "https://api.github.com/repos/ghostwriter/coding-standard/zipball/4c9b763dc9df5c67c90c1eb9fa7797feac52b7ca",
+                "reference": "4c9b763dc9df5c67c90c1eb9fa7797feac52b7ca",
                 "shasum": ""
             },
             "require": {
@@ -1833,7 +1833,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-04-20T19:40:26+00:00"
+            "time": "2026-04-23T19:01:53+00:00"
         },
         {
             "name": "ghostwriter/filesystem",
@@ -2283,16 +2283,16 @@
         },
         {
             "name": "phpunit/php-code-coverage",
-            "version": "14.1.3",
+            "version": "14.1.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-code-coverage.git",
-                "reference": "24dc6fcf9f2a983de5b3f1199fb01e88d68e7474"
+                "reference": "13dd8d33c6a23da100acec635cd351bfa7ff1a98"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/24dc6fcf9f2a983de5b3f1199fb01e88d68e7474",
-                "reference": "24dc6fcf9f2a983de5b3f1199fb01e88d68e7474",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/13dd8d33c6a23da100acec635cd351bfa7ff1a98",
+                "reference": "13dd8d33c6a23da100acec635cd351bfa7ff1a98",
                 "shasum": ""
             },
             "require": {
@@ -2348,7 +2348,7 @@
             "support": {
                 "issues": "https://github.com/sebastianbergmann/php-code-coverage/issues",
                 "security": "https://github.com/sebastianbergmann/php-code-coverage/security/policy",
-                "source": "https://github.com/sebastianbergmann/php-code-coverage/tree/14.1.3"
+                "source": "https://github.com/sebastianbergmann/php-code-coverage/tree/14.1.4"
             },
             "funding": [
                 {
@@ -2368,7 +2368,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-04-18T05:41:54+00:00"
+            "time": "2026-04-23T17:00:20+00:00"
         },
         {
             "name": "phpunit/php-file-iterator",
