@@ -1713,20 +1713,90 @@
     ],
     "packages-dev": [
         {
+            "name": "boundwize/structarmed",
+            "version": "0.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/boundwize/structarmed.git",
+                "reference": "1e324e8f314a30d2b573b13f064702f4af7c76db"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/boundwize/structarmed/zipball/1e324e8f314a30d2b573b13f064702f4af7c76db",
+                "reference": "1e324e8f314a30d2b573b13f064702f4af7c76db",
+                "shasum": ""
+            },
+            "require": {
+                "composer-runtime-api": "^2.0",
+                "nikic/php-parser": "^5.7",
+                "php": "^8.2"
+            },
+            "require-dev": {
+                "laminas/laminas-coding-standard": "^3.1",
+                "phpstan/phpstan": "^2.1",
+                "phpunit/phpunit": "^11.5",
+                "rector/rector": "dev-main"
+            },
+            "bin": [
+                "bin/structarmed"
+            ],
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Boundwize\\StructArmed\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Abdul Malik Ikhsan",
+                    "email": "samsonasik@gmail.com",
+                    "homepage": "http://samsonasik.wordpress.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Configurable PHP architecture guards — define your layers and rules, then keep them enforced",
+            "homepage": "https://github.com/boundwize/structarmed",
+            "keywords": [
+                "Enforcement",
+                "analysis",
+                "architecture",
+                "ddd",
+                "dev",
+                "layer",
+                "mvc"
+            ],
+            "support": {
+                "issues": "https://github.com/boundwize/structarmed/issues",
+                "source": "https://github.com/boundwize/structarmed/tree/0.4.0"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/samsonasik",
+                    "type": "github"
+                }
+            ],
+            "time": "2026-05-11T15:48:46+00:00"
+        },
+        {
             "name": "ghostwriter/coding-standard",
             "version": "dev-main",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ghostwriter/coding-standard.git",
-                "reference": "694295231f4fc644bfb3316b27741fdaf5d5400f"
+                "reference": "44103d78ad8359d69e14d9975a4dbaa836aa4e1b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ghostwriter/coding-standard/zipball/694295231f4fc644bfb3316b27741fdaf5d5400f",
-                "reference": "694295231f4fc644bfb3316b27741fdaf5d5400f",
+                "url": "https://api.github.com/repos/ghostwriter/coding-standard/zipball/44103d78ad8359d69e14d9975a4dbaa836aa4e1b",
+                "reference": "44103d78ad8359d69e14d9975a4dbaa836aa4e1b",
                 "shasum": ""
             },
             "require": {
+                "boundwize/structarmed": "^0.4.0",
                 "ext-apcu": "*",
                 "ext-bcmath": "*",
                 "ext-ctype": "*",
@@ -1837,7 +1907,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-05-09T12:10:01+00:00"
+            "time": "2026-05-11T23:20:38+00:00"
         },
         {
             "name": "ghostwriter/filesystem",
