@@ -1714,16 +1714,16 @@
     "packages-dev": [
         {
             "name": "boundwize/structarmed",
-            "version": "0.4.0",
+            "version": "0.4.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/boundwize/structarmed.git",
-                "reference": "1e324e8f314a30d2b573b13f064702f4af7c76db"
+                "reference": "8147b85144f2c178522558cdaa39343c4e495745"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/boundwize/structarmed/zipball/1e324e8f314a30d2b573b13f064702f4af7c76db",
-                "reference": "1e324e8f314a30d2b573b13f064702f4af7c76db",
+                "url": "https://api.github.com/repos/boundwize/structarmed/zipball/8147b85144f2c178522558cdaa39343c4e495745",
+                "reference": "8147b85144f2c178522558cdaa39343c4e495745",
                 "shasum": ""
             },
             "require": {
@@ -1771,7 +1771,7 @@
             ],
             "support": {
                 "issues": "https://github.com/boundwize/structarmed/issues",
-                "source": "https://github.com/boundwize/structarmed/tree/0.4.0"
+                "source": "https://github.com/boundwize/structarmed/tree/0.4.4"
             },
             "funding": [
                 {
@@ -1779,7 +1779,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-05-11T15:48:46+00:00"
+            "time": "2026-05-12T05:52:29+00:00"
         },
         {
             "name": "ghostwriter/coding-standard",
@@ -1787,16 +1787,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ghostwriter/coding-standard.git",
-                "reference": "44103d78ad8359d69e14d9975a4dbaa836aa4e1b"
+                "reference": "4756ffed1266ffbb1e12983a8b5a85836167af81"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ghostwriter/coding-standard/zipball/44103d78ad8359d69e14d9975a4dbaa836aa4e1b",
-                "reference": "44103d78ad8359d69e14d9975a4dbaa836aa4e1b",
+                "url": "https://api.github.com/repos/ghostwriter/coding-standard/zipball/4756ffed1266ffbb1e12983a8b5a85836167af81",
+                "reference": "4756ffed1266ffbb1e12983a8b5a85836167af81",
                 "shasum": ""
             },
             "require": {
-                "boundwize/structarmed": "^0.4.0",
+                "boundwize/structarmed": "^0.4.1",
                 "ext-apcu": "*",
                 "ext-bcmath": "*",
                 "ext-ctype": "*",
@@ -1907,7 +1907,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-05-11T23:20:38+00:00"
+            "time": "2026-05-11T23:57:46+00:00"
         },
         {
             "name": "ghostwriter/filesystem",
