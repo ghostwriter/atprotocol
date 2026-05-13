@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "09e4c806f3e686e82d7162889d5d2006",
+    "content-hash": "4d52c2b6ffdb079976fffe7e005cc721",
     "packages": [
         {
             "name": "ghostwriter/case-converter",
@@ -1714,16 +1714,16 @@
     "packages-dev": [
         {
             "name": "boundwize/structarmed",
-            "version": "0.4.5",
+            "version": "0.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/boundwize/structarmed.git",
-                "reference": "0b80097ec00cac1319913df18230345db7852eec"
+                "reference": "cd626ff2604e98e045427b7d1a6493632a351156"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/boundwize/structarmed/zipball/0b80097ec00cac1319913df18230345db7852eec",
-                "reference": "0b80097ec00cac1319913df18230345db7852eec",
+                "url": "https://api.github.com/repos/boundwize/structarmed/zipball/cd626ff2604e98e045427b7d1a6493632a351156",
+                "reference": "cd626ff2604e98e045427b7d1a6493632a351156",
                 "shasum": ""
             },
             "require": {
@@ -1771,7 +1771,7 @@
             ],
             "support": {
                 "issues": "https://github.com/boundwize/structarmed/issues",
-                "source": "https://github.com/boundwize/structarmed/tree/0.4.5"
+                "source": "https://github.com/boundwize/structarmed/tree/0.5.0"
             },
             "funding": [
                 {
@@ -1779,7 +1779,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-05-12T16:06:53+00:00"
+            "time": "2026-05-13T01:30:23+00:00"
         },
         {
             "name": "ghostwriter/coding-standard",
@@ -1787,16 +1787,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ghostwriter/coding-standard.git",
-                "reference": "5b0ea6ea97706462af95bd1122d55760a783dd39"
+                "reference": "0d05b2b7c956e14f49c8cf535c320f6cb54610f4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ghostwriter/coding-standard/zipball/5b0ea6ea97706462af95bd1122d55760a783dd39",
-                "reference": "5b0ea6ea97706462af95bd1122d55760a783dd39",
+                "url": "https://api.github.com/repos/ghostwriter/coding-standard/zipball/0d05b2b7c956e14f49c8cf535c320f6cb54610f4",
+                "reference": "0d05b2b7c956e14f49c8cf535c320f6cb54610f4",
                 "shasum": ""
             },
             "require": {
-                "boundwize/structarmed": "^0.4.5",
+                "boundwize/structarmed": "^0.5.0",
                 "ext-apcu": "*",
                 "ext-bcmath": "*",
                 "ext-ctype": "*",
@@ -1907,7 +1907,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-05-12T17:14:59+00:00"
+            "time": "2026-05-13T02:14:23+00:00"
         },
         {
             "name": "ghostwriter/filesystem",
@@ -2740,16 +2740,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "13.1.8",
+            "version": "13.1.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "f49a2b5e51ffb33421745368cc099cf66830d71b"
+                "reference": "506033fd7d6855fea1e2973767d65844412b4574"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/f49a2b5e51ffb33421745368cc099cf66830d71b",
-                "reference": "f49a2b5e51ffb33421745368cc099cf66830d71b",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/506033fd7d6855fea1e2973767d65844412b4574",
+                "reference": "506033fd7d6855fea1e2973767d65844412b4574",
                 "shasum": ""
             },
             "require": {
@@ -2763,7 +2763,7 @@
                 "phar-io/manifest": "^2.0.4",
                 "phar-io/version": "^3.2.1",
                 "php": ">=8.4.1",
-                "phpunit/php-code-coverage": "^14.1.6",
+                "phpunit/php-code-coverage": "^14.1.8",
                 "phpunit/php-file-iterator": "^7.0.0",
                 "phpunit/php-invoker": "^7.0.0",
                 "phpunit/php-text-template": "^6.0.0",
@@ -2819,7 +2819,7 @@
             "support": {
                 "issues": "https://github.com/sebastianbergmann/phpunit/issues",
                 "security": "https://github.com/sebastianbergmann/phpunit/security/policy",
-                "source": "https://github.com/sebastianbergmann/phpunit/tree/13.1.8"
+                "source": "https://github.com/sebastianbergmann/phpunit/tree/13.1.9"
             },
             "funding": [
                 {
@@ -2827,7 +2827,7 @@
                     "type": "other"
                 }
             ],
-            "time": "2026-05-01T04:22:45+00:00"
+            "time": "2026-05-13T04:00:53+00:00"
         },
         {
             "name": "sebastian/cli-parser",
