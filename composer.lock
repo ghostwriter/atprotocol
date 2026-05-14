@@ -1787,12 +1787,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ghostwriter/coding-standard.git",
-                "reference": "2055bbfc6195ae0171f3ed46f328ccd44a54d226"
+                "reference": "c840eb81ef74b5ba5faff7c3616888b026e177ab"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ghostwriter/coding-standard/zipball/2055bbfc6195ae0171f3ed46f328ccd44a54d226",
-                "reference": "2055bbfc6195ae0171f3ed46f328ccd44a54d226",
+                "url": "https://api.github.com/repos/ghostwriter/coding-standard/zipball/c840eb81ef74b5ba5faff7c3616888b026e177ab",
+                "reference": "c840eb81ef74b5ba5faff7c3616888b026e177ab",
                 "shasum": ""
             },
             "require": {
@@ -1907,7 +1907,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-05-13T17:09:25+00:00"
+            "time": "2026-05-13T22:09:21+00:00"
         },
         {
             "name": "ghostwriter/filesystem",
