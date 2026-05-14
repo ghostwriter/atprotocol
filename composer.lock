@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c9fad2f95c60cf18bbda2551ed68200e",
+    "content-hash": "13aa047c6915e2cf009188999f8b6e09",
     "packages": [
         {
             "name": "ghostwriter/case-converter",
@@ -1714,16 +1714,16 @@
     "packages-dev": [
         {
             "name": "boundwize/structarmed",
-            "version": "0.5.3",
+            "version": "0.5.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/boundwize/structarmed.git",
-                "reference": "7b1b4b617f56430321359c4c86ddeba75de52981"
+                "reference": "1b75ee70748fb570aa9241de334139f08544e0fe"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/boundwize/structarmed/zipball/7b1b4b617f56430321359c4c86ddeba75de52981",
-                "reference": "7b1b4b617f56430321359c4c86ddeba75de52981",
+                "url": "https://api.github.com/repos/boundwize/structarmed/zipball/1b75ee70748fb570aa9241de334139f08544e0fe",
+                "reference": "1b75ee70748fb570aa9241de334139f08544e0fe",
                 "shasum": ""
             },
             "require": {
@@ -1772,7 +1772,7 @@
             ],
             "support": {
                 "issues": "https://github.com/boundwize/structarmed/issues",
-                "source": "https://github.com/boundwize/structarmed/tree/0.5.3"
+                "source": "https://github.com/boundwize/structarmed/tree/0.5.4"
             },
             "funding": [
                 {
@@ -1780,7 +1780,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-05-14T13:26:14+00:00"
+            "time": "2026-05-14T14:37:07+00:00"
         },
         {
             "name": "fidry/cpu-core-counter",
@@ -1849,16 +1849,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ghostwriter/coding-standard.git",
-                "reference": "b7dce2470724cd286a8ba640eeae6808bba59059"
+                "reference": "4eb34164b3d6f5a5bc81a01e00d291360ccfba41"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ghostwriter/coding-standard/zipball/b7dce2470724cd286a8ba640eeae6808bba59059",
-                "reference": "b7dce2470724cd286a8ba640eeae6808bba59059",
+                "url": "https://api.github.com/repos/ghostwriter/coding-standard/zipball/4eb34164b3d6f5a5bc81a01e00d291360ccfba41",
+                "reference": "4eb34164b3d6f5a5bc81a01e00d291360ccfba41",
                 "shasum": ""
             },
             "require": {
-                "boundwize/structarmed": "^0.5.2",
+                "boundwize/structarmed": "^0.5.4",
                 "ext-apcu": "*",
                 "ext-bcmath": "*",
                 "ext-ctype": "*",
@@ -1969,7 +1969,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-05-14T06:45:27+00:00"
+            "time": "2026-05-14T15:46:14+00:00"
         },
         {
             "name": "ghostwriter/filesystem",
