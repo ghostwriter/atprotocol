@@ -52,7 +52,7 @@
     },
     "require-dev": {
         "ext-xdebug": "*",
-        "boundwize/structarmed": "^0.6.8",
+        "boundwize/structarmed": "^0.6.9",
         "ghostwriter/coding-standard": "dev-main",
         "ghostwriter/filesystem": "^0.2.0",
         "mockery/mockery": "^1.6.12",
