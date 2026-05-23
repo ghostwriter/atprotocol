@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e5d960787a734b4e3b0eef42e1d8a5c2",
+    "content-hash": "7673c271bff8b10333412812c6f2b65b",
     "packages": [
         {
             "name": "ghostwriter/case-converter",
@@ -94,65 +94,6 @@
                 }
             ],
             "time": "2026-04-22T20:29:50+00:00"
-        },
-        {
-            "name": "ghostwriter/clock",
-            "version": "3.0.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/ghostwriter/clock.git",
-                "reference": "e68368475feb957b7d40e3d1e03de411fe6b032d"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/ghostwriter/clock/zipball/e68368475feb957b7d40e3d1e03de411fe6b032d",
-                "reference": "e68368475feb957b7d40e3d1e03de411fe6b032d",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=8.3"
-            },
-            "require-dev": {
-                "ghostwriter/coding-standard": "dev-main",
-                "ghostwriter/psalm-plugin": "dev-main"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Ghostwriter\\Clock\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Nathanael Esayeas",
-                    "email": "nathanael.esayeas@protonmail.com",
-                    "homepage": "https://github.com/ghostwriter",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Provides a Clock implementation for PHP",
-            "homepage": "https://github.com/ghostwriter/clock",
-            "keywords": [
-                "clock",
-                "ghostwriter"
-            ],
-            "support": {
-                "issues": "https://github.com/ghostwriter/clock/issues",
-                "rss": "https://github.com/ghostwriter/clock/releases.atom",
-                "security": "https://github.com/ghostwriter/clock/security/advisories/new",
-                "source": "https://github.com/ghostwriter/clock"
-            },
-            "funding": [
-                {
-                    "url": "https://github.com/sponsors/ghostwriter",
-                    "type": "github"
-                }
-            ],
-            "time": "2025-01-05T19:26:41+00:00"
         },
         {
             "name": "ghostwriter/collection",
@@ -461,41 +402,34 @@
         },
         {
             "name": "ghostwriter/http",
-            "version": "0.1.2",
+            "version": "0.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ghostwriter/http.git",
-                "reference": "5f57d657b60524418fb386aab617138eb60cc821"
+                "reference": "8980906fdf5086ba3934b9ae8456e83bce127f92"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ghostwriter/http/zipball/5f57d657b60524418fb386aab617138eb60cc821",
-                "reference": "5f57d657b60524418fb386aab617138eb60cc821",
+                "url": "https://api.github.com/repos/ghostwriter/http/zipball/8980906fdf5086ba3934b9ae8456e83bce127f92",
+                "reference": "8980906fdf5086ba3934b9ae8456e83bce127f92",
                 "shasum": ""
             },
             "require": {
-                "ext-curl": "*",
-                "ext-json": "*",
-                "ext-mbstring": "*",
-                "ghostwriter/clock": "^3.0.1",
-                "ghostwriter/config": "^2.1.1",
-                "ghostwriter/container": "^7.0.0",
-                "ghostwriter/event-dispatcher": "^6.1.1",
-                "ghostwriter/json": "^3.0.2",
-                "guzzlehttp/guzzle": "^7.10.0",
+                "ghostwriter/container": "^7.0.1",
+                "guzzlehttp/guzzle": "^7.10.4",
                 "laminas/laminas-diactoros": "^3.8.0",
                 "php": "~8.4.0 || ~8.5.0",
                 "psr/http-client": "^1.0.3",
                 "psr/http-factory": "^1.1.0",
-                "psr/http-message": "^2.0",
-                "psr/http-server-handler": "^1.0.2",
-                "psr/http-server-middleware": "^1.0.2"
+                "psr/http-message": "^2.0.0"
             },
             "require-dev": {
+                "boundwize/structarmed": "^0.7.6",
                 "ext-xdebug": "*",
                 "ghostwriter/coding-standard": "dev-main",
+                "ghostwriter/testify": "^0.1.1",
                 "mockery/mockery": "^1.6.12",
-                "phpunit/phpunit": "^13.1.7",
+                "phpunit/phpunit": "^13.1.11",
                 "symfony/var-dumper": "^8.0.8"
             },
             "type": "library",
@@ -549,7 +483,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-04-20T16:52:09+00:00"
+            "time": "2026-05-23T15:54:16+00:00"
         },
         {
             "name": "ghostwriter/json",
@@ -1482,119 +1416,6 @@
                 "source": "https://github.com/php-fig/http-message/tree/2.0"
             },
             "time": "2023-04-04T09:54:51+00:00"
-        },
-        {
-            "name": "psr/http-server-handler",
-            "version": "1.0.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/php-fig/http-server-handler.git",
-                "reference": "84c4fb66179be4caaf8e97bd239203245302e7d4"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/http-server-handler/zipball/84c4fb66179be4caaf8e97bd239203245302e7d4",
-                "reference": "84c4fb66179be4caaf8e97bd239203245302e7d4",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=7.0",
-                "psr/http-message": "^1.0 || ^2.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Psr\\Http\\Server\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "PHP-FIG",
-                    "homepage": "https://www.php-fig.org/"
-                }
-            ],
-            "description": "Common interface for HTTP server-side request handler",
-            "keywords": [
-                "handler",
-                "http",
-                "http-interop",
-                "psr",
-                "psr-15",
-                "psr-7",
-                "request",
-                "response",
-                "server"
-            ],
-            "support": {
-                "source": "https://github.com/php-fig/http-server-handler/tree/1.0.2"
-            },
-            "time": "2023-04-10T20:06:20+00:00"
-        },
-        {
-            "name": "psr/http-server-middleware",
-            "version": "1.0.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/php-fig/http-server-middleware.git",
-                "reference": "c1481f747daaa6a0782775cd6a8c26a1bf4a3829"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/http-server-middleware/zipball/c1481f747daaa6a0782775cd6a8c26a1bf4a3829",
-                "reference": "c1481f747daaa6a0782775cd6a8c26a1bf4a3829",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=7.0",
-                "psr/http-message": "^1.0 || ^2.0",
-                "psr/http-server-handler": "^1.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Psr\\Http\\Server\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "PHP-FIG",
-                    "homepage": "https://www.php-fig.org/"
-                }
-            ],
-            "description": "Common interface for HTTP server-side middleware",
-            "keywords": [
-                "http",
-                "http-interop",
-                "middleware",
-                "psr",
-                "psr-15",
-                "psr-7",
-                "request",
-                "response"
-            ],
-            "support": {
-                "issues": "https://github.com/php-fig/http-server-middleware/issues",
-                "source": "https://github.com/php-fig/http-server-middleware/tree/1.0.2"
-            },
-            "time": "2023-04-11T06:14:47+00:00"
         },
         {
             "name": "ralouphie/getallheaders",
