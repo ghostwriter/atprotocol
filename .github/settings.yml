@@ -8,15 +8,6 @@
 "repository":
   "name": "atprotocol"
   "description": "[WIP] Bluesky API Client for AT Protocol"
-  "topics":
-    - "ghostwriter"
-    - "atprotocol"
-    - "php"
-    - "atproto"
-    - "atp"
-    - "bluesky"
-    - "bsky"
-    - "lexicons"
   "homepage": "https://github.com/ghostwriter/atprotocol"
   "default_branch": "0.1.x"
   "allow_auto_merge": true
