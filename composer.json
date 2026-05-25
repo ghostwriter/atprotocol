@@ -58,7 +58,7 @@
         "ghostwriter/testify": "^0.1.1",
         "mockery/mockery": "^1.6.12",
         "nikic/php-parser": "^5.7.0",
-        "phpunit/phpunit": "^13.1.11",
+        "phpunit/phpunit": "^13.1.12",
         "symfony/var-dumper": "^8.0.8"
     },
     "replace": {
