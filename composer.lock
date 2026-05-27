@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6abfdd3525d8f8cac6d102dfe7aa02d5",
+    "content-hash": "057604fd7169bb390db67c103288e471",
     "packages": [
         {
             "name": "ghostwriter/case-converter",
@@ -1955,6 +1955,81 @@
             "time": "2026-04-14T15:21:54+00:00"
         },
         {
+            "name": "ghostwriter/phpunit-assertions",
+            "version": "0.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ghostwriter/phpunit-assertions.git",
+                "reference": "af2231b9dcd6f91c3506e09a78a55711b871edcb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ghostwriter/phpunit-assertions/zipball/af2231b9dcd6f91c3506e09a78a55711b871edcb",
+                "reference": "af2231b9dcd6f91c3506e09a78a55711b871edcb",
+                "shasum": ""
+            },
+            "require": {
+                "ext-mbstring": "*",
+                "php": "~8.4.0 || ~8.5.0",
+                "phpunit/phpunit": "^13.1.13"
+            },
+            "require-dev": {
+                "boundwize/structarmed": "^0.8.0",
+                "ext-xdebug": "*",
+                "ghostwriter/coding-standard": "dev-main",
+                "ghostwriter/testify": "^0.1.2",
+                "mockery/mockery": "^1.6.12",
+                "symfony/var-dumper": "^8.0.8"
+            },
+            "type": "library",
+            "extra": {
+                "thanks": {
+                    "url": "https://github.com/ghostwriter/phpunit-assertions",
+                    "name": "ghostwriter/phpunit-assertions"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Ghostwriter\\PHPUnitAssertions\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Nathanael Esayeas",
+                    "email": "nathanael.esayeas@protonmail.com",
+                    "homepage": "https://github.com/ghostwriter",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Additional assertions for PHPUnit",
+            "homepage": "https://github.com/ghostwriter/phpunit-assertions",
+            "keywords": [
+                "assertions",
+                "dev",
+                "ghostwriter",
+                "php",
+                "phpunit",
+                "phpunit-assertions"
+            ],
+            "support": {
+                "issues": "https://github.com/ghostwriter/phpunit-assertions/issues",
+                "rss": "https://github.com/ghostwriter/phpunit-assertions/releases.atom",
+                "security": "https://github.com/ghostwriter/phpunit-assertions/security/advisories/new",
+                "source": "https://github.com/ghostwriter/phpunit-assertions"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/sponsors/ghostwriter",
+                    "type": "github"
+                }
+            ],
+            "time": "2026-05-27T19:00:24+00:00"
+        },
+        {
             "name": "ghostwriter/testify",
             "version": "0.1.1",
             "source": {
@@ -2797,16 +2872,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "13.1.12",
+            "version": "13.1.13",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "ca98c9f757c0e1e0778ab8ff80c4fb84152facf8"
+                "reference": "ddf7f25d9ee9652b464475d7f3bacde2613e355e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/ca98c9f757c0e1e0778ab8ff80c4fb84152facf8",
-                "reference": "ca98c9f757c0e1e0778ab8ff80c4fb84152facf8",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/ddf7f25d9ee9652b464475d7f3bacde2613e355e",
+                "reference": "ddf7f25d9ee9652b464475d7f3bacde2613e355e",
                 "shasum": ""
             },
             "require": {
@@ -2876,7 +2951,7 @@
             "support": {
                 "issues": "https://github.com/sebastianbergmann/phpunit/issues",
                 "security": "https://github.com/sebastianbergmann/phpunit/security/policy",
-                "source": "https://github.com/sebastianbergmann/phpunit/tree/13.1.12"
+                "source": "https://github.com/sebastianbergmann/phpunit/tree/13.1.13"
             },
             "funding": [
                 {
@@ -2884,7 +2959,7 @@
                     "type": "other"
                 }
             ],
-            "time": "2026-05-25T15:37:19+00:00"
+            "time": "2026-05-27T14:03:08+00:00"
         },
         {
             "name": "sebastian/cli-parser",
