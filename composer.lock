@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "86c253328d4760c29d2a7e1a6863aa5d",
+    "content-hash": "ce6a92a9d1b0e1300b886f8985c0dac4",
     "packages": [
         {
             "name": "ghostwriter/case-converter",
@@ -323,20 +323,20 @@
         },
         {
             "name": "ghostwriter/event-dispatcher",
-            "version": "6.1.1",
+            "version": "6.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ghostwriter/event-dispatcher.git",
-                "reference": "57bb48498db6ae8f297353ae19394fa23c7689c3"
+                "reference": "617c1ee6cd63407ad9f9932e4a2833fb226f574e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ghostwriter/event-dispatcher/zipball/57bb48498db6ae8f297353ae19394fa23c7689c3",
-                "reference": "57bb48498db6ae8f297353ae19394fa23c7689c3",
+                "url": "https://api.github.com/repos/ghostwriter/event-dispatcher/zipball/617c1ee6cd63407ad9f9932e4a2833fb226f574e",
+                "reference": "617c1ee6cd63407ad9f9932e4a2833fb226f574e",
                 "shasum": ""
             },
             "require": {
-                "ghostwriter/container": "^7.0.0",
+                "ghostwriter/container": "^7.0.2",
                 "php": "~8.4.0 || ~8.5.0",
                 "psr/event-dispatcher": "^1.0.0"
             },
@@ -344,11 +344,14 @@
                 "psr/event-dispatcher-implementation": "*"
             },
             "require-dev": {
+                "boundwize/structarmed": "^0.9.1",
                 "ext-xdebug": "*",
                 "ghostwriter/coding-standard": "dev-main",
+                "ghostwriter/phpunit-assertions": "^0.1.0",
+                "ghostwriter/testify": "^0.1.2",
                 "mockery/mockery": "^1.6.12",
-                "phpunit/phpunit": "^13.1.7",
-                "symfony/var-dumper": "^8.0.8"
+                "phpunit/phpunit": "^13.1.13",
+                "symfony/var-dumper": "^8.1.0"
             },
             "type": "library",
             "extra": {
@@ -400,7 +403,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-04-20T15:26:22+00:00"
+            "time": "2026-05-29T20:47:09+00:00"
         },
         {
             "name": "ghostwriter/http",
