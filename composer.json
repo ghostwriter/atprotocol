@@ -36,7 +36,7 @@
     ],
     "_comment": ["#BlackLivesMatter", "#FreePalestine", "#StandWithIran", "#StandWithUkraine", "#StopGenocide"],
     "require": {
-        "php": "~8.4.0 || ~8.5.0",
+        "php": "~8.4.0 || ~8.5.0 || ~8.6.0",
         "ext-curl": "*",
         "ext-mbstring": "*",
         "ghostwriter/case-converter": "^2.2.2",
@@ -92,11 +92,29 @@
             "php": "8.4.999"
         },
         "platform-check": true,
-        "preferred-install": "dist",
         "prepend-autoloader": true,
         "process-timeout": 5000,
         "sort-packages": true,
-        "use-parent-dir": false
+        "use-parent-dir": false,
+        "strict-psr-autoloader": true,
+        "policy": {
+            "abandoned": {
+                "audit": "fail",
+                "block": true
+            },
+            "advisories": {
+                "audit": "fail",
+                "block": true
+            },
+            "malware": {
+                "audit": "fail",
+                "block": true,
+                "block-scope": "all"
+            }
+        },
+        "preferred-install": {
+            "*": "dist"
+        }
     },
     "extra": {
         "ghostwriter": {
@@ -111,16 +129,15 @@
     },
     "scripts": {
         "cache:clear": "rm -rf ./.cache/*",
-        "check": ["@cache:clear", "tools/phar/composer validate", "@test"],
+        "check": ["@cache:clear", "@composer validate", "@test"],
         "docker": ["@docker:build", "@docker:run"],
         "docker:build": "docker buildx build --pull --tag workspace .",
         "docker:run": "docker run -v $(PWD):/github/workspace -w=/github/workspace -e GITHUB_DEBUG=1 -e GITHUB_WORKSPACE=/github/workspace -e GITHUB_TOKEN=github-token -e SIGNING_SECRET_KEY=secret-key workspace",
         "git:submodule:update": "git submodule update --depth=1 --init --recursive --recommend-shallow --remote",
-        "infection": ["@xdebug", "tools/phar/infection --min-covered-msi=0 --min-msi=0 --show-mutations --threads=max"],
-        "phpbench": "tools/phar/phpbench run --report='extends:aggregate,cols:[benchmark,subject,revs,its,mem_peak,mode,rstdev]' --time-unit=milliseconds ./tests/Benchmark",
+        "infection": ["@xdebug", "vendor/ghostwriter/coding-standard/tools/phar/infection --min-covered-msi=0 --min-msi=0 --show-mutations --threads=max"],
+        "phpbench": "vendor/ghostwriter/coding-standard/tools/phar/phpbench run --report='extends:aggregate,cols:[benchmark,subject,revs,its,mem_peak,mode,rstdev]' --time-unit=milliseconds ./tests/Benchmark",
         "phpunit": ["@xdebug", "vendor/bin/phpunit --do-not-cache-result --colors=always"],
         "test": ["@phpunit", "@infection"],
-        "unused": "tools/phar/composer-unused --no-interaction --ansi",
         "xdebug": "@putenv XDEBUG_MODE=coverage"
     }
 }
