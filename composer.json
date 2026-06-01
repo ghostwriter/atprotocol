@@ -32,6 +32,10 @@
         {
             "type": "github",
             "url": "https://github.com/sponsors/ghostwriter"
+        },
+        {
+            "type": "paypal",
+            "url": "https://paypal.me/codepoet"
         }
     ],
     "_comment": [
