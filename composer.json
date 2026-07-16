@@ -146,11 +146,11 @@
         ],
         "infection": [
             "@xdebug",
-            "vendor/ghostwriter/coding-standard/tools/phar/infection --min-covered-msi=0 --min-msi=0 --show-mutations --threads=max"
+            "infection --min-covered-msi=0 --min-msi=0 --show-mutations --threads=max"
         ],
         "phpunit": [
             "@xdebug",
-            "vendor/bin/phpunit --do-not-cache-result --colors=always"
+            "phpunit --do-not-cache-result --colors=always"
         ],
         "test": [
             "@phpunit",
