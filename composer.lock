@@ -1783,12 +1783,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ghostwriter/coding-standard.git",
-                "reference": "77ef9a26a1c855936cc7811f319ab069849b937f"
+                "reference": "774069dcb8f9b6d25918708b1a277ac4d6024b73"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ghostwriter/coding-standard/zipball/77ef9a26a1c855936cc7811f319ab069849b937f",
-                "reference": "77ef9a26a1c855936cc7811f319ab069849b937f",
+                "url": "https://api.github.com/repos/ghostwriter/coding-standard/zipball/774069dcb8f9b6d25918708b1a277ac4d6024b73",
+                "reference": "774069dcb8f9b6d25918708b1a277ac4d6024b73",
                 "shasum": ""
             },
             "require": {
@@ -1843,17 +1843,6 @@
                 "pestphp/pest": "*"
             },
             "default-branch": true,
-            "bin": [
-                "tools/phar/composer-normalize",
-                "tools/phar/composer-require-checker",
-                "tools/phar/composer-unused",
-                "tools/phar/infection",
-                "tools/phar/phive",
-                "tools/phar/phpactor",
-                "tools/phar/phpbench",
-                "tools/phar/phpdocumentor",
-                "tools/phar/psalm"
-            ],
             "type": "library",
             "extra": {
                 "thanks": {
@@ -1903,7 +1892,7 @@
                     "type": "paypal"
                 }
             ],
-            "time": "2026-06-04T12:20:37+00:00"
+            "time": "2026-07-07T04:07:55+00:00"
         },
         {
             "name": "ghostwriter/console",
