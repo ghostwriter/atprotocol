@@ -66,7 +66,6 @@
         "ghostwriter/coding-standard": "dev-main",
         "ghostwriter/filesystem": "^0.2.1",
         "ghostwriter/phpunit-assertions": "^0.1.0",
-        "ghostwriter/testify": "^0.1.2",
         "mockery/mockery": "^1.6.12",
         "nikic/php-parser": "^5.7.0",
         "phpunit/phpunit": "^13.2.1",
