@@ -1648,23 +1648,23 @@
     "packages-dev": [
         {
             "name": "boundwize/jsonrecast",
-            "version": "0.3.23",
+            "version": "0.3.24",
             "source": {
                 "type": "git",
                 "url": "https://github.com/boundwize/jsonrecast.git",
-                "reference": "8821f6cc2e1391fc9d856cde3a2cecc308f87632"
+                "reference": "64d8efc75b723b567c7cac1ed4905aec10ba3645"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/boundwize/jsonrecast/zipball/8821f6cc2e1391fc9d856cde3a2cecc308f87632",
-                "reference": "8821f6cc2e1391fc9d856cde3a2cecc308f87632",
+                "url": "https://api.github.com/repos/boundwize/jsonrecast/zipball/64d8efc75b723b567c7cac1ed4905aec10ba3645",
+                "reference": "64d8efc75b723b567c7cac1ed4905aec10ba3645",
                 "shasum": ""
             },
             "require": {
                 "php": "^8.2"
             },
             "require-dev": {
-                "boundwize/pyrameter": "^0.4.2",
+                "boundwize/pyrameter": "^0.5",
                 "boundwize/structarmed": "^0.14.9",
                 "laminas/laminas-coding-standard": "^3.1",
                 "phpstan/phpstan": "^2.2",
@@ -1705,7 +1705,7 @@
             ],
             "support": {
                 "issues": "https://github.com/boundwize/jsonrecast/issues",
-                "source": "https://github.com/boundwize/jsonrecast/tree/0.3.23"
+                "source": "https://github.com/boundwize/jsonrecast/tree/0.3.24"
             },
             "funding": [
                 {
@@ -1713,7 +1713,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-07-10T06:27:13+00:00"
+            "time": "2026-07-16T04:55:18+00:00"
         },
         {
             "name": "boundwize/structarmed",
