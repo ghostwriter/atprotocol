@@ -67,7 +67,7 @@
         "ghostwriter/phpunit-assertions": "^0.1.0",
         "mockery/mockery": "^1.6.12",
         "nikic/php-parser": "^5.7.0",
-        "phpunit/phpunit": "^13.2.1"
+        "phpunit/phpunit": "^13.2.5"
     },
     "replace": {
         "atproto/atproto": "*"
