@@ -7,7 +7,6 @@
     beStrictAboutOutputDuringTests="true"
     bootstrap="vendor/autoload.php"
     cacheDirectory=".cache/phpunit"
-    cacheResult="false"
     colors="true"
     displayDetailsOnAllIssues="true"
     executionOrder="depends,random"
