@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e44c7dff831ccf5c3e6b80ba9189ce59",
+    "content-hash": "e2f092ae1b786cda24c49c36cca44ff7",
     "packages": [
         {
             "name": "ghostwriter/case-converter",
@@ -1806,30 +1806,41 @@
         },
         {
             "name": "ghostwriter/phpunit-assertions",
-            "version": "0.1.0",
+            "version": "0.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ghostwriter/phpunit-assertions.git",
-                "reference": "af2231b9dcd6f91c3506e09a78a55711b871edcb"
+                "reference": "5880824f335d24af9e6d50a2a470bd441445e2fa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ghostwriter/phpunit-assertions/zipball/af2231b9dcd6f91c3506e09a78a55711b871edcb",
-                "reference": "af2231b9dcd6f91c3506e09a78a55711b871edcb",
+                "url": "https://api.github.com/repos/ghostwriter/phpunit-assertions/zipball/5880824f335d24af9e6d50a2a470bd441445e2fa",
+                "reference": "5880824f335d24af9e6d50a2a470bd441445e2fa",
                 "shasum": ""
             },
             "require": {
                 "ext-mbstring": "*",
-                "php": "~8.4.0 || ~8.5.0",
-                "phpunit/phpunit": "^13.1.13"
+                "php": "~8.4.0 || ~8.5.0 || ~8.6.0"
             },
             "require-dev": {
-                "boundwize/structarmed": "^0.8.0",
                 "ext-xdebug": "*",
+                "fig/http-message-util": "^1.1.5",
                 "ghostwriter/coding-standard": "dev-main",
-                "ghostwriter/testify": "^0.1.2",
-                "mockery/mockery": "^1.6.12",
-                "symfony/var-dumper": "^8.0.8"
+                "ghostwriter/container": "^7.0.2",
+                "mockery/mockery": "^1.6.13",
+                "phpunit/phpunit": "^13.3.1",
+                "psr/cache": "^3.0.0",
+                "psr/clock": "^1.0.0",
+                "psr/container": "^2.0.2",
+                "psr/event-dispatcher": "^1.0.0",
+                "psr/http-client": "^1.0.3",
+                "psr/http-factory": "^1.1.0",
+                "psr/http-message": "^2.0.0",
+                "psr/http-server-handler": "^1.0.2",
+                "psr/http-server-middleware": "^1.0.2",
+                "psr/link": "^2.0.1",
+                "psr/log": "^3.0.2",
+                "psr/simple-cache": "^3.0.0"
             },
             "type": "library",
             "extra": {
@@ -1858,12 +1869,25 @@
             "description": "Additional assertions for PHPUnit",
             "homepage": "https://github.com/ghostwriter/phpunit-assertions",
             "keywords": [
+                "PSR-11",
                 "assertions",
                 "dev",
                 "ghostwriter",
                 "php",
                 "phpunit",
-                "phpunit-assertions"
+                "phpunit-assertions",
+                "psr",
+                "psr-13",
+                "psr-14",
+                "psr-15",
+                "psr-16",
+                "psr-17",
+                "psr-18",
+                "psr-20",
+                "psr-3",
+                "psr-6",
+                "psr-7",
+                "testing"
             ],
             "support": {
                 "issues": "https://github.com/ghostwriter/phpunit-assertions/issues",
@@ -1875,9 +1899,13 @@
                 {
                     "url": "https://github.com/sponsors/ghostwriter",
                     "type": "github"
+                },
+                {
+                    "url": "https://paypal.me/codepoet",
+                    "type": "paypal"
                 }
             ],
-            "time": "2026-05-27T19:00:24+00:00"
+            "time": "2026-08-15T04:21:02+00:00"
         },
         {
             "name": "hamcrest/hamcrest-php",

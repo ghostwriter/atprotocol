@@ -64,7 +64,7 @@
         "ext-xdebug": "*",
         "ghostwriter/coding-standard": "dev-main",
         "ghostwriter/filesystem": "^0.2.1",
-        "ghostwriter/phpunit-assertions": "^0.1.0",
+        "ghostwriter/phpunit-assertions": "^0.1.1",
         "mockery/mockery": "^1.6.13",
         "nikic/php-parser": "^5.7.0",
         "phpunit/phpunit": "^13.3.1"
