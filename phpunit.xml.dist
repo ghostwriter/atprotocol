@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<phpunit
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/sebastianbergmann/phpunit/refs/tags/13.3.1/phpunit.xsd"
     beStrictAboutChangesToGlobalState="true"
     beStrictAboutCoverageMetadata="true"
@@ -14,17 +13,19 @@
     recordTestRunHistory="false"
     requireCoverageMetadata="true"
     requireSealedMockObjects="true"
-    stopOnFailure="true"
 >
     <coverage pathCoverage="true" disableCodeCoverageIgnore="true">
         <report>
-            <html outputDirectory=".cache/phpunit/coverage-html"/>
-            <clover outputFile=".cache/phpunit/clover.xml"/>
-            <text outputFile=".cache/phpunit/coverage.txt"/>
+            <html outputDirectory=".cache/phpunit/coverage-html" />
+            <clover outputFile=".cache/phpunit/clover.xml" />
+            <text outputFile=".cache/phpunit/coverage.txt" />
         </report>
     </coverage>
+    <extensions>
+        <bootstrap class="Mockery\Adapter\Phpunit\Extension" />
+    </extensions>
     <logging>
-        <junit outputFile=".cache/phpunit/junit.xml"/>
+        <junit outputFile=".cache/phpunit/junit.xml" />
     </logging>
     <source ignoreIndirectDeprecations="true" restrictNotices="true" restrictWarnings="true">
         <include>
