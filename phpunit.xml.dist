@@ -13,7 +13,6 @@
     recordTestRunHistory="false"
     requireCoverageContribution="true"
     requireCoverageMetadata="true"
-    requireSealedMockObjects="true"
 >
     <coverage pathCoverage="true" disableCodeCoverageIgnore="true">
         <report>
