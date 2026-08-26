@@ -81,7 +81,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Tests\\": "tests/"
+            "Tests\\Unit\\": "tests/Unit/"
         },
         "files": [
             "tests/bootstrap.php"
