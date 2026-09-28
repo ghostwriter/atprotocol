@@ -21,12 +21,24 @@ if (! \is_dir($fixturePath)) {
     throw new \RuntimeException('Fixture path not found: ' . $fixturePath);
 }
 
-$classLoader->addPsr4('', $fixturePath);
-
 // load the Fixture files in the "Autoload" directory
 $autoloadPath = \implode(\DIRECTORY_SEPARATOR, [$fixturePath, 'Autoload']);
 if (\is_dir($autoloadPath)) {
-    $classLoader->addPsr4('', $autoloadPath);
+    \spl_autoload_register(static function (string $class) use ($autoloadPath): void {
+        $parts = \explode('\\', $class);
+
+        while (! empty($parts)) {
+            $path = $autoloadPath . \DIRECTORY_SEPARATOR . \implode(\DIRECTORY_SEPARATOR, $parts) . '.php';
+
+            if (\is_file($path)) {
+                require_once $path;
+
+                break;
+            }
+
+            \array_shift($parts);
+        }
+    });
 }
 
 // load the Fixture files in the "RequireOnce" directory
